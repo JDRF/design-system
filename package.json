@@ -1,27 +1,41 @@
 {
-	"name": "jdrf-design-system",
-	"version": "0.0.1",
-	"description": "JDRF Design System for managing styles",
-	"author": "Patrick McKowen <pmckowen@jdrf.org>",
-	"contributors": [{
-		"name": "Nick Smith",
-		"email": "fuhton@gmail.com"
-	}],
-	"scripts": {
-		"test": "ls -al"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/JDRF/design-system"
-	},
-	"bugs": {
-		"url": "https://github.com/JDRF/design-system/issues"
-	},
-	"homepage": "https://github.com/JDRF/design-system#readme",
-	"keywords": [
-		"Style Guide",
-		"JDRF",
-		"Bootstrap"
-	],
-	"license": "MIT"
+  "name": "jdrf-design-system",
+  "version": "0.0.1",
+  "description": "JDRF Design System for managing styles",
+  "author": "Patrick McKowen <pmckowen@jdrf.org>",
+  "contributors": [
+    {
+      "name": "Nick Smith",
+      "email": "fuhton@gmail.com"
+    }
+  ],
+  "scripts": {
+    "build": "npm install && gulp",
+    "test": "ls -al",
+    "clean": "gulp clean && rm -rf node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JDRF/design-system"
+  },
+  "bugs": {
+    "url": "https://github.com/JDRF/design-system/issues"
+  },
+  "homepage": "https://github.com/JDRF/design-system#readme",
+  "keywords": [
+    "Style Guide",
+    "JDRF",
+    "Bootstrap"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.2",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sass": "^2.2.0",
+    "jquery": "^2.1.4"
+  }
 }
