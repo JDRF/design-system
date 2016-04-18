@@ -1,9 +1,10 @@
-var gulp = require('gulp'),
-	concat = require('gulp-concat'),
-	rename = require('gulp-rename'),
-	sass = require('gulp-sass'),
-	notify = require('gulp-notify'),
-	del = require('del'),
+var gulp       = require('gulp'),
+	del        = require('del'),
+	concat     = require('gulp-concat'),
+	notify     = require('gulp-notify'),
+	phantomcss = require('gulp-phantomcss'),
+	rename     = require('gulp-rename'),
+	sass       = require('gulp-sass'),
 
 	paths = {
 		bootstrap: {
@@ -16,7 +17,7 @@ var gulp = require('gulp'),
 
 // Clean the build directory
 gulp.task('clean', function() {
-	return del(['build']);
+	return del(['build', 'screenshots', 'failures']);
 });
 
 gulp.task('clean:css', function() {
@@ -50,6 +51,11 @@ gulp.task('sass', ['clean:css'], function () {
 		return 'Error: ' + error.message;
 	})) 
 	.pipe(gulp.dest('./build'));
+});
+
+gulp.task('test', function (){
+	gulp.src('./testsuite.js')
+	.pipe(phantomcss());
 });
 
 // Rerun the task when a file changes
