@@ -1,40 +1,53 @@
 var gulp = require('gulp'),
-	rename = require("gulp-rename"),
+	concat = require('gulp-concat'),
+	rename = require('gulp-rename'),
 	sass = require('gulp-sass'),
-	notify = require("gulp-notify"),
-	del = require('del');
+	notify = require('gulp-notify'),
+	del = require('del'),
 
-var paths = {
-	bootstrap: {
-		styles: './node_modules/bootstrap/scss/'
-	},
-	scripts: ['./src/js/**/*.js'],
-	styles: ['./src/sass/**/*.scss']
-};
+	paths = {
+		bootstrap: {
+			scripts: './node_modules/bootstrap/dist/js/bootstrap.js',
+			styles: './node_modules/bootstrap/scss/'
+		},
+		scripts: './src/js/**/*.js',
+		styles: './src/sass/**/*.scss'
+	};
 
-// Not all tasks need to use streams
-// A gulpfile is just another node program and you can use any package available on npm
+// Clean the build directory
 gulp.task('clean', function() {
-	// You can use multiple globbing patterns as you would with `gulp.src`
 	return del(['build']);
 });
 
-gulp.task('scripts', ['clean'], function() {
-	// Minify and copy all JavaScript (except vendor scripts)
-	// with sourcemaps all the way down
-	return gulp.src(paths.scripts)
+gulp.task('clean:css', function() {
+	return del(['build/css']);
+});
+
+gulp.task('clean:js', function() {
+	return del(['build/js']);
+});
+
+// Compile all scripts together
+gulp.task('scripts', ['clean:js'], function() {
+	return gulp.src([
+		paths.bootstrap.scripts,
+		paths.scripts
+	])
+	.pipe(gulp.dest('build/js/src'))
+	.pipe(concat('app.js'))
 	.pipe(gulp.dest('build/js'));
 });
 
-gulp.task('sass', ['clean'], function () {
-	return gulp.src(paths.styles)
+// Compile all sass files together
+gulp.task('sass', ['clean:css'], function () {
+	return gulp.src([paths.styles])
 	.pipe(sass({
 		includePaths: [
 			paths.bootstrap.styles
 		],
 	}))
-	.on("error", notify.onError(function (error) {
-		return "Error: " + error.message;
+	.on('error', notify.onError(function (error) {
+		return 'Error: ' + error.message;
 	})) 
 	.pipe(gulp.dest('./build'));
 });
@@ -46,4 +59,4 @@ gulp.task('watch', function() {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['scripts', 'sass']);
+gulp.task('default', ['clean', 'scripts', 'sass']);
