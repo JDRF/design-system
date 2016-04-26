@@ -5,6 +5,7 @@ var gulp       = require('gulp'),
 	phantomcss = require('gulp-phantomcss'),
 	rename     = require('gulp-rename'),
 	sass       = require('gulp-sass'),
+	connect    = require('gulp-connect'),
 
 	paths = {
 		bootstrap: {
@@ -53,6 +54,19 @@ gulp.task('sass', ['clean:css'], function () {
 	.pipe(gulp.dest('./build'));
 });
 
+//Connect to web server with Gulp Connect
+gulp.task('connect', function() {
+  connect.server({
+    livereload: true
+  });
+});
+
+//run livereload with Gulp Connect
+gulp.task('html', function () {
+  gulp.src('./*.html')
+    .pipe(connect.reload());
+});
+
 gulp.task('test', function (){
 	gulp.src('./testsuite.js')
 	.pipe(phantomcss());
@@ -62,7 +76,8 @@ gulp.task('test', function (){
 gulp.task('watch', function() {
 	gulp.watch(paths.scripts, ['scripts']);
 	gulp.watch(paths.styles, ['sass']);
+	gulp.watch(['./*.html'], ['html']);
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['clean', 'scripts', 'sass']);
+gulp.task('default', ['clean', 'scripts', 'sass', 'connect']);
