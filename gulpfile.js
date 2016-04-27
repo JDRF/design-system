@@ -9,10 +9,10 @@ var gulp       = require('gulp'),
 	paths = {
 		bootstrap: {
 			scripts: './node_modules/bootstrap/dist/js/bootstrap.js',
-			styles: './node_modules/bootstrap/scss/'
+			styles: './node_modules/bootstrap/'
 		},
 		scripts: './src/js/**/*.js',
-		styles: './src/sass/**/*.scss'
+		styles: './src/scss/style.scss'
 	};
 
 // Clean the build directory
