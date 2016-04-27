@@ -1,2 +1,10 @@
+# OS created files
 .DS_Store
+
+# npm created files
+*.log
 node_modules
+
+# PhantomCSS file dirs
+failures
+screenshots
