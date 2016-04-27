@@ -16,23 +16,24 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var webpack = require('webpack');
 
-
 // configuration
 var config = {
 	dev: gutil.env.dev,
 	src: {
 		scripts: {
 			fabricator: './src/assets/fabricator/scripts/fabricator.js',
-			toolkit: './src/assets/toolkit/scripts/toolkit.js'
+			toolkit: './src/assets/toolkit/scripts/toolkit.js',
+			bootstrapSrc: './node_modules/bootstrap/dist/js/bootstrap.js'
 		},
 		styles: {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
+			toolkit: 'src/assets/toolkit/styles/toolkit.scss',
+			bootstrapSrc: './node_modules/bootstrap/dist/css/bootstrap.css'
 		},
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
 	},
-	dest: 'build'
+	dest: 'dist'
 };
 
 
@@ -71,8 +72,12 @@ gulp.task('styles:toolkit', function () {
 		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
+gulp.task('styles:bootstrap', function () {
+    gulp.src(config.src.styles.bootstrapSrc)
+        .pipe(gulp.dest(config.dest + '/assets/bootstrap/styles'));
+});
 
+gulp.task('styles', ['styles:fabricator', 'styles:toolkit', 'styles:bootstrap']);
 
 // scripts
 gulp.task('scripts', function (done) {
@@ -93,7 +98,7 @@ gulp.task('scripts', function (done) {
 // assemble
 gulp.task('assemble', function (done) {
 	assemble({
-		dest: 'build',
+		dest: 'dist',
 		logErrors: config.dev
 	});
 	done();
