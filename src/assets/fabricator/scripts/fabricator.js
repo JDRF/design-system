@@ -1,7 +1,5 @@
 'use strict';
 
-require('./prism');
-
 /**
  * Global `fabricator` object
  * @namespace
@@ -14,6 +12,11 @@ var fabricator = window.fabricator = {};
  * @type {Object}
  */
 fabricator.options = {
+	toggles: {
+		labels: true,
+		notes: true,
+		code: false
+	},
 	menu: false,
 	mq: '(min-width: 60em)'
 };
@@ -91,33 +94,63 @@ fabricator.buildColorChips = function () {
 fabricator.setActiveItem = function () {
 
 	/**
-	 * Match the window location with the menu item, set menu item as active
+	 * @return {Array} Sorted array of menu item 'ids'
+	 */
+	var parsedItems = function () {
+
+		var items = [],
+			id, href;
+
+		for (var i = fabricator.dom.menuItems.length - 1; i >= 0; i--) {
+
+			// remove active class from items
+			fabricator.dom.menuItems[i].classList.remove('f-active');
+
+			// get item href
+			href = fabricator.dom.menuItems[i].getAttribute('href');
+
+			// get id
+			if (href.indexOf('#') > -1) {
+				id = href.split('#').pop();
+			} else {
+				id = href.split('/').pop().replace(/\.[^/.]+$/, '');
+			}
+
+			items.push(id);
+
+		}
+
+		return items.reverse();
+
+	};
+
+
+	/**
+	 * Match the 'id' in the window location with the menu item, set menu item as active
 	 */
 	var setActive = function () {
 
-		// get current file and hash without first slash
-		var current = (window.location.pathname + window.location.hash).replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
-		    	hash = hash || '';
-		    	file = file || '';
-		    	return file + hash.split('.')[0];
-			}) || 'index.html',
-			href;
+		var href = window.location.href,
+			items = parsedItems(),
+			id, index;
 
-		// find the current section in the items array
-		for (var i = fabricator.dom.menuItems.length - 1; i >= 0; i--) {
-
-			var item = fabricator.dom.menuItems[i];
-
-			// get item href without first slash
-			href = item.getAttribute('href').replace(/^\//g, '');
-
-			if (href === current) {
-				item.classList.add('f-active');
-			} else {
-				item.classList.remove('f-active');
-			}
-
+		// get window 'id'
+		if (href.indexOf('#') > -1) {
+			id = window.location.hash.replace('#', '');
+		} else {
+			id = window.location.pathname.split('/').pop().replace(/\.[^/.]+$/, '');
 		}
+
+		// In case the first menu item isn't the index page.
+		if (id === '') {
+			id = 'index';
+		}
+
+		// find the window id in the items array
+		index = (items.indexOf(id) > -1) ? items.indexOf(id) : 0;
+
+		// set the matched item as active
+		fabricator.dom.menuItems[index].classList.add('f-active');
 
 	};
 
@@ -151,14 +184,6 @@ fabricator.menuToggle = function () {
 		}
 	};
 
-	// toggle classes on ctrl + m press
-	document.onkeydown = function (e) {
-		e = e || event
-		if (e.ctrlKey && e.keyCode == 'M'.charCodeAt(0)) {
-			toggleClasses();
-		}
-	}
-
 	// toggle classes on click
 	toggle.addEventListener('click', function () {
 		toggleClasses();
@@ -173,6 +198,79 @@ fabricator.menuToggle = function () {
 
 	for (var i = 0; i < fabricator.dom.menuItems.length; i++) {
 		fabricator.dom.menuItems[i].addEventListener('click', closeMenu);
+	}
+
+	return this;
+
+};
+
+
+/**
+ * Handler for preview and code toggles
+ * @return {Object} fabricator
+ */
+fabricator.allItemsToggles = function () {
+
+	var items = {
+		labels: document.querySelectorAll('[data-f-toggle="labels"]'),
+		notes: document.querySelectorAll('[data-f-toggle="notes"]'),
+		code: document.querySelectorAll('[data-f-toggle="code"]')
+	};
+
+	var toggleAllControls = document.querySelectorAll('.f-controls [data-f-toggle-control]');
+
+	var options = fabricator.getOptions();
+
+	// toggle all
+	var toggleAllItems = function (type, value) {
+
+		var button = document.querySelector('.f-controls [data-f-toggle-control=' + type + ']'),
+			_items = items[type];
+
+		for (var i = 0; i < _items.length; i++) {
+			if (value) {
+				_items[i].classList.remove('f-item-hidden');
+			} else {
+				_items[i].classList.add('f-item-hidden');
+			}
+		}
+
+		// toggle styles
+		if (value) {
+			button.classList.add('f-active');
+		} else {
+			button.classList.remove('f-active');
+		}
+
+		// update options
+		options.toggles[type] = value;
+
+		if (fabricator.test.sessionStorage) {
+			sessionStorage.setItem('fabricator', JSON.stringify(options));
+		}
+
+	};
+
+	for (var i = 0; i < toggleAllControls.length; i++) {
+
+		toggleAllControls[i].addEventListener('click', function (e) {
+
+			// extract info from target node
+			var type = e.currentTarget.getAttribute('data-f-toggle-control'),
+				value = e.currentTarget.className.indexOf('f-active') < 0;
+
+			// toggle the items
+			toggleAllItems(type, value);
+
+		});
+
+	}
+
+	// persist toggle options from page to page
+	for (var toggle in options.toggles) {
+		if (options.toggles.hasOwnProperty(toggle)) {
+			toggleAllItems(toggle, options.toggles[toggle]);
+		}
 	}
 
 	return this;
@@ -221,7 +319,11 @@ fabricator.setInitialMenuState = function () {
 	fabricator
 		.setInitialMenuState()
 		.menuToggle()
+		.allItemsToggles()
 		.buildColorChips()
 		.setActiveItem()
+
+	// syntax highlighting
+	Prism.highlightAll();
 
 }());
