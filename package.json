@@ -29,7 +29,7 @@
   "devDependencies": {
     "babel-core": "^5.8.23",
     "babel-loader": "^5.4.0",
-    "bootstrap": "^3.3.6",
+    "bootstrap": "^4.0.0-alpha.2",
     "browser-sync": "^2.12.5",
     "del": "^2.2.0",
     "fabricator-assemble": "^1.1.11",
