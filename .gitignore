@@ -1,6 +1,10 @@
 # OS created files
 .DS_Store
 
+# submodule files
+.gitmodules
+design-system
+
 # npm created files
 *.log
 node_modules
