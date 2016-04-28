@@ -1,7 +1,13 @@
+$settings: (
+	theme: light,
+	accent: #09bcef,
+	menu-width: 14rem
+);
+
 $base-colors: (
-	dark: hsl(0, 0%, 12%),
-	medium: hsl(0, 0%, 46%),
-	light: hsl(0, 0%, 80%),
+	dark: rgba(0, 0, 0, 0.9),
+	medium: rgba(0, 0, 0, 0.5),
+	light: rgba(0, 0, 0, 0.4),
 	accent: map-get($settings, accent)
 );
 
@@ -12,7 +18,7 @@ $theme-dark: (
 );
 
 $theme-light: (
-	menu-background: hsl(0, 0%, 100%),
+	menu-background: #f5f5f5,
 	menu-text: map-get($base-colors, medium),
 	normal: map-get($base-colors, medium)
 );
