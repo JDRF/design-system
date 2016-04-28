@@ -1,14 +1,23 @@
 $settings: (
 	theme: light,
+	dark: rgba(0, 0, 0, 0.9),
+	medium: rgba(0, 0, 0, 0.5),
+	light: rgba(0, 0, 0, 0.4),
 	accent: #09bcef,
+	primary-light: #0073cf,
+	primary-dark: #002855,
+	border: rgba(0, 0, 0, 0.1),
 	menu-width: 14rem
 );
 
 $base-colors: (
-	dark: rgba(0, 0, 0, 0.9),
-	medium: rgba(0, 0, 0, 0.5),
-	light: rgba(0, 0, 0, 0.4),
-	accent: map-get($settings, accent)
+	dark: map-get($settings, dark),
+	medium: map-get($settings, medium),
+	light: map-get($settings, light),
+	accent: map-get($settings, accent),
+	primary-light: map-get($settings, primary-light),
+	primary-dark: map-get($settings, primary-dark),
+	border: map-get($settings, border)
 );
 
 $theme-dark: (

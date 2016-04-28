@@ -1,0 +1,14 @@
+.f-header {
+	color: color(primary-light);
+	border-bottom: 1px solid color(border);
+	padding: 16px 14rem 16px 0;
+	width: 100%;
+
+	.f-header-center {
+		h1 {
+			color: inherit;
+			font-size: 1.5rem;
+			margin: 0;
+		}
+	}
+}
