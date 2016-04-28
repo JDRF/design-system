@@ -227,14 +227,6 @@ fabricator.allItemsToggles = function () {
 		var button = document.querySelector('.f-controls [data-f-toggle-control=' + type + ']'),
 			_items = items[type];
 
-		for (var i = 0; i < _items.length; i++) {
-			if (value) {
-				_items[i].classList.remove('f-item-hidden');
-			} else {
-				_items[i].classList.add('f-item-hidden');
-			}
-		}
-
 		// toggle styles
 		if (value) {
 			button.classList.add('f-active');
