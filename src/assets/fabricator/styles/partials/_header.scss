@@ -1,14 +1,22 @@
 .f-header {
 	color: color(primary-light);
 	border-bottom: 1px solid color(border);
-	padding: 16px 14rem 16px 0;
+	padding: 16px 0;
 	width: 100%;
 
 	.f-header-center {
 		h1 {
 			color: inherit;
-			font-size: 3rem;
+			font-size: 2rem;
 			margin: 0;
+		}
+	}
+
+	.f-menu-active & {
+		.f-header-center {
+			h1 {
+				font-size: 3rem;
+			}
 		}
 	}
 }
