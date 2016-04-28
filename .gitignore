@@ -6,7 +6,7 @@
 node_modules
 
 # Actual build files that are not shipped
-build
+dist
 
 # PhantomCSS file dirs
 failures
