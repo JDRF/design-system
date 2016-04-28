@@ -15,17 +15,17 @@ var gulp       = require('gulp'),
 		styles: './src/scss/style.scss'
 	};
 
-// Clean the build directory
+// Clean the dist directory
 gulp.task('clean', function() {
-	return del(['build', 'screenshots', 'failures']);
+	return del(['dist', 'screenshots', 'failures']);
 });
 
 gulp.task('clean:css', function() {
-	return del(['build/css']);
+	return del(['dist/css']);
 });
 
 gulp.task('clean:js', function() {
-	return del(['build/js']);
+	return del(['dist/js']);
 });
 
 // Compile all scripts together
@@ -34,9 +34,9 @@ gulp.task('scripts', ['clean:js'], function() {
 		paths.bootstrap.scripts,
 		paths.scripts
 	])
-	.pipe(gulp.dest('build/js/src'))
+	.pipe(gulp.dest('dist/js/src'))
 	.pipe(concat('app.js'))
-	.pipe(gulp.dest('build/js'));
+	.pipe(gulp.dest('dist/js'));
 });
 
 // Compile all sass files together
@@ -50,7 +50,7 @@ gulp.task('sass', ['clean:css'], function () {
 	.on('error', notify.onError(function (error) {
 		return 'Error: ' + error.message;
 	})) 
-	.pipe(gulp.dest('./build'));
+	.pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('test', function (){
