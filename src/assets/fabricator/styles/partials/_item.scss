@@ -87,3 +87,14 @@
 .f-item-notes {
 	font-size: 0.875rem;
 }
+
+.f-section {
+	.f-example {
+		border: 3px solid map-get($code-colors, light-gray);
+		padding: 20px;
+	}
+
+	.f-example-title {
+		margin-top: 2rem;
+	}
+}
