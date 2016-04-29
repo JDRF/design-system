@@ -1,21 +1,21 @@
 //Design System Elevations
 
-@mixin elevation-1() {
+@mixin elevation-one() {
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
-@mixin elevation-2() {
+@mixin elevation-two() {
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.1);
 }
 
-@mixin elevation-3() {
+@mixin elevation-three() {
 	box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
-@mixin elevation-4() {
+@mixin elevation-four() {
 	box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.3), 0 10px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
-@mixin elevation-5() {
+@mixin elevation-five() {
 	box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3), 0 16px 12px 0 rgba(0, 0, 0, 0.2);
 }
