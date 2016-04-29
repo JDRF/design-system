@@ -6,7 +6,7 @@ Running locally, all files can be access via their full path, but it's recommend
 gulp serve
 ````
 
-If you are developing the master branch, it's recommended that you run the below command instead. This will add a dependency on the master branch dist files and allow local development.
+If you are developing the master branch, it's recommended that you run the below command instead. This will add a dependency on the master branch dist files and allow local development on Design System
 ````
-gulp serve-local
+gulp --env=dev serve
 ````

@@ -18,7 +18,7 @@ var webpack = require('webpack');
 
 // configuration
 var config = {
-	dev: gutil.env.dev,
+	dev: gutil.env.type,
 	src: {
 		scripts: {
 			fabricator: './src/assets/fabricator/scripts/fabricator.js',
@@ -102,11 +102,11 @@ gulp.task('assemble', function (done) {
 		logErrors: config.dev,
 		helpers: {
 			local: function(options) {
-				/*if ( config.dev ) {*/
+				if ( 'dev' === gutil.env.env ) {
 					return options.fn(this);
-				/*} else {
+				} else {
 					return options.inverse(this);
-				}*/
+				}
 			}
 		}
 	});
