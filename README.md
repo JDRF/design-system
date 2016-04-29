@@ -2,6 +2,7 @@
 
 # File Structure
 
+````
 └── working-directory (gh-pages branch)
 	├── /design-system/ (master branch)
 	├── /dist/
@@ -9,6 +10,7 @@
 	├── gulpfile.js
 	├── package.json
 	└── webpack.config.json
+````
 
 # Local Development
 Running locally, all files can be access via their full path, but it's recommended to serve them with the below command and access at http://localhost:3000
