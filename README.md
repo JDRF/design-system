@@ -10,3 +10,7 @@ If you are developing the master branch, it's recommended that you run the below
 ````
 npm run serve-dev
 ````
+# Pushing to gh-pages
+````
+npm run build
+````
