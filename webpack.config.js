@@ -8,7 +8,7 @@ module.exports = function(fabricatorConfig) {
 	var config = {
 		entry: {
 			'fabricator/scripts/f': fabricatorConfig.src.scripts.fabricator,
-			'design-system/scripts/design-system': fabricatorConfig.src.scripts.bootstrap
+			'design-system/scripts/design-system': fabricatorConfig.src.scripts.build
 		},
 		output: {
 			path: path.resolve(__dirname, fabricatorConfig.dest, 'assets'),

@@ -10,10 +10,11 @@
     }
   ],
   "scripts": {
-      "test": "ls -al",
-      "build": "gulp",
-      "serve": "gulp && gulp serve",
-      "serve-dev": "gulp --env=dev"
+    "test": "ls -al",
+    "build": "gulp",
+    "build-from-dev": "gulp --env=dev build",
+    "serve": "gulp && gulp serve",
+    "serve-from-dev": "gulp --env=dev && gulp --env=dev serve"
   },
   "repository": {
     "type": "git",
@@ -41,11 +42,13 @@
     "gulp-csso": "^1.1.0",
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2",
+    "gulp-prompt": "^0.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.7",
     "imports-loader": "^0.6.4",
+    "merge-stream": "^1.0.0",
     "run-sequence": "^1.1.5",
     "script-loader": "^0.6.1",
     "webpack": "^1.13.0"

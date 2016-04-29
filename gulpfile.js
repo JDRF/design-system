@@ -8,7 +8,9 @@ var del = require('del');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
+var merge = require('merge-stream');
 var prefix = require('gulp-autoprefixer');
+var prompt = require('gulp-prompt');
 var rename = require('gulp-rename');
 var reload = browserSync.reload;
 var runSequence = require('run-sequence');
@@ -22,12 +24,12 @@ var config = {
 	src: {
 		scripts: {
 			fabricator : './src/assets/fabricator/scripts/fabricator.js',
-			bootstrap  : './node_modules/bootstrap/dist/js/bootstrap.js',
+			build      : './src/assets/design-system/scripts/design-system.js',
 			dev        : './design-system/dist/js/app.js'
 		},
 		styles: {
 			fabricator : 'src/assets/fabricator/styles/fabricator.scss',
-			bootstrap  : './node_modules/bootstrap/dist/css/bootstrap.css',
+			build      : './src/assets/design-system/styles/design-system.css',
 			dev        : './design-system/dist/css/style.css'
 		},
 		images: 'src/assets/toolkit/images/**/*',
@@ -47,6 +49,17 @@ gulp.task('clean', function () {
 	return del([config.dest]);
 });
 
+gulp.task('clean:designsystem', function() {
+	if (config.dev) {
+		var js = gulp.src(config.src.scripts.dev)
+			.pipe(gulp.dest('./src/assets/design-system/scripts/'));
+
+		var css = gulp.src(config.src.styles.dev)
+			.pipe(gulp.dest('./src/assets/design-system/styles/'));
+
+		return merge(js, css);
+	}
+});
 
 // styles
 gulp.task('styles:fabricator', function () {
@@ -73,7 +86,7 @@ gulp.task('styles:toolkit', function () {
 });
 
 gulp.task('style:designsystem', function () {
-	gulp.src(gutil.env.env === 'dev' ? config.src.styles.dev : config.src.styles.bootstrap)
+	gulp.src(gutil.env.env === 'dev' ? config.src.styles.dev : config.src.styles.build)
 		.pipe(rename('design-system.css'))
 		.pipe(gulp.dest(config.dest + '/assets/design-system/styles'));
 });
@@ -158,6 +171,10 @@ gulp.task('serve', function () {
 
 });
 
+gulp.task('build', ['clean:designsystem'], function() {
+	gulp.start('default');
+});
+
 // default build task
 gulp.task('default', ['clean'], function () {
 
@@ -171,7 +188,7 @@ gulp.task('default', ['clean'], function () {
 	// run build
 	runSequence(tasks, function () {
 		if (config.dev) {
-			gulp.start('serve');
+			//gulp.start('serve');
 		}
 	});
 
