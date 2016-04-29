@@ -1,0 +1,21 @@
+/* Design System Custom - No Bootstrap Default */
+
+.rectangle-1 {
+  @include elevation-1;
+}
+
+.rectangle-2 {
+  @include elevation-2;
+}
+
+.rectangle-3 {
+  @include elevation-3;
+}
+
+.rectangle-4 {
+  @include elevation-4;
+}
+
+.rectangle-5 {
+  @include elevation-5;
+}
