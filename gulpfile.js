@@ -18,17 +18,19 @@ var webpack = require('webpack');
 
 // configuration
 var config = {
-	dev: gutil.env.type,
+	dev: gutil.env.env,
 	src: {
 		scripts: {
-			fabricator: './src/assets/fabricator/scripts/fabricator.js',
-			toolkit: './src/assets/toolkit/scripts/toolkit.js',
-			bootstrapSrc: './node_modules/bootstrap/dist/js/bootstrap.js'
+			fabricator : './src/assets/fabricator/scripts/fabricator.js',
+			toolkit    : './src/assets/toolkit/scripts/toolkit.js',
+			bootstrap  : './node_modules/bootstrap/dist/js/bootstrap.js',
+			dev        : './design-system/dist/js/app.js'
 		},
 		styles: {
-			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss',
-			bootstrapSrc: './node_modules/bootstrap/dist/css/bootstrap.css'
+			fabricator : 'src/assets/fabricator/styles/fabricator.scss',
+			toolkit    : 'src/assets/toolkit/styles/toolkit.scss',
+			bootstrap  : './node_modules/bootstrap/dist/css/bootstrap.css',
+			dev        : './design-system/dist/css/style.css'
 		},
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
@@ -72,12 +74,13 @@ gulp.task('styles:toolkit', function () {
 		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 
-gulp.task('styles:bootstrap', function () {
-	gulp.src(config.src.styles.bootstrapSrc)
-		.pipe(gulp.dest(config.dest + '/assets/bootstrap/styles'));
+gulp.task('style:designsystem', function () {
+	gulp.src(gutil.env.env === 'dev' ? config.src.styles.dev : config.src.styles.bootstrap)
+		.pipe(rename('design-system.css'))
+		.pipe(gulp.dest(config.dest + '/assets/design-system/styles'));
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:toolkit', 'styles:bootstrap']);
+gulp.task('styles', ['styles:fabricator', 'styles:toolkit', 'style:designsystem']);
 
 // scripts
 gulp.task('scripts', function (done) {

@@ -14,16 +14,9 @@
 	<link rel="stylesheet" href="./{{baseurl}}/assets/toolkit/styles/toolkit.css">
 	<!-- /toolkit styles -->
 
-	<meta name="config" content="{{foo}}" />
-
-	{{#local}}
-	<link rel="stylesheet" href="./{{baseurl}}/design-system/dist/style.css">
-	{{else}}
-	<!-- bootstrap styles -->
-	<link rel="stylesheet" href="./{{baseurl}}/assets/bootstrap/styles/bootstrap.css">
-	<!-- /bootstrap styles -->
-	{{/local}}
-
+	<!-- Design System styles -->
+	<link rel="stylesheet" href="./{{baseurl}}/assets/design-system/styles/design-system.css">
+	<!-- /Design System styles -->
 
 </head>
 <body>
@@ -53,8 +46,9 @@
 	<script src="./{{baseurl}}/assets/toolkit/scripts/toolkit.js"></script>
 	<!-- /toolkit scripts -->
 
-	<!-- bootstrap scripts -->
-	<script src="./{{baseurl}}/assets/bootstrap/scripts/bootstrap.js"></script>
-	<!-- /bootstrap scripts -->
+	<!-- Design System scripts -->
+	<script src="./{{baseurl}}/assets/design-system/scripts/design-system.js"></script>
+	<!-- /Design System scripts -->
+
 </body>
 </html>

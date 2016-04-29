@@ -10,7 +10,10 @@
     }
   ],
   "scripts": {
-    "test": "ls -al"
+      "test": "ls -al",
+      "build": "gulp",
+      "serve": "gulp && gulp serve",
+      "serve-dev": "gulp --env=dev"
   },
   "repository": {
     "type": "git",

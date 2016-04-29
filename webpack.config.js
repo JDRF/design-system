@@ -9,7 +9,7 @@ module.exports = function(fabricatorConfig) {
 		entry: {
 			'fabricator/scripts/f': fabricatorConfig.src.scripts.fabricator,
 			'toolkit/scripts/toolkit': fabricatorConfig.src.scripts.toolkit,
-			'bootstrap/scripts/bootstrap': fabricatorConfig.src.scripts.toolkit
+			'design-system/scripts/design-system': fabricatorConfig.src.scripts.bootstrap
 		},
 		output: {
 			path: path.resolve(__dirname, fabricatorConfig.dest, 'assets'),
@@ -28,7 +28,9 @@ module.exports = function(fabricatorConfig) {
 		cache: {}
 	};
 
-	if (!fabricatorConfig.dev) {
+	if ('dev' === fabricatorConfig.dev) {
+		config.entry['design-system/scripts/design-system'] = fabricatorConfig.src.scripts.dev
+	} else {
 		config.plugins.push(
 			new webpack.optimize.UglifyJsPlugin()
 		);

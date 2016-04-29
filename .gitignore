@@ -3,7 +3,8 @@
 
 # submodule files
 .gitmodules
-design-system
+/design-system
+!dist/assets/design-system
 
 # npm created files
 *.log
