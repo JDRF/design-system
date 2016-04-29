@@ -1,5 +1,7 @@
 /* Design System Custom - No Bootstrap Default */
 
+@import "mixins/elevations";
+
 .elevation-one {
   @include elevation-one;
 }
