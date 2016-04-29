@@ -20,9 +20,14 @@ npm run serve
 
 If you are developing the master branch, it's recommended that you run the below command instead. This will add a dependency on the master branch dist files and allow local development on Design System
 ````
-npm run serve-dev
+npm run serve-from-dev
 ````
 # Pushing to gh-pages
 ````
 npm run build
+````
+
+If you want to include the latest from master in gh-pages
+````
+npm run build-from-dev
 ````
