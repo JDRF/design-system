@@ -43,52 +43,49 @@
 			<!-- fabricator menu -->
 			<div class="f-menu">
 			
-				<ul>
+				<ul class="nav">
 			
-					<li>
-						<a href="./index.html" class="f-menu__heading">Overview</a>
-						<a href="./about.html" class="f-menu__heading">About</a>
-						<a href="./faq.html" class="f-menu__heading">FAQ</a>
+					<li class="nav-item">
+						<a href="./index.html" class="f-menu__heading nav-link">Overview</a>
+						<a href="./about.html" class="f-menu__heading nav-link">About</a>
+						<a href="./faq.html" class="f-menu__heading nav-link">FAQ</a>
 					</li>
 			
-					<li>
-						<a href="./base.html" class="f-menu__heading">Base</a>
+					<li class="nav-item">
+						<a href="./components.html" class="f-menu__heading nav-link">Components</a>
 						<ul>
 							<li>
-								<a href="./base.html#buttons">Buttons</a>
+								<a href="./components.html#buttons" class="nav-link">Buttons</a>
 							</li>
 							<li>
-								<a href="./base.html#colors">Colors</a>
-							</li>
-							<li>
-								<a href="./base.html#elevation">Elevation</a>
-							</li>
-							<li>
-								<a href="./base.html#lists">Lists</a>
-							</li>
-							<li>
-								<a href="./base.html#typography">Typography</a>
+								<a href="./components.html#side-navigation" class="nav-link">Side Navigation</a>
 							</li>
 						</ul>
 					</li>
-					<li>
-						<a href="./components.html" class="f-menu__heading">Components</a>
+					<li class="nav-item">
+						<a href="./content.html" class="f-menu__heading nav-link">Content</a>
 						<ul>
 							<li>
-								<a href="./components.html#side-navigation">Side Navigation</a>
+								<a href="./content.html#colors" class="nav-link">Colors</a>
+							</li>
+							<li>
+								<a href="./content.html#elevation" class="nav-link">Elevation</a>
+							</li>
+							<li>
+								<a href="./content.html#typography" class="nav-link">Typography</a>
 							</li>
 						</ul>
 					</li>
 			
 			
-					<li>
-						<a href="./docs.html" class="f-menu__heading">Docs</a>
+					<li class="nav-item">
+						<a href="./docs.html" class="f-menu__heading nav-link">Docs</a>
 						<ul>
 							<li>
-								<a href="./docs.html#javascript">Javascript</a>
+								<a href="./docs.html#javascript" class="nav-link">Javascript</a>
 							</li>
 							<li>
-								<a href="./docs.html#test">Test</a>
+								<a href="./docs.html#test" class="nav-link">Test</a>
 							</li>
 						</ul>
 					</li>
@@ -116,6 +113,91 @@
 <h2 data-f-toggle="labels">Components</h2>
 
 
+<div class="f-item-group" id="buttons">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h3 class="f-item-heading">Buttons</h3>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>These are notes associated with this <code>button</code> components.</p>
+
+</div>
+<div class="f-item-preview">
+	<h4>Primary</h4>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-primary hover">Hover</button>
+<button type="button" class="btn btn-primary" disabled>Disabled</button>
+
+<h4>Secondary</h4>
+<button type="button" class="btn btn-primary-outline">Secondary</button>
+<button type="button" class="btn btn-primary-outline hover">Hover</button>
+<button type="button" class="btn btn-primary-outline" disabled>Disabled</button>
+
+<h4>Flat</h4>
+<button type="button" class="btn btn-secondary">Flat</button>
+<button type="button" class="btn btn-secondary hover">Hover</button>
+<button type="button" class="btn btn-secondary" disabled>Disabled</button>
+
+<h4>Text</h4>
+<button type="button" class="btn btn-link">Text</button>
+<button type="button" class="btn btn-link">Hover</button>
+<button type="button" class="btn btn-link" disabled>Disabled</button>
+
+<h4>Large</h4>
+<button type="button" class="btn btn-primary btn-lg">Large</button>
+<button type="button" class="btn btn-primary btn-lg hover">Hover</button>
+<button type="button" class="btn btn-primary btn-lg" disabled>Disabled</button>
+
+<h4>Small</h4>
+<button type="button" class="btn btn-primary btn-sm">Small</button>
+<button type="button" class="btn btn-primary btn-sm hover">Hover</button>
+<button type="button" class="btn btn-primary btn-sm" disabled>Disabled</button>
+
+<h4>Block</h4>
+<button type="button" class="btn btn-primary btn-lg btn-block">Block</button>
+<button type="button" class="btn btn-primary btn-lg btn-block hover">Hover</button>
+<button type="button" class="btn btn-primary btn-lg btn-block" disabled>Disabled</button>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;h4&gt;Primary&lt;/h4&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary hover&quot;&gt;Hover&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; disabled&gt;Disabled&lt;/button&gt;
+
+&lt;h4&gt;Secondary&lt;/h4&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary-outline&quot;&gt;Secondary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary-outline hover&quot;&gt;Hover&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary-outline&quot; disabled&gt;Disabled&lt;/button&gt;
+
+&lt;h4&gt;Flat&lt;/h4&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Flat&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary hover&quot;&gt;Hover&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot; disabled&gt;Disabled&lt;/button&gt;
+
+&lt;h4&gt;Text&lt;/h4&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Text&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Hover&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot; disabled&gt;Disabled&lt;/button&gt;
+
+&lt;h4&gt;Large&lt;/h4&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Large&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg hover&quot;&gt;Hover&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot; disabled&gt;Disabled&lt;/button&gt;
+
+&lt;h4&gt;Small&lt;/h4&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Small&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm hover&quot;&gt;Hover&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot; disabled&gt;Disabled&lt;/button&gt;
+
+&lt;h4&gt;Block&lt;/h4&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg btn-block&quot;&gt;Block&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg btn-block hover&quot;&gt;Hover&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg btn-block&quot; disabled&gt;Disabled&lt;/button&gt;</code></pre>
+</div>
+
+
+</div>
+
+
 <div class="f-item-group" id="side-navigation">
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
@@ -125,10 +207,40 @@
 
 </div>
 <div class="f-item-preview">
-	Sidebar navigation stuff will go here.
+	<h4>Sidebar Navigation</h4>
+
+<ul class="nav">
+	<li class="nav-item">
+		<a class="nav-link" href="#">Link</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="#">Link</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="#">Another link</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link disabled" href="#">Disabled</a>
+	</li>
+</ul>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">Sidebar navigation stuff will go here.</code></pre>
+	<pre><code class="language-markup">&lt;h4&gt;Sidebar Navigation&lt;/h4&gt;
+
+&lt;ul class=&quot;nav&quot;&gt;
+	&lt;li class=&quot;nav-item&quot;&gt;
+		&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;nav-item&quot;&gt;
+		&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;nav-item&quot;&gt;
+		&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Another link&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class=&quot;nav-item&quot;&gt;
+		&lt;a class=&quot;nav-link disabled&quot; href=&quot;#&quot;&gt;Disabled&lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 </div>
 
 
