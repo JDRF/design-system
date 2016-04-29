@@ -8,7 +8,6 @@ module.exports = function(fabricatorConfig) {
 	var config = {
 		entry: {
 			'fabricator/scripts/f': fabricatorConfig.src.scripts.fabricator,
-			'toolkit/scripts/toolkit': fabricatorConfig.src.scripts.toolkit,
 			'design-system/scripts/design-system': fabricatorConfig.src.scripts.bootstrap
 		},
 		output: {

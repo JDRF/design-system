@@ -22,13 +22,11 @@ var config = {
 	src: {
 		scripts: {
 			fabricator : './src/assets/fabricator/scripts/fabricator.js',
-			toolkit    : './src/assets/toolkit/scripts/toolkit.js',
 			bootstrap  : './node_modules/bootstrap/dist/js/bootstrap.js',
 			dev        : './design-system/dist/js/app.js'
 		},
 		styles: {
 			fabricator : 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit    : 'src/assets/toolkit/styles/toolkit.scss',
 			bootstrap  : './node_modules/bootstrap/dist/css/bootstrap.css',
 			dev        : './design-system/dist/css/style.css'
 		},
@@ -80,7 +78,7 @@ gulp.task('style:designsystem', function () {
 		.pipe(gulp.dest(config.dest + '/assets/design-system/styles'));
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:toolkit', 'style:designsystem']);
+gulp.task('styles', ['styles:fabricator', 'style:designsystem']);
 
 // scripts
 gulp.task('scripts', function (done) {
