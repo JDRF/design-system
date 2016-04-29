@@ -14,9 +14,14 @@
 	<link rel="stylesheet" href="./{{baseurl}}/assets/toolkit/styles/toolkit.css">
 	<!-- /toolkit styles -->
 
+	{{#local}}
+	<link rel="stylesheet" href="./{{baseurl}}/design-system/dist/style.css">
+	{{else}}
 	<!-- bootstrap styles -->
 	<link rel="stylesheet" href="./{{baseurl}}/assets/bootstrap/styles/bootstrap.css">
 	<!-- /bootstrap styles -->
+	{{/local}}
+
 
 </head>
 <body>

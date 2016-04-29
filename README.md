@@ -1,34 +1,12 @@
 # JDRF Design System
 
-# Installation
-Run the below command to generate dependencies and compiled files.
+# Local Development
+Running locally, all files can be access via their full path, but it's recommended to serve them with the below command and access at http://localhost:3000
 ````
-npm run build
-````
-
-# Clean Up
-Wipe the directory of all compiled files and dependencies.
-* /build - _compiled files_
-* /node_modules - _dependencies_
-* /screenshots && /failures - _PhantomCSS compiled files_
-
-````
-npm run clean
+gulp serve
 ````
 
-# Continuous Development
-The easiest (and recommended) way to develop on Design System is to checkout the gh-pages locally and create a subdirectory called design-system that houses the master branch.
-
+If you are developing the master branch, it's recommended that you run the below command instead. This will add a dependency on the master branch dist files and allow local development.
 ````
-cd <DIR_TO_PROJECT>
-git checkout gh-pages
-git clone git@github.com:JDRF/design-system.git design-system
-cd design-system
+gulp serve-local
 ````
-
-# Tests
-Currently, one only _proof of concept_ PhantomCSS test.
-````
-npm run test
-````
-If there are NPM errors, try running ````npm install```` in ````./node_modules/gulp-phantomcss````.

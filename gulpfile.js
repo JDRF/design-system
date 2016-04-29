@@ -73,8 +73,8 @@ gulp.task('styles:toolkit', function () {
 });
 
 gulp.task('styles:bootstrap', function () {
-    gulp.src(config.src.styles.bootstrapSrc)
-        .pipe(gulp.dest(config.dest + '/assets/bootstrap/styles'));
+	gulp.src(config.src.styles.bootstrapSrc)
+		.pipe(gulp.dest(config.dest + '/assets/bootstrap/styles'));
 });
 
 gulp.task('styles', ['styles:fabricator', 'styles:toolkit', 'styles:bootstrap']);
@@ -99,7 +99,16 @@ gulp.task('scripts', function (done) {
 gulp.task('assemble', function (done) {
 	assemble({
 		dest: 'dist',
-		logErrors: config.dev
+		logErrors: config.dev,
+		helpers: {
+			local: function(options) {
+				/*if ( config.dev ) {*/
+					return options.fn(this);
+				/*} else {
+					return options.inverse(this);
+				}*/
+			}
+		}
 	});
 	done();
 });
@@ -146,11 +155,7 @@ gulp.task('serve', function () {
 	gulp.task('scripts:watch', ['scripts'], reload);
 	gulp.watch('src/assets/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
 
-	gulp.task('images:watch', ['images'], reload);
-	gulp.watch(config.src.images, ['images:watch']);
-
 });
-
 
 // default build task
 gulp.task('default', ['clean'], function () {
