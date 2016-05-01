@@ -1,3 +1,16 @@
 @import "scss/nav";
 
 /* Bootstrap overwrites: nav.scss */
+
+.sidebar {
+	width: 260px;
+
+	.nav-link {
+		border-left: 2px solid $grey-4;
+		padding: 16px 0 16px 24px;
+
+		&:hover {
+			background-color: $grey-2;
+		}
+	}
+}
