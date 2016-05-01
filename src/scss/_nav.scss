@@ -8,9 +8,14 @@
 	.nav-link {
 		border-left: 2px solid $grey-4;
 		padding: 16px 0 16px 24px;
+		width: 100%;
 
 		&:hover {
 			background-color: $grey-2;
+		}
+
+		&.active {
+			border-color: $primary-dark-blue;
 		}
 	}
 }
