@@ -70,14 +70,9 @@
   &.focus,
   &:active,
   &.active,
-  .open > &.dropdown-toggle {
-    color: #fff;
-    background-color: $color;
-        border-color: $color;
-  }
-
   @include hover,
-  &.hover {
+  &.hover,
+  .open > &.dropdown-toggle {
     color: #fff;
     background-color: $color;
         border-color: $color;
