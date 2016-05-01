@@ -9,6 +9,11 @@
 		border-left: 2px solid $grey-4;
 		padding: 16px 0 16px 24px;
 		width: 100%;
+		color: $text-default;
+		/* temporary until we get fonts in */
+		font-size: 14px;
+		line-height: 14px;
+		font-weight: 500px;
 
 		&:hover {
 			background-color: $grey-2;
