@@ -17,10 +17,11 @@
 
 		&:hover {
 			background-color: $grey-2;
+			color: $brand-primary;
 		}
 
 		&.current {
-			border-color: $primary-dark-blue;
+			border-color: $brand-primary;
 		}
 	}
 }
