@@ -1,13 +1,13 @@
 @import "scss/variables";
 
-$primary-blue: 			#0073cf;
-$primary-dark-blue: 	#002855;
+$primary-blue:			#0073cf;
+$primary-dark-blue:		#002855;
 
 $jdrf-green: 			#00a862;
 $jdrf-purple: 			#a75ccc;
 $jdrf-magenta:			#e01279;
 $jdrf-orange:			#fa6323;
-$jdrf-blue:		  		$primary-blue;
+$jdrf-blue:				$primary-blue;
 $jdrf-white:			#ffffff;
 
 $accent-blue:			#09bcef;
@@ -33,22 +33,23 @@ $grey-7:				#757575;
 
 /* Bootstrap overwrites: variables.scss */
 
-$gray-dark:                 $grey-7;
-$gray:                      $grey-5;
-$gray-light:                $grey-3;
-$gray-lighter:              $grey-2;
-$gray-lightest:             $grey-1;
+$gray-dark:				$grey-7;
+$gray:					$grey-5;
+$gray-light:			$grey-3;
+$gray-lighter:			$grey-2;
+$gray-lightest:			$grey-1;
 
-$brand-primary:         $jdrf-green;
+$brand-primary:			$primary-blue;
+$btn-primary-bg:		$jdrf-green;
 
-$font-size-h1:               3rem;
-$font-size-h2:               2.25rem;
-$font-size-h3:               1.5rem;
-$font-size-h4:               1.25rem;
-$font-size-h5:               1rem;
-$font-size-h6:               0.875rem;
+$font-size-h1:			3rem;
+$font-size-h2:			2.25rem;
+$font-size-h3:			1.5rem;
+$font-size-h4:			1.25rem;
+$font-size-h5:			1rem;
+$font-size-h6:			0.875rem;
 
-$display1-size:              4.5rem;
-$display2-size:              3.75rem;
+$display1-size:			4.5rem;
+$display2-size:			3.75rem;
 
-$lead-font-size:             1.25rem;
+$lead-font-size:		1.25rem;
