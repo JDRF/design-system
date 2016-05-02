@@ -1,12 +1,7 @@
 var gulp       = require('gulp'),
 	del        = require('del'),
-	concat     = require('gulp-concat'),
-	notify     = require('gulp-notify'),
-	phantomcss = require('gulp-phantomcss'),
-	rename     = require('gulp-rename'),
-	sass       = require('gulp-sass'),
-
-	paths = {
+	plugins    = require('gulp-load-plugins')(),
+	paths      = {
 		bootstrap: {
 			scripts: './node_modules/bootstrap/dist/js/bootstrap.js',
 			styles: './node_modules/bootstrap/'
@@ -14,6 +9,10 @@ var gulp       = require('gulp'),
 		scripts: './src/js/**/*.js',
 		styles: './src/scss/style.scss'
 	};
+
+function getTask(task) {
+	return require('./tasks/' + task)(gulp, plugins, paths);
+}
 
 // Clean the dist directory
 gulp.task('clean', function() {
@@ -29,29 +28,10 @@ gulp.task('clean:js', function() {
 });
 
 // Compile all scripts together
-gulp.task('scripts', ['clean:js'], function() {
-	return gulp.src([
-		paths.bootstrap.scripts,
-		paths.scripts
-	])
-	.pipe(gulp.dest('dist/js/src'))
-	.pipe(concat('app.js'))
-	.pipe(gulp.dest('dist/js'));
-});
+gulp.task('scripts', ['clean:js'], getTask('scripts'));
 
 // Compile all sass files together
-gulp.task('sass', ['clean:css'], function () {
-	return gulp.src([paths.styles])
-	.pipe(sass({
-		includePaths: [
-			paths.bootstrap.styles
-		],
-	}))
-	.on('error', notify.onError(function (error) {
-		return 'Error: ' + error.message;
-	})) 
-	.pipe(gulp.dest('./dist/css'));
-});
+gulp.task('styles', ['clean:css'], getTask('styles'));
 
 gulp.task('test', function (){
 	gulp.src('./testsuite.js')
@@ -61,8 +41,8 @@ gulp.task('test', function (){
 // Rerun the task when a file changes
 gulp.task('watch', function() {
 	gulp.watch(paths.scripts, ['scripts']);
-	gulp.watch(paths.styles, ['sass']);
+	gulp.watch(paths.styles, ['styles']);
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['clean', 'scripts', 'sass']);
+gulp.task('default', ['clean', 'scripts', 'styles']);
