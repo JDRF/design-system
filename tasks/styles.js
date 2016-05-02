@@ -9,6 +9,7 @@ module.exports = function (gulp, plugins, paths) {
 			.on('error', plugins.notify.onError(function (error) {
 				return 'Error: ' + error.message;
 			})) 
+			.pipe(plugins.rename('design-system.css'))
 			.pipe(gulp.dest('./dist/css'));
 		return stream;
 	};

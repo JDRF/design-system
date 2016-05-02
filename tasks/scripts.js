@@ -4,8 +4,7 @@ module.exports = function (gulp, plugins, paths) {
 			paths.bootstrap.scripts,
 			paths.scripts
 		])
-		.pipe(gulp.dest('dist/js/src'))
-		.pipe(plugins.concat('app.js'))
+		.pipe(plugins.concat('design-system.js'))
 		.pipe(gulp.dest('dist/js'));
 		return stream;
 	};
