@@ -38,11 +38,9 @@ var config = {
 	dest: 'dist'
 };
 
-
 // webpack
 var webpackConfig = require('./webpack.config')(config);
 var webpackCompiler = webpack(webpackConfig);
-
 
 // clean
 gulp.task('clean', function () {
@@ -52,9 +50,12 @@ gulp.task('clean', function () {
 gulp.task('clean:designsystem', function() {
 	if (config.dev) {
 		var js = gulp.src(config.src.scripts.dev)
+			//.pipe(prompt.confirm('Have you commited all the changes to be included by this version?'))
+			.pipe(rename('design-system.js'))
 			.pipe(gulp.dest('./src/assets/design-system/scripts/'));
 
 		var css = gulp.src(config.src.styles.dev)
+			.pipe(rename('design-system.css'))
 			.pipe(gulp.dest('./src/assets/design-system/styles/'));
 
 		return merge(js, css);
