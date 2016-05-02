@@ -36,7 +36,7 @@ If there are NPM errors, try running ````npm install```` in ````./node_modules/g
 # Semantic Versioning and Releases
 We're using Semantic Versioning to increment the release phases of the Design System. This helps us to track major changes as well as minor changes and patches. We can also view a history of the project's [releases on Github](https://github.com/JDRF/design-system/releases) due to Semantic Versioning.
 
-A Semantic Version number usually looks something like this: v0.0.1 and the digit placement helps identify whether the release is a major release, a minor release, or a patch.
+A Semantic Version number usually looks something like this - `v0.0.1`. The digit placement helps identify whether the release is a major release, a minor release, or a patch. See the example below for reference.
 
 ````
 MAJOR.MINOR.PATCH
