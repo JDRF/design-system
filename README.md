@@ -18,7 +18,9 @@ Running locally, all files can be access via their full path, but it's recommend
 npm run serve
 ````
 
-If you are developing the master branch, it's recommended that you run the below command instead. This will add a dependency on the master branch dist files and allow local development on Design System
+If you are developing the master branch in a sub-folder called _design-system_, it's recommended that you run the below command instead. This will add a dependency on the master branch dist files and allow local development on Design System.
+
+`serve-from-dev` will also watch your files in _design-system_ so you only have to run gulp in one place.
 ````
 npm run serve-from-dev
 ````
