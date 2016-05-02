@@ -10,9 +10,8 @@
     }
   ],
   "scripts": {
-    "preinstall": "git checkout gh-pages && git pull origin gh-pages",
-    "postinstall": "cd design-system && npm install && cd - && gulp",
-
+      "presetup": "git checkout gh-pages && git pull origin gh-pages",
+      "setup": "npm install && cd design-system && npm run setup && cd .. && gulp",
     "test": "ls -al",
     "build": "gulp",
     "build-from-dev": "gulp --env=dev build",
