@@ -1,3 +1,7 @@
 @import "scss/buttons";
 
 /* Bootstrap overwrites: buttons.scss */
+
+.btn-link {
+	color: $jdrf-green;
+}

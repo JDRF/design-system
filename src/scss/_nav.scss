@@ -23,5 +23,11 @@
 		&.current {
 			border-color: $brand-primary;
 		}
+
+		> .nav {
+			.nav-link {
+				padding-left: 40px;
+			}
+		}
 	}
 }
