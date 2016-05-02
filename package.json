@@ -10,6 +10,8 @@
     }
   ],
   "scripts": {
+    "presetup": "git checkout master && git pull origin master",
+    "setup": "npm install && gulp",
     "build": "npm install && gulp",
     "test": "gulp phantomcss",
     "clean": "gulp clean && rm -rf node_modules"
