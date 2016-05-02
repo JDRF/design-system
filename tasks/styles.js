@@ -1,16 +1,16 @@
-module.exports = function (gulp, plugins, paths) {
+module.exports = function (gulp, plugins) {
 	return function () {
-		var stream = gulp.src([paths.styles])
+		var stream = gulp.src([__dirname + '/../src/scss/style.scss'])
 			.pipe(plugins.sass({
 				includePaths: [
-					paths.bootstrap.styles
+					'./node_modules/bootstrap/'
 				],
 			}))
 			.on('error', plugins.notify.onError(function (error) {
 				return 'Error: ' + error.message;
 			})) 
 			.pipe(plugins.rename('design-system.css'))
-			.pipe(gulp.dest('./dist/css'));
+			.pipe(gulp.dest(__dirname + '/../dist/css'));
 		return stream;
 	};
 };
