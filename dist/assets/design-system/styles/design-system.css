@@ -2166,7 +2166,7 @@ input[type="button"].btn-block {
 /* Bootstrap overwrites: nav.scss */
 .sidebar {
   width: 260px; }
-  .sidebar .nav-link {
+  .sidebar .nav-item .nav-link {
     border-left: 2px solid #e0e0e0;
     padding: 16px 0 16px 24px;
     width: 100%;
@@ -2175,13 +2175,13 @@ input[type="button"].btn-block {
     font-size: 14px;
     line-height: 14px;
     font-weight: 500; }
-    .sidebar .nav-link:hover {
+    .sidebar .nav-item .nav-link:hover {
       background-color: #f5f5f5;
       color: #0073cf; }
-    .sidebar .nav-link.current {
+    .sidebar .nav-item .nav-link.current {
       border-color: #0073cf; }
-    .sidebar .nav-link > .nav .nav-link {
-      padding-left: 40px; }
+  .sidebar .nav-item > .nav .nav-link {
+    padding-left: 40px; }
 
 .navbar {
   position: relative;

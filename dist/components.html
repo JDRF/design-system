@@ -54,6 +54,9 @@
 								<a href="./components.html#buttons" class="nav-link">Buttons</a>
 							</li>
 							<li>
+								<a href="./components.html#forms" class="nav-link">Forms</a>
+							</li>
+							<li>
 								<a href="./components.html#side-navigation" class="nav-link">Side Navigation</a>
 							</li>
 						</ul>
@@ -203,6 +206,10 @@
 		&lt;button type="button" class="btn btn-primary btn-lg btn-block" disabled>Disabled&lt;/button&gt;</code>
 	</pre>
 </section>
+
+<section class="f-section">
+	<h4 class="f-example-title">Button Animations</h4> Coming soon....
+</section>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
@@ -301,6 +308,385 @@
 		&amp;lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg btn-block hover&quot;&gt;Hover&amp;lt;/button&amp;gt;
 		&amp;lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg btn-block&quot; disabled&gt;Disabled&amp;lt;/button&amp;gt;&lt;/code&gt;
 	&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h4 class=&quot;f-example-title&quot;&gt;Button Animations&lt;/h4&gt; Coming soon....
+&lt;/section&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="forms">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h3 class="f-item-heading">Forms</h3>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>These are notes associated with the <code>form</code> component. For more information on Bootstrap's classes for form layouts, validation and so on, refer to <a href="http://v4-alpha.getbootstrap.com/components/forms/" target="_blank">Bootstrap's form documentation</a>.</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="f-section">
+	<h4 class="f-example-title">Email Field</h4>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+				<small class="text-muted">We'll never share your email with anyone else.</small>
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section class="f-section">
+	<h4 class="f-example-title">Address Field</h4>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group">
+				<label for="exampleInputAddress1">Address</label>
+				<input type="address" class="form-control" id="exampleInputAddress1" placeholder="Enter Address">
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section class="f-section">
+	<h4 class="f-example-title">Password Field</h4>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section class="f-section">
+	<h4 class="f-example-title">Select Box</h4>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group">
+				<label for="exampleSelect1">Example select</label>
+				<select class="form-control" id="exampleSelect1">
+				  <option>1</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				  <option>5</option>
+				</select>
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section class="f-section">
+	<h4 class="f-example-title">Multiple Select Box</h4>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group">
+				<label for="exampleSelect2">Example multiple select</label>
+				<select multiple class="form-control" id="exampleSelect2">
+				  <option>1</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				  <option>5</option>
+				</select>
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section class="f-section">
+	<h4 class="f-example-title">Text Field</h4>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group">
+				<label for="exampleInputText1">Example Text Field</label>
+				<input type="text" class="form-control" id="exampleInputText1" placeholder="Type something">
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section class="f-section">
+	<h4 class="f-example-title">Textarea</h4>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group">
+				<label for="exampleTextarea">Example Textarea</label>
+				<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="exampleInputFile">File input</label>
+				<input type="file" class="form-control-file" id="exampleInputFile">
+				<small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+<section class="f-section">
+	<h4 class="f-example-title">Radio Options</h4>
+	<div class="f-example">
+		<form>
+			<div class="radio">
+				<label>
+				  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				  Option one is this and that&mdash;be sure to include why it's great
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+				  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				  Option two can be something else and selecting it will deselect option one
+				</label>
+			</div>
+			<div class="radio disabled">
+				<label>
+				  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+				  Option three is disabled
+				</label>
+			</div>
+		</form>
+	</div>
+</section>
+
+<section class="f-section">
+	<h4 class="f-example-title">Checkbox</h4>
+	<div class="f-example">
+		<form>
+			<div class="checkbox">
+				<label>
+				  <input type="checkbox"> Check me out
+				</label>
+			</div>
+		</form>
+	</div>
+</section>
+
+<section class="f-section">
+	<h4 class="f-example-title">Inline Forms: Visible Labels</h4>
+	<div class="f-example">
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="exampleInputName2">Name</label>
+				<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail2">Email</label>
+				<input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+			</div>
+			<button type="submit" class="btn btn-primary">Send invitation</button>
+		</form>
+	</div>
+</section>
+
+<section class="f-section">
+	<h4 class="f-example-title">Inline Forms: Hidden Labels</h4>
+	<div class="f-example">
+		<form class="form-inline">
+			<div class="form-group">
+				<label class="sr-only" for="exampleInputEmail3">Email address</label>
+				<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+			</div>
+			<div class="form-group">
+				<label class="sr-only" for="exampleInputPassword3">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+			</div>
+			<div class="checkbox">
+				<label>
+		      <input type="checkbox"> Remember me
+		    </label>
+			</div>
+			<button type="submit" class="btn btn-primary">Sign in</button>
+		</form>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h4 class=&quot;f-example-title&quot;&gt;Email Field&lt;/h4&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleInputEmail1&quot;&gt;Email address&lt;/label&gt;
+				&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Enter email&quot;&gt;
+				&lt;small class=&quot;text-muted&quot;&gt;We&#x27;ll never share your email with anyone else.&lt;/small&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h4 class=&quot;f-example-title&quot;&gt;Address Field&lt;/h4&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleInputAddress1&quot;&gt;Address&lt;/label&gt;
+				&lt;input type=&quot;address&quot; class=&quot;form-control&quot; id=&quot;exampleInputAddress1&quot; placeholder=&quot;Enter Address&quot;&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h4 class=&quot;f-example-title&quot;&gt;Password Field&lt;/h4&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleInputPassword1&quot;&gt;Password&lt;/label&gt;
+				&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Password&quot;&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h4 class=&quot;f-example-title&quot;&gt;Select Box&lt;/h4&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleSelect1&quot;&gt;Example select&lt;/label&gt;
+				&lt;select class=&quot;form-control&quot; id=&quot;exampleSelect1&quot;&gt;
+				  &lt;option&gt;1&lt;/option&gt;
+				  &lt;option&gt;2&lt;/option&gt;
+				  &lt;option&gt;3&lt;/option&gt;
+				  &lt;option&gt;4&lt;/option&gt;
+				  &lt;option&gt;5&lt;/option&gt;
+				&lt;/select&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h4 class=&quot;f-example-title&quot;&gt;Multiple Select Box&lt;/h4&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleSelect2&quot;&gt;Example multiple select&lt;/label&gt;
+				&lt;select multiple class=&quot;form-control&quot; id=&quot;exampleSelect2&quot;&gt;
+				  &lt;option&gt;1&lt;/option&gt;
+				  &lt;option&gt;2&lt;/option&gt;
+				  &lt;option&gt;3&lt;/option&gt;
+				  &lt;option&gt;4&lt;/option&gt;
+				  &lt;option&gt;5&lt;/option&gt;
+				&lt;/select&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h4 class=&quot;f-example-title&quot;&gt;Text Field&lt;/h4&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleInputText1&quot;&gt;Example Text Field&lt;/label&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleInputText1&quot; placeholder=&quot;Type something&quot;&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h4 class=&quot;f-example-title&quot;&gt;Textarea&lt;/h4&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleTextarea&quot;&gt;Example Textarea&lt;/label&gt;
+				&lt;textarea class=&quot;form-control&quot; id=&quot;exampleTextarea&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleInputFile&quot;&gt;File input&lt;/label&gt;
+				&lt;input type=&quot;file&quot; class=&quot;form-control-file&quot; id=&quot;exampleInputFile&quot;&gt;
+				&lt;small class=&quot;text-muted&quot;&gt;This is some placeholder block-level help text for the above input. It&#x27;s a bit lighter and easily wraps to a new line.&lt;/small&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h4 class=&quot;f-example-title&quot;&gt;Radio Options&lt;/h4&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;div class=&quot;radio&quot;&gt;
+				&lt;label&gt;
+				  &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
+				  Option one is this and that&amp;mdash;be sure to include why it&#x27;s great
+				&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;radio&quot;&gt;
+				&lt;label&gt;
+				  &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&gt;
+				  Option two can be something else and selecting it will deselect option one
+				&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;radio disabled&quot;&gt;
+				&lt;label&gt;
+				  &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios3&quot; value=&quot;option3&quot; disabled&gt;
+				  Option three is disabled
+				&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h4 class=&quot;f-example-title&quot;&gt;Checkbox&lt;/h4&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;div class=&quot;checkbox&quot;&gt;
+				&lt;label&gt;
+				  &lt;input type=&quot;checkbox&quot;&gt; Check me out
+				&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h4 class=&quot;f-example-title&quot;&gt;Inline Forms: Visible Labels&lt;/h4&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form class=&quot;form-inline&quot;&gt;
+			&lt;div class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleInputName2&quot;&gt;Name&lt;/label&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleInputName2&quot; placeholder=&quot;Jane Doe&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleInputEmail2&quot;&gt;Email&lt;/label&gt;
+				&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail2&quot; placeholder=&quot;jane.doe@example.com&quot;&gt;
+			&lt;/div&gt;
+			&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Send invitation&lt;/button&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h4 class=&quot;f-example-title&quot;&gt;Inline Forms: Hidden Labels&lt;/h4&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form class=&quot;form-inline&quot;&gt;
+			&lt;div class=&quot;form-group&quot;&gt;
+				&lt;label class=&quot;sr-only&quot; for=&quot;exampleInputEmail3&quot;&gt;Email address&lt;/label&gt;
+				&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail3&quot; placeholder=&quot;Enter email&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;form-group&quot;&gt;
+				&lt;label class=&quot;sr-only&quot; for=&quot;exampleInputPassword3&quot;&gt;Password&lt;/label&gt;
+				&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword3&quot; placeholder=&quot;Password&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;checkbox&quot;&gt;
+				&lt;label&gt;
+		      &lt;input type=&quot;checkbox&quot;&gt; Remember me
+		    &lt;/label&gt;
+			&lt;/div&gt;
+			&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Sign in&lt;/button&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
 &lt;/section&gt;</code></pre>
 </div>
 
@@ -322,32 +708,32 @@
 	<div class="f-example">
 		<ul class="nav sidebar">
 			<li class="nav-item">
-				<a class="nav-link current" href="#">Current Parent</a>
+				<a class="nav-link current" href="#!">Current Parent</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">Parent Link</a>
+				<a class="nav-link" href="#!">Parent Link</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">Parent Link</a>
+				<a class="nav-link" href="#!">Parent Link</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">Parent Link</a>
+				<a class="nav-link" href="#!">Parent Link</a>
 			</li>
 		</ul>
 	</div>
 	<pre class="language-markup">
     <code class="language-markup">&lt;ul class="nav sidebar"&gt;
       &lt;li class="nav-item"&gt;
-        &lt;a class="nav-link current" href="#"&gt;Current Parent&lt;/a&gt;
+        &lt;a class="nav-link current" href="#!"&gt;Current Parent&lt;/a&gt;
       &lt;/li&gt;
       &lt;li class="nav-item"&gt;
-        &lt;a class="nav-link" href="#"&gt;Parent Link&lt;/a&gt;
+        &lt;a class="nav-link" href="#!"&gt;Parent Link&lt;/a&gt;
       &lt;/li&gt;
       &lt;li class="nav-item"&gt;
-        &lt;a class="nav-link" href="#"&gt;Parent Link&lt;/a&gt;
+        &lt;a class="nav-link" href="#!"&gt;Parent Link&lt;/a&gt;
       &lt;/li&gt;
       &lt;li class="nav-item"&gt;
-        &lt;a class="nav-link" href="#"&gt;Parent Link&lt;/a&gt;
+        &lt;a class="nav-link" href="#!"&gt;Parent Link&lt;/a&gt;
       &lt;/li&gt;
     &lt;/ul&gt;</code>
   </pre>
@@ -358,48 +744,48 @@
 	<div class="f-example">
 		<ul class="nav sidebar">
 			<li class="nav-item">
-				<a class="nav-link" href="#">Parent Link</a>
+				<a class="nav-link" href="#!">Parent Link</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">Parent Link</a>
+				<a class="nav-link" href="#!">Parent Link</a>
 				<ul class="nav">
 					<li class="nav-item">
-						<a class="nav-link current" href="#">Child Link</a>
+						<a class="nav-link current" href="#!">Child Link</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Child Link</a>
+						<a class="nav-link" href="#!">Child Link</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Child Link</a>
+						<a class="nav-link" href="#!">Child Link</a>
 					</li>
 				</ul>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">Parent Link</a>
+				<a class="nav-link" href="#!">Parent Link</a>
 			</li>
 		</ul>
 	</div>
 	<pre class="language-markup">
     <code class="language-markup">&lt;ul class="nav sidebar"&gt;
       &lt;li class="nav-item"&gt;
-        &lt;a class="nav-link" href="#">Parent Link&lt;/a&gt;
+        &lt;a class="nav-link" href="#!">Parent Link&lt;/a&gt;
       &lt;/li&gt;
       &lt;li class="nav-item"&gt;
-        &lt;a class="nav-link" href="#">Parent Link&lt;/a&gt;
+        &lt;a class="nav-link" href="#!">Parent Link&lt;/a&gt;
         &lt;ul class="nav"&gt;
           &lt;li class="nav-item"&gt;
-            &lt;a class="nav-link current" href="#">Child Link&lt;/a&gt;
+            &lt;a class="nav-link current" href="#!">Current Child&lt;/a&gt;
           &lt;/li&gt;
           &lt;li class="nav-item"&gt;
-            &lt;a class="nav-link" href="#">Child Link&lt;/a&gt;
+            &lt;a class="nav-link" href="#!">Child Link&lt;/a&gt;
           &lt;/li&gt;
           &lt;li class="nav-item"&gt;
-            &lt;a class="nav-link" href="#">Child Link&lt;/a&gt;
+            &lt;a class="nav-link" href="#!">Child Link&lt;/a&gt;
           &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
       &lt;li class="nav-item"&gt;
-        &lt;a class="nav-link" href="#">Parent Link&lt;/a&gt;
+        &lt;a class="nav-link" href="#!">Parent Link&lt;/a&gt;
       &lt;/li&gt;
     &lt;/ul&gt;</code>
   </pre>
@@ -411,32 +797,32 @@
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;ul class=&quot;nav sidebar&quot;&gt;
 			&lt;li class=&quot;nav-item&quot;&gt;
-				&lt;a class=&quot;nav-link current&quot; href=&quot;#&quot;&gt;Current Parent&lt;/a&gt;
+				&lt;a class=&quot;nav-link current&quot; href=&quot;#!&quot;&gt;Current Parent&lt;/a&gt;
 			&lt;/li&gt;
 			&lt;li class=&quot;nav-item&quot;&gt;
-				&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Parent Link&lt;/a&gt;
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
 			&lt;/li&gt;
 			&lt;li class=&quot;nav-item&quot;&gt;
-				&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Parent Link&lt;/a&gt;
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
 			&lt;/li&gt;
 			&lt;li class=&quot;nav-item&quot;&gt;
-				&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Parent Link&lt;/a&gt;
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
 			&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;
     &lt;code class=&quot;language-markup&quot;&gt;&amp;lt;ul class=&quot;nav sidebar&quot;&amp;gt;
       &amp;lt;li class=&quot;nav-item&quot;&amp;gt;
-        &amp;lt;a class=&quot;nav-link current&quot; href=&quot;#&quot;&amp;gt;Current Parent&amp;lt;/a&amp;gt;
+        &amp;lt;a class=&quot;nav-link current&quot; href=&quot;#!&quot;&amp;gt;Current Parent&amp;lt;/a&amp;gt;
       &amp;lt;/li&amp;gt;
       &amp;lt;li class=&quot;nav-item&quot;&amp;gt;
-        &amp;lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&amp;gt;Parent Link&amp;lt;/a&amp;gt;
+        &amp;lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&amp;gt;Parent Link&amp;lt;/a&amp;gt;
       &amp;lt;/li&amp;gt;
       &amp;lt;li class=&quot;nav-item&quot;&amp;gt;
-        &amp;lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&amp;gt;Parent Link&amp;lt;/a&amp;gt;
+        &amp;lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&amp;gt;Parent Link&amp;lt;/a&amp;gt;
       &amp;lt;/li&amp;gt;
       &amp;lt;li class=&quot;nav-item&quot;&amp;gt;
-        &amp;lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&amp;gt;Parent Link&amp;lt;/a&amp;gt;
+        &amp;lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&amp;gt;Parent Link&amp;lt;/a&amp;gt;
       &amp;lt;/li&amp;gt;
     &amp;lt;/ul&amp;gt;&lt;/code&gt;
   &lt;/pre&gt;
@@ -447,48 +833,48 @@
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;ul class=&quot;nav sidebar&quot;&gt;
 			&lt;li class=&quot;nav-item&quot;&gt;
-				&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Parent Link&lt;/a&gt;
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
 			&lt;/li&gt;
 			&lt;li class=&quot;nav-item&quot;&gt;
-				&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Parent Link&lt;/a&gt;
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
 				&lt;ul class=&quot;nav&quot;&gt;
 					&lt;li class=&quot;nav-item&quot;&gt;
-						&lt;a class=&quot;nav-link current&quot; href=&quot;#&quot;&gt;Child Link&lt;/a&gt;
+						&lt;a class=&quot;nav-link current&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
 					&lt;/li&gt;
 					&lt;li class=&quot;nav-item&quot;&gt;
-						&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Child Link&lt;/a&gt;
+						&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
 					&lt;/li&gt;
 					&lt;li class=&quot;nav-item&quot;&gt;
-						&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Child Link&lt;/a&gt;
+						&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
 					&lt;/li&gt;
 				&lt;/ul&gt;
 			&lt;/li&gt;
 			&lt;li class=&quot;nav-item&quot;&gt;
-				&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Parent Link&lt;/a&gt;
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
 			&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;
     &lt;code class=&quot;language-markup&quot;&gt;&amp;lt;ul class=&quot;nav sidebar&quot;&amp;gt;
       &amp;lt;li class=&quot;nav-item&quot;&amp;gt;
-        &amp;lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Parent Link&amp;lt;/a&amp;gt;
+        &amp;lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&amp;lt;/a&amp;gt;
       &amp;lt;/li&amp;gt;
       &amp;lt;li class=&quot;nav-item&quot;&amp;gt;
-        &amp;lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Parent Link&amp;lt;/a&amp;gt;
+        &amp;lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&amp;lt;/a&amp;gt;
         &amp;lt;ul class=&quot;nav&quot;&amp;gt;
           &amp;lt;li class=&quot;nav-item&quot;&amp;gt;
-            &amp;lt;a class=&quot;nav-link current&quot; href=&quot;#&quot;&gt;Child Link&amp;lt;/a&amp;gt;
+            &amp;lt;a class=&quot;nav-link current&quot; href=&quot;#!&quot;&gt;Current Child&amp;lt;/a&amp;gt;
           &amp;lt;/li&amp;gt;
           &amp;lt;li class=&quot;nav-item&quot;&amp;gt;
-            &amp;lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Child Link&amp;lt;/a&amp;gt;
+            &amp;lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Child Link&amp;lt;/a&amp;gt;
           &amp;lt;/li&amp;gt;
           &amp;lt;li class=&quot;nav-item&quot;&amp;gt;
-            &amp;lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Child Link&amp;lt;/a&amp;gt;
+            &amp;lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Child Link&amp;lt;/a&amp;gt;
           &amp;lt;/li&amp;gt;
         &amp;lt;/ul&amp;gt;
       &amp;lt;/li&amp;gt;
       &amp;lt;li class=&quot;nav-item&quot;&amp;gt;
-        &amp;lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Parent Link&amp;lt;/a&amp;gt;
+        &amp;lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&amp;lt;/a&amp;gt;
       &amp;lt;/li&amp;gt;
     &amp;lt;/ul&amp;gt;&lt;/code&gt;
   &lt;/pre&gt;
