@@ -6,6 +6,9 @@ var gulp       = require('gulp'),
 			scripts: './node_modules/bootstrap/dist/js/bootstrap.js',
 			styles: './node_modules/bootstrap/'
 		},
+		icons: {
+			styles: './node_modules/material-icons/'
+		},
 		scripts: './src/js/**/*.js',
 		styles: './src/scss/style.scss'
 	};
