@@ -48,6 +48,14 @@ module.exports = function (gulp, plugins, config) {
 				});
 			});
 			gulp.watch('design-system/src/scss/**/*.scss', ['styles:from-dev:watch']);
+
+			gulp.task('scripts:from-dev:watch', function(done) {
+				plugins.runSequence('scripts-from-dev', 'scripts', function() {
+					plugins.reload();
+					done();
+				});
+			});
+			gulp.watch('design-system/src/js/**/*.js', ['scripts:from-dev:watch']);
 		}
 	};
 };

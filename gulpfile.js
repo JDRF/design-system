@@ -60,6 +60,7 @@ gulp.task('styles', [
 ]);
 
 gulp.task('scripts', getTask('scripts'));
+gulp.task('scripts-from-dev', require('./design-system/tasks/scripts')(gulp, plugins));
 
 // assemble
 gulp.task('assemble', getTask('assemble'));
