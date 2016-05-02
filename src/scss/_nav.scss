@@ -5,23 +5,25 @@
 .sidebar {
 	width: 260px;
 
-	.nav-link {
-		border-left: 2px solid $grey-4;
-		padding: 16px 0 16px 24px;
-		width: 100%;
-		color: $text-default;
-		/* temporary until we get fonts in */
-		font-size: 14px;
-		line-height: 14px;
-		font-weight: 500;
+	.nav-item {
+		.nav-link {
+			border-left: 2px solid $grey-4;
+			padding: 16px 0 16px 24px;
+			width: 100%;
+			color: $text-default;
+			/* temporary until we get fonts in */
+			font-size: 14px;
+			line-height: 14px;
+			font-weight: 500;
 
-		&:hover {
-			background-color: $grey-2;
-			color: $brand-primary;
-		}
+			&:hover {
+				background-color: $grey-2;
+				color: $brand-primary;
+			}
 
-		&.current {
-			border-color: $brand-primary;
+			&.current {
+				border-color: $brand-primary;
+			}
 		}
 
 		> .nav {
