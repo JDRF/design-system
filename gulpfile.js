@@ -40,7 +40,7 @@ gulp.task('fonts', ['clean'], getTask('fonts'));
 
 gulp.task('test', function (){
 	gulp.src('./testsuite.js')
-	.pipe(phantomcss());
+	.pipe(plugins.phantomcss());
 });
 
 // Rerun the task when a file changes

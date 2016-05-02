@@ -13,7 +13,7 @@
     "presetup": "git checkout master && git pull origin master",
     "setup": "npm install && gulp",
     "build": "npm install && gulp",
-    "test": "gulp phantomcss",
+    "test": "gulp test",
     "clean": "gulp clean && rm -rf node_modules"
   },
   "repository": {
