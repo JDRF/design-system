@@ -25,12 +25,12 @@ var config = {
 		scripts: {
 			fabricator : './src/assets/fabricator/scripts/fabricator.js',
 			build      : './src/assets/design-system/scripts/design-system.js',
-			dev        : './design-system/dist/js/app.js'
+			dev        : './design-system/dist/js/design-system.js'
 		},
 		styles: {
 			fabricator : 'src/assets/fabricator/styles/fabricator.scss',
 			build      : './src/assets/design-system/styles/design-system.css',
-			dev        : './design-system/dist/css/style.css'
+			dev        : './design-system/dist/css/design-system.css'
 		},
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
@@ -43,7 +43,7 @@ plugins.webpackConfig = require('./webpack.config')(config);
 plugins.webpackCompiler = plugins.webpack(plugins.webpackConfig);
 
 function getTask(task) {
-	return require('./gulp-tasks/' + task)(gulp, plugins, config);
+	return require('./tasks/' + task)(gulp, plugins, config);
 }
 
 // clean
@@ -52,6 +52,7 @@ gulp.task('clean-designsystem', getTask('clean-designsystem'));
 
 gulp.task('styles-fabricator', getTask('styles-fabricator'));
 gulp.task('styles-designsystem', getTask('styles-designsystem'));
+gulp.task('styles-from-dev', require('./design-system/tasks/styles')(gulp, plugins));
 
 gulp.task('styles', [
 	'styles-fabricator',
@@ -81,10 +82,6 @@ gulp.task('default', ['clean'], function () {
 	];
 
 	// run build
-	plugins.runSequence(tasks, function () {
-		if (config.dev) {
-			//gulp.start('serve');
-		}
-	});
+	plugins.runSequence(tasks);
 
 });

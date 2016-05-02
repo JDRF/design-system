@@ -31,14 +31,23 @@ module.exports = function (gulp, plugins, config) {
 		gulp.task('assemble:watch', ['assemble'], plugins.reload);
 		gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
 
-		gulp.task('styles:fabricator:watch', ['styles-fabricator']);
+		gulp.task('styles:fabricator:watch', ['styles-fabricator'], plugins.reload);
 		gulp.watch('src/assets/fabricator/styles/**/*.scss', ['styles:fabricator:watch']);
 
-		gulp.task('styles:designsystem:watch', ['styles-designsystem']);
+		gulp.task('styles:designsystem:watch', ['styles-designsystem'], plugins.reload);
 		gulp.watch('src/assets/design-system/styles/**/*.scss', ['styles:designsystem:watch']);
 
 		gulp.task('scripts:watch', ['scripts'], plugins.reload);
 		gulp.watch('src/assets/{fabricator,design-system}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
 
+		if ( 'dev' === plugins.gutil.env.env ) {
+			gulp.task('styles:from-dev:watch', function(done) {
+				plugins.runSequence('styles-from-dev', 'styles-designsystem', function() {
+					plugins.reload();
+					done();
+				});
+			});
+			gulp.watch('design-system/src/scss/**/*.scss', ['styles:from-dev:watch']);
+		}
 	};
 };
