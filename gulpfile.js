@@ -82,6 +82,6 @@ gulp.task('default', ['clean'], function () {
 	];
 
 	// run build
-	plugins.runSequence(tasksg);
+	plugins.runSequence(tasks);
 
 });
