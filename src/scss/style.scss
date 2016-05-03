@@ -3,6 +3,7 @@
  */
 
 // Core variables and mixins
+@import "fonts";
 @import "variables";
 @import "mixins";
 
@@ -11,7 +12,6 @@
 
 // Core CSS
 @import "reboot";
-@import "fonts";
 @import "type";
 @import "images";
 @import "grid";
