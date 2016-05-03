@@ -6,13 +6,16 @@ var gulp       = require('gulp'),
 			scripts: './node_modules/bootstrap/dist/js/bootstrap.js',
 			styles: './node_modules/bootstrap/'
 		},
-		icons:  './node_modules/material-icons/css/material-icons.min.css',
 		scripts: './src/js/**/*.js',
 		styles: './src/scss/style.scss'
-	};
+	},
+	cssImporter = require('node-sass'),
+    	CssImporter = require('node-sass-css-importer')({
+      		import_paths: ['./node_modules/material-icons/']
+    });
 
 function getTask(task) {
-	return require('./tasks/' + task)(gulp, plugins, paths);
+	return require('./tasks/' + task)(gulp, plugins, paths, cssImporter);
 }
 
 // Clean the dist directory
@@ -36,8 +39,6 @@ gulp.task('styles', ['clean:css'], getTask('styles'));
 
 gulp.task('fonts', ['clean'], getTask('fonts'));
 
-gulp.task('icons', ['clean'], getTask('icons'));
-
 gulp.task('test', function (){
 	gulp.src('./testsuite.js')
 	.pipe(plugins.phantomcss());
@@ -50,4 +51,4 @@ gulp.task('watch', function() {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['clean', 'scripts', 'styles', 'fonts', 'icons']);
+gulp.task('default', ['clean', 'scripts', 'styles', 'fonts']);
