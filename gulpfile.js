@@ -36,9 +36,11 @@ gulp.task('scripts', ['clean:js'], getTask('scripts'));
 // Compile all sass files together
 gulp.task('styles', ['clean:css'], getTask('styles'));
 
+gulp.task('fonts', ['clean'], getTask('fonts'));
+
 gulp.task('test', function (){
 	gulp.src('./testsuite.js')
-	.pipe(phantomcss());
+	.pipe(plugins.phantomcss());
 });
 
 // Rerun the task when a file changes
@@ -48,4 +50,4 @@ gulp.task('watch', function() {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['clean', 'scripts', 'styles']);
+gulp.task('default', ['clean', 'scripts', 'styles', 'fonts']);
