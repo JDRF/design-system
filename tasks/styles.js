@@ -3,8 +3,7 @@ module.exports = function (gulp, plugins) {
 		var stream = gulp.src([__dirname + '/../src/scss/style.scss'])
 			.pipe(plugins.sass({
 				includePaths: [
-					'./node_modules/bootstrap/',
-					'./node_modules/material-icons/'
+					'./node_modules/bootstrap/'
 				],
 			}))
 			.on('error', plugins.notify.onError(function (error) {
