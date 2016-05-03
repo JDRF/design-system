@@ -32,6 +32,7 @@ var config = {
 			build      : './src/assets/design-system/styles/design-system.css',
 			dev        : './design-system/dist/css/design-system.css'
 		},
+		fonts: './src/assets/design-system/fonts/**/**/*',
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
 	},
@@ -59,6 +60,8 @@ gulp.task('styles', [
 	'styles-designsystem'
 ]);
 
+gulp.task('fonts', getTask('fonts-designsystem'));
+
 gulp.task('scripts', getTask('scripts'));
 gulp.task('scripts-from-dev', require('./design-system/tasks/scripts')(gulp, plugins));
 
@@ -77,6 +80,7 @@ gulp.task('default', ['clean'], function () {
 
 	// define build tasks
 	var tasks = [
+		'fonts',
 		'styles',
 		'scripts',
 		'assemble'
