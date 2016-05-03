@@ -2,27 +2,31 @@
 notes: |
   These are notes associated with the `form` component.
 
-  For more information on Bootstrap's classes for form layouts, validation and so on, refer to <a href="http://v4-alpha.getbootstrap.com/components/forms/" target="_blank">Bootstrap's form documentation</a>.
+  For more information on Bootstrap's classes for form layouts, control sizing, validation and so on, refer to <a href="http://v4-alpha.getbootstrap.com/components/forms/" target="_blank">Bootstrap's form documentation</a>.
 ---
 
 <section class="f-section">
 	<h4 class="f-example-title">Email Field</h4>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group">
-				<label for="exampleInputEmail1">Email address</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-				<small class="text-muted">We'll never share your email with anyone else.</small>
+			<fieldset class="form-group row">
+				<label for="exampleInputEmail1" class="col-sm-3 col-md-2 form-control-label">Email Address</label>
+				<div class="col-sm-6 col-md-5">
+					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+					<small class="text-muted">We'll never share your email with anyone else.</small>
+				</div>
 			</fieldset>
 		</form>
 	</div>
 
 	<pre class="language-markup">
 		<code class="language-markup">&lt;form&gt;
-			&lt;fieldset class="form-group"&gt;
-				&lt;label for="exampleInputEmail1">Email address&lt;/label&gt;
-				&lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"&gt;
-				&lt;small class="text-muted"&gt;We'll never share your email with anyone else.&lt;/small&gt;
+			&lt;fieldset class="form-group row"&gt;
+				&lt;label for="exampleInputEmail1" class="col-sm-3 col-md-2 form-control-label"&gt;Email Address&lt;/label&gt;
+				&lt;div class="col-sm-6 col-md-5"&gt;
+					&lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"&gt;
+					&lt;small class="text-muted">We'll never share your email with anyone else.&lt;/small&gt;
+				&lt;/div&gt;
 			&lt;/fieldset&gt;
 		&lt;/form&gt;</code>
 	</pre>
@@ -32,22 +36,22 @@ notes: |
 	<h4 class="f-example-title">Address Field</h4>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group">
-				<label for="exampleInputAddress1">Address</label>
-				<input type="address" class="form-control" id="exampleInputAddress1" placeholder="Enter Address">
+			<fieldset class="form-group row">
+				<label for="exampleInputAddress1" class="col-sm-3 col-md-2 form-control-label">Address</label>
+				<div class="col-sm-6 col-md-5">
+					<input type="address" class="form-control" id="exampleInputAddress1" placeholder="Enter Address">
+				</div>
 			</fieldset>
 		</form>
 	</div>
 	<pre class="language-markup">
 		<code class="language-markup">&lt;form&gt;
-		&lt;fieldset class="form-group"&gt;
-			&lt;label for="exampleInputAddress1">Address&lt;/label&gt;
-			&lt;input type="address" class="form-control" id="exampleInputAddress1" placeholder="Enter Address"&gt;
-		&lt;/fieldset&gt;
-		&lt;fieldset class="form-group"&gt;
-			&lt;label for="exampleInputAddress1">Address&lt;/label&gt;
-			&lt;input type="address" class="form-control" id="exampleInputAddress1" placeholder="Enter Address"&gt;
-		&lt;/fieldset&gt;
+			&lt;fieldset class="form-group row"&gt;
+				&lt;label for="exampleInputAddress1" class="col-sm-3 col-md-2 form-control-label">Address&lt;/label&gt;
+				&lt;div class="col-sm-6 col-md-5"&gt;
+					&lt;input type="address" class="form-control" id="exampleInputAddress1" placeholder="Enter Address"&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
 		&lt;/form&gt;</code>
 	</pre>
 </section>
@@ -56,17 +60,21 @@ notes: |
 	<h4 class="f-example-title">Password Field</h4>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group">
-				<label for="exampleInputPassword1">Password</label>
-				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			<fieldset class="form-group row">
+				<label for="exampleInputPassword1" class="col-sm-3 col-md-2 form-control-label">Password</label>
+				<div class="col-sm-6 col-md-5">
+					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+				</div>
 			</fieldset>
 		</form>
 	</div>
 	<pre class="language-markup">
 		<code class="language-markup">&lt;form&gt;
-			&lt;fieldset class="form-group"&gt;
-				&lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;
-				&lt;input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"&gt;
+			&lt;fieldset class="form-group row"&gt;
+				&lt;label for="exampleInputPassword1" class="col-sm-3 col-md-2 form-control-label">Password&lt;/label&gt;
+				&lt;div class="col-sm-6 col-md-5"&gt;
+					&lt;input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password"&gt;
+				&lt;/div&gt;
 			&lt;/fieldset&gt;
 		&lt;/form&gt;</code>
 	</pre>
@@ -76,29 +84,33 @@ notes: |
 	<h4 class="f-example-title">Select Box</h4>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group">
-				<label for="exampleSelect1">Example select</label>
-				<select class="form-control" id="exampleSelect1">
-				  <option>1</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
-				  <option>5</option>
-				</select>
+			<fieldset class="form-group row">
+				<label for="exampleSelect1" class="col-sm-3 col-md-2 form-control-label">Select Box</label>
+				<div class="col-sm-6 col-md-5">
+					<select class="form-control" id="exampleSelect1">
+					  <option>1</option>
+					  <option>2</option>
+					  <option>3</option>
+					  <option>4</option>
+					  <option>5</option>
+					</select>
+				</div>
 			</fieldset>
 		</form>
 	</div>
 	<pre class="language-markup">
 		<code class="language-markup">&lt;form&gt;
-			&lt;fieldset class="form-group"&gt;
-				&lt;label for="exampleSelect1">Example select&lt;/label&gt;
-				&lt;select class="form-control" id="exampleSelect1"&gt;
-				  &lt;option&gt;1&lt;/option&gt;
-				  &lt;option&gt;2&lt;/option&gt;
-				  &lt;option&gt;3&lt;/option&gt;
-				  &lt;option&gt;4&lt;/option&gt;
-				  &lt;option&gt;5&lt;/option&gt;
-				&lt;/select&gt;
+			&lt;fieldset class="form-group row"&gt;
+				&lt;label for="exampleSelect1" class="col-sm-3 col-md-2 form-control-label"&gt;Select Box&lt;/label&gt;
+				&lt;div class="col-sm-6 col-md-5"&gt;
+					&lt;select class="form-control" id="exampleSelect1"&gt;
+					  &lt;option>1&lt;/option&gt;
+					  &lt;option>2&lt;/option&gt;
+					  &lt;option>3&lt;/option&gt;
+					  &lt;option>4&lt;/option&gt;
+					  &lt;option>5&lt;/option&gt;
+					&lt;/select&gt;
+				&lt;/div&gt;
 			&lt;/fieldset&gt;
 		&lt;/form&gt;</code>
 	</pre>
@@ -108,29 +120,69 @@ notes: |
 	<h4 class="f-example-title">Multiple Select Box</h4>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group">
-				<label for="exampleSelect2">Example multiple select</label>
-				<select multiple class="form-control" id="exampleSelect2">
-				  <option>1</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
-				  <option>5</option>
-				</select>
+			<fieldset class="form-group row">
+				<label for="exampleSelect2" class="col-sm-4 col-md-3 form-control-label">Multiple Select Box</label>
+				<div class="col-sm-7 col-md-6">
+					<select multiple class="form-control" id="exampleSelect2">
+					  <option>1</option>
+					  <option>2</option>
+					  <option>3</option>
+					  <option>4</option>
+					  <option>5</option>
+					</select>
+				</div>
 			</fieldset>
 		</form>
 	</div>
 	<pre class="language-markup">
 		<code class="language-markup">&lt;form&gt;
-			&lt;fieldset class="form-group"&gt;
-				&lt;label for="exampleSelect2"&gt;Example multiple select&lt;/label&gt;
-				&lt;select multiple class="form-control" id="exampleSelect2"&gt;
-				  &lt;option>1&lt;/option&gt;
-				  &lt;option>2&lt;/option&gt;
-				  &lt;option>3&lt;/option&gt;
-				  &lt;option>4&lt;/option&gt;
-				  &lt;option>5&lt;/option&gt;
-				&lt;/select&gt;
+			&lt;fieldset class="form-group row"&gt;
+				&lt;label for="exampleSelect2" class="col-sm-4 col-md-3 form-control-label"&gt;Multiple Select Box&lt;/label&gt;
+				&lt;div class="col-sm-7 col-md-6"&gt;
+					&lt;select multiple class="form-control" id="exampleSelect2"&gt;
+					  &lt;option&gt;1&lt;/option&gt;
+					  &lt;option&gt;2&lt;/option&gt;
+					  &lt;option&gt;3&lt;/option&gt;
+					  &lt;option&gt;4&lt;/option&gt;
+					  &lt;option&gt;5&lt;/option&gt;
+					&lt;/select&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;</code>
+	</pre>
+</section>
+
+<section class="f-section">
+	<h4 class="f-example-title">Custom Select Box</h4>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group row">
+				<label for="exampleSelect1" class="col-sm-3 col-md-2 form-control-label">Custom Select</label>
+				<div class="col-sm-6 col-md-5">
+					<select class="c-select" id="exampleSelect1">
+					  <option>Red</option>
+					  <option>Blue</option>
+					  <option>Green</option>
+					  <option>Yellow</option>
+					  <option>Orange</option>
+					</select>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup">
+		<code class="language-markup">&lt;form&gt;
+			&lt;fieldset class="form-group row"&gt;
+				&lt;label for="exampleSelect1" class="col-sm-3 col-md-2 form-control-label"&gt;Example Select&lt;/label&gt;
+				&lt;div class="col-sm-6 col-md-5"&gt;
+					&lt;select class="c-select" id="exampleSelect1"&gt;
+					  &lt;option>Red&lt;/option&gt;
+					  &lt;option>Blue&lt;/option&gt;
+					  &lt;option>Green&lt;/option&gt;
+					  &lt;option>Yellow&lt;/option&gt;
+					  &lt;option>Orange&lt;/option&gt;
+					&lt;/select&gt;
+				&lt;/div&gt;
 			&lt;/fieldset&gt;
 		&lt;/form&gt;</code>
 	</pre>
@@ -140,17 +192,21 @@ notes: |
 	<h4 class="f-example-title">Text Field</h4>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group">
-				<label for="exampleInputText1">Example Text Field</label>
-				<input type="text" class="form-control" id="exampleInputText1" placeholder="Type something">
+			<fieldset class="form-group row">
+				<label for="exampleInputText1" class="col-sm-3 col-md-2 form-control-label">Text Field</label>
+				<div class="col-sm-6 col-md-5">
+					<input type="text" class="form-control" id="exampleInputText1" placeholder="Enter Text">
+				</div>
 			</fieldset>
 		</form>
 	</div>
 	<pre class="language-markup">
 		<code class="language-markup">&lt;form&gt;
-			&lt;fieldset class="form-group"&gt;
-				&lt;label for="exampleInputText1"&gt;Example Text Field&lt;/label&gt;
-				&lt;input type="text" class="form-control" id="exampleInputText1" placeholder="Type something"&gt;
+			&lt;fieldset class="form-group row"&gt;
+				&lt;label for="exampleInputText1" class="col-sm-3 col-md-2 form-control-label"&gt;Text Field&lt;/label&gt;
+				&lt;div class="col-sm-6 col-md-5"&gt;
+					&lt;input type="text" class="form-control" id="exampleInputText1" placeholder="Enter Text"&gt;
+				&lt;/div&gt;
 			&lt;/fieldset&gt;
 		&lt;/form&gt;</code>
 	</pre>
@@ -160,17 +216,21 @@ notes: |
 	<h4 class="f-example-title">Textarea</h4>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group">
-				<label for="exampleTextarea">Example Textarea</label>
-				<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+			<fieldset class="form-group row">
+				<label for="exampleTextarea" class="col-sm-3 col-md-2 form-control-label">Textarea</label>
+				<div class="col-sm-6 col-md-5">
+					<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+				</div>
 			</fieldset>
 		</form>
 	</div>
 	<pre class="language-markup">
 		<code class="language-markup">&lt;form&gt;
-			&lt;fieldset class="form-group"&gt;
-				&lt;label for="exampleTextarea"&gt;Example Textarea&lt;/label&gt;
-				&lt;textarea class="form-control" id="exampleTextarea" rows="3"&gt;&lt;/textarea&gt;
+			&lt;fieldset class="form-group row"&gt;
+				&lt;label for="exampleTextarea" class="col-sm-3 col-md-2 form-control-label"&gt;Textarea&lt;/label&gt;
+				&lt;div class="col-sm-6 col-md-5"&gt;
+					&lt;textarea class="form-control" id="exampleTextarea" rows="3"&gt;&lt;/textarea&gt;
+				&lt;/div&gt;
 			&lt;/fieldset&gt;
 		&lt;/form&gt;</code>
 	</pre>
