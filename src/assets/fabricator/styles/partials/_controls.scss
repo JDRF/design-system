@@ -18,23 +18,18 @@
 	}
 }
 
-.f-control-bar {
-	@include clearfix;
-	padding: 1rem 0;
-}
-
 .f-menu-toggle {
 	cursor: pointer;
 	vertical-align: middle;
 	display: block;
+	margin: 1rem 0;
+
+	@media (min-width: 60em) {
+		display: none;
+	}
 
 	svg {
 		display: block;
-		float: left;
 		margin-bottom: -1px;
-	}
-
-	.f-menu-active & {
-		display: none;
 	}
 }

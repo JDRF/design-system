@@ -1,7 +1,7 @@
 <!-- fabricator menu -->
 <div class="f-menu">
 
-	<ul class="nav">
+	<ul class="nav sidebar">
 
 		<li class="nav-item">
 			<a href="./index.html" class="f-menu__heading nav-link">Overview</a>
@@ -12,7 +12,7 @@
 		{{#each materials}}
 		<li class="nav-item">
 			<a href="./{{@key}}.html" class="f-menu__heading nav-link">{{name}}</a>
-			<ul>
+			<ul class="nav">
 				{{#each items}}
 				<li>
 					<a href="./{{@../key}}.html#{{@key}}" class="nav-link">{{name}}</a>
@@ -25,7 +25,7 @@
 		{{#each views}}
 		<li class="nav-item">
 			<a href="./{{@key}}.html" class="f-menu__heading nav-link">{{name}}</a>
-			<ul>
+			<ul class="nav">
 				{{#each items}}
 				<li>
 					<a href="./{{@../key}}/{{@key}}.html" class="nav-link">{{name}}</a>

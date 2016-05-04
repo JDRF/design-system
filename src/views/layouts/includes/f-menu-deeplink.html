@@ -1,21 +1,21 @@
 <!-- fabricator menu -->
 <div class="f-menu">
 
-	<ul>
+	<ul class="nav sidebar">
 
 		<li>
-			<a href="../index.html" class="f-menu__heading">Overview</a>
+			<a href="../index.html" class="f-menu__heading nav-link">Overview</a>
 			<a href="./download.html" class="f-menu__heading nav-link">Download</a>
-			<a href="../faq.html" class="f-menu__heading">FAQ</a>
+			<a href="../faq.html" class="f-menu__heading nav-link">FAQ</a>
 		</li>
 
 		{{#each materials}}
 		<li>
-			<a href="../{{@key}}.html" class="f-menu__heading">{{name}}</a>
-			<ul>
+			<a href="../{{@key}}.html" class="f-menu__heading nav-link">{{name}}</a>
+			<ul class="nav">
 				{{#each items}}
 				<li>
-					<a href="../{{@../key}}.html#{{@key}}">{{name}}</a>
+					<a href="../{{@../key}}.html#{{@key}}" class="nav-link">{{name}}</a>
 				</li>
 				{{/each}}
 			</ul>
@@ -24,11 +24,11 @@
 
 		{{#each views}}
 		<li>
-			<a href="../{{@key}}.html" class="f-menu__heading">{{name}}</a>
-			<ul>
+			<a href="../{{@key}}.html" class="f-menu__heading nav-link">{{name}}</a>
+			<ul class="nav">
 				{{#each items}}
 				<li>
-					<a href="../{{@../key}}/{{@key}}.html">{{name}}</a>
+					<a href="../{{@../key}}/{{@key}}.html" class="nav-link">{{name}}</a>
 				</li>
 				{{/each}}
 			</ul>

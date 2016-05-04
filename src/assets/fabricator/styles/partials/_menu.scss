@@ -1,57 +1,30 @@
 // menu
 .f-menu {
+	// display: none;
 	@include border-box;
-	position: fixed;
-	top: 0;
-	left: 0;
-	transform: translate(-$menu-width, 0);
-	width: $menu-width;
+	position: absolute;
+	left: 15px;
+	transform: translate(-$menu-width-mobile, 0);
+	width: $menu-width-mobile;
 	height: 100%;
 	z-index: 1;
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
+	margin-top: 65px;
+
+	@media (min-width: 60em) {
+		transform: translate(0, 0);
+		width: $menu-width-desktop;
+		display: block;
+	}
 
 	.f-menu-active & {
-		transform: translate(0, 0);
+		/* 250 - 15 padding for mobile */
+		width: $menu-width-mobile;
+		transform: translate(-$menu-width-mobile, 0);
+		@include transition;
 	}
 
-	ul {
-		margin-top: 0;
-		margin-bottom: 0;
-		padding-left: 0;
-	}
 
-	> ul {
-		margin-top: 0;
-		margin-bottom: 1rem;
-
-		> li {
-			margin-top: 1rem;
-		}
-	}
-
-	li {
-		list-style-type: none;
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-
-	a {
-		display: block;
-		padding: 0.33rem 2rem;
-		text-decoration: none;
-		font-size: 0.75rem;
-		line-height: 1.5;
-
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-
-	.f-menu__heading {
-		padding-left: 1.5rem;
-		font-weight: 700;
-		font-size: 0.875rem;
-	}
 }
