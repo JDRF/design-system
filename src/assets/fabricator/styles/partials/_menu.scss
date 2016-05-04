@@ -1,6 +1,5 @@
 // menu
 .f-menu {
-	// display: none;
 	@include border-box;
 	position: absolute;
 	left: 15px;
@@ -21,7 +20,6 @@
 
 	.f-menu-active & {
 		@media (max-width: 60em) {
-			/* 250 - 15 padding for mobile */
 			width: $menu-width-mobile;
 			transform: translate(-$menu-width-mobile, 0);
 			@include transition;
