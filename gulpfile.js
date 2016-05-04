@@ -7,7 +7,7 @@ var gulp       = require('gulp'),
 			styles: './node_modules/bootstrap/'
 		},
 		icons: {
-			styles: './node_modules/material-icons/'
+			styles: './node_modules/material-icons/css/material-icons.min.css'
 		},
 		scripts: './src/js/**/*.js',
 		styles: './src/scss/style.scss'
