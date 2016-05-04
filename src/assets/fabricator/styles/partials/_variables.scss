@@ -7,7 +7,10 @@ $settings: (
 	primary-light: #0073cf,
 	primary-dark: #002855,
 	border: rgba(0, 0, 0, 0.1),
-	menu-width: 14rem
+	menu-width-desktop: 19.841269841269842%,
+	menu-width-mobile: 250px,
+	content-width: 74.90079365079364%,
+	max-width: 1008px,
 );
 
 $base-colors: (
@@ -40,8 +43,13 @@ $theme: $theme-light !default;
 
 $colors: map-merge($base-colors, $theme);
 
-$menu-width: map-get($settings, menu-width);
+$max-width: map-get($settings, max-width);
 
+$menu-width-desktop: map-get($settings, menu-width-desktop);
+
+$menu-width-mobile: map-get($settings, menu-width-mobile);
+
+$content-width: map-get($settings, content-width);
 
 // functions
 @function color($color) {
@@ -64,4 +72,9 @@ $menu-width: map-get($settings, menu-width);
 
 @mixin border-box {
 	box-sizing: border-box;
+}
+
+@mixin transition( $param: all ease .5s ) {
+	transition: $param;
+	-webkit-transition: $param;
 }

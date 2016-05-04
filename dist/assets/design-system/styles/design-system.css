@@ -2641,7 +2641,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Gotham", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #373a3c;
@@ -2784,49 +2784,49 @@ output {
 /* Bootstrap overwrites: reboot.scss */
 /* Design System Custom - No Bootstrap Default */
 @font-face {
-  font-family: "Gotham";
+  font-family: "Gotham Thin";
   src: url("../fonts/gotham/thin/gotham-thin-webfont.eot");
   src: url("../fonts/gotham/thin/gotham-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/thin/gotham-thin-webfont.woff2") format("woff2"), url("../fonts/gotham/thin/gotham-thin-webfont.woff") format("woff"), url("../fonts/gotham/thin/gotham-thin-webfont.ttf") format("truetype"), url("../fonts/gotham/thin/gotham-thin-webfont.svg#gothamthin") format("svg");
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
-  font-family: "Gotham";
+  font-family: "Gotham Light";
   src: url("../fonts/gotham/light/gotham-light-webfont.eot");
   src: url("../fonts/gotham/light/gotham-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/light/gotham-light-webfont.woff2") format("woff2"), url("../fonts/gotham/light/gotham-light-webfont.woff") format("woff"), url("../fonts/gotham/light/gotham-light-webfont.ttf") format("truetype"), url("../fonts/gotham/light/gotham-light-webfont.svg#gothamlight") format("svg");
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
-  font-family: "Gotham";
+  font-family: "Gotham Light Italic";
   src: url("../fonts/gotham/light/gotham-lightitalic-webfont.eot");
   src: url("../fonts/gotham/light/gotham-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/light/gotham-lightitalic-webfont.woff2") format("woff2"), url("../fonts/gotham/light/gotham-lightitalic-webfont.woff") format("woff"), url("../fonts/gotham/light/gotham-lightitalic-webfont.ttf") format("truetype"), url("../fonts/gotham/light/gotham-lightitalic-webfont.svg#gothamlight_italic") format("svg");
   font-weight: 200;
   font-style: italic; }
 
 @font-face {
-  font-family: "Gotham";
+  font-family: "Gotham Book";
   src: url("../fonts/gotham/book/gotham-book-webfont.eot");
   src: url("../fonts/gotham/book/gotham-book-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/book/gotham-book-webfont.woff2") format("woff2"), url("../fonts/gotham/book/gotham-book-webfont.woff") format("woff"), url("../fonts/gotham/book/gotham-book-webfont.ttf") format("truetype"), url("../fonts/gotham/book/gotham-book-webfont.svg#gothambook") format("svg");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
-  font-family: "Gotham";
+  font-family: "Gotham Book Italic";
   src: url("../fonts/gotham/book/gotham-bookitalic-webfont.eot");
   src: url("../fonts/gotham/book/gotham-bookitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/book/gotham-bookitalic-webfont.woff2") format("woff2"), url("../fonts/gotham/book/gotham-bookitalic-webfont.woff") format("woff"), url("../fonts/gotham/book/gotham-bookitalic-webfont.ttf") format("truetype"), url("../fonts/gotham/book/gotham-bookitalic-webfont.svg#gothambook_italic") format("svg");
   font-weight: 300;
   font-style: italic; }
 
 @font-face {
-  font-family: "Gotham";
+  font-family: "Gotham Medium";
   src: url("../fonts/gotham/medium/gotham-medium-webfont.eot");
   src: url("../fonts/gotham/medium/gotham-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/medium/gotham-medium-webfont.woff2") format("woff2"), url("../fonts/gotham/medium/gotham-medium-webfont.woff") format("woff"), url("../fonts/gotham/medium/gotham-medium-webfont.ttf") format("truetype"), url("../fonts/gotham/medium/gotham-medium-webfont.svg#gothammedium") format("svg");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
-  font-family: "Gotham";
+  font-family: "Gotham Medium Italic";
   src: url("../fonts/gotham/medium/gotham-mediumitalic-webfont.eot");
   src: url("../fonts/gotham/medium/gotham-mediumitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/medium/gotham-mediumitalic-webfont.woff2") format("woff2"), url("../fonts/gotham/medium/gotham-mediumitalic-webfont.woff") format("woff"), url("../fonts/gotham/medium/gotham-mediumitalic-webfont.ttf") format("truetype"), url("../fonts/gotham/medium/gotham-mediumitalic-webfont.svg#gothammedium_italic") format("svg");
   font-weight: 500;
@@ -5311,21 +5311,22 @@ input[type="button"].btn-block {
 .sidebar {
   width: 260px; }
   .sidebar .nav-item .nav-link {
+    font-family: "Gotham Medium", sans-serif;
     border-left: 2px solid #e0e0e0;
     padding: 16px 0 16px 24px;
     width: 100%;
     color: rgba(0, 0, 0, 0.9);
     /* temporary until we get fonts in */
     font-size: 14px;
-    line-height: 14px;
-    font-weight: 500; }
+    line-height: 14px; }
     .sidebar .nav-item .nav-link:hover {
       background-color: #f5f5f5;
       color: #0073cf; }
     .sidebar .nav-item .nav-link.current {
       border-color: #0073cf; }
   .sidebar .nav-item > .nav .nav-link {
-    padding-left: 40px; }
+    padding-left: 40px;
+    font-family: "Gotham Book", sans-serif; }
 
 .navbar {
   position: relative;

@@ -1,14 +1,46 @@
+.f-header-top {
+	width: 100%;
+	max-width: $max-width;
+	margin: auto;
+	font-size: 0.875rem;
+	padding: 1em;
+
+	.f-logo,
+	.f-nav {
+		display: inline-block;
+		font-size: inherit;
+	}
+
+	.f-logo {
+		/* temporary until I get logo asset */
+		margin-right: 1em;
+	}
+}
+
 .f-header {
-	color: color(primary-light);
-	border-bottom: 1px solid color(border);
-	padding: 16px 0;
+	background-color: color(primary-light);
+	color: #ffffff;
+	padding: 4.813em 0;
 	width: 100%;
 
+	.f-menu-active & {
+		min-height: 248px;
+	}
+
 	.f-header-center {
-		h1 {
+		max-width: $max-width;
+		margin: auto;
+		padding: 0 1em;
+		font-family: "Gotham Light";
+
+		.f-header-title {
 			color: inherit;
-			font-size: 2rem;
-			margin: 0;
+			font-family: inherit;
+			margin-bottom: .3em;
+		}
+
+		.f-header-content {
+			font-family: inherit;
 		}
 	}
 
