@@ -1,8 +1,7 @@
 // menu
 .f-menu {
 	@include border-box;
-	position: absolute;
-	left: 15px;
+	float: left;
 	transform: translate(-$menu-width-mobile, 0);
 	width: $menu-width-mobile;
 	height: 100%;
@@ -12,6 +11,13 @@
 	-webkit-overflow-scrolling: touch;
 	margin-top: 65px;
 
+	@media (max-width: 60em) {
+		position: absolute;
+		top: 0;
+		left: 15px;
+		width: $menu-width-mobile;
+	}
+
 	@media (min-width: 60em) {
 		transform: translate(0, 0);
 		width: $menu-width-desktop;
@@ -20,7 +26,6 @@
 
 	.f-menu-active & {
 		@media (max-width: 60em) {
-			width: $menu-width-mobile;
 			transform: translate(-$menu-width-mobile, 0);
 			@include transition;
 		}

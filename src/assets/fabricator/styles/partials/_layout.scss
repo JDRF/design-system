@@ -17,7 +17,6 @@ body {
 	.f-menu-active & {
 		width:100%;
 		height: 100%;
-		overflow: hidden;
 
 		@media (min-width: 60em) {
 			overflow: auto;
@@ -29,13 +28,16 @@ body {
 .f-container {
 	@include clearfix;
 	@include border-box;
-	position: relative;
 	padding: 0 1em;
 	z-index: 0;
 	min-height: 100vh;
 	margin: auto;
 	@include transition;
 	max-width: $max-width;
+
+	@media (min-width: 60em) {
+		position: relative;
+	}
 
 	.f-menu-active & {
 		transform: translate($menu-width-mobile, 0);
