@@ -1,7 +1,7 @@
 casper.
-	start('http://www.google.com').
+	start('http://localhost:3000').
 	then(function(){
-		phantomcss.screenshot('#hplogo', 'google');
+		phantomcss.screenshot('.f-header-center', 'JDRF Design System');
 	});
 
 casper.run();

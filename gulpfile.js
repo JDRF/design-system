@@ -14,6 +14,8 @@ var gulp       = require('gulp'),
       		import_paths: ['./node_modules/material-icons/']
     });
 
+plugins.merge = require('merge-stream');
+
 function getTask(task) {
 	return require('./tasks/' + task)(gulp, plugins, paths, cssImporter);
 }
@@ -39,10 +41,7 @@ gulp.task('styles', ['clean:css'], getTask('styles'));
 
 gulp.task('fonts', ['clean'], getTask('fonts'));
 
-gulp.task('test', function (){
-	gulp.src('./testsuite.js')
-	.pipe(plugins.phantomcss());
-});
+gulp.task('test', getTask('test'));
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
