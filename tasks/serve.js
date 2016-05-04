@@ -6,7 +6,13 @@ module.exports = function (gulp, plugins, config) {
 				baseDir: config.dest
 			},
 			notify: false,
-			logPrefix: 'FABRICATOR'
+			logPrefix: 'DESIGN-SYSTEM',
+		}, function(err, bs) {
+			if ('test' === plugins.gutil.env.test) {
+				plugins.runSequence('test-from-dev', function() {
+					plugins.browserSync.exit();
+				});
+			}
 		});
 
 		/**
