@@ -7,10 +7,13 @@ module.exports = function (gulp, plugins, config) {
 			},
 			notify: false,
 			logPrefix: 'DESIGN-SYSTEM',
+			ui: false,
+			open: ('test' === plugins.gutil.env.test) ? false : 'local',
 		}, function(err, bs) {
 			if ('test' === plugins.gutil.env.test) {
 				plugins.runSequence('test-from-dev', function() {
 					plugins.browserSync.exit();
+					process.exit();
 				});
 			}
 		});
