@@ -8,16 +8,12 @@ var gulp       = require('gulp'),
 		},
 		scripts: './src/js/**/*.js',
 		styles: './src/scss/style.scss'
-	},
-	cssImporter = require('node-sass'),
-    	CssImporter = require('node-sass-css-importer')({
-      		import_paths: ['./node_modules/material-icons/']
-    });
+	};
 
 plugins.merge = require('merge-stream');
 
 function getTask(task) {
-	return require('./tasks/' + task)(gulp, plugins, paths, cssImporter);
+	return require('./tasks/' + task)(gulp, plugins, paths);
 }
 
 // Clean the dist directory
