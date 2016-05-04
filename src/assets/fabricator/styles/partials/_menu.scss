@@ -20,11 +20,11 @@
 	}
 
 	.f-menu-active & {
-		/* 250 - 15 padding for mobile */
-		width: $menu-width-mobile;
-		transform: translate(-$menu-width-mobile, 0);
-		@include transition;
+		@media (max-width: 60em) {
+			/* 250 - 15 padding for mobile */
+			width: $menu-width-mobile;
+			transform: translate(-$menu-width-mobile, 0);
+			@include transition;
+		}
 	}
-
-
 }
