@@ -1,19 +1,37 @@
 ---
 notes: |
-  We're using <a href="https://materialicons.github.io/" target="_blank">Material Icons</a> for icons across the Design System.
+  We're using <a href="https://github.com/google/material-design-icons" target="_blank">Material Icons</a> for icons across the Design System.
+
+  It is recommended to make use of the `sr-only` class to include screen-reader text that is visually hidden, but can help identify icons to screen reader users.
 ---
-
-
 
 <section class="f-section">
 	<h4 class="f-example-title">Icon Sample</h4>
 	<div class="f-example">
-		<button type="button" name="mood-button-example" class="mi-mood btn-primary">
-			<span class="sr-only">This is accessibility friendly text</span>
+		<button type="button" name="mood-button-example" class="material-icons mi-mood mi-48 btn btn-primary">
+			<span class="sr-only">Primary button with mood icon.</span>
+		</button>
+
+		<button type="button" name="mood-button-example" class="material-icons mi-mood mi-48 btn btn-secondary">
+			<span class="sr-only">Secondary button with mood icon.</span>
+		</button>
+
+		<button type="button" name="mood-button-example" class="material-icons mi-mood mi-48 btn btn-outline">
+			<span class="sr-only">Outlined button with mood icon.</span>
 		</button>
 	</div>
 
 	<pre class="language-markup">
-		<code class="language-markup"></code>
+		<code class="language-markup">&lt;button type="button" name="mood-button-example" class="material-icons mi-mood mi-48 btn btn-primary"&gt;
+			&lt;span class="sr-only">Primary button with mood icon.&lt;/span&gt;
+		&lt;/button&gt;
+
+		&lt;button type="button" name="mood-button-example" class="material-icons mi-mood mi-48 btn btn-secondary"&gt;
+			&lt;span class="sr-only">Secondary button with mood icon.&lt;/span&gt;
+		&lt;/button&gt;
+
+		&lt;button type="button" name="mood-button-example" class="material-icons mi-mood mi-48 btn btn-outline"&gt;
+			&lt;span class="sr-only">Outlined button with mood icon.&lt;/span&gt;
+		&lt;/button&gt;</code>
 	</pre>
 </section>
