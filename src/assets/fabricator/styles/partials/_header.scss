@@ -1,14 +1,25 @@
 .f-header {
-	color: color(primary-light);
-	border-bottom: 1px solid color(border);
-	padding: 16px 0;
+	background-color: color(primary-light);
+	color: #ffffff;
+	padding: 4.813em 0;
 	width: 100%;
 
+	.f-menu-active & {
+		min-height: 248px;
+	}
+
 	.f-header-center {
-		h1 {
+		max-width: $max-width;
+		margin: auto;
+
+		.f-header-title {
 			color: inherit;
-			font-size: 2rem;
-			margin: 0;
+			font-weight: 200;
+			margin-bottom: .3em;
+		}
+
+		.f-header-content {
+			font-weight: 200;
 		}
 	}
 

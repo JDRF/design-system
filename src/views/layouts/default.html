@@ -17,21 +17,22 @@
 
 </head>
 <body>
+	{{> f-header}}
 
 	{{#if fabricator}}
-		{{> f-icons}}
-		{{#if deeplink}}
-			{{> f-menu-deeplink}}
-		{{else}}
-			{{> f-menu}}
-		{{/if}}
 		<div class="f-container">
-			{{> f-header}}
-			{{> f-control-bar}}
+			{{> f-icons}}
+			{{#if deeplink}}
+				{{> f-menu-deeplink}}
+			{{else}}
+				{{> f-menu}}
+			{{/if}}
 	{{/if}}
 
-
-	{% body %}
+	<main class="f-content">
+		{{> f-control-bar}}
+		{% body %}
+	</main>
 
 
 	{{#if fabricator}}

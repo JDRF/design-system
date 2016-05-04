@@ -54,8 +54,11 @@
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 1;
+	color: color(primary-light);
+	border-bottom: 1px solid color(border);
+	padding-bottom: 16px;
+	width: 100%;
 }
-
 
 .f-item-controls {
 	display: inline-block;

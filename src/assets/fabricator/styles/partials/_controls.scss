@@ -26,10 +26,15 @@
 .f-menu-toggle {
 	cursor: pointer;
 	vertical-align: middle;
+	display: block;
 
 	svg {
 		display: block;
 		float: left;
 		margin-bottom: -1px;
+	}
+
+	.f-menu-active & {
+		display: none;
 	}
 }

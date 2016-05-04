@@ -7,7 +7,9 @@ $settings: (
 	primary-light: #0073cf,
 	primary-dark: #002855,
 	border: rgba(0, 0, 0, 0.1),
-	menu-width: 14rem
+	menu-width: 19.841269841269842%,
+	content-width: 74.90079365079364%,
+	max-width: 1008px;
 );
 
 $base-colors: (
@@ -40,8 +42,11 @@ $theme: $theme-light !default;
 
 $colors: map-merge($base-colors, $theme);
 
+$max-width: map-get($settings, max-width);
+
 $menu-width: map-get($settings, menu-width);
 
+$content-width: map-get($settings, content-width);
 
 // functions
 @function color($color) {
