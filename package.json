@@ -12,8 +12,7 @@
   "scripts": {
     "presetup": "git checkout gh-pages && git pull origin gh-pages",
     "setup": "npm install && cd design-system && npm run setup && cd .. && gulp",
-    "pretest": "npm run serve-from-dev",
-    "test": "cd design-system && npm run test && cd ..",
+    "test": "gulp --env=dev --test=test serve",
     "build": "gulp",
     "build-from-dev": "gulp --env=dev build",
     "serve": "gulp && gulp serve",

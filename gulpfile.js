@@ -75,6 +75,9 @@ gulp.task('build', ['clean-designsystem'], function() {
 // server
 gulp.task('serve', getTask('serve'));
 
+// test
+gulp.task('test-from-dev', require('./design-system/tasks/test')(gulp, plugins));
+
 // default build task
 gulp.task('default', ['clean'], function () {
 
