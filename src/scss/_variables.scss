@@ -32,6 +32,13 @@ $grey-7:				#757575;
 
 $text-default:			rgba(0, 0, 0, 0.9);
 
+$font-thin:				"Gotham Thin", sans-serif;
+$font-light:			"Gotham Light", sans-serif;
+$font-light-italic:		"Gotham Light Italic", sans-serif;
+$font-regular:			"Gotham Book", sans-serif;
+$font-italic:			"Gotham Book Italic", sans-serif;
+$font-medium:			"Gotham Medium", sans-serif;
+$font-medium-italic:	"Gotham Medium Italic", sans-serif;
 
 /* Bootstrap overwrites: variables.scss */
 
@@ -45,7 +52,7 @@ $brand-primary:			$primary-blue;
 $btn-primary-bg:		$jdrf-green;
 $btn-primary-border:	$jdrf-green;
 
-$font-family-base:		"Gotham", sans-serif;
+$font-family-base:		$font-regular;
 
 $font-size-h1:			3rem;
 $font-size-h2:			2.25rem;
