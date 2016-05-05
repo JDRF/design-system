@@ -148,6 +148,8 @@ fabricator.menuToggle = function () {
 
 	// toggle classes on certain elements
 	var toggleClasses = function () {
+		//TODO: Replace ClassList!
+		var menuClassList = fabricator.dom.root.className.split(' ');
 		options.menu = !fabricator.dom.root.classList.contains('f-menu-active');
 		fabricator.dom.root.classList.toggle('f-menu-active');
 
