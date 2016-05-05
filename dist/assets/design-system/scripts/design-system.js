@@ -46,7 +46,7 @@
 
 	'use strict';
 
-	(function ($) {
+	(function () {
 		'use strict';
 
 		// Proof of concept
@@ -61,7 +61,7 @@
 	 });*/
 
 		return;
-	})(jQuery);
+	})();
 
 /***/ }
 /******/ ]);
