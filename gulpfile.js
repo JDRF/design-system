@@ -11,6 +11,7 @@ var gulp       = require('gulp'),
 	};
 
 plugins.merge = require('merge-stream');
+plugins.runSequence = require('run-sequence');
 
 function getTask(task) {
 	return require('./tasks/' + task)(gulp, plugins, paths);
@@ -45,5 +46,10 @@ gulp.task('watch', function() {
 	gulp.watch(paths.styles, ['styles']);
 });
 
-// The default task (called when you run `gulp` from cli)
-gulp.task('default', ['clean', 'scripts', 'styles', 'fonts']);
+gulp.task('default', ['clean'], function () {
+	plugins.runSequence([
+		'fonts',
+		'styles',
+		'scripts',
+	]);
+});

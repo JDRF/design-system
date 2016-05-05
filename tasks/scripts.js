@@ -1,7 +1,8 @@
 module.exports = function (gulp, plugins, paths) {
 	return function () {
 		var stream = gulp.src([
-			'./node_modules/bootstrap/dist/js/bootstrap.js',
+			// Don't include bootstrap yet. Proof of future Concept
+			//'./node_modules/bootstrap/dist/js/bootstrap.js',
 			__dirname + '/../src/js/**/*.js',
 		])
 		.pipe(plugins.concat('design-system.js'))
