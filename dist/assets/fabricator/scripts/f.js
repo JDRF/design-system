@@ -151,10 +151,16 @@
 				// get item href without first slash
 				href = item.getAttribute('href').replace(/^\//g, '');
 
+				/**
+	    * Not working!!!
+	    * href is not identical to current
+	    * regex needs to be edited to account for github url/localhost
+	    */
 				if (href === current) {
-					item.classList.add('f-active');
+					fabricator.addClass(item, 'f-active');
 				} else {
-					item.classList.remove('f-active');
+					console.log('hdajsda');
+					fabricator.removeClass(item, 'f-active');
 				}
 			}
 		};
@@ -248,12 +254,12 @@
 		// if small screen
 		var mediaChangeHandler = function mediaChangeHandler(list) {
 			if (!list.matches) {
-				root.classList.remove('f-menu-active');
+				fabricator.removeClass(root, 'f-menu-active');
 			} else {
 				if (fabricator.getOptions().menu) {
-					root.classList.add('f-menu-active');
+					fabricator.addClass(root, 'f-menu-active');
 				} else {
-					root.classList.remove('f-menu-active');
+					fabricator.removeClass(root, 'f-menu-active');
 				}
 			}
 		};
@@ -262,6 +268,36 @@
 		mediaChangeHandler(mq);
 
 		return this;
+	};
+
+	/**
+	 * Helper: Add Class to Element
+	 */
+	fabricator.addClass = function (el, className) {
+		//Check if element is undefined or null first
+		if ('undefined' === typeof el || null === el) {
+			return;
+		}
+		// So we don't have duplicates
+		fabricator.removeClass(el, className);
+		el.className += ' ' + className;
+	};
+
+	/**
+	 * Helper: Remove Class from Element
+	 */
+	fabricator.removeClass = function (el, className) {
+		//Check if element is undefined or null first
+		if ('undefined' === typeof el || null === el) {
+			return;
+		}
+
+		//Go to end of index for existing classes and remove desired class
+		if (el.className.indexOf(' ' + className) > -1) {
+			el.className = el.className.replace(' ' + className, '');
+		} else if (el.className.indexOf(className) > -1) {
+			el.className = el.className.replace(className, '');
+		}
 	};
 
 	/**
