@@ -8,12 +8,32 @@
 	.f-logo,
 	.f-nav {
 		display: inline-block;
+		vertical-align: middle;
+		height: 35px;
 		font-size: inherit;
 	}
 
 	.f-logo {
-		/* temporary until I get logo asset */
-		margin-right: 1em;
+		margin: 0 1em 0 0;
+		color: color(primary-light);
+		font-family: "Gotham Medium";
+
+		svg,
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		svg {
+			fill: color(primary-light);
+			height: 35px;
+		}
+	}
+
+	.f-nav {
+		.nav-item {
+			padding-top: 0.45rem;
+		}
 	}
 }
 

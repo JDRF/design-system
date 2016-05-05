@@ -239,22 +239,6 @@ fabricator.setInitialMenuState = function () {
 
 };
 
-fabricator.fixSidebar = function () {
-	console.log('hey');
-	var self = this,
-		this.dsHeaderTop  = document.querySelector( '.f-header-top' ),
-		this.dsHeader  = document.querySelector( '.f-header' ),
-		dsHeights = this.dsHeaderTop.offsetHeight + this.dsHeaderTop.offsetHeight;
-
-	if ( _.isUndefined( this.dsHeaderTop ) || _.isNull( this.dsHeaderTop || _.isUndefined( this.dsHeader ) || _.isNull( this.dsHeader ) ) {
-		return;
-	}
-
-	window.addEventListener('scroll', function(e) {
-	  console.log(dsHeights);
-	});
-};
-
 /**
  * Helper: Add Class to Element
  */
@@ -296,7 +280,6 @@ fabricator.removeClass = function ( el, className ) {
 		.menuToggle()
 		.buildColorChips()
 		.setActiveItem()
-		.bindCodeAutoSelect()
-		.fixSidebar();
+		.bindCodeAutoSelect();
 
 }());
