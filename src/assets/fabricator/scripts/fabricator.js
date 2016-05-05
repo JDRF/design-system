@@ -119,7 +119,6 @@ fabricator.setActiveItem = function () {
 			if ( href === current ) {
 				fabricator.addClass( item, 'f-active');
 			} else {
-				console.log('hdajsda');
 				fabricator.removeClass( item, 'f-active');
 			}
 

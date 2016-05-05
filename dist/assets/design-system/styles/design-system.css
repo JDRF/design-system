@@ -4435,6 +4435,38 @@ input[type="button"].btn-block {
 .btn-link {
   color: #00a862; }
 
+.btn-flat {
+  color: #373a3c;
+  background-color: #fff;
+  border-color: #ccc; }
+  .btn-flat:hover {
+    color: #373a3c;
+    background-color: #e6e6e6;
+    border-color: #adadad; }
+  .btn-flat:focus, .btn-flat.focus {
+    color: #373a3c;
+    background-color: #e6e6e6;
+    border-color: #adadad; }
+  .btn-flat:active, .btn-flat.active,
+  .open > .btn-flat.dropdown-toggle {
+    color: #373a3c;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    background-image: none; }
+    .btn-flat:active:hover, .btn-flat:active:focus, .btn-flat:active.focus, .btn-flat.active:hover, .btn-flat.active:focus, .btn-flat.active.focus,
+    .open > .btn-flat.dropdown-toggle:hover,
+    .open > .btn-flat.dropdown-toggle:focus,
+    .open > .btn-flat.dropdown-toggle.focus {
+      color: #373a3c;
+      background-color: #d4d4d4;
+      border-color: #8c8c8c; }
+  .btn-flat.disabled:focus, .btn-flat.disabled.focus, .btn-flat:disabled:focus, .btn-flat:disabled.focus {
+    background-color: #fff;
+    border-color: #ccc; }
+  .btn-flat.disabled:hover, .btn-flat:disabled:hover {
+    background-color: #fff;
+    border-color: #ccc; }
+
 .btn-group,
 .btn-group-vertical {
   position: relative;
@@ -5315,10 +5347,10 @@ input[type="button"].btn-block {
     border-left: 2px solid #e0e0e0;
     padding: 16px 0 16px 24px;
     width: 100%;
-    color: rgba(0, 0, 0, 0.9);
+    color: rgba(0, 0, 0, 0.87);
     /* temporary until we get fonts in */
     font-size: 14px;
-    line-height: 14px; }
+    line-height: 16px; }
     .sidebar .nav-item .nav-link:hover {
       background-color: #f5f5f5;
       color: #0073cf; }
