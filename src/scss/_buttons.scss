@@ -5,3 +5,7 @@
 .btn-link {
 	color: $jdrf-green;
 }
+
+.btn-flat {
+	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
