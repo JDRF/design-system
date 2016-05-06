@@ -97,9 +97,9 @@ fabricator.setActiveItem = function () {
 
 		// get current file and hash without first slash
 		var current = (window.location.pathname + window.location.hash).replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
-		    	hash = hash || '';
-		    	file = file || '';
-		    	return file + hash.split('.')[0];
+				hash = hash || '';
+				file = file || '';
+				return file + hash.split('.')[0];
 			}) || 'index.html',
 			href;
 
@@ -205,6 +205,7 @@ fabricator.bindCodeAutoSelect = function () {
 		codeBlocks[i].addEventListener('click', select.bind(this, codeBlocks[i]));
 	}
 
+	return this;
 };
 
 
@@ -240,22 +241,37 @@ fabricator.setInitialMenuState = function () {
 };
 
 fabricator.fixSidebar = function () {
-	console.log('hey');
+	var dsHeaderTop  = document.querySelector( '.f-header-top' ),
+		dsHeader  = document.querySelector( '.f-header' ),
+		dsSidebar = document.querySelector( '.f-menu' ),
+		headerTopHeight = dsHeaderTop.offsetHeight,
+		headerHeight = dsHeader.offsetHeight,
+		totalHeaderHeight = headerTopHeight + headerHeight;
 
-	// var dsHeaderTop  = document.querySelector( '.f-header-top' ),
-	//  	dsHeader  = document.querySelector( '.f-header' );
 
-	// if ( 'undefined' === typeof dsHeaderTop || null === dsHeaderTop ) {
- // 		return;
- // 	}
+	if ( 'undefined' === typeof dsHeaderTop || null === dsHeaderTop ) {
+		return;
+	}
 
- // 	if ( 'undefined' === typeof dsHeader || null === dsHeader ) {
- // 		return;
- // 	}
+	if ( 'undefined' === typeof dsHeader || null === dsHeader ) {
+		return;
+	}
 
-	//  window.onscroll = function() {
- //     	console.log('scrolling');
- //   	};
+	if ( 'undefined' === typeof dsSidebar || null === dsSidebar ) {
+		return;
+	}
+
+	window.onscroll = function() {
+		var topOffset = window.pageYOffset;
+
+		if ( window.pageYOffset > totalHeaderHeight ) {
+			fabricator.addClass( dsSidebar, 'fixed' );
+		} else {
+			fabricator.removeClass( dsSidebar, 'fixed' );
+		}
+	};
+
+	return this;
 
 };
 
