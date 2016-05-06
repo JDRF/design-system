@@ -241,18 +241,22 @@ fabricator.setInitialMenuState = function () {
 
 fabricator.fixSidebar = function () {
 	console.log('hey');
-	var self = this,
-		this.dsHeaderTop  = document.querySelector( '.f-header-top' ),
-		this.dsHeader  = document.querySelector( '.f-header' ),
-		dsHeights = this.dsHeaderTop.offsetHeight + this.dsHeaderTop.offsetHeight;
 
-	if ( _.isUndefined( this.dsHeaderTop ) || _.isNull( this.dsHeaderTop || _.isUndefined( this.dsHeader ) || _.isNull( this.dsHeader ) ) {
-		return;
-	}
+	// var dsHeaderTop  = document.querySelector( '.f-header-top' ),
+	//  	dsHeader  = document.querySelector( '.f-header' );
 
-	window.addEventListener('scroll', function(e) {
-	  console.log(dsHeights);
-	});
+	// if ( 'undefined' === typeof dsHeaderTop || null === dsHeaderTop ) {
+ // 		return;
+ // 	}
+
+ // 	if ( 'undefined' === typeof dsHeader || null === dsHeader ) {
+ // 		return;
+ // 	}
+
+	//  window.onscroll = function() {
+ //     	console.log('scrolling');
+ //   	};
+
 };
 
 /**

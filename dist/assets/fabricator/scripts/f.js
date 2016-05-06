@@ -271,6 +271,25 @@
 		return this;
 	};
 
+	fabricator.fixSidebar = function () {
+		console.log('hey');
+
+		// var dsHeaderTop  = document.querySelector( '.f-header-top' ),
+		//  	dsHeader  = document.querySelector( '.f-header' );
+
+		// if ( 'undefined' === typeof dsHeaderTop || null === dsHeaderTop ) {
+		// 		return;
+		// 	}
+
+		// 	if ( 'undefined' === typeof dsHeader || null === dsHeader ) {
+		// 		return;
+		// 	}
+
+		//  window.onscroll = function() {
+		//     	console.log('scrolling');
+		//   	};
+	};
+
 	/**
 	 * Helper: Add Class to Element
 	 */
@@ -307,7 +326,7 @@
 	(function () {
 
 		// invoke
-		fabricator.setInitialMenuState().menuToggle().buildColorChips().setActiveItem().bindCodeAutoSelect();
+		fabricator.setInitialMenuState().menuToggle().buildColorChips().setActiveItem().bindCodeAutoSelect().fixSidebar();
 	})();
 
 /***/ },
