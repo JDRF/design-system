@@ -52,5 +52,6 @@ body {
 	@media (min-width: 60em) {
 		width: $content-width;
 		float: right;
+		min-height: 800px;
 	}
 }
