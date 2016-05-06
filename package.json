@@ -10,10 +10,11 @@
     }
   ],
   "scripts": {
+    "init-for-dev": "git checkout gh-pages && npm run init-for-dev",
     "presetup": "git checkout master && git pull origin master",
     "setup": "npm install && gulp",
     "build": "npm install && gulp",
-    "test": "gulp test",
+    "test": "cd .. && npm run test && cd -",
     "clean": "gulp clean && rm -rf node_modules"
   },
   "repository": {
