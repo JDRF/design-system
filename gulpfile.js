@@ -17,6 +17,9 @@ plugins.merge = require('merge-stream');
 plugins.reload = plugins.browserSync.reload;
 plugins.runSequence = require('run-sequence');
 plugins.webpack = require('webpack');
+plugins.hbs = require('handlebars');
+plugins.fs = require('fs');
+plugins.escape = require('html-escape');
 
 // configuration
 var config = {

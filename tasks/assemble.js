@@ -4,12 +4,13 @@ module.exports = function (gulp, plugins, config) {
 			dest: 'dist',
 			logErrors: config.dev,
 			helpers: {
-				local: function(options) {
-					if ( 'dev' === plugins.gutil.env.env ) {
-						return options.fn(this);
-					} else {
-						return options.inverse(this);
-					}
+				example: function(args) {
+					var string, esacped_string, template;
+
+					string = args.replace( '.', '/' );
+					escaped = plugins.escape( plugins.fs.readFileSync(__dirname + '/../src/html/' + string + '.html', 'utf8') );
+					template = plugins.hbs.compile( escaped );
+					return new plugins.hbs.SafeString(template(args));
 				}
 			}
 		});
