@@ -10,6 +10,7 @@
     }
   ],
   "scripts": {
+    "init-for-dev": "git clone https://github.com/JDRF/design-system.git && npm run setup",
     "presetup": "git checkout gh-pages && git pull origin gh-pages",
     "setup": "npm install && cd design-system && npm run setup && cd .. && gulp",
     "test": "gulp --env=dev --test=test serve",
