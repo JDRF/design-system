@@ -7,9 +7,8 @@ module.exports = function (gulp, plugins, config) {
 			},
 			notify: false,
 			logPrefix: 'DESIGN-SYSTEM',
-			ui: {
-				port: 3000,
-			},
+			ui: false,
+			port: 3000,
 			open: ('test' === plugins.gutil.env.test) ? false : 'local',
 		}, function(err, bs) {
 			if ('test' === plugins.gutil.env.test) {
