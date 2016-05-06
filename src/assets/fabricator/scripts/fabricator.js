@@ -240,6 +240,9 @@ fabricator.setInitialMenuState = function () {
 
 };
 
+/**
+ * Add fixed class to sidebar on scroll
+ */
 fabricator.fixSidebar = function () {
 	var dsHeaderTop  = document.querySelector( '.f-header-top' ),
 		dsHeader  = document.querySelector( '.f-header' ),

@@ -2,7 +2,6 @@
 .f-menu {
 	@include border-box;
 	float: left;
-	transform: translate(-$menu-width-mobile, 0);
 	width: $menu-width-mobile;
 	height: 100%;
 	z-index: 1;
@@ -12,24 +11,24 @@
 	margin-top: 65px;
 	margin-left: 1rem;
 
+	@media (max-width: 60em) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate(-$menu-width-mobile - 30, 0);
+		width: $menu-width-mobile;
+	}
+
+	@media (min-width: 60em) {
+		width: $menu-width-desktop;
+		display: block;
+	}
+
 	&.fixed {
 		@media (min-width: 60em) {
 			position: fixed;
 			top: 0;
 		}
-	}
-
-	@media (max-width: 60em) {
-		position: absolute;
-		top: 0;
-		left: 15px;
-		width: $menu-width-mobile;
-	}
-
-	@media (min-width: 60em) {
-		transform: translate(0, 0);
-		width: $menu-width-desktop;
-		display: block;
 	}
 
 	.f-menu-active & {
