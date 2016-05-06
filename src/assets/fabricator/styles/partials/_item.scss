@@ -5,6 +5,10 @@
 	padding-bottom: 3rem;
 	border-bottom: 1px solid color(border);
 
+	&:first-child {
+		margin-top: 0;
+	}
+
 	&:last-child {
 		border-bottom: 0;
 		margin-bottom: 0;

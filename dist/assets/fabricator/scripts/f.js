@@ -239,6 +239,8 @@
 		for (var i = codeBlocks.length - 1; i >= 0; i--) {
 			codeBlocks[i].addEventListener('click', select.bind(this, codeBlocks[i]));
 		}
+
+		return this;
 	};
 
 	/**
@@ -267,6 +269,42 @@
 
 		mq.addListener(mediaChangeHandler);
 		mediaChangeHandler(mq);
+
+		return this;
+	};
+
+	/**
+	 * Add fixed class to sidebar on scroll
+	 */
+	fabricator.fixSidebar = function () {
+		var dsHeaderTop = document.querySelector('.f-header-top'),
+		    dsHeader = document.querySelector('.f-header'),
+		    dsSidebar = document.querySelector('.f-menu'),
+		    headerTopHeight = dsHeaderTop.offsetHeight,
+		    headerHeight = dsHeader.offsetHeight,
+		    totalHeaderHeight = headerTopHeight + headerHeight;
+
+		if ('undefined' === typeof dsHeaderTop || null === dsHeaderTop) {
+			return;
+		}
+
+		if ('undefined' === typeof dsHeader || null === dsHeader) {
+			return;
+		}
+
+		if ('undefined' === typeof dsSidebar || null === dsSidebar) {
+			return;
+		}
+
+		window.onscroll = function () {
+			var topOffset = window.pageYOffset;
+
+			if (window.pageYOffset > totalHeaderHeight) {
+				fabricator.addClass(dsSidebar, 'fixed');
+			} else {
+				fabricator.removeClass(dsSidebar, 'fixed');
+			}
+		};
 
 		return this;
 	};
@@ -307,7 +345,7 @@
 	(function () {
 
 		// invoke
-		fabricator.setInitialMenuState().menuToggle().buildColorChips().setActiveItem().bindCodeAutoSelect();
+		fabricator.setInitialMenuState().menuToggle().buildColorChips().setActiveItem().bindCodeAutoSelect().fixSidebar();
 	})();
 
 /***/ },

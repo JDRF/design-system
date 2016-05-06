@@ -40,10 +40,8 @@ body {
 	}
 
 	.f-menu-active & {
-		transform: translate($menu-width-mobile, 0);
-
-		@media (min-width: 60em) {
-			transform: translate(0, 0);
+		@media (max-width: 60em) {
+			transform: translate($menu-width-mobile, 0);
 		}
 	}
 }

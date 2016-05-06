@@ -6,12 +6,12 @@ notes: |
 ---
 
 <section class="f-section">
-	<h4 class="f-example-title">Email Field</h4>
+	<h3 class="f-example-title">Email Field</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="form-group row">
-				<label for="exampleInputEmail1" class="col-sm-3 col-md-2 form-control-label">Email Address</label>
-				<div class="col-sm-6 col-md-5">
+				<label for="exampleInputEmail1" class="col-sm-3 form-control-label">Email Address</label>
+				<div class="col-sm-6">
 					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
 					<small class="text-muted">We'll never share your email with anyone else.</small>
 				</div>
@@ -31,29 +31,189 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h4 class="f-example-title">Address Field</h4>
+	<h3 class="f-example-title">Telephone Field</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="form-group row">
-				<label for="exampleInputAddress1" class="col-sm-3 col-md-2 form-control-label">Address</label>
-				<div class="col-sm-6 col-md-5">
-					<input type="address" class="form-control" id="exampleInputAddress1" placeholder="Enter Address">
+				<label for="exampleInputTel" class="col-sm-3 col-md-2 form-control-label">Telephone</label>
+				<div class="col-sm-5">
+					<input type="tel" class="form-control" id="exampleInputTel" placeholder="Enter phone number">
 				</div>
 			</fieldset>
 		</form>
 	</div>
+
 	<pre class="language-markup">
 		<code class="language-markup">&lt;form&gt;
 			&lt;fieldset class="form-group"&gt;
-				&lt;label for="exampleInputAddress1" class="form-control-label">Address&lt;/label&gt;
-				&lt;input type="address" class="form-control" id="exampleInputAddress1" placeholder="Enter Address"&gt;
+				&lt;label for="exampleInputTel" class="form-control-label"&gt;Telephone&lt;/label&gt;
+				&lt;input type="tel" class="form-control" id="exampleInputTel" placeholder="Enter phone number"&gt;
 			&lt;/fieldset&gt;
 		&lt;/form&gt;</code>
 	</pre>
 </section>
 
 <section class="f-section">
-	<h4 class="f-example-title">Password Field</h4>
+	<h3 class="f-example-title">Date Field</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group row">
+				<label for="exampleInputDate" class="col-sm-3 col-md-2 form-control-label">Date</label>
+				<div class="col-sm-5">
+					<input type="date" class="form-control" id="exampleInputTel">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
+	<pre class="language-markup">
+		<code class="language-markup">&lt;form&gt;
+			&lt;fieldset class="form-group"&gt;
+				&lt;label for="exampleInputDate" class="form-control-label"&gt;Date&lt;/label&gt;
+				&lt;input type="date" class="form-control" id="exampleInputTel"&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;</code>
+	</pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">International Address</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group">
+				<label for="exampleInputAddress1">Street Address</label>
+				<input type="address" class="form-control" id="exampleInputAddress1" placeholder="Enter Street Address">
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="exampleInputAddress2">Address Line 2</label>
+				<input type="address" class="form-control" id="exampleInputAddress2" placeholder="Enter Address Line 2">
+			</fieldset>
+			<div class="form-inline">
+				<fieldset class="form-group">
+					<label for="exampleCity">City</label>
+					<input type="text" class="form-control" id="exampleCity" placeholder="Enter City">
+				</fieldset>
+				<fieldset class="form-group">
+					<label for="exampleState">State/Province/Region</label>
+					<input type="email" class="form-control" id="exampleState" placeholder="Enter State/Province/Region">
+				</fieldset>
+			</div>
+			<div class="form-inline">
+				<fieldset class="form-group">
+					<label for="exampleZip">Zip/Postal Code</label>
+					<input type="text" class="form-control" id="exampleZip" placeholder="Enter Zip/Postal Code">
+				</fieldset>
+				<fieldset class="form-group">
+					<label for="exampleCountry">Country</label>
+					<select class="form-control" id="exampleCountry">
+						<option>Country 1</option>
+						<option>Country 2</option>
+						<option>Country 3</option>
+						<option>Country 4</option>
+						<option>Country 5</option>
+				    </select>
+				</fieldset>
+			</div>
+		</form>
+	</div>
+	<pre class="language-markup">
+		<code class="language-markup">&lt;form&gt;
+			&lt;fieldset class="form-group"&gt;
+				&lt;label for="exampleInputAddress1"&gt;Street Address&lt;/label&gt;
+				&lt;input type="address" class="form-control" id="exampleInputAddress1" placeholder="Enter Street Address"&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class="form-group"&gt;
+				&lt;label for="exampleInputAddress2"&gt;Address Line 2&lt;/label&gt;
+				&lt;input type="address" class="form-control" id="exampleInputAddress2" placeholder="Enter Address Line 2"&gt;
+			&lt;/fieldset&gt;
+			&lt;div class="form-inline"&gt;
+				&lt;fieldset class="form-group"&gt;
+					&lt;label for="exampleCity"&gt;City&lt;/label&gt;
+					&lt;input type="text" class="form-control" id="exampleCity" placeholder="Enter City"&gt;
+				&lt;/fieldset&gt;
+				&lt;fieldset class="form-group"&gt;
+					&lt;label for="exampleState"&gt;State/Province/Region&lt;/label&gt;
+					&lt;input type="email" class="form-control" id="exampleState" placeholder="Enter State/Province/Region"&gt;
+				&lt;/fieldset&gt;
+			&lt;/div&gt;
+			&lt;div class="form-inline"&gt;
+				&lt;fieldset class="form-group"&gt;
+					&lt;label for="exampleZip"&gt;Zip/Postal Code&lt;/label&gt;
+					&lt;input type="text" class="form-control" id="exampleZip" placeholder="Enter Zip/Postal Code"&gt;
+				&lt;/fieldset&gt;
+				&lt;fieldset class="form-group"&gt;
+					&lt;label for="exampleCountry"&gt;Country&lt;/label&gt;
+					&lt;select class="form-control" id="exampleCountry"&gt;
+						&lt;option&gt;Country 1&lt;/option&gt;
+						&lt;option&gt;Country 2&lt;/option&gt;
+						&lt;option&gt;Country 3&lt;/option&gt;
+						&lt;option&gt;Country 4&lt;/option&gt;
+						&lt;option&gt;Country 5&lt;/option&gt;
+				    &lt;/select&gt;
+				&lt;/fieldset&gt;
+			&lt;/div&gt;
+		&lt;/form&gt;</code>
+	</pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">USA Address</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group">
+				<label for="exampleInputAddress3">Street Address</label>
+				<input type="address" class="form-control" id="exampleInputAddress3" placeholder="Enter Street Address">
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="exampleInputAddress4">Address Line 2</label>
+				<input type="address" class="form-control" id="exampleInputAddress4" placeholder="Enter Address Line 2">
+			</fieldset>
+			<div class="form-inline">
+				<fieldset class="form-group">
+					<label for="exampleCity1">City</label>
+					<input type="text" class="form-control" id="exampleCity1" placeholder="Enter City">
+				</fieldset>
+				<fieldset class="form-group">
+					<label for="exampleState1">State</label>
+					<input type="email" class="form-control" id="exampleState1" placeholder="Enter State">
+				</fieldset>
+			</div>
+			<fieldset class="form-group">
+				<label for="exampleZip1">Zip Code</label>
+				<input type="text" class="form-control" id="exampleZip1" placeholder="Enter Zip Code">
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup">
+		<code class="language-markup">&lt;form&gt;
+			&lt;fieldset class="form-group"&gt;
+				&lt;label for="exampleInputAddress3"&gt;Street Address&lt;/label&gt;
+				&lt;input type="address" class="form-control" id="exampleInputAddress3" placeholder="Enter Street Address"&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class="form-group"&gt;
+				&lt;label for="exampleInputAddress4"&gt;Address Line 2&lt;/label&gt;
+				&lt;input type="address" class="form-control" id="exampleInputAddress4" placeholder="Enter Address Line 2"&gt;
+			&lt;/fieldset&gt;
+			&lt;div class="form-inline"&gt;
+				&lt;fieldset class="form-group"&gt;
+					&lt;label for="exampleCity1"&gt;City&lt;/label&gt;
+					&lt;input type="text" class="form-control" id="exampleCity1" placeholder="Enter City"&gt;
+				&lt;/fieldset&gt;
+				&lt;fieldset class="form-group"&gt;
+					&lt;label for="exampleState1"&gt;State&lt;/label&gt;
+					&lt;input type="email" class="form-control" id="exampleState1" placeholder="Enter State"&gt;
+				&lt;/fieldset&gt;
+			&lt;/div&gt;
+			&lt;fieldset class="form-group"&gt;
+				&lt;label for="exampleZip1"&gt;Zip Code&lt;/label&gt;
+				&lt;input type="text" class="form-control" id="exampleZip1" placeholder="Enter Zip Code"&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;</code>
+	</pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Password Field</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="form-group row">
@@ -75,7 +235,7 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h4 class="f-example-title">Select Box</h4>
+	<h3 class="f-example-title">Select Box</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="form-group row">
@@ -109,7 +269,7 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h4 class="f-example-title">Multiple Select Box</h4>
+	<h3 class="f-example-title">Multiple Select Box</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="form-group row">
@@ -143,7 +303,7 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h4 class="f-example-title">Custom Select Box</h4>
+	<h3 class="f-example-title">Custom Select Box</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="form-group row">
@@ -177,7 +337,7 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h4 class="f-example-title">Text Field</h4>
+	<h3 class="f-example-title">Text Field</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="form-group row">
@@ -199,7 +359,7 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h4 class="f-example-title">Textarea</h4>
+	<h3 class="f-example-title">Textarea</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="form-group row">
@@ -221,7 +381,7 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h4 class="f-example-title">Radio Options</h4>
+	<h3 class="f-example-title">Radio Options</h3>
 	<div class="f-example">
 		<form>
 			<div class="radio">
@@ -269,7 +429,7 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h4 class="f-example-title">Checkbox</h4>
+	<h3 class="f-example-title">Checkbox</h3>
 	<div class="f-example">
 		<form>
 			<div class="checkbox">
@@ -291,7 +451,7 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h4 class="f-example-title">Inline Forms: Visible Labels</h4>
+	<h3 class="f-example-title">Inline Forms: Visible Labels</h3>
 	<div class="f-example">
 		<form class="form-inline">
 		  <div class="form-group">
@@ -321,7 +481,7 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h4 class="f-example-title">Inline Forms: Hidden Labels</h4>
+	<h3 class="f-example-title">Inline Forms: Hidden Labels</h3>
 	<div class="f-example">
 		<form class="form-inline">
 		  <div class="form-group">
