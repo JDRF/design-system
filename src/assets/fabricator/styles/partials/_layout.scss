@@ -12,7 +12,7 @@ html {
 
 body {
 	margin: 0;
-	position: relative;
+	// position: relative;
 
 	.f-menu-active & {
 		width:100%;
@@ -36,7 +36,7 @@ body {
 	max-width: $max-width;
 
 	@media (min-width: 60em) {
-		position: relative;
+		// position: relative;
 	}
 
 	.f-menu-active & {

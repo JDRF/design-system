@@ -10,6 +10,14 @@
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	margin-top: 65px;
+	margin-left: 1rem;
+
+	&.fixed {
+		@media (min-width: 60em) {
+			position: fixed;
+			top: 0;
+		}
+	}
 
 	@media (max-width: 60em) {
 		position: absolute;
