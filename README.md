@@ -1,30 +1,22 @@
 # JDRF Design System
 
 # Installation
-Run the below command to generate dependencies and compiled files.
+To setup with optimal build, we suggest running the below command:
 ````
-npm run build
+npm run init-from-dev
 ````
-
-# Clean Up
-Wipe the directory of all compiled files and dependencies.
-* /build - _compiled files_
-* /node_modules - _dependencies_
-* /screenshots && /failures - _PhantomCSS compiled files_
+It will setup your working directory to the below file structure
 
 ````
-npm run clean
+└── working-directory (gh-pages branch)
+	├── /design-system/ (master branch)
+	├── /dist/
+	├── /src/
+	├── gulpfile.js
+	└── package.json
 ````
 
-# Continuous Development
-The easiest (and recommended) way to develop on Design System is to checkout the gh-pages locally and create a subdirectory called design-system that houses the master branch.
-
-````
-cd <DIR_TO_PROJECT>
-git checkout gh-pages
-git clone git@github.com:JDRF/design-system.git design-system
-cd design-system
-````
+To find available commands from this recommended setup, please visit the [gh-pages](https://github.com/JDRF/design-system/tree/gh-pages) branch
 
 # Tests
 Currently, one only _proof of concept_ PhantomCSS test.
