@@ -5,11 +5,9 @@
 	width: $menu-width-mobile;
 	height: 100%;
 	z-index: 1;
-	overflow-x: hidden;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
 	margin-top: 65px;
 	margin-left: 1rem;
+	overflow: hidden;
 
 	@media (max-width: 60em) {
 		position: absolute;
@@ -17,10 +15,14 @@
 		left: 0;
 		transform: translate(-$menu-width-mobile - 30, 0);
 		width: $menu-width-mobile;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	@media (min-width: 60em) {
 		width: $menu-width-desktop;
+		max-width: 220px;
 		display: block;
 	}
 
