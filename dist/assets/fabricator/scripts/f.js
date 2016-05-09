@@ -153,11 +153,6 @@
 				// get item href without first slash
 				href = item.getAttribute('href').replace(/^\//g, '');
 
-				/**
-	    * Not working!!!
-	    * href is not identical to current
-	    * regex needs to be edited to account for github url/localhost
-	    */
 				if (href === current) {
 					fabricator.addClass(item, 'current');
 				} else {
