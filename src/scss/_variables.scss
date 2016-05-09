@@ -40,6 +40,14 @@ $font-italic: "Gotham Book Italic", sans-serif;
 $font-medium: "Gotham Medium", sans-serif;
 $font-medium-italic: "Gotham Medium Italic", sans-serif;
 
+$btn-font: $font-medium;
+$btn-font-transform: uppercase;
+$btn-font-size: 0.875rem; /* 14px */
+$btn-line-height: 0.875rem; /* 14px */
+
+$btn-block-y: 0.75rem; /* 12px */
+$btn-block-x: 0.75rem; /* 12px */
+
 /* Bootstrap overwrites: variables.scss */
 
 $gray-dark: $grey-7;
@@ -51,6 +59,33 @@ $gray-lightest: $grey-1;
 $brand-primary: $primary-blue;
 $btn-primary-bg: $jdrf-green;
 $btn-primary-border: $jdrf-green;
+
+$btn-secondary-color: $jdrf-white;
+$btn-secondary-bg: $jdrf-green;
+$btn-secondary-border: $jdrf-green;
+
+$link-hover-color: $jdrf-green;
+$btn-link-disabled-color: $grey-6;
+
+/* Border radius at 2px */
+$border-radius: 0.125rem;
+$border-radius-lg: 0.125rem;
+$border-radius-sm: 0.125rem;
+$btn-border-radius: $border-radius;
+$btn-border-radius-lg: $border-radius;
+$btn-border-radius-sm: $border-radius;
+
+$btn-padding-x: 1rem; /* 16px */
+$btn-padding-y: 0.75rem; /* 12px */
+$btn-padding-y-lg: 1rem; /* 16px */
+$btn-padding-x-lg: 1.5rem; /* 24px */
+$btn-padding-y-sm: 0.5rem; /* 8px */
+$btn-padding-x-sm: 0.5rem; /* 8px */
+
+$font-size-lg: 0.875rem; /* 14px */
+$line-height-lg: 0.875rem; /* 14px */
+$font-size-sm: 0.8125rem; /* 13px */
+$line-height-sm: 0.8125rem; /* 13px */
 
 $font-family-base: $font-regular;
 
