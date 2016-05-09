@@ -2905,11 +2905,11 @@ h6 {
   font-weight: 300; }
 
 .display-1 {
-  font-size: 4.5rem;
+  font-size: 6rem;
   font-weight: 300; }
 
 .display-2 {
-  font-size: 3.75rem;
+  font-size: 5.5rem;
   font-weight: 300; }
 
 .display-3 {
@@ -2989,6 +2989,10 @@ mark,
   content: "\00A0 \2014"; }
 
 /* Bootstrap overwrites: type.scss */
+.display-1,
+.display-2 {
+  font-family: "Gotham Light", sans-serif; }
+
 .container {
   margin-left: auto;
   margin-right: auto;
