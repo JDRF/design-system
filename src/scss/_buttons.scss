@@ -2,10 +2,38 @@
 
 /* Bootstrap overwrites: buttons.scss */
 
+.btn {
+	@include button-font-overwrite;
+
+	&.disabled,
+  	&:disabled {
+  		opacity: 1;
+  	}
+}
+
 .btn-link {
 	color: $jdrf-green;
+	@include border-radius($border-radius);
+
+	&:active,
+	&.active,
+	&:focus {
+		background-color: $grey-4;
+		text-decoration: none;
+	}
+
+	@include hover {
+		background-color: $grey-4;
+		text-decoration: none;
+	}
+
+	@include hover-focus {
+		background-color: $grey-4;
+		text-decoration: none;
+	}
 }
 
 .btn-flat {
 	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+	@include elevation-remove;
 }

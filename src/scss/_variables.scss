@@ -52,6 +52,21 @@ $brand-primary: $primary-blue;
 $btn-primary-bg: $jdrf-green;
 $btn-primary-border: $jdrf-green;
 
+$btn-secondary-color: $jdrf-white;
+$btn-secondary-bg: $jdrf-green;
+$btn-secondary-border: $jdrf-green;
+
+$link-hover-color: $jdrf-green;
+
+/* Border radius at 2px */
+$border-radius: 0.125rem;
+$border-radius-lg: 0.125rem;
+$border-radius-sm: 0.125rem;
+$btn-border-radius: $border-radius;
+
+$btn-padding-x: 1rem; /* 16px */
+$btn-padding-y: 0.75rem; /* 12px */
+
 $font-family-base: $font-regular;
 
 $font-size-h1: 3rem;
