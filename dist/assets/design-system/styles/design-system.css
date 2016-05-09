@@ -4051,9 +4051,6 @@ input[type="checkbox"].disabled {
     top: 0; } }
 
 /* Bootstrap overwrites: forms.scss */
-.form-inline .form-group {
-  margin-bottom: 1rem; }
-
 .btn {
   display: inline-block;
   font-weight: normal;
