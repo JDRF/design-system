@@ -99,7 +99,10 @@ fabricator.setActiveItem = function () {
 		var current = (window.location.pathname + window.location.hash).replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
 				hash = hash || '';
 				file = file || '';
-				return file + hash.split('.')[0];
+				// Currently, without a scrolling listener, there's no way to
+				// change as we visit new 'hashes'. Better to leave at top
+				// level link
+				return './' + file; // + hash.split('.')[0];
 			}) || 'index.html',
 			href;
 
@@ -107,7 +110,6 @@ fabricator.setActiveItem = function () {
 		for (var i = fabricator.dom.menuItems.length - 1; i >= 0; i--) {
 
 			var item = fabricator.dom.menuItems[i];
-
 			// get item href without first slash
 			href = item.getAttribute('href').replace(/^\//g, '');
 
@@ -117,9 +119,9 @@ fabricator.setActiveItem = function () {
 			 * regex needs to be edited to account for github url/localhost
 			 */
 			if ( href === current ) {
-				fabricator.addClass( item, 'f-active');
+				fabricator.addClass( item, 'current');
 			} else {
-				fabricator.removeClass( item, 'f-active');
+				fabricator.removeClass( item, 'current');
 			}
 
 		}
