@@ -5,8 +5,15 @@ module.exports = function (gulp, plugins, paths) {
 			//'./node_modules/bootstrap/dist/js/bootstrap.js',
 			__dirname + '/../src/js/**/*.js',
 		])
+		// JSCS
 		.pipe(plugins.jscs())
 		.pipe(plugins.jscs.reporter())
+
+		// ESLINT
+		.pipe(plugins.eslint())
+		.pipe(plugins.eslint.format())
+		.pipe(plugins.eslint.failAfterError())
+
 		.pipe(plugins.concat('design-system.js'))
 		.pipe(gulp.dest(__dirname + '/../dist/js'));
 		return stream;
