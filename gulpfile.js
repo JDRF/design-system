@@ -31,13 +31,11 @@ var config = {
 			dev        : './design-system/dist/js/design-system.js'
 		},
 		styles: {
-			fabricator : 'src/assets/fabricator/styles/fabricator.scss',
+			fabricator : './src/assets/fabricator/styles/fabricator.scss',
 			build      : './src/assets/design-system/styles/design-system.css',
 			dev        : './design-system/dist/css/design-system.css'
 		},
-		fonts: './src/assets/design-system/fonts/**/**/*',
-		images: 'src/assets/toolkit/images/**/*',
-		views: 'src/toolkit/views/*.html'
+		fonts: './src/assets/design-system/fonts/**/**/*'
 	},
 	dest: 'dist'
 };
