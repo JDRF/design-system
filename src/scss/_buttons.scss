@@ -11,6 +11,10 @@
   	&:disabled {
   		opacity: 1;
   	}
+
+  	&.material-icons {
+  		font-family: 'Material Icons';
+  	}
 }
 
 .btn-link {
@@ -68,5 +72,12 @@
 	&:active,
 	&.active {
 		@include elevation-three;
+	}
+}
+
+.btn-icon {
+	span {
+		display: inline-block;
+		vertical-align: middle;
 	}
 }
