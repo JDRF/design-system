@@ -30,6 +30,9 @@
 		@media (min-width: 60em) {
 			position: fixed;
 			top: 0;
+			overflow-y: auto;
+			height: 90%;
+			padding-bottom: 65px;
 		}
 	}
 
