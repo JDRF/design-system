@@ -2,18 +2,14 @@
 
 /* Bootstrap @import "scss/mixins/buttons.scss */
 
-@mixin button-font-overwrite {
-	font-size: 0.875rem; /* 14px */
-	line-height: 0.875rem; /* 14px */
-	font-family: $font-medium;
-	text-transform: uppercase;
-}
-
 @mixin button-variant($color, $background, $border) {
 	color: $color;
 	background-color: $background;
 	border-color: $border;
 	@include elevation-one;
+	@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+	font-family: $btn-font;
+	text-transform: $btn-font-transform;
 
 	@include hover {
 		color: $color;
@@ -69,6 +65,8 @@
 	background-color: transparent;
 	border-color: $color;
 	@include elevation-one;
+	font-family: $btn-font;
+	text-transform: $btn-font-transform;
 
 	&:focus,
 	&.focus,
