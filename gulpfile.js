@@ -11,7 +11,7 @@ var plugins = require('gulp-load-plugins')({
 });
 
 plugins.assemble = require('fabricator-assemble');
-plugins.browserSync = require('browser-sync');
+plugins.browserSync = require('browser-sync').create();
 plugins.del = require('del');
 plugins.merge = require('merge-stream');
 plugins.reload = plugins.browserSync.reload;

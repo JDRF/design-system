@@ -1,7 +1,7 @@
 module.exports = function (gulp, plugins, config) {
 	return function () {
 
-		plugins.browserSync({
+		plugins.browserSync.init({
 			server: {
 				baseDir: config.dest
 			},
