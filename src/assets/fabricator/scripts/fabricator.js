@@ -102,7 +102,7 @@ fabricator.setActiveItem = function () {
 				// Currently, without a scrolling listener, there's no way to
 				// change as we visit new 'hashes'. Better to leave at top
 				// level link
-				return './' + file; // + hash.split('.')[0];
+				return './' + file.replace( 'dist/', '' ); // + hash.split('.')[0];
 			}) || 'index.html',
 			href;
 
