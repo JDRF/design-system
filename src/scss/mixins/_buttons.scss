@@ -13,13 +13,13 @@
 
 	@include hover {
 		color: $color;
-		@include elevation-two;
+		@include elevation-three;
 	}
 
 	&:focus,
 	&.focus {
 		color: $color;
-		@include elevation-two;
+		@include elevation-three;
 	}
 
 	&:active,
@@ -28,7 +28,7 @@
 		color: $color;
 		// Remove the gradient for the pressed/active state
 		background-image: none;
-		@include elevation-two;
+		@include elevation-three;
 
 		&:hover,
 		&:focus,
@@ -73,14 +73,14 @@
 	&:active,
 	&.active,
 	.open > &.dropdown-toggle {
-		@include elevation-two;
+		@include elevation-three;
 		color: $jdrf-white;
 		background-color: $color;
 		border-color: $color;
 	}
 
 	@include hover {
-		@include elevation-two;
+		@include elevation-three;
 		color: $jdrf-white;
 		background-color: $color;
 		border-color: $color;
