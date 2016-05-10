@@ -2905,11 +2905,11 @@ h6 {
   font-weight: 300; }
 
 .display-1 {
-  font-size: 6rem;
+  font-size: 4.5rem;
   font-weight: 300; }
 
 .display-2 {
-  font-size: 5.5rem;
+  font-size: 3.75rem;
   font-weight: 300; }
 
 .display-3 {
@@ -3934,7 +3934,7 @@ fieldset[disabled] a.btn {
   font-size: 0.875rem;
   line-height: 0.875rem;
   border-radius: 0.125rem;
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase; }
   .btn-primary:hover {
     color: #fff;
@@ -3975,7 +3975,7 @@ fieldset[disabled] a.btn {
   font-size: 0.875rem;
   line-height: 0.875rem;
   border-radius: 0.125rem;
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase; }
   .btn-secondary:hover {
     color: #ffffff;
@@ -4016,7 +4016,7 @@ fieldset[disabled] a.btn {
   font-size: 0.875rem;
   line-height: 0.875rem;
   border-radius: 0.125rem;
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase; }
   .btn-info:hover {
     color: #fff;
@@ -4057,7 +4057,7 @@ fieldset[disabled] a.btn {
   font-size: 0.875rem;
   line-height: 0.875rem;
   border-radius: 0.125rem;
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase; }
   .btn-success:hover {
     color: #fff;
@@ -4098,7 +4098,7 @@ fieldset[disabled] a.btn {
   font-size: 0.875rem;
   line-height: 0.875rem;
   border-radius: 0.125rem;
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase; }
   .btn-warning:hover {
     color: #fff;
@@ -4139,7 +4139,7 @@ fieldset[disabled] a.btn {
   font-size: 0.875rem;
   line-height: 0.875rem;
   border-radius: 0.125rem;
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase; }
   .btn-danger:hover {
     color: #fff;
@@ -4177,7 +4177,7 @@ fieldset[disabled] a.btn {
   background-color: transparent;
   border-color: #00a862;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.2);
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase; }
   .btn-primary-outline:focus, .btn-primary-outline.focus, .btn-primary-outline:active, .btn-primary-outline.active,
   .open > .btn-primary-outline.dropdown-toggle {
@@ -4210,7 +4210,7 @@ fieldset[disabled] a.btn {
   background-color: transparent;
   border-color: #00a862;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.2);
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase; }
   .btn-secondary-outline:focus, .btn-secondary-outline.focus, .btn-secondary-outline:active, .btn-secondary-outline.active,
   .open > .btn-secondary-outline.dropdown-toggle {
@@ -4243,7 +4243,7 @@ fieldset[disabled] a.btn {
   background-color: transparent;
   border-color: #5bc0de;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.2);
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase; }
   .btn-info-outline:focus, .btn-info-outline.focus, .btn-info-outline:active, .btn-info-outline.active,
   .open > .btn-info-outline.dropdown-toggle {
@@ -4276,7 +4276,7 @@ fieldset[disabled] a.btn {
   background-color: transparent;
   border-color: #5cb85c;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.2);
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase; }
   .btn-success-outline:focus, .btn-success-outline.focus, .btn-success-outline:active, .btn-success-outline.active,
   .open > .btn-success-outline.dropdown-toggle {
@@ -4309,7 +4309,7 @@ fieldset[disabled] a.btn {
   background-color: transparent;
   border-color: #f0ad4e;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.2);
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase; }
   .btn-warning-outline:focus, .btn-warning-outline.focus, .btn-warning-outline:active, .btn-warning-outline.active,
   .open > .btn-warning-outline.dropdown-toggle {
@@ -4342,7 +4342,7 @@ fieldset[disabled] a.btn {
   background-color: transparent;
   border-color: #d9534f;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.2);
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase; }
   .btn-danger-outline:focus, .btn-danger-outline.focus, .btn-danger-outline:active, .btn-danger-outline.active,
   .open > .btn-danger-outline.dropdown-toggle {
@@ -4417,7 +4417,7 @@ input[type="button"].btn-block {
   font-size: 0.875rem;
   line-height: 0.875rem;
   border-radius: 0.125rem;
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase; }
   .btn.disabled, .btn:disabled {
     opacity: 1; }
@@ -4451,7 +4451,7 @@ input[type="button"].btn-block {
   font-size: 0.875rem;
   line-height: 0.875rem;
   border-radius: 0.125rem;
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Book", sans-serif;
   text-transform: uppercase;
   box-shadow: none; }
   .btn-flat:hover {
