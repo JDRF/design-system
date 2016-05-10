@@ -2989,9 +2989,53 @@ mark,
   content: "\00A0 \2014"; }
 
 /* Bootstrap overwrites: type.scss */
+h1,
+.h1 {
+  line-height: 3.5rem; }
+
+h2,
+.h2 {
+  line-height: 2.75rem; }
+
+h3,
+.h3 {
+  line-height: 2rem; }
+
+h4,
+.h4 {
+  line-height: 1.75rem; }
+
+h5,
+.h5 {
+  line-height: 1.5rem; }
+
+h6,
+.h6 {
+  line-height: 1.25rem; }
+
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: "Gotham Medium", sans-serif; }
+
 .display-1,
 .display-2 {
   font-family: "Gotham Light", sans-serif; }
+
+.display-1 {
+  line-height: 4.5rem; }
+
+.display-2 {
+  line-height: 3.75rem; }
+
+.lead {
+  font-family: "Gotham Light", sans-serif;
+  line-height: 1.75rem; }
 
 .container {
   margin-left: auto;
