@@ -3,7 +3,9 @@ module.exports = function (gulp, plugins, config) {
 
 		plugins.browserSync.init({
 			server: {
-				baseDir: config.dest
+				//baseDir: config.dest
+				baseDir: './',
+				index: 'index-local.html',
 			},
 			notify: false,
 			logPrefix: 'DESIGN-SYSTEM',
