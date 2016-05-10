@@ -1,5 +1,5 @@
 casper.
-	start('http://localhost:3000/content.html#typography').
+	start('http://localhost:3000/dist/content.html#typography').
 	then(function(){
 		phantomcss.screenshot('.f-example h1', 'Heading One');
 	}).

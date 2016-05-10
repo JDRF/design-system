@@ -1,5 +1,5 @@
 casper.
-	start('http://localhost:3000/components.html#forms').
+	start('http://localhost:3000/dist/components.html#forms').
 	then(function(){
 		phantomcss.screenshot('.f-example label[for=exampleInputText1]', 'Text Field Label');
 	}).

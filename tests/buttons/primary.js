@@ -1,5 +1,5 @@
 casper.
-	start('http://localhost:3000/components.html#buttons').
+	start('http://localhost:3000/dist/components.html#buttons').
 	then(function(){
 		phantomcss.screenshot('.f-example .btn.btn-primary', 'Primary Button');
 	}).

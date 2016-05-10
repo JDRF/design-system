@@ -19,11 +19,7 @@ It will setup your working directory to the below file structure
 To find available commands from this recommended setup, please visit the [gh-pages](https://github.com/JDRF/design-system/tree/gh-pages) branch
 
 # Tests
-Currently, one only _proof of concept_ PhantomCSS test.
-````
-npm run test
-````
-If there are NPM errors, try running ````npm install```` in ````./node_modules/gulp-phantomcss````
+Test are run from a parent directory that relies on the above specified directory structure. See the (gh-pages README)[https://github.com/JDRF/design-system/tree/gh-pages] for information on testing.
 
 # Semantic Versioning and Releases
 We're using Semantic Versioning to increment the release phases of the Design System. This helps us to track major changes as well as minor changes and patches. We can also view a history of the project's [releases on Github](https://github.com/JDRF/design-system/releases) due to Semantic Versioning.
