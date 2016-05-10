@@ -2,7 +2,61 @@
 
 /* Bootstrap overwrites: type.scss */
 
+h1,
+.h1 {
+	line-height: $h1-lineheight;
+}
+
+h2,
+.h2 {
+	line-height: $h2-lineheight;
+}
+
+h3,
+.h3 {
+	line-height: $h3-lineheight;
+}
+
+h4,
+.h4 {
+	line-height: $h4-lineheight;
+}
+
+h5,
+.h5 {
+	line-height: $h5-lineheight;
+}
+
+h6,
+.h6 {
+	line-height: $h6-lineheight;
+}
+
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: $font-medium;
+}
+
 .display-1,
 .display-2 {
 	font-family: $font-light;
+}
+
+.display-1 {
+	line-height: $display1-size;
+}
+
+.display-2 {
+	line-height: $display2-size;
+}
+
+.lead {
+	font-family: $font-light;
+	line-height: $lead-line-height;
 }

@@ -40,6 +40,13 @@ $font-italic: "Gotham Book Italic", sans-serif;
 $font-medium: "Gotham Medium", sans-serif;
 $font-medium-italic: "Gotham Medium Italic", sans-serif;
 
+$h1-lineheight: 3.5rem;
+$h2-lineheight: 2.75rem;
+$h3-lineheight: 2rem;
+$h4-lineheight: 1.75rem;
+$h5-lineheight: 1.5rem;
+$h6-lineheight: 1.25rem;
+
 $btn-font: $font-regular;
 $btn-font-transform: uppercase;
 $btn-font-size: 0.875rem; /* 14px */
@@ -100,3 +107,4 @@ $display1-size: 4.5rem;
 $display2-size: 3.75rem;
 
 $lead-font-size: 1.25rem;
+$lead-line-height: 1.75rem;
