@@ -11,6 +11,10 @@
   	&:disabled {
   		opacity: 1;
   	}
+
+  	&.material-icons {
+  		font-family: 'Material Icons';
+  	}
 }
 
 .btn-link {
@@ -47,6 +51,23 @@
 .btn-flat {
 	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 	@include elevation-remove;
+
+	@include hover {
+		@include elevation-two;
+	}
+
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		@include elevation-two;
+	}
+
+	&.disabled,
+	&:disabled {
+		@include elevation-remove;
+	}
 }
 
 .btn-lg {
@@ -68,5 +89,17 @@
 	&:active,
 	&.active {
 		@include elevation-three;
+	}
+
+	&.disabled,
+	&:disabled {
+		@include elevation-remove;
+	}
+}
+
+.btn-icon {
+	span {
+		display: inline-block;
+		vertical-align: middle;
 	}
 }
