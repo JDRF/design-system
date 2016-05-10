@@ -8,13 +8,13 @@
 	text-transform: $btn-font-transform;
 
 	&.disabled,
-  	&:disabled {
-  		opacity: 1;
-  	}
+	&:disabled {
+		opacity: 1;
+	}
 
-  	&.material-icons {
-  		font-family: 'Material Icons';
-  	}
+	&.material-icons {
+		font-family: 'Material Icons';
+	}
 }
 
 .btn-link {
