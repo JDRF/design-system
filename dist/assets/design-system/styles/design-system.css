@@ -4488,6 +4488,8 @@ input[type="button"].btn-block {
   .btn-flat:focus, .btn-flat.focus, .btn-flat:active, .btn-flat.active,
   .open > .btn-flat.dropdown-toggle {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.1); }
+  .btn-flat.disabled, .btn-flat:disabled {
+    box-shadow: none; }
 
 .btn-lg {
   padding: 1rem 1.5rem;
@@ -4507,6 +4509,8 @@ input[type="button"].btn-block {
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.1); }
   .btn-block:focus, .btn-block.focus, .btn-block:active, .btn-block.active {
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.1); }
+  .btn-block.disabled, .btn-block:disabled {
+    box-shadow: none; }
 
 .btn-icon span {
   display: inline-block;
