@@ -1,1 +1,937 @@
-!function(e){function t(a){if(n[a])return n[a].exports;var r=n[a]={exports:{},id:a,loaded:!1};return e[a].call(r.exports,r,r.exports,t),r.loaded=!0,r.exports}var n={};return t.m=e,t.c=n,t.p="",t(0)}([function(e,t,n){"use strict";n(1);var a=window.fabricator={};a.options={menu:!1,mq:"(min-width: 60em)"},a.options.menu=window.matchMedia(a.options.mq).matches,a.test={},a.test.sessionStorage=function(){var e="_f";try{return sessionStorage.setItem(e,e),sessionStorage.removeItem(e),!0}catch(t){return!1}}(),a.test.sessionStorage&&(sessionStorage.fabricator=sessionStorage.fabricator||JSON.stringify(a.options)),a.dom={root:document.querySelector("html"),primaryMenu:document.querySelector(".f-menu"),menuItems:document.querySelectorAll(".f-menu li a"),menuToggle:document.querySelector(".f-menu-toggle")},a.getOptions=function(){return a.test.sessionStorage?JSON.parse(sessionStorage.fabricator):a.options},a.buildColorChips=function(){for(var e,t=document.querySelectorAll(".f-color-chip"),n=t.length-1;n>=0;n--)e=t[n].querySelector(".f-color-chip__color").innerHTML,t[n].style.borderTopColor=e,t[n].style.borderBottomColor=e;return this},a.setActiveItem=function(){var e=function(){for(var e,t=(window.location.pathname+window.location.hash).replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/gi,function(e,t,n,a){return a=a||"",n=n.replace("dist/","").replace("design-system/","")||"","./"+n})||"index.html",n=a.dom.menuItems.length-1;n>=0;n--){var r=a.dom.menuItems[n];e=r.getAttribute("href").replace(/^\//g,""),e===t?a.addClass(r,"current"):a.removeClass(r,"current")}};return window.addEventListener("hashchange",e),e(),this},a.menuToggle=function(){var e=a.dom.menuToggle,t=a.getOptions(),n=function(){a.dom.root.className.split(" ");t.menu=!a.dom.root.classList.contains("f-menu-active"),a.dom.root.classList.toggle("f-menu-active"),a.test.sessionStorage&&sessionStorage.setItem("fabricator",JSON.stringify(t))};document.onkeydown=function(e){e=e||event,e.ctrlKey&&e.keyCode=="M".charCodeAt(0)&&n()},e.addEventListener("click",function(){n()});for(var r=function(){window.matchMedia(a.options.mq).matches||n()},i=0;i<a.dom.menuItems.length;i++)a.dom.menuItems[i].addEventListener("click",r);return this},a.bindCodeAutoSelect=function(){for(var e=document.querySelectorAll(".f-item-code"),t=function(e){var t=window.getSelection(),n=document.createRange();n.selectNodeContents(e.querySelector("code")),t.removeAllRanges(),t.addRange(n)},n=e.length-1;n>=0;n--)e[n].addEventListener("click",t.bind(this,e[n]));return this},a.setInitialMenuState=function(){var e=document.querySelector("html"),t=window.matchMedia(a.options.mq),n=function(t){t.matches&&a.getOptions().menu?a.addClass(e,"f-menu-active"):a.removeClass(e,"f-menu-active")};return t.addListener(n),n(t),this},a.fixSidebar=function(){var e=document.querySelector(".f-header-top"),t=document.querySelector(".f-header"),n=document.querySelector(".f-menu"),r=e.offsetHeight,i=t.offsetHeight,s=r+i;if("undefined"!=typeof e&&null!==e&&"undefined"!=typeof t&&null!==t&&"undefined"!=typeof n&&null!==n)return window.onscroll=function(){window.pageYOffset;window.pageYOffset>s?a.addClass(n,"fixed"):a.removeClass(n,"fixed")},this},a.addClass=function(e,t){"undefined"!=typeof e&&null!==e&&(a.removeClass(e,t),e.className+=" "+t)},a.removeClass=function(e,t){"undefined"!=typeof e&&null!==e&&(e.className.indexOf(" "+t)>-1?e.className=e.className.replace(" "+t,""):e.className.indexOf(t)>-1&&(e.className=e.className.replace(t,"")))},function(){a.setInitialMenuState().menuToggle().buildColorChips().setActiveItem().bindCodeAutoSelect().fixSidebar()}()},function(e,t){self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{};var n=function(){var e=/\blang(?:uage)?-(?!\*)(\w+)\b/i,t=self.Prism={util:{encode:function(e){return e instanceof n?new n(e.type,t.util.encode(e.content),e.alias):"Array"===t.util.type(e)?e.map(t.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},clone:function(e){var n=t.util.type(e);switch(n){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=t.util.clone(e[r]));return a;case"Array":return e.map(function(e){return t.util.clone(e)})}return e}},languages:{extend:function(e,n){var a=t.util.clone(t.languages[e]);for(var r in n)a[r]=n[r];return a},insertBefore:function(e,n,a,r){r=r||t.languages;var i=r[e];if(2==arguments.length){a=arguments[1];for(var s in a)a.hasOwnProperty(s)&&(i[s]=a[s]);return i}var o={};for(var l in i)if(i.hasOwnProperty(l)){if(l==n)for(var s in a)a.hasOwnProperty(s)&&(o[s]=a[s]);o[l]=i[l]}return t.languages.DFS(t.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,n,a){for(var r in e)e.hasOwnProperty(r)&&(n.call(e,r,e[r],a||r),"Object"===t.util.type(e[r])?t.languages.DFS(e[r],n):"Array"===t.util.type(e[r])&&t.languages.DFS(e[r],n,r))}},highlightAll:function(e,n){for(var a,r=document.querySelectorAll('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'),i=0;a=r[i++];)t.highlightElement(a,e===!0,n)},highlightElement:function(a,r,i){for(var s,o,l=a;l&&!e.test(l.className);)l=l.parentNode;if(l&&(s=(l.className.match(e)||[,""])[1],o=t.languages[s]),o){a.className=a.className.replace(e,"").replace(/\s+/g," ")+" language-"+s,l=a.parentNode,/pre/i.test(l.nodeName)&&(l.className=l.className.replace(e,"").replace(/\s+/g," ")+" language-"+s);var u=a.textContent;if(u){u=u.replace(/^(?:\r?\n|\r)/,"");var c={element:a,language:s,grammar:o,code:u};if(t.hooks.run("before-highlight",c),r&&self.Worker){var g=new Worker(t.filename);g.onmessage=function(e){c.highlightedCode=n.stringify(JSON.parse(e.data),s),t.hooks.run("before-insert",c),c.element.innerHTML=c.highlightedCode,i&&i.call(c.element),t.hooks.run("after-highlight",c)},g.postMessage(JSON.stringify({language:c.language,code:c.code}))}else c.highlightedCode=t.highlight(c.code,c.grammar,c.language),t.hooks.run("before-insert",c),c.element.innerHTML=c.highlightedCode,i&&i.call(a),t.hooks.run("after-highlight",c)}}},highlight:function(e,a,r){var i=t.tokenize(e,a);return n.stringify(t.util.encode(i),r)},tokenize:function(e,n,a){var r=t.Token,i=[e],s=n.rest;if(s){for(var o in s)n[o]=s[o];delete n.rest}e:for(var o in n)if(n.hasOwnProperty(o)&&n[o]){var l=n[o];l="Array"===t.util.type(l)?l:[l];for(var u=0;u<l.length;++u){var c=l[u],g=c.inside,d=!!c.lookbehind,f=0,p=c.alias;c=c.pattern||c;for(var m=0;m<i.length;m++){var h=i[m];if(i.length>e.length)break e;if(!(h instanceof r)){c.lastIndex=0;var y=c.exec(h);if(y){d&&(f=y[1].length);var v=y.index-1+f,y=y[0].slice(f),w=y.length,b=v+w,k=h.slice(0,v+1),S=h.slice(b+1),C=[m,1];k&&C.push(k);var N=new r(o,g?t.tokenize(y,g):y,p);C.push(N),S&&C.push(S),Array.prototype.splice.apply(i,C)}}}}}return i},hooks:{all:{},add:function(e,n){var a=t.hooks.all;a[e]=a[e]||[],a[e].push(n)},run:function(e,n){var a=t.hooks.all[e];if(a&&a.length)for(var r,i=0;r=a[i++];)r(n)}}},n=t.Token=function(e,t,n){this.type=e,this.content=t,this.alias=n};if(n.stringify=function(e,a,r){if("string"==typeof e)return e;if("Array"===t.util.type(e))return e.map(function(t){return n.stringify(t,a,e)}).join("");var i={type:e.type,content:n.stringify(e.content,a,r),tag:"span",classes:["token",e.type],attributes:{},language:a,parent:r};if("comment"==i.type&&(i.attributes.spellcheck="true"),e.alias){var s="Array"===t.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(i.classes,s)}t.hooks.run("wrap",i);var o="";for(var l in i.attributes)o+=l+'="'+(i.attributes[l]||"")+'"';return"<"+i.tag+' class="'+i.classes.join(" ")+'" '+o+">"+i.content+"</"+i.tag+">"},!self.document)return self.addEventListener?(self.addEventListener("message",function(e){var n=JSON.parse(e.data),a=n.language,r=n.code;self.postMessage(JSON.stringify(t.util.encode(t.tokenize(r,t.languages[a])))),self.close()},!1),self.Prism):self.Prism;var a=document.getElementsByTagName("script");return a=a[a.length-1],a&&(t.filename=a.src,document.addEventListener&&!a.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",t.highlightAll)),self.Prism}();"undefined"!=typeof e&&e.exports&&(e.exports=n),n.languages.markup={comment:/<!--[\w\W]*?-->/,prolog:/<\?.+?\?>/,doctype:/<!DOCTYPE.+?>/,cdata:/<!\[CDATA\[[\w\W]*?]]>/i,tag:{pattern:/<\/?[\w:-]+\s*(?:\s+[\w:-]+(?:=(?:("|')(\\?[\w\W])*?\1|[^\s'">=]+))?\s*)*\/?>/i,inside:{tag:{pattern:/^<\/?[\w:-]+/i,inside:{punctuation:/^<\/?/,namespace:/^[\w-]+?:/}},"attr-value":{pattern:/=(?:('|")[\w\W]*?(\1)|[^\s>]+)/i,inside:{punctuation:/=|>|"/}},punctuation:/\/?>/,"attr-name":{pattern:/[\w:-]+/,inside:{namespace:/^[\w-]+?:/}}}},entity:/&#?[\da-z]{1,8};/i},n.hooks.add("wrap",function(e){"entity"===e.type&&(e.attributes.title=e.content.replace(/&amp;/,"&"))}),n.languages.css={comment:/\/\*[\w\W]*?\*\//,atrule:{pattern:/@[\w-]+?.*?(;|(?=\s*\{))/i,inside:{punctuation:/[;:]/}},url:/url\((?:(["'])(\\\n|\\?.)*?\1|.*?)\)/i,selector:/[^\{\}\s][^\{\};]*(?=\s*\{)/,string:/("|')(\\\n|\\?.)*?\1/,property:/(\b|\B)[\w-]+(?=\s*:)/i,important:/\B!important\b/i,punctuation:/[\{\};:]/,"function":/[-a-z0-9]+(?=\()/i},n.languages.markup&&(n.languages.insertBefore("markup","tag",{style:{pattern:/<style[\w\W]*?>[\w\W]*?<\/style>/i,inside:{tag:{pattern:/<style[\w\W]*?>|<\/style>/i,inside:n.languages.markup.tag.inside},rest:n.languages.css},alias:"language-css"}}),n.languages.insertBefore("inside","attr-value",{"style-attr":{pattern:/\s*style=("|').*?\1/i,inside:{"attr-name":{pattern:/^\s*style/i,inside:n.languages.markup.tag.inside},punctuation:/^\s*=\s*['"]|['"]\s*$/,"attr-value":{pattern:/.+/i,inside:n.languages.css}},alias:"language-css"}},n.languages.markup.tag)),n.languages.clike={comment:[{pattern:/(^|[^\\])\/\*[\w\W]*?\*\//,lookbehind:!0},{pattern:/(^|[^\\:])\/\/.+/,lookbehind:!0}],string:/("|')(\\\n|\\?.)*?\1/,"class-name":{pattern:/((?:(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,lookbehind:!0,inside:{punctuation:/(\.|\\)/}},keyword:/\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,"boolean":/\b(true|false)\b/,"function":{pattern:/[a-z0-9_]+\(/i,inside:{punctuation:/\(/}},number:/\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee]-?\d+)?)\b/,operator:/[-+]{1,2}|!|<=?|>=?|={1,3}|&{1,2}|\|?\||\?|\*|\/|~|\^|%/,ignore:/&(lt|gt|amp);/i,punctuation:/[{}[\];(),.:]/},n.languages.javascript=n.languages.extend("clike",{keyword:/\b(break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|false|finally|for|function|get|if|implements|import|in|instanceof|interface|let|new|null|package|private|protected|public|return|set|static|super|switch|this|throw|true|try|typeof|var|void|while|with|yield)\b/,number:/\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee][+-]?\d+)?|NaN|-?Infinity)\b/,"function":/(?!\d)[a-z0-9_$]+(?=\()/i}),n.languages.insertBefore("javascript","keyword",{regex:{pattern:/(^|[^\/])\/(?!\/)(\[.+?]|\\.|[^\/\r\n])+\/[gim]{0,3}(?=\s*($|[\r\n,.;})]))/,lookbehind:!0}}),n.languages.markup&&n.languages.insertBefore("markup","tag",{script:{pattern:/<script[\w\W]*?>[\w\W]*?<\/script>/i,inside:{tag:{pattern:/<script[\w\W]*?>|<\/script>/i,inside:n.languages.markup.tag.inside},rest:n.languages.javascript},alias:"language-javascript"}})}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(1);
+
+	/**
+	 * Global `fabricator` object
+	 * @namespace
+	 */
+	var fabricator = window.fabricator = {};
+
+	/**
+	 * Default options
+	 * @type {Object}
+	 */
+	fabricator.options = {
+		menu: false,
+		mq: '(min-width: 60em)'
+	};
+
+	// open menu by default if large screen
+	fabricator.options.menu = window.matchMedia(fabricator.options.mq).matches;
+
+	/**
+	 * Feature detection
+	 * @type {Object}
+	 */
+	fabricator.test = {};
+
+	// test for sessionStorage
+	fabricator.test.sessionStorage = (function () {
+		var test = '_f';
+		try {
+			sessionStorage.setItem(test, test);
+			sessionStorage.removeItem(test);
+			return true;
+		} catch (e) {
+			return false;
+		}
+	})();
+
+	// create storage object if it doesn't exist; store options
+	if (fabricator.test.sessionStorage) {
+		sessionStorage.fabricator = sessionStorage.fabricator || JSON.stringify(fabricator.options);
+	}
+
+	/**
+	 * Cache DOM
+	 * @type {Object}
+	 */
+	fabricator.dom = {
+		root: document.querySelector('html'),
+		primaryMenu: document.querySelector('.f-menu'),
+		menuItems: document.querySelectorAll('.f-menu li a'),
+		menuToggle: document.querySelector('.f-menu-toggle')
+	};
+
+	/**
+	 * Get current option values from session storage
+	 * @return {Object}
+	 */
+	fabricator.getOptions = function () {
+		return fabricator.test.sessionStorage ? JSON.parse(sessionStorage.fabricator) : fabricator.options;
+	};
+
+	/**
+	 * Build color chips
+	 */
+	fabricator.buildColorChips = function () {
+
+		var chips = document.querySelectorAll('.f-color-chip'),
+		    color;
+
+		for (var i = chips.length - 1; i >= 0; i--) {
+			color = chips[i].querySelector('.f-color-chip__color').innerHTML;
+			chips[i].style.borderTopColor = color;
+			chips[i].style.borderBottomColor = color;
+		}
+
+		return this;
+	};
+
+	/**
+	 * Add `f-active` class to active menu item
+	 */
+	fabricator.setActiveItem = function () {
+
+		/**
+	  * Match the window location with the menu item, set menu item as active
+	  */
+		var setActive = function setActive() {
+
+			// get current file and hash without first slash
+			var current = (window.location.pathname + window.location.hash).replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
+				hash = hash || '';
+				file = file.replace('dist/', '').replace('design-system/', '') || '';
+				// Currently, without a scrolling listener, there's no way to
+				// change as we visit new 'hashes'. Better to leave at top
+				// level link
+				return './' + file; // + hash.split('.')[0];
+			}) || 'index.html',
+			    href;
+
+			// find the current section in the items array
+			for (var i = fabricator.dom.menuItems.length - 1; i >= 0; i--) {
+
+				var item = fabricator.dom.menuItems[i];
+				// get item href without first slash
+				href = item.getAttribute('href').replace(/^\//g, '');
+
+				if (href === current) {
+					fabricator.addClass(item, 'current');
+				} else {
+					fabricator.removeClass(item, 'current');
+				}
+			}
+		};
+
+		window.addEventListener('hashchange', setActive);
+
+		setActive();
+
+		return this;
+	};
+
+	/**
+	 * Click handler to primary menu toggle
+	 * @return {Object} fabricator
+	 */
+	fabricator.menuToggle = function () {
+
+		// shortcut menu DOM
+		var toggle = fabricator.dom.menuToggle;
+
+		var options = fabricator.getOptions();
+
+		// toggle classes on certain elements
+		var toggleClasses = function toggleClasses() {
+			//TODO: Replace ClassList!
+			var menuClassList = fabricator.dom.root.className.split(' ');
+			options.menu = !fabricator.dom.root.classList.contains('f-menu-active');
+			fabricator.dom.root.classList.toggle('f-menu-active');
+
+			if (fabricator.test.sessionStorage) {
+				sessionStorage.setItem('fabricator', JSON.stringify(options));
+			}
+		};
+
+		// toggle classes on ctrl + m press
+		document.onkeydown = function (e) {
+			e = e || event;
+			if (e.ctrlKey && e.keyCode == 'M'.charCodeAt(0)) {
+				toggleClasses();
+			}
+		};
+
+		// toggle classes on click
+		toggle.addEventListener('click', function () {
+			toggleClasses();
+		});
+
+		// close menu when clicking on item (for collapsed menu view)
+		var closeMenu = function closeMenu() {
+			if (!window.matchMedia(fabricator.options.mq).matches) {
+				toggleClasses();
+			}
+		};
+
+		for (var i = 0; i < fabricator.dom.menuItems.length; i++) {
+			fabricator.dom.menuItems[i].addEventListener('click', closeMenu);
+		}
+
+		return this;
+	};
+
+	/**
+	 * Automatically select code when code block is clicked
+	 */
+	fabricator.bindCodeAutoSelect = function () {
+
+		var codeBlocks = document.querySelectorAll('.f-item-code');
+
+		var select = function select(block) {
+			var selection = window.getSelection();
+			var range = document.createRange();
+			range.selectNodeContents(block.querySelector('code'));
+			selection.removeAllRanges();
+			selection.addRange(range);
+		};
+
+		for (var i = codeBlocks.length - 1; i >= 0; i--) {
+			codeBlocks[i].addEventListener('click', select.bind(this, codeBlocks[i]));
+		}
+
+		return this;
+	};
+
+	/**
+	 * Open/Close menu based on session var.
+	 * Also attach a media query listener to close the menu when resizing to smaller screen.
+	 */
+	fabricator.setInitialMenuState = function () {
+
+		// root element
+		var root = document.querySelector('html');
+
+		var mq = window.matchMedia(fabricator.options.mq);
+
+		// if small screen
+		var mediaChangeHandler = function mediaChangeHandler(list) {
+			if (!list.matches) {
+				fabricator.removeClass(root, 'f-menu-active');
+			} else {
+				if (fabricator.getOptions().menu) {
+					fabricator.addClass(root, 'f-menu-active');
+				} else {
+					fabricator.removeClass(root, 'f-menu-active');
+				}
+			}
+		};
+
+		mq.addListener(mediaChangeHandler);
+		mediaChangeHandler(mq);
+
+		return this;
+	};
+
+	/**
+	 * Add fixed class to sidebar on scroll
+	 */
+	fabricator.fixSidebar = function () {
+		var dsHeaderTop = document.querySelector('.f-header-top'),
+		    dsHeader = document.querySelector('.f-header'),
+		    dsSidebar = document.querySelector('.f-menu'),
+		    headerTopHeight = dsHeaderTop.offsetHeight,
+		    headerHeight = dsHeader.offsetHeight,
+		    totalHeaderHeight = headerTopHeight + headerHeight;
+
+		if ('undefined' === typeof dsHeaderTop || null === dsHeaderTop) {
+			return;
+		}
+
+		if ('undefined' === typeof dsHeader || null === dsHeader) {
+			return;
+		}
+
+		if ('undefined' === typeof dsSidebar || null === dsSidebar) {
+			return;
+		}
+
+		window.onscroll = function () {
+			var topOffset = window.pageYOffset;
+
+			if (window.pageYOffset > totalHeaderHeight) {
+				fabricator.addClass(dsSidebar, 'fixed');
+			} else {
+				fabricator.removeClass(dsSidebar, 'fixed');
+			}
+		};
+
+		return this;
+	};
+
+	/**
+	 * Helper: Add Class to Element
+	 */
+	fabricator.addClass = function (el, className) {
+		//Check if element is undefined or null first
+		if ('undefined' === typeof el || null === el) {
+			return;
+		}
+		// So we don't have duplicates
+		fabricator.removeClass(el, className);
+		el.className += ' ' + className;
+	};
+
+	/**
+	 * Helper: Remove Class from Element
+	 */
+	fabricator.removeClass = function (el, className) {
+		//Check if element is undefined or null first
+		if ('undefined' === typeof el || null === el) {
+			return;
+		}
+
+		//Go to end of index for existing classes and remove desired class
+		if (el.className.indexOf(' ' + className) > -1) {
+			el.className = el.className.replace(' ' + className, '');
+		} else if (el.className.indexOf(className) > -1) {
+			el.className = el.className.replace(className, '');
+		}
+	};
+
+	/**
+	 * Initialization
+	 */
+	(function () {
+
+		// invoke
+		fabricator.setInitialMenuState().menuToggle().buildColorChips().setActiveItem().bindCodeAutoSelect().fixSidebar();
+	})();
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+	/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
+	self = (typeof window !== 'undefined')
+		? window   // if in browser
+		: (
+			(typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope)
+			? self // if in worker
+			: {}   // if in node js
+		);
+
+	/**
+	 * Prism: Lightweight, robust, elegant syntax highlighting
+	 * MIT license http://www.opensource.org/licenses/mit-license.php/
+	 * @author Lea Verou http://lea.verou.me
+	 */
+
+	var Prism = (function(){
+
+	// Private helper vars
+	var lang = /\blang(?:uage)?-(?!\*)(\w+)\b/i;
+
+	var _ = self.Prism = {
+		util: {
+			encode: function (tokens) {
+				if (tokens instanceof Token) {
+					return new Token(tokens.type, _.util.encode(tokens.content), tokens.alias);
+				} else if (_.util.type(tokens) === 'Array') {
+					return tokens.map(_.util.encode);
+				} else {
+					return tokens.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\u00a0/g, ' ');
+				}
+			},
+
+			type: function (o) {
+				return Object.prototype.toString.call(o).match(/\[object (\w+)\]/)[1];
+			},
+
+			// Deep clone a language definition (e.g. to extend it)
+			clone: function (o) {
+				var type = _.util.type(o);
+
+				switch (type) {
+					case 'Object':
+						var clone = {};
+
+						for (var key in o) {
+							if (o.hasOwnProperty(key)) {
+								clone[key] = _.util.clone(o[key]);
+							}
+						}
+
+						return clone;
+
+					case 'Array':
+						return o.map(function(v) { return _.util.clone(v); });
+				}
+
+				return o;
+			}
+		},
+
+		languages: {
+			extend: function (id, redef) {
+				var lang = _.util.clone(_.languages[id]);
+
+				for (var key in redef) {
+					lang[key] = redef[key];
+				}
+
+				return lang;
+			},
+
+			/**
+			 * Insert a token before another token in a language literal
+			 * As this needs to recreate the object (we cannot actually insert before keys in object literals),
+			 * we cannot just provide an object, we need anobject and a key.
+			 * @param inside The key (or language id) of the parent
+			 * @param before The key to insert before. If not provided, the function appends instead.
+			 * @param insert Object with the key/value pairs to insert
+			 * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.
+			 */
+			insertBefore: function (inside, before, insert, root) {
+				root = root || _.languages;
+				var grammar = root[inside];
+
+				if (arguments.length == 2) {
+					insert = arguments[1];
+
+					for (var newToken in insert) {
+						if (insert.hasOwnProperty(newToken)) {
+							grammar[newToken] = insert[newToken];
+						}
+					}
+
+					return grammar;
+				}
+
+				var ret = {};
+
+				for (var token in grammar) {
+
+					if (grammar.hasOwnProperty(token)) {
+
+						if (token == before) {
+
+							for (var newToken in insert) {
+
+								if (insert.hasOwnProperty(newToken)) {
+									ret[newToken] = insert[newToken];
+								}
+							}
+						}
+
+						ret[token] = grammar[token];
+					}
+				}
+
+				// Update references in other language definitions
+				_.languages.DFS(_.languages, function(key, value) {
+					if (value === root[inside] && key != inside) {
+						this[key] = ret;
+					}
+				});
+
+				return root[inside] = ret;
+			},
+
+			// Traverse a language definition with Depth First Search
+			DFS: function(o, callback, type) {
+				for (var i in o) {
+					if (o.hasOwnProperty(i)) {
+						callback.call(o, i, o[i], type || i);
+
+						if (_.util.type(o[i]) === 'Object') {
+							_.languages.DFS(o[i], callback);
+						}
+						else if (_.util.type(o[i]) === 'Array') {
+							_.languages.DFS(o[i], callback, i);
+						}
+					}
+				}
+			}
+		},
+
+		highlightAll: function(async, callback) {
+			var elements = document.querySelectorAll('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code');
+
+			for (var i=0, element; element = elements[i++];) {
+				_.highlightElement(element, async === true, callback);
+			}
+		},
+
+		highlightElement: function(element, async, callback) {
+			// Find language
+			var language, grammar, parent = element;
+
+			while (parent && !lang.test(parent.className)) {
+				parent = parent.parentNode;
+			}
+
+			if (parent) {
+				language = (parent.className.match(lang) || [,''])[1];
+				grammar = _.languages[language];
+			}
+
+			if (!grammar) {
+				return;
+			}
+
+			// Set language on the element, if not present
+			element.className = element.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
+
+			// Set language on the parent, for styling
+			parent = element.parentNode;
+
+			if (/pre/i.test(parent.nodeName)) {
+				parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
+			}
+
+			var code = element.textContent;
+
+			if(!code) {
+				return;
+			}
+
+			code = code.replace(/^(?:\r?\n|\r)/,'');
+
+			var env = {
+				element: element,
+				language: language,
+				grammar: grammar,
+				code: code
+			};
+
+			_.hooks.run('before-highlight', env);
+
+			if (async && self.Worker) {
+				var worker = new Worker(_.filename);
+
+				worker.onmessage = function(evt) {
+					env.highlightedCode = Token.stringify(JSON.parse(evt.data), language);
+
+					_.hooks.run('before-insert', env);
+
+					env.element.innerHTML = env.highlightedCode;
+
+					callback && callback.call(env.element);
+					_.hooks.run('after-highlight', env);
+				};
+
+				worker.postMessage(JSON.stringify({
+					language: env.language,
+					code: env.code
+				}));
+			}
+			else {
+				env.highlightedCode = _.highlight(env.code, env.grammar, env.language);
+
+				_.hooks.run('before-insert', env);
+
+				env.element.innerHTML = env.highlightedCode;
+
+				callback && callback.call(element);
+
+				_.hooks.run('after-highlight', env);
+			}
+		},
+
+		highlight: function (text, grammar, language) {
+			var tokens = _.tokenize(text, grammar);
+			return Token.stringify(_.util.encode(tokens), language);
+		},
+
+		tokenize: function(text, grammar, language) {
+			var Token = _.Token;
+
+			var strarr = [text];
+
+			var rest = grammar.rest;
+
+			if (rest) {
+				for (var token in rest) {
+					grammar[token] = rest[token];
+				}
+
+				delete grammar.rest;
+			}
+
+			tokenloop: for (var token in grammar) {
+				if(!grammar.hasOwnProperty(token) || !grammar[token]) {
+					continue;
+				}
+
+				var patterns = grammar[token];
+				patterns = (_.util.type(patterns) === "Array") ? patterns : [patterns];
+
+				for (var j = 0; j < patterns.length; ++j) {
+					var pattern = patterns[j],
+						inside = pattern.inside,
+						lookbehind = !!pattern.lookbehind,
+						lookbehindLength = 0,
+						alias = pattern.alias;
+
+					pattern = pattern.pattern || pattern;
+
+					for (var i=0; i<strarr.length; i++) { // Don’t cache length as it changes during the loop
+
+						var str = strarr[i];
+
+						if (strarr.length > text.length) {
+							// Something went terribly wrong, ABORT, ABORT!
+							break tokenloop;
+						}
+
+						if (str instanceof Token) {
+							continue;
+						}
+
+						pattern.lastIndex = 0;
+
+						var match = pattern.exec(str);
+
+						if (match) {
+							if(lookbehind) {
+								lookbehindLength = match[1].length;
+							}
+
+							var from = match.index - 1 + lookbehindLength,
+								match = match[0].slice(lookbehindLength),
+								len = match.length,
+								to = from + len,
+								before = str.slice(0, from + 1),
+								after = str.slice(to + 1);
+
+							var args = [i, 1];
+
+							if (before) {
+								args.push(before);
+							}
+
+							var wrapped = new Token(token, inside? _.tokenize(match, inside) : match, alias);
+
+							args.push(wrapped);
+
+							if (after) {
+								args.push(after);
+							}
+
+							Array.prototype.splice.apply(strarr, args);
+						}
+					}
+				}
+			}
+
+			return strarr;
+		},
+
+		hooks: {
+			all: {},
+
+			add: function (name, callback) {
+				var hooks = _.hooks.all;
+
+				hooks[name] = hooks[name] || [];
+
+				hooks[name].push(callback);
+			},
+
+			run: function (name, env) {
+				var callbacks = _.hooks.all[name];
+
+				if (!callbacks || !callbacks.length) {
+					return;
+				}
+
+				for (var i=0, callback; callback = callbacks[i++];) {
+					callback(env);
+				}
+			}
+		}
+	};
+
+	var Token = _.Token = function(type, content, alias) {
+		this.type = type;
+		this.content = content;
+		this.alias = alias;
+	};
+
+	Token.stringify = function(o, language, parent) {
+		if (typeof o == 'string') {
+			return o;
+		}
+
+		if (_.util.type(o) === 'Array') {
+			return o.map(function(element) {
+				return Token.stringify(element, language, o);
+			}).join('');
+		}
+
+		var env = {
+			type: o.type,
+			content: Token.stringify(o.content, language, parent),
+			tag: 'span',
+			classes: ['token', o.type],
+			attributes: {},
+			language: language,
+			parent: parent
+		};
+
+		if (env.type == 'comment') {
+			env.attributes['spellcheck'] = 'true';
+		}
+
+		if (o.alias) {
+			var aliases = _.util.type(o.alias) === 'Array' ? o.alias : [o.alias];
+			Array.prototype.push.apply(env.classes, aliases);
+		}
+
+		_.hooks.run('wrap', env);
+
+		var attributes = '';
+
+		for (var name in env.attributes) {
+			attributes += name + '="' + (env.attributes[name] || '') + '"';
+		}
+
+		return '<' + env.tag + ' class="' + env.classes.join(' ') + '" ' + attributes + '>' + env.content + '</' + env.tag + '>';
+
+	};
+
+	if (!self.document) {
+		if (!self.addEventListener) {
+			// in Node.js
+			return self.Prism;
+		}
+	 	// In worker
+		self.addEventListener('message', function(evt) {
+			var message = JSON.parse(evt.data),
+			    lang = message.language,
+			    code = message.code;
+
+			self.postMessage(JSON.stringify(_.util.encode(_.tokenize(code, _.languages[lang]))));
+			self.close();
+		}, false);
+
+		return self.Prism;
+	}
+
+	// Get current script and highlight
+	var script = document.getElementsByTagName('script');
+
+	script = script[script.length - 1];
+
+	if (script) {
+		_.filename = script.src;
+
+		if (document.addEventListener && !script.hasAttribute('data-manual')) {
+			document.addEventListener('DOMContentLoaded', _.highlightAll);
+		}
+	}
+
+	return self.Prism;
+
+	})();
+
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = Prism;
+	}
+	;
+	Prism.languages.markup = {
+		'comment': /<!--[\w\W]*?-->/,
+		'prolog': /<\?.+?\?>/,
+		'doctype': /<!DOCTYPE.+?>/,
+		'cdata': /<!\[CDATA\[[\w\W]*?]]>/i,
+		'tag': {
+			pattern: /<\/?[\w:-]+\s*(?:\s+[\w:-]+(?:=(?:("|')(\\?[\w\W])*?\1|[^\s'">=]+))?\s*)*\/?>/i,
+			inside: {
+				'tag': {
+					pattern: /^<\/?[\w:-]+/i,
+					inside: {
+						'punctuation': /^<\/?/,
+						'namespace': /^[\w-]+?:/
+					}
+				},
+				'attr-value': {
+					pattern: /=(?:('|")[\w\W]*?(\1)|[^\s>]+)/i,
+					inside: {
+						'punctuation': /=|>|"/
+					}
+				},
+				'punctuation': /\/?>/,
+				'attr-name': {
+					pattern: /[\w:-]+/,
+					inside: {
+						'namespace': /^[\w-]+?:/
+					}
+				}
+
+			}
+		},
+		'entity': /&#?[\da-z]{1,8};/i
+	};
+
+	// Plugin to make entity title show the real entity, idea by Roman Komarov
+	Prism.hooks.add('wrap', function(env) {
+
+		if (env.type === 'entity') {
+			env.attributes['title'] = env.content.replace(/&amp;/, '&');
+		}
+	});
+	;
+	Prism.languages.css = {
+		'comment': /\/\*[\w\W]*?\*\//,
+		'atrule': {
+			pattern: /@[\w-]+?.*?(;|(?=\s*\{))/i,
+			inside: {
+				'punctuation': /[;:]/
+			}
+		},
+		'url': /url\((?:(["'])(\\\n|\\?.)*?\1|.*?)\)/i,
+		'selector': /[^\{\}\s][^\{\};]*(?=\s*\{)/,
+		'string': /("|')(\\\n|\\?.)*?\1/,
+		'property': /(\b|\B)[\w-]+(?=\s*:)/i,
+		'important': /\B!important\b/i,
+		'punctuation': /[\{\};:]/,
+		'function': /[-a-z0-9]+(?=\()/i
+	};
+
+	if (Prism.languages.markup) {
+		Prism.languages.insertBefore('markup', 'tag', {
+			'style': {
+				pattern: /<style[\w\W]*?>[\w\W]*?<\/style>/i,
+				inside: {
+					'tag': {
+						pattern: /<style[\w\W]*?>|<\/style>/i,
+						inside: Prism.languages.markup.tag.inside
+					},
+					rest: Prism.languages.css
+				},
+				alias: 'language-css'
+			}
+		});
+
+		Prism.languages.insertBefore('inside', 'attr-value', {
+			'style-attr': {
+				pattern: /\s*style=("|').*?\1/i,
+				inside: {
+					'attr-name': {
+						pattern: /^\s*style/i,
+						inside: Prism.languages.markup.tag.inside
+					},
+					'punctuation': /^\s*=\s*['"]|['"]\s*$/,
+					'attr-value': {
+						pattern: /.+/i,
+						inside: Prism.languages.css
+					}
+				},
+				alias: 'language-css'
+			}
+		}, Prism.languages.markup.tag);
+	};
+	Prism.languages.clike = {
+		'comment': [
+			{
+				pattern: /(^|[^\\])\/\*[\w\W]*?\*\//,
+				lookbehind: true
+			},
+			{
+				pattern: /(^|[^\\:])\/\/.+/,
+				lookbehind: true
+			}
+		],
+		'string': /("|')(\\\n|\\?.)*?\1/,
+		'class-name': {
+			pattern: /((?:(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,
+			lookbehind: true,
+			inside: {
+				punctuation: /(\.|\\)/
+			}
+		},
+		'keyword': /\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,
+		'boolean': /\b(true|false)\b/,
+		'function': {
+			pattern: /[a-z0-9_]+\(/i,
+			inside: {
+				punctuation: /\(/
+			}
+		},
+		'number': /\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee]-?\d+)?)\b/,
+		'operator': /[-+]{1,2}|!|<=?|>=?|={1,3}|&{1,2}|\|?\||\?|\*|\/|~|\^|%/,
+		'ignore': /&(lt|gt|amp);/i,
+		'punctuation': /[{}[\];(),.:]/
+	};
+	;
+	Prism.languages.javascript = Prism.languages.extend('clike', {
+		'keyword': /\b(break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|false|finally|for|function|get|if|implements|import|in|instanceof|interface|let|new|null|package|private|protected|public|return|set|static|super|switch|this|throw|true|try|typeof|var|void|while|with|yield)\b/,
+		'number': /\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee][+-]?\d+)?|NaN|-?Infinity)\b/,
+		'function': /(?!\d)[a-z0-9_$]+(?=\()/i
+	});
+
+	Prism.languages.insertBefore('javascript', 'keyword', {
+		'regex': {
+			pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\r\n])+\/[gim]{0,3}(?=\s*($|[\r\n,.;})]))/,
+			lookbehind: true
+		}
+	});
+
+	if (Prism.languages.markup) {
+		Prism.languages.insertBefore('markup', 'tag', {
+			'script': {
+				pattern: /<script[\w\W]*?>[\w\W]*?<\/script>/i,
+				inside: {
+					'tag': {
+						pattern: /<script[\w\W]*?>|<\/script>/i,
+						inside: Prism.languages.markup.tag.inside
+					},
+					rest: Prism.languages.javascript
+				},
+				alias: 'language-javascript'
+			}
+		});
+	}
+	;
+
+
+/***/ }
+/******/ ]);
