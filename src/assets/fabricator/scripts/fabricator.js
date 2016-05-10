@@ -98,11 +98,11 @@ fabricator.setActiveItem = function () {
 		// get current file and hash without first slash
 		var current = (window.location.pathname + window.location.hash).replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
 				hash = hash || '';
-				file = file || '';
+				file = file.replace( 'dist/', '' ).replace( '/design-system', '' ) || '';
 				// Currently, without a scrolling listener, there's no way to
 				// change as we visit new 'hashes'. Better to leave at top
 				// level link
-				return './' + file.replace( 'dist/', '' ); // + hash.split('.')[0];
+				return './' + file; // + hash.split('.')[0];
 			}) || 'index.html',
 			href;
 
