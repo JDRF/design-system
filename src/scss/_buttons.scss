@@ -63,6 +63,11 @@
 	.open > &.dropdown-toggle {
 		@include elevation-two;
 	}
+
+	&.disabled,
+	&:disabled {
+		@include elevation-remove;
+	}
 }
 
 .btn-lg {
@@ -84,6 +89,11 @@
 	&:active,
 	&.active {
 		@include elevation-three;
+	}
+
+	&.disabled,
+	&:disabled {
+		@include elevation-remove;
 	}
 }
 
