@@ -464,132 +464,182 @@
 	<section class="f-section">
 	<h3 class="f-example-title">Icon Only Buttons</h3>
 	<div class="f-example">
-		<button type="button" name="mood-button-example" class="material-icons mi-mood btn btn-primary">
+		<button type="button" name="mood-button-example" class="material-icons mi-mood btn-icon btn btn-primary">
 			<span class="sr-only">Primary button with mood icon.</span>
 		</button>
 
-		<button type="button" name="mood-button-example" class="material-icons mi-mood btn btn-secondary">
-			<span class="sr-only">Secondary button with mood icon.</span>
+		<button type="button" name="mood-button-example" class="material-icons mi-mood btn-icon btn btn-primary-outline">
+			<span class="sr-only">Outline button with mood icon.</span>
 		</button>
 
-		<button type="button" name="mood-button-example" class="material-icons mi-mood btn btn-outline">
-			<span class="sr-only">Outlined button with mood icon.</span>
+		<button type="button" name="mood-button-example" class="material-icons mi-mood btn-icon btn btn-flat">
+			<span class="sr-only">Flat button with mood icon.</span>
 		</button>
 	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn-icon btn btn-primary&quot;>
+	&lt;span class=&quot;sr-only&quot;>Primary button with mood icon.&lt;/span>
+&lt;/button>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;button type="button" name="mood-button-example" class="material-icons mi-mood btn btn-primary"&gt;
-			&lt;span class="sr-only">Primary button with mood icon.&lt;/span&gt;
-		&lt;/button&gt;
+&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn-icon btn btn-primary-outline&quot;>
+	&lt;span class=&quot;sr-only&quot;>Outline button with mood icon.&lt;/span>
+&lt;/button>
 
-		&lt;button type="button" name="mood-button-example" class="material-icons mi-mood btn btn-secondary"&gt;
-			&lt;span class="sr-only">Secondary button with mood icon.&lt;/span&gt;
-		&lt;/button&gt;
-
-		&lt;button type="button" name="mood-button-example" class="material-icons mi-mood btn btn-outline"&gt;
-			&lt;span class="sr-only">Outlined button with mood icon.&lt;/span&gt;
-		&lt;/button&gt;</code>
-	</pre>
+&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn-icon btn btn-flat&quot;>
+	&lt;span class=&quot;sr-only&quot;>Flat button with mood icon.&lt;/span>
+&lt;/button></code></pre>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Left Icon with Text</h3>
 
 	<div class="f-example">
-		<button type="button" name="mood-button-example" class="btn btn-primary">
-			<span class="material-icons mi-mood" aria-hidden="true"></span>
+		<button type="button" name="app-button-example" class="btn btn-primary btn-lg btn-icon">
+			<span class="material-icons mi-get-app" aria-hidden="true"></span>
+			<span>Icon Left</span>
+		</button>
+		<button type="button" name="app-button-example" class="btn btn-primary btn-icon">
+			<span class="material-icons mi-get-app" aria-hidden="true"></span>
+			<span>Icon Left</span>
+		</button>
+		<button type="button" name="app-button-example" class="btn btn-primary btn-sm btn-icon">
+			<span class="material-icons mi-get-app" aria-hidden="true"></span>
 			<span>Icon Left</span>
 		</button>
 	</div>
-	<pre class="language-markup">
-		<code class="language-markup">&lt;button type="button" name="mood-button-example" class="btn btn-primary"&gt;
-		&lt;span class="material-icons mi-mood" aria-hidden="true"&gt;&lt;/span&gt;
-		&lt;span&gt;Icon Left&lt;/span&gt;
-	&lt;/button&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-lg btn-icon&quot;>
+	&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;>&lt;/span>
+	&lt;span>Icon Left&lt;/span>
+&lt;/button>
+&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-icon&quot;>
+	&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;>&lt;/span>
+	&lt;span>Icon Left&lt;/span>
+&lt;/button>
+&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-sm btn-icon&quot;>
+	&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;>&lt;/span>
+	&lt;span>Icon Left&lt;/span>
+&lt;/button></code></pre>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Right Icon with Text</h3>
 
 	<div class="f-example">
-		<button type="button" name="mood-button-example" class="btn btn-primary">
+		<button type="button" name="app-button-example" class="btn btn-primary btn-lg btn-icon">
 			<span>Icon Right</span>
-			<span class="material-icons mi-mood" aria-hidden="true"></span>
+			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
+		</button>
+		<button type="button" name="app-button-example" class="btn btn-primary btn-icon">
+			<span>Icon Right</span>
+			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
+		</button>
+		<button type="button" name="app-button-example" class="btn btn-primary btn-sm btn-icon">
+			<span>Icon Right</span>
+			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
 		</button>
 	</div>
-	<pre class="language-markup">
-		<code class="language-markup">&lt;button type="button" name="mood-button-example" class="btn btn-primary"&gt;
-			&lt;span&gt;Icon Right&lt;/span&gt;
-			&lt;span class="material-icons mi-mood" aria-hidden="true"&gt;&lt;/span&gt;
-	&lt;/button&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-lg btn-icon&quot;>
+	&lt;span>Icon Right&lt;/span>
+	&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;>&lt;/span>
+&lt;/button>
+&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-icon&quot;>
+	&lt;span>Icon Right&lt;/span>
+	&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;>&lt;/span>
+&lt;/button>
+&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-sm btn-icon&quot;>
+	&lt;span>Icon Right&lt;/span>
+	&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;>&lt;/span>
+&lt;/button></code></pre>
 </section>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Icon Only Buttons&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn btn-primary&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn-icon btn btn-primary&quot;&gt;
 			&lt;span class=&quot;sr-only&quot;&gt;Primary button with mood icon.&lt;/span&gt;
 		&lt;/button&gt;
 
-		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn btn-secondary&quot;&gt;
-			&lt;span class=&quot;sr-only&quot;&gt;Secondary button with mood icon.&lt;/span&gt;
+		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn-icon btn btn-primary-outline&quot;&gt;
+			&lt;span class=&quot;sr-only&quot;&gt;Outline button with mood icon.&lt;/span&gt;
 		&lt;/button&gt;
 
-		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn btn-outline&quot;&gt;
-			&lt;span class=&quot;sr-only&quot;&gt;Outlined button with mood icon.&lt;/span&gt;
+		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn-icon btn btn-flat&quot;&gt;
+			&lt;span class=&quot;sr-only&quot;&gt;Flat button with mood icon.&lt;/span&gt;
 		&lt;/button&gt;
 	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;mood-button-example&amp;quot; class=&amp;quot;material-icons mi-mood btn-icon btn btn-primary&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;sr-only&amp;quot;&gt;Primary button with mood icon.&amp;lt;/span&gt;
+&amp;lt;/button&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn btn-primary&quot;&amp;gt;
-			&amp;lt;span class=&quot;sr-only&quot;&gt;Primary button with mood icon.&amp;lt;/span&amp;gt;
-		&amp;lt;/button&amp;gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;mood-button-example&amp;quot; class=&amp;quot;material-icons mi-mood btn-icon btn btn-primary-outline&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;sr-only&amp;quot;&gt;Outline button with mood icon.&amp;lt;/span&gt;
+&amp;lt;/button&gt;
 
-		&amp;lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn btn-secondary&quot;&amp;gt;
-			&amp;lt;span class=&quot;sr-only&quot;&gt;Secondary button with mood icon.&amp;lt;/span&amp;gt;
-		&amp;lt;/button&amp;gt;
-
-		&amp;lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn btn-outline&quot;&amp;gt;
-			&amp;lt;span class=&quot;sr-only&quot;&gt;Outlined button with mood icon.&amp;lt;/span&amp;gt;
-		&amp;lt;/button&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;mood-button-example&amp;quot; class=&amp;quot;material-icons mi-mood btn-icon btn btn-flat&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;sr-only&amp;quot;&gt;Flat button with mood icon.&amp;lt;/span&gt;
+&amp;lt;/button&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Left Icon with Text&lt;/h3&gt;
 
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;btn btn-primary&quot;&gt;
-			&lt;span class=&quot;material-icons mi-mood&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-lg btn-icon&quot;&gt;
+			&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+			&lt;span&gt;Icon Left&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-icon&quot;&gt;
+			&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+			&lt;span&gt;Icon Left&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-sm btn-icon&quot;&gt;
+			&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 			&lt;span&gt;Icon Left&lt;/span&gt;
 		&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;btn btn-primary&quot;&amp;gt;
-		&amp;lt;span class=&quot;material-icons mi-mood&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;/span&amp;gt;
-		&amp;lt;span&amp;gt;Icon Left&amp;lt;/span&amp;gt;
-	&amp;lt;/button&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;btn btn-primary btn-lg btn-icon&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;material-icons mi-get-app&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
+	&amp;lt;span&gt;Icon Left&amp;lt;/span&gt;
+&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;btn btn-primary btn-icon&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;material-icons mi-get-app&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
+	&amp;lt;span&gt;Icon Left&amp;lt;/span&gt;
+&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;btn btn-primary btn-sm btn-icon&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;material-icons mi-get-app&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
+	&amp;lt;span&gt;Icon Left&amp;lt;/span&gt;
+&amp;lt;/button&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Right Icon with Text&lt;/h3&gt;
 
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;btn btn-primary&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-lg btn-icon&quot;&gt;
 			&lt;span&gt;Icon Right&lt;/span&gt;
-			&lt;span class=&quot;material-icons mi-mood&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+			&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-icon&quot;&gt;
+			&lt;span&gt;Icon Right&lt;/span&gt;
+			&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-sm btn-icon&quot;&gt;
+			&lt;span&gt;Icon Right&lt;/span&gt;
+			&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 		&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;btn btn-primary&quot;&amp;gt;
-			&amp;lt;span&amp;gt;Icon Right&amp;lt;/span&amp;gt;
-			&amp;lt;span class=&quot;material-icons mi-mood&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;/span&amp;gt;
-	&amp;lt;/button&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;btn btn-primary btn-lg btn-icon&amp;quot;&gt;
+	&amp;lt;span&gt;Icon Right&amp;lt;/span&gt;
+	&amp;lt;span class=&amp;quot;material-icons mi-arrow-forward&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
+&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;btn btn-primary btn-icon&amp;quot;&gt;
+	&amp;lt;span&gt;Icon Right&amp;lt;/span&gt;
+	&amp;lt;span class=&amp;quot;material-icons mi-arrow-forward&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
+&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;btn btn-primary btn-sm btn-icon&amp;quot;&gt;
+	&amp;lt;span&gt;Icon Right&amp;lt;/span&gt;
+	&amp;lt;span class=&amp;quot;material-icons mi-arrow-forward&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
+&amp;lt;/button&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;</code></pre>
 </div>
 
@@ -661,18 +711,11 @@
 <section class="f-section">
 	<h3 class="f-example-title">Display</h3>
 	<div class="f-example">
-		<h1 class="display-1">Display 1</h1>
-		<h1 class="display-2">Display 2</h1>
-		<h1 class="display-3">Display 3</h1>
-		<h1 class="display-4">Display 4</h1>
+		<h2 class="display-1">Display One</h2>
+		<h2 class="display-2">Display Two</h2>
 	</div>
-
-	<pre class="language-markup">
-		<code class="language-markup">&lt;h1 class="display-1"&gt;Display 1&lt;/h1&gt;
-		&lt;h1 class="display-2"&gt;Display 2&lt;/h1&gt;
-		&lt;h1 class="display-3"&gt;Display 3&lt;/h1&gt;
-		&lt;h1 class="display-4"&gt;Display 4&lt;/h1&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">&lt;h2 class=&quot;display-1&quot;>Display 1&lt;/h2>
+&lt;h2 class=&quot;display-2&quot;>Display 2&lt;/h2></code></pre>
 </section>
 
 <section class="f-section">
@@ -814,18 +857,11 @@
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Display&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;h1 class=&quot;display-1&quot;&gt;Display 1&lt;/h1&gt;
-		&lt;h1 class=&quot;display-2&quot;&gt;Display 2&lt;/h1&gt;
-		&lt;h1 class=&quot;display-3&quot;&gt;Display 3&lt;/h1&gt;
-		&lt;h1 class=&quot;display-4&quot;&gt;Display 4&lt;/h1&gt;
+		&lt;h2 class=&quot;display-1&quot;&gt;Display One&lt;/h2&gt;
+		&lt;h2 class=&quot;display-2&quot;&gt;Display Two&lt;/h2&gt;
 	&lt;/div&gt;
-
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1 class=&quot;display-1&quot;&amp;gt;Display 1&amp;lt;/h1&amp;gt;
-		&amp;lt;h1 class=&quot;display-2&quot;&amp;gt;Display 2&amp;lt;/h1&amp;gt;
-		&amp;lt;h1 class=&quot;display-3&quot;&amp;gt;Display 3&amp;lt;/h1&amp;gt;
-		&amp;lt;h1 class=&quot;display-4&quot;&amp;gt;Display 4&amp;lt;/h1&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h2 class=&amp;quot;display-1&amp;quot;&gt;Display 1&amp;lt;/h2&gt;
+&amp;lt;h2 class=&amp;quot;display-2&amp;quot;&gt;Display 2&amp;lt;/h2&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
