@@ -1,3 +1,8 @@
 @import "scss/type";
 
 /* Bootstrap overwrites: type.scss */
+
+.display-1,
+.display-2 {
+	font-family: $font-light;
+}
