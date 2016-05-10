@@ -25,6 +25,7 @@ plugins.escape = require('html-escape');
 var config = {
 	dev: plugins.gutil.env.env,
 	src: {
+		src: 'src',
 		scripts: {
 			fabricator : './src/assets/fabricator/scripts/fabricator.js',
 			build      : './src/assets/design-system/scripts/design-system.js',
@@ -37,7 +38,7 @@ var config = {
 		},
 		fonts: './src/assets/design-system/fonts/**/**/*'
 	},
-	dest: 'dist'
+	dest: 'dist',
 };
 
 // webpack
@@ -66,19 +67,19 @@ gulp.task('fonts', getTask('fonts-designsystem'));
 gulp.task('scripts', getTask('scripts'));
 gulp.task('scripts-from-dev', require('./design-system/tasks/scripts')(gulp, plugins));
 
-// assemble
-gulp.task('assemble', getTask('assemble'));
-
-gulp.task('build', ['clean-designsystem'], function() {
-	gulp.start('default');
-});
-
 // server
 gulp.task('serve', getTask('serve'));
 
 // test
 gulp.task('test', getTask('test'));
 gulp.task('test-from-dev', require('./design-system/tasks/test')(gulp, plugins));
+
+// assemble
+gulp.task('assemble', getTask('assemble'));
+
+gulp.task('build', ['clean-designsystem'], function() {
+	gulp.start('default');
+});
 
 // default build task
 gulp.task('default', ['clean'], function () {
