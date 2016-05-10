@@ -42,3 +42,17 @@ If you want to include the latest from master in gh-pages
 ````
 npm run build-from-dev
 ````
+
+# Tests
+The screenshots should be generated before any edits are made to the source files. Once work is complete run the below command to confirm no unexpected changes have occurred.
+````
+npm run test
+````
+
+To run tests on specific files, add the flags `--test_dir=<NAME OF FOLDER>` and `--test_file=<NAME OF FILE>` to the gulp command triggered by the above command.
+
+````
+gulp --test_dir=<NAME OF FOLDER> --test_file=<NAME OF FILE> test
+````
+
+If there are NPM errors, try running ````npm install```` in ````./node_modules/gulp-phantomcss````
