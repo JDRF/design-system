@@ -1,6 +1,10 @@
 var gulp       = require('gulp'),
 	del        = require('del'),
-	plugins    = require('gulp-load-plugins')(),
+	plugins    = require('gulp-load-plugins')({
+		rename: {
+			'gulp-scss-lint': 'scsslint'
+		}
+	}),
 	paths      = {
 		bootstrap: {
 			scripts: './node_modules/bootstrap/dist/js/bootstrap.js',

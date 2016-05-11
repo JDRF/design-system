@@ -2,7 +2,13 @@ module.exports = function (gulp, plugins) {
 
 	return function () {
 
-		var sassStream = gulp.src([__dirname + '/../src/scss/style.scss'])
+		var sassStream = gulp.src([
+			__dirname + '/../src/scss/style.scss'
+			])
+			//SCSS LINT
+			.pipe(plugins.scsslint({
+		    	'config': './.scss-lint.yml'
+		    }))
 			.pipe(plugins.sass({
 				includePaths: [
 					'./node_modules/bootstrap/'

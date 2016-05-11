@@ -3,32 +3,32 @@
  */
 
 // Core variables and mixins
-@import "variables";
-@import "mixins";
+@import 'variables';
+@import 'mixins';
 
 // Core variables and mixins overwrites
-@import "mixins/border-radius";
-@import "mixins/buttons";
-@import "mixins/elevations";
+@import 'mixins/border-radius';
+@import 'mixins/buttons';
+@import 'mixins/elevations';
 
 // Reset and dependencies
-@import "normalize";
+@import 'normalize';
 
 // Core CSS
-@import "reboot";
-@import "fonts";
-@import "type";
-@import "grid";
-@import "forms";
-@import "buttons";
-@import "elevations";
+@import 'reboot';
+@import 'fonts';
+@import 'type';
+@import 'grid';
+@import 'forms';
+@import 'buttons';
+@import 'elevations';
 
 // Components
-@import "nav";
+@import 'nav';
 
 // Utility classes
-@import "utilities";
-@import "utilities-background";
-@import "utilities-spacing";
-@import "utilities-responsive";
+@import 'utilities';
+@import 'utilities-background';
+@import 'utilities-spacing';
+@import 'utilities-responsive';
 

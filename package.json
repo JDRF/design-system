@@ -44,6 +44,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^2.0.6",
     "gulp-sass": "^2.2.0",
+    "gulp-scss-lint": "^0.3.9",
     "jquery": "^2.1.4",
     "material-icons": "^0.1.0",
     "merge-stream": "^1.0.0",
