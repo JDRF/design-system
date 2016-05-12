@@ -21,7 +21,6 @@ plugins.merge = require('merge-stream');
 plugins.reload = plugins.browserSync.reload;
 plugins.runSequence = require('run-sequence');
 plugins.source = require('vinyl-source-stream');
-plugins.webpack = require('webpack');
 
 // configuration
 var config = {
@@ -43,10 +42,6 @@ var config = {
 	},
 	dest: 'dist',
 };
-
-// webpack
-plugins.webpackConfig = require('./webpack.config')(config);
-plugins.webpackCompiler = plugins.webpack(plugins.webpackConfig);
 
 function getTask(task) {
 	return require('./tasks/' + task)(gulp, plugins, config);
