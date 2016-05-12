@@ -11,16 +11,19 @@
 
 		@media (min-width: 60em) {
 			height: 35px;
-			display: inline-block;
-			vertical-align: middle;
 		}
 	}
 
 	.f-logo {
-		margin: 0 1em 0 0;
+		margin: 0;
 		color: color(primary-light);
 		font-family: "Gotham Medium";
 		line-height: 1.5rem;
+
+		@media (min-width: 60em) {
+			display: inline-block;
+			vertical-align: middle;
+		}
 
 		svg,
 		span {
@@ -37,13 +40,19 @@
 	.f-nav {
 		display: none;
 
-		.nav-inline {
+		@media (min-width: 60em) {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.nav {
 			.nav-item {
 				padding-top: 0.45rem;
 				width: 100%;
 				margin-left: 0;
 
 				@media (min-width: 60em) {
+					display: inline-block;
 					width: auto;
 					margin-left: 1rem;
 				}

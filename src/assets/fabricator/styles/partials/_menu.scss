@@ -31,6 +31,10 @@
 
 	.f-nav {
 		margin-bottom: 1rem;
+
+		@media (min-width: 60em) {
+			display: none;
+		}
 	}
 }
 
