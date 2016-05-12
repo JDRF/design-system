@@ -7,6 +7,7 @@ var plugins = require('gulp-load-plugins')({
 		'gulp-util'         : 'gutil',
 		'gulp-autoprefixer' : 'prefix',
 		'gulp-if'           : 'gulpif',
+		'gulp-scss-lint'    : 'scsslint',
 	}
 });
 
