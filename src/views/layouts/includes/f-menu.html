@@ -1,42 +1,46 @@
 <!-- fabricator menu -->
-<nav class="f-menu" aria-label="sidebar-nav">
+<div class="f-menu-canvas sidebar">
+	{{> f-header-nav}}
 
-	<ul class="nav sidebar">
+	<nav class="f-menu" aria-label="sidebar-nav">
 
-		<li class="nav-item">
-			<a href="./index.html" class="f-menu__heading nav-link">Overview</a>
-			<a href="./download.html" class="f-menu__heading nav-link">Download</a>
-			<a href="./faq.html" class="f-menu__heading nav-link">FAQ</a>
-		</li>
+		<ul class="nav">
 
-		{{#each materials}}
-		<li class="nav-item">
-			<a href="./{{@key}}.html" class="f-menu__heading nav-link">{{name}}</a>
-			<ul class="nav">
-				{{#each items}}
-				<li>
-					<a href="./{{@../key}}.html#{{@key}}" class="nav-link">{{name}}</a>
-				</li>
-				{{/each}}
-			</ul>
-		</li>
-		{{/each}}
+			<li class="nav-item">
+				<a href="./index.html" class="f-menu__heading nav-link">Overview</a>
+				<a href="./download.html" class="f-menu__heading nav-link">Download</a>
+				<a href="./faq.html" class="f-menu__heading nav-link">FAQ</a>
+			</li>
 
-		{{#each views}}
-		<li class="nav-item">
-			<a href="./{{@key}}.html" class="f-menu__heading nav-link">{{name}}</a>
-			<ul class="nav">
-				{{#each items}}
-				<li>
-					<a href="./{{@../key}}/{{@key}}.html" class="nav-link">{{name}}</a>
-				</li>
-				{{/each}}
-			</ul>
-		</li>
-		{{/each}}
+			{{#each materials}}
+			<li class="nav-item">
+				<a href="./{{@key}}.html" class="f-menu__heading nav-link">{{name}}</a>
+				<ul class="nav">
+					{{#each items}}
+					<li>
+						<a href="./{{@../key}}.html#{{@key}}" class="nav-link">{{name}}</a>
+					</li>
+					{{/each}}
+				</ul>
+			</li>
+			{{/each}}
 
-	</ul>
+			{{#each views}}
+			<li class="nav-item">
+				<a href="./{{@key}}.html" class="f-menu__heading nav-link">{{name}}</a>
+				<ul class="nav">
+					{{#each items}}
+					<li>
+						<a href="./{{@../key}}/{{@key}}.html" class="nav-link">{{name}}</a>
+					</li>
+					{{/each}}
+				</ul>
+			</li>
+			{{/each}}
+
+		</ul>
 
 
-</nav>
+	</nav>
+</div>
 <!-- /fabricator menu -->
