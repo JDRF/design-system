@@ -1,5 +1,7 @@
 @import "scss/variables";
 
+/* == Colors ======== */
+
 $primary-blue: #0073cf;
 $primary-dark-blue: #002855;
 
@@ -32,56 +34,6 @@ $grey-7: #757575;
 
 $text-default: rgba(0, 0, 0, 0.87);
 
-$font-thin: "Gotham Thin", sans-serif;
-$font-light: "Gotham Light", sans-serif;
-$font-light-italic: "Gotham Light Italic", sans-serif;
-$font-regular: "Gotham Book", sans-serif;
-$font-italic: "Gotham Book Italic", sans-serif;
-$font-medium: "Gotham Medium", sans-serif;
-$font-medium-italic: "Gotham Medium Italic", sans-serif;
-
-/* Mobile lineheights are default */
-$h1-lineheight: 2.25rem; /* 36px */
-$h1-lineheight-sm: 2.5rem; /* 40px */
-$h1-lineheight-md: 3.5rem; /* 56px */
-
-$h2-lineheight: 1.75rem; /* 28px */
-$h2-lineheight-sm: 2rem; /* 32px */
-$h2-lineheight-md: 2.5rem; /* 40px */
-
-$h3-lineheight: 1.5rem; /* 24px */
-$h3-lineheight-sm: 1.75rem; /* 28px */
-
-$h4-lineheight: 1.75rem;
-$h5-lineheight: 1.5rem;
-$h6-lineheight: 1.25rem;
-
-/* Mobile sizes, SM/MD up */
-$font-size-h1: 2rem; /* 32px */
-$font-size-h1-sm: 2.25rem; /* 36px */
-$font-size-h1-md: 3rem; /* 48px */
-
-$font-size-h2: 1.5rem; /* 24px */
-$font-size-h2-sm: 1.75rem; /* 28px */
-$font-size-h2-md: 2.25rem; /* 36px */
-
-$font-size-h3: 1.25rem; /* 20px */
-$font-size-h3-sm: 1.5rem; /* 24px */
-
-$font-size-h4: 1.25rem;
-$font-size-h5: 1rem;
-$font-size-h6: 0.875rem;
-
-$btn-font: $font-regular;
-$btn-font-transform: uppercase;
-$btn-font-size: 0.875rem; /* 14px */
-$btn-line-height: 0.875rem; /* 14px */
-
-$btn-block-y: 0.75rem; /* 12px */
-$btn-block-x: 0.75rem; /* 12px */
-
-/* Bootstrap overwrites: variables.scss */
-
 $gray-dark: $grey-7;
 $gray: $grey-5;
 $gray-light: $grey-3;
@@ -99,13 +51,85 @@ $btn-secondary-border: $jdrf-green;
 $link-hover-color: $jdrf-green;
 $btn-link-disabled-color: $grey-6;
 
-/* Border radius at 2px */
-$border-radius: 0.125rem;
-$border-radius-lg: 0.125rem;
-$border-radius-sm: 0.125rem;
-$btn-border-radius: $border-radius;
-$btn-border-radius-lg: $border-radius;
-$btn-border-radius-sm: $border-radius;
+/* == Fonts ======== */
+
+$font-thin: "Gotham Thin", sans-serif;
+$font-light: "Gotham Light", sans-serif;
+$font-light-italic: "Gotham Light Italic", sans-serif;
+$font-regular: "Gotham Book", sans-serif;
+$font-italic: "Gotham Book Italic", sans-serif;
+$font-medium: "Gotham Medium", sans-serif;
+$font-medium-italic: "Gotham Medium Italic", sans-serif;
+
+$font-family-base: $font-regular;
+
+$font-size-lg: 0.875rem; /* 14px */
+$line-height-lg: 0.875rem; /* 14px */
+$font-size-sm: 0.8125rem; /* 13px */
+$line-height-sm: 0.8125rem; /* 13px */
+
+$display1-size: 3.5rem; /* 56px */
+$display1-size-md: 3.75rem; /* 60px */
+$display1-size-lg: 4.5rem;  /* 72px */
+
+$display2-size: 3rem; /* 48px */
+$display2-size-md: 3.5rem; /* 56px */
+$display2-size-lg: 3.75rem;  /* 60px */
+
+$lead-font-size: 1rem;
+$lead-line-height: 1.5rem;
+
+$lead-font-size-sm: 1.125rem;
+
+$lead-font-size-md: 1.25rem;
+$lead-line-height-md: 1.75rem;
+
+$paragraph-size: 0.875rem; /* 14px */
+$paragraph-lineheight: 1.25rem; /* 20px */
+
+$paragraph-size-sm: 1rem; /* 16px */
+$paragraph-lineheight-sm: 1.5rem; /* 24px */
+
+/* Headings: Mobile sizes, SM/MD up */
+$font-size-h1: 2rem; /* 32px */
+$font-size-h1-sm: 2.25rem; /* 36px */
+$font-size-h1-md: 3rem; /* 48px */
+
+$font-size-h2: 1.5rem; /* 24px */
+$font-size-h2-sm: 1.75rem; /* 28px */
+$font-size-h2-md: 2.25rem; /* 36px */
+
+$font-size-h3: 1.25rem; /* 20px */
+$font-size-h3-sm: 1.5rem; /* 24px */
+
+$font-size-h4: 1.25rem;
+$font-size-h5: 1rem;
+$font-size-h6: 0.875rem;
+
+$h1-lineheight: 2.25rem; /* 36px */
+$h1-lineheight-sm: 2.5rem; /* 40px */
+$h1-lineheight-md: 3.5rem; /* 56px */
+
+$h2-lineheight: 1.75rem; /* 28px */
+$h2-lineheight-sm: 2rem; /* 32px */
+$h2-lineheight-md: 2.5rem; /* 40px */
+
+$h3-lineheight: 1.5rem; /* 24px */
+$h3-lineheight-sm: 1.75rem; /* 28px */
+
+$h4-lineheight: 1.75rem;
+$h5-lineheight: 1.5rem;
+$h6-lineheight: 1.25rem;
+
+/* == Buttons ======== */
+
+$btn-font: $font-regular;
+$btn-font-transform: uppercase;
+$btn-font-size: 0.875rem; /* 14px */
+$btn-line-height: 0.875rem; /* 14px */
+
+$btn-block-y: 0.75rem; /* 12px */
+$btn-block-x: 0.75rem; /* 12px */
 
 $btn-padding-x: 1rem; /* 16px */
 $btn-padding-y: 0.75rem; /* 12px */
@@ -114,15 +138,11 @@ $btn-padding-x-lg: 1.5rem; /* 24px */
 $btn-padding-y-sm: 0.5rem; /* 8px */
 $btn-padding-x-sm: 0.5rem; /* 8px */
 
-$font-size-lg: 0.875rem; /* 14px */
-$line-height-lg: 0.875rem; /* 14px */
-$font-size-sm: 0.8125rem; /* 13px */
-$line-height-sm: 0.8125rem; /* 13px */
+/* Border radius at 2px */
+$border-radius: 0.125rem;
+$border-radius-lg: 0.125rem;
+$border-radius-sm: 0.125rem;
+$btn-border-radius: $border-radius;
+$btn-border-radius-lg: $border-radius;
+$btn-border-radius-sm: $border-radius;
 
-$font-family-base: $font-regular;
-
-$display1-size: 4.5rem;
-$display2-size: 3.75rem;
-
-$lead-font-size: 1.25rem;
-$lead-line-height: 1.75rem;

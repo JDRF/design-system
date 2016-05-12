@@ -1,5 +1,15 @@
 /* Bootstrap overwrites: type.scss */
 
+p {
+	font-size: $paragraph-size;
+	line-height: $paragraph-lineheight;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $paragraph-size-sm;
+		line-height: $paragraph-lineheight-sm;
+	}
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: $headings-margin-bottom;
@@ -85,9 +95,19 @@ h6,
 
 .lead {
 	font-size: $lead-font-size;
-  	font-weight: $lead-font-weight;
-	font-family: $font-light;
 	line-height: $lead-line-height;
+	font-weight: $lead-font-weight;
+	font-family: $font-light;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $lead-font-size-sm;
+		/* same line height as XS */
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: $lead-font-size-md;
+		line-height: $lead-line-height-md;
+	}
 }
 
 .display-1,
@@ -98,122 +118,122 @@ h6,
 .display-1 {
 	font-size: $display1-size;
 	line-height: $display1-size;
+
+	@include media-breakpoint-up(md) {
+		font-size: $display1-size-md;
+		line-height: $display1-size-md;
+	}
+
+	@include media-breakpoint-up(lg) {
+		font-size: $display1-size-lg;
+		line-height: $display1-size-lg;
+	}
 }
 
 .display-2 {
 	font-size: $display2-size;
 	line-height: $display2-size;
+
+	@include media-breakpoint-up(md) {
+		font-size: $display2-size-md;
+		line-height: $display2-size-md;
+	}
+
+	@include media-breakpoint-up(lg) {
+		font-size: $display2-size-lg;
+		line-height: $display2-size-lg;
+	}
 }
 
 .display-3 {
-  font-size: $display3-size;
-  font-weight: $display3-weight;
+	font-size: $display3-size;
+	font-weight: $display3-weight;
 }
 .display-4 {
-  font-size: $display4-size;
-  font-weight: $display4-weight;
+	font-size: $display4-size;
+	font-weight: $display4-weight;
 }
-
-//
-// Horizontal rules
-//
 
 hr {
-  margin-top: $spacer-y;
-  margin-bottom: $spacer-y;
-  border: 0;
-  border-top: $hr-border-width solid $hr-border-color;
+	margin-top: $spacer-y;
+	margin-bottom: $spacer-y;
+	border: 0;
+	border-top: $hr-border-width solid $hr-border-color;
 }
-
-//
-// Emphasis
-//
 
 small,
 .small {
-  font-size: 80%;
-  font-weight: normal;
+	font-size: 80%;
+	font-weight: normal;
 }
 
 mark,
 .mark {
-  padding: .2em;
-  background-color: $state-warning-bg;
+	padding: .2em;
+	background-color: $state-warning-bg;
 }
-
-//
-// Lists
-//
 
 .list-unstyled {
-  @include list-unstyled;
+	@include list-unstyled;
 }
 
-// Inline turns list items into inline-block
 .list-inline {
-  @include list-unstyled;
+	@include list-unstyled;
 }
+
 .list-inline-item {
-  display: inline-block;
+	display: inline-block;
 
-  &:not(:last-child) {
-    margin-right: $list-inline-padding;
-  }
+	&:not(:last-child) {
+		margin-right: $list-inline-padding;
+	}
 }
 
-// Horizontal description lists w/ grid classes
 .dl-horizontal {
   margin-right: -$grid-gutter-width;
   margin-left: -$grid-gutter-width;
   @include clearfix;
 }
 
-
-//
-// Misc
-//
-
-// Builds on `abbr`
 .initialism {
-  font-size: 90%;
-  text-transform: uppercase;
+	font-size: 90%;
+	text-transform: uppercase;
 }
 
-// Blockquotes
 .blockquote {
-  padding: ($spacer / 2) $spacer;
-  margin-bottom: $spacer;
-  font-size: $blockquote-font-size;
-  border-left: .25rem solid $blockquote-border-color;
+	padding: ($spacer / 2) $spacer;
+	margin-bottom: $spacer;
+	font-size: $blockquote-font-size;
+	border-left: .25rem solid $blockquote-border-color;
 }
 
 .blockquote-footer {
-  display: block;
-  font-size: 80%; // back to default font-size
-  line-height: $line-height;
-  color: $blockquote-small-color;
+	display: block;
+	font-size: 80%; // back to default font-size
+	line-height: $line-height;
+	color: $blockquote-small-color;
 
-  &::before {
-    content: "\2014 \00A0"; // em dash, nbsp
-  }
+	&::before {
+		content: "\2014 \00A0"; // em dash, nbsp
+	}
 }
 
-// Opposite alignment of blockquote
 .blockquote-reverse {
-  padding-right: $spacer;
-  padding-left: 0;
-  text-align: right;
-  border-right: .25rem solid $blockquote-border-color;
-  border-left: 0;
+	padding-right: $spacer;
+	padding-left: 0;
+	text-align: right;
+	border-right: .25rem solid $blockquote-border-color;
+	border-left: 0;
 }
 
 .blockquote-reverse .blockquote-footer {
-  &::before {
-    content: "";
-  }
-  &::after {
-    content: "\00A0 \2014"; // nbsp, em dash
-  }
+	&::before {
+		content: "";
+	}
+
+	&::after {
+		content: "\00A0 \2014"; // nbsp, em dash
+	}
 }
 
 
