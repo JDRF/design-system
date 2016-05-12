@@ -44,6 +44,7 @@
 			<p class="f-header-content">This is the Components page.</p>
 		</div>
 	</div>
+
 	<div class="f-container">
 		<!-- fabricator icons -->
 		<svg style="display: none;">
@@ -79,6 +80,7 @@
 		<!-- /fabricator icons -->
 			<!-- fabricator menu -->
 			<div class="f-menu-canvas sidebar">
+			
 				<nav class="f-nav"aria-label="primary-nav">
 					<ul class="nav">
 						<li class="nav-item">
@@ -92,8 +94,18 @@
 							</a>
 						</li>
 					</ul>
-				</nav>
-				<nav class="f-menu" aria-label="sidebar-nav">
+				</nav>	<nav class="f-menu" aria-label="sidebar-nav">
+			
+					<div class="row">
+						<div class="col-md-10 hidden-sm-down">
+							<form>
+								<fieldset class="form-group">
+									<input type="text" class="form-control" id="search-input" placeholder="Search..." autocomplete="off">
+									<div class="dropdown-menu bd-search-results" id="search-results"></div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
 			
 					<ul class="nav">
 			
@@ -1575,6 +1587,7 @@
 
 	</div>
 	<script src=".//assets/fabricator/scripts/f.js"></script>
+	<script src=".//assets/fabricator/scripts/search.js"></script>
 
 	<!-- Design System scripts: requires jQuery -->
 	<script src=".//assets/design-system/scripts/design-system.js"></script>
