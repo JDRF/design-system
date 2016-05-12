@@ -40,12 +40,37 @@ $font-italic: "Gotham Book Italic", sans-serif;
 $font-medium: "Gotham Medium", sans-serif;
 $font-medium-italic: "Gotham Medium Italic", sans-serif;
 
-$h1-lineheight: 3.5rem;
-$h2-lineheight: 2.75rem;
-$h3-lineheight: 2rem;
+/* Mobile lineheights are default */
+$h1-lineheight: 2.25rem; /* 36px */
+$h1-lineheight-sm: 2.5rem; /* 40px */
+$h1-lineheight-md: 3.5rem; /* 56px */
+
+$h2-lineheight: 1.75rem; /* 28px */
+$h2-lineheight-sm: 2rem; /* 32px */
+$h2-lineheight-md: 2.5rem; /* 40px */
+
+$h3-lineheight: 1.5rem; /* 24px */
+$h3-lineheight-sm: 1.75rem; /* 28px */
+
 $h4-lineheight: 1.75rem;
 $h5-lineheight: 1.5rem;
 $h6-lineheight: 1.25rem;
+
+/* Mobile sizes, SM/MD up */
+$font-size-h1: 2rem; /* 32px */
+$font-size-h1-sm: 2.25rem; /* 36px */
+$font-size-h1-md: 3rem; /* 48px */
+
+$font-size-h2: 1.5rem; /* 24px */
+$font-size-h2-sm: 1.75rem; /* 28px */
+$font-size-h2-md: 2.25rem; /* 36px */
+
+$font-size-h3: 1.25rem; /* 20px */
+$font-size-h3-sm: 1.5rem; /* 24px */
+
+$font-size-h4: 1.25rem;
+$font-size-h5: 1rem;
+$font-size-h6: 0.875rem;
 
 $btn-font: $font-regular;
 $btn-font-transform: uppercase;
@@ -95,13 +120,6 @@ $font-size-sm: 0.8125rem; /* 13px */
 $line-height-sm: 0.8125rem; /* 13px */
 
 $font-family-base: $font-regular;
-
-$font-size-h1: 3rem;
-$font-size-h2: 2.25rem;
-$font-size-h3: 1.5rem;
-$font-size-h4: 1.25rem;
-$font-size-h5: 1rem;
-$font-size-h6: 0.875rem;
 
 $display1-size: 4.5rem;
 $display2-size: 3.75rem;

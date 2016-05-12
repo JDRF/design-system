@@ -5,16 +5,41 @@
 h1,
 .h1 {
 	line-height: $h1-lineheight;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $font-size-h1-sm;
+		line-height: $h1-lineheight-sm;
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: $font-size-h1-md;
+		line-height: $h1-lineheight-md;
+	}
 }
 
 h2,
 .h2 {
 	line-height: $h2-lineheight;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $font-size-h2-sm;
+		line-height: $h2-lineheight-sm;
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: $font-size-h2-md;
+		line-height: $h2-lineheight-md;
+	}
 }
 
 h3,
 .h3 {
 	line-height: $h3-lineheight;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $font-size-h3-sm;
+		line-height: $h3-lineheight-sm;
+	}
 }
 
 h4,
