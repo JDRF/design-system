@@ -60,3 +60,22 @@
 		}
 	}
 }
+
+.form-control.bd-search-results {
+	position: absolute;
+	width: 85%;
+	margin-top: 5px;
+	border-color: #66afe9;
+	&.hide {
+		padding: 0;
+		border: none;
+	}
+	a {
+		width: 100%;
+		font-size: 0.875rem;
+		color: map-get($code-colors, dark-gray);
+		&:hover {
+			color: map-get($code-colors, black);
+		}
+	}
+}
