@@ -6,6 +6,7 @@ h1, h2, h3, h4, h5, h6,
   font-weight: $headings-font-weight;
   color: $headings-color;
 }
+
 h1,
 h2,
 .h1,
@@ -13,8 +14,6 @@ h2,
 	font-family: $headings-font-family;
 }
 
-h3,
-.h3,
 h4,
 .h4,
 h5,
@@ -56,15 +55,13 @@ h2,
 
 h3,
 .h3 {
+	font-family: $font-regular;
 	line-height: $h3-lineheight;
 
 	@include media-breakpoint-up(sm) {
+		font-family: $font-medium;
 		font-size: $font-size-h3-sm;
 		line-height: $h3-lineheight-sm;
-	}
-
-	@include media-breakpoint-down(sm) {
-		font-family: $font-regular;
 	}
 }
 
