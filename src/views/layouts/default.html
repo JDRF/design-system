@@ -21,12 +21,13 @@
 
 	<div class="f-container">
 	{{#if fabricator}}
-			{{> f-icons}}
-			{{#if deeplink}}
-				{{> f-menu-deeplink}}
-			{{else}}
-				{{> f-menu}}
-			{{/if}}
+		{{> f-icons}}
+
+		{{#if deeplink}}
+			{{> f-menu-deeplink}}
+		{{else}}
+			{{> f-menu}}
+		{{/if}}
 	{{/if}}
 
 	<main class="f-content">
@@ -36,6 +37,7 @@
 
 	</div>
 	{{#if fabricator}}<script src="./{{baseurl}}/assets/fabricator/scripts/f.js"></script>{{/if}}
+	{{#if fabricator}}<script src="./{{baseurl}}/assets/fabricator/scripts/search.js"></script>{{/if}}
 
 	<!-- Design System scripts: requires jQuery -->
 	<script src="./{{baseurl}}/assets/design-system/scripts/design-system.js"></script>
