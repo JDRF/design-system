@@ -47,9 +47,8 @@ body {
 }
 
 .f-content {
-	margin-top: 65px;
-
 	@media (min-width: 60em) {
+		margin-top: 65px;
 		width: $content-width;
 		float: right;
 		min-height: 1000px;

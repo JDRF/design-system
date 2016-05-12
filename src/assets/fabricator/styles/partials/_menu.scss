@@ -1,14 +1,6 @@
 // menu
-.f-menu {
-	@include border-box;
-	float: left;
-	width: $menu-width-mobile;
-	height: 100%;
-	z-index: 1;
-	margin-top: 65px;
-	margin-left: 1rem;
-	overflow: hidden;
 
+.f-menu-canvas {
 	@media (max-width: 60em) {
 		position: absolute;
 		top: 0;
@@ -20,7 +12,39 @@
 		-webkit-overflow-scrolling: touch;
 	}
 
+	.f-menu-active & {
+		@media (max-width: 60em) {
+			transform: translate(-$menu-width-mobile, 0);
+			@include transition;
+		}
+	}
+
+	.f-nav,
+	.f-menu {
+		@include border-box;
+		width: $menu-width-mobile;
+		height: 100%;
+		z-index: 1;
+		margin-left: 1rem;
+		overflow: hidden;
+	}
+
+	.f-nav {
+		margin-bottom: 1rem;
+
+		@media (min-width: 60em) {
+			display: none;
+		}
+	}
+}
+
+.f-menu {
+
+	float: left;
+
+
 	@media (min-width: 60em) {
+		margin-top: 65px;
 		width: $menu-width-desktop;
 		max-width: 220px;
 		display: block;
@@ -33,13 +57,6 @@
 			overflow-y: auto;
 			height: 90%;
 			padding-bottom: 65px;
-		}
-	}
-
-	.f-menu-active & {
-		@media (max-width: 60em) {
-			transform: translate(-$menu-width-mobile, 0);
-			@include transition;
 		}
 	}
 }
