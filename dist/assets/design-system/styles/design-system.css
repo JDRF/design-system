@@ -2888,16 +2888,16 @@ output {
 /* Bootstrap overwrites: type.scss */
 p {
   font-size: 0.875rem;
-  line-height: 1.25rem; }
+  line-height: 1.25rem;
+  margin-bottom: 1.25rem; }
   @media (min-width: 544px) {
     p {
       font-size: 1rem;
-      line-height: 1.5rem; } }
+      line-height: 1.5rem;
+      margin-bottom: 1.5rem; } }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 0.5rem;
-  font-weight: 500;
   color: inherit; }
 
 h1,
@@ -2916,57 +2916,71 @@ h6,
 
 h1,
 .h1 {
-  line-height: 2.25rem; }
+  font-size: 2rem;
+  line-height: 2.25rem;
+  margin-bottom: 1.125rem; }
   @media (min-width: 544px) {
     h1,
     .h1 {
       font-size: 2.25rem;
-      line-height: 2.5rem; } }
+      line-height: 2.5rem;
+      margin-bottom: 1.25rem; } }
   @media (min-width: 768px) {
     h1,
     .h1 {
       font-size: 3rem;
-      line-height: 3.5rem; } }
+      line-height: 3.5rem;
+      margin-bottom: 1.75rem; } }
 
 h2,
 .h2 {
-  line-height: 1.75rem; }
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.875rem; }
   @media (min-width: 544px) {
     h2,
     .h2 {
       font-size: 1.75rem;
-      line-height: 2rem; } }
+      line-height: 2rem;
+      margin-bottom: 1rem; } }
   @media (min-width: 768px) {
     h2,
     .h2 {
       font-size: 2.25rem;
-      line-height: 2.5rem; } }
+      line-height: 2.5rem;
+      margin-bottom: 1.25rem; } }
 
 h3,
 .h3 {
   font-family: "Gotham Book", sans-serif;
-  line-height: 1.5rem; }
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.75rem; }
   @media (min-width: 544px) {
     h3,
     .h3 {
       font-family: "Gotham Medium", sans-serif;
       font-size: 1.5rem;
-      line-height: 1.75rem; } }
+      line-height: 1.75rem;
+      margin-bottom: 0.875rem; } }
 
 h4,
 .h4 {
   font-size: 1.25rem;
-  line-height: 1.75rem; }
+  line-height: 1.75rem;
+  margin-bottom: 0.875rem; }
 
 h5,
 .h5 {
   font-size: 1rem;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  margin-bottom: 0.75rem; }
 
 h6,
 .h6 {
   font-size: 0.875rem;
-  line-height: 1.25rem; }
+  line-height: 1.25rem;
+  margin-bottom: 0.625rem; }
 
 .lead {
   font-size: 1rem;
