@@ -23,6 +23,7 @@ module.exports = {
 		this.clean();
 
 		if ( self.input.value !== '' ) {
+			this.results.className = this.results.className.replace( ' hide', '' );
 			Object.keys( this.loop ).map( function( key ) {
 				if ( new RegExp( self.input.value, 'i' ).test( self.loop[ key ].text ) ) {
 					self.append( self.loop[ key ].cloneNode( true ) );
@@ -48,6 +49,8 @@ module.exports = {
 	 * @return {object} this
 	 */
 	clean: function() {
+		this.results.className = this.results.className.replace( ' hide', '' );
+		this.results.className += ' hide';
 		this.results.innerHTML = '';
 		return this;
 	}
