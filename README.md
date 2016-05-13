@@ -1,7 +1,29 @@
 # JDRF Design System
 
-# Installation
-To setup with optimal build, we suggest running the below command:
+# Using Design System
+To use Design System, copy/download the file found in the [dist folder](https://github.com/JDRF/design-system/tree/master/dist/css) to your website. This file contains all current components and provides support for any needed icons, typography, or styling. We recommend including it in the `HEAD` html tag for use throughout your website/application.
+````
+<link rel="stylesheet" href="/<PATH TO CSS>/design-system.css">
+````
+Currently, Design System only supports a few components - none of which require JavaScript. If font files are needed for the website/application, copy/download the font files found in the [dist folder](https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham). It's recommended to place the font folder in a similar path to the CSS files.
+````
+└── ./
+	├── css/
+		└──  design-system.css
+	└── fonts/
+		└──  gotham/
+````
+
+If icons are a requirement, Design System already includes all necessary styles, but requires the font file from Google's CDN. Include this in the `HEAD` html tag right before the Design System css file.
+````
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="/<PATH TO CSS>/design-system.css">
+````
+
+# Contributing
+Please review the contributing doc found [here](https://github.com/JDRF/design-system/blob/master/CONTRIBUTING.md)
+## Installation
+To setup with optimal build for local development, we suggest running the below command:
 ````
 npm run init-from-dev
 ````
@@ -18,10 +40,10 @@ It will setup your working directory to the below file structure
 
 To find available commands from this recommended setup, please visit the [gh-pages](https://github.com/JDRF/design-system/tree/gh-pages) branch
 
-# Tests
+## Tests
 Test are run from a parent directory that relies on the above specified directory structure. See the (gh-pages README)[https://github.com/JDRF/design-system/tree/gh-pages] for information on testing.
 
-# Semantic Versioning and Releases
+## Semantic Versioning and Releases
 We're using Semantic Versioning to increment the release phases of the Design System. This helps us to track major changes as well as minor changes and patches. We can also view a history of the project's [releases on Github](https://github.com/JDRF/design-system/releases) due to Semantic Versioning.
 
 A Semantic Version number usually looks something like this - `v0.0.1`. The digit placement helps identify whether the release is a major release, a minor release, or a patch. See the example below for reference.
