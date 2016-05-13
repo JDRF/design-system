@@ -1,0 +1,109 @@
+@import "scss/mixins/buttons";
+
+/* Bootstrap @import "scss/mixins/buttons.scss */
+
+@mixin button-variant($color, $background, $border) {
+	color: $color;
+	background-color: $background;
+	border-color: $border;
+	@include elevation-one;
+	@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+	font-family: $btn-font;
+	text-transform: $btn-font-transform;
+
+	@include hover {
+		color: $color;
+		@include elevation-three;
+	}
+
+	&:focus,
+	&.focus {
+		color: $color;
+		@include elevation-three;
+	}
+
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		color: $color;
+		// Remove the gradient for the pressed/active state
+		background-image: none;
+		@include elevation-three;
+
+		&:hover,
+		&:focus,
+		&.focus {
+		  color: $color;
+		}
+	}
+
+	&.disabled,
+	&:disabled {
+		color: $grey-6;
+		background-color: $grey-4;
+		border-color: $grey-4;
+		@include elevation-remove;
+
+		&:focus,
+		&.focus {
+			color: $grey-6;
+			background-color: $grey-4;
+			border-color: $grey-4;
+		}
+
+		@include hover {
+			color: $grey-6;
+			background-color: $grey-4;
+			border-color: $grey-4;
+		}
+	}
+}
+
+@mixin button-outline-variant($color) {
+	color: $color;
+	background-image: none;
+	background-color: transparent;
+	border-color: $color;
+	@include elevation-one;
+	font-family: $btn-font;
+	text-transform: $btn-font-transform;
+
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		@include elevation-three;
+		color: $jdrf-white;
+		background-color: $color;
+		border-color: $color;
+	}
+
+	@include hover {
+		@include elevation-three;
+		color: $jdrf-white;
+		background-color: $color;
+		border-color: $color;
+	}
+
+	&.disabled,
+	&:disabled {
+		color: $grey-6;
+		border-color: $grey-6;
+		background-color: $jdrf-white;
+		@include elevation-remove;
+
+		&:focus,
+		&.focus {
+			color: $grey-6;
+			border-color: $grey-6;
+			background-color: $jdrf-white;
+		}
+
+		@include hover {
+			color: $grey-6;
+			border-color: $grey-6;
+			background-color: $jdrf-white;
+		}
+	}
+}

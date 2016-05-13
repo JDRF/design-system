@@ -5,9 +5,6 @@
 *.log
 node_modules
 
-# Actual build files that are not shipped
-build
-
 # PhantomCSS file dirs
 failures
 screenshots

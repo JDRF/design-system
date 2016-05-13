@@ -1,0 +1,23 @@
+/* Design System Custom - No Bootstrap Default */
+
+@import "mixins/elevations";
+
+.elevation-one {
+	@include elevation-one;
+}
+
+.elevation-two {
+	@include elevation-two;
+}
+
+.elevation-three {
+	@include elevation-three;
+}
+
+.elevation-four {
+	@include elevation-four;
+}
+
+.elevation-five {
+	@include elevation-five;
+}

@@ -1,0 +1,255 @@
+/* Bootstrap overwrites: type.scss */
+
+p {
+	font-size: $paragraph-size;
+	line-height: $paragraph-lineheight;
+	margin-bottom: $paragraph-lineheight;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $paragraph-size-sm;
+		line-height: $paragraph-lineheight-sm;
+		margin-bottom: $paragraph-lineheight-sm;
+	}
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: $headings-font-weight;
+	color: $headings-color;
+}
+
+h1,
+h2,
+.h1,
+.h2 {
+	font-family: $headings-font-family;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: $font-medium;
+}
+
+h1,
+.h1 {
+	font-size: $font-size-h1;
+	line-height: $h1-lineheight;
+	margin-bottom: $h1-lineheight / 2;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $font-size-h1-sm;
+		line-height: $h1-lineheight-sm;
+		margin-bottom: $h1-lineheight-sm / 2;
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: $font-size-h1-md;
+		line-height: $h1-lineheight-md;
+		margin-bottom: $h1-lineheight-md / 2;
+	}
+}
+
+h2,
+.h2 {
+	font-size: $font-size-h2;
+	line-height: $h2-lineheight;
+	margin-bottom: $h2-lineheight / 2;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $font-size-h2-sm;
+		line-height: $h2-lineheight-sm;
+		margin-bottom: $h2-lineheight-sm / 2;
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: $font-size-h2-md;
+		line-height: $h2-lineheight-md;
+		margin-bottom: $h2-lineheight-md / 2;
+	}
+}
+
+h3,
+.h3 {
+	font-family: $font-regular;
+	font-size: $font-size-h3;
+	line-height: $h3-lineheight;
+	margin-bottom: $h3-lineheight / 2;
+
+	@include media-breakpoint-up(sm) {
+		font-family: $font-medium;
+		font-size: $font-size-h3-sm;
+		line-height: $h3-lineheight-sm;
+		margin-bottom: $h3-lineheight-sm / 2;
+	}
+}
+
+h4,
+.h4 {
+	font-size: $font-size-h4;
+	line-height: $h4-lineheight;
+	margin-bottom: $h4-lineheight / 2;
+}
+
+h5,
+.h5 {
+	font-size: $font-size-h5;
+	line-height: $h5-lineheight;
+	margin-bottom: $h5-lineheight / 2;
+}
+
+h6,
+.h6 {
+	font-size: $font-size-h6;
+	line-height: $h6-lineheight;
+	margin-bottom: $h6-lineheight / 2;
+}
+
+.lead {
+	font-size: $lead-font-size;
+	line-height: $lead-line-height;
+	font-weight: $lead-font-weight;
+	font-family: $font-light;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $lead-font-size-sm;
+		/* same line height as XS */
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: $lead-font-size-md;
+		line-height: $lead-line-height-md;
+	}
+}
+
+.display-1,
+.display-2 {
+	font-family: $font-light;
+}
+
+.display-1 {
+	font-size: $display1-size;
+	line-height: $display1-size;
+
+	@include media-breakpoint-up(md) {
+		font-size: $display1-size-md;
+		line-height: $display1-size-md;
+	}
+
+	@include media-breakpoint-up(lg) {
+		font-size: $display1-size-lg;
+		line-height: $display1-size-lg;
+	}
+}
+
+.display-2 {
+	font-size: $display2-size;
+	line-height: $display2-size;
+
+	@include media-breakpoint-up(md) {
+		font-size: $display2-size-md;
+		line-height: $display2-size-md;
+	}
+
+	@include media-breakpoint-up(lg) {
+		font-size: $display2-size-lg;
+		line-height: $display2-size-lg;
+	}
+}
+
+.display-3 {
+	font-size: $display3-size;
+	font-weight: $display3-weight;
+}
+.display-4 {
+	font-size: $display4-size;
+	font-weight: $display4-weight;
+}
+
+hr {
+	margin-top: $spacer-y;
+	margin-bottom: $spacer-y;
+	border: 0;
+	border-top: $hr-border-width solid $hr-border-color;
+}
+
+small,
+.small {
+	font-size: 80%;
+	font-weight: normal;
+}
+
+mark,
+.mark {
+	padding: .2em;
+	background-color: $state-warning-bg;
+}
+
+.list-unstyled {
+	@include list-unstyled;
+}
+
+.list-inline {
+	@include list-unstyled;
+}
+
+.list-inline-item {
+	display: inline-block;
+
+	&:not(:last-child) {
+		margin-right: $list-inline-padding;
+	}
+}
+
+.dl-horizontal {
+	margin-right: -$grid-gutter-width;
+	margin-left: -$grid-gutter-width;
+	@include clearfix;
+}
+
+.initialism {
+	font-size: 90%;
+	text-transform: uppercase;
+}
+
+.blockquote {
+	padding: ($spacer / 2) $spacer;
+	margin-bottom: $spacer;
+	font-size: $blockquote-font-size;
+	border-left: .25rem solid $blockquote-border-color;
+}
+
+.blockquote-footer {
+	display: block;
+	font-size: 80%; // back to default font-size
+	line-height: $line-height;
+	color: $blockquote-small-color;
+
+	&::before {
+		content: "\2014 \00A0"; // em dash, nbsp
+	}
+}
+
+.blockquote-reverse {
+	padding-right: $spacer;
+	padding-left: 0;
+	text-align: right;
+	border-right: .25rem solid $blockquote-border-color;
+	border-left: 0;
+}
+
+.blockquote-reverse .blockquote-footer {
+	&::before {
+		content: "";
+	}
+
+	&::after {
+		content: "\00A0 \2014"; // nbsp, em dash
+	}
+}
+
+
+
