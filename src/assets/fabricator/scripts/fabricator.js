@@ -139,23 +139,22 @@ require('./prism');
 		 * @return {Object} fabricator
 		 */
 		function menuToggle( root, menuToggle, menuItems ) {
-
 			// shortcut menu DOM
-			var toggle = menuToggle;
-
-			var options = getOptions();
+			var toggle = menuToggle,
+				htmlEl = root,
+				options = getOptions();
 
 			// toggle classes on ctrl + m press
-			document.onkeydown = function (root) {
+			document.onkeydown = function ( htmlEl ) {
 				e = e || event
 				if (e.ctrlKey && e.keyCode == 'M'.charCodeAt(0)) {
-					toggleClasses(root);
+					toggleClasses( htmlEl );
 				}
 			}
 
 			// toggle classes on click
-			toggle.addEventListener('click', function (root) {
-				toggleClasses(root);
+			toggle.addEventListener('click', function ( htmlEl ) {
+				toggleClasses( htmlEl );
 			});
 
 			for (var i = 0; i < menuItems.length; i++) {
@@ -163,7 +162,8 @@ require('./prism');
 			}
 
 			// toggle classes on certain elements
-			function toggleClasses ( root ) {
+			function toggleClasses ( htmlEl ) {
+				console.log('test');
 				//TODO: Replace ClassList!
 				var menuClassList = root.className.split(' ');
 				options.menu = !root.classList.contains('f-menu-active');
