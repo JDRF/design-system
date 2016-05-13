@@ -293,21 +293,18 @@ var fabricator = window.fabricator = {};
 			}
 		}
 
-		/**
-		 * Initialization
-		 */
 		return {
-			initialize          : initialize
+			initialize          : initialize,
 			setInitialMenuState : setInitialMenuState,
 			menuToggle          : menuToggle,
 			buildColorChips     : buildColorChips,
 			setActiveItem       : setActiveItem,
 			bindCodeAutoSelect  : bindCodeAutoSelect,
 			fixSidebar          : fixSidebar,
-		}
-
-		designsystem.initialize();
+		};
 
 	}();
+
+	designsystem.initialize();
 
 }).call( fabricator, this, this.document );
