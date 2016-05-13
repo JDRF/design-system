@@ -1,5 +1,20 @@
 @import "scss/variables";
 
+/* == Grid ======== */
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 360px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+
 /* == Colors ======== */
 
 $primary-blue: #0073cf;
