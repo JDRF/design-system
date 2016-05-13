@@ -16,6 +16,12 @@ module.exports = function (gulp, plugins, config) {
 					template_string = start + escaped + end;
 					template = plugins.hbs.compile( template_string );
 					return new plugins.hbs.SafeString(template(args));
+				},
+				escape: function(args) {
+					var escaped = plugins.escape(args);
+					var template_string = start + escaped + end;
+					var template = plugins.hbs.compile( template_string );
+					return new plugins.hbs.SafeString(template(args));
 				}
 			}
 		});
