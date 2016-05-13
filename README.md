@@ -20,12 +20,60 @@ If icons are a requirement, Design System already includes all necessary styles,
 <link rel="stylesheet" href="/<PATH TO CSS>/design-system.css">
 ````
 
+# Design System
+
+## Components
+* Buttons
+  * Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/components/buttons/)
+  * Template Path: src/materials/components/buttons.html on gh-pages
+  * Style Path: src/scss/\_buttons.scss, src/scss/mixins/\_buttons.scss and src/scss/\_variables.scss
+  * JS Path: TBD
+  * Example: [here](http://jdrf.github.io/design-system/dist/components.html#buttons)
+* Forms
+  * Bootstrap Doc Reference: N/A
+  * Template Path: src/materials/components/forms.html on gh-pages
+  * Style Path: N/A
+  * JS Path: TBD
+  * Example: [here](http://jdrf.github.io/design-system/dist/components.html#forms)
+* Side Navigation
+  * Bootstrap Doc Reference: N/A
+  * Template Path: src/materials/components/navigation.html on gh-pages
+  * Style Path: src/scss/\_nav.scss
+  * JS Path: TBD
+  * Example: [here](http://jdrf.github.io/design-system/dist/components.html#side-navigation)
+
+## Content
+* Colors
+  * Bootstrap Doc Reference: N/A
+  * Template Path: src/materials/content/colors.html and src/data/toolkit.yml on gh-pages
+  * Style Path: src/scss/\_variables.scss
+  * JS Path: TBD
+  * Example: [here](http://jdrf.github.io/design-system/dist/content.html#colors)
+* Elevation
+  * Bootstrap Doc Reference: N/A
+  * Template Path: src/materials/content/elevation.html on gh-pages
+  * Style Path: src/scss/\_elevations.scss and src/scss/\_elevations.scss
+  * JS Path: TBD
+  * Example: [here](http://jdrf.github.io/design-system/dist/content.html#elevation)
+* Icons
+  * Bootstrap Doc Reference: N/A
+  * Template Path: src/materials/content/icons.html on gh-pages
+  * Style Path: N/A
+  * JS Path: TBD
+  * Example: [here](http://jdrf.github.io/design-system/dist/content.html#icons)
+* Typography
+  * Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/content/typography/)
+  * Template Path: src/materials/content/typography.html on gh-pages
+  * Style Path: src/scss/\_type.scss and src/scss/\_variables.scss
+  * JS Path: TBD
+  * Example: [here](http://jdrf.github.io/design-system/dist/content.html#typography)
+
 # Contributing
 Please review the contributing doc found [here](https://github.com/JDRF/design-system/blob/master/CONTRIBUTING.md)
 ## Installation
 To setup with optimal build for local development, we suggest running the below command:
 ````
-npm run init-from-dev
+npm run init-for-dev
 ````
 It will setup your working directory to the below file structure
 
