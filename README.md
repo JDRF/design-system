@@ -24,49 +24,42 @@ If icons are a requirement, Design System already includes all necessary styles,
 
 ## Components
 * Buttons
-  * Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/components/buttons/)
-  * Template Path: src/materials/components/buttons.html on gh-pages
-  * Style Path: src/scss/\_buttons.scss, src/scss/mixins/\_buttons.scss and src/scss/\_variables.scss
-  * JS Path: TBD
-  * Example: [here](http://jdrf.github.io/design-system/dist/components.html#buttons)
+	* Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/components/buttons/)
+	* Template Path in gh-pages: `src/materials/components/buttons.html`
+	* Style Path: `src/scss/\_buttons.scss`, `src/scss/mixins/\_buttons.scss`, `src/scss/\_variables.scss`
+	* Example: [here](http://jdrf.github.io/design-system/dist/components.html#buttons)
 * Forms
-  * Bootstrap Doc Reference: N/A
-  * Template Path: src/materials/components/forms.html on gh-pages
-  * Style Path: N/A
-  * JS Path: TBD
-  * Example: [here](http://jdrf.github.io/design-system/dist/components.html#forms)
+	* Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/components/forms/)
+	* Template Path in gh-pages: `src/materials/components/forms.html`
+	* Style Path: N/A
+	* Example: [here](http://jdrf.github.io/design-system/dist/components.html#forms)
 * Side Navigation
-  * Bootstrap Doc Reference: N/A
-  * Template Path: src/materials/components/navigation.html on gh-pages
-  * Style Path: src/scss/\_nav.scss
-  * JS Path: TBD
-  * Example: [here](http://jdrf.github.io/design-system/dist/components.html#side-navigation)
+	* Bootstrap Doc Reference: N/A
+	* Template Path in gh-pages: `src/materials/components/navigation.html`
+	* Style Path: `src/scss/\_nav.scss`
+	* Example: [here](http://jdrf.github.io/design-system/dist/components.html#side-navigation)
 
 ## Content
 * Colors
-  * Bootstrap Doc Reference: N/A
-  * Template Path: src/materials/content/colors.html and src/data/toolkit.yml on gh-pages
-  * Style Path: src/scss/\_variables.scss
-  * JS Path: TBD
-  * Example: [here](http://jdrf.github.io/design-system/dist/content.html#colors)
+	* Bootstrap Doc Reference: N/A
+	* Template Path in gh-pages: `src/materials/content/colors.html`, `src/data/toolkit.yml`
+	* Style Path: `src/scss/\_variables.scss`
+	* Example: [here](http://jdrf.github.io/design-system/dist/content.html#colors)
 * Elevation
-  * Bootstrap Doc Reference: N/A
-  * Template Path: src/materials/content/elevation.html on gh-pages
-  * Style Path: src/scss/\_elevations.scss and src/scss/\_elevations.scss
-  * JS Path: TBD
-  * Example: [here](http://jdrf.github.io/design-system/dist/content.html#elevation)
+	* Bootstrap Doc Reference: N/A
+	* Template Path in gh-pages: `src/materials/content/elevation.html`
+	* Style Path: `src/scss/\_elevations.scss`, `src/scss/\_elevations.scss`
+	* Example: [here](http://jdrf.github.io/design-system/dist/content.html#elevation)
 * Icons
-  * Bootstrap Doc Reference: N/A
-  * Template Path: src/materials/content/icons.html on gh-pages
-  * Style Path: N/A
-  * JS Path: TBD
-  * Example: [here](http://jdrf.github.io/design-system/dist/content.html#icons)
+	* Bootstrap Doc Reference: N/A
+	* Template Path in gh-pages: `src/materials/content/icons.html`
+	* Style Path: N/A
+	* Example: [here](http://jdrf.github.io/design-system/dist/content.html#icons)
 * Typography
-  * Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/content/typography/)
-  * Template Path: src/materials/content/typography.html on gh-pages
-  * Style Path: src/scss/\_type.scss and src/scss/\_variables.scss
-  * JS Path: TBD
-  * Example: [here](http://jdrf.github.io/design-system/dist/content.html#typography)
+	* Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/content/typography/)
+	* Template Path in gh-pages: `src/materials/content/typography.html`
+	* Style Path: `src/scss/\_type.scss`, `src/scss/\_variables.scss`
+	* Example: [here](http://jdrf.github.io/design-system/dist/content.html#typography)
 
 # Contributing
 Please review the contributing doc found [here](https://github.com/JDRF/design-system/blob/master/CONTRIBUTING.md)
