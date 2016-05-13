@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{title}}</title>
+
+	{{#if fabricator}}<link rel="stylesheet" href="./{{baseurl}}/assets/fabricator/styles/f.css">{{/if}}
+
+	<!-- Design System styles -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="./{{baseurl}}/assets/design-system/styles/design-system.css">
+	<!-- /Design System styles -->
+
+</head>
+<body>
+	{{> f-header}}
+
+	<div class="f-container">
+	{{#if fabricator}}
+		{{> f-icons}}
+		{{#if deeplink}}
+			{{> f-menu-deeplink}}
+		{{else}}
+			{{> f-menu}}
+		{{/if}}
+	{{/if}}
+
+	<main class="f-content">
+		{{> f-control-bar}}
+		{% body %}
+	</main>
+
+	</div>
+	{{#if fabricator}}<script src="./{{baseurl}}/assets/fabricator/scripts/f.js"></script>{{/if}}
+	{{#if fabricator}}<script src="./{{baseurl}}/assets/fabricator/scripts/search.js"></script>{{/if}}
+
+	<!-- Design System scripts: requires jQuery -->
+	<script src="./{{baseurl}}/assets/design-system/scripts/design-system.js"></script>
+	<!-- /Design System scripts: requires jQuery -->
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+.f-header-top {
+	width: 100%;
+	max-width: $max-width;
+	margin: auto;
+	font-size: 0.875rem;
+	padding: 1em;
+
+	.f-logo,
+	.f-nav {
+		font-size: inherit;
+
+		@media (min-width: 60em) {
+			height: 35px;
+		}
+	}
+
+	.f-logo {
+		margin: 0;
+		color: color(primary-light);
+		font-family: "Gotham Medium";
+		line-height: 1.5rem;
+
+		@media (min-width: 60em) {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		svg,
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		svg {
+			fill: color(primary-light);
+			height: 35px;
+		}
+	}
+
+	.f-nav {
+		display: none;
+
+		@media (min-width: 60em) {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.nav {
+			.nav-item {
+				padding-top: 0.45rem;
+				width: 100%;
+				margin-left: 0;
+
+				@media (min-width: 60em) {
+					display: inline-block;
+					width: auto;
+					margin-left: 1rem;
+				}
+			}
+		}
+	}
+}
+
+.f-header {
+	background-color: color(primary-light);
+	color: #ffffff;
+	padding: 4.813em 0;
+	width: 100%;
+	display: none;
+
+	@media (min-width: 60em) {
+		display: block;
+	}
+
+	.f-header-center {
+		max-width: $max-width;
+		margin: auto;
+		padding: 0 1em;
+		font-family: "Gotham Light";
+
+		.f-header-title {
+			color: inherit;
+			font-family: inherit;
+			margin-bottom: .3em;
+		}
+
+		.f-header-content {
+			font-family: inherit;
+		}
+	}
+
+	.f-menu-active & {
+		.f-header-center {
+			h1 {
+				font-size: 3rem;
+			}
+		}
+	}
+}

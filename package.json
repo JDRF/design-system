@@ -1,27 +1,74 @@
 {
-	"name": "jdrf-design-system",
-	"version": "0.0.1",
-	"description": "JDRF Design System for managing styles",
-	"author": "Patrick McKowen <pmckowen@jdrf.org>",
-	"contributors": [{
-		"name": "Nick Smith",
-		"email": "fuhton@gmail.com"
-	}],
-	"scripts": {
-		"test": "ls -al"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/JDRF/design-system"
-	},
-	"bugs": {
-		"url": "https://github.com/JDRF/design-system/issues"
-	},
-	"homepage": "https://github.com/JDRF/design-system#readme",
-	"keywords": [
-		"Style Guide",
-		"JDRF",
-		"Bootstrap"
-	],
-	"license": "MIT"
+  "name": "jdrf-design-system",
+  "version": "0.0.1",
+  "description": "jdrf design system for managing styles",
+  "author": "patrick mckowen <pmckowen@jdrf.org>",
+  "contributors": [
+    {
+      "name": "nick smith",
+      "email": "fuhton@gmail.com"
+    }
+  ],
+  "scripts": {
+    "init-for-dev": "git clone https://github.com/jdrf/design-system.git && npm run setup",
+    "presetup": "git checkout gh-pages && git pull origin gh-pages",
+    "setup": "npm install && cd design-system && npm run setup && cd .. && gulp",
+    "test": "gulp test",
+    "build": "gulp",
+    "build-from-dev": "gulp --env=dev build",
+    "serve": "gulp && gulp serve",
+    "serve-from-dev": "gulp --env=dev && gulp --env=dev serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jdrf/design-system"
+  },
+  "bugs": {
+    "url": "https://github.com/jdrf/design-system/issues"
+  },
+  "homepage": "https://github.com/jdrf/design-system#readme",
+  "keywords": [
+    "style guide",
+    "jdrf",
+    "bootstrap"
+  ],
+  "license": "mit",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.2",
+    "browser-sync": "^2.12.5",
+    "browserify": "^13.0.1",
+    "del": "^2.2.0",
+    "fabricator-assemble": "^1.1.11",
+    "fs": "0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-csso": "^1.1.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-html-escape": "0.0.3",
+    "gulp-if": "^2.0.0",
+    "gulp-jscs": "^3.0.2",
+    "gulp-load-plugins": "^1.2.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-phantomcss": "^0.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-scss-lint": "^0.3.9",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "handlebars": "^4.0.5",
+    "html-escape": "^2.0.0",
+    "merge-stream": "^1.0.0",
+    "run-sequence": "^1.1.5",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-if": "^2.0.0",
+    "gulp-util": "^3.0.7"
+  }
 }

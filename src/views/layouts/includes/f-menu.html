@@ -1,0 +1,48 @@
+<!-- fabricator menu -->
+<div class="f-menu-canvas sidebar">
+
+	{{> f-header-nav}}
+	<nav class="f-menu" aria-label="sidebar-nav">
+
+		{{> f-menu-search}}
+
+		<ul class="nav">
+
+			<li class="nav-item">
+				<a href="./index.html" class="f-menu__heading nav-link">Overview</a>
+				<a href="./download.html" class="f-menu__heading nav-link">Download</a>
+				<a href="./faq.html" class="f-menu__heading nav-link">FAQ</a>
+			</li>
+
+			{{#each materials}}
+			<li class="nav-item">
+				<a href="./{{@key}}.html" class="f-menu__heading nav-link">{{name}}</a>
+				<ul class="nav">
+					{{#each items}}
+					<li>
+						<a href="./{{@../key}}.html#{{@key}}" class="nav-link">{{name}}</a>
+					</li>
+					{{/each}}
+				</ul>
+			</li>
+			{{/each}}
+
+			{{#each views}}
+			<li class="nav-item">
+				<a href="./{{@key}}.html" class="f-menu__heading nav-link">{{name}}</a>
+				<ul class="nav">
+					{{#each items}}
+					<li>
+						<a href="./{{@../key}}/{{@key}}.html" class="nav-link">{{name}}</a>
+					</li>
+					{{/each}}
+				</ul>
+			</li>
+			{{/each}}
+
+		</ul>
+
+
+	</nav>
+</div>
+<!-- /fabricator menu -->

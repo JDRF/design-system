@@ -1,0 +1,124 @@
+.f-item-group {
+	@include clearfix;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	padding-bottom: 3rem;
+	border-bottom: 1px solid color(border);
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		border-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	& ~ & {
+		margin-top: 0;
+	}
+
+	& > & {
+		padding-bottom: 1.5rem;
+		margin-bottom: 1.5rem;
+		border-bottom: 0;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+}
+
+.f-item-code {
+	margin-top: 2rem;
+}
+
+.f-item-preview {
+	@include clearfix;
+}
+
+.f-item-border-bottom {
+	border-bottom: 1px solid color(light);
+}
+
+.f-item-heading-group {
+	@include clearfix;
+	margin-bottom: 1rem;
+	vertical-align: middle;
+}
+
+.f-item-heading {
+	margin-top: 0;
+	margin-bottom: 0;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	color: color(primary-light);
+	border-bottom: 1px solid color(border);
+	padding-bottom: 16px;
+	width: 100%;
+}
+
+.f-item-controls {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 0.5rem;
+
+	.f-control {
+		width: 0.875rem;
+		height: 0.875rem;
+		display: block;
+		float: left;
+
+		&:hover {
+			use {
+				fill: color(normal);
+			}
+		}
+
+		use {
+			fill: color(light);
+		}
+	}
+}
+
+.f-item-hidden {
+	display: none;
+}
+
+.f-item-notes {
+	font-size: 0.875rem;
+}
+
+.f-section {
+	.f-example {
+		border: 3px solid map-get($code-colors, light-gray);
+		padding: 20px;
+	}
+
+	.f-example-title {
+		margin-top: 2em;
+	}
+}
+
+.f-example-inline {
+	@media (min-width: 60em) {
+		display: inline-block;
+		margin-right: 2em;
+	}
+}
+
+.f-example-desc {
+	margin-top: 1.5em;
+	font-weight: 600;
+	font-size: 0.75rem;
+
+	@media (min-width: 60em) {
+		text-align: center;
+	}
+}

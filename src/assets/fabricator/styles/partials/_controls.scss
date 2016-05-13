@@ -1,0 +1,35 @@
+.f-control {
+	@include border-box;
+	display: inline-block;
+	cursor: pointer;
+	margin-left: 0.66rem;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	svg {
+		width: 0.875rem;
+		height: 0.875rem;
+
+		use {
+			fill: color(light);
+		}
+	}
+}
+
+.f-menu-toggle {
+	cursor: pointer;
+	vertical-align: middle;
+	display: block;
+	margin: 1rem 0;
+
+	@media (min-width: 60em) {
+		display: none;
+	}
+
+	svg {
+		display: block;
+		margin-bottom: -1px;
+	}
+}

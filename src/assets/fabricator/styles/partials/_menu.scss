@@ -1,0 +1,81 @@
+// menu
+
+.f-menu-canvas {
+	@media (max-width: 60em) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate(-$menu-width-mobile - 30, 0);
+		width: $menu-width-mobile;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.f-menu-active & {
+		@media (max-width: 60em) {
+			transform: translate(-$menu-width-mobile, 0);
+			@include transition;
+		}
+	}
+
+	.f-nav,
+	.f-menu {
+		@include border-box;
+		width: $menu-width-mobile;
+		height: 100%;
+		z-index: 1;
+		margin-left: 1rem;
+		overflow: hidden;
+	}
+
+	.f-nav {
+		margin-bottom: 1rem;
+
+		@media (min-width: 60em) {
+			display: none;
+		}
+	}
+}
+
+.f-menu {
+
+	float: left;
+
+
+	@media (min-width: 60em) {
+		margin-top: 65px;
+		width: $menu-width-desktop;
+		max-width: 220px;
+		display: block;
+	}
+
+	&.fixed {
+		@media (min-width: 60em) {
+			position: fixed;
+			top: 0;
+			overflow-y: auto;
+			height: 90%;
+			padding-bottom: 65px;
+		}
+	}
+}
+
+.form-control.bd-search-results {
+	position: absolute;
+	width: 85%;
+	margin-top: 5px;
+	border-color: #66afe9;
+	&.hide {
+		padding: 0;
+		border: none;
+	}
+	a {
+		width: 100%;
+		font-size: 0.875rem;
+		color: map-get($code-colors, dark-gray);
+		&:hover {
+			color: map-get($code-colors, black);
+		}
+	}
+}
