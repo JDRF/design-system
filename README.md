@@ -20,15 +20,15 @@ If icons are a requirement, Design System already includes all necessary styles,
 <link rel="stylesheet" href="/<PATH TO CSS>/design-system.css">
 ````
 
-# Design System
-
-## Components
+# Design System Pieces
+Below are the different available Design System elements. If possible, an element is built upon existing Bootstrap-v4 components.
+### Components
 * Buttons
 	* Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/components/buttons/)
 	* Template Path in gh-pages: `src/materials/components/buttons.html`
-	* Style Path: `src/scss/\_buttons.scss`, `src/scss/mixins/\_buttons.scss`, `src/scss/\_variables.scss`
+	* Style Path: `src/scss/_buttons.scss`, `src/scss/mixins/_buttons.scss`, `src/scss/_variables.scss`
 	* Example: [here](http://jdrf.github.io/design-system/dist/components.html#buttons)
-* Forms
+* Forms _Currently in development_
 	* Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/components/forms/)
 	* Template Path in gh-pages: `src/materials/components/forms.html`
 	* Style Path: N/A
@@ -36,19 +36,19 @@ If icons are a requirement, Design System already includes all necessary styles,
 * Side Navigation
 	* Bootstrap Doc Reference: N/A
 	* Template Path in gh-pages: `src/materials/components/navigation.html`
-	* Style Path: `src/scss/\_nav.scss`
+	* Style Path: `src/scss/_nav.scss`
 	* Example: [here](http://jdrf.github.io/design-system/dist/components.html#side-navigation)
 
-## Content
+### Content
 * Colors
 	* Bootstrap Doc Reference: N/A
 	* Template Path in gh-pages: `src/materials/content/colors.html`, `src/data/toolkit.yml`
-	* Style Path: `src/scss/\_variables.scss`
+	* Style Path: `src/scss/_variables.scss`
 	* Example: [here](http://jdrf.github.io/design-system/dist/content.html#colors)
 * Elevation
 	* Bootstrap Doc Reference: N/A
 	* Template Path in gh-pages: `src/materials/content/elevation.html`
-	* Style Path: `src/scss/\_elevations.scss`, `src/scss/\_elevations.scss`
+	* Style Path: `src/scss/_elevations.scss`, `src/scss/_elevations.scss`
 	* Example: [here](http://jdrf.github.io/design-system/dist/content.html#elevation)
 * Icons
 	* Bootstrap Doc Reference: N/A
@@ -58,12 +58,13 @@ If icons are a requirement, Design System already includes all necessary styles,
 * Typography
 	* Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/content/typography/)
 	* Template Path in gh-pages: `src/materials/content/typography.html`
-	* Style Path: `src/scss/\_type.scss`, `src/scss/\_variables.scss`
+	* Style Path: `src/scss/_type.scss`, `src/scss/_variables.scss`
 	* Example: [here](http://jdrf.github.io/design-system/dist/content.html#typography)
 
 # Contributing
 Please review the contributing doc found [here](https://github.com/JDRF/design-system/blob/master/CONTRIBUTING.md)
-## Installation
+
+### Installation
 To setup with optimal build for local development, we suggest running the below command:
 ````
 npm run init-for-dev
@@ -81,10 +82,10 @@ It will setup your working directory to the below file structure
 
 To find available commands from this recommended setup, please visit the [gh-pages](https://github.com/JDRF/design-system/tree/gh-pages) branch
 
-## Tests
+### Tests
 Test are run from a parent directory that relies on the above specified directory structure. See the (gh-pages README)[https://github.com/JDRF/design-system/tree/gh-pages] for information on testing.
 
-## Semantic Versioning and Releases
+### Semantic Versioning and Releases
 We're using Semantic Versioning to increment the release phases of the Design System. This helps us to track major changes as well as minor changes and patches. We can also view a history of the project's [releases on Github](https://github.com/JDRF/design-system/releases) due to Semantic Versioning.
 
 A Semantic Version number usually looks something like this - `v0.0.1`. The digit placement helps identify whether the release is a major release, a minor release, or a patch. See the example below for reference.
