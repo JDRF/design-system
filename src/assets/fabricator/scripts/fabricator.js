@@ -63,7 +63,9 @@ require('./prism');
 				menuToggle: document.querySelector('.f-menu-toggle')
 			};
 
-			designsystem.setActiveItem(self.dom.menuItems);
+			/* pass dom selectors to functions */
+			designsystem.setActiveItem( self.dom.menuItems );
+			designsystem.menuToggle( self.dom.root, self.dom.menuToggle, self.dom.menuItems );
 
 		} /* end initialize */
 
@@ -72,7 +74,8 @@ require('./prism');
 		 * @return {Object}
 		 */
 		function getOptions(e) {
-			return (fabricator.test.sessionStorage) ? JSON.parse(sessionStorage.fabricator) : fabricator.options;
+			console.log('getOptions function');
+			//return (fabricator.test.sessionStorage) ? JSON.parse(sessionStorage.fabricator) : fabricator.options;
 		}
 
 		/**
@@ -135,47 +138,47 @@ require('./prism');
 		 * Click handler to primary menu toggle
 		 * @return {Object} fabricator
 		 */
-		function menuToggle(e) {
+		function menuToggle( root, menuToggle, menuItems ) {
 
 			// shortcut menu DOM
-			var toggle = fabricator.dom.menuToggle;
+			var toggle = menuToggle;
 
-			var options = fabricator.getOptions();
-
-			// toggle classes on certain elements
-			var toggleClasses = function () {
-				//TODO: Replace ClassList!
-				var menuClassList = fabricator.dom.root.className.split(' ');
-				options.menu = !fabricator.dom.root.classList.contains('f-menu-active');
-				fabricator.dom.root.classList.toggle('f-menu-active');
-
-				if (fabricator.test.sessionStorage) {
-					sessionStorage.setItem('fabricator', JSON.stringify(options));
-				}
-			};
+			var options = getOptions();
 
 			// toggle classes on ctrl + m press
-			document.onkeydown = function (e) {
+			document.onkeydown = function (root) {
 				e = e || event
 				if (e.ctrlKey && e.keyCode == 'M'.charCodeAt(0)) {
-					toggleClasses();
+					toggleClasses(root);
 				}
 			}
 
 			// toggle classes on click
-			toggle.addEventListener('click', function () {
-				toggleClasses();
+			toggle.addEventListener('click', function (root) {
+				toggleClasses(root);
 			});
 
+			for (var i = 0; i < menuItems.length; i++) {
+				menuItems[i].addEventListener('click', closeMenu);
+			}
+
+			// toggle classes on certain elements
+			function toggleClasses ( root ) {
+				//TODO: Replace ClassList!
+				var menuClassList = root.className.split(' ');
+				options.menu = !root.classList.contains('f-menu-active');
+				root.classList.toggle('f-menu-active');
+
+				if (fabricator.test.sessionStorage) {
+					sessionStorage.setItem('fabricator', JSON.stringify(options));
+				}
+			}
+
 			// close menu when clicking on item (for collapsed menu view)
-			var closeMenu = function () {
+			function closeMenu () {
 				if (!window.matchMedia(fabricator.options.mq).matches) {
 					toggleClasses();
 				}
-			};
-
-			for (var i = 0; i < fabricator.dom.menuItems.length; i++) {
-				fabricator.dom.menuItems[i].addEventListener('click', closeMenu);
 			}
 		}
 
@@ -285,7 +288,6 @@ require('./prism');
 
 	designsystem.initialize();
 	designsystem.buildColorChips();
-	//designsystem.setActiveItem();
 	designsystem.fixSidebar();
 
 })();
