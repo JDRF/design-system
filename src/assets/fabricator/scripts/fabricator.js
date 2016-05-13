@@ -5,11 +5,11 @@
 
 var fabricator = window.fabricator = {};
 
-(function( window, document ) {
+'use strict';
 
-	'use strict';
+require('./prism');
 
-	require('./prism');
+(function() {
 
 	var designsystem = function() {
 
@@ -62,7 +62,7 @@ var fabricator = window.fabricator = {};
 				menuItems: document.querySelectorAll('.f-menu li a'),
 				menuToggle: document.querySelector('.f-menu-toggle')
 			};
-		}
+		} /* end initialize */
 
 		/**
 		 * Get current option values from session storage
@@ -71,7 +71,6 @@ var fabricator = window.fabricator = {};
 		function getOptions(e) {
 			return (fabricator.test.sessionStorage) ? JSON.parse(sessionStorage.fabricator) : fabricator.options;
 		}
-
 
 		/**
 		 * Build color chips
@@ -87,7 +86,6 @@ var fabricator = window.fabricator = {};
 				chips[i].style.borderBottomColor = color;
 			}
 		}
-
 
 		/**
 		 * Add `f-active` class to active menu item
@@ -129,7 +127,6 @@ var fabricator = window.fabricator = {};
 
 			setActive();
 		}
-
 
 		/**
 		 * Click handler to primary menu toggle
@@ -178,27 +175,6 @@ var fabricator = window.fabricator = {};
 				fabricator.dom.menuItems[i].addEventListener('click', closeMenu);
 			}
 		}
-
-		/**
-		 * Automatically select code when code block is clicked
-		 */
-		function bindCodeAutoSelect(e) {
-
-			var codeBlocks = document.querySelectorAll('.f-item-code');
-
-			var select = function (block) {
-				var selection = window.getSelection();
-				var range = document.createRange();
-				range.selectNodeContents(block.querySelector('code'));
-				selection.removeAllRanges();
-				selection.addRange(range);
-			};
-
-			for (var i = codeBlocks.length - 1; i >= 0; i--) {
-				codeBlocks[i].addEventListener('click', select.bind(this, codeBlocks[i]));
-			}
-		}
-
 
 		/**
 		 * Open/Close menu based on session var.
@@ -256,9 +232,9 @@ var fabricator = window.fabricator = {};
 				var topOffset = window.pageYOffset;
 
 				if ( window.pageYOffset > totalHeaderHeight ) {
-					fabricator.addClass( dsSidebar, 'fixed' );
+					addClass( dsSidebar, 'fixed' );
 				} else {
-					fabricator.removeClass( dsSidebar, 'fixed' );
+					removeClass( dsSidebar, 'fixed' );
 				}
 			};
 		}
@@ -272,7 +248,7 @@ var fabricator = window.fabricator = {};
 				return;
 			}
 			// So we don't have duplicates
-			fabricator.removeClass( el, className );
+			removeClass( el, className );
 			el.className += ' ' + className;
 		}
 
@@ -299,12 +275,13 @@ var fabricator = window.fabricator = {};
 			menuToggle          : menuToggle,
 			buildColorChips     : buildColorChips,
 			setActiveItem       : setActiveItem,
-			bindCodeAutoSelect  : bindCodeAutoSelect,
 			fixSidebar          : fixSidebar,
 		};
 
 	}();
 
 	designsystem.initialize();
+	designsystem.buildColorChips();
+	designsystem.fixSidebar();
 
-}).call( fabricator, this, this.document );
+})();
