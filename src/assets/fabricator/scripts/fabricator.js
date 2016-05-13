@@ -62,6 +62,9 @@ require('./prism');
 				menuItems: document.querySelectorAll('.f-menu li a'),
 				menuToggle: document.querySelector('.f-menu-toggle')
 			};
+
+			designsystem.setActiveItem(self.dom.menuItems);
+
 		} /* end initialize */
 
 		/**
@@ -90,12 +93,16 @@ require('./prism');
 		/**
 		 * Add `f-active` class to active menu item
 		 */
-		function setActiveItem(e) {
+		function setActiveItem( menuItems ) {
+
+			window.addEventListener( 'hashchange', setActive );
+
+			setActive( menuItems );
 
 			/**
 			 * Match the window location with the menu item, set menu item as active
 			 */
-			var setActive = function () {
+			function setActive( menuItems ) {
 
 				// get current file and hash without first slash
 				var current = (window.location.pathname + window.location.hash).replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
@@ -109,23 +116,19 @@ require('./prism');
 					href;
 
 				// find the current section in the items array
-				for (var i = fabricator.dom.menuItems.length - 1; i >= 0; i--) {
+				for (var i = menuItems.length - 1; i >= 0; i--) {
 
-					var item = fabricator.dom.menuItems[i];
+					var item = menuItems[i];
 					// get item href without first slash
 					href = item.getAttribute('href').replace(/^\//g, '');
 
 					if ( href === current ) {
-						fabricator.addClass( item, 'current');
+						addClass( item, 'current' );
 					} else {
-						fabricator.removeClass( item, 'current');
+						removeClass( item, 'current' );
 					}
 				}
-			};
-
-			window.addEventListener('hashchange', setActive);
-
-			setActive();
+			}
 		}
 
 		/**
@@ -185,17 +188,17 @@ require('./prism');
 			// root element
 			var root = document.querySelector('html');
 
-			var mq = window.matchMedia(fabricator.options.mq);
+			var mq = window.matchMedia(this.options.mq);
 
 			// if small screen
 			var mediaChangeHandler = function (list) {
 				if (!list.matches) {
-					fabricator.removeClass( root, 'f-menu-active');
+					removeClass( root, 'f-menu-active');
 				} else {
-					if (fabricator.getOptions().menu) {
-						fabricator.addClass( root, 'f-menu-active');
+					if (getOptions().menu) {
+						addClass( root, 'f-menu-active');
 					} else {
-						fabricator.removeClass( root, 'f-menu-active');
+						removeClass( root, 'f-menu-active');
 					}
 				}
 			};
@@ -282,6 +285,7 @@ require('./prism');
 
 	designsystem.initialize();
 	designsystem.buildColorChips();
+	//designsystem.setActiveItem();
 	designsystem.fixSidebar();
 
 })();
