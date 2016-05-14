@@ -14,7 +14,22 @@ require('./prism');
 	var designsystem = function() {
 
 		function initialize() {
-			var self = this;
+			/**
+			 * Cache DOM
+			 * @type {Object}
+			 */
+			this.dom = {
+				root: document.querySelector('html'),
+				primaryMenu: document.querySelector('.f-menu'),
+				menuItems: document.querySelectorAll('.f-menu li a'),
+				menuToggle: document.querySelector('.f-menu-toggle')
+			};
+
+			var self = this,
+				toggle = this.dom.menuToggle,
+				htmlEl = this.dom.root,
+				options = getOptions(),
+				menuItems = this.dom.menuItems;
 
 			/**
 			 * Default options
@@ -51,21 +66,17 @@ require('./prism');
 				sessionStorage.self = sessionStorage.self || JSON.stringify(self.options);
 			}
 
+			// toggle classes on click
+			toggle.addEventListener('click', function () {
+				toggleClasses( htmlEl, options );
+			});
 
-			/**
-			 * Cache DOM
-			 * @type {Object}
-			 */
-			this.dom = {
-				root: document.querySelector('html'),
-				primaryMenu: document.querySelector('.f-menu'),
-				menuItems: document.querySelectorAll('.f-menu li a'),
-				menuToggle: document.querySelector('.f-menu-toggle')
-			};
+			for ( var i = 0; i < menuItems.length; i++ ) {
+				menuItems[i].addEventListener( 'click', designsystem.closeMenu );
+			}
 
 			/* pass dom selectors to functions */
-			designsystem.setActiveItem( self.dom.menuItems );
-			designsystem.menuToggle( self.dom.root, self.dom.menuToggle, self.dom.menuItems );
+			designsystem.setActiveItem( menuItems );
 
 		} /* end initialize */
 
@@ -73,9 +84,9 @@ require('./prism');
 		 * Get current option values from session storage
 		 * @return {Object}
 		 */
-		function getOptions(e) {
+		function getOptions() {
 			console.log('getOptions function');
-			//return (fabricator.test.sessionStorage) ? JSON.parse(sessionStorage.fabricator) : fabricator.options;
+			//return (this.test.sessionStorage) ? JSON.parse(sessionStorage.this) : this.options;
 		}
 
 		/**
@@ -135,50 +146,27 @@ require('./prism');
 		}
 
 		/**
-		 * Click handler to primary menu toggle
-		 * @return {Object} fabricator
+		 * Toggle f-menu-active class
+		 *
 		 */
-		function menuToggle( root, menuToggle, menuItems ) {
-			// shortcut menu DOM
-			var toggle = menuToggle,
-				htmlEl = root,
-				options = getOptions();
+		function toggleClasses ( htmlEl, options ) {
+			//TODO: Replace ClassList!
+			var menuClassList = htmlEl.className.split(' ');
+			options.menu = !htmlEl.classList.contains('f-menu-active');
+			htmlEl.classList.toggle('f-menu-active');
 
-			// toggle classes on ctrl + m press
-			document.onkeydown = function ( htmlEl ) {
-				e = e || event
-				if (e.ctrlKey && e.keyCode == 'M'.charCodeAt(0)) {
-					toggleClasses( htmlEl );
-				}
+			if (fabricator.test.sessionStorage) {
+				sessionStorage.setItem('fabricator', JSON.stringify(options));
 			}
+		}
 
-			// toggle classes on click
-			toggle.addEventListener('click', function ( htmlEl ) {
-				toggleClasses( htmlEl );
-			});
-
-			for (var i = 0; i < menuItems.length; i++) {
-				menuItems[i].addEventListener('click', closeMenu);
-			}
-
-			// toggle classes on certain elements
-			function toggleClasses ( htmlEl ) {
-				console.log('test');
-				//TODO: Replace ClassList!
-				var menuClassList = root.className.split(' ');
-				options.menu = !root.classList.contains('f-menu-active');
-				root.classList.toggle('f-menu-active');
-
-				if (fabricator.test.sessionStorage) {
-					sessionStorage.setItem('fabricator', JSON.stringify(options));
-				}
-			}
-
-			// close menu when clicking on item (for collapsed menu view)
-			function closeMenu () {
-				if (!window.matchMedia(fabricator.options.mq).matches) {
-					toggleClasses();
-				}
+		/**
+		* Close menu when clicking on item (for collapsed menu view)
+		*
+		*/
+		function closeMenu () {
+			if (!window.matchMedia(fabricator.options.mq).matches) {
+				toggleClasses();
 			}
 		}
 
@@ -187,6 +175,7 @@ require('./prism');
 		 * Also attach a media query listener to close the menu when resizing to smaller screen.
 		 */
 		function setInitialMenuState(e) {
+			console.log('setInitialMenuState');
 
 			// root element
 			var root = document.querySelector('html');
@@ -278,7 +267,6 @@ require('./prism');
 		return {
 			initialize          : initialize,
 			setInitialMenuState : setInitialMenuState,
-			menuToggle          : menuToggle,
 			buildColorChips     : buildColorChips,
 			setActiveItem       : setActiveItem,
 			fixSidebar          : fixSidebar,
