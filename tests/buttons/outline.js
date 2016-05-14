@@ -1,13 +1,13 @@
 casper.
 	start('http://localhost:3000/dist/components.html#buttons').
 	then(function(){
-		phantomcss.screenshot('.f-example .btn.btn-primary-outline', 'Primary Outline Button');
+		phantomcss.screenshot('#phantom-btn-outline', 'Primary Outline Button');
 	}).
 	then(function(){
-		phantomcss.screenshot('.f-example .btn.btn-primary-outline.active', 'Primary Outline (Hover) Button');
+		phantomcss.screenshot('#phantom-btn-outline-active', 'Primary Outline (Hover) Button');
 	}).
 	then(function(){
-		phantomcss.screenshot('.f-example .btn.btn-primary-outline:disabled', 'Primary Outline (Disabled) Button');
+		phantomcss.screenshot('#phantom-btn-outline-disabled', 'Primary Outline (Disabled) Button');
 	});
 
 casper.run();

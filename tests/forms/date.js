@@ -1,10 +1,10 @@
 casper.
 	start('http://localhost:3000/dist/components.html#forms').
 	then(function(){
-		phantomcss.screenshot('.f-example label[for=exampleInputDate]', 'Date Field Label');
+		phantomcss.screenshot('label[for=phantom-exampleInputDate]', 'Date Field Label');
 	}).
 	then(function(){
-		phantomcss.screenshot('.f-example #exampleInputDate', 'Date Field');
+		phantomcss.screenshot('#phantom-exampleInputDate', 'Date Field');
 	});
 
 casper.run();

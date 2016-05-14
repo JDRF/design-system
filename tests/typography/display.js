@@ -1,16 +1,10 @@
 casper.
 	start('http://localhost:3000/dist/content.html#typography').
 	then(function(){
-		phantomcss.screenshot('.f-example .display-1', 'Display One');
+		phantomcss.screenshot('#phantom-display-1', 'Display One');
 	}).
 	then(function(){
-		phantomcss.screenshot('.f-example .display-2', 'Display Two');
-	}).
-	then(function(){
-		phantomcss.screenshot('.f-example .display-3', 'Display Three');
-	}).
-	then(function(){
-		phantomcss.screenshot('.f-example .display-4', 'Display Six');
+		phantomcss.screenshot('#phantom-display-2', 'Display Two');
 	});
 
 casper.run();
