@@ -12,6 +12,7 @@ var gulp       = require('gulp'),
 			styles: './node_modules/bootstrap/'
 		},
 		scripts: './src/js/**/*.js',
+		//the sass source files where `gulp styles` begin
 		styles: './src/scss/style.scss'
 	};
 
