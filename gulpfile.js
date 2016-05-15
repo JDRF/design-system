@@ -2,7 +2,8 @@ var gulp       = require('gulp'),
 	del        = require('del'),
 	plugins    = require('gulp-load-plugins')({
 		rename: {
-			'gulp-scss-lint': 'scsslint'
+			'gulp-scss-lint': 'scsslint',
+			'gulp-clean-css': 'minifycss'
 		}
 	}),
 	paths      = {

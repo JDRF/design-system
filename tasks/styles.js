@@ -25,7 +25,14 @@ module.exports = function (gulp, plugins) {
 		var stream = plugins.merge(sassStream, cssStream)
 			.pipe(plugins.concat('design-system.css'))
 			.pipe(gulp.dest(__dirname + '/../dist/css'));
-		return stream;
+
+		var minifyStream = gulp.src([
+			__dirname + '/../dist/design-system.css'
+			])
+			.pipe(plugins.minifycss({compatibility: 'ie8'}))
+			.pipe(gulp.dest(__dirname + '/../dist/css'));
+
+		return minifyStream;
 	};
 
 };
