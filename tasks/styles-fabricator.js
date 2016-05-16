@@ -1,5 +1,11 @@
 module.exports = function (gulp, plugins, config) {
 	return function () {
+		/*
+		* Bring the fabricator styles specified in the config.src.styles.fabricator path
+		* from gulpfile.js, rename it to f.css and place it in the dist folder path.
+		*
+		* Why don't we concat here like we do in DS?
+		*/
 		var stream = gulp.src(config.src.styles.fabricator)
 			.pipe(plugins.sourcemaps.init())
 			.pipe(plugins.sass().on('error', plugins.sass.logError))

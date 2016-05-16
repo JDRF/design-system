@@ -1,6 +1,6 @@
 module.exports = function (gulp, plugins, config) {
 	return function (done) {
-
+		/* Run fabricator scripts through JS linters */
 		var stream = gulp.src([
 				'./src/assets/fabricator/scripts/app.js',
 				'./src/assets/fabricator/scripts/search.js',
