@@ -1,7 +1,9 @@
 // menu
 
 .f-menu-canvas {
-	@media (max-width: 60em) {
+	@include transition;
+
+	@include mobile {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -13,9 +15,8 @@
 	}
 
 	.f-menu-active & {
-		@media (max-width: 60em) {
-			transform: translate(-$menu-width-mobile, 0);
-			@include transition;
+		@include mobile {
+			transform: translate(0, 0);
 		}
 	}
 
@@ -32,18 +33,16 @@
 	.f-nav {
 		margin-bottom: 1rem;
 
-		@media (min-width: 60em) {
+		@include desktop {
 			display: none;
 		}
 	}
 }
 
 .f-menu {
-
 	float: left;
 
-
-	@media (min-width: 60em) {
+	@include desktop {
 		margin-top: 65px;
 		width: $menu-width-desktop;
 		max-width: 220px;
@@ -51,7 +50,7 @@
 	}
 
 	&.fixed {
-		@media (min-width: 60em) {
+		@include desktop {
 			position: fixed;
 			top: 0;
 			overflow-y: auto;

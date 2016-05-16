@@ -9,7 +9,7 @@
 	.f-nav {
 		font-size: inherit;
 
-		@media (min-width: 60em) {
+		@include desktop {
 			height: 35px;
 		}
 	}
@@ -20,7 +20,7 @@
 		font-family: "Gotham Medium";
 		line-height: 1.5rem;
 
-		@media (min-width: 60em) {
+		@include desktop {
 			display: inline-block;
 			vertical-align: middle;
 		}
@@ -40,7 +40,7 @@
 	.f-nav {
 		display: none;
 
-		@media (min-width: 60em) {
+		@include desktop {
 			display: inline-block;
 			vertical-align: middle;
 		}
@@ -66,11 +66,6 @@
 	color: #ffffff;
 	padding: 4.813em 0;
 	width: 100%;
-	display: none;
-
-	@media (min-width: 60em) {
-		display: block;
-	}
 
 	.f-header-center {
 		max-width: $max-width;
@@ -94,6 +89,17 @@
 			h1 {
 				font-size: 3rem;
 			}
+		}
+	}
+}
+
+.f-header-top,
+.f-header {
+	@include transition;
+
+	.f-menu-active & {
+		@include mobile {
+			transform: translate($menu-width-mobile, 0);
 		}
 	}
 }

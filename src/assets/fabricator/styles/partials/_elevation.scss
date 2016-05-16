@@ -5,7 +5,7 @@
 	background-color: map-get($code-colors, light-gray);
 	display: inline-block;
 
-	@media (min-width: 60em) {
+	@include desktop {
 		width: 88px;
 		height: 88px;
 	}

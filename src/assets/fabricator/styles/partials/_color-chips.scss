@@ -17,7 +17,7 @@
 	padding: 1em;
 	margin-bottom: 2em;
 
-	@media (min-width: 60em) {
+	@include desktop {
 		flex-basis: 13em;
 	}
 

@@ -107,7 +107,7 @@
 }
 
 .f-example-inline {
-	@media (min-width: 60em) {
+	@include desktop {
 		display: inline-block;
 		margin-right: 2em;
 	}
@@ -118,7 +118,7 @@
 	font-weight: 600;
 	font-size: 0.75rem;
 
-	@media (min-width: 60em) {
+	@include desktop {
 		text-align: center;
 	}
 }

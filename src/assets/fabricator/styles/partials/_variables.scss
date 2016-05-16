@@ -56,6 +56,8 @@ $content-width: map-get($settings, content-width);
     @return map-get($colors, $color);
 }
 
+$desktop-size: 61em;
+$mobile-size: 60em;
 
 // mixins
 @mixin clearfix {
@@ -77,4 +79,16 @@ $content-width: map-get($settings, content-width);
 @mixin transition( $param: all ease .5s ) {
 	transition: $param;
 	-webkit-transition: $param;
+}
+
+@mixin desktop {
+	@media screen and ( min-width: $desktop-size ) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and ( max-width: $mobile-size ) {
+		@content;
+	}
 }
