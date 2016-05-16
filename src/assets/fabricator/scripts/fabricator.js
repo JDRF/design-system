@@ -28,7 +28,6 @@ require('./prism');
 			var self = this,
 				toggle = this.dom.menuToggle,
 				htmlEl = this.dom.root,
-				options = getOptions(),
 				menuItems = this.dom.menuItems;
 
 			/**
@@ -43,32 +42,9 @@ require('./prism');
 			// open menu by default if large screen
 			this.options.menu = window.matchMedia(this.options.mq).matches;
 
-			/**
-			 * Feature detection
-			 * @type {Object}
-			 */
-			this.test = {};
-
-			// test for sessionStorage
-			this.test.sessionStorage = (function () {
-				var test = '_f';
-				try {
-					sessionStorage.setItem(test, test);
-					sessionStorage.removeItem(test);
-					return true;
-				} catch(e) {
-					return false;
-				}
-			}());
-
-			// create storage object if it doesn't exist; store options
-			if (this.test.sessionStorage) {
-				sessionStorage.self = sessionStorage.self || JSON.stringify(self.options);
-			}
-
 			// toggle classes on click
 			toggle.addEventListener('click', function () {
-				toggleClasses( htmlEl, options );
+				toggleClasses( htmlEl );
 			});
 
 			for ( var i = 0; i < menuItems.length; i++ ) {
@@ -77,17 +53,9 @@ require('./prism');
 
 			/* pass dom selectors to functions */
 			designsystem.setActiveItem( menuItems );
+			designsystem.setInitialMenuState();
 
 		} /* end initialize */
-
-		/**
-		 * Get current option values from session storage
-		 * @return {Object}
-		 */
-		function getOptions() {
-			console.log('getOptions function');
-			//return (this.test.sessionStorage) ? JSON.parse(sessionStorage.this) : this.options;
-		}
 
 		/**
 		 * Build color chips
@@ -149,23 +117,17 @@ require('./prism');
 		 * Toggle f-menu-active class
 		 *
 		 */
-		function toggleClasses ( htmlEl, options ) {
+		function toggleClasses ( htmlEl ) {
 			//TODO: Replace ClassList!
-			var menuClassList = htmlEl.className.split(' ');
-			options.menu = !htmlEl.classList.contains('f-menu-active');
 			htmlEl.classList.toggle('f-menu-active');
-
-			if (fabricator.test.sessionStorage) {
-				sessionStorage.setItem('fabricator', JSON.stringify(options));
-			}
 		}
 
 		/**
 		* Close menu when clicking on item (for collapsed menu view)
 		*
 		*/
-		function closeMenu () {
-			if (!window.matchMedia(fabricator.options.mq).matches) {
+		function closeMenu (e) {
+			if (!window.matchMedia(this.options.mq).matches) {
 				toggleClasses();
 			}
 		}
@@ -174,8 +136,7 @@ require('./prism');
 		 * Open/Close menu based on session var.
 		 * Also attach a media query listener to close the menu when resizing to smaller screen.
 		 */
-		function setInitialMenuState(e) {
-			console.log('setInitialMenuState');
+		function setInitialMenuState() {
 
 			// root element
 			var root = document.querySelector('html');
@@ -184,14 +145,11 @@ require('./prism');
 
 			// if small screen
 			var mediaChangeHandler = function (list) {
+				console.log(list.matches);
 				if (!list.matches) {
 					removeClass( root, 'f-menu-active');
 				} else {
-					if (getOptions().menu) {
-						addClass( root, 'f-menu-active');
-					} else {
-						removeClass( root, 'f-menu-active');
-					}
+					addClass( root, 'f-menu-active');
 				}
 			};
 
