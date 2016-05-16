@@ -19,10 +19,10 @@ require('./prism');
 			 * @type {Object}
 			 */
 			this.dom = {
-				root: document.querySelector('html'),
-				primaryMenu: document.querySelector('.f-menu'),
-				menuItems: document.querySelectorAll('.f-menu li a'),
-				menuToggle: document.querySelector('.f-menu-toggle')
+				root: document.querySelector( 'html' ),
+				primaryMenu: document.querySelector( '.f-menu' ),
+				menuItems: document.querySelectorAll( '.f-menu li a' ),
+				menuToggle: document.querySelector( '.f-menu-toggle' )
 			};
 
 			var self = this,
@@ -40,7 +40,7 @@ require('./prism');
 			};
 
 			// open menu by default if large screen
-			this.options.menu = window.matchMedia(this.options.mq).matches;
+			this.options.menu = window.matchMedia( this.options.mq ).matches;
 
 			// toggle classes on click
 			toggle.addEventListener('click', function () {
@@ -60,15 +60,15 @@ require('./prism');
 		/**
 		 * Build color chips
 		 */
-		function buildColorChips(e) {
+		function buildColorChips() {
 
-			var chips = document.querySelectorAll('.f-color-chip'),
+			var chips = document.querySelectorAll( '.f-color-chip' ),
 				color;
 
-			for (var i = chips.length - 1; i >= 0; i--) {
-				color = chips[i].querySelector('.f-color-chip__color').innerHTML;
-				chips[i].style.borderTopColor = color;
-				chips[i].style.borderBottomColor = color;
+			for ( var i = chips.length - 1; i >= 0; i-- ) {
+				color = chips[ i ].querySelector( '.f-color-chip__color' ).innerHTML;
+				chips[ i ].style.borderTopColor = color;
+				chips[ i ].style.borderBottomColor = color;
 			}
 		}
 
@@ -87,7 +87,7 @@ require('./prism');
 			function setActive( menuItems ) {
 
 				// get current file and hash without first slash
-				var current = (window.location.pathname + window.location.hash).replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
+				var current = (window.location.pathname + window.location.hash).replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function ( match, slash, file, hash ) {
 						hash = hash || '';
 						file = file.replace( 'dist/', '' ).replace( 'design-system/', '' ) || '';
 						// Currently, without a scrolling listener, there's no way to
@@ -98,11 +98,11 @@ require('./prism');
 					href;
 
 				// find the current section in the items array
-				for (var i = menuItems.length - 1; i >= 0; i--) {
+				for ( var i = menuItems.length - 1; i >= 0; i-- ) {
 
-					var item = menuItems[i];
+					var item = menuItems[ i ];
 					// get item href without first slash
-					href = item.getAttribute('href').replace(/^\//g, '');
+					href = item.getAttribute( 'href' ).replace(/^\//g, '');
 
 					if ( href === current ) {
 						addClass( item, 'current' );
@@ -119,15 +119,15 @@ require('./prism');
 		 */
 		function toggleClasses ( htmlEl ) {
 			//TODO: Replace ClassList!
-			htmlEl.classList.toggle('f-menu-active');
+			htmlEl.classList.toggle( 'f-menu-active' );
 		}
 
 		/**
 		* Close menu when clicking on item (for collapsed menu view)
 		*
 		*/
-		function closeMenu (e) {
-			if (!window.matchMedia(this.options.mq).matches) {
+		function closeMenu () {
+			if ( !window.matchMedia( this.options.mq ).matches ) {
 				toggleClasses();
 			}
 		}
@@ -139,28 +139,27 @@ require('./prism');
 		function setInitialMenuState() {
 
 			// root element
-			var root = document.querySelector('html');
+			var root = document.querySelector( 'html' );
 
-			var mq = window.matchMedia(this.options.mq);
+			var mq = window.matchMedia( this.options.mq );
 
 			// if small screen
-			var mediaChangeHandler = function (list) {
-				console.log(list.matches);
-				if (!list.matches) {
-					removeClass( root, 'f-menu-active');
+			var mediaChangeHandler = function ( list ) {
+				if ( !list.matches ) {
+					removeClass( root, 'f-menu-active' );
 				} else {
-					addClass( root, 'f-menu-active');
+					addClass( root, 'f-menu-active' );
 				}
 			};
 
-			mq.addListener(mediaChangeHandler);
-			mediaChangeHandler(mq);
+			mq.addListener( mediaChangeHandler );
+			mediaChangeHandler( mq );
 		}
 
 		/**
 		 * Add fixed class to sidebar on scroll
 		 */
-		function fixSidebar(e) {
+		function fixSidebar() {
 			var dsHeaderTop  = document.querySelector( '.f-header-top' ),
 				dsHeader  = document.querySelector( '.f-header' ),
 				dsSidebar = document.querySelector( '.f-menu' ),
@@ -181,7 +180,7 @@ require('./prism');
 				return;
 			}
 
-			window.onscroll = function(e) {
+			window.onscroll = function() {
 				var topOffset = window.pageYOffset;
 
 				if ( window.pageYOffset > totalHeaderHeight ) {
