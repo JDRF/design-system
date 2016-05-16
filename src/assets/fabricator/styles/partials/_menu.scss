@@ -26,7 +26,6 @@
 		width: $menu-width-mobile;
 		height: 100%;
 		z-index: 1;
-		margin-left: 1rem;
 		overflow: hidden;
 	}
 
@@ -65,6 +64,7 @@
 	width: 85%;
 	margin-top: 5px;
 	border-color: #66afe9;
+
 	&.hide {
 		padding: 0;
 		border: none;
@@ -73,6 +73,7 @@
 		width: 100%;
 		font-size: 0.875rem;
 		color: map-get($code-colors, dark-gray);
+
 		&:hover {
 			color: map-get($code-colors, black);
 		}

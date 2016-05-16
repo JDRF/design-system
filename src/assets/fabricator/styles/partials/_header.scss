@@ -19,11 +19,8 @@
 		color: color(primary-light);
 		font-family: "Gotham Medium";
 		line-height: 1.5rem;
-
-		@include desktop {
-			display: inline-block;
-			vertical-align: middle;
-		}
+		display: inline-block;
+		vertical-align: middle;
 
 		svg,
 		span {
@@ -51,7 +48,7 @@
 				width: 100%;
 				margin-left: 0;
 
-				@media (min-width: 60em) {
+				@include desktop {
 					display: inline-block;
 					width: auto;
 					margin-left: 1rem;
@@ -66,6 +63,7 @@
 	color: #ffffff;
 	padding: 4.813em 0;
 	width: 100%;
+	margin-bottom: 2em;
 
 	.f-header-center {
 		max-width: $max-width;
