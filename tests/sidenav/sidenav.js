@@ -1,5 +1,5 @@
 casper.
-	start('http://localhost:3000/dist/components.html#side-navigation').
+	start('http://localhost:3000/dist/components.html').
 	then(function(){
 		phantomcss.screenshot('#phantom-sidebar-single', 'Sidebar Single Level');
 	}).
