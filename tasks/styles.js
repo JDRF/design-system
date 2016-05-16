@@ -20,27 +20,23 @@ module.exports = function (gulp, plugins) {
 			})) 
 			/*
 			* After scss lint and including bootstrap path,
-			* concat to plain css in a file called sass-files.css
+			* rename to plain css in a file called sass-files.css
 			*/
-			.pipe(plugins.concat('sass-files.css'));
+			.pipe(plugins.rename('sass-files.css'));
 
-		//grab the material icons stylesheet and concat into css-files.css
+		//grab the material icons stylesheet and rename to css-files.css
 		var cssStream = gulp.src('./node_modules/material-icons/css/material-icons.css')
-			.pipe(plugins.concat('css-files.css'));
+			.pipe(plugins.rename('css-files.css'));
 
 		//merge sass-files.css and css-files.css into design-system.css in the dist dir
 		var stream = plugins.merge(sassStream, cssStream)
 			.pipe(plugins.concat('design-system.css'))
-			.pipe(gulp.dest(__dirname + '/../dist/css'));
-
-		//use design-system.css to create a minified version in the dist dir
-		var minifyStream = gulp.src([
-			__dirname + '/../dist/design-system.css'
-			])
+			.pipe(gulp.dest(__dirname + '/../dist/css'))
 			.pipe(plugins.minifycss())
+			.pipe(plugins.rename('design-system.min.css'))
 			.pipe(gulp.dest(__dirname + '/../dist/css'));
 
-		return minifyStream;
+		return stream;
 	};
 
 };
