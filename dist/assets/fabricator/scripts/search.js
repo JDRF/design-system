@@ -43,6 +43,9 @@ module.exports = {
 			menuToggle: document.querySelector( '.f-menu-toggle' )
 		};
 
+		/**
+		 * Set cached DOM as variables and set this to self
+		 */
 		var self = this,
 			toggle = this.dom.menuToggle,
 			htmlEl = this.dom.root,
@@ -65,11 +68,12 @@ module.exports = {
 			self.toggleClasses( htmlEl );
 		});
 
+		// close menu when clicking menu items
 		for ( var i = 0; i < menuItems.length; i++ ) {
 			menuItems[i].addEventListener( 'click', this.closeMenu );
 		}
 
-		/* pass dom selectors to functions */
+		// pass dom selectors to functions
 		this.setActiveItem( menuItems );
 		this.setInitialMenuState();
 
@@ -141,7 +145,6 @@ module.exports = {
 
 	/**
 	 * Toggle f-menu-active class
-	 *
 	 */
 	toggleClasses: function( htmlEl ) {
 		if( ! helpers.hasClass( htmlEl, 'f-menu-active' ) ){
@@ -155,7 +158,6 @@ module.exports = {
 
 	/**
 	* Close menu when clicking on item (for collapsed menu view)
-	*
 	*/
 	closeMenu: function () {
 		if ( !window.matchMedia( this.options.mq ).matches ) {
