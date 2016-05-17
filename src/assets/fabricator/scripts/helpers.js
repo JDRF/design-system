@@ -10,7 +10,7 @@ module.exports = {
 	/**
 	 * Helper: Add Class to Element
 	 */
-	addClass: function ( el, className ) {
+	addClass: function( el, className ) {
 		//Check if element is undefined or null first
 		if ( 'undefined' === typeof el || null === el ) {
 			return;
@@ -25,7 +25,7 @@ module.exports = {
 	/**
 	 * Helper: Remove Class from Element
 	 */
-	removeClass: function ( el, className ) {
+	removeClass: function( el, className ) {
 		//Check if element is undefined or null first
 		if ( 'undefined' === typeof el || null === el ) {
 			return;
