@@ -10,8 +10,12 @@ var search = require( './search' ),
 ( function() {
 
 	search.init();
-	prism.init();
-	helpers.init();
+	helpers.addClass();
+	helpers.removeClass();
 	fabricator.init();
+	fabricator.buildColorChips();
+	fabricator.setActiveItem();
+	fabricator.setInitialMenuState();
+	fabricator.fixSidebar();
 
 } )();

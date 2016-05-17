@@ -11,9 +11,13 @@ var search = require( './search' ),
 ( function() {
 
 	search.init();
-	prism.init();
-	helpers.init();
+	helpers.addClass();
+	helpers.removeClass();
 	fabricator.init();
+	fabricator.buildColorChips();
+	fabricator.setActiveItem();
+	fabricator.setInitialMenuState();
+	fabricator.fixSidebar();
 
 } )();
 
@@ -63,12 +67,12 @@ module.exports = {
 		});
 
 		for ( var i = 0; i < menuItems.length; i++ ) {
-			menuItems[i].addEventListener( 'click', designsystem.closeMenu );
+			menuItems[i].addEventListener( 'click', this.closeMenu );
 		}
 
 		/* pass dom selectors to functions */
-		designsystem.setActiveItem( menuItems );
-		designsystem.setInitialMenuState();
+		this.setActiveItem( menuItems );
+		this.setInitialMenuState();
 
 		return this;
 
@@ -124,9 +128,9 @@ module.exports = {
 				href = item.getAttribute( 'href' ).replace(/^\//g, '');
 
 				if ( href === current ) {
-					addClass( item, 'current' );
+					this.addClass( item, 'current' );
 				} else {
-					removeClass( item, 'current' );
+					this.removeClass( item, 'current' );
 				}
 			}
 		}
@@ -167,9 +171,9 @@ module.exports = {
 		// if small screen
 		var mediaChangeHandler = function ( list ) {
 			if ( !list.matches ) {
-				removeClass( root, 'f-menu-active' );
+				this.removeClass( root, 'f-menu-active' );
 			} else {
-				addClass( root, 'f-menu-active' );
+				this.addClass( root, 'f-menu-active' );
 			}
 		};
 
@@ -207,9 +211,9 @@ module.exports = {
 			var topOffset = window.pageYOffset;
 
 			if ( window.pageYOffset > totalHeaderHeight ) {
-				addClass( dsSidebar, 'fixed' );
+				this.addClass( dsSidebar, 'fixed' );
 			} else {
-				removeClass( dsSidebar, 'fixed' );
+				this.removeClass( dsSidebar, 'fixed' );
 			}
 		};
 
