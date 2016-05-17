@@ -50,6 +50,6 @@ module.exports = {
 			return false;
 		}
 
-		return el.className.indexOf( ' ' + className ) > -1;
+		return el.className.indexOf( className ) > -1;
 	}
 };
