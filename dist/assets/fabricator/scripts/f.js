@@ -64,6 +64,7 @@ module.exports = {
 
 	/**
 	 * Build color chips
+	 * @return {Object}
 	 */
 	buildColorChips: function() {
 
@@ -81,6 +82,7 @@ module.exports = {
 
 	/**
 	 * Add `f-active` class to active menu item
+	 * @return {Object}
 	 */
 	setActiveItem: function( menuItems ) {
 
@@ -149,6 +151,7 @@ module.exports = {
 	/**
 	 * Open/Close menu based on session var.
 	 * Also attach a media query listener to close the menu when resizing to smaller screen.
+	 * @return {Object}
 	 */
 	setInitialMenuState: function() {
 
@@ -174,6 +177,7 @@ module.exports = {
 
 	/**
 	 * Add fixed class to sidebar on scroll
+	 * @return {Object}
 	 */
 	fixSidebar: function() {
 		var dsHeaderTop  = document.querySelector( '.f-header-top' ),
