@@ -9,9 +9,17 @@
 		left: 0;
 		transform: translate(-$menu-width-mobile - 30, 0);
 		width: $menu-width-mobile;
+		height: 100%;
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
+		padding: 1rem;
+	}
+
+	&.sidebar {
+		@include mobile {
+			width: $menu-width-mobile;
+		}
 	}
 
 	.f-menu-active & {
@@ -24,7 +32,6 @@
 	.f-menu {
 		@include border-box;
 		width: $menu-width-mobile;
-		height: 100%;
 		z-index: 1;
 		overflow: hidden;
 	}
@@ -56,6 +63,10 @@
 			height: 90%;
 			padding-bottom: 65px;
 		}
+	}
+
+	.f-search {
+		width: 85%;
 	}
 }
 
