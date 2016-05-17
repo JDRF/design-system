@@ -4,15 +4,11 @@
 'use strict';
 
 var search = require( './search' ),
-	prism = require('./prism' ),
-	helpers = require( './helpers' ),
 	fabricator = require( './fabricator' );
 
 ( function() {
 
 	search.init();
-	helpers.addClass();
-	helpers.removeClass();
 	fabricator.init();
 	fabricator.buildColorChips();
 	fabricator.setActiveItem();
@@ -21,7 +17,7 @@ var search = require( './search' ),
 
 } )();
 
-},{"./fabricator":2,"./helpers":3,"./prism":4,"./search":5}],2:[function(require,module,exports){
+},{"./fabricator":2,"./search":5}],2:[function(require,module,exports){
 /**
  * Fabricator Module
  *
@@ -29,6 +25,9 @@ var search = require( './search' ),
  */
 
 'use strict';
+
+var prism = require('./prism' ),
+	helpers = require( './helpers' );
 
 module.exports = {
 
@@ -63,7 +62,7 @@ module.exports = {
 
 		// toggle classes on click
 		toggle.addEventListener('click', function () {
-			toggleClasses( htmlEl );
+			self.toggleClasses( htmlEl );
 		});
 
 		for ( var i = 0; i < menuItems.length; i++ ) {
@@ -102,7 +101,9 @@ module.exports = {
 
 		window.addEventListener( 'hashchange', setActive );
 
-		setActive( menuItems );
+		if ( 'undefined' !== typeof menuItems ) {
+			setActive( menuItems );
+		}
 
 		/**
 		 * Match the window location with the menu item, set menu item as active
@@ -128,9 +129,9 @@ module.exports = {
 				href = item.getAttribute( 'href' ).replace(/^\//g, '');
 
 				if ( href === current ) {
-					this.addClass( item, 'current' );
+					helpers.addClass( item, 'current' );
 				} else {
-					this.removeClass( item, 'current' );
+					helpers.removeClass( item, 'current' );
 				}
 			}
 		}
@@ -143,8 +144,13 @@ module.exports = {
 	 *
 	 */
 	toggleClasses: function( htmlEl ) {
-		//TODO: Replace ClassList!
-		htmlEl.classList.toggle( 'f-menu-active' );
+		if( ! helpers.hasClass( htmlEl, 'f-menu-active' ) ){
+			//if it does not have class, add it
+			helpers.addClass( htmlEl, 'f-menu-active');
+		} else {
+			//if it does have class, then remove it
+			helpers.removeClass( htmlEl, 'f-menu-active');
+		}
 	},
 
 	/**
@@ -153,7 +159,7 @@ module.exports = {
 	*/
 	closeMenu: function () {
 		if ( !window.matchMedia( this.options.mq ).matches ) {
-			toggleClasses();
+			this.toggleClasses();
 		}
 	},
 
@@ -171,9 +177,9 @@ module.exports = {
 		// if small screen
 		var mediaChangeHandler = function ( list ) {
 			if ( !list.matches ) {
-				this.removeClass( root, 'f-menu-active' );
+				helpers.removeClass( root, 'f-menu-active' );
 			} else {
-				this.addClass( root, 'f-menu-active' );
+				helpers.addClass( root, 'f-menu-active' );
 			}
 		};
 
@@ -211,9 +217,9 @@ module.exports = {
 			var topOffset = window.pageYOffset;
 
 			if ( window.pageYOffset > totalHeaderHeight ) {
-				this.addClass( dsSidebar, 'fixed' );
+				helpers.addClass( dsSidebar, 'fixed' );
 			} else {
-				this.removeClass( dsSidebar, 'fixed' );
+				helpers.removeClass( dsSidebar, 'fixed' );
 			}
 		};
 
@@ -223,7 +229,7 @@ module.exports = {
 
 
 
-},{}],3:[function(require,module,exports){
+},{"./helpers":3,"./prism":4}],3:[function(require,module,exports){
 /**
  * Helpers Module
  *
@@ -242,7 +248,7 @@ module.exports = {
 			return;
 		}
 		// So we don't have duplicates
-		removeClass( el, className );
+		this.removeClass( el, className );
 		el.className += ' ' + className;
 
 		return this;
@@ -265,6 +271,18 @@ module.exports = {
 		}
 
 		return this;
+	},
+
+	/**
+	 * Helper to cehck for className on an element
+	 */
+	hasClass: function( el, className ) {
+		//Check if element is undefined or null first
+		if ( 'undefined' === typeof el || null === el ) {
+			return false;
+		}
+
+		return el.className.indexOf( ' ' + className ) > -1;
 	}
 };
 },{}],4:[function(require,module,exports){

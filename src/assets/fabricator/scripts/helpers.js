@@ -16,7 +16,7 @@ module.exports = {
 			return;
 		}
 		// So we don't have duplicates
-		removeClass( el, className );
+		this.removeClass( el, className );
 		el.className += ' ' + className;
 
 		return this;
@@ -39,5 +39,17 @@ module.exports = {
 		}
 
 		return this;
+	},
+
+	/**
+	 * Helper to cehck for className on an element
+	 */
+	hasClass: function( el, className ) {
+		//Check if element is undefined or null first
+		if ( 'undefined' === typeof el || null === el ) {
+			return false;
+		}
+
+		return el.className.indexOf( ' ' + className ) > -1;
 	}
 };
