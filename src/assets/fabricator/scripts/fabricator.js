@@ -98,14 +98,13 @@ module.exports = {
 
 			// get current file and hash without first slash
 			var current = (window.location.pathname + window.location.hash).replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function ( match, slash, file, hash ) {
-					hash = hash || '';
-					file = file.replace( 'dist/', '' ).replace( 'design-system/', '' ) || '';
-					// Currently, without a scrolling listener, there's no way to
-					// change as we visit new 'hashes'. Better to leave at top
-					// level link
-					return './' + file; // + hash.split('.')[0];
-				}) || 'index.html',
-				href;
+				hash = hash || '';
+				file = file.replace( 'dist/', '' ).replace( 'design-system/', '' ) || '';
+				// Currently, without a scrolling listener, there's no way to
+				// change as we visit new 'hashes'. Better to leave at top
+				// level link
+				return './' + file; // + hash.split('.')[0];
+			}) || 'index.html', href;
 
 			// find the current section in the items array
 			for ( var i = menuItems.length - 1; i >= 0; i-- ) {
