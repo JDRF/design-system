@@ -19,20 +19,20 @@
 <body>
 	{{> f-header}}
 
-	<div class="f-container">
-	{{#if fabricator}}
-		{{> f-icons}}
-		{{#if deeplink}}
-			{{> f-menu-deeplink}}
-		{{else}}
-			{{> f-menu}}
-		{{/if}}
-	{{/if}}
-
-	<main class="f-content">
-		{% body %}
-	</main>
-
+	<div class="f-container container">
+		<div class="row">
+			{{#if fabricator}}
+				{{> f-icons}}
+				{{#if deeplink}}
+					{{> f-menu-deeplink}}
+				{{else}}
+					{{> f-menu}}
+				{{/if}}
+			{{/if}}
+			<main class="f-content col-md-8 col-lg-9" role="main">
+				{% body %}
+			</main>
+		</div>
 	</div>
 	{{#if fabricator}}<script src="./{{baseurl}}/assets/fabricator/scripts/f.js"></script>{{/if}}
 	{{#if fabricator}}<script src="./{{baseurl}}/assets/fabricator/scripts/search.js"></script>{{/if}}

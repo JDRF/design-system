@@ -56,8 +56,9 @@ $content-width: map-get($settings, content-width);
     @return map-get($colors, $color);
 }
 
-$desktop-size: 61em;
-$mobile-size: 60em;
+//match Bootstrap's BPs
+$desktop-size: 768px;
+$mobile-size: 767px;
 
 // mixins
 @mixin clearfix {

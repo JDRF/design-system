@@ -4,7 +4,6 @@
 	@include transition;
 
 	@include mobile {
-		position: absolute;
 		top: 0;
 		left: 0;
 		transform: translate(-$menu-width-mobile - 30, 0);
@@ -18,6 +17,7 @@
 
 	&.sidebar {
 		@include mobile {
+			position: absolute;
 			width: $menu-width-mobile;
 		}
 	}
@@ -46,7 +46,6 @@
 }
 
 .f-menu {
-	float: left;
 
 	@include desktop {
 		margin-top: 65px;

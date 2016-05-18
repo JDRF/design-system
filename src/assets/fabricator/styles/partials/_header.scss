@@ -61,13 +61,15 @@
 .f-header {
 	background-color: color(primary-light);
 	color: #ffffff;
-	padding: 4.813em 0;
+	padding: 2.813em 0;
 	width: 100%;
 	margin-bottom: 2em;
 
+	@include desktop {
+		padding: 4.813em 0;
+	}
+
 	.f-header-center {
-		max-width: $max-width;
-		margin: auto;
 		padding: 0 1em;
 		font-family: "Gotham Light";
 
