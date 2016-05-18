@@ -4697,7 +4697,7 @@ input[type="button"].btn-block {
 
 /* Bootstrap overwrites: nav.scss */
 .sidebar {
-  width: 260px; }
+  max-width: 260px; }
   .sidebar .nav-item .nav-link {
     font-family: "Gotham Medium", sans-serif;
     border-left: 2px solid #e0e0e0;
