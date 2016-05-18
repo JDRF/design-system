@@ -2430,6 +2430,7 @@
 /**
  * Overwrite files that import Bootstrap components individually
  */
+/* == Grid ======== */
 /* == Colors ======== */
 /* == Fonts ======== */
 /* 14px */
@@ -2890,7 +2891,7 @@ p {
   font-size: 0.875rem;
   line-height: 1.25rem;
   margin-bottom: 1.25rem; }
-  @media (min-width: 544px) {
+  @media (min-width: 360px) {
     p {
       font-size: 1rem;
       line-height: 1.5rem;
@@ -2920,7 +2921,7 @@ h1,
   font-size: 2rem;
   line-height: 2.25rem;
   margin-bottom: 1.125rem; }
-  @media (min-width: 544px) {
+  @media (min-width: 360px) {
     h1,
     .h1 {
       font-size: 2.25rem;
@@ -2938,7 +2939,7 @@ h2,
   font-size: 1.5rem;
   line-height: 1.75rem;
   margin-bottom: 0.875rem; }
-  @media (min-width: 544px) {
+  @media (min-width: 360px) {
     h2,
     .h2 {
       font-size: 1.75rem;
@@ -2957,7 +2958,7 @@ h3,
   font-size: 1.25rem;
   line-height: 1.5rem;
   margin-bottom: 0.75rem; }
-  @media (min-width: 544px) {
+  @media (min-width: 360px) {
     h3,
     .h3 {
       font-family: "Gotham Medium", sans-serif;
@@ -2988,7 +2989,7 @@ h6,
   line-height: 1.5rem;
   font-weight: 300;
   font-family: "Gotham Light", sans-serif; }
-  @media (min-width: 544px) {
+  @media (min-width: 360px) {
     .lead {
       font-size: 1.125rem;
       /* same line height as XS */ } }
@@ -3110,7 +3111,7 @@ mark,
     content: "";
     display: table;
     clear: both; }
-  @media (min-width: 544px) {
+  @media (min-width: 360px) {
     .container {
       max-width: 576px; } }
   @media (min-width: 768px) {
@@ -3303,7 +3304,7 @@ mark,
 .col-xs-offset-12 {
   margin-left: 100%; }
 
-@media (min-width: 544px) {
+@media (min-width: 360px) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left; }
   .col-sm-1 {
@@ -3958,7 +3959,7 @@ input[type="checkbox"].disabled {
 .has-danger .form-control-danger {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZDk1MzRmIiBkPSJNNDQ3IDU0NC40Yy0xNC40IDE0LjQtMzcuNiAxNC40LTUyIDBsLTg5LTkyLjctODkgOTIuN2MtMTQuNSAxNC40LTM3LjcgMTQuNC01MiAwLTE0LjQtMTQuNC0xNC40LTM3LjYgMC01Mmw5Mi40LTk2LjMtOTIuNC05Ni4zYy0xNC40LTE0LjQtMTQuNC0zNy42IDAtNTJzMzcuNi0xNC4zIDUyIDBsODkgOTIuOCA4OS4yLTkyLjdjMTQuNC0xNC40IDM3LjYtMTQuNCA1MiAwIDE0LjMgMTQuNCAxNC4zIDM3LjYgMCA1MkwzNTQuNiAzOTZsOTIuNCA5Ni40YzE0LjQgMTQuNCAxNC40IDM3LjYgMCA1MnoiLz48L3N2Zz4="); }
 
-@media (min-width: 544px) {
+@media (min-width: 360px) {
   .form-inline .form-group {
     display: inline-block;
     margin-bottom: 0;
@@ -4696,7 +4697,7 @@ input[type="button"].btn-block {
 
 /* Bootstrap overwrites: nav.scss */
 .sidebar {
-  width: 260px; }
+  max-width: 260px; }
   .sidebar .nav-item .nav-link {
     font-family: "Gotham Medium", sans-serif;
     border-left: 2px solid #e0e0e0;
@@ -4734,7 +4735,7 @@ input[type="button"].btn-block {
 .pull-xs-none {
   float: none !important; }
 
-@media (min-width: 544px) {
+@media (min-width: 360px) {
   .pull-sm-left {
     float: left !important; }
   .pull-sm-right {
@@ -4814,7 +4815,7 @@ input[type="button"].btn-block {
 .text-xs-center {
   text-align: center !important; }
 
-@media (min-width: 544px) {
+@media (min-width: 360px) {
   .text-sm-left {
     text-align: left !important; }
   .text-sm-right {
@@ -5140,11 +5141,11 @@ a.bg-danger:focus, a.bg-danger:hover {
 .hidden-xs-up {
   display: none !important; }
 
-@media (max-width: 543px) {
+@media (max-width: 359px) {
   .hidden-xs-down {
     display: none !important; } }
 
-@media (min-width: 544px) {
+@media (min-width: 360px) {
   .hidden-sm-up {
     display: none !important; } }
 
