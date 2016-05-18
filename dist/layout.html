@@ -6,7 +6,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Download</title>
+	<title>Layout</title>
 
 	<link rel="stylesheet" href=".//assets/fabricator/styles/f.css">
 
@@ -47,8 +47,8 @@
 		</nav></div>
 	<div class="f-header">
 		<div class="f-header-center">
-			<h2 class="f-header-title">Download</h2>
-			<p class="f-header-content">This is the Download page.</p>
+			<h2 class="f-header-title">Layout</h2>
+			<p class="f-header-content">This is the Layout page.</p>
 		</div>
 	</div>
 
@@ -169,40 +169,81 @@
 
 	<main class="f-content">
 		
-<h2>Download</h2>
 
-<p>You can download the latest pre-release
-	<a href="https://github.com/JDRF/design-system/tree/v0.0.1" target="_blank">
-		here on Github</a>.We'd suggest following the outlined options below.</p>
+<div class="f-item-group" id="grid">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Grid</h2>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>You can read more about <a href="http://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">how to use the grid</a> from Bootstrap's documentation.</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="f-section">
+	<h3 class="f-example-title">Three Columns</h3>
+	<div class="f-example">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 f-col one">
+					First of three columns
+				</div>
+				<div class="col-md-4 f-col two">
+					Second of three columns
+				</div>
+				<div class="col-md-4 f-col three">
+					Third of three columns
+				</div>
+			</div>
+		</div>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;row&quot;>
+    &lt;div class=&quot;col-md-4&quot;>
+      First of three columns
+    &lt;/div>
+    &lt;div class=&quot;col-md-4&quot;>
+      Second of three columns
+    &lt;/div>
+    &lt;div class=&quot;col-md-4&quot;>
+      Third of three columns
+    &lt;/div>
+&lt;/div></code></pre>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Three Columns&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;div class=&quot;container&quot;&gt;
+			&lt;div class=&quot;row&quot;&gt;
+				&lt;div class=&quot;col-md-4 f-col one&quot;&gt;
+					First of three columns
+				&lt;/div&gt;
+				&lt;div class=&quot;col-md-4 f-col two&quot;&gt;
+					Second of three columns
+				&lt;/div&gt;
+				&lt;div class=&quot;col-md-4 f-col three&quot;&gt;
+					Third of three columns
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;row&amp;quot;&gt;
+    &amp;lt;div class=&amp;quot;col-md-4&amp;quot;&gt;
+      First of three columns
+    &amp;lt;/div&gt;
+    &amp;lt;div class=&amp;quot;col-md-4&amp;quot;&gt;
+      Second of three columns
+    &amp;lt;/div&gt;
+    &amp;lt;div class=&amp;quot;col-md-4&amp;quot;&gt;
+      Third of three columns
+    &amp;lt;/div&gt;
+&amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;</code></pre>
+</div>
 
 
-<p>To use Design System, copy/download the file found on the
-	<a href="https://github.com/JDRF/design-system/tree/master/dist/css" target="_blank">master branch</a>
-	to your website. This file contains all current components and provides
-	support for any needed icons, typography, or styling. We recommend including
-	it in the HEAD html tag for use throughout your website/application.
+</div>
 
-<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;/&lt;PATH TO CSS>/design-system.css&quot;></code></pre>
-</p>
-
-<p>Currently, Design System only supports a few components - none of which require
-	JavaScript. If font files are needed for the website/application, copy/download
-	the font files found in the
-	<a href="https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham" target="_blank">master branch</a>
-	It's recommended to place the font folder in a similar path to the CSS files.
-<pre class="language-markup"><code class="language-markup">
-└── ./
-	├── css/
-		└──  design-system.css
-	└── fonts/
-		└──  gotham/
-</code></pre>
-
-If icons are a requirement, Design System already includes all necessary styles, but requires the font file from Google's CDN. Include this in the `HEAD` html tag right before the Design System css file.
-
-<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;>
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/&lt;PATH TO CSS>/design-system.css&quot;></code></pre>
-</p>
 
 	</main>
 

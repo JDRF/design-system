@@ -1,0 +1,16 @@
+.f-col {
+	padding: 2rem;
+	color: #fff;
+
+	&.one {
+		background-color: color(primary-light);
+	}
+
+	&.two {
+		background-color: color(accent);
+	}
+
+	&.three {
+		background-color: color(primary-dark);
+	}
+}
