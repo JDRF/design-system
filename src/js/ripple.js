@@ -1,135 +1,141 @@
-;(function($, document, Math){
-    $.ripple = function(selector, options) {
+( function( $, document, Math ) {
 
-        var self = this;
+	'use strict';
 
-        var _log = self.log = function() {
-            if(self.defaults.debug && console && console.log) {
-                console.log.apply(console, arguments);
-            }
-        };
+	$.ripple = function( selector, options ) {
 
-        self.selector = selector;
-        self.defaults = {
-            debug: false,
-            on: 'mousedown',
+		var self = this;
 
-            opacity: 0.4,
-            color: "auto",
-            multi: false,
+		// var _log = self.log = function() {
+		// 	if ( self.defaults.debug && console && console.log ) {
+		// 		console.log.apply( console, arguments );
+		// 	}
+		// };
 
-            duration: 0.7,
-            rate: function(pxPerSecond) {
-                return pxPerSecond;
-            },
+		self.selector = selector;
+		self.defaults = {
+			debug: false,
+			on: 'mousedown',
 
-            easing: 'linear'
-        };
+			opacity: 0.4,
+			color: 'auto',
+			multi: false,
 
-        self.defaults = $.extend({}, self.defaults, options);
+			duration: 0.7,
+			rate: function( pxPerSecond ) {
+				return pxPerSecond;
+			},
 
-        var Trigger = function(e) {
+			easing: 'linear'
+		};
 
-            var $this = $(this);
-            var $ripple;
-            var settings;
+		self.defaults = $.extend( {}, self.defaults, options );
 
-            $this.addClass('has-ripple');
+		var Trigger = function( e ) {
 
-            // This instances settings
-            settings = $.extend({}, self.defaults, $this.data());
+			var $this = $( this );
+			var $ripple;
+			var settings;
 
-            // Create the ripple element
-            if ( settings.multi || (!settings.multi && $this.find(".ripple").length === 0) ) {
-                $ripple = $("<span></span>").addClass("ripple");
-                $ripple.appendTo($this);
+			$this.addClass( 'has-ripple' );
 
-                _log('Create: Ripple');
+			// This instances settings
+			settings = $.extend( {}, self.defaults, $this.data() );
 
-                // Set ripple size
-                if (!$ripple.height() && !$ripple.width()) {
-                    var size = Math.max($this.outerWidth(), $this.outerHeight());
-                    $ripple.css({
-                        height: size,
-                        width: size
-                    });
-                    _log('Set: Ripple size');
-                }
+			// Create the ripple element
+			if ( settings.multi || ( !settings.multi && $this.find( '.ripple' ).length === 0 ) ) {
+				$ripple = $( '<span></span>' ).addClass( 'ripple' );
+				$ripple.appendTo( $this );
 
-                // Give the user the ability to change the rate of the animation
-                // based on element width
-                if(settings.rate && typeof settings.rate == "function") {
+				//_log( 'Create: Ripple' );
 
-                    // rate = pixels per second
-                    var rate = Math.round( $ripple.width() / settings.duration );
+				// Set ripple size
+				if ( !$ripple.height() && !$ripple.width() ) {
+					var size = Math.max( $this.outerWidth(), $this.outerHeight() );
 
-                    // new amount of pixels per second
-                    var filteredRate = settings.rate(rate);
+					$ripple.css( {
+						height: size,
+						width: size
+					} );
 
-                    // Determine the new duration for the animation
-                    var newDuration = ( $ripple.width() / filteredRate);
+					//_log( 'Set: Ripple size' );
+				}
 
-                    // Set the new duration if it has not changed
-                    if(settings.duration.toFixed(2) !== newDuration.toFixed(2)) {
-                        _log('Update: Ripple Duration', {
-                            from: settings.duration,
-                            to: newDuration
-                        });
-                        settings.duration = newDuration;
-                    }
-                }
+				// Give the user the ability to change the rate of the animation
+				// based on element width
+				if ( settings.rate && typeof settings.rate === 'function' ) {
 
-                // Set the color and opacity
-                var color = (settings.color == "auto") ? $this.css('color') : settings.color;
-                var css = {
-                    animationDuration: (settings.duration).toString() + 's',
-                    animationTimingFunction: settings.easing,
-                    background: color,
-                    opacity: settings.opacity
-                };
+					// rate = pixels per second
+					var rate = Math.round( $ripple.width() / settings.duration );
 
-                _log('Set: Ripple CSS', css);
-                $ripple.css(css);
-            }
+					// new amount of pixels per second
+					var filteredRate = settings.rate( rate );
 
-            // Ensure we always have the ripple element
-            if(!settings.multi) {
-                _log('Set: Ripple Element');
-                $ripple = $this.find(".ripple");
-            }
+					// Determine the new duration for the animation
+					var newDuration = $ripple.width() / filteredRate;
 
-            // Kill animation
-            _log('Destroy: Ripple Animation');
-            $ripple.removeClass("ripple-animate");
+					// Set the new duration if it has not changed
+					if ( settings.duration.toFixed( 2 ) !== newDuration.toFixed( 2 ) ) {
+						// _log( 'Update: Ripple Duration', {
+						// 	from: settings.duration,
+						// 	to: newDuration
+						// } );
+						settings.duration = newDuration;
+					}
+				}
+
+				// Set the color and opacity
+				var color = settings.color === 'auto' ? $this.css( 'color' ) : settings.color;
+				var css = {
+					animationDuration: settings.duration.toString() + 's',
+					animationTimingFunction: settings.easing,
+					background: color,
+					opacity: settings.opacity
+				};
+
+				//_log( 'Set: Ripple CSS', css );
+				$ripple.css( css );
+			}
+
+			// Ensure we always have the ripple element
+			if ( !settings.multi ) {
+				//_log( 'Set: Ripple Element' );
+				$ripple = $this.find( '.ripple' );
+			}
+
+			// Kill animation
+			//_log( 'Destroy: Ripple Animation' );
+			$ripple.removeClass( 'ripple-animate' );
 
 
-            // Retrieve coordinates
-            var x = e.pageX - $this.offset().left - $ripple.width() / 2;
-            var y = e.pageY - $this.offset().top - $ripple.height() / 2;
+			// Retrieve coordinates
+			var x = e.pageX - $this.offset().left - $ripple.width() / 2;
+			var y = e.pageY - $this.offset().top - $ripple.height() / 2;
 
-            /**
-             * We want to delete the ripple elements if we allow multiple so we dont sacrifice any page
-             * performance. We don't do this on single ripples because once it has rendered, we only
-             * need to trigger paints thereafter.
-             */
-            if(settings.multi) {
-                _log('Set: Ripple animationend event');
-                $ripple.one('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function() {
-                    _log('Note: Ripple animation ended');
-                    _log('Destroy: Ripple');
-                    $(this).remove();
-                });
-            }
+			/**
+			 * We want to delete the ripple elements if we allow multiple so we dont
+			 * sacrifice any page performance. We don't do this on single ripples
+			 * because once it has rendered, we only need to trigger paints thereafter.
+			 */
+			if ( settings.multi ) {
+				//_log( 'Set: Ripple animationend event' );
+				$ripple.one( 'animationend webkitAnimationEnd oanimationend MSAnimationEnd', function() {
+					//_log( 'Note: Ripple animation ended' );
+					//_log( 'Destroy: Ripple' );
+					$( this ).remove();
+				} );
+			}
 
-            // Set position and animate
-            _log('Set: Ripple location');
-            _log('Set: Ripple animation');
-            $ripple.css({
-                top: y + 'px',
-                left: x + 'px'
-            }).addClass("ripple-animate");
-        };
+			// Set position and animate
+			//_log( 'Set: Ripple location' );
+			//_log( 'Set: Ripple animation' );
+			$ripple.css( {
+				top: y + 'px',
+				left: x + 'px'
+			} ).addClass( 'ripple-animate' );
+		};
 
-        $(document).on(self.defaults.on, self.selector, Trigger);
-    };
-})(jQuery, document, Math);
+		$( document ).on( self.defaults.on, self.selector, Trigger );
+	};
+
+} )( jQuery, document, Math );
