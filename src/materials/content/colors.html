@@ -1,9 +1,10 @@
 ---
 notes: |
-  These are notes associated with Colors
+  These are the colors that all JDRF brands should adhere to.
 ---
 
-{{#each toolkit.colors}}
+<h3>Primary Colors</h3>
+{{#each primary.colors}}
 	<div class="f-color-chips">
 	{{#each this}}
 		<div class="f-color-chip">
@@ -13,3 +14,73 @@ notes: |
 	{{/each}}
 	</div>
 {{/each}}
+
+<h3>Button Colors</h3>
+{{#each button.colors}}
+	<div class="f-color-chips">
+	{{#each this}}
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">{{@key}}</div>
+			<div class="f-color-chip__color">{{this}}</div>
+		</div>
+	{{/each}}
+	</div>
+{{/each}}
+
+<p>The color white <code class="language-markup">#ffffff</code> is used as a background for the <a href="/dist/components.html#buttons">outline button style</a>.
+
+<h3>Accent Colors</h3>
+{{#each accents.colors}}
+	<div class="f-color-chips">
+	{{#each this}}
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">{{@key}}</div>
+			<div class="f-color-chip__color">{{this}}</div>
+		</div>
+	{{/each}}
+	</div>
+{{/each}}
+
+<h3>Program Colors</h3>
+{{#each program.colors}}
+	<div class="f-color-chips">
+	{{#each this}}
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">{{@key}}</div>
+			<div class="f-color-chip__color">{{this}}</div>
+		</div>
+	{{/each}}
+	</div>
+{{/each}}
+
+<h3>Grey Palette</h3>
+{{#each grey.colors}}
+	<div class="f-color-chips">
+	{{#each this}}
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">{{@key}}</div>
+			<div class="f-color-chip__color">{{this}}</div>
+		</div>
+	{{/each}}
+	</div>
+{{/each}}
+
+<h3>Text Colors</h3>
+{{#each text.colors}}
+	<div class="f-color-chips">
+	{{#each this}}
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">{{@key}}</div>
+			<div class="f-color-chip__color">{{this}}</div>
+		</div>
+	{{/each}}
+	</div>
+{{/each}}
+
+<p>The reverse of these colors (white text on a darker color) would be as follows:</p>
+
+<ul>
+	<li>Primary at 100% white: <code class="language-markup">#ffffff</code></li>
+	<li>Secondary at 76% white: <code class="language-markup">rgba(255, 255, 255, 0.76)</code></li>
+	<li>Disabled at 50% white: <code class="language-markup">rgba(255, 255, 255, 0.5)</code></li>
+</ul>
