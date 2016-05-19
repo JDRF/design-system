@@ -193,3 +193,29 @@ input[type="button"] {
 		vertical-align: middle;
 	}
 }
+
+.btn-loading {
+	min-width: 100px;
+
+	&:before {
+		content: '';
+		display: block;
+		margin: auto;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		border-bottom-color: transparent;
+		@include animation ('spinner-animation 1s infinite ease');
+	}
+}
+
+@include keyframes(spinner-animation) {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}

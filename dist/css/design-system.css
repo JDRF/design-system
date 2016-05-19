@@ -4585,6 +4585,25 @@ input[type="button"].btn-block {
   display: inline-block;
   vertical-align: middle; }
 
+.btn-loading {
+  min-width: 100px; }
+  .btn-loading:before {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    border-bottom-color: transparent;
+    animation: spinner-animation 1s infinite ease; }
+
+@keyframes spinner-animation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
 /* Design System Custom - No Bootstrap Default */
 .elevation-one {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.2); }
