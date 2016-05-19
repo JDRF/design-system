@@ -7,9 +7,9 @@ module.exports = function (gulp, plugins) {
 			])
 			//SCSS LINT
 			.pipe(plugins.scsslint({
-		    	'config': './.scss-lint.yml'
-		    }))
-		    //include bootstrap so we can use @import in sass
+				'config': './.scss-lint.yml'
+			}))
+			//include bootstrap so we can use @import in sass
 			.pipe(plugins.sass({
 				includePaths: [
 					'./node_modules/bootstrap/'
@@ -18,6 +18,9 @@ module.exports = function (gulp, plugins) {
 			.on('error', plugins.notify.onError(function (error) {
 				return 'Error: ' + error.message;
 			})) 
+			.pipe(plugins.cssNamespace({
+				namespace: 'ds'
+			}))
 			/*
 			* After scss lint and including bootstrap path,
 			* rename to plain css in a file called sass-files.css
