@@ -43,7 +43,7 @@
 			settings = $.extend( {}, self.defaults, $this.data() );
 
 			// Create the ripple element
-			if ( settings.multi || ( !settings.multi && $this.find( '.ripple' ).length === 0 ) ) {
+			if ( settings.multi || !settings.multi && $this.find( '.ripple' ).length === 0 ) {
 				$ripple = $( '<span></span>' ).addClass( 'ripple' );
 				$ripple.appendTo( $this );
 
@@ -107,7 +107,6 @@
 			//_log( 'Destroy: Ripple Animation' );
 			$ripple.removeClass( 'ripple-animate' );
 
-
 			// Retrieve coordinates
 			var x = e.pageX - $this.offset().left - $ripple.width() / 2;
 			var y = e.pageY - $this.offset().top - $ripple.height() / 2;
@@ -119,11 +118,13 @@
 			 */
 			if ( settings.multi ) {
 				//_log( 'Set: Ripple animationend event' );
-				$ripple.one( 'animationend webkitAnimationEnd oanimationend MSAnimationEnd', function() {
-					//_log( 'Note: Ripple animation ended' );
-					//_log( 'Destroy: Ripple' );
-					$( this ).remove();
-				} );
+				$ripple.one( 'animationend webkitAnimationEnd oanimationend MSAnimationEnd',
+					function() {
+						//_log( 'Note: Ripple animation ended' );
+						//_log( 'Destroy: Ripple' );
+						$( this ).remove();
+					}
+				);
 			}
 
 			// Set position and animate
