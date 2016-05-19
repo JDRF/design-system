@@ -38,11 +38,11 @@ module.exports = {
 		 */
 		this.options = {
 			menu: false,
-			mq: '(min-width: 60em)'
+			mq: 768
 		};
 
 		// open menu by default if large screen
-		this.options.menu = window.matchMedia( this.options.mq ).matches;
+		this.options.menu = window.innerWidth >= this.options.mq;
 
 		// toggle classes on click
 		toggle.addEventListener('click', function () {
@@ -56,7 +56,6 @@ module.exports = {
 
 		// pass dom selectors to functions
 		this.setActiveItem( menuItems );
-		this.setInitialMenuState();
 
 		return this;
 
@@ -142,36 +141,9 @@ module.exports = {
 	* Close menu when clicking on item (for collapsed menu view)
 	*/
 	closeMenu: function () {
-		if ( !window.matchMedia( this.options.mq ).matches ) {
+		if ( !window.innerWidth >= this.options.mq ) {
 			this.toggleClasses();
 		}
-	},
-
-	/**
-	 * Open/Close menu based on session var.
-	 * Also attach a media query listener to close the menu when resizing to smaller screen.
-	 * @return {Object}
-	 */
-	setInitialMenuState: function() {
-
-		// root element
-		var root = document.querySelector( 'html' );
-
-		var mq = window.matchMedia( this.options.mq );
-
-		// if small screen
-		var mediaChangeHandler = function ( list ) {
-			if ( !list.matches ) {
-				helpers.removeClass( root, 'f-menu-active' );
-			} else {
-				helpers.addClass( root, 'f-menu-active' );
-			}
-		};
-
-		mq.addListener( mediaChangeHandler );
-		mediaChangeHandler( mq );
-
-		return this;
 	},
 
 	/**

@@ -95,7 +95,9 @@
 
 .f-header-top,
 .f-header {
-	@include transition;
+	@include mobile {
+		@include transition;
+	}
 
 	.f-menu-active & {
 		@include mobile {

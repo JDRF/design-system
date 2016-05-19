@@ -1,8 +1,6 @@
 // menu
 
 .f-menu-canvas {
-	@include transition;
-
 	@include mobile {
 		top: 0;
 		left: 0;
@@ -13,6 +11,7 @@
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		padding: 1rem;
+		@include transition;
 	}
 
 	&.sidebar {

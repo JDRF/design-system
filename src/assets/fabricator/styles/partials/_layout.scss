@@ -46,7 +46,9 @@ body {
 }
 
 .f-content {
-	@include transition;
+	@include mobile {
+		@include transition;
+	}
 
 	@include desktop {
 		margin-top: 65px;

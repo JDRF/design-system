@@ -11,7 +11,6 @@ var search = require( './search' ),
 	fabricator.init();
 	fabricator.buildColorChips();
 	fabricator.setActiveItem();
-	fabricator.setInitialMenuState();
 	fabricator.fixSidebar();
 
 } )();
