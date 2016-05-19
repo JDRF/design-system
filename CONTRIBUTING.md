@@ -1,6 +1,6 @@
 # Contributing to Design System
 
-JDRF's Design System is a way for every vendor of [JDRF](https://www.jdrf.org) able to give the same level of branding. We're still working out the kinks to make contributing to this project as easy and transparent as possible, but we're not quite there yet. Hopefully this document makes the process for contributing clear and answers some questions that you may have.
+JDRF's Design System is a method of enabling every vendor of [JDRF](https://www.jdrf.org) to apply the same level of branding to their sites. We're still working out the kinks to make contributing to this project as easy and transparent as possible, but we're not quite there yet. Hopefully this document makes the process for contributing clear and answers some questions that you may have.
 
 ## Our Development Process
 
@@ -23,6 +23,7 @@ The core team will be monitoring for pull requests.
 1. Fork the repo and create your branch from `master`.
 2. If you've added code that should be tested, add tests!
 3. Ensure the test suite passes (`npm run test`).
+4. You have not committed compiled files (anything from the dist folder)
 
 ## Bugs
 
