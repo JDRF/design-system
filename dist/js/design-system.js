@@ -5,9 +5,7 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
 
 // : init
 
-//var ripple = require( './ripple' );
-
-( function() {
+( function( $ ) {
 	'use strict';
 
 	$.ripple( '.btn', {
@@ -28,7 +26,7 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
 		easing: 'linear' // The CSS3 easing function of the ripple
 	} );
 
-} )();
+} )( jQuery );
 
 ( function( $, document, Math ) {
 

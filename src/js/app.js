@@ -1,8 +1,6 @@
 // : init
 
-//var ripple = require( './ripple' );
-
-( function() {
+( function( $ ) {
 	'use strict';
 
 	$.ripple( '.btn', {
@@ -23,4 +21,4 @@
 		easing: 'linear' // The CSS3 easing function of the ripple
 	} );
 
-} )();
+} )( jQuery );
