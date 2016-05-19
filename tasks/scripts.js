@@ -4,6 +4,8 @@
 			// Don't include bootstrap yet. Proof of future Concept
 			//'./node_modules/bootstrap/dist/js/bootstrap.js',
 			'./node_modules/jquery/dist/jquery.min.js',
+			//adding ripple js
+			__dirname + '/../src/js/ripple.js',
 			__dirname + '/../src/js/**/*.js',
 		])
 		// JSCS
