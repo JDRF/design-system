@@ -5231,3 +5231,27 @@ a.bg-danger:focus, a.bg-danger:hover {
     display: none !important; } }
 
 /* Bootstrap overwrites: utilities-responsive.scss */
+/*! Ripple.js v1.2.1
+ * The MIT License (MIT)
+ * Copyright (c) 2014 Jacob Kelley */
+.has-ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0); }
+
+.ripple {
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: scale(0);
+  background: #fff;
+  opacity: 1; }
+
+.ripple-animate {
+  animation: ripple; }
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2); } }
