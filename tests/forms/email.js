@@ -1,5 +1,5 @@
 casper.
-	start('http://localhost:3000/dist/components.html#forms').
+	start('http://localhost:3000/dist/components.html').
 	then(function(){
 		phantomcss.screenshot('label[for=phantom-exampleInputEmail1]', 'Email Field Label');
 	}).

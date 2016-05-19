@@ -34,6 +34,7 @@ module.exports = function (gulp, plugins) {
 		//merge sass-files.css and css-files.css into design-system.css in the dist dir
 		var stream = plugins.merge(sassStream, cssStream)
 			.pipe(plugins.concat('design-system.css'))
+			//.pipe(plugins.postcss([ plugins.autoprefixer({ browsers: ['last 2 versions'] }) ]))
 			.pipe(gulp.dest(__dirname + '/../dist/css'))
 			.pipe(plugins.minifycss())
 			.pipe(plugins.rename('design-system.min.css'))
