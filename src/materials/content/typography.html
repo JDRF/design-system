@@ -1,6 +1,8 @@
 ---
 notes: |
-  These are notes associated with Typography
+  When using font families, all font weights are at `normal` or `400`. The font families themselves will take care of the visual weight.
+
+  Some styles change sizes depending on the breakpoint. The Design System's breakpoints are based on <a href="http://v4-alpha.getbootstrap.com/layout/grid/#variables" target="_blank">Bootstrap's default breakpoints</a> except for the `small` size at `360px`. All breakpoints are using the mobile first approach where mobile is the default.
 ---
 <section class="f-section">
 	<h3 class="f-example-title">Font Families</h3>
@@ -35,6 +37,7 @@ notes: |
 
 <section class="f-section">
 	<h3 class="f-example-title">Headings</h3>
+	<p>Headings three through six use the `Gotham Medium` font family. Heading three changes to `Gotham Book` on the smallest breakpoint.</p>
 	<div class="f-example">
 		<h1 id="phantom-heading-1">Heading One</h1>
 		<h2 id="phantom-heading-2">Heading Two</h2>
@@ -52,6 +55,31 @@ notes: |
 		&lt;h5&gt;Heading Five&lt;/h5&gt;
 		&lt;h6&gt;Heading Six&lt;/h6&gt;</code>
 	</pre>
+
+	<p>Heading sizes differ depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Heading One</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Book, 32px/36px</li>
+				<li><strong>Small:</strong> Gotham Book, 36px/40px</li>
+				<li><strong>Medium:</strong> Gotham Book, 48px/56px</li>
+			</ul>
+		</li>
+		<li><strong>Heading Two</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Book, 24px/28px</li>
+				<li><strong>Small:</strong> Gotham Book, 28px/32px</li>
+				<li><strong>Medium:</strong> Gotham Book, 36px/40px</li>
+			</ul>
+		</li>
+		<li><strong>Heading Three</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Book, 20px/28px</li>
+				<li><strong>Small:</strong> Gotham Medium, 24px/28px</li>
+			</ul>
+		</li>
+	</ul>
 </section>
 
 <section class="f-section">
@@ -61,6 +89,25 @@ notes: |
 		<h2 class="display-2" id="phantom-display-2">Display Two</h2>
 	</div>
 	{{example 'typography.displays'}}
+
+	<p>Display sizes differ depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Display One</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Light, 56px/56px</li>
+				<li><strong>Small:</strong> Gotham Light, 60px/60px</li>
+				<li><strong>Medium:</strong> Gotham Light, 72px/72px</li>
+			</ul>
+		</li>
+		<li><strong>Display Two</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Light, 48px/48px</li>
+				<li><strong>Small:</strong> Gotham Light, 56px/56px</li>
+				<li><strong>Medium:</strong> Gotham Light, 60px/60px</li>
+			</ul>
+		</li>
+	</ul>
 </section>
 
 <section class="f-section">
@@ -76,6 +123,14 @@ notes: |
 		  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
 		&lt;/p&gt;</code>
 	</pre>
+
+	<p>The lead size differs depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Extra Small:</strong> Gotham Light, 16px/24px</li>
+		<li><strong>Small:</strong> Gotham Book, 18px/24px</li>
+		<li><strong>Medium:</strong> Gotham Light, 20px/28px</li>
+	</ul>
 </section>
 
 <section class="f-section">
@@ -87,6 +142,13 @@ notes: |
 	<pre class="language-markup">
 		<code class="language-markup">&lt;p&gt;JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications&lt;/p&gt;</code>
 	</pre>
+
+	<p>The paragraph size differs depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Extra Small:</strong> Gotham Book, 14px/20px</li>
+		<li><strong>Small:</strong> Gotham Book, 16px/24px</li>
+	</ul>
 </section>
 
 <section class="f-section">
@@ -144,4 +206,9 @@ notes: |
 			Here are the details to JDRF.
 		&lt;/div&gt;</code>
 	</pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Spacing</h3>
+	<p>All heading elements—e.g., <code class="language-markup">&lt;h1&gt;</code>—and <code class="language-markup">&lt;p&gt;</code> are reset to have their margin-top removed. Headings have a margin-bottom equal to half their line-height.  Paragraphs have a margin-bottom equal to their line-height.</p>
 </section>

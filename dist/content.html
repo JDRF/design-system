@@ -757,7 +757,8 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Typography</h2>
 	</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>These are notes associated with Typography</p>
+	<p>When using font families, all font weights are at <code>normal</code> or <code>400</code>. The font families themselves will take care of the visual weight.</p>
+<p>Some styles change sizes depending on the breakpoint. The Design System's breakpoints are based on <a href="http://v4-alpha.getbootstrap.com/layout/grid/#variables" target="_blank">Bootstrap's default breakpoints</a> except for the <code>small</code> size at <code>360px</code>. All breakpoints are using the mobile first approach where mobile is the default.</p>
 
 </div>
 <div class="f-item-preview">
@@ -794,6 +795,7 @@
 
 <section class="f-section">
 	<h3 class="f-example-title">Headings</h3>
+	<p>Headings three through six use the `Gotham Medium` font family. Heading three changes to `Gotham Book` on the smallest breakpoint.</p>
 	<div class="f-example">
 		<h1 id="phantom-heading-1">Heading One</h1>
 		<h2 id="phantom-heading-2">Heading Two</h2>
@@ -811,6 +813,31 @@
 		&lt;h5&gt;Heading Five&lt;/h5&gt;
 		&lt;h6&gt;Heading Six&lt;/h6&gt;</code>
 	</pre>
+
+	<p>Heading sizes differ depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Heading One</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Book, 32px/36px</li>
+				<li><strong>Small:</strong> Gotham Book, 36px/40px</li>
+				<li><strong>Medium:</strong> Gotham Book, 48px/56px</li>
+			</ul>
+		</li>
+		<li><strong>Heading Two</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Book, 24px/28px</li>
+				<li><strong>Small:</strong> Gotham Book, 28px/32px</li>
+				<li><strong>Medium:</strong> Gotham Book, 36px/40px</li>
+			</ul>
+		</li>
+		<li><strong>Heading Three</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Book, 20px/28px</li>
+				<li><strong>Small:</strong> Gotham Medium, 24px/28px</li>
+			</ul>
+		</li>
+	</ul>
 </section>
 
 <section class="f-section">
@@ -821,6 +848,25 @@
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;h2 class=&quot;display-1&quot;>Display 1&lt;/h2>
 &lt;h2 class=&quot;display-2&quot;>Display 2&lt;/h2></code></pre>
+
+	<p>Display sizes differ depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Display One</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Light, 56px/56px</li>
+				<li><strong>Small:</strong> Gotham Light, 60px/60px</li>
+				<li><strong>Medium:</strong> Gotham Light, 72px/72px</li>
+			</ul>
+		</li>
+		<li><strong>Display Two</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Light, 48px/48px</li>
+				<li><strong>Small:</strong> Gotham Light, 56px/56px</li>
+				<li><strong>Medium:</strong> Gotham Light, 60px/60px</li>
+			</ul>
+		</li>
+	</ul>
 </section>
 
 <section class="f-section">
@@ -836,6 +882,14 @@
 		  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
 		&lt;/p&gt;</code>
 	</pre>
+
+	<p>The lead size differs depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Extra Small:</strong> Gotham Light, 16px/24px</li>
+		<li><strong>Small:</strong> Gotham Book, 18px/24px</li>
+		<li><strong>Medium:</strong> Gotham Light, 20px/28px</li>
+	</ul>
 </section>
 
 <section class="f-section">
@@ -847,6 +901,13 @@
 	<pre class="language-markup">
 		<code class="language-markup">&lt;p&gt;JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications&lt;/p&gt;</code>
 	</pre>
+
+	<p>The paragraph size differs depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Extra Small:</strong> Gotham Book, 14px/20px</li>
+		<li><strong>Small:</strong> Gotham Book, 16px/24px</li>
+	</ul>
 </section>
 
 <section class="f-section">
@@ -905,6 +966,12 @@
 		&lt;/div&gt;</code>
 	</pre>
 </section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Spacing</h3>
+	<p>All heading elements—e.g., <code class="language-markup">&lt;h1&gt;</code>—and <code class="language-markup">&lt;p&gt;</code> are reset to have their margin-top removed. Headings have a margin-bottom equal to half their line-height. Paragraphs have a
+		margin-bottom equal to their line-height.</p>
+</section>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
@@ -940,6 +1007,7 @@
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Headings&lt;/h3&gt;
+	&lt;p&gt;Headings three through six use the &#x60;Gotham Medium&#x60; font family. Heading three changes to &#x60;Gotham Book&#x60; on the smallest breakpoint.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;h1 id=&quot;phantom-heading-1&quot;&gt;Heading One&lt;/h1&gt;
 		&lt;h2 id=&quot;phantom-heading-2&quot;&gt;Heading Two&lt;/h2&gt;
@@ -957,6 +1025,31 @@
 		&amp;lt;h5&amp;gt;Heading Five&amp;lt;/h5&amp;gt;
 		&amp;lt;h6&amp;gt;Heading Six&amp;lt;/h6&amp;gt;&lt;/code&gt;
 	&lt;/pre&gt;
+
+	&lt;p&gt;Heading sizes differ depending on the breakpoint:&lt;/p&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Heading One&lt;/strong&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Book, 32px/36px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Book, 36px/40px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Medium:&lt;/strong&gt; Gotham Book, 48px/56px&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Heading Two&lt;/strong&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Book, 24px/28px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Book, 28px/32px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Medium:&lt;/strong&gt; Gotham Book, 36px/40px&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Heading Three&lt;/strong&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Book, 20px/28px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Medium, 24px/28px&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
@@ -967,6 +1060,25 @@
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h2 class=&amp;quot;display-1&amp;quot;&gt;Display 1&amp;lt;/h2&gt;
 &amp;lt;h2 class=&amp;quot;display-2&amp;quot;&gt;Display 2&amp;lt;/h2&gt;&lt;/code&gt;&lt;/pre&gt;
+
+	&lt;p&gt;Display sizes differ depending on the breakpoint:&lt;/p&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Display One&lt;/strong&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Light, 56px/56px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Light, 60px/60px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Medium:&lt;/strong&gt; Gotham Light, 72px/72px&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Display Two&lt;/strong&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Light, 48px/48px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Light, 56px/56px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Medium:&lt;/strong&gt; Gotham Light, 60px/60px&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
@@ -982,6 +1094,14 @@
 		  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
 		&amp;lt;/p&amp;gt;&lt;/code&gt;
 	&lt;/pre&gt;
+
+	&lt;p&gt;The lead size differs depending on the breakpoint:&lt;/p&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Light, 16px/24px&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Book, 18px/24px&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Medium:&lt;/strong&gt; Gotham Light, 20px/28px&lt;/li&gt;
+	&lt;/ul&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
@@ -993,6 +1113,13 @@
 	&lt;pre class=&quot;language-markup&quot;&gt;
 		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&amp;gt;JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications&amp;lt;/p&amp;gt;&lt;/code&gt;
 	&lt;/pre&gt;
+
+	&lt;p&gt;The paragraph size differs depending on the breakpoint:&lt;/p&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Book, 14px/20px&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Book, 16px/24px&lt;/li&gt;
+	&lt;/ul&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
@@ -1050,6 +1177,12 @@
 			Here are the details to JDRF.
 		&amp;lt;/div&amp;gt;&lt;/code&gt;
 	&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Spacing&lt;/h3&gt;
+	&lt;p&gt;All heading elements—e.g., &lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—and &lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt; are reset to have their margin-top removed. Headings have a margin-bottom equal to half their line-height. Paragraphs have a
+		margin-bottom equal to their line-height.&lt;/p&gt;
 &lt;/section&gt;</code></pre>
 </div>
 
