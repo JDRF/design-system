@@ -20,7 +20,6 @@ module.exports = {
 		this.dom = {
 			root: document.querySelector( 'html' ),
 			primaryMenu: document.querySelector( '.f-menu' ),
-			menuItems: document.querySelectorAll( '.f-menu li a' ),
 			menuToggle: document.querySelector( '.f-menu-toggle' )
 		};
 
@@ -28,9 +27,9 @@ module.exports = {
 		 * Set cached DOM as variables and set this to self
 		 */
 		var self = this,
-			toggle = this.dom.menuToggle,
+			menuIcon = this.dom.menuToggle,
 			htmlEl = this.dom.root,
-			menuItems = this.dom.menuItems;
+			menuItems = this.dom.primaryMenu.getElementsByTagName( 'a' );
 
 		/**
 		 * Default options
@@ -44,14 +43,19 @@ module.exports = {
 		// open menu by default if large screen
 		this.options.menu = window.innerWidth >= this.options.mq;
 
-		// toggle classes on click
-		toggle.addEventListener('click', function () {
-			self.toggleClasses( htmlEl );
-		});
+		//only fire event listeners on mobile
+		if ( false === this.options.menu ) {
+			// toggle classes on click
+			menuIcon.addEventListener('click', function () {
+				self.toggleClasses( htmlEl );
+			});
 
-		// close menu when clicking menu items
-		for ( var i = 0; i < menuItems.length; i++ ) {
-			menuItems[i].addEventListener( 'click', this.closeMenu );
+
+			for ( var i = 0; i < menuItems.length; i++ ) {
+				menuItems[i].addEventListener( 'click', function () {
+					self.toggleClasses( htmlEl );
+				});
+			}
 		}
 
 		// pass dom selectors to functions
@@ -134,15 +138,6 @@ module.exports = {
 		} else {
 			//if it does have class, then remove it
 			helpers.removeClass( htmlEl, 'f-menu-active');
-		}
-	},
-
-	/**
-	* Close menu when clicking on item (for collapsed menu view)
-	*/
-	closeMenu: function () {
-		if ( !window.innerWidth >= this.options.mq ) {
-			this.toggleClasses();
 		}
 	},
 
