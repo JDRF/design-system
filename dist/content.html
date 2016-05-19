@@ -17,7 +17,7 @@
 
 </head>
 <body>
-	<div class="f-header-top container">
+	<header class="f-header-top container" role="banner">
 			<div class="f-control-bar hidden-md-up">
 				<div class="f-control f-menu-toggle">
 					<svg>
@@ -31,7 +31,7 @@
 				</svg>
 				<span>Design System</span>
 			</h1>
-			<nav class="f-nav"aria-label="primary-nav">
+			<nav class="f-nav" aria-label="primary-nav" role="navigation">
 				<ul class="nav">
 					<li class="nav-item">
 						<a href="#" class="nav-link">
@@ -45,7 +45,7 @@
 					</li>
 				</ul>
 			</nav>	</div>
-	</div>
+	</header>
 	<div class="f-header container-fluid">
 		<div class="f-header-center container">
 			<h2 class="f-header-title">Content</h2>
@@ -90,7 +90,7 @@
 					<!-- fabricator menu -->
 					<div class="f-menu-canvas sidebar col-md-4 col-lg-3">
 					
-						<nav class="f-nav"aria-label="primary-nav">
+						<nav class="f-nav" aria-label="primary-nav" role="navigation">
 							<ul class="nav">
 								<li class="nav-item">
 									<a href="#" class="nav-link">
@@ -103,9 +103,9 @@
 									</a>
 								</li>
 							</ul>
-						</nav>	<nav class="f-menu" aria-label="sidebar-nav">
+						</nav>	<nav class="f-menu" aria-label="sidebar-nav" role="navigation">
 					
-							<form class="f-search">
+							<form class="f-search" role="search">
 								<fieldset class="form-group">
 									<input type="text" class="form-control" id="search-input" placeholder="Search..." autocomplete="off">
 									<div class="form-control bd-search-results hide" id="search-results"></div>
@@ -505,14 +505,11 @@
 
 	<p class="f-example-desc">Elevation 5</p>
 </div>
-
-<pre class="language-markup">
-		<code class="language-markup">&lt;div class="f-rectangle elevation-one"&gt;&lt;/div&gt;
-		&lt;div class="f-rectangle elevation-two"&gt;&lt;/div&gt;
-		&lt;div class="f-rectangle elevation-three"&gt;&lt;/div&gt;
-		&lt;div class="f-rectangle elevation-four"&gt;&lt;/div&gt;
-		&lt;div class="f-rectangle elevation-five"&gt;&lt;/div&gt;</code>
-	</pre>
+<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;f-rectangle elevation-one&quot;>&lt;/div>
+&lt;div class=&quot;f-rectangle elevation-two&quot;>&lt;/div>
+&lt;div class=&quot;f-rectangle elevation-three&quot;>&lt;/div>
+&lt;div class=&quot;f-rectangle elevation-four&quot;>&lt;/div>
+&lt;div class=&quot;f-rectangle elevation-five&quot;>&lt;/div></code></pre>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class=&quot;f-example-inline&quot;&gt;
@@ -540,14 +537,11 @@
 
 	&lt;p class=&quot;f-example-desc&quot;&gt;Elevation 5&lt;/p&gt;
 &lt;/div&gt;
-
-&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&quot;f-rectangle elevation-one&quot;&amp;gt;&amp;lt;/div&amp;gt;
-		&amp;lt;div class=&quot;f-rectangle elevation-two&quot;&amp;gt;&amp;lt;/div&amp;gt;
-		&amp;lt;div class=&quot;f-rectangle elevation-three&quot;&amp;gt;&amp;lt;/div&amp;gt;
-		&amp;lt;div class=&quot;f-rectangle elevation-four&quot;&amp;gt;&amp;lt;/div&amp;gt;
-		&amp;lt;div class=&quot;f-rectangle elevation-five&quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;</code></pre>
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;f-rectangle elevation-one&amp;quot;&gt;&amp;lt;/div&gt;
+&amp;lt;div class=&amp;quot;f-rectangle elevation-two&amp;quot;&gt;&amp;lt;/div&gt;
+&amp;lt;div class=&amp;quot;f-rectangle elevation-three&amp;quot;&gt;&amp;lt;/div&gt;
+&amp;lt;div class=&amp;quot;f-rectangle elevation-four&amp;quot;&gt;&amp;lt;/div&gt;
+&amp;lt;div class=&amp;quot;f-rectangle elevation-five&amp;quot;&gt;&amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;</code></pre>
 </div>
 
 
@@ -774,24 +768,26 @@
 		<p class="f-family-bold">Gotham Bold</p>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">font-family: "Gotham Book";
+	<pre class="language-markup"><code class="language-markup">font-family: &quot;Gotham Book&quot;;
 
-		font-family: "Gotham Book Italic";
+font-family: &quot;Gotham Book Italic&quot;;
 
-		font-family: "Gotham Light";
+font-family: &quot;Gotham Light&quot;;
 
-		font-family: "Gotham Light Italic";
+font-family: &quot;Gotham Light Italic&quot;;
 
-		font-family: "Gotham Medium";
+font-family: &quot;Gotham Medium&quot;;
 
-		font-family: "Gotham Medium Italic";
+font-family: &quot;Gotham Medium Italic&quot;;
 
-		font-family: "Gotham Bold";
-		</code>
-	</pre>
+font-family: &quot;Gotham Bold&quot;;</code></pre>
 </section>
 
+<section class="f-section">
+	<h3 class="f-example-title">Spacing</h3>
+	<p>All heading elements—e.g., <code class="language-markup">&lt;h1&gt;</code>—and <code class="language-markup">&lt;p&gt;</code> are reset to have their margin-top removed. Headings have a margin-bottom equal to half their line-height. Paragraphs have a
+		margin-bottom equal to their line-height.</p>
+</section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Headings</h3>
@@ -805,14 +801,12 @@
 		<h6 id="phantom-heading-6">Heading Six</h6>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;h1&gt;Heading One&lt;/h1&gt;
-		&lt;h2&gt;Heading Two&lt;/h2&gt;
-		&lt;h3&gt;Heading Three&lt;/h3&gt;
-		&lt;h4&gt;Heading Four&lt;/h4&gt;
-		&lt;h5&gt;Heading Five&lt;/h5&gt;
-		&lt;h6&gt;Heading Six&lt;/h6&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">&lt;h1>Heading One&lt;/h1>
+&lt;h2>Heading Two&lt;/h2>
+&lt;h3>Heading Three&lt;/h3>
+&lt;h4>Heading Four&lt;/h4>
+&lt;h5>Heading Five&lt;/h5>
+&lt;h6>Heading Six&lt;/h6></code></pre>
 
 	<p>Heading sizes differ depending on the breakpoint:</p>
 
@@ -846,6 +840,7 @@
 		<h2 class="display-1" id="phantom-display-1">Display One</h2>
 		<h2 class="display-2" id="phantom-display-2">Display Two</h2>
 	</div>
+
 	<pre class="language-markup"><code class="language-markup">&lt;h2 class=&quot;display-1&quot;>Display 1&lt;/h2>
 &lt;h2 class=&quot;display-2&quot;>Display 2&lt;/h2></code></pre>
 
@@ -877,11 +872,9 @@
 		</p>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;p class="lead"&gt;
-		  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-		&lt;/p&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">&lt;p class=&quot;lead&quot;>
+	Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+&lt;/p></code></pre>
 
 	<p>The lead size differs depending on the breakpoint:</p>
 
@@ -898,9 +891,7 @@
 		<p>JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications</p>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;p&gt;JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications&lt;/p&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">&lt;p>JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications.&lt;/p></code></pre>
 
 	<p>The paragraph size differs depending on the breakpoint:</p>
 
@@ -923,16 +914,14 @@
 		<p><em>This line rendered as italicized text.</em></p>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight</mark> text.&lt;/p&gt;
-		&lt;p&gt;&lt;del&gt;This line of text is meant to be treated as deleted text.&lt;/del&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;s&gt;This line of text is meant to be treated as no longer accurate.&lt;/s&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;ins&gt;This line of text is meant to be treated as an addition to the document.&lt;/ins&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;u&gt;This line of text will render as underlined&lt;/u&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.</small>&lt;/p&gt;
-		&lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">&lt;p>You can use the mark tag to &lt;mark>highlight&lt;/mark> text.&lt;/p>
+&lt;p>&lt;del>This line of text is meant to be treated as deleted text.&lt;/del>&lt;/p>
+&lt;p>&lt;s>This line of text is meant to be treated as no longer accurate.&lt;/s>&lt;/p>
+&lt;p>&lt;ins>This line of text is meant to be treated as an addition to the document.&lt;/ins>&lt;/p>
+&lt;p>&lt;u>This line of text will render as underlined&lt;/u>&lt;/p>
+&lt;p>&lt;small>This line of text is meant to be treated as fine print.&lt;/small>&lt;/p>
+&lt;p>&lt;strong>This line rendered as bold text.&lt;/strong>&lt;/p>
+&lt;p>&lt;em>This line rendered as italicized text.&lt;/em>&lt;/p></code></pre>
 </section>
 
 <section class="f-section">
@@ -943,11 +932,9 @@
 		</blockquote>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;blockquote class="blockquote"&gt;
-		  &lt;p class="m-b-0"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
-		&lt;/blockquote&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">&lt;blockquote class=&quot;blockquote&quot;>
+	&lt;p class=&quot;m-b-0&quot;>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p>
+&lt;/blockquote></code></pre>
 </section>
 
 <section class="f-section">
@@ -959,18 +946,10 @@
 		</div>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">Jump down to our &lt;a href="#jdrf-section"&gt;JDRF section&lt;/a&gt; for details!
-		&lt;div id="jdrf-section"&gt;
-			Here are the details to JDRF.
-		&lt;/div&gt;</code>
-	</pre>
-</section>
-
-<section class="f-section">
-	<h3 class="f-example-title">Spacing</h3>
-	<p>All heading elements—e.g., <code class="language-markup">&lt;h1&gt;</code>—and <code class="language-markup">&lt;p&gt;</code> are reset to have their margin-top removed. Headings have a margin-bottom equal to half their line-height. Paragraphs have a
-		margin-bottom equal to their line-height.</p>
+	<pre class="language-markup"><code class="language-markup">Jump down to our &lt;a href=&quot;#jdrf-section&quot;>JDRF section&lt;/a> for details!
+&lt;div id=&quot;jdrf-section&quot;>
+	Here are the details to JDRF.
+&lt;/div></code></pre>
 </section>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
@@ -986,24 +965,26 @@
 		&lt;p class=&quot;f-family-bold&quot;&gt;Gotham Bold&lt;/p&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;font-family: &quot;Gotham Book&quot;;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;font-family: &amp;quot;Gotham Book&amp;quot;;
 
-		font-family: &quot;Gotham Book Italic&quot;;
+font-family: &amp;quot;Gotham Book Italic&amp;quot;;
 
-		font-family: &quot;Gotham Light&quot;;
+font-family: &amp;quot;Gotham Light&amp;quot;;
 
-		font-family: &quot;Gotham Light Italic&quot;;
+font-family: &amp;quot;Gotham Light Italic&amp;quot;;
 
-		font-family: &quot;Gotham Medium&quot;;
+font-family: &amp;quot;Gotham Medium&amp;quot;;
 
-		font-family: &quot;Gotham Medium Italic&quot;;
+font-family: &amp;quot;Gotham Medium Italic&amp;quot;;
 
-		font-family: &quot;Gotham Bold&quot;;
-		&lt;/code&gt;
-	&lt;/pre&gt;
+font-family: &amp;quot;Gotham Bold&amp;quot;;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Spacing&lt;/h3&gt;
+	&lt;p&gt;All heading elements—e.g., &lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—and &lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt; are reset to have their margin-top removed. Headings have a margin-bottom equal to half their line-height. Paragraphs have a
+		margin-bottom equal to their line-height.&lt;/p&gt;
+&lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Headings&lt;/h3&gt;
@@ -1017,14 +998,12 @@
 		&lt;h6 id=&quot;phantom-heading-6&quot;&gt;Heading Six&lt;/h6&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;Heading One&amp;lt;/h1&amp;gt;
-		&amp;lt;h2&amp;gt;Heading Two&amp;lt;/h2&amp;gt;
-		&amp;lt;h3&amp;gt;Heading Three&amp;lt;/h3&amp;gt;
-		&amp;lt;h4&amp;gt;Heading Four&amp;lt;/h4&amp;gt;
-		&amp;lt;h5&amp;gt;Heading Five&amp;lt;/h5&amp;gt;
-		&amp;lt;h6&amp;gt;Heading Six&amp;lt;/h6&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&gt;Heading One&amp;lt;/h1&gt;
+&amp;lt;h2&gt;Heading Two&amp;lt;/h2&gt;
+&amp;lt;h3&gt;Heading Three&amp;lt;/h3&gt;
+&amp;lt;h4&gt;Heading Four&amp;lt;/h4&gt;
+&amp;lt;h5&gt;Heading Five&amp;lt;/h5&gt;
+&amp;lt;h6&gt;Heading Six&amp;lt;/h6&gt;&lt;/code&gt;&lt;/pre&gt;
 
 	&lt;p&gt;Heading sizes differ depending on the breakpoint:&lt;/p&gt;
 
@@ -1058,6 +1037,7 @@
 		&lt;h2 class=&quot;display-1&quot; id=&quot;phantom-display-1&quot;&gt;Display One&lt;/h2&gt;
 		&lt;h2 class=&quot;display-2&quot; id=&quot;phantom-display-2&quot;&gt;Display Two&lt;/h2&gt;
 	&lt;/div&gt;
+
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h2 class=&amp;quot;display-1&amp;quot;&gt;Display 1&amp;lt;/h2&gt;
 &amp;lt;h2 class=&amp;quot;display-2&amp;quot;&gt;Display 2&amp;lt;/h2&gt;&lt;/code&gt;&lt;/pre&gt;
 
@@ -1089,11 +1069,9 @@
 		&lt;/p&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p class=&quot;lead&quot;&amp;gt;
-		  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-		&amp;lt;/p&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p class=&amp;quot;lead&amp;quot;&gt;
+	Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+&amp;lt;/p&gt;&lt;/code&gt;&lt;/pre&gt;
 
 	&lt;p&gt;The lead size differs depending on the breakpoint:&lt;/p&gt;
 
@@ -1110,9 +1088,7 @@
 		&lt;p&gt;JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications&lt;/p&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&amp;gt;JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications&amp;lt;/p&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&gt;JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications.&amp;lt;/p&gt;&lt;/code&gt;&lt;/pre&gt;
 
 	&lt;p&gt;The paragraph size differs depending on the breakpoint:&lt;/p&gt;
 
@@ -1135,16 +1111,14 @@
 		&lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&amp;gt;You can use the mark tag to &amp;lt;mark&amp;gt;highlight&lt;/mark&gt; text.&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;del&amp;gt;This line of text is meant to be treated as deleted text.&amp;lt;/del&amp;gt;&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;s&amp;gt;This line of text is meant to be treated as no longer accurate.&amp;lt;/s&amp;gt;&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;ins&amp;gt;This line of text is meant to be treated as an addition to the document.&amp;lt;/ins&amp;gt;&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;u&amp;gt;This line of text will render as underlined&amp;lt;/u&amp;gt;&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;small&amp;gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;This line rendered as bold text.&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This line rendered as italicized text.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&gt;You can use the mark tag to &amp;lt;mark&gt;highlight&amp;lt;/mark&gt; text.&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;del&gt;This line of text is meant to be treated as deleted text.&amp;lt;/del&gt;&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;s&gt;This line of text is meant to be treated as no longer accurate.&amp;lt;/s&gt;&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;ins&gt;This line of text is meant to be treated as an addition to the document.&amp;lt;/ins&gt;&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;u&gt;This line of text will render as underlined&amp;lt;/u&gt;&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;small&gt;This line of text is meant to be treated as fine print.&amp;lt;/small&gt;&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;strong&gt;This line rendered as bold text.&amp;lt;/strong&gt;&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;em&gt;This line rendered as italicized text.&amp;lt;/em&gt;&amp;lt;/p&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
@@ -1155,11 +1129,9 @@
 		&lt;/blockquote&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;blockquote class=&quot;blockquote&quot;&amp;gt;
-		  &amp;lt;p class=&quot;m-b-0&quot;&amp;gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&amp;lt;/p&amp;gt;
-		&amp;lt;/blockquote&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;blockquote class=&amp;quot;blockquote&amp;quot;&gt;
+	&amp;lt;p class=&amp;quot;m-b-0&amp;quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&amp;lt;/p&gt;
+&amp;lt;/blockquote&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
@@ -1171,18 +1143,10 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;Jump down to our &amp;lt;a href=&quot;#jdrf-section&quot;&amp;gt;JDRF section&amp;lt;/a&amp;gt; for details!
-		&amp;lt;div id=&quot;jdrf-section&quot;&amp;gt;
-			Here are the details to JDRF.
-		&amp;lt;/div&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
-&lt;/section&gt;
-
-&lt;section class=&quot;f-section&quot;&gt;
-	&lt;h3 class=&quot;f-example-title&quot;&gt;Spacing&lt;/h3&gt;
-	&lt;p&gt;All heading elements—e.g., &lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—and &lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt; are reset to have their margin-top removed. Headings have a margin-bottom equal to half their line-height. Paragraphs have a
-		margin-bottom equal to their line-height.&lt;/p&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;Jump down to our &amp;lt;a href=&amp;quot;#jdrf-section&amp;quot;&gt;JDRF section&amp;lt;/a&gt; for details!
+&amp;lt;div id=&amp;quot;jdrf-section&amp;quot;&gt;
+	Here are the details to JDRF.
+&amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;</code></pre>
 </div>
 

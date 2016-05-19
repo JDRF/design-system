@@ -4030,7 +4030,7 @@ input[type="checkbox"].disabled {
   font-size: 0.875rem;
   line-height: 0.875rem;
   border-radius: 0.125rem; }
-  .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+  .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
