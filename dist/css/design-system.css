@@ -2897,6 +2897,19 @@ p {
       line-height: 1.5rem;
       margin-bottom: 1.5rem; } }
 
+b,
+strong {
+  font-family: "Gotham Medium", sans-serif; }
+  b em,
+  b i,
+  strong em,
+  strong i {
+    font-family: "Gotham Medium Italic", sans-serif; }
+
+em,
+i {
+  font-family: "Gotham Book Italic", sans-serif; }
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 400;

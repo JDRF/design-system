@@ -12,6 +12,21 @@ p {
 	}
 }
 
+b,
+strong {
+	font-family: $font-medium;
+
+	em,
+	i {
+		font-family: $font-medium-italic;
+	}
+}
+
+em,
+i {
+	font-family: $font-italic;
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-weight: $headings-font-weight;
