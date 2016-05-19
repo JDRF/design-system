@@ -20,6 +20,8 @@ module.exports = function (gulp, plugins, config) {
 			.pipe(plugins.rename('f.min.js'))
 			.pipe(gulp.dest(config.dest + '/assets/fabricator/scripts/'));
 
+		var rippleStream = plugins.browserify(config.src.scripts.app).bundle()
+
 		return plugins.merge(bundleStream, fabStream);
 
 

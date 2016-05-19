@@ -3,14 +3,16 @@
 'use strict';
 
 var search = require( './search' ),
-	fabricator = require( './fabricator' );
+	fabricator = require( './fabricator' ),
+	ripple = require( './ripple' );
 
-( function() {
+( function( $ ) {
 
 	search.init();
 	fabricator.init();
 	fabricator.buildColorChips();
 	fabricator.setActiveItem();
 	fabricator.fixSidebar();
+	ripple.init( $ );
 
-} )();
+} )( jQuery );
