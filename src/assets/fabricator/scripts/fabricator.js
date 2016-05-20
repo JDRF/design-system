@@ -6,8 +6,7 @@
 
 'use strict';
 
-var prism = require('./prism' ),
-	helpers = require( './helpers' );
+var helpers = require( './helpers' );
 
 module.exports = {
 
@@ -45,15 +44,14 @@ module.exports = {
 		//only fire event listeners on mobile
 		if ( false === this.options.menu ) {
 			// toggle classes on click
-			menuIcon.addEventListener('click', function () {
+			menuIcon.addEventListener( 'click', function() {
 				self.toggleClasses( htmlEl, menuIcon );
-			});
-
+			} );
 
 			for ( var i = 0; i < menuItems.length; i++ ) {
-				menuItems[i].addEventListener( 'click', function () {
+				menuItems[i].addEventListener( 'click', function() {
 					self.toggleClasses( htmlEl, menuIcon );
-				});
+				} );
 			}
 		}
 
@@ -80,6 +78,7 @@ module.exports = {
 		}
 
 		return this;
+
 	},
 
 	/**
@@ -88,39 +87,44 @@ module.exports = {
 	 */
 	setActiveItem: function( menuItems ) {
 
-		window.addEventListener( 'hashchange', setActive );
+		window.addEventListener( 'hashchange', this.setActive );
 
 		if ( 'undefined' !== typeof menuItems ) {
-			setActive( menuItems );
+			this.setActive( menuItems );
 		}
 
-		/**
-		 * Match the window location with the menu item, set menu item as active
-		 */
-		function setActive( menuItems ) {
+		return this;
 
-			// get current file and hash without first slash
-			var current = (window.location.pathname + window.location.hash).replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function ( match, slash, file, hash ) {
+	},
+
+	/**
+	 * Match the window location with the menu item, set menu item as active
+	 */
+	setActive: function( menuLinks ) {
+		var locPath = window.location.pathname,
+			locHash = window.location.hash;
+
+		// get current file and hash without first slash
+		var current = ( locPath + locHash ).replace( /(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function( match, slash, file, hash ) {
 				hash = hash || '';
 				file = file.replace( 'dist/', '' ).replace( 'design-system/', '' ) || '';
 				// Currently, without a scrolling listener, there's no way to
 				// change as we visit new 'hashes'. Better to leave at top
 				// level link
 				return './' + file; // + hash.split('.')[0];
-			}) || 'index.html', href;
+			} ) || 'index.html', href;
 
-			// find the current section in the items array
-			for ( var i = menuItems.length - 1; i >= 0; i-- ) {
+		// find the current section in the items array
+		for ( var i = menuLinks.length - 1; i >= 0; i-- ) {
+			var item = menuLinks[ i ];
 
-				var item = menuItems[ i ];
-				// get item href without first slash
-				href = item.getAttribute( 'href' ).replace(/^\//g, '');
+			// get item href without first slash
+			href = item.getAttribute( 'href' ).replace( /^\//g, '' );
 
-				if ( href === current ) {
-					helpers.addClass( item, 'current' );
-				} else {
-					helpers.removeClass( item, 'current' );
-				}
+			if ( href === current ) {
+				helpers.addClass( item, 'current' );
+			} else {
+				helpers.removeClass( item, 'current' );
 			}
 		}
 
@@ -131,13 +135,13 @@ module.exports = {
 	 * Toggle f-menu-active class
 	 */
 	toggleClasses: function( htmlEl, menuIcon ) {
-		if( ! helpers.hasClass( htmlEl, 'f-menu-active' ) ){
+		if ( !helpers.hasClass( htmlEl, 'f-menu-active' ) ) {
 			//if it does not have class, add it
-			helpers.addClass( htmlEl, 'f-menu-active');
+			helpers.addClass( htmlEl, 'f-menu-active' );
 			menuIcon.setAttribute( 'aria-expanded', 'true' );
 		} else {
 			//if it does have class, then remove it
-			helpers.removeClass( htmlEl, 'f-menu-active');
+			helpers.removeClass( htmlEl, 'f-menu-active' );
 			menuIcon.setAttribute( 'aria-expanded', 'false' );
 		}
 	},
@@ -147,13 +151,12 @@ module.exports = {
 	 * @return {Object}
 	 */
 	fixSidebar: function() {
-		var dsHeaderTop  = document.querySelector( '.f-header-top' ),
-			dsHeader  = document.querySelector( '.f-header' ),
+		var dsHeaderTop = document.querySelector( '.f-header-top' ),
+			dsHeader = document.querySelector( '.f-header' ),
 			dsSidebar = document.querySelector( '.f-menu' ),
 			headerTopHeight = dsHeaderTop.offsetHeight,
 			headerHeight = dsHeader.offsetHeight,
 			totalHeaderHeight = headerTopHeight + headerHeight;
-
 
 		if ( 'undefined' === typeof dsHeaderTop || null === dsHeaderTop ) {
 			return;
@@ -170,7 +173,7 @@ module.exports = {
 		window.onscroll = function() {
 			var topOffset = window.pageYOffset;
 
-			if ( window.pageYOffset > totalHeaderHeight ) {
+			if ( topOffset > totalHeaderHeight ) {
 				helpers.addClass( dsSidebar, 'fixed' );
 			} else {
 				helpers.removeClass( dsSidebar, 'fixed' );
@@ -178,7 +181,6 @@ module.exports = {
 		};
 
 		return this;
+
 	}
 };
-
-

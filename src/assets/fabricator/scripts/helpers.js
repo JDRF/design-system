@@ -33,9 +33,9 @@ module.exports = {
 
 		//Go to end of index for existing classes and remove desired class
 		if ( el.className.indexOf( ' ' + className ) > -1 ) {
-			el.className = el.className.replace( ' ' + className , '' );
+			el.className = el.className.replace( ' ' + className, '' );
 		} else if ( el.className.indexOf( className ) > -1 ) {
-			el.className = el.className.replace( className , '' );
+			el.className = el.className.replace( className, '' );
 		}
 
 		return this;

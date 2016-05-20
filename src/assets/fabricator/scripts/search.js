@@ -22,7 +22,7 @@ module.exports = {
 
 		this.clean();
 
-		if ( self.input.value !== '' ) {
+		if ( '' !== self.input.value ) {
 			this.results.className = this.results.className.replace( ' hide', '' );
 			Object.keys( this.loop ).map( function( key ) {
 				if ( new RegExp( self.input.value, 'i' ).test( self.loop[ key ].text ) ) {
