@@ -1,6 +1,7 @@
 module.exports = function (gulp, plugins, config) {
 	return function (done) {
 
+		/* wrap in pre and code tags */
 		var start = '<pre class="language-markup"><code class="language-markup">';
 		var end = '</code></pre>';
 
