@@ -7,18 +7,17 @@
 
 	.nav-item {
 		.nav-link {
-			font-family: $font-medium;
-			border-left: 2px solid $grey-4;
-			padding: 16px 0 16px 24px;
 			width: 100%;
+			padding: 1rem 0 1rem 1.5rem;
+			font-family: $font-medium;
+			font-size: 0.875rem;
+			line-height: 1rem;
 			color: $text-default;
-			/* temporary until we get fonts in */
-			font-size: 14px;
-			line-height: 16px;
+			border-left: 2px solid $grey-4;
 
 			&:hover {
-				background-color: $grey-2;
 				color: $brand-primary;
+				background-color: $grey-2;
 			}
 
 			&.current {
@@ -28,7 +27,7 @@
 
 		> .nav {
 			.nav-link {
-				padding-left: 40px;
+				padding-left: 2.5rem;
 				font-family: $font-regular;
 			}
 		}
