@@ -196,25 +196,55 @@ input[type="button"] {
 .btn-loading {
 	min-width: 100px;
 
-	&:before {
-		content: '';
-		display: block;
-		margin: auto;
-		width: 16px;
-		height: 16px;
-		border-radius: 50%;
-		border: 2px solid #fff;
-		border-bottom-color: transparent;
-		@include animation ('spinner-animation 1s infinite ease');
+	.spinner {
+		@include animation('spinner-animation 1.4s linear infinite');
+		width: 20px;
+		height: 20px;
+	}
+
+	.path {
+		stroke-dasharray: $spinner-offset;
+		stroke-dashoffset: 0;
+		transform-origin: center;
+		@include animation(
+			'spinner-dash 1.4s ease-in-out infinite',
+			'spinner-colors 1.4s ease-in-out infinite'
+		);
 	}
 }
 
 @include keyframes(spinner-animation) {
-	from {
-		transform: rotate(0deg);
+  0% {
+  	transform: rotate(0deg);
+  }
+
+  100% {
+  	transform: rotate(270deg);
+  }
+}
+
+@include keyframes(spinner-colors) {
+	0% {
+		stroke: $jdrf-white;
 	}
 
-	to {
-		transform: rotate(360deg);
+	100% {
+		stroke: $jdrf-white;
+	}
+}
+
+@include keyframes(spinner-dash) {
+	0% {
+		stroke-dashoffset: $spinner-offset;
+	}
+
+	50% {
+		stroke-dashoffset: $spinner-offset/4;
+		transform:rotate(135deg);
+	}
+
+	100% {
+		stroke-dashoffset: $spinner-offset;
+		transform:rotate(450deg);
 	}
 }
