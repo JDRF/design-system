@@ -195,6 +195,7 @@ input[type="button"] {
 
 .btn-loading {
 	min-width: 100px;
+	padding: 0.5rem 1rem;
 
 	.spinner {
 		@include animation('spinner-animation 1.4s linear infinite');

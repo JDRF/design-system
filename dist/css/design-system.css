@@ -2181,7 +2181,8 @@ input[type="button"].btn-block {
   vertical-align: middle; }
 
 .btn-loading {
-  min-width: 100px; }
+  min-width: 100px;
+  padding: 0.5rem 1rem; }
   .btn-loading .spinner {
     -webkit-animation: spinner-animation 1.4s linear infinite;
     -moz-animation: spinner-animation 1.4s linear infinite;
