@@ -46,13 +46,13 @@ module.exports = {
 		if ( false === this.options.menu ) {
 			// toggle classes on click
 			menuIcon.addEventListener('click', function () {
-				self.toggleClasses( htmlEl );
+				self.toggleClasses( htmlEl, menuIcon );
 			});
 
 
 			for ( var i = 0; i < menuItems.length; i++ ) {
 				menuItems[i].addEventListener( 'click', function () {
-					self.toggleClasses( htmlEl );
+					self.toggleClasses( htmlEl, menuIcon );
 				});
 			}
 		}
@@ -130,13 +130,15 @@ module.exports = {
 	/**
 	 * Toggle f-menu-active class
 	 */
-	toggleClasses: function( htmlEl ) {
+	toggleClasses: function( htmlEl, menuIcon ) {
 		if( ! helpers.hasClass( htmlEl, 'f-menu-active' ) ){
 			//if it does not have class, add it
 			helpers.addClass( htmlEl, 'f-menu-active');
+			menuIcon.setAttribute( 'aria-expanded', 'true' );
 		} else {
 			//if it does have class, then remove it
 			helpers.removeClass( htmlEl, 'f-menu-active');
+			menuIcon.setAttribute( 'aria-expanded', 'false' );
 		}
 	},
 

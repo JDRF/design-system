@@ -42,7 +42,7 @@ module.exports = {
 	},
 
 	/**
-	 * Helper to cehck for className on an element
+	 * Helper to check for className on an element
 	 */
 	hasClass: function( el, className ) {
 		//Check if element is undefined or null first
