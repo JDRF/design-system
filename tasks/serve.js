@@ -21,6 +21,7 @@ module.exports = function (gulp, plugins, config) {
 			}
 		});
 
+		/* Watch for changes in the following paths */
 		gulp.task('assemble:watch', ['assemble'], plugins.reload);
 		gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
 
@@ -34,6 +35,7 @@ module.exports = function (gulp, plugins, config) {
 		gulp.watch('src/assets/{fabricator,design-system}/scripts/**/*.js', ['scripts:watch']).on('change', plugins.reload);
 
 		if ( 'dev' === plugins.gutil.env.env ) {
+			/* if dev env, watch these paths for styles */
 			gulp.task('styles:from-dev:watch', function(done) {
 				plugins.runSequence('styles-from-dev', 'styles-designsystem', function() {
 					plugins.reload();
@@ -42,6 +44,7 @@ module.exports = function (gulp, plugins, config) {
 			});
 			gulp.watch('design-system/src/scss/**/*.scss', ['styles:from-dev:watch']);
 
+			/* if dev env, watch these paths for scripts */
 			gulp.task('scripts:from-dev:watch', function(done) {
 				plugins.runSequence('scripts-from-dev', 'scripts', function() {
 					plugins.reload();

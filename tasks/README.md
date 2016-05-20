@@ -83,7 +83,7 @@
 
 `gulp clean` - Deletes the `config.dest` folder which is specified in gulpfile.js.
 
-`gulp default` - Fires default commands: `gulp fonts`, `gulp scripts`, `gulp styles`, and `gulp assemble`
+`gulp default` - Fires default commands: `gulp fonts`, `gulp scripts`, `gulp styles`, and `gulp assemble`.
 
 `gulp fonts` - Bring the fonts specified in the config.src.fonts path from gulpfile.js into the dist folder for use.
 
@@ -91,15 +91,15 @@
 
 `gulp styles-designsystem` - Bring the design system styles specified in gulpfile.js (varies depending on environment), rename, and place in the dist folder.
 
-`gulp scripts-lint` - Run fabricator scripts through JS linter
+`gulp scripts-lint` - Run fabricator scripts through JS linter.
 
-`gulp scripts` - Run `scripts-lint`, then `gulp scripts-fabricator` and `gulp scripts-designsystem`
+`gulp scripts` - Run `scripts-lint`, then `gulp scripts-fabricator` and `gulp scripts-designsystem`.
 
-`gulp scripts-fabricator` - Take the src app.js/fabricator.js, rename, minify, and place files in the dist folder
+`gulp scripts-fabricator` - Take the src app.js/fabricator.js, rename, minify, and place files in the dist folder.
 
-`gulp scripts-designsystem` - Depending on the environment, take JS files, rename, and place files in the dist folder
+`gulp scripts-designsystem` - Depending on the environment, take JS files, rename, and place files in the dist folder.
 
 `gulp assemble` - What generates the wrappers and escapes the html characters for our code examples on gh-pages. This code is housed in separate templates in the html folder.
 
-`gulp serve` -
+`gulp serve` - Responsible for launching local environment and setting up watches on scripts/styles.
 
