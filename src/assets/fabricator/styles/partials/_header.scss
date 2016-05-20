@@ -2,8 +2,8 @@
 	width: 100%;
 	max-width: $max-width;
 	margin: auto;
+	padding: 1rem;
 	font-size: 0.875rem;
-	padding: 1em;
 
 	.f-logo,
 	.f-nav {
@@ -15,12 +15,12 @@
 	}
 
 	.f-logo {
-		margin: 0;
-		color: color(primary-light);
-		font-family: "Gotham Medium";
-		line-height: 1.5rem;
 		display: inline-block;
 		vertical-align: middle;
+		margin: 0;
+		font-family: "Gotham Medium";
+		line-height: 1.5rem;
+		color: color(primary-light);
 
 		svg,
 		span {
@@ -29,8 +29,8 @@
 		}
 
 		svg {
-			fill: color(primary-light);
 			height: 35px;
+			fill: color(primary-light);
 		}
 	}
 
@@ -45,13 +45,13 @@
 		.nav {
 			.nav-item {
 				padding-top: 0.45rem;
-				width: 100%;
 				margin-left: 0;
+				width: 100%;
 
 				@include desktop {
 					display: inline-block;
-					width: auto;
 					margin-left: 1rem;
+					width: auto;
 				}
 			}
 		}
@@ -59,24 +59,25 @@
 }
 
 .f-header {
+	margin-bottom: 2rem;
+	padding: 2.813rem 0;
+	width: 100%;
 	background-color: color(primary-light);
 	color: #ffffff;
-	padding: 2.813em 0;
-	width: 100%;
-	margin-bottom: 2em;
 
 	@include desktop {
-		padding: 4.813em 0;
+		padding: 4.813rem 0;
 	}
 
 	.f-header-center {
-		padding: 0 1em;
+		padding: 0 1rem;
 		font-family: "Gotham Light";
 
 		.f-header-title {
-			color: inherit;
+			margin-bottom: .3rem;
 			font-family: inherit;
-			margin-bottom: .3em;
+			color: inherit;
+
 		}
 
 		.f-header-content {

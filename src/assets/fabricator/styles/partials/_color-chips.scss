@@ -7,23 +7,24 @@
 	flex-grow: 1;
 	flex-shrink: 0;
 	flex-basis: 100%;
-	border-top-width: 8em;
+	padding: 1rem;
+	margin-bottom: 2rem;
+	font-weight: 700;
+	font-size: 0.75rem;
+	border-top-width: 8rem;
 	border-top-style: solid;
 	border-bottom-width: 0;
 	border-bottom-style: solid;
 	background-color: #fff;
-	font-weight: 700;
-	font-size: 0.75em;
-	padding: 1em;
-	margin-bottom: 2em;
+
 
 	@include desktop {
-		flex-basis: 8em;
+		flex-basis: 6rem;
 	}
 
 	.f-color-chip__color {
-		background-color: #fff;
 		content: attr(data-color);
 		font-weight: 400;
+		background-color: #fff;
 	}
 }

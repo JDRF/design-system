@@ -20,40 +20,41 @@ $code-colors: (
 code,
 code[class*='language-'],
 pre[class*='language-'] {
-	color: map-get($code-colors, black);
+	font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+	line-height: 1.4;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
+	color: map-get($code-colors, black);
+	letter-spacing: normal;
+	direction: ltr;
 	tab-size: 1;
 	hyphens: none;
-	font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-	line-height: 1.4;
-	direction: ltr;
 	cursor: text;
-	letter-spacing: normal;
+
 }
 
 // code blocks
 pre[class*='language-'] {
 	overflow: auto;
-	margin: 0 0 1em;
-	padding: 1.2em;
-	border-radius: 3px;
+	margin: 0 0 1rem;
+	padding: 1.2rem;
 	font-size: 85%;
+	border-radius: 3px;
 }
 
 p code,
 li code,
 table code {
 	margin: 0;
-	border-radius: 3px;
-	padding: 0.2em 0;
+	padding: 0.2rem 0;
 	font-size: 85%;
+	border-radius: 3px;
 
 	&:before,
 	&:after {
-		letter-spacing: -0.2em;
 		content: '\00a0';
+		letter-spacing: -0.2rem;
 	}
 }
 
@@ -65,8 +66,8 @@ pre[class*='language-'] {
 
 // inline code
 :not(pre) > code[class*='language-'] {
-	padding: 0.1em;
-	border-radius: 0.3em;
+	padding: 0.1rem;
+	border-radius: 0.3rem;
 }
 
 

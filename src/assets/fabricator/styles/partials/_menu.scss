@@ -29,10 +29,10 @@
 
 	.f-nav,
 	.f-menu {
-		@include border-box;
 		width: $menu-width-mobile;
 		z-index: 1;
 		overflow: hidden;
+		@include border-box;
 	}
 
 	.f-nav {
@@ -47,10 +47,10 @@
 .f-menu {
 
 	@include desktop {
-		margin-top: 65px;
+		display: block;
+		margin-top: 4.063rem;
 		width: $menu-width-desktop;
 		max-width: 220px;
-		display: block;
 	}
 
 	&.fixed {
@@ -59,7 +59,7 @@
 			top: 0;
 			overflow-y: auto;
 			height: 90%;
-			padding-bottom: 65px;
+			padding-bottom: 4.063rem;
 		}
 	}
 
@@ -72,12 +72,13 @@
 	position: absolute;
 	width: 85%;
 	margin-top: 5px;
-	border-color: #66afe9;
+	border-color: color(accent);
 
 	&.hide {
 		padding: 0;
 		border: none;
 	}
+
 	a {
 		width: 100%;
 		font-size: 0.875rem;

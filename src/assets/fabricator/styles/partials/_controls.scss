@@ -5,10 +5,10 @@
 }
 
 .f-control {
-	@include border-box;
 	display: inline-block;
-	cursor: pointer;
 	margin-left: 0.66rem;
+	cursor: pointer;
+	@include border-box;
 
 	&:first-child {
 		margin-left: 0;
@@ -25,10 +25,10 @@
 }
 
 .f-menu-toggle {
-	cursor: pointer;
 	vertical-align: middle;
 	display: block;
 	margin: 1rem 0;
+	cursor: pointer;
 
 	svg {
 		display: block;
