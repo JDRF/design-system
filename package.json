@@ -37,6 +37,8 @@
     "bootstrap": "^4.0.0-alpha.2",
     "browser-sync": "^2.12.5",
     "browserify": "^13.0.1",
+    "css-parse": "^2.0.0",
+    "css-stringify": "^2.0.0",
     "deepmerge": "^0.2.10",
     "del": "^2.2.0",
     "fabricator-assemble": "^1.1.11",
