@@ -2196,20 +2196,20 @@ input[type="button"].btn-block {
   min-width: 100px;
   padding: 0.5rem 1rem; }
   .btn-loading .spinner {
+    animation: spinner-animation 1.4s linear infinite;
     -webkit-animation: spinner-animation 1.4s linear infinite;
     -moz-animation: spinner-animation 1.4s linear infinite;
     -o-animation: spinner-animation 1.4s linear infinite;
-    animation: spinner-animation 1.4s linear infinite;
     width: 20px;
     height: 20px; }
   .btn-loading .path {
     stroke-dasharray: 187;
     stroke-dashoffset: 0;
     transform-origin: center;
+    animation: spinner-dash 1.4s ease-in-out infinite, spinner-colors 1.4s ease-in-out infinite;
     -webkit-animation: spinner-dash 1.4s ease-in-out infinite, spinner-colors 1.4s ease-in-out infinite;
     -moz-animation: spinner-dash 1.4s ease-in-out infinite, spinner-colors 1.4s ease-in-out infinite;
-    -o-animation: spinner-dash 1.4s ease-in-out infinite, spinner-colors 1.4s ease-in-out infinite;
-    animation: spinner-dash 1.4s ease-in-out infinite, spinner-colors 1.4s ease-in-out infinite; }
+    -o-animation: spinner-dash 1.4s ease-in-out infinite, spinner-colors 1.4s ease-in-out infinite; }
 
 @-webkit-keyframes spinner-animation {
   0% {
@@ -2918,7 +2918,9 @@ a.bg-danger:focus, a.bg-danger:hover {
 .has-ripple {
   position: relative;
   overflow: hidden;
-  transform: translate3d(0, 0, 0); }
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0); }
 
 .ripple {
   display: block;
@@ -2935,4 +2937,6 @@ a.bg-danger:focus, a.bg-danger:hover {
 @keyframes ripple {
   100% {
     opacity: 0;
-    transform: scale(2); } }
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2); } }
