@@ -1595,7 +1595,19 @@ input[type="checkbox"].disabled {
 
 /* Bootstrap overwrites: forms.scss */
 .form-inline .form-group {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .form-inline .form-group {
+      width: auto; } }
+
+.form-inline .form-control {
+  display: block;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .form-inline .form-control {
+      display: inline-block;
+      width: auto; } }
 
 /* Bootstrap overwrites: buttons.scss */
 .btn {
