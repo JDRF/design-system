@@ -785,8 +785,9 @@ Prism.languages.js = Prism.languages.javascript;
 
 var search = require( './search' ),
 	fabricator = require( './fabricator' ),
-	ripple = require( './ripple' ),
-	prism = require( 'prismjs' );
+	ripple = require( './ripple' );
+
+require( 'prismjs' );
 
 ( function( $ ) {
 
