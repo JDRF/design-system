@@ -23,6 +23,13 @@ module.exports = function (gulp, plugins, config) {
 					var template_string = start + escaped + end;
 					var template = plugins.hbs.compile( template_string );
 					return new plugins.hbs.SafeString(template(args));
+				},
+				if_not_eq: function(a, b, opts) {
+					if(a === b) {
+						return opts.inverse(this);
+					} else {
+						return opts.fn(this);
+					}
 				}
 			}
 		});

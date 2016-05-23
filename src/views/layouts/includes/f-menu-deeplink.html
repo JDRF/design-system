@@ -16,9 +16,11 @@
 			<a href="../{{@key}}.html" class="f-menu__heading nav-link">{{name}}</a>
 			<ul class="nav">
 				{{#each items}}
-				<li>
-					<a href="../{{@../key}}.html#{{@key}}" class="nav-link">{{name}}</a>
-				</li>
+				{{#if_not_eq 'Forms' name}}
+					<li>
+						<a href="../{{@../key}}.html#{{@key}}" class="nav-link">{{name}}</a>
+					</li>
+				{{/if_not_eq}}
 				{{/each}}
 			</ul>
 		</li>
