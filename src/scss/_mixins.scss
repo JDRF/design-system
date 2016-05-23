@@ -15,21 +15,9 @@
 	}
 
 	animation: $animations;
-	-webkit-animation: $animations;
-	-moz-animation: $animations;
-	-o-animation: $animations;
 }
 
 @mixin keyframes($animationName) {
-	@-webkit-keyframes #{$animationName} {
-		@content;
-	}
-	@-moz-keyframes #{$animationName} {
-		@content;
-	}
-	@-o-keyframes #{$animationName} {
-		@content;
-	}
 	@keyframes #{$animationName} {
 		@content;
 	}
