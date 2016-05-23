@@ -8,7 +8,8 @@ $fonts:
 	'Gotham Book Italic' '../fonts/gotham/book/gotham-bookitalic-webfont' 300 italic 'gothambook_italic',
 	'Gotham Medium' '../fonts/gotham/medium/gotham-medium-webfont' 500 normal 'gothammedium',
 	'Gotham Medium Italic' '../fonts/gotham/medium/gotham-mediumitalic-webfont' 500 italic 'gothammedium_italic',
-	'Gotham Bold' '../fonts/gotham/bold/gotham-bold-webfont' 700 italic 'gothambold';
+	'Gotham Bold' '../fonts/gotham/bold/gotham-bold-webfont' 700 normal 'gothambold',
+	'Gotham Bold Italic' '../fonts/gotham/bold/gotham-bolditalic-webfont' 700 italic 'gothambold_italic';
 
 @each $font in $fonts {
 	@font-face {

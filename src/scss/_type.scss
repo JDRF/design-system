@@ -14,18 +14,18 @@ p {
 
 b,
 strong {
-	font-family: $font-medium;
+	font-family: $font-bold;
 	font-weight: normal;
 
 	em,
 	i {
-		font-family: $font-medium-italic;
+		@include font-italic( $font-medium-italic );
 	}
 }
 
 em,
 i {
-	font-family: $font-italic;
+	@include font-italic( $font-italic );
 }
 
 h1,

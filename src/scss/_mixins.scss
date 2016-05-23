@@ -34,3 +34,8 @@
 		@content;
 	}
 }
+
+@mixin font-italic( $font ) {
+	font-family: $font;
+	font-style: italic;
+}
