@@ -4,7 +4,8 @@
 
 var search = require( './search' ),
 	fabricator = require( './fabricator' ),
-	ripple = require( './ripple' );
+	ripple = require( './ripple' ),
+	prism = require( 'prismjs' );
 
 ( function( $ ) {
 
