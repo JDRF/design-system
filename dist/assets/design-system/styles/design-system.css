@@ -456,6 +456,13 @@ output {
   src: url("../fonts/gotham/bold/gotham-bold-webfont.eot");
   src: url("../fonts/gotham/bold/gotham-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/bold/gotham-bold-webfont.woff2") format("woff2"), url("../fonts/gotham/bold/gotham-bold-webfont.woff") format("woff"), url("../fonts/gotham/bold/gotham-bold-webfont.ttf") format("truetype"), url("../fonts/gotham/bold/gotham-bold-webfont.svg#gothambold") format("svg");
   font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Gotham Bold Italic";
+  src: url("../fonts/gotham/bold/gotham-bolditalic-webfont.eot");
+  src: url("../fonts/gotham/bold/gotham-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/bold/gotham-bolditalic-webfont.woff2") format("woff2"), url("../fonts/gotham/bold/gotham-bolditalic-webfont.woff") format("woff"), url("../fonts/gotham/bold/gotham-bolditalic-webfont.ttf") format("truetype"), url("../fonts/gotham/bold/gotham-bolditalic-webfont.svg#gothambold_italic") format("svg");
+  font-weight: 700;
   font-style: italic; }
 
 /* Bootstrap overwrites: type.scss */
@@ -471,17 +478,19 @@ p {
 
 b,
 strong {
-  font-family: "Gotham Medium", sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   font-weight: normal; }
   b em,
   b i,
   strong em,
   strong i {
-    font-family: "Gotham Medium Italic", sans-serif; }
+    font-family: "Gotham Medium Italic", sans-serif;
+    font-style: italic; }
 
 em,
 i {
-  font-family: "Gotham Book Italic", sans-serif; }
+  font-family: "Gotham Book Italic", sans-serif;
+  font-style: italic; }
 
 h1,
 h2,
