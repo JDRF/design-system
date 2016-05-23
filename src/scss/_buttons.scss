@@ -198,54 +198,54 @@ input[type="button"] {
 	padding: 0.5rem 1rem;
 
 	.spinner {
-		@include animation('spinner-animation 1.4s linear infinite');
+		@include animation('spinner-animation 2s linear infinite');
 		width: 20px;
 		height: 20px;
 	}
 
 	.path {
-		stroke-dasharray: $spinner-offset;
+		stroke-dasharray: 1,200;
 		stroke-dashoffset: 0;
 		transform-origin: center;
 		@include animation(
-			'spinner-dash 1.4s ease-in-out infinite',
-			'spinner-colors 1.4s ease-in-out infinite'
+			'spinner-dash 1.5s ease-in-out infinite',
+			'spinner-colors 6s ease-in-out infinite'
 		);
 	}
 }
 
-@include keyframes(spinner-animation) {
-  0% {
-  	transform: rotate(0deg);
-  }
-
-  100% {
-  	transform: rotate(270deg);
-  }
-}
-
-@include keyframes(spinner-colors) {
-	0% {
-		stroke: $jdrf-white;
-	}
-
-	100% {
-		stroke: $jdrf-white;
+@include keyframes( spinner-animation ) {
+	100%{
+		transform: rotate(360deg);
 	}
 }
 
-@include keyframes(spinner-dash) {
-	0% {
-		stroke-dashoffset: $spinner-offset;
+@include keyframes( spinner-colors ) {
+	100%, 0%{
+		stroke: $jdrf-white;
 	}
-
-	50% {
-		stroke-dashoffset: $spinner-offset/4;
-		transform:rotate(135deg);
+	40%{
+		stroke: $jdrf-white;
 	}
+	66%{
+		stroke: $jdrf-white;
+	}
+	80%, 90%{
+		stroke: $jdrf-white;
+	}
+}
 
-	100% {
-		stroke-dashoffset: $spinner-offset;
-		transform:rotate(450deg);
+@include keyframes( spinner-dash ) {
+	0%{
+		stroke-dasharray: 1,200;
+		stroke-dashoffset: 0;
+	}
+	50%{
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -35px;
+	}
+	100%{
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -124px;
 	}
 }

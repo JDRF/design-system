@@ -47,7 +47,6 @@
 /* 8px */
 /* 8px */
 /* Border radius at 2px */
-/* == Animations ======== */
 /* Bootstrap overwrites: mixins.scss */
 /* Bootstrap @import "scss/mixins/border-radius.scss */
 /* Bootstrap @import "scss/mixins/buttons.scss */
@@ -2205,36 +2204,39 @@ input[type="button"].btn-block {
   min-width: 100px;
   padding: 0.5rem 1rem; }
   .btn-loading .spinner {
-    animation: spinner-animation 1.4s linear infinite;
+    animation: spinner-animation 2s linear infinite;
     width: 20px;
     height: 20px; }
   .btn-loading .path {
-    stroke-dasharray: 187;
+    stroke-dasharray: 1,200;
     stroke-dashoffset: 0;
     transform-origin: center;
-    animation: spinner-dash 1.4s ease-in-out infinite, spinner-colors 1.4s ease-in-out infinite; }
+    animation: spinner-dash 1.5s ease-in-out infinite, spinner-colors 6s ease-in-out infinite; }
 
 @keyframes spinner-animation {
-  0% {
-    transform: rotate(0deg); }
   100% {
-    transform: rotate(270deg); } }
+    transform: rotate(360deg); } }
 
 @keyframes spinner-colors {
-  0% {
+  100%, 0% {
     stroke: #ffffff; }
-  100% {
+  40% {
+    stroke: #ffffff; }
+  66% {
+    stroke: #ffffff; }
+  80%, 90% {
     stroke: #ffffff; } }
 
 @keyframes spinner-dash {
   0% {
-    stroke-dashoffset: 187; }
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0; }
   50% {
-    stroke-dashoffset: 46.75;
-    transform: rotate(135deg); }
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35px; }
   100% {
-    stroke-dashoffset: 187;
-    transform: rotate(450deg); } }
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124px; } }
 
 /* Design System Custom - No Bootstrap Default */
 .elevation-one {
