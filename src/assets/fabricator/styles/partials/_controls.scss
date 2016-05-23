@@ -8,6 +8,11 @@
 	display: inline-block;
 	margin-left: 0.66rem;
 	cursor: pointer;
+	appearance: none;
+	border: none;
+	background-color: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 	@include border-box;
 
 	&:first-child {
