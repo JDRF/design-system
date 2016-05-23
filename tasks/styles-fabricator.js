@@ -11,7 +11,9 @@ module.exports = function (gulp, plugins, config) {
 			}))
 			.pipe(plugins.sourcemaps.init())
 			.pipe(plugins.sass().on('error', plugins.sass.logError))
-			.pipe(plugins.prefix('last 2 versions'))
+			.pipe(plugins.prefix({
+				browsers: ['last 2 versions']
+			}))
 			.pipe(plugins.gulpif(!config.dev, plugins.csso()))
 			.pipe(plugins.rename('f.css'))
 			.pipe(plugins.sourcemaps.write())

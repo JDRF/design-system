@@ -58,8 +58,6 @@ body {
 	.f-menu-active & {
 		@include mobile {
 			transform: translate($menu-width-mobile, 0);
-			-webkit-transform: translate($menu-width-mobile, 0);
-			-ms-transform: translate($menu-width-mobile, 0);
 		}
 	}
 }
