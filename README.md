@@ -65,10 +65,10 @@ Below are the different available Design System elements. If possible, an elemen
 Please review the contributing doc found [here](https://github.com/JDRF/design-system/blob/master/CONTRIBUTING.md)
 
 ### Installation
-To setup with optimal build for local development, we suggest running the below command:
-````
-npm run init-for-dev
-````
+This will require that the master branch to be setup in a sub folder at ./design-system. This will pull the latest code, run npm install, and afterwords run gulp.
+```
+npm run pull
+```
 It will setup your working directory to the below file structure
 
 ````
