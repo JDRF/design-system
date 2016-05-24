@@ -5,14 +5,13 @@
   "author": "patrick mckowen <pmckowen@jdrf.org>",
   "contributors": [
     {
-      "name": "nick smith",
+      "name": "Nick Smith",
       "email": "fuhton@gmail.com"
     }
   ],
   "scripts": {
-    "init-for-dev": "git clone https://github.com/jdrf/design-system.git && npm run setup",
-    "presetup": "git checkout gh-pages && git pull origin gh-pages",
-    "setup": "npm install && cd design-system && npm run setup && cd .. && gulp",
+    "prepull": "git checkout gh-pages && git pull origin gh-pages",
+    "pull": "npm install && cd design-system && npm run setup && cd .. && gulp",
     "test": "gulp test",
     "build": "gulp",
     "build-from-dev": "gulp --env=dev build",
@@ -68,12 +67,5 @@
     "prismjs": "^1.5.0",
     "run-sequence": "^1.1.5",
     "vinyl-source-stream": "^1.1.0"
-  },
-  "dependencies": {
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-if": "^2.0.0",
-    "gulp-util": "^3.0.7"
   }
 }

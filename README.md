@@ -15,9 +15,9 @@
 # Local Development
 
 #### Setting up
-This will require that the master branch to be setup in a sub folder at ./design-system. This will pull the latest code, run npm install, and afterwords sequentially run gulp.
+This will require that the master branch to be setup in a sub folder at ./design-system. This will pull the latest code, run npm install, and afterwords run gulp.
 ```
-npm run setup
+npm run pull
 ```
 
 #### Running locally and editing Fabricator
