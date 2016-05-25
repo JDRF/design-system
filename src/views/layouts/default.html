@@ -17,27 +17,27 @@
 <body>
 	{{> f-header}}
 
-	<div class="f-container container">
-		<div class="row">
-			{{#if fabricator}}
-				{{> f-icons}}
-				{{#if deeplink}}
-					{{> f-menu-deeplink}}
-				{{else}}
-					{{> f-menu}}
+		<div class="f-container ds-container">
+			<div class="ds-row">
+				{{#if fabricator}}
+					{{> f-icons}}
+					{{#if deeplink}}
+						{{> f-menu-deeplink}}
+					{{else}}
+						{{> f-menu}}
+					{{/if}}
 				{{/if}}
-			{{/if}}
-			<main class="f-content col-md-8 col-lg-9" role="main">
-				{% body %}
-			</main>
+				<main class="f-content ds-col-md-8 ds-col-lg-9" role="main">
+					{% body %}
+				</main>
+			</div>
 		</div>
-	</div>
-	<!-- Design System scripts: requires jQuery -->
-	<script src="./{{baseurl}}assets/design-system/scripts/design-system.js"></script>
-	<!-- /Design System scripts: requires jQuery -->
+		<!-- Design System scripts: requires jQuery -->
+		<script src="./{{baseurl}}assets/design-system/scripts/design-system.js"></script>
+		<!-- /Design System scripts: requires jQuery -->
 
-	{{#if fabricator}}<script src="./{{baseurl}}assets/fabricator/scripts/f.js"></script>{{/if}}
-	{{#if fabricator}}<script src="./{{baseurl}}assets/fabricator/scripts/search.js"></script>{{/if}}
+		{{#if fabricator}}<script src="./{{baseurl}}assets/fabricator/scripts/f.js"></script>{{/if}}
+		{{#if fabricator}}<script src="./{{baseurl}}assets/fabricator/scripts/search.js"></script>{{/if}}
 
 </body>
 </html>

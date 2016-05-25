@@ -123,9 +123,9 @@ module.exports = {
 			href = item.getAttribute( 'href' ).replace( /^\//g, '' );
 
 			if ( href === current ) {
-				helpers.addClass( item, 'current' );
+				helpers.addClass( item, 'ds-current' );
 			} else {
-				helpers.removeClass( item, 'current' );
+				helpers.removeClass( item, 'ds-current' );
 			}
 		}
 
@@ -175,9 +175,9 @@ module.exports = {
 			var topOffset = window.pageYOffset;
 
 			if ( topOffset > totalHeaderHeight ) {
-				helpers.addClass( dsSidebar, 'fixed' );
+				helpers.addClass( dsSidebar, 'ds-fixed' );
 			} else {
-				helpers.removeClass( dsSidebar, 'fixed' );
+				helpers.removeClass( dsSidebar, 'ds-fixed' );
 			}
 		};
 

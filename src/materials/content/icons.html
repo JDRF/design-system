@@ -2,26 +2,26 @@
 notes: |
   We're using <a href="https://github.com/google/material-design-icons" target="_blank">Material Icons</a> for icons across the Design System.
 
-  It is recommended to make use of the `sr-only` class to include screen-reader text that is visually hidden, but can help identify icons to screen reader users.
+  It is recommended to make use of the `ds-sr-only` class to include screen-reader text that is visually hidden, but can help identify icons to screen reader users.
 
   Material Icons have a <a href="http://google.github.io/material-design-icons/#icon-font-for-the-web">ligatures feature</a> that allows icons to show by typing within the element. Due to this feature, depending on whether the button is icon only or icon with text, the structure of the HTML will have to change slightly.
 
-  Icons inside buttons will use existing <a href="/dist/components.html#buttons">button classes</a> in addition to the `.btn-icon` class.
+  Icons inside buttons will use existing <a href="/dist/components.html#buttons">button classes</a> in addition to the `.ds-btn-icon` class.
 ---
 
 <section class="f-section">
 	<h3 class="f-example-title">Icon Only Buttons</h3>
 	<div class="f-example">
-		<button type="button" name="mood-button-example" class="material-icons mi-mood btn-icon btn btn-primary">
-			<span class="sr-only">Primary button with mood icon.</span>
+		<button type="button" name="mood-button-example" class="material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary">
+			<span class="ds-sr-only">Primary button with mood icon.</span>
 		</button>
 
-		<button type="button" name="mood-button-example" class="material-icons mi-mood btn-icon btn btn-primary-outline">
-			<span class="sr-only">Outline button with mood icon.</span>
+		<button type="button" name="mood-button-example" class="material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary-outline">
+			<span class="ds-sr-only">Outline button with mood icon.</span>
 		</button>
 
-		<button type="button" name="mood-button-example" class="material-icons mi-mood btn-icon btn btn-flat">
-			<span class="sr-only">Flat button with mood icon.</span>
+		<button type="button" name="mood-button-example" class="material-icons mi-mood ds-btn-icon ds-btn ds-btn-flat">
+			<span class="ds-sr-only">Flat button with mood icon.</span>
 		</button>
 	</div>
 	{{example 'button.btn-icon'}}
@@ -31,15 +31,15 @@ notes: |
 	<h3 class="f-example-title">Left Icon with Text</h3>
 
 	<div class="f-example">
-		<button type="button" name="app-button-example" class="btn btn-primary btn-lg btn-icon">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-icon">
 			<span class="material-icons mi-get-app" aria-hidden="true"></span>
 			<span>Icon Left</span>
 		</button>
-		<button type="button" name="app-button-example" class="btn btn-primary btn-icon">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-icon">
 			<span class="material-icons mi-get-app" aria-hidden="true"></span>
 			<span>Icon Left</span>
 		</button>
-		<button type="button" name="app-button-example" class="btn btn-primary btn-sm btn-icon">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-sm ds-btn-icon">
 			<span class="material-icons mi-get-app" aria-hidden="true"></span>
 			<span>Icon Left</span>
 		</button>
@@ -51,19 +51,18 @@ notes: |
 	<h3 class="f-example-title">Right Icon with Text</h3>
 
 	<div class="f-example">
-		<button type="button" name="app-button-example" class="btn btn-primary btn-lg btn-icon">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-icon">
 			<span>Icon Right</span>
 			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
 		</button>
-		<button type="button" name="app-button-example" class="btn btn-primary btn-icon">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-icon">
 			<span>Icon Right</span>
 			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
 		</button>
-		<button type="button" name="app-button-example" class="btn btn-primary btn-sm btn-icon">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-sm ds-btn-icon">
 			<span>Icon Right</span>
 			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
 		</button>
 	</div>
 	{{example 'button.btn-icon-right'}}
 </section>
-
