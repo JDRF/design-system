@@ -14,7 +14,7 @@
 		@include transition;
 	}
 
-	&.sidebar {
+	&.ds-sidebar {
 		@include mobile {
 			position: absolute;
 			width: $menu-width-mobile;
@@ -53,7 +53,7 @@
 		max-width: 220px;
 	}
 
-	&.fixed {
+	&.ds-fixed {
 		@include desktop {
 			position: fixed;
 			top: 0;
@@ -68,13 +68,13 @@
 	}
 }
 
-.form-control.bd-search-results {
+.ds-form-control.bd-search-results {
 	position: absolute;
 	width: 85%;
 	margin-top: 5px;
 	border-color: color(accent);
 
-	&.hide {
+	&.ds-hide {
 		padding: 0;
 		border: none;
 	}

@@ -11,6 +11,12 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 
 		var self = this;
 
+		// var _log = self.log = function() {
+		// 	if ( self.defaults.debug && console && console.log ) {
+		// 		console.log.apply( console, arguments );
+		// 	}
+		// };
+
 		self.selector = selector;
 		self.defaults = {
 			debug: false,
@@ -36,14 +42,14 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 			var $ripple;
 			var settings;
 
-			$this.addClass( 'has-ripple' );
+			$this.addClass( 'ds-has-ripple' );
 
 			// This instances settings
 			settings = $.extend( {}, self.defaults, $this.data() );
 
 			// Create the ripple element
-			if ( settings.multi || !settings.multi && $this.find( '.ripple' ).length === 0 ) {
-				$ripple = $( '<span></span>' ).addClass( 'ripple' );
+			if ( settings.multi || !settings.multi && $this.find( '.ds-ripple' ).length === 0 ) {
+				$ripple = $( '<span></span>' ).addClass( 'ds-ripple' );
 				$ripple.appendTo( $this );
 
 				//_log( 'Create: Ripple' );
@@ -57,6 +63,7 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 						width: size
 					} );
 
+					//_log( 'Set: Ripple size' );
 				}
 
 				// Give the user the ability to change the rate of the animation
@@ -74,6 +81,10 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 
 					// Set the new duration if it has not changed
 					if ( settings.duration.toFixed( 2 ) !== newDuration.toFixed( 2 ) ) {
+						// _log( 'Update: Ripple Duration', {
+						// 	from: settings.duration,
+						// 	to: newDuration
+						// } );
 						settings.duration = newDuration;
 					}
 				}
@@ -87,16 +98,19 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 					opacity: settings.opacity
 				};
 
+				//_log( 'Set: Ripple CSS', css );
 				$ripple.css( css );
 			}
 
 			// Ensure we always have the ripple element
 			if ( !settings.multi ) {
-				$ripple = $this.find( '.ripple' );
+				//_log( 'Set: Ripple Element' );
+				$ripple = $this.find( '.ds-ripple' );
 			}
 
 			// Kill animation
-			$ripple.removeClass( 'ripple-animate' );
+			//_log( 'Destroy: Ripple Animation' );
+			$ripple.removeClass( 'ds-ripple-animate' );
 
 			// Retrieve coordinates
 			var x = e.pageX - $this.offset().left - $ripple.width() / 2;
@@ -108,18 +122,23 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 			 * because once it has rendered, we only need to trigger paints thereafter.
 			 */
 			if ( settings.multi ) {
+				//_log( 'Set: Ripple animationend event' );
 				$ripple.one( 'animationend webkitAnimationEnd oanimationend MSAnimationEnd',
 					function() {
+						//_log( 'Note: Ripple animation ended' );
+						//_log( 'Destroy: Ripple' );
 						$( this ).remove();
 					}
 				);
 			}
 
 			// Set position and animate
+			//_log( 'Set: Ripple location' );
+			//_log( 'Set: Ripple animation' );
 			$ripple.css( {
 				top: y + 'px',
 				left: x + 'px'
-			} ).addClass( 'ripple-animate' );
+			} ).addClass( 'ds-ripple-animate' );
 		};
 
 		$( document ).on( self.defaults.on, self.selector, Trigger );

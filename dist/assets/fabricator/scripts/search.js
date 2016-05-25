@@ -925,9 +925,9 @@ module.exports = {
 			href = item.getAttribute( 'href' ).replace( /^\//g, '' );
 
 			if ( href === current ) {
-				helpers.addClass( item, 'current' );
+				helpers.addClass( item, 'ds-current' );
 			} else {
-				helpers.removeClass( item, 'current' );
+				helpers.removeClass( item, 'ds-current' );
 			}
 		}
 
@@ -977,9 +977,9 @@ module.exports = {
 			var topOffset = window.pageYOffset;
 
 			if ( topOffset > totalHeaderHeight ) {
-				helpers.addClass( dsSidebar, 'fixed' );
+				helpers.addClass( dsSidebar, 'ds-fixed' );
 			} else {
-				helpers.removeClass( dsSidebar, 'fixed' );
+				helpers.removeClass( dsSidebar, 'ds-fixed' );
 			}
 		};
 
@@ -1051,7 +1051,7 @@ module.exports = {
 module.exports = {
 
 	init: function( $ ) {
-		$.ripple( '.btn', {
+		$.ripple( '.ds-btn', {
 			debug: false, // Turn Ripple.js logging on/off
 			on: 'mousedown', // The event to trigger a ripple effect
 
@@ -1071,7 +1071,6 @@ module.exports = {
 	}
 };
 
-
 },{}],6:[function(require,module,exports){
 /**
  * Search Module
@@ -1086,7 +1085,7 @@ module.exports = {
 	init: function() {
 		this.input = document.getElementById( 'search-input' );
 		this.results = document.getElementById( 'search-results' );
-		this.loop =	document.querySelectorAll( '.f-menu .nav a' );
+		this.loop =	document.querySelectorAll( '.f-menu .ds-nav a' );
 
 		this.input.addEventListener( 'change', this.watch.bind( this ), false );
 		this.input.addEventListener( 'keyup', this.watch.bind( this ), false );
@@ -1098,7 +1097,7 @@ module.exports = {
 		this.clean();
 
 		if ( '' !== self.input.value ) {
-			this.results.className = this.results.className.replace( ' hide', '' );
+			this.results.className = this.results.className.replace( ' ds-hide', '' );
 			Object.keys( this.loop ).map( function( key ) {
 				if ( new RegExp( self.input.value, 'i' ).test( self.loop[ key ].text ) ) {
 					self.append( self.loop[ key ].cloneNode( true ) );
@@ -1124,8 +1123,8 @@ module.exports = {
 	 * @return {object} this
 	 */
 	clean: function() {
-		this.results.className = this.results.className.replace( ' hide', '' );
-		this.results.className += ' hide';
+		this.results.className = this.results.className.replace( ' ds-hide', '' );
+		this.results.className += ' ds-hide';
 		this.results.innerHTML = '';
 		return this;
 	}

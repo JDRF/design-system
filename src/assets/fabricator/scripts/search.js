@@ -11,7 +11,7 @@ module.exports = {
 	init: function() {
 		this.input = document.getElementById( 'search-input' );
 		this.results = document.getElementById( 'search-results' );
-		this.loop =	document.querySelectorAll( '.f-menu .nav a' );
+		this.loop =	document.querySelectorAll( '.f-menu .ds-nav a' );
 
 		this.input.addEventListener( 'change', this.watch.bind( this ), false );
 		this.input.addEventListener( 'keyup', this.watch.bind( this ), false );
@@ -23,7 +23,7 @@ module.exports = {
 		this.clean();
 
 		if ( '' !== self.input.value ) {
-			this.results.className = this.results.className.replace( ' hide', '' );
+			this.results.className = this.results.className.replace( ' ds-hide', '' );
 			Object.keys( this.loop ).map( function( key ) {
 				if ( new RegExp( self.input.value, 'i' ).test( self.loop[ key ].text ) ) {
 					self.append( self.loop[ key ].cloneNode( true ) );
@@ -49,8 +49,8 @@ module.exports = {
 	 * @return {object} this
 	 */
 	clean: function() {
-		this.results.className = this.results.className.replace( ' hide', '' );
-		this.results.className += ' hide';
+		this.results.className = this.results.className.replace( ' ds-hide', '' );
+		this.results.className += ' ds-hide';
 		this.results.innerHTML = '';
 		return this;
 	}
