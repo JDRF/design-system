@@ -2634,7 +2634,7 @@ img {
   border: 0;
 }
 
-svg:not( {
+svg:not(:root) {
   overflow: hidden;
 }
 
@@ -3307,7 +3307,7 @@ mark,
   display: inline-block;
 }
 
-.ds-list-inline-item:not( {
+.ds-list-inline-item:not(:last-child) {
   margin-right: 5px;
 }
 
@@ -5012,7 +5012,7 @@ input[type="checkbox"].ds-disabled {
   cursor: not-allowed;
 }
 
-.ds-btn.ds-material-icons {
+.ds-btn.material-icons {
   font-family: 'Material Icons';
 }
 
