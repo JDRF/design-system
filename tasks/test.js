@@ -2,16 +2,17 @@ module.exports = function (gulp, plugins) {
 	return function () {
 
 		// Define which tests to run
-		var src = __dirname + '/../tests/**/*.js';
+		var src = __dirname + '/../tests/acceptance/**/*.js',
+			exclude = '!' + __dirname + '/../tests/acceptance/forms/*.js';
 
 		if ( 'undefined' !== typeof plugins.gutil.env.test_dir ) {
-			src = __dirname + '/../tests/' + plugins.gutil.env.test_dir + '/*.js';
+			src = __dirname + '/../tests/acceptance/' + plugins.gutil.env.test_dir + '/*.js';
 			if ( 'undefined' !== typeof plugins.gutil.env.test_dir ) {
-				src = __dirname + '/../tests/' + plugins.gutil.env.test_dir + '/' + plugins.gutil.env.test_file + '.js';
+				src = __dirname + '/../tests/acceptance/' + plugins.gutil.env.test_dir + '/' + plugins.gutil.env.test_file + '.js';
 			}
 		}
 
-		var stream = gulp.src(src)
+		var stream = gulp.src([ src, exclude ])
 			.pipe(plugins.phantomcss({
 				// gulp-phantomcss overrides the default option value.
 				// PR submitted.
