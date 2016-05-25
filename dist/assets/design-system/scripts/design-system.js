@@ -52,45 +52,16 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 				$ripple.appendTo( $this );
 
 				// Set ripple size
-				if ( !$ripple.height() && !$ripple.width() ) {
-					var size = Math.max( $this.outerWidth(), $this.outerHeight() );
-
-					$ripple.css( {
-						height: size,
-						width: size
-					} );
-
-				}
+				setRippleSize( $ripple, $this );
 
 				// Give the user the ability to change the rate of the animation
 				// based on element width
 				if ( settings.rate && typeof settings.rate === 'function' ) {
-
-					// rate = pixels per second
-					var rate = Math.round( $ripple.width() / settings.duration );
-
-					// new amount of pixels per second
-					var filteredRate = settings.rate( rate );
-
-					// Determine the new duration for the animation
-					var newDuration = $ripple.width() / filteredRate;
-
-					// Set the new duration if it has not changed
-					if ( settings.duration.toFixed( 2 ) !== newDuration.toFixed( 2 ) ) {
-						settings.duration = newDuration;
-					}
+					setAnimationRate( $ripple, settings );
 				}
 
 				// Set the color and opacity
-				var color = settings.color === 'auto' ? $this.css( 'color' ) : settings.color;
-				var css = {
-					animationDuration: settings.duration.toString() + 's',
-					animationTimingFunction: settings.easing,
-					background: color,
-					opacity: settings.opacity
-				};
-
-				$ripple.css( css );
+				setColorOpacity( $ripple, settings, $this );
 			}
 
 			// Ensure we always have the ripple element
@@ -123,6 +94,57 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 				top: y + 'px',
 				left: x + 'px'
 			} ).addClass( 'ds-ripple-animate' );
+		};
+
+		var setRippleSize = function( rippleSpan, el ) {
+			var $rippleSpan = rippleSpan,
+				$selector = el;
+
+			// Set ripple size
+			if ( !$rippleSpan.height() && !$rippleSpan.width() ) {
+				var size = Math.max( $selector.outerWidth(), $selector.outerHeight() );
+
+				$rippleSpan.css( {
+					height: size,
+					width: size
+				} );
+			}
+		};
+
+		var setAnimationRate = function( rippleSpan, userSettings ) {
+			var $rippleSpan = rippleSpan,
+				$settings = userSettings;
+
+			// rate = pixels per second
+			var rate = Math.round( $rippleSpan.width() / $settings.duration );
+
+			// new amount of pixels per second
+			var filteredRate = $settings.rate( rate );
+
+			// Determine the new duration for the animation
+			var newDuration = $rippleSpan.width() / filteredRate;
+
+			// Set the new duration if it has not changed
+			if ( $settings.duration.toFixed( 2 ) !== newDuration.toFixed( 2 ) ) {
+				$settings.duration = newDuration;
+			}
+		};
+
+		var setColorOpacity = function( rippleSpan, userSettings, el ) {
+			var $rippleSpan = rippleSpan,
+				$settings = userSettings,
+				$this = el;
+
+			// Set the color and opacity
+			var color = $settings.color === 'auto' ? $this.css( 'color' ) : $settings.color;
+			var css = {
+				animationDuration: $settings.duration.toString() + 's',
+				animationTimingFunction: $settings.easing,
+				background: color,
+				opacity: $settings.opacity
+			};
+
+			$rippleSpan.css( css );
 		};
 
 		init();
