@@ -1,31 +1,36 @@
-( function( $, document, Math ) {
+'use strict';
 
-	'use strict';
+( function( $, document ) {
 
-	$.ripple = function( selector, options ) {
+	window.ripple = function( selector, options ) {
 
-		var self = this;
+		var init = function() {
 
-		self.selector = selector;
-		self.defaults = {
-			debug: false,
-			on: 'mousedown',
+			var self = this;
 
-			opacity: 0.4,
-			color: 'auto',
-			multi: false,
+			self.selector = selector;
+			self.defaults = {
+				debug: false,
+				on: 'mousedown',
 
-			duration: 0.7,
-			rate: function( pxPerSecond ) {
-				return pxPerSecond;
-			},
+				opacity: 0.4,
+				color: 'auto',
+				multi: false,
 
-			easing: 'linear'
+				duration: 0.7,
+				rate: function( pxPerSecond ) {
+					return pxPerSecond;
+				},
+
+				easing: 'linear'
+			};
+
+			self.defaults = $.extend( {}, self.defaults, options );
+
+			$( document ).on( self.defaults.on, self.selector, rippleTrigger );
 		};
 
-		self.defaults = $.extend( {}, self.defaults, options );
-
-		var Trigger = function( e ) {
+		var rippleTrigger = function( e ) {
 
 			var $this = $( this );
 			var $ripple;
@@ -115,7 +120,8 @@
 			} ).addClass( 'ds-ripple-animate' );
 		};
 
-		$( document ).on( self.defaults.on, self.selector, Trigger );
+		init();
+
 	};
 
-} )( jQuery, document, Math );
+} )( jQuery, document );
