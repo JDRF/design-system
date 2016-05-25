@@ -789,16 +789,16 @@ var search = require( './search' ),
 
 require( 'prismjs' );
 
-( function( $ ) {
+( function() {
 
 	search.init();
 	fabricator.init();
 	fabricator.buildColorChips();
 	fabricator.setActiveItem();
 	fabricator.fixSidebar();
-	ripple.init( $ );
+	ripple.init();
 
-} )( jQuery );
+} )();
 
 },{"./fabricator":3,"./ripple":5,"./search":6,"prismjs":1}],3:[function(require,module,exports){
 /**
@@ -1050,8 +1050,8 @@ module.exports = {
 
 module.exports = {
 
-	init: function( $ ) {
-		$.ripple( '.ds-btn', {
+	init: function() {
+		window.ripple( '.ds-btn', {
 			debug: false, // Turn Ripple.js logging on/off
 			on: 'mousedown', // The event to trigger a ripple effect
 

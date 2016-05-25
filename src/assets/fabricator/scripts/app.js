@@ -8,13 +8,13 @@ var search = require( './search' ),
 
 require( 'prismjs' );
 
-( function( $ ) {
+( function() {
 
 	search.init();
 	fabricator.init();
 	fabricator.buildColorChips();
 	fabricator.setActiveItem();
 	fabricator.fixSidebar();
-	ripple.init( $ );
+	ripple.init();
 
-} )( jQuery );
+} )();
