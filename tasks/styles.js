@@ -18,9 +18,12 @@ module.exports = function (gulp, plugins) {
 			.on('error', plugins.notify.onError(function (error) {
 				return 'Error: ' + error.message;
 			})) 
-			// .pipe(plugins.cssNamespace({
-			// 	namespace: 'ds'
-			// }))
+			.pipe(plugins.cssNamespace({
+				namespace: 'ds',
+				exclude: [
+					'material-icons'
+				]
+			}))
 			/*
 			* After scss lint and including bootstrap path,
 			* rename to plain css in a file called sass-files.css

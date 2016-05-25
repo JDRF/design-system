@@ -36,17 +36,15 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 			var $ripple;
 			var settings;
 
-			$this.addClass( 'has-ripple' );
+			$this.addClass( 'ds-has-ripple' );
 
 			// This instances settings
 			settings = $.extend( {}, self.defaults, $this.data() );
 
 			// Create the ripple element
-			if ( settings.multi || !settings.multi && $this.find( '.ripple' ).length === 0 ) {
-				$ripple = $( '<span></span>' ).addClass( 'ripple' );
+			if ( settings.multi || !settings.multi && $this.find( '.ds-ripple' ).length === 0 ) {
+				$ripple = $( '<span></span>' ).addClass( 'ds-ripple' );
 				$ripple.appendTo( $this );
-
-				//_log( 'Create: Ripple' );
 
 				// Set ripple size
 				if ( !$ripple.height() && !$ripple.width() ) {
@@ -92,11 +90,11 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 
 			// Ensure we always have the ripple element
 			if ( !settings.multi ) {
-				$ripple = $this.find( '.ripple' );
+				$ripple = $this.find( '.ds-ripple' );
 			}
 
 			// Kill animation
-			$ripple.removeClass( 'ripple-animate' );
+			$ripple.removeClass( 'ds-ripple-animate' );
 
 			// Retrieve coordinates
 			var x = e.pageX - $this.offset().left - $ripple.width() / 2;
@@ -119,7 +117,7 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 			$ripple.css( {
 				top: y + 'px',
 				left: x + 'px'
-			} ).addClass( 'ripple-animate' );
+			} ).addClass( 'ds-ripple-animate' );
 		};
 
 		$( document ).on( self.defaults.on, self.selector, Trigger );
