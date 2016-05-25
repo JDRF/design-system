@@ -72,10 +72,6 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 			// Kill animation
 			$ripple.removeClass( 'ds-ripple-animate' );
 
-			// Retrieve coordinates
-			var x = e.pageX - $this.offset().left - $ripple.width() / 2;
-			var y = e.pageY - $this.offset().top - $ripple.height() / 2;
-
 			/**
 			 * We want to delete the ripple elements if we allow multiple so we dont
 			 * sacrifice any page performance. We don't do this on single ripples
@@ -90,10 +86,7 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 			}
 
 			// Set position and animate
-			$ripple.css( {
-				top: y + 'px',
-				left: x + 'px'
-			} ).addClass( 'ds-ripple-animate' );
+			setPosAnimation( $ripple, $this, e );
 		};
 
 		var setRippleSize = function( rippleSpan, el ) {
@@ -145,6 +138,22 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 			};
 
 			$rippleSpan.css( css );
+		};
+
+		var setPosAnimation = function( rippleSpan, el, event ) {
+			var $rippleSpan = rippleSpan,
+				$this = el,
+				$event = event;
+
+			// Retrieve coordinates
+			var x = $event.pageX - $this.offset().left - $rippleSpan.width() / 2;
+			var y = $event.pageY - $this.offset().top - $rippleSpan.height() / 2;
+
+			// Set position and animate
+			$rippleSpan.css( {
+				top: y + 'px',
+				left: x + 'px'
+			} ).addClass( 'ds-ripple-animate' );
 		};
 
 		init();
