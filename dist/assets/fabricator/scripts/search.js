@@ -1051,7 +1051,9 @@ module.exports = {
 module.exports = {
 
 	init: function() {
-		window.ripple( '.ds-btn', {
+		var ripple = window.ripple();
+
+		ripple.init( '.ds-btn', {
 			debug: false, // Turn Ripple.js logging on/off
 			on: 'mousedown', // The event to trigger a ripple effect
 
