@@ -36,7 +36,8 @@
 			var $ripple;
 			var settings;
 
-			$this.addClass( 'ds-has-ripple' );
+			// Add ds-has-ripple class
+			addNewClass( $this, 'ds-has-ripple' );
 
 			// This instances settings
 			settings = $.extend( {}, self.defaults, $this.data() );
@@ -65,7 +66,7 @@
 			}
 
 			// Kill animation
-			$ripple.removeClass( 'ds-ripple-animate' );
+			killAnimation( $ripple );
 
 			/**
 			 * We want to delete the ripple elements if we allow multiple so we dont
@@ -133,6 +134,8 @@
 			};
 
 			$rippleSpan.css( css );
+
+			return [ $settings.color, $settings.opacity ];
 		};
 
 		var setPosAnimation = function( rippleSpan, el, event ) {
@@ -148,7 +151,28 @@
 			$rippleSpan.css( {
 				top: y + 'px',
 				left: x + 'px'
-			} ).addClass( 'ds-ripple-animate' );
+			} );
+
+			addNewClass( $rippleSpan, 'ds-ripple-animate' );
+
+			return $rippleSpan;
+		};
+
+		var addNewClass = function( el, newClass ) {
+			var $this = el;
+
+			$this.addClass( newClass );
+
+			return $this;
+		};
+
+		var killAnimation = function( rippleSpan ) {
+			var $rippleSpan = rippleSpan;
+
+			// Kill animation
+			$rippleSpan.removeClass( 'ds-ripple-animate' );
+
+			return $rippleSpan;
 		};
 
 		init();
