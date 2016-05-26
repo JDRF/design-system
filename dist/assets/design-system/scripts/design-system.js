@@ -42,7 +42,7 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 			var settings;
 
 			// Add ds-has-ripple class
-			addNewClass( $this, 'ds-has-ripple' );
+			$this.addClass( 'ds-has-ripple' );
 
 			// This instances settings
 			settings = $.extend( {}, self.defaults, $this.data() );
@@ -71,7 +71,7 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 			}
 
 			// Kill animation
-			killAnimation( $ripple );
+			$ripple.removeClass( 'ds-ripple-animate' );
 
 			/**
 			 * We want to delete the ripple elements if we allow multiple so we dont
@@ -90,9 +90,8 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 			setPosAnimation( $ripple, $this, e );
 		};
 
-		var setRippleSize = function( rippleSpan, el ) {
-			var $rippleSpan = rippleSpan,
-				$selector = el;
+		var setRippleSize = function( $rippleSpan, el ) {
+			var $selector = el;
 
 			// Set ripple size
 			if ( !$rippleSpan.height() && !$rippleSpan.width() ) {
@@ -105,47 +104,43 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 			}
 		};
 
-		var setAnimationRate = function( rippleSpan, userSettings ) {
-			var $rippleSpan = rippleSpan,
-				$settings = userSettings;
-
+		var setAnimationRate = function( $rippleSpan, userSettings ) {
 			// rate = pixels per second
-			var rate = Math.round( $rippleSpan.width() / $settings.duration );
+			var rate = Math.round( $rippleSpan.width() / userSettings.duration );
 
 			// new amount of pixels per second
-			var filteredRate = $settings.rate( rate );
+			var filteredRate = userSettings.rate( rate );
 
 			// Determine the new duration for the animation
 			var newDuration = $rippleSpan.width() / filteredRate;
 
 			// Set the new duration if it has not changed
-			if ( $settings.duration.toFixed( 2 ) !== newDuration.toFixed( 2 ) ) {
-				$settings.duration = newDuration;
+			if ( userSettings.duration.toFixed( 2 ) !== newDuration.toFixed( 2 ) ) {
+				userSettings.duration = newDuration;
 			}
+
+			return newDuration;
 		};
 
-		var setColorOpacity = function( rippleSpan, userSettings, el ) {
-			var $rippleSpan = rippleSpan,
-				$settings = userSettings,
-				$this = el;
+		var setColorOpacity = function( $rippleSpan, userSettings, el ) {
+			var $this = el;
 
 			// Set the color and opacity
-			var color = $settings.color === 'auto' ? $this.css( 'color' ) : $settings.color;
+			var color = userSettings.color === 'auto' ? $this.css( 'color' ) : userSettings.color;
 			var css = {
-				animationDuration: $settings.duration.toString() + 's',
-				animationTimingFunction: $settings.easing,
+				animationDuration: userSettings.duration.toString() + 's',
+				animationTimingFunction: userSettings.easing,
 				background: color,
-				opacity: $settings.opacity
+				opacity: userSettings.opacity
 			};
 
 			$rippleSpan.css( css );
 
-			return [$settings.color, $settings.opacity];
+			return [userSettings.color, userSettings.opacity];
 		};
 
-		var setPosAnimation = function( rippleSpan, el, event ) {
-			var $rippleSpan = rippleSpan,
-				$this = el,
+		var setPosAnimation = function( $rippleSpan, el, event ) {
+			var $this = el,
 				$event = event;
 
 			// Retrieve coordinates
@@ -158,24 +153,7 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 				left: x + 'px'
 			} );
 
-			addNewClass( $rippleSpan, 'ds-ripple-animate' );
-
-			return $rippleSpan;
-		};
-
-		var addNewClass = function( el, newClass ) {
-			var $this = el;
-
-			$this.addClass( newClass );
-
-			return $this;
-		};
-
-		var killAnimation = function( rippleSpan ) {
-			var $rippleSpan = rippleSpan;
-
-			// Kill animation
-			$rippleSpan.removeClass( 'ds-ripple-animate' );
+			$rippleSpan.addClass( 'ds-ripple-animate' );
 
 			return $rippleSpan;
 		};
