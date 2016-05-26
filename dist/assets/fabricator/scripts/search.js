@@ -1051,9 +1051,7 @@ module.exports = {
 module.exports = {
 
 	init: function() {
-		var ripple = window.ripple();
-
-		ripple.init( '.ds-btn', {
+		var ripple = window.ripple( '.ds-btn', {
 			debug: false, // Turn Ripple.js logging on/off
 			on: 'mousedown', // The event to trigger a ripple effect
 
@@ -1070,6 +1068,9 @@ module.exports = {
 
 			easing: 'linear' // The CSS3 easing function of the ripple
 		} );
+
+		ripple.init();
+
 	}
 };
 
