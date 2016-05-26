@@ -1,6 +1,10 @@
 'use strict';
 
-( function( $, document ) {
+var jQuery = typeof jQuery !== 'undefined' ? window.jQuery : global.jQuery;
+var document = typeof window !== 'undefined' ? document : global.document;
+var window = typeof window !== 'undefined' ? window : global.window;
+
+( function( $ ) {
 
 	window.ripple = function( selector, options ) {
 
@@ -27,12 +31,12 @@
 
 			self.defaults = $.extend( {}, self.defaults, options );
 
-			$( document ).on( self.defaults.on, self.selector, rippleTrigger );
+			$( document ).on( self.defaults.on, self.selector, rippleTrigger.bind( self ) );
 		};
 
 		var rippleTrigger = function( e ) {
 
-			var $this = $( this );
+			var $this = $( e.target );
 			var $ripple;
 			var settings;
 
@@ -40,7 +44,7 @@
 			$this.addClass( 'ds-has-ripple' );
 
 			// This instances settings
-			settings = $.extend( {}, self.defaults, $this.data() );
+			settings = $.extend( {}, this.defaults, $this.data() );
 
 			// Create the ripple element
 			if ( settings.multi || !settings.multi && $this.find( '.ds-ripple' ).length === 0 ) {
@@ -54,7 +58,7 @@
 				// based on element width
 				if ( settings.rate && typeof settings.rate === 'function' ) {
 					//settings duration = to returned new duration
-					settings.duration = setAnimationRate( $ripple, settings );
+					settings.duration = this.setAnimationRate( $ripple, settings );
 				}
 
 				// Set the color and opacity
@@ -154,7 +158,11 @@
 			return $rippleSpan;
 		};
 
-		init();
+		return {
+			init: init,
+			setAnimationRate: setAnimationRate
+		};
+
 	};
 
 } )( jQuery, document );
