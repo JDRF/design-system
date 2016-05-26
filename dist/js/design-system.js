@@ -140,7 +140,7 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 
 			$rippleSpan.css( css );
 
-			return [ $settings.color, $settings.opacity ];
+			return [$settings.color, $settings.opacity];
 		};
 
 		var setPosAnimation = function( rippleSpan, el, event ) {

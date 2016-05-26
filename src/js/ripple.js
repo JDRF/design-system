@@ -135,7 +135,7 @@
 
 			$rippleSpan.css( css );
 
-			return [ $settings.color, $settings.opacity ];
+			return [$settings.color, $settings.opacity];
 		};
 
 		var setPosAnimation = function( rippleSpan, el, event ) {
