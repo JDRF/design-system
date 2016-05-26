@@ -120,6 +120,7 @@ var window = typeof window !== 'undefined' ? window : global.window;
 			}
 
 			return userSettings.duration;
+
 		};
 
 		var setColorOpacity = function( $rippleSpan, userSettings, el ) {
