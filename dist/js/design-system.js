@@ -58,7 +58,8 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 				// Give the user the ability to change the rate of the animation
 				// based on element width
 				if ( settings.rate && typeof settings.rate === 'function' ) {
-					setAnimationRate( $ripple, settings );
+					//settings duration = to returned new duration
+					settings.duration = setAnimationRate( $ripple, settings );
 				}
 
 				// Set the color and opacity
@@ -116,10 +117,10 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 
 			// Set the new duration if it has not changed
 			if ( userSettings.duration.toFixed( 2 ) !== newDuration.toFixed( 2 ) ) {
-				userSettings.duration = newDuration;
+				return newDuration;
 			}
 
-			return newDuration;
+			return userSettings.duration;
 		};
 
 		var setColorOpacity = function( $rippleSpan, userSettings, el ) {
@@ -159,7 +160,6 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 		};
 
 		init();
-
 	};
 
 } )( jQuery, document );

@@ -53,7 +53,8 @@
 				// Give the user the ability to change the rate of the animation
 				// based on element width
 				if ( settings.rate && typeof settings.rate === 'function' ) {
-					setAnimationRate( $ripple, settings );
+					//settings duration = to returned new duration
+					settings.duration = setAnimationRate( $ripple, settings );
 				}
 
 				// Set the color and opacity
@@ -111,10 +112,10 @@
 
 			// Set the new duration if it has not changed
 			if ( userSettings.duration.toFixed( 2 ) !== newDuration.toFixed( 2 ) ) {
-				userSettings.duration = newDuration;
+				return newDuration;
 			}
 
-			return newDuration;
+			return userSettings.duration;
 		};
 
 		var setColorOpacity = function( $rippleSpan, userSettings, el ) {
@@ -154,7 +155,6 @@
 		};
 
 		init();
-
 	};
 
 } )( jQuery, document );
