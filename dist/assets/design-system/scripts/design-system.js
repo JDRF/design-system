@@ -64,6 +64,7 @@ var window = typeof window !== 'undefined' ? window : global.window;
 				if ( settings.rate && typeof settings.rate === 'function' ) {
 					//settings duration = to returned new duration
 					settings.duration = this.setAnimationRate( $ripple, settings );
+					console.log( settings.duration );
 				}
 
 				// Set the color and opacity

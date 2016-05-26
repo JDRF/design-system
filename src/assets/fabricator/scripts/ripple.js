@@ -11,7 +11,7 @@ module.exports = {
 			color: 'auto', // Set the background color. If set to "auto", it will use the text color
 			multi: false, // Allow multiple ripples per element
 
-			duration: 0.7, // The duration of the ripple
+			duration: 0.5, // The duration of the ripple
 
 			// Filter function for modifying the speed of the ripple
 			rate: function( pxPerSecond ) {
@@ -22,6 +22,5 @@ module.exports = {
 		} );
 
 		ripple.init();
-
 	}
 };
