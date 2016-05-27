@@ -13,7 +13,9 @@
     "prepull": "git checkout master && git pull origin master",
     "pull": "npm install && gulp",
     "build": "npm install && gulp",
-    "test": "cd .. && npm run test && cd -",
+    "visual-test": "cd .. && npm run test && cd -",
+    "unit-test": "node tests/unit-tests && node tests/unit-tests/cleanup.js",
+    "test": "npm run unit-test && npm run visual-test",
     "clean": "gulp clean && rm -rf node_modules"
   },
   "repository": {

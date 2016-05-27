@@ -1,10 +1,6 @@
 var test = require('tape');
-// Node globals.
-global.jQuery = require('jquery');
-global.document = {};
-global.window = {};
 // Uses node globals since there is no window to attach to.
-var ripple = require('../../src/js/ripple');
+var ripple = require('../../../src/js/ripple');
 
 test('ripple Test', function (t) {
 	t.plan(2);
