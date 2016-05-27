@@ -83,7 +83,22 @@ It will setup your working directory to the below file structure
 To find available commands from this recommended setup, please visit the [gh-pages](https://github.com/JDRF/design-system/tree/gh-pages) branch
 
 ### Tests
-Test are run from a parent directory that relies on the above specified directory structure. See the (gh-pages README)[https://github.com/JDRF/design-system/tree/gh-pages] for information on testing.
+Tests can be run from the master branch. There are two kinds of testing currently in the Design System - Visual Regression and Unit Tests. Visual Regression relies on PhantomCSS and CasperJS as tools and the gh-pages static site as a visual source. As a result, the testing actually gets executed from that branch when the environment is setup properly (see Installation above). Unit Tests rely on Tape and Node scripting for generating mocks and tests.
+
+* Visual Regression Tests
+````
+npm run visual-tests
+````
+* Unit Tests
+````
+npm run unit-tests
+````
+* Running all tests
+````
+npm test
+````
+
+Visual Regression tests are run from a parent directory that relies on the above specified directory structure. See the [gh-pages README](https://github.com/JDRF/design-system/tree/gh-pages) for information on testing.
 
 ### Semantic Versioning and Releases
 We're using Semantic Versioning to increment the release phases of the Design System. This helps us to track major changes as well as minor changes and patches. We can also view a history of the project's [releases on Github](https://github.com/JDRF/design-system/releases) due to Semantic Versioning.
