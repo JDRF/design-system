@@ -14,7 +14,7 @@
     "pull": "npm install && gulp",
     "build": "npm install && gulp",
     "visual-test": "cd .. && npm run test && cd -",
-    "unit-test": "node tests/unit-tests && node tests/unit-tests/cleanup.js",
+    "unit-test": "node tests/unit-tests | tap-spec && node tests/unit-tests/cleanup.js",
     "test": "npm run unit-test && npm run visual-test",
     "clean": "gulp clean && rm -rf node_modules"
   },
@@ -57,6 +57,7 @@
     "mocha": "^2.4.5",
     "rewire": "^2.5.1",
     "run-sequence": "^1.1.5",
+    "tap-spec": "^4.1.1",
     "tape": "^4.5.1"
   }
 }
