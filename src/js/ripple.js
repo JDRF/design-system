@@ -62,7 +62,14 @@ var window = typeof window !== 'undefined' ? window : global.window;
 				}
 
 				// Set the color and opacity
-				setColorOpacity( $ripple, settings, $this );
+				settings.color = setColorOpacity( $ripple, settings, $this );
+
+				$ripple.css( {
+					background: settings.color,
+					animationDuration: settings.duration.toString() + 's',
+					animationTimingFunction: settings.easing,
+					opacity: settings.opacity
+				} );
 			}
 
 			// Ensure we always have the ripple element
@@ -124,20 +131,10 @@ var window = typeof window !== 'undefined' ? window : global.window;
 		};
 
 		var setColorOpacity = function( $rippleSpan, userSettings, el ) {
-			var $this = el;
-
 			// Set the color and opacity
-			var color = userSettings.color === 'auto' ? $this.css( 'color' ) : userSettings.color;
-			var css = {
-				animationDuration: userSettings.duration.toString() + 's',
-				animationTimingFunction: userSettings.easing,
-				background: color,
-				opacity: userSettings.opacity
-			};
+			var color = userSettings.color === 'auto' ? el.css( 'color' ) : userSettings.color;
 
-			$rippleSpan.css( css );
-
-			return [userSettings.color, userSettings.opacity];
+			return color;
 		};
 
 		var setPosAnimation = function( $rippleSpan, el, event ) {
@@ -161,7 +158,8 @@ var window = typeof window !== 'undefined' ? window : global.window;
 
 		return {
 			init: init,
-			setAnimationRate: setAnimationRate
+			setAnimationRate: setAnimationRate,
+			setColorOpacity: setColorOpacity
 		};
 
 	};

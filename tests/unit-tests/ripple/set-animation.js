@@ -1,4 +1,5 @@
 var test = require('tape');
+var tapSpec = require('tap-spec');
 // Uses node globals since there is no window to attach to.
 var ripple = require('../../../src/js/ripple');
 
