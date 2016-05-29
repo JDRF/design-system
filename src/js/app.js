@@ -1,0 +1,6 @@
+// : init
+'use strict';
+
+( function() {
+
+} )();

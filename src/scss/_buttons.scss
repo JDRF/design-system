@@ -1,0 +1,251 @@
+/* Bootstrap overwrites: buttons.scss */
+
+.btn {
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	font-family: $btn-font;
+	text-transform: $btn-font-transform;
+	border: $input-btn-border-width solid transparent;
+	@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+	@include transition(all .2s ease-in-out);
+
+	&:active,
+	&.active {
+		&:focus,
+		&.focus {
+			@include tab-focus();
+		}
+	}
+
+	@include hover-focus {
+		text-decoration: none;
+	}
+
+	&.focus {
+		text-decoration: none;
+	}
+
+	&:active,
+	&.active {
+		background-image: none;
+		outline: 0;
+		@include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+	}
+
+	&.disabled,
+	&:disabled {
+		cursor: $cursor-disabled;
+		@include box-shadow(none);
+	}
+
+	&.material-icons {
+		font-family: 'Material Icons';
+	}
+}
+
+a.btn.disabled,
+fieldset[disabled] a.btn {
+	pointer-events: none;
+}
+
+.btn-primary {
+	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+.btn-secondary {
+	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+.btn-info {
+	@include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+.btn-success {
+	@include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+.btn-warning {
+	@include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+.btn-danger {
+	@include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+.btn-primary-outline {
+	@include button-outline-variant($btn-primary-bg);
+}
+.btn-secondary-outline {
+	@include button-outline-variant($btn-secondary-border);
+}
+.btn-info-outline {
+	@include button-outline-variant($btn-info-bg);
+}
+.btn-success-outline {
+	@include button-outline-variant($btn-success-bg);
+}
+.btn-warning-outline {
+	@include button-outline-variant($btn-warning-bg);
+}
+.btn-danger-outline {
+	@include button-outline-variant($btn-danger-bg);
+}
+
+.btn-link {
+	font-weight: normal;
+	color: $jdrf-green;
+	background-color: transparent;
+	@include border-radius($border-radius);
+
+	&:active,
+	&.active,
+	&:focus {
+		background-color: $grey-4;
+		text-decoration: none;
+	}
+
+	@include hover {
+		background-color: $grey-4;
+		text-decoration: none;
+	}
+
+	@include hover-focus {
+		background-color: $grey-4;
+		text-decoration: none;
+	}
+
+	&:disabled {
+		color: $btn-link-disabled-color;
+
+		@include hover-focus {
+			color: $btn-link-disabled-color;
+			background: none;
+		}
+	}
+}
+
+.btn-flat {
+	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+	@include elevation-remove;
+
+	@include hover {
+		@include elevation-two;
+	}
+
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		@include elevation-two;
+	}
+
+	&.disabled,
+	&:disabled {
+		@include elevation-remove;
+	}
+}
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+}
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+}
+
+.btn-block {
+	display: block;
+	width: 100%;
+	padding: $btn-block-y $btn-block-x;
+
+	&:hover {
+		@include elevation-three;
+	}
+
+	&:focus,
+	&.focus,
+	&:active,
+	&.active {
+		@include elevation-three;
+	}
+
+	&.disabled,
+	&:disabled {
+		@include elevation-remove;
+	}
+}
+
+.btn-block + .btn-block {
+	margin-top: 5px;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	&.btn-block {
+		width: 100%;
+	}
+}
+
+.btn-icon {
+	span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.btn-loading {
+	min-width: 100px;
+	padding: 0.5rem 1rem;
+
+	.spinner {
+		@include animation('spinner-animation 2s linear infinite');
+		width: 20px;
+		height: 20px;
+	}
+
+	.path {
+		stroke-dasharray: 1,200;
+		stroke-dashoffset: 0;
+		transform-origin: center;
+		@include animation(
+			'spinner-dash 1.5s ease-in-out infinite',
+			'spinner-colors 6s ease-in-out infinite'
+		);
+	}
+}
+
+@include keyframes( spinner-animation ) {
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@include keyframes( spinner-colors ) {
+	100%, 0%{
+		stroke: $jdrf-white;
+	}
+	40%{
+		stroke: $jdrf-white;
+	}
+	66%{
+		stroke: $jdrf-white;
+	}
+	80%, 90%{
+		stroke: $jdrf-white;
+	}
+}
+
+@include keyframes( spinner-dash ) {
+	0%{
+		stroke-dasharray: 1,200;
+		stroke-dashoffset: 0;
+	}
+	50%{
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -35px;
+	}
+	100%{
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -124px;
+	}
+}

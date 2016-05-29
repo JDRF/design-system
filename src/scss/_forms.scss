@@ -1,0 +1,24 @@
+@import "scss/forms";
+
+/* Bootstrap overwrites: forms.scss */
+
+.form-inline {
+	.form-group {
+		margin-bottom: 1rem;
+		width: 100%;
+
+		@include media-breakpoint-up(md) {
+			width: auto;
+		}
+	}
+
+	.form-control {
+		display: block;
+		width: 100%;
+
+		@include media-breakpoint-up(md) {
+			display: inline-block;
+			width: auto;
+		}
+	}
+}
