@@ -1,6 +1,10 @@
 .f-example {
 	.ds-btn-block {
 		margin-bottom: 1rem;
+
+		@include desktop {
+			margin-right: 1.5rem;
+		}
 	}
 
 	.ds-btn {
