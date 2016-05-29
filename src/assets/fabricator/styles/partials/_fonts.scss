@@ -4,6 +4,7 @@
 
 .f-family-book-italic {
 	font-family: "Gotham Book Italic";
+	font-style: italic;
 }
 
 .f-family-light {
@@ -12,6 +13,7 @@
 
 .f-family-light-italic {
 	font-family: "Gotham Light Italic";
+	font-style: italic;
 }
 
 .f-family-medium {
@@ -20,8 +22,14 @@
 
 .f-family-medium-italic {
 	font-family: "Gotham Medium Italic";
+	font-style: italic;
 }
 
 .f-family-bold {
 	font-family: "Gotham Bold";
+}
+
+.f-family-bold-italic {
+	font-family: "Gotham Bold";
+	font-style: italic;
 }

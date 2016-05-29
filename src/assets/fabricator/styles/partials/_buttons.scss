@@ -1,5 +1,13 @@
 .f-example {
-	.btn-block {
+	.ds-btn-block {
 		margin-bottom: 1rem;
+	}
+
+	.ds-btn {
+		margin-bottom: 1rem;
+
+		@include mobile {
+			display: block;
+		}
 	}
 }

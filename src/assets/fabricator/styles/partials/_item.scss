@@ -1,9 +1,9 @@
 .f-item-group {
-	@include clearfix;
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 	padding-bottom: 3rem;
 	border-bottom: 1px solid color(border);
+	@include clearfix;
 
 	&:first-child {
 		margin-top: 0;
@@ -47,21 +47,21 @@
 }
 
 .f-item-heading-group {
-	@include clearfix;
-	margin-bottom: 1rem;
 	vertical-align: middle;
+	margin-bottom: 1rem;
+	@include clearfix;
 }
 
 .f-item-heading {
-	margin-top: 0;
-	margin-bottom: 0;
 	display: inline-block;
 	vertical-align: middle;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 16px;
+	width: 100%;
 	line-height: 1;
 	color: color(primary-light);
 	border-bottom: 1px solid color(border);
-	padding-bottom: 16px;
-	width: 100%;
 }
 
 .f-item-controls {
@@ -97,28 +97,28 @@
 
 .f-section {
 	.f-example {
+		padding: 1.25rem;
 		border: 3px solid map-get($code-colors, light-gray);
-		padding: 20px;
 	}
 
 	.f-example-title {
-		margin-top: 2em;
+		margin-top: 2rem;
 	}
 }
 
 .f-example-inline {
-	@media (min-width: 60em) {
+	@include desktop {
 		display: inline-block;
-		margin-right: 2em;
+		margin-right: 2rem;
 	}
 }
 
 .f-example-desc {
-	margin-top: 1.5em;
+	margin-top: 1.5rem;
 	font-weight: 600;
 	font-size: 0.75rem;
 
-	@media (min-width: 60em) {
+	@include desktop {
 		text-align: center;
 	}
 }

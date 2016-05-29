@@ -1,38 +1,44 @@
 // menu
 
 .f-menu-canvas {
-	@media (max-width: 60em) {
-		position: absolute;
+	@include mobile {
 		top: 0;
 		left: 0;
 		transform: translate(-$menu-width-mobile - 30, 0);
 		width: $menu-width-mobile;
+		height: 100%;
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
+		padding: 1rem;
+		@include transition;
+	}
+
+	&.ds-sidebar {
+		@include mobile {
+			position: absolute;
+			width: $menu-width-mobile;
+		}
 	}
 
 	.f-menu-active & {
-		@media (max-width: 60em) {
-			transform: translate(-$menu-width-mobile, 0);
-			@include transition;
+		@include mobile {
+			transform: translate(0, 0);
 		}
 	}
 
 	.f-nav,
 	.f-menu {
-		@include border-box;
 		width: $menu-width-mobile;
-		height: 100%;
 		z-index: 1;
-		margin-left: 1rem;
 		overflow: hidden;
+		@include border-box;
 	}
 
 	.f-nav {
 		margin-bottom: 1rem;
 
-		@media (min-width: 60em) {
+		@include desktop {
 			display: none;
 		}
 	}
@@ -40,40 +46,44 @@
 
 .f-menu {
 
-	float: left;
-
-
-	@media (min-width: 60em) {
-		margin-top: 65px;
+	@include desktop {
+		display: block;
+		margin-top: 4.063rem;
 		width: $menu-width-desktop;
 		max-width: 220px;
-		display: block;
 	}
 
-	&.fixed {
-		@media (min-width: 60em) {
+	&.ds-fixed {
+		@include desktop {
 			position: fixed;
 			top: 0;
 			overflow-y: auto;
 			height: 90%;
-			padding-bottom: 65px;
+			padding-bottom: 4.063rem;
 		}
+	}
+
+	.f-search {
+		width: 85%;
 	}
 }
 
-.form-control.bd-search-results {
+.ds-form-control.bd-search-results {
 	position: absolute;
 	width: 85%;
 	margin-top: 5px;
-	border-color: #66afe9;
-	&.hide {
+	border-color: color(accent);
+
+	&.ds-hide {
 		padding: 0;
 		border: none;
 	}
+
 	a {
 		width: 100%;
 		font-size: 0.875rem;
 		color: map-get($code-colors, dark-gray);
+
 		&:hover {
 			color: map-get($code-colors, black);
 		}

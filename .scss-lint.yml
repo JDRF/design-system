@@ -17,12 +17,9 @@ linters:
   ColorVariable:
     enabled: true
 
-<<<<<<< HEAD
-=======
   Comment:
     enabled: false
 
->>>>>>> JDRF/master
   DebugStatement:
     enabled: true
 

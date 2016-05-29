@@ -1,14 +1,16 @@
 ---
 notes: |
-  These are notes associated with the `button` components.
+  The `button` components are based on Bootstrap's button classes combined with our own customizations.
+
+  You can find documentation on <a href="http://v4-alpha.getbootstrap.com/components/buttons/" target="_blank">Bootstrap's button components</a> on their site.
 ---
 
 <section class="f-section">
 	<h3 class="f-example-title">Primary</h3>
 	<div class="f-example">
-		<button type="button" class="btn btn-primary">Primary</button>
-		<button type="button" class="btn btn-primary active">Hover</button>
-		<button type="button" class="btn btn-primary" disabled>Disabled</button>
+		<button type="button" class="ds-btn ds-btn-primary" id="phantom-ds-btn-primary">Primary</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-active" id="phantom-ds-btn-primary-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary" id="phantom-ds-btn-primary-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.primary'}}
 </section>
@@ -16,9 +18,9 @@ notes: |
 <section class="f-section">
 	<h3 class="f-example-title">Outline</h3>
 	<div class="f-example">
-		<button type="button" class="btn btn-primary-outline">Outline</button>
-		<button type="button" class="btn btn-primary-outline active">Hover</button>
-		<button type="button" class="btn btn-primary-outline" disabled>Disabled</button>
+		<button type="button" class="ds-btn ds-btn-primary-outline" id="phantom-ds-btn-outline">Outline</button>
+		<button type="button" class="ds-btn ds-btn-primary-outline ds-active" id="phantom-ds-btn-outline-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary-outline" id="phantom-ds-btn-outline-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.outline'}}
 </section>
@@ -26,9 +28,9 @@ notes: |
 <section class="f-section">
 	<h3 class="f-example-title">Flat</h3>
 	<div class="f-example">
-		<button type="button" class="btn btn-flat">Flat</button>
-		<button type="button" class="btn btn-flat active">Hover</button>
-		<button type="button" class="btn btn-flat" disabled>Disabled</button>
+		<button type="button" class="ds-btn ds-btn-flat" id="phantom-ds-btn-flat">Flat</button>
+		<button type="button" class="ds-btn ds-btn-flat ds-active" id="phantom-ds-btn-flat-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-flat" id="phantom-ds-btn-flat-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.flat'}}
 </section>
@@ -36,9 +38,9 @@ notes: |
 <section class="f-section">
 	<h3 class="f-example-title">Text</h3>
 	<div class="f-example">
-		<button type="button" class="btn btn-link">Text</button>
-		<button type="button" class="btn btn-link active">Hover</button>
-		<button type="button" class="btn btn-link" disabled>Disabled</button>
+		<button type="button" class="ds-btn ds-btn-link" id="phantom-ds-btn-link">Text</button>
+		<button type="button" class="ds-btn ds-btn-link ds-active" id="phantom-ds-btn-link-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-link" id="phantom-ds-btn-link-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.text'}}
 </section>
@@ -46,9 +48,9 @@ notes: |
 <section class="f-section">
 	<h3 class="f-example-title">Large</h3>
 	<div class="f-example">
-		<button type="button" class="btn btn-primary btn-lg">Large</button>
-		<button type="button" class="btn btn-primary btn-lg active">Hover</button>
-		<button type="button" class="btn btn-primary btn-lg" disabled>Disabled</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg" id="phantom-ds-btn-lg">Large</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-active" id="phantom-ds-btn-lg-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg" id="phantom-ds-btn-lg-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.large'}}
 </section>
@@ -56,9 +58,9 @@ notes: |
 <section class="f-section">
 	<h3 class="f-example-title">Small</h3>
 	<div class="f-example">
-		<button type="button" class="btn btn-primary btn-sm">Small</button>
-		<button type="button" class="btn btn-primary btn-sm active">Hover</button>
-		<button type="button" class="btn btn-primary btn-sm" disabled>Disabled</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm" id="phantom-ds-btn-sm">Small</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm ds-active" id="phantom-ds-btn-sm-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm" id="phantom-ds-btn-sm-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.small'}}
 </section>
@@ -66,19 +68,23 @@ notes: |
 <section class="f-section">
 	<h3 class="f-example-title">Block</h3>
 	<div class="f-example">
-		<button type="button" class="btn btn-primary btn-lg btn-block">Block</button>
-		<button type="button" class="btn btn-primary btn-lg btn-block active">Hover</button>
-		<button type="button" class="btn btn-primary btn-lg btn-block" disabled>Disabled</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-block" id="phantom-ds-btn-block">Block</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-block ds-active" id="phantom-ds-btn-block-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-block" id="phantom-ds-btn-block-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.block'}}
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Button Animations</h3>
-	<p>Animations not yet complete.</p>
+	<p>The ripple animations are applied to all buttons on click. The loading icon can be added into a button by adding a class of `.ds-btn-loading` to existing button classes.</p>
 	<div class="f-example">
-		<button type="button" class="btn btn-primary">Ripple</button>
-		<button type="button" class="btn btn-primary">Loading</button>
+		<button type="button" class="ds-btn ds-btn-primary" id="phantom-ds-btn-ripple">Click me for Ripple</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-loading" id="phantom-ds-btn-loading">
+			<svg class="ds-spinner" viewBox="25 25 50 50" xmlns="http://www.w3.org/2000/svg">
+				<circle class="ds-path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"></circle>
+			</svg>
+		</button>
 	</div>
 	{{example 'button.animations'}}
 </section>

@@ -5,29 +5,18 @@
   "author": "patrick mckowen <pmckowen@jdrf.org>",
   "contributors": [
     {
-      "name": "nick smith",
+      "name": "Nick Smith",
       "email": "fuhton@gmail.com"
     }
   ],
   "scripts": {
-<<<<<<< HEAD
-    "init-for-dev": "git clone https://github.com/jdrf/design-system.git && npm run setup",
-    "presetup": "git checkout gh-pages && git pull origin gh-pages",
-    "setup": "npm install && cd design-system && npm run setup && cd .. && gulp",
+    "prepull": "git checkout gh-pages && git pull origin gh-pages",
+    "pull": "npm install && cd design-system && npm run setup && cd .. && gulp",
     "test": "gulp test",
     "build": "gulp",
     "build-from-dev": "gulp --env=dev build",
     "serve": "gulp && gulp serve",
     "serve-from-dev": "gulp --env=dev && gulp --env=dev serve"
-=======
-    "prepull": "git checkout master && git pull origin master",
-    "pull": "npm install && gulp",
-    "build": "npm install && gulp",
-    "visual-test": "cd .. && npm run test && cd -",
-    "unit-test": "node tests/unit-tests | tap-spec && node tests/unit-tests/cleanup.js",
-    "test": "npm run unit-test && npm run visual-test",
-    "clean": "gulp clean && rm -rf node_modules"
->>>>>>> JDRF/master
   },
   "repository": {
     "type": "git",
@@ -51,26 +40,19 @@
     "fabricator-assemble": "^1.1.11",
     "fs": "0.0.2",
     "gulp": "^3.9.1",
-<<<<<<< HEAD
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.7",
     "gulp-concat": "^2.6.0",
+    "gulp-css-namespace": "^0.1.3",
     "gulp-csso": "^1.1.0",
     "gulp-eslint": "^2.0.0",
     "gulp-html-escape": "0.0.3",
     "gulp-if": "^2.0.0",
-=======
-    "gulp-clean-css": "^2.0.7",
-    "gulp-concat": "^2.6.0",
-    "gulp-css-namespace": "^0.1.3",
-    "gulp-css-wrap": "^0.1.2",
-    "gulp-eslint": "^2.0.0",
->>>>>>> JDRF/master
     "gulp-jscs": "^3.0.2",
     "gulp-load-plugins": "^1.2.2",
     "gulp-notify": "^2.2.0",
     "gulp-phantomcss": "^0.1.1",
     "gulp-rename": "^1.2.2",
-<<<<<<< HEAD
     "gulp-sass": "^2.3.1",
     "gulp-scss-lint": "^0.3.9",
     "gulp-sourcemaps": "^1.6.0",
@@ -79,29 +61,11 @@
     "gulp-util": "^3.0.7",
     "handlebars": "^4.0.5",
     "html-escape": "^2.0.0",
-    "merge-stream": "^1.0.0",
-    "run-sequence": "^1.1.5",
-    "vinyl-source-stream": "^1.1.0"
-  },
-  "dependencies": {
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-if": "^2.0.0",
-    "gulp-util": "^3.0.7"
-=======
-    "gulp-ruby-sass": "^2.0.6",
-    "gulp-sass": "^2.2.0",
-    "gulp-scss-lint": "^0.4.0",
-    "gulp-sourcemaps": "^1.6.0",
     "jquery": "^2.2.4",
     "material-icons": "^0.1.0",
     "merge-stream": "^1.0.0",
-    "mocha": "^2.4.5",
-    "rewire": "^2.5.1",
+    "prismjs": "^1.5.0",
     "run-sequence": "^1.1.5",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.5.1"
->>>>>>> JDRF/master
+    "vinyl-source-stream": "^1.1.0"
   }
 }

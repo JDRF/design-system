@@ -1,0 +1,6 @@
+colors:
+  default:
+    Primary: "rgba(0, 0, 0, 0.87)"
+    Secondary: "rgba(0, 0, 0, 0.54)"
+    Disabled: "rgba(0, 0, 0, 0.38)"
+    Dividers: "rgba(0, 0, 0, 0.54)"

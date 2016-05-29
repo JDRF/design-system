@@ -9,6 +9,7 @@ var plugins = require('gulp-load-plugins')({
 		'gulp-autoprefixer' : 'prefix',
 		'gulp-if'           : 'gulpif',
 		'gulp-scss-lint'    : 'scsslint',
+		'gulp-clean-css'    : 'minifycss'
 	}
 });
 

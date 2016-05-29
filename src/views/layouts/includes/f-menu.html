@@ -1,39 +1,42 @@
 <!-- fabricator menu -->
-<div class="f-menu-canvas sidebar">
+<div class="f-menu-canvas ds-sidebar ds-col-md-4 ds-col-lg-3">
 
 	{{> f-header-nav}}
-	<nav class="f-menu" aria-label="sidebar-nav">
+	<nav class="f-menu" aria-label="sidebar-nav" role="navigation">
 
 		{{> f-menu-search}}
 
-		<ul class="nav">
+		<ul class="ds-nav">
 
-			<li class="nav-item">
-				<a href="./index.html" class="f-menu__heading nav-link">Overview</a>
-				<a href="./download.html" class="f-menu__heading nav-link">Download</a>
-				<a href="./faq.html" class="f-menu__heading nav-link">FAQ</a>
+			<li class="ds-nav-item">
+				<a href="./index.html" class="f-menu__heading ds-nav-link">Overview</a>
+				<a href="./download.html" class="f-menu__heading ds-nav-link">Download</a>
+				<a href="./faq.html" class="f-menu__heading ds-nav-link">FAQ</a>
 			</li>
 
 			{{#each materials}}
-			<li class="nav-item">
-				<a href="./{{@key}}.html" class="f-menu__heading nav-link">{{name}}</a>
-				<ul class="nav">
+			<li class="ds-nav-item">
+				<a href="./{{@key}}.html" class="f-menu__heading ds-nav-link">{{name}}</a>
+				<ul class="ds-nav">
 					{{#each items}}
+					{{#if_not_eq 'Forms' name}}
 					<li>
-						<a href="./{{@../key}}.html#{{@key}}" class="nav-link">{{name}}</a>
+						<a href="./{{@../key}}.html#{{@key}}" class="ds-nav-link">{{name}}</a>
 					</li>
+					{{/if_not_eq}}
+
 					{{/each}}
 				</ul>
 			</li>
 			{{/each}}
 
 			{{#each views}}
-			<li class="nav-item">
-				<a href="./{{@key}}.html" class="f-menu__heading nav-link">{{name}}</a>
-				<ul class="nav">
+			<li class="ds-nav-item">
+				<a href="./{{@key}}.html" class="f-menu__heading ds-nav-link">{{name}}</a>
+				<ul class="ds-nav">
 					{{#each items}}
 					<li>
-						<a href="./{{@../key}}/{{@key}}.html" class="nav-link">{{name}}</a>
+						<a href="./{{@../key}}/{{@key}}.html" class="ds-nav-link">{{name}}</a>
 					</li>
 					{{/each}}
 				</ul>

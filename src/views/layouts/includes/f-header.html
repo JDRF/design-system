@@ -1,15 +1,17 @@
-<div class="f-header-top">
-	<h1 class="f-logo">
-		<svg width="75px">
-			<use xlink:href="#f-icon-logo" width="75px"/>
-		</svg>
-		<span>Design System</span>
-	</h1>
-	{{> f-header-nav}}
-</div>
-<div class="f-header">
-	<div class="f-header-center">
+<header class="f-header-top ds-container" role="banner">
+		{{> f-control-bar}}
+		<h1 class="f-logo">
+			<svg width="75px">
+				<use xlink:href="#f-icon-logo" width="75px"/>
+			</svg>
+			<span>Design System</span>
+		</h1>
+		{{> f-header-nav}}
+	</div>
+</header>
+<div class="f-header ds-container-fluid">
+	<div class="f-header-center ds-container">
 		<h2 class="f-header-title">{{title}}</h2>
-		<p class="f-header-content">This is the {{title}} page.</p>
+		<p class="f-header-content">You are viewing the "{{title}}" page.</p>
 	</div>
 </div>

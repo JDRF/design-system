@@ -6,8 +6,7 @@
 
 'use strict';
 
-var prism = require('./prism' ),
-	helpers = require( './helpers' );
+var helpers = require( './helpers' );
 
 module.exports = {
 
@@ -19,7 +18,6 @@ module.exports = {
 		this.dom = {
 			root: document.querySelector( 'html' ),
 			primaryMenu: document.querySelector( '.f-menu' ),
-			menuItems: document.querySelectorAll( '.f-menu li a' ),
 			menuToggle: document.querySelector( '.f-menu-toggle' )
 		};
 
@@ -27,9 +25,9 @@ module.exports = {
 		 * Set cached DOM as variables and set this to self
 		 */
 		var self = this,
-			toggle = this.dom.menuToggle,
+			menuIcon = this.dom.menuToggle,
 			htmlEl = this.dom.root,
-			menuItems = this.dom.menuItems;
+			menuItems = this.dom.primaryMenu.getElementsByTagName( 'a' );
 
 		/**
 		 * Default options
@@ -37,25 +35,28 @@ module.exports = {
 		 */
 		this.options = {
 			menu: false,
-			mq: '(min-width: 60em)'
+			mq: 768
 		};
 
 		// open menu by default if large screen
-		this.options.menu = window.matchMedia( this.options.mq ).matches;
+		this.options.menu = window.innerWidth >= this.options.mq;
 
-		// toggle classes on click
-		toggle.addEventListener('click', function () {
-			self.toggleClasses( htmlEl );
-		});
+		//only fire event listeners on mobile
+		if ( false === this.options.menu ) {
+			// toggle classes on click
+			menuIcon.addEventListener( 'click', function() {
+				self.toggleClasses( htmlEl, menuIcon );
+			} );
 
-		// close menu when clicking menu items
-		for ( var i = 0; i < menuItems.length; i++ ) {
-			menuItems[i].addEventListener( 'click', this.closeMenu );
+			for ( var i = 0; i < menuItems.length; i++ ) {
+				menuItems[i].addEventListener( 'click', function() {
+					self.toggleClasses( htmlEl, menuIcon );
+				} );
+			}
 		}
 
 		// pass dom selectors to functions
 		this.setActiveItem( menuItems );
-		this.setInitialMenuState();
 
 		return this;
 
@@ -77,6 +78,7 @@ module.exports = {
 		}
 
 		return this;
+
 	},
 
 	/**
@@ -85,39 +87,44 @@ module.exports = {
 	 */
 	setActiveItem: function( menuItems ) {
 
-		window.addEventListener( 'hashchange', setActive );
+		window.addEventListener( 'hashchange', this.setActive );
 
 		if ( 'undefined' !== typeof menuItems ) {
-			setActive( menuItems );
+			this.setActive( menuItems );
 		}
 
-		/**
-		 * Match the window location with the menu item, set menu item as active
-		 */
-		function setActive( menuItems ) {
+		return this;
 
-			// get current file and hash without first slash
-			var current = (window.location.pathname + window.location.hash).replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function ( match, slash, file, hash ) {
+	},
+
+	/**
+	 * Match the window location with the menu item, set menu item as active
+	 */
+	setActive: function( menuLinks ) {
+		var locPath = window.location.pathname,
+			locHash = window.location.hash;
+
+		// get current file and hash without first slash
+		var current = ( locPath + locHash ).replace( /(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function( match, slash, file, hash ) {
 				hash = hash || '';
 				file = file.replace( 'dist/', '' ).replace( 'design-system/', '' ) || '';
 				// Currently, without a scrolling listener, there's no way to
 				// change as we visit new 'hashes'. Better to leave at top
 				// level link
 				return './' + file; // + hash.split('.')[0];
-			}) || 'index.html', href;
+			} ) || 'index.html', href;
 
-			// find the current section in the items array
-			for ( var i = menuItems.length - 1; i >= 0; i-- ) {
+		// find the current section in the items array
+		for ( var i = menuLinks.length - 1; i >= 0; i-- ) {
+			var item = menuLinks[ i ];
 
-				var item = menuItems[ i ];
-				// get item href without first slash
-				href = item.getAttribute( 'href' ).replace(/^\//g, '');
+			// get item href without first slash
+			href = item.getAttribute( 'href' ).replace( /^\//g, '' );
 
-				if ( href === current ) {
-					helpers.addClass( item, 'current' );
-				} else {
-					helpers.removeClass( item, 'current' );
-				}
+			if ( href === current ) {
+				helpers.addClass( item, 'ds-current' );
+			} else {
+				helpers.removeClass( item, 'ds-current' );
 			}
 		}
 
@@ -127,50 +134,16 @@ module.exports = {
 	/**
 	 * Toggle f-menu-active class
 	 */
-	toggleClasses: function( htmlEl ) {
-		if( ! helpers.hasClass( htmlEl, 'f-menu-active' ) ){
+	toggleClasses: function( htmlEl, menuIcon ) {
+		if ( !helpers.hasClass( htmlEl, 'f-menu-active' ) ) {
 			//if it does not have class, add it
-			helpers.addClass( htmlEl, 'f-menu-active');
+			helpers.addClass( htmlEl, 'f-menu-active' );
+			menuIcon.setAttribute( 'aria-expanded', 'true' );
 		} else {
 			//if it does have class, then remove it
-			helpers.removeClass( htmlEl, 'f-menu-active');
+			helpers.removeClass( htmlEl, 'f-menu-active' );
+			menuIcon.setAttribute( 'aria-expanded', 'false' );
 		}
-	},
-
-	/**
-	* Close menu when clicking on item (for collapsed menu view)
-	*/
-	closeMenu: function () {
-		if ( !window.matchMedia( this.options.mq ).matches ) {
-			this.toggleClasses();
-		}
-	},
-
-	/**
-	 * Open/Close menu based on session var.
-	 * Also attach a media query listener to close the menu when resizing to smaller screen.
-	 * @return {Object}
-	 */
-	setInitialMenuState: function() {
-
-		// root element
-		var root = document.querySelector( 'html' );
-
-		var mq = window.matchMedia( this.options.mq );
-
-		// if small screen
-		var mediaChangeHandler = function ( list ) {
-			if ( !list.matches ) {
-				helpers.removeClass( root, 'f-menu-active' );
-			} else {
-				helpers.addClass( root, 'f-menu-active' );
-			}
-		};
-
-		mq.addListener( mediaChangeHandler );
-		mediaChangeHandler( mq );
-
-		return this;
 	},
 
 	/**
@@ -178,13 +151,12 @@ module.exports = {
 	 * @return {Object}
 	 */
 	fixSidebar: function() {
-		var dsHeaderTop  = document.querySelector( '.f-header-top' ),
-			dsHeader  = document.querySelector( '.f-header' ),
+		var dsHeaderTop = document.querySelector( '.f-header-top' ),
+			dsHeader = document.querySelector( '.f-header' ),
 			dsSidebar = document.querySelector( '.f-menu' ),
 			headerTopHeight = dsHeaderTop.offsetHeight,
 			headerHeight = dsHeader.offsetHeight,
 			totalHeaderHeight = headerTopHeight + headerHeight;
-
 
 		if ( 'undefined' === typeof dsHeaderTop || null === dsHeaderTop ) {
 			return;
@@ -201,15 +173,14 @@ module.exports = {
 		window.onscroll = function() {
 			var topOffset = window.pageYOffset;
 
-			if ( window.pageYOffset > totalHeaderHeight ) {
-				helpers.addClass( dsSidebar, 'fixed' );
+			if ( topOffset > totalHeaderHeight ) {
+				helpers.addClass( dsSidebar, 'ds-fixed' );
 			} else {
-				helpers.removeClass( dsSidebar, 'fixed' );
+				helpers.removeClass( dsSidebar, 'ds-fixed' );
 			}
 		};
 
 		return this;
+
 	}
 };
-
-

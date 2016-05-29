@@ -1,10 +1,12 @@
 ---
 notes: |
-  These are notes associated with Typography
+  When using font families, all font weights are at `normal` or `400`. The font families themselves will take care of the visual weight.
+
+  Some styles change sizes depending on the breakpoint. The Design System's breakpoints are based on <a href="http://v4-alpha.getbootstrap.com/layout/grid/#variables" target="_blank">Bootstrap's default breakpoints</a> except for the `small` size at `360px`. All breakpoints are using the mobile first approach where mobile is the default.
 ---
 <section class="f-section">
 	<h3 class="f-example-title">Font Families</h3>
-	<div class="f-example">
+	<div class="f-example" id="phantom-ds-font-families">
 		<p class="f-family-book">Gotham Book</p>
 		<p class="f-family-book-italic">Gotham Book Italic</p>
 		<p class="f-family-light">Gotham Light</p>
@@ -12,86 +14,128 @@ notes: |
 		<p class="f-family-medium">Gotham Medium</p>
 		<p class="f-family-medium-italic">Gotham Medium Italic</p>
 		<p class="f-family-bold">Gotham Bold</p>
+		<p class="f-family-bold-italic">Gotham Bold Italic</p>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">font-family: "Gotham Book";
+	{{example 'typography.families'}}
 
-		font-family: "Gotham Book Italic";
+	<p>Italic fonts will apply normally to any elements that are naturally italic such as the <code class="language-markup">&lt;i&gt;</code> and <code class="language-markup">&lt;em&gt;</code> tags. For other elements not normally italic by default, such as a heading, a style should be applied to ensure it is italic. If this is not set, the fonts will not render properly in Safari/IOS.
 
-		font-family: "Gotham Light";
-
-		font-family: "Gotham Light Italic";
-
-		font-family: "Gotham Medium";
-
-		font-family: "Gotham Medium Italic";
-
-		font-family: "Gotham Bold";
-		</code>
-	</pre>
+	{{example 'typography.fontitalic'}}
 </section>
 
+<section class="f-section">
+	<h3 class="f-example-title">Spacing</h3>
+	<p>All heading elements—e.g., <code class="language-markup">&lt;h1&gt;</code>—and <code class="language-markup">&lt;p&gt;</code> are reset to have their margin-top removed. Headings have a margin-bottom equal to half their line-height.  Paragraphs have a margin-bottom equal to their line-height.</p>
+</section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Headings</h3>
+	<p>Headings three through six use the `Gotham Medium` font family. Heading three changes to `Gotham Book` on the smallest breakpoint.</p>
 	<div class="f-example">
-		<h1>Heading One</h1>
-		<h2>Heading Two</h2>
-		<h3>Heading Three</h3>
-		<h4>Heading Four</h4>
-		<h5>Heading Five</h5>
-		<h6>Heading Six</h6>
+		<h1 id="phantom-ds-heading-1">Heading One</h1>
+		<h2 id="phantom-ds-heading-2">Heading Two</h2>
+		<h3 id="phantom-ds-heading-3">Heading Three</h3>
+		<h4 id="phantom-ds-heading-4">Heading Four</h4>
+		<h5 id="phantom-ds-heading-5">Heading Five</h5>
+		<h6 id="phantom-ds-heading-6">Heading Six</h6>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;h1&gt;Heading One&lt;/h1&gt;
-		&lt;h2&gt;Heading Two&lt;/h2&gt;
-		&lt;h3&gt;Heading Three&lt;/h3&gt;
-		&lt;h4&gt;Heading Four&lt;/h4&gt;
-		&lt;h5&gt;Heading Five&lt;/h5&gt;
-		&lt;h6&gt;Heading Six&lt;/h6&gt;</code>
-	</pre>
+	{{example 'typography.headings'}}
+
+	<p>Heading sizes differ depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Heading One</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Book, 32px/36px</li>
+				<li><strong>Small:</strong> Gotham Book, 36px/40px</li>
+				<li><strong>Medium:</strong> Gotham Book, 48px/56px</li>
+			</ul>
+		</li>
+		<li><strong>Heading Two</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Book, 24px/28px</li>
+				<li><strong>Small:</strong> Gotham Book, 28px/32px</li>
+				<li><strong>Medium:</strong> Gotham Book, 36px/40px</li>
+			</ul>
+		</li>
+		<li><strong>Heading Three</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Book, 20px/28px</li>
+				<li><strong>Small:</strong> Gotham Medium, 24px/28px</li>
+			</ul>
+		</li>
+	</ul>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Display</h3>
 	<div class="f-example">
-		<h2 class="display-1">Display One</h2>
-		<h2 class="display-2">Display Two</h2>
+		<h2 class="ds-display-1" id="phantom-ds-display-1">Display One</h2>
+		<h2 class="ds-display-2" id="phantom-ds-display-2">Display Two</h2>
 	</div>
+
 	{{example 'typography.displays'}}
+
+	<p>Display sizes differ depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Display One</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Light, 56px/56px</li>
+				<li><strong>Small:</strong> Gotham Light, 60px/60px</li>
+				<li><strong>Medium:</strong> Gotham Light, 72px/72px</li>
+			</ul>
+		</li>
+		<li><strong>Display Two</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Light, 48px/48px</li>
+				<li><strong>Small:</strong> Gotham Light, 56px/56px</li>
+				<li><strong>Medium:</strong> Gotham Light, 60px/60px</li>
+			</ul>
+		</li>
+	</ul>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Lead</h3>
 	<div class="f-example">
-		<p class="lead">
+		<p class="ds-lead" id="phantom-ds-lead">
 		  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
 		</p>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;p class="lead"&gt;
-		  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-		&lt;/p&gt;</code>
-	</pre>
+	{{example 'typography.lead'}}
+
+	<p>The lead size differs depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Extra Small:</strong> Gotham Light, 16px/24px</li>
+		<li><strong>Small:</strong> Gotham Book, 18px/24px</li>
+		<li><strong>Medium:</strong> Gotham Light, 20px/28px</li>
+	</ul>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Paragraph</h3>
 	<div class="f-example">
-		<p>JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications</p>
+		<p id="phantom-ds-paragraph">JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications</p>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;p&gt;JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications&lt;/p&gt;</code>
-	</pre>
+	{{example 'typography.paragraph'}}
+
+	<p>The paragraph size differs depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Extra Small:</strong> Gotham Book, 14px/20px</li>
+		<li><strong>Small:</strong> Gotham Book, 16px/24px</li>
+	</ul>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Inline Text Elements</h3>
-	<div class="f-example">
+	<div class="f-example" id="phantom-ds-inline-elements">
 		<p>You can use the mark tag to <mark>highlight</mark> text.</p>
 		<p><del>This line of text is meant to be treated as deleted text.</del></p>
 		<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
@@ -102,46 +146,28 @@ notes: |
 		<p><em>This line rendered as italicized text.</em></p>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight</mark> text.&lt;/p&gt;
-		&lt;p&gt;&lt;del&gt;This line of text is meant to be treated as deleted text.&lt;/del&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;s&gt;This line of text is meant to be treated as no longer accurate.&lt;/s&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;ins&gt;This line of text is meant to be treated as an addition to the document.&lt;/ins&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;u&gt;This line of text will render as underlined&lt;/u&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.</small>&lt;/p&gt;
-		&lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;</code>
-	</pre>
+	{{example 'typography.inline'}}
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Blockquotes</h3>
 	<div class="f-example">
-		<blockquote class="blockquote">
-		  <p class="m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+		<blockquote class="ds-blockquote" id="phantom-ds-blockquote">
+		  <p class="ds-m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 		</blockquote>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;blockquote class="blockquote"&gt;
-		  &lt;p class="m-b-0"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
-		&lt;/blockquote&gt;</code>
-	</pre>
+	{{example 'typography.blockquote'}}
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Anchor Links</h3>
-	<div class="f-example">
+	<div class="f-example" id="phantom-ds-anchors">
 		Jump down to our <a href="#jdrf-section">JDRF section</a> for details!
 		<div id="jdrf-section">
 			Here are the details to JDRF.
 		</div>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">Jump down to our &lt;a href="#jdrf-section"&gt;JDRF section&lt;/a&gt; for details!
-		&lt;div id="jdrf-section"&gt;
-			Here are the details to JDRF.
-		&lt;/div&gt;</code>
-	</pre>
+	{{example 'typography.anchors'}}
 </section>

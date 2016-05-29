@@ -33,16 +33,16 @@ module.exports = {
 
 		//Go to end of index for existing classes and remove desired class
 		if ( el.className.indexOf( ' ' + className ) > -1 ) {
-			el.className = el.className.replace( ' ' + className , '' );
+			el.className = el.className.replace( ' ' + className, '' );
 		} else if ( el.className.indexOf( className ) > -1 ) {
-			el.className = el.className.replace( className , '' );
+			el.className = el.className.replace( className, '' );
 		}
 
 		return this;
 	},
 
 	/**
-	 * Helper to cehck for className on an element
+	 * Helper to check for className on an element
 	 */
 	hasClass: function( el, className ) {
 		//Check if element is undefined or null first

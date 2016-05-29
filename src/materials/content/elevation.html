@@ -1,38 +1,33 @@
 ---
 notes: |
-  Elevations are applied using the `elevation-` class and are numbered one to five. `elevation-one` would be the lowest elevation versus `elevation-five` is the highest.
+  Elevations are applied using the `ds-elevation-` class and are numbered one to five. `.ds-elevation-one` would be the lowest ds-elevation versus `.ds-elevation-five` is the highest.
+
+  Buttons in most cases start with `.ds-elevation-one` and raise to `.ds-elevation-three` on `:hover`, `:focus` and `:active` states. The `.ds-btn-flat` style of buttons start with no elevation and raise to `.ds-elevation-two` on `:hover`, `:focus` and `:active` states.
 ---
 
 <div class="f-example-inline">
-	<div class="f-rectangle elevation-one"></div>
+	<div class="f-rectangle ds-elevation-one"></div>
 
-	<p class="f-example-desc">Elevation 1</p>
+	<p class="f-example-desc">ds-elevation 1</p>
 </div>
 <div class="f-example-inline">
-	<div class="f-rectangle elevation-two"></div>
+	<div class="f-rectangle ds-elevation-two"></div>
 
-	<p class="f-example-desc">Elevation 2</p>
+	<p class="f-example-desc">ds-elevation 2</p>
 </div>
 <div class="f-example-inline">
-	<div class="f-rectangle elevation-three"></div>
+	<div class="f-rectangle ds-elevation-three"></div>
 
-	<p class="f-example-desc">Elevation 3</p>
+	<p class="f-example-desc">ds-elevation 3</p>
 </div>
 <div class="f-example-inline">
-	<div class="f-rectangle elevation-four"></div>
+	<div class="f-rectangle ds-elevation-four"></div>
 
-	<p class="f-example-desc">Elevation 4</p>
+	<p class="f-example-desc">ds-elevation 4</p>
 </div>
 <div class="f-example-inline">
-	<div class="f-rectangle elevation-five"></div>
+	<div class="f-rectangle ds-elevation-five"></div>
 
-	<p class="f-example-desc">Elevation 5</p>
+	<p class="f-example-desc">ds-elevation 5</p>
 </div>
-
-<pre class="language-markup">
-		<code class="language-markup">&lt;div class="f-rectangle elevation-one"&gt;&lt;/div&gt;
-		&lt;div class="f-rectangle elevation-two"&gt;&lt;/div&gt;
-		&lt;div class="f-rectangle elevation-three"&gt;&lt;/div&gt;
-		&lt;div class="f-rectangle elevation-four"&gt;&lt;/div&gt;
-		&lt;div class="f-rectangle elevation-five"&gt;&lt;/div&gt;</code>
-	</pre>
+{{example 'elevations.elevations'}}

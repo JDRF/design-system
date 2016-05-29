@@ -1,18 +1,18 @@
 ---
 notes: |
-  These are notes associated with the `form` component.
+   The `form` components are based on Bootstrap's form components combined with our own customizations.
 
-  For more information on Bootstrap's classes for form layouts, control sizing, validation and so on, refer to <a href="http://v4-alpha.getbootstrap.com/components/forms/" target="_blank">Bootstrap's form documentation</a>.
+   For more information on Bootstrap's classes for form layouts, control sizing, validation and so on, refer to <a href="http://v4-alpha.getbootstrap.com/components/forms/" target="_blank">Bootstrap's form documentation</a>.
 ---
 
 <section class="f-section">
 	<h3 class="f-example-title">Email Field</h3>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group row">
-				<label for="exampleInputEmail1" class="col-sm-3 form-control-label">Email Address</label>
-				<div class="col-sm-6">
-					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+			<fieldset class="ds-form-group ds-row">
+				<label for="phantom-exampleInputEmail1" class="ds-col-md-3 ds-form-control-label">Email Address</label>
+				<div class="ds-col-md-6">
+					<input type="email" class="ds-form-control" id="phantom-exampleInputEmail1" placeholder="Enter email">
 					<small class="text-muted">We'll never share your email with anyone else.</small>
 				</div>
 			</fieldset>
@@ -25,10 +25,10 @@ notes: |
 	<h3 class="f-example-title">Telephone Field</h3>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group row">
-				<label for="exampleInputTel" class="col-sm-3 col-md-2 form-control-label">Telephone</label>
-				<div class="col-sm-5">
-					<input type="tel" class="form-control" id="exampleInputTel" placeholder="Enter phone number">
+			<fieldset class="ds-form-group ds-row">
+				<label for="phantom-exampleInputTel" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Telephone</label>
+				<div class="ds-col-md-5">
+					<input type="tel" class="ds-form-control" id="phantom-exampleInputTel" placeholder="Enter phone number">
 				</div>
 			</fieldset>
 		</form>
@@ -40,10 +40,10 @@ notes: |
 	<h3 class="f-example-title">Date Field</h3>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group row">
-				<label for="exampleInputDate" class="col-sm-3 col-md-2 form-control-label">Date</label>
-				<div class="col-sm-5">
-					<input type="date" class="form-control" id="exampleInputTel">
+			<fieldset class="ds-form-group ds-row">
+				<label for="phantom-exampleInputDate" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Date</label>
+				<div class="ds-col-md-5">
+					<input type="date" class="ds-form-control" id="phantom-exampleInputDate">
 				</div>
 			</fieldset>
 		</form>
@@ -55,32 +55,32 @@ notes: |
 	<h3 class="f-example-title">International Address</h3>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group">
+			<fieldset class="ds-form-group">
 				<label for="exampleInputAddress1">Street Address</label>
-				<input type="address" class="form-control" id="exampleInputAddress1" placeholder="Enter Street Address">
+				<input type="address" class="ds-form-control" id="exampleInputAddress1" placeholder="Enter Street Address">
 			</fieldset>
-			<fieldset class="form-group">
+			<fieldset class="ds-form-group">
 				<label for="exampleInputAddress2">Address Line 2</label>
-				<input type="address" class="form-control" id="exampleInputAddress2" placeholder="Enter Address Line 2">
+				<input type="address" class="ds-form-control" id="exampleInputAddress2" placeholder="Enter Address Line 2">
 			</fieldset>
-			<div class="form-inline">
-				<fieldset class="form-group">
+			<div class="ds-form-inline">
+				<fieldset class="ds-form-group">
 					<label for="exampleCity">City</label>
-					<input type="text" class="form-control" id="exampleCity" placeholder="Enter City">
+					<input type="text" class="ds-form-control" id="exampleCity" placeholder="Enter City">
 				</fieldset>
-				<fieldset class="form-group">
+				<fieldset class="ds-form-group">
 					<label for="exampleState">State/Province/Region</label>
-					<input type="email" class="form-control" id="exampleState" placeholder="Enter State/Province/Region">
+					<input type="email" class="ds-form-control" id="exampleState" placeholder="Enter State/Province/Region">
 				</fieldset>
 			</div>
-			<div class="form-inline">
-				<fieldset class="form-group">
+			<div class="ds-form-inline">
+				<fieldset class="ds-form-group">
 					<label for="exampleZip">Zip/Postal Code</label>
-					<input type="text" class="form-control" id="exampleZip" placeholder="Enter Zip/Postal Code">
+					<input type="text" class="ds-form-control" id="exampleZip" placeholder="Enter Zip/Postal Code">
 				</fieldset>
-				<fieldset class="form-group">
+				<fieldset class="ds-form-group">
 					<label for="exampleCountry">Country</label>
-					<select class="form-control" id="exampleCountry">
+					<select class="ds-form-control" id="exampleCountry">
 						<option>Country 1</option>
 						<option>Country 2</option>
 						<option>Country 3</option>
@@ -98,27 +98,27 @@ notes: |
 	<h3 class="f-example-title">USA Address</h3>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group">
+			<fieldset class="ds-form-group">
 				<label for="exampleInputAddress3">Street Address</label>
-				<input type="address" class="form-control" id="exampleInputAddress3" placeholder="Enter Street Address">
+				<input type="address" class="ds-form-control" id="exampleInputAddress3" placeholder="Enter Street Address">
 			</fieldset>
-			<fieldset class="form-group">
+			<fieldset class="ds-form-group">
 				<label for="exampleInputAddress4">Address Line 2</label>
-				<input type="address" class="form-control" id="exampleInputAddress4" placeholder="Enter Address Line 2">
+				<input type="address" class="ds-form-control" id="exampleInputAddress4" placeholder="Enter Address Line 2">
 			</fieldset>
-			<div class="form-inline">
-				<fieldset class="form-group">
+			<div class="ds-form-inline">
+				<fieldset class="ds-form-group">
 					<label for="exampleCity1">City</label>
-					<input type="text" class="form-control" id="exampleCity1" placeholder="Enter City">
+					<input type="text" class="ds-form-control" id="exampleCity1" placeholder="Enter City">
 				</fieldset>
-				<fieldset class="form-group">
+				<fieldset class="ds-form-group">
 					<label for="exampleState1">State</label>
-					<input type="email" class="form-control" id="exampleState1" placeholder="Enter State">
+					<input type="email" class="ds-form-control" id="exampleState1" placeholder="Enter State">
 				</fieldset>
 			</div>
-			<fieldset class="form-group">
+			<fieldset class="ds-form-group">
 				<label for="exampleZip1">Zip Code</label>
-				<input type="text" class="form-control" id="exampleZip1" placeholder="Enter Zip Code">
+				<input type="text" class="ds-form-control" id="exampleZip1" placeholder="Enter Zip Code">
 			</fieldset>
 		</form>
 	</div>
@@ -129,10 +129,10 @@ notes: |
 	<h3 class="f-example-title">Password Field</h3>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group row">
-				<label for="exampleInputPassword1" class="col-sm-3 col-md-2 form-control-label">Password</label>
-				<div class="col-sm-6 col-md-5">
-					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+			<fieldset class="ds-form-group ds-row">
+				<label for="exampleInputPassword1" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Password</label>
+				<div class="ds-col-md-6">
+					<input type="password" class="ds-form-control" id="exampleInputPassword1" placeholder="Enter Password">
 				</div>
 			</fieldset>
 		</form>
@@ -144,10 +144,10 @@ notes: |
 	<h3 class="f-example-title">Select Box</h3>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group row">
-				<label for="exampleSelect1" class="col-sm-3 col-md-2 form-control-label">Select Box</label>
-				<div class="col-sm-6 col-md-5">
-					<select class="form-control" id="exampleSelect1">
+			<fieldset class="ds-form-group ds-row">
+				<label for="exampleSelect1" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Select Box</label>
+				<div class="ds-col-md-6">
+					<select class="ds-form-control" id="exampleSelect1">
 					  <option>1</option>
 					  <option>2</option>
 					  <option>3</option>
@@ -165,10 +165,10 @@ notes: |
 	<h3 class="f-example-title">Multiple Select Box</h3>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group row">
-				<label for="exampleSelect2" class="col-sm-4 col-md-3 form-control-label">Multiple Select Box</label>
-				<div class="col-sm-7 col-md-6">
-					<select multiple class="form-control" id="exampleSelect2">
+			<fieldset class="ds-form-group ds-row">
+				<label for="exampleSelect2" class="ds-col-md-4 ds-col-lg-3 ds-form-control-label">Multiple Select Box</label>
+				<div class="ds-col-md-7">
+					<select multiple class="ds-form-control" id="exampleSelect2">
 					  <option>1</option>
 					  <option>2</option>
 					  <option>3</option>
@@ -186,9 +186,9 @@ notes: |
 	<h3 class="f-example-title">Custom Select Box</h3>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group row">
-				<label for="exampleSelect1" class="col-sm-3 col-md-2 form-control-label">Custom Select</label>
-				<div class="col-sm-6 col-md-5">
+			<fieldset class="ds-form-group ds-row">
+				<label for="exampleSelect1" class="ds-col-md-4 ds-col-lg-3 ds-form-control-label">Custom Select</label>
+				<div class="ds-col-md-6">
 					<select class="c-select" id="exampleSelect1">
 					  <option>Red</option>
 					  <option>Blue</option>
@@ -207,10 +207,10 @@ notes: |
 	<h3 class="f-example-title">Text Field</h3>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group row">
-				<label for="exampleInputText1" class="col-sm-3 col-md-2 form-control-label">Text Field</label>
-				<div class="col-sm-6 col-md-5">
-					<input type="text" class="form-control" id="exampleInputText1" placeholder="Enter Text">
+			<fieldset class="ds-form-group ds-row">
+				<label for="phantom-exampleInputText1" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Text Field</label>
+				<div class="ds-col-md-6">
+					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="Enter Text">
 				</div>
 			</fieldset>
 		</form>
@@ -222,10 +222,10 @@ notes: |
 	<h3 class="f-example-title">Textarea</h3>
 	<div class="f-example">
 		<form>
-			<fieldset class="form-group row">
-				<label for="exampleTextarea" class="col-sm-3 col-md-2 form-control-label">Textarea</label>
-				<div class="col-sm-6 col-md-5">
-					<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+			<fieldset class="ds-form-group ds-row">
+				<label for="phantom-exampleTextarea" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Textarea</label>
+				<div class="ds-col-md-6">
+					<textarea class="ds-form-control" id="phantom-exampleTextarea" ds-rows="3"></textarea>
 				</div>
 			</fieldset>
 		</form>
@@ -277,16 +277,16 @@ notes: |
 <section class="f-section">
 	<h3 class="f-example-title">Inline Forms: Visible Labels</h3>
 	<div class="f-example">
-		<form class="form-inline">
-		  <div class="form-group">
+		<form class="ds-form-inline">
+		  <div class="ds-form-group">
 			<label for="exampleInputName2">Name</label>
-			<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+			<input type="text" class="ds-form-control" id="exampleInputName2" placeholder="Jane Doe">
 		  </div>
-		  <div class="form-group">
+		  <div class="ds-form-group">
 			<label for="exampleInputEmail2">Email</label>
-			<input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+			<input type="email" class="ds-form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
 		  </div>
-		  <button type="submit" class="btn btn-primary">Send invitation</button>
+		  <button type="submit" class="ds-btn ds-btn-primary">Send invitation</button>
 		</form>
 	</div>
 	{{example 'form.inline-forms-visible'}}
@@ -295,21 +295,21 @@ notes: |
 <section class="f-section">
 	<h3 class="f-example-title">Inline Forms: Hidden Labels</h3>
 	<div class="f-example">
-		<form class="form-inline">
-		  <div class="form-group">
+		<form class="ds-form-inline">
+		  <div class="ds-form-group">
 			<label class="sr-only" for="exampleInputEmail3">Email address</label>
-			<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+			<input type="email" class="ds-form-control" id="exampleInputEmail3" placeholder="Enter email">
 		  </div>
-		  <div class="form-group">
+		  <div class="ds-form-group">
 			<label class="sr-only" for="exampleInputPassword3">Password</label>
-			<input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+			<input type="password" class="ds-form-control" id="exampleInputPassword3" placeholder="Password">
 		  </div>
 		  <div class="checkbox">
 			<label>
 			  <input type="checkbox"> Remember me
 			</label>
 		  </div>
-		  <button type="submit" class="btn btn-primary">Sign in</button>
+		  <button type="submit" class="ds-btn ds-btn-primary">Sign in</button>
 		</form>
 	</div>
 	{{example 'form.inline-forms-hidden'}}
