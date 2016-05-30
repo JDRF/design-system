@@ -93,9 +93,9 @@ notes: |
 	<h3 class="f-example-title">Toggle Segment</h3>
 	<div class="f-example">
 		<div class="ds-btn-group" role="group" aria-label="Basic example">
-			<button type="button" class="ds-btn ds-btn-secondary ds-active">Left</button>
-			<button type="button" class="ds-btn ds-btn-secondary">Center</button>
-			<button type="button" class="ds-btn ds-btn-secondary">Right</button>
+			<button type="button" class="ds-btn">Left</button>
+			<button type="button" class="ds-btn ds-active">Center</button>
+			<button type="button" class="ds-btn">Right</button>
 		</div>
 	</div>
 </section>
@@ -103,10 +103,16 @@ notes: |
 <section class="f-section">
 	<h3 class="f-example-title">Toggle Icon Bar</h3>
 	<div class="f-example">
-		<div class="ds-btn-group" role="group" aria-label="Basic example">
-			<button type="button" class="ds-btn ds-btn-secondary">Left</button>
-			<button type="button" class="ds-btn ds-btn-secondary">Center</button>
-			<button type="button" class="ds-btn ds-btn-secondary">Right</button>
+		<div class="ds-btn-group ds-btn-icon-group" role="group" aria-label="Basic example">
+			<button type="button" class="material-icons mi-format-align-left ds-btn">
+				<span class="ds-sr-only">Primary button with align left icon.</span>
+			</button>
+			<button type="button" class="material-icons mi-format-align-center ds-btn ds-active">
+				<span class="ds-sr-only">Primary button with align center icon.</span>
+			</button>
+			<button type="button" class="material-icons mi-format-align-right ds-btn">
+				<span class="ds-sr-only">Primary button with align right icon.</span>
+			</button>
 		</div>
 	</div>
 </section>
