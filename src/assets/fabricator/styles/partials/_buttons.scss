@@ -1,17 +1,25 @@
 .f-example {
 	.ds-btn-block {
 		margin-bottom: 1rem;
-
-		@include desktop {
-			margin-right: 1.5rem;
-		}
 	}
 
 	.ds-btn {
 		margin-bottom: 1rem;
 
+		@include desktop {
+			margin-right: 1.5rem;
+		}
+
 		@include mobile {
 			display: block;
+		}
+	}
+
+	.ds-btn-group {
+		.ds-btn {
+			@include desktop {
+				margin: 0;
+			}
 		}
 	}
 }
