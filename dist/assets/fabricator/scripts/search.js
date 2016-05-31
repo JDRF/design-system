@@ -1107,6 +1107,10 @@ module.exports = {
 			} );
 		}
 
+		if ( this.results.children.length === 0 ) {
+			this.clean();
+		}
+
 	},
 
 	/**
