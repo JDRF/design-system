@@ -3,6 +3,14 @@
 		margin-bottom: 1rem;
 	}
 
+	.ds-btn-group,
+	.ds-btn-group-vertical {
+
+		.ds-btn {
+			margin-bottom: 0;
+		}
+	}
+
 	.ds-btn {
 		margin-bottom: 1rem;
 
