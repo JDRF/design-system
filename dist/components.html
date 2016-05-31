@@ -298,6 +298,106 @@
 &lt;/button>
 </code></pre>
 </section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Toggle Segment</h3>
+	<div class="f-example">
+		<div class="ds-btn-group" role="group" aria-label="Basic example">
+			<button type="button" class="ds-btn">Left</button>
+			<button type="button" class="ds-btn ds-active">Center</button>
+			<button type="button" class="ds-btn">Right</button>
+		</div>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-btn-group&quot; role=&quot;group&quot; aria-label=&quot;Basic example&quot;>
+	&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;>Left&lt;/button>
+	&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-active&quot;>Center&lt;/button>
+	&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;>Right&lt;/button>
+&lt;/div></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Toggle Icon Bar</h3>
+	<div class="f-example">
+		<div class="ds-btn-group ds-btn-icon-group" role="group" aria-label="Basic example">
+			<button type="button" class="material-icons mi-format-align-left ds-btn">
+				<span class="ds-sr-only">Primary button with align left icon.</span>
+			</button>
+			<button type="button" class="material-icons mi-format-align-center ds-btn ds-active">
+				<span class="ds-sr-only">Primary button with align center icon.</span>
+			</button>
+			<button type="button" class="material-icons mi-format-align-right ds-btn">
+				<span class="ds-sr-only">Primary button with align right icon.</span>
+			</button>
+		</div>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-btn-group ds-btn-icon-group&quot; role=&quot;group&quot; aria-label=&quot;Basic example&quot;>
+	&lt;button type=&quot;button&quot; class=&quot;material-icons mi-format-align-left ds-btn&quot;>
+		&lt;span class=&quot;ds-sr-only&quot;>Primary button with align left icon.&lt;/span>
+	&lt;/button>
+	&lt;button type=&quot;button&quot; class=&quot;material-icons mi-format-align-center ds-btn ds-active&quot;>
+		&lt;span class=&quot;ds-sr-only&quot;>Primary button with align center icon.&lt;/span>
+	&lt;/button>
+	&lt;button type=&quot;button&quot; class=&quot;material-icons mi-format-align-right ds-btn&quot;>
+		&lt;span class=&quot;ds-sr-only&quot;>Primary button with align right icon.&lt;/span>
+	&lt;/button>
+&lt;/div></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Checkbox Buttons</h3>
+	<div class="f-example">
+		<div class="ds-btn-group" data-toggle="buttons">
+			<label class="ds-btn ds-btn-primary ds-active btn-icon">
+				<input type="checkbox" checked autocomplete="off"> Checkbox 1 (pre-checked)
+			</label>
+			<label class="ds-btn ds-btn-primary btn-icon">
+				<input type="checkbox" autocomplete="off"> Checkbox 2
+			</label>
+			<label class="ds-btn ds-btn-primary btn-icon">
+				<input type="checkbox" autocomplete="off"> Checkbox 3
+			</label>
+		</div>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-btn-group&quot; data-toggle=&quot;buttons&quot;>
+	&lt;label class=&quot;ds-btn ds-btn-primary ds-active btn-icon&quot;>
+		&lt;input type=&quot;checkbox&quot; checked autocomplete=&quot;off&quot;> Checkbox 1 (pre-checked)
+	&lt;/label>
+	&lt;label class=&quot;ds-btn ds-btn-primary btn-icon&quot;>
+		&lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;> Checkbox 2
+	&lt;/label>
+	&lt;label class=&quot;ds-btn ds-btn-primary btn-icon&quot;>
+		&lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;> Checkbox 3
+	&lt;/label>
+&lt;/div></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Radio Buttons</h3>
+	<div class="f-example">
+		<div class="ds-btn-group" data-toggle="buttons">
+			<label class="ds-btn ds-btn-primary ds-active">
+				<input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+			</label>
+			<label class="ds-btn ds-btn-primary">
+				<input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+			</label>
+			<label class="ds-btn ds-btn-primary">
+				<input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+			</label>
+		</div>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-btn-group&quot; data-toggle=&quot;buttons&quot;>
+	&lt;label class=&quot;ds-btn ds-btn-primary ds-active&quot;>
+		&lt;input type=&quot;radio&quot; name=&quot;options&quot; id=&quot;option1&quot; autocomplete=&quot;off&quot; checked> Radio 1 (preselected)
+	&lt;/label>
+	&lt;label class=&quot;ds-btn ds-btn-primary&quot;>
+		&lt;input type=&quot;radio&quot; name=&quot;options&quot; id=&quot;option2&quot; autocomplete=&quot;off&quot;> Radio 2
+	&lt;/label>
+	&lt;label class=&quot;ds-btn ds-btn-primary&quot;>
+		&lt;input type=&quot;radio&quot; name=&quot;options&quot; id=&quot;option3&quot; autocomplete=&quot;off&quot;> Radio 3
+	&lt;/label>
+&lt;/div></code></pre>
+</section>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
@@ -410,6 +510,106 @@
 	&amp;lt;/svg&gt;
 &amp;lt;/button&gt;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Toggle Segment&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;div class=&quot;ds-btn-group&quot; role=&quot;group&quot; aria-label=&quot;Basic example&quot;&gt;
+			&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;&gt;Left&lt;/button&gt;
+			&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-active&quot;&gt;Center&lt;/button&gt;
+			&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;&gt;Right&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-btn-group&amp;quot; role=&amp;quot;group&amp;quot; aria-label=&amp;quot;Basic example&amp;quot;&gt;
+	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn&amp;quot;&gt;Left&amp;lt;/button&gt;
+	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-active&amp;quot;&gt;Center&amp;lt;/button&gt;
+	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn&amp;quot;&gt;Right&amp;lt;/button&gt;
+&amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Toggle Icon Bar&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;div class=&quot;ds-btn-group ds-btn-icon-group&quot; role=&quot;group&quot; aria-label=&quot;Basic example&quot;&gt;
+			&lt;button type=&quot;button&quot; class=&quot;material-icons mi-format-align-left ds-btn&quot;&gt;
+				&lt;span class=&quot;ds-sr-only&quot;&gt;Primary button with align left icon.&lt;/span&gt;
+			&lt;/button&gt;
+			&lt;button type=&quot;button&quot; class=&quot;material-icons mi-format-align-center ds-btn ds-active&quot;&gt;
+				&lt;span class=&quot;ds-sr-only&quot;&gt;Primary button with align center icon.&lt;/span&gt;
+			&lt;/button&gt;
+			&lt;button type=&quot;button&quot; class=&quot;material-icons mi-format-align-right ds-btn&quot;&gt;
+				&lt;span class=&quot;ds-sr-only&quot;&gt;Primary button with align right icon.&lt;/span&gt;
+			&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-btn-group ds-btn-icon-group&amp;quot; role=&amp;quot;group&amp;quot; aria-label=&amp;quot;Basic example&amp;quot;&gt;
+	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;material-icons mi-format-align-left ds-btn&amp;quot;&gt;
+		&amp;lt;span class=&amp;quot;ds-sr-only&amp;quot;&gt;Primary button with align left icon.&amp;lt;/span&gt;
+	&amp;lt;/button&gt;
+	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;material-icons mi-format-align-center ds-btn ds-active&amp;quot;&gt;
+		&amp;lt;span class=&amp;quot;ds-sr-only&amp;quot;&gt;Primary button with align center icon.&amp;lt;/span&gt;
+	&amp;lt;/button&gt;
+	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;material-icons mi-format-align-right ds-btn&amp;quot;&gt;
+		&amp;lt;span class=&amp;quot;ds-sr-only&amp;quot;&gt;Primary button with align right icon.&amp;lt;/span&gt;
+	&amp;lt;/button&gt;
+&amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Checkbox Buttons&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;div class=&quot;ds-btn-group&quot; data-toggle=&quot;buttons&quot;&gt;
+			&lt;label class=&quot;ds-btn ds-btn-primary ds-active btn-icon&quot;&gt;
+				&lt;input type=&quot;checkbox&quot; checked autocomplete=&quot;off&quot;&gt; Checkbox 1 (pre-checked)
+			&lt;/label&gt;
+			&lt;label class=&quot;ds-btn ds-btn-primary btn-icon&quot;&gt;
+				&lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt; Checkbox 2
+			&lt;/label&gt;
+			&lt;label class=&quot;ds-btn ds-btn-primary btn-icon&quot;&gt;
+				&lt;input type=&quot;checkbox&quot; autocomplete=&quot;off&quot;&gt; Checkbox 3
+			&lt;/label&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-btn-group&amp;quot; data-toggle=&amp;quot;buttons&amp;quot;&gt;
+	&amp;lt;label class=&amp;quot;ds-btn ds-btn-primary ds-active btn-icon&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;checkbox&amp;quot; checked autocomplete=&amp;quot;off&amp;quot;&gt; Checkbox 1 (pre-checked)
+	&amp;lt;/label&gt;
+	&amp;lt;label class=&amp;quot;ds-btn ds-btn-primary btn-icon&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;checkbox&amp;quot; autocomplete=&amp;quot;off&amp;quot;&gt; Checkbox 2
+	&amp;lt;/label&gt;
+	&amp;lt;label class=&amp;quot;ds-btn ds-btn-primary btn-icon&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;checkbox&amp;quot; autocomplete=&amp;quot;off&amp;quot;&gt; Checkbox 3
+	&amp;lt;/label&gt;
+&amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Radio Buttons&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;div class=&quot;ds-btn-group&quot; data-toggle=&quot;buttons&quot;&gt;
+			&lt;label class=&quot;ds-btn ds-btn-primary ds-active&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;options&quot; id=&quot;option1&quot; autocomplete=&quot;off&quot; checked&gt; Radio 1 (preselected)
+			&lt;/label&gt;
+			&lt;label class=&quot;ds-btn ds-btn-primary&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;options&quot; id=&quot;option2&quot; autocomplete=&quot;off&quot;&gt; Radio 2
+			&lt;/label&gt;
+			&lt;label class=&quot;ds-btn ds-btn-primary&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;options&quot; id=&quot;option3&quot; autocomplete=&quot;off&quot;&gt; Radio 3
+			&lt;/label&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-btn-group&amp;quot; data-toggle=&amp;quot;buttons&amp;quot;&gt;
+	&amp;lt;label class=&amp;quot;ds-btn ds-btn-primary ds-active&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;options&amp;quot; id=&amp;quot;option1&amp;quot; autocomplete=&amp;quot;off&amp;quot; checked&gt; Radio 1 (preselected)
+	&amp;lt;/label&gt;
+	&amp;lt;label class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;options&amp;quot; id=&amp;quot;option2&amp;quot; autocomplete=&amp;quot;off&amp;quot;&gt; Radio 2
+	&amp;lt;/label&gt;
+	&amp;lt;label class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;options&amp;quot; id=&amp;quot;option3&amp;quot; autocomplete=&amp;quot;off&amp;quot;&gt; Radio 3
+	&amp;lt;/label&gt;
+&amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;</code></pre>
 </div>
 
