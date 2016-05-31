@@ -6158,6 +6158,7 @@ input[type="button"].ds-btn-block {
 
 .ds-sidebar .ds-nav-item .ds-nav-link.ds-current {
   border-color: #0073cf;
+  color: #0073cf;
 }
 
 .ds-sidebar .ds-nav-item > .ds-nav .ds-nav-link {
