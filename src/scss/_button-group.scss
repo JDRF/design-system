@@ -10,6 +10,7 @@
 		border-color: $jdrf-green;
 		@include elevation-remove;
 
+		&:hover,
 		&:active,
 		&.active,
 		&:focus {
@@ -34,6 +35,7 @@
 			background-color: $jdrf-white;
 			border-color: $grey-2;
 
+			&:hover,
 			&:active,
 			&.active,
 			&:focus {
