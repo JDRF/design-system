@@ -15,6 +15,7 @@ module.exports = {
 
 		this.input.addEventListener( 'change', this.watch.bind( this ), false );
 		this.input.addEventListener( 'keyup', this.watch.bind( this ), false );
+		this.input.addEventListener( 'keypress', this.submit.bind( this ), false );
 	},
 
 	watch: function() {
@@ -35,6 +36,22 @@ module.exports = {
 			this.clean();
 		}
 
+	},
+
+	/**
+	 * Check which key was press. If `enter`, prevent the default action
+	 *
+	 * @param  {object} e    Base JavaScript event
+	 * @return {object} this
+	 */
+	submit: function( e ) {
+		var key = e.which || e.keyCode;
+
+		if ( key === 13 ) {
+			e.preventDefault();
+		}
+
+		return this;
 	},
 
 	/**
