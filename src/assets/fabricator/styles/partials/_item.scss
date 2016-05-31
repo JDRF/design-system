@@ -98,12 +98,11 @@
 .f-section {
 	.f-example {
 		padding: 1.25rem;
-		border: 2px solid map-get($code-colors, light-gray);
+		border: 3px solid map-get($code-colors, light-gray);
 	}
 
 	.f-example-title {
 		margin-top: 2rem;
-		color: color(primary-dark);
 	}
 }
 

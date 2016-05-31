@@ -8,173 +8,185 @@
 
 	<title>Content</title>
 
-	<link rel="stylesheet" href=".//assets/fabricator/styles/f.css">
-
-	<!-- Design System styles -->
+	<!-- Design System styles --><link rel="stylesheet" href="./assets/fabricator/styles/f.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href=".//assets/design-system/styles/design-system.css">
+	<link rel="stylesheet" href="./assets/design-system/styles/design-system.css">
 	<!-- /Design System styles -->
 
 </head>
 <body>
-	<div class="f-header-top">
-		<h1 class="f-logo">
-			<svg width="75px">
-				<use xlink:href="#f-icon-logo" width="75px"/>
-			</svg>
-			<span>Design System</span>
-		</h1>
-		<nav class="f-nav"aria-label="primary-nav">
-			<ul class="nav">
-				<li class="nav-item">
-					<a href="#" class="nav-link">
-						Documentation <span class="sr-only"> will trigger a new window or tab.</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="https://github.com/JDRF/design-system" target="_blank" class="nav-link">
-						Github <span class="sr-only"> will trigger a new window or tab.</span>
-					</a>
-				</li>
-			</ul>
-		</nav></div>
-	<div class="f-header">
-		<div class="f-header-center">
+	<header class="f-header-top ds-container" role="banner">
+			<div class="f-control-bar ds-hidden-md-up">
+				<button class="f-control f-menu-toggle" aria-expanded="false" name="menu-trigger">
+					<svg>
+						<use xlink:href="#f-icon-menu" />
+					</svg>
+					<span class="ds-sr-only">Toggle Menu</spam>
+				</button>
+			</div>
+			<h1 class="f-logo">
+				<svg width="75px">
+					<use xlink:href="#f-icon-logo" width="75px"/>
+				</svg>
+				<span>Design System</span>
+			</h1>
+			<nav class="f-nav" aria-label="primary-nav" role="navigation">
+				<ul class="ds-nav">
+					<li class="ds-nav-item">
+						<a href="#" class="ds-nav-link">
+							Documentation <span class="ds-sr-only"> will trigger a new window or tab.</span>
+						</a>
+					</li>
+					<li class="ds-nav-item">
+						<a href="https://github.com/JDRF/design-system" target="_blank" class="ds-nav-link">
+							Github <span class="ds-sr-only"> will trigger a new window or tab.</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="f-header ds-container-fluid">
+		<div class="f-header-center ds-container">
 			<h2 class="f-header-title">Content</h2>
-			<p class="f-header-content">This is the Content page.</p>
+			<p class="f-header-content">You are viewing the "Content" page.</p>
 		</div>
 	</div>
 
-	<div class="f-container">
-		<!-- fabricator icons -->
-		<svg style="display: none;">
-			<symbol id="f-icon-menu" viewBox="0 0 512 512">
-				<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
-			</symbol>
-			<symbol id="f-icon-logo" viewBox="0 0 166.7 72.7">
-				<path class="st0" d="M6,52.2c1.7-1.1,2.9-2.7,4.4-4c0.8-0.7,1.4-1.8,2.2-1.9c0.8-0.2,1.3,1.2,2,1.8c1.3,1.2,2.8,1.9,4.6,2.1
-					c3.3,0.3,5.9-1.3,6.8-4.6c0.7-2.5,0.9-5,1.3-7.6c0.7-4.6,1.2-9.3,1.9-13.9c0.1-1-0.2-1-1-1c-2.9,0-5.9,0-8.8,0c-0.8,0-1-0.2-0.9-1
-					c0.3-1.7,0.5-3.4,0.7-5.1c0.2-1.6,0.2-1.6,1.8-1.6c14.4,0,28.8,0,43.1,0c1.8,0,3.6,0.1,5.3,0.5c8.4,1.7,14.9,7.4,14.9,17.6
-					c0,11.3-8,21-19.3,23.6C62.6,57.9,60,58,57.4,58c-4.7,0-9.4,0-14,0c-0.9,0-1.1-0.3-1-1.2c1.1-7.7,2.1-15.4,3.2-23.2
-					c0.1-0.7-0.1-0.7-0.6-0.7c-0.8,0-1.7,0-2.7,0c0.8-1.7,1.6-3.3,2.2-5c0.6-1.6,1.4-2.1,3.1-2c2.1,0.2,4.2,0.1,6.3,0
-					c1,0,1.3,0.2,1.2,1.3c-0.6,3.9-1.1,7.9-1.7,11.8c-0.5,3.3-0.9,6.5-1.4,9.8c-0.1,0.4-0.1,0.8,0.6,0.8c3.4-0.1,6.9,0.3,10.3-0.3
-					c6.7-1.2,11.5-6.8,11.8-13.7c0.2-4.3-1-7.9-4.6-10.5c-2.3-1.7-4.9-1.9-7.6-1.9c-7.4,0-14.7,0-22.1,0c-1.2,0-1.5,0.5-1.6,1.5
-					C37.9,31.6,37,38.3,35.9,45c-1.5,9.4-9.1,14.4-18.5,13.8c-4.7-0.3-8.5-2.5-11.4-6.1C6,52.5,6,52.3,6,52.2z"/>
-				<path class="st0" d="M121.4,58.2c-3.5,0-6.9,0-10.2,0c-0.7,0-0.9-0.5-1.2-1c-2.8-5.5-5.6-11.1-8.3-16.6c-0.5-1.1-1.1-2.2-1.7-3.3
-					c-0.4-0.7-0.4-1,0.6-1c2.3,0,4.7,0,7-0.1c4.2-0.2,7.1-3.2,7-7.2c0-2.6-1.6-4.4-4.5-4.8c-3.5-0.5-7.1-0.2-10.7-0.2
-					c-0.6,0-0.8,0.4-0.9,0.9c-0.8,6.1-1.7,12.1-2.5,18.2c-0.6,4.6-1.3,9.1-1.8,13.7c-0.1,1-0.5,1.3-1.5,1.3c-2.3-0.1-4.6,0-6.9,0
-					c-0.7,0-1.1,0-0.9-1c1.5-10.6,2.9-21.2,4.4-31.7c0.4-2.9,0.9-5.8,1.2-8.7c0.1-0.8,0.4-1,1.1-1c6.8,0,13.6,0,20.4,0.1
-					c3,0,5.8,0.9,8.2,2.8c2.5,1.9,3.7,4.4,3.9,7.4c0.6,7.6-3,13.6-10.1,16.6c-0.8,0.3-0.9,0.6-0.4,1.3
-					C116.2,48.6,118.7,53.3,121.4,58.2z"/>
-				<path class="st0" d="M145.9,15.8c5,0,10,0,15,0c1,0,1.2,0.3,1.1,1.2c-0.3,2-0.6,4-0.8,5.9c-0.1,1-0.5,1.3-1.5,1.3
-					c-6.8,0-13.6,0-20.4-0.1c-1.1,0-1.5,0.4-1.6,1.4c-0.2,2.1-0.5,4.3-0.9,6.4c-0.2,1,0,1.3,1.1,1.3c5.9-0.1,11.8,0,17.7,0
-					c1.3,0,1.3,0.1,1.2,1.3c-0.3,1.9-0.6,3.9-0.8,5.8c-0.1,0.9-0.4,1.3-1.4,1.3c-5.9-0.1-11.8,0-17.7-0.1c-1,0-1.4,0.3-1.5,1.3
-					c-0.6,4.6-1.3,9.2-1.9,13.8c-0.1,1.1-0.4,1.5-1.6,1.5c-2.3-0.1-4.6-0.1-6.9,0c-0.8,0-1-0.1-0.9-1c0.9-6.1,1.7-12.3,2.5-18.4
-					c1-7.3,2.1-14.7,3-22c0.1-0.8,0.4-1,1.2-1C135.9,15.8,140.9,15.8,145.9,15.8z"/>
-				<path class="st0" d="M120.5,9.8c-0.3,2.4-0.3,2.4-2.6,2.4c-28.7,0-57.5,0-86.2,0c-0.2,0-0.4,0-0.7,0c-0.6-0.1-1.4,0.1-1.3-0.9
-					c0.1-0.8,0.1-1.5,1.3-1.5c27.9,0,55.8,0,83.8,0C116.7,9.8,118.6,9.8,120.5,9.8z"/>
-				<path class="st0" d="M139,61.6c-0.2,2.2-0.2,2.2-2.4,2.2c-25.4,0-50.9,0-76.3,0c-0.4,0-1.2,0.5-1.3-0.5c-0.1-1.2,0.4-1.7,1.4-1.7
-					c25.9,0,51.8,0,77.7,0C138.5,61.5,138.7,61.6,139,61.6z"/>
-			</symbol>
-		</svg>
-		<!-- /fabricator icons -->
-			<!-- fabricator menu -->
-			<div class="f-menu-canvas sidebar">
-			
-				<nav class="f-nav"aria-label="primary-nav">
-					<ul class="nav">
-						<li class="nav-item">
-							<a href="#" class="nav-link">
-								Documentation <span class="sr-only"> will trigger a new window or tab.</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="https://github.com/JDRF/design-system" target="_blank" class="nav-link">
-								Github <span class="sr-only"> will trigger a new window or tab.</span>
-							</a>
-						</li>
-					</ul>
-				</nav>	<nav class="f-menu" aria-label="sidebar-nav">
-			
-					<div class="row">
-						<div class="col-md-10 hidden-sm-down">
-							<form>
-								<fieldset class="form-group">
-									<input type="text" class="form-control" id="search-input" placeholder="Search..." autocomplete="off">
-									<div class="form-control bd-search-results hide" id="search-results"></div>
-								</fieldset>
-							</form>
+		<div class="f-container ds-container">
+			<div class="ds-row">
+					<!-- fabricator icons -->
+					<svg style="display: none;">
+						<symbol id="f-icon-menu" viewBox="0 0 512 512">
+							<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+						</symbol>
+						<symbol id="f-icon-logo" viewBox="0 0 166.7 72.7">
+							<path class="st0" d="M6,52.2c1.7-1.1,2.9-2.7,4.4-4c0.8-0.7,1.4-1.8,2.2-1.9c0.8-0.2,1.3,1.2,2,1.8c1.3,1.2,2.8,1.9,4.6,2.1
+								c3.3,0.3,5.9-1.3,6.8-4.6c0.7-2.5,0.9-5,1.3-7.6c0.7-4.6,1.2-9.3,1.9-13.9c0.1-1-0.2-1-1-1c-2.9,0-5.9,0-8.8,0c-0.8,0-1-0.2-0.9-1
+								c0.3-1.7,0.5-3.4,0.7-5.1c0.2-1.6,0.2-1.6,1.8-1.6c14.4,0,28.8,0,43.1,0c1.8,0,3.6,0.1,5.3,0.5c8.4,1.7,14.9,7.4,14.9,17.6
+								c0,11.3-8,21-19.3,23.6C62.6,57.9,60,58,57.4,58c-4.7,0-9.4,0-14,0c-0.9,0-1.1-0.3-1-1.2c1.1-7.7,2.1-15.4,3.2-23.2
+								c0.1-0.7-0.1-0.7-0.6-0.7c-0.8,0-1.7,0-2.7,0c0.8-1.7,1.6-3.3,2.2-5c0.6-1.6,1.4-2.1,3.1-2c2.1,0.2,4.2,0.1,6.3,0
+								c1,0,1.3,0.2,1.2,1.3c-0.6,3.9-1.1,7.9-1.7,11.8c-0.5,3.3-0.9,6.5-1.4,9.8c-0.1,0.4-0.1,0.8,0.6,0.8c3.4-0.1,6.9,0.3,10.3-0.3
+								c6.7-1.2,11.5-6.8,11.8-13.7c0.2-4.3-1-7.9-4.6-10.5c-2.3-1.7-4.9-1.9-7.6-1.9c-7.4,0-14.7,0-22.1,0c-1.2,0-1.5,0.5-1.6,1.5
+								C37.9,31.6,37,38.3,35.9,45c-1.5,9.4-9.1,14.4-18.5,13.8c-4.7-0.3-8.5-2.5-11.4-6.1C6,52.5,6,52.3,6,52.2z"/>
+							<path class="st0" d="M121.4,58.2c-3.5,0-6.9,0-10.2,0c-0.7,0-0.9-0.5-1.2-1c-2.8-5.5-5.6-11.1-8.3-16.6c-0.5-1.1-1.1-2.2-1.7-3.3
+								c-0.4-0.7-0.4-1,0.6-1c2.3,0,4.7,0,7-0.1c4.2-0.2,7.1-3.2,7-7.2c0-2.6-1.6-4.4-4.5-4.8c-3.5-0.5-7.1-0.2-10.7-0.2
+								c-0.6,0-0.8,0.4-0.9,0.9c-0.8,6.1-1.7,12.1-2.5,18.2c-0.6,4.6-1.3,9.1-1.8,13.7c-0.1,1-0.5,1.3-1.5,1.3c-2.3-0.1-4.6,0-6.9,0
+								c-0.7,0-1.1,0-0.9-1c1.5-10.6,2.9-21.2,4.4-31.7c0.4-2.9,0.9-5.8,1.2-8.7c0.1-0.8,0.4-1,1.1-1c6.8,0,13.6,0,20.4,0.1
+								c3,0,5.8,0.9,8.2,2.8c2.5,1.9,3.7,4.4,3.9,7.4c0.6,7.6-3,13.6-10.1,16.6c-0.8,0.3-0.9,0.6-0.4,1.3
+								C116.2,48.6,118.7,53.3,121.4,58.2z"/>
+							<path class="st0" d="M145.9,15.8c5,0,10,0,15,0c1,0,1.2,0.3,1.1,1.2c-0.3,2-0.6,4-0.8,5.9c-0.1,1-0.5,1.3-1.5,1.3
+								c-6.8,0-13.6,0-20.4-0.1c-1.1,0-1.5,0.4-1.6,1.4c-0.2,2.1-0.5,4.3-0.9,6.4c-0.2,1,0,1.3,1.1,1.3c5.9-0.1,11.8,0,17.7,0
+								c1.3,0,1.3,0.1,1.2,1.3c-0.3,1.9-0.6,3.9-0.8,5.8c-0.1,0.9-0.4,1.3-1.4,1.3c-5.9-0.1-11.8,0-17.7-0.1c-1,0-1.4,0.3-1.5,1.3
+								c-0.6,4.6-1.3,9.2-1.9,13.8c-0.1,1.1-0.4,1.5-1.6,1.5c-2.3-0.1-4.6-0.1-6.9,0c-0.8,0-1-0.1-0.9-1c0.9-6.1,1.7-12.3,2.5-18.4
+								c1-7.3,2.1-14.7,3-22c0.1-0.8,0.4-1,1.2-1C135.9,15.8,140.9,15.8,145.9,15.8z"/>
+							<path class="st0" d="M120.5,9.8c-0.3,2.4-0.3,2.4-2.6,2.4c-28.7,0-57.5,0-86.2,0c-0.2,0-0.4,0-0.7,0c-0.6-0.1-1.4,0.1-1.3-0.9
+								c0.1-0.8,0.1-1.5,1.3-1.5c27.9,0,55.8,0,83.8,0C116.7,9.8,118.6,9.8,120.5,9.8z"/>
+							<path class="st0" d="M139,61.6c-0.2,2.2-0.2,2.2-2.4,2.2c-25.4,0-50.9,0-76.3,0c-0.4,0-1.2,0.5-1.3-0.5c-0.1-1.2,0.4-1.7,1.4-1.7
+								c25.9,0,51.8,0,77.7,0C138.5,61.5,138.7,61.6,139,61.6z"/>
+						</symbol>
+					</svg>
+					<!-- /fabricator icons -->
+						<!-- fabricator menu -->
+						<div class="f-menu-canvas ds-sidebar ds-col-md-4 ds-col-lg-3">
+						
+							<nav class="f-nav" aria-label="primary-nav" role="navigation">
+								<ul class="ds-nav">
+									<li class="ds-nav-item">
+										<a href="#" class="ds-nav-link">
+											Documentation <span class="ds-sr-only"> will trigger a new window or tab.</span>
+										</a>
+									</li>
+									<li class="ds-nav-item">
+										<a href="https://github.com/JDRF/design-system" target="_blank" class="ds-nav-link">
+											Github <span class="ds-sr-only"> will trigger a new window or tab.</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+							<nav class="f-menu" aria-label="sidebar-nav" role="navigation">
+						
+								<form class="f-search" role="search">
+									<fieldset class="ds-form-group">
+										<input type="text" class="ds-form-control" id="search-input" placeholder="Search..." autocomplete="off">
+										<div class="ds-form-control bd-search-results ds-hide" id="search-results"></div>
+									</fieldset>
+								</form>
+						
+								<ul class="ds-nav">
+						
+									<li class="ds-nav-item">
+										<a href="./index.html" class="f-menu__heading ds-nav-link">Overview</a>
+										<a href="./download.html" class="f-menu__heading ds-nav-link">Download</a>
+										<a href="./faq.html" class="f-menu__heading ds-nav-link">FAQ</a>
+									</li>
+						
+									<li class="ds-nav-item">
+										<a href="./components.html" class="f-menu__heading ds-nav-link">Components</a>
+										<ul class="ds-nav">
+											<li>
+												<a href="./components.html#buttons" class="ds-nav-link">Buttons</a>
+											</li>
+						
+						
+											<li>
+												<a href="./components.html#side-navigation" class="ds-nav-link">Side Navigation</a>
+											</li>
+						
+										</ul>
+									</li>
+									<li class="ds-nav-item">
+										<a href="./content.html" class="f-menu__heading ds-nav-link">Content</a>
+										<ul class="ds-nav">
+											<li>
+												<a href="./content.html#colors" class="ds-nav-link">Colors</a>
+											</li>
+						
+											<li>
+												<a href="./content.html#elevation" class="ds-nav-link">Elevation</a>
+											</li>
+						
+											<li>
+												<a href="./content.html#icons" class="ds-nav-link">Icons</a>
+											</li>
+						
+											<li>
+												<a href="./content.html#typography" class="ds-nav-link">Typography</a>
+											</li>
+						
+										</ul>
+									</li>
+									<li class="ds-nav-item">
+										<a href="./layout.html" class="f-menu__heading ds-nav-link">Layout</a>
+										<ul class="ds-nav">
+											<li>
+												<a href="./layout.html#grid" class="ds-nav-link">Grid</a>
+											</li>
+						
+										</ul>
+									</li>
+						
+						
+								</ul>
+						
+						
+							</nav>
 						</div>
-					</div>
-			
-					<ul class="nav">
-			
-						<li class="nav-item">
-							<a href="./index.html" class="f-menu__heading nav-link">Overview</a>
-							<a href="./download.html" class="f-menu__heading nav-link">Download</a>
-							<a href="./faq.html" class="f-menu__heading nav-link">FAQ</a>
-						</li>
-			
-						<li class="nav-item">
-							<a href="./components.html" class="f-menu__heading nav-link">Components</a>
-							<ul class="nav">
-								<li>
-									<a href="./components.html#buttons" class="nav-link">Buttons</a>
-								</li>
-								<li>
-									<a href="./components.html#forms" class="nav-link">Forms</a>
-								</li>
-								<li>
-									<a href="./components.html#side-navigation" class="nav-link">Side Navigation</a>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item">
-							<a href="./content.html" class="f-menu__heading nav-link">Content</a>
-							<ul class="nav">
-								<li>
-									<a href="./content.html#colors" class="nav-link">Colors</a>
-								</li>
-								<li>
-									<a href="./content.html#elevation" class="nav-link">Elevation</a>
-								</li>
-								<li>
-									<a href="./content.html#icons" class="nav-link">Icons</a>
-								</li>
-								<li>
-									<a href="./content.html#typography" class="nav-link">Typography</a>
-								</li>
-							</ul>
-						</li>
-			
-			
-					</ul>
-			
-			
-				</nav>
-			</div>
-			<!-- /fabricator menu -->
-
-	<main class="f-content">
-		<div class="f-control-bar">
-			<div class="f-control f-menu-toggle">
-				<svg>
-					<use xlink:href="#f-icon-menu" />
-				</svg>
-			</div>
-		</div>
-		
+						<!-- /fabricator menu -->
+				<main class="f-content ds-col-md-8 ds-col-lg-9" role="main">
+					
 
 <div class="f-item-group" id="colors">
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Colors</h2>
 	</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>These are notes associated with Colors</p>
+	<p>These are the colors that all JDRF brands should adhere to.</p>
 
 </div>
 <div class="f-item-preview">
-	<div class="f-color-chips">
+	<h3>Primary Colors</h3>
+<div class="f-color-chips">
 	<div class="f-color-chip">
 		<div class="f-color-chip__name">Blue</div>
 		<div class="f-color-chip__color">#0073cf</div>
@@ -184,6 +196,8 @@
 		<div class="f-color-chip__color">#002855</div>
 	</div>
 </div>
+
+<h3>Button Colors</h3>
 <div class="f-color-chips">
 	<div class="f-color-chip">
 		<div class="f-color-chip__name">Green</div>
@@ -205,84 +219,117 @@
 		<div class="f-color-chip__name">Blue</div>
 		<div class="f-color-chip__color">#0073cf</div>
 	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">White</div>
-		<div class="f-color-chip__color">#ffffff</div>
-	</div>
 </div>
-<div class="f-color-chips">
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Accent Blue</div>
-		<div class="f-color-chip__color">#09bcef</div>
+
+<p>The color white <code class="language-markup">#ffffff</code> is used as a background for the <a href="/dist/components.html#buttons">outline button style</a>.
+
+	<h3>Accent Colors</h3>
+	<div class="f-color-chips">
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Accent Blue</div>
+			<div class="f-color-chip__color">#09bcef</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Accent Green</div>
+			<div class="f-color-chip__color">#8cd600</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Accent Orange</div>
+			<div class="f-color-chip__color">#fcd116</div>
+		</div>
 	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Accent Green</div>
-		<div class="f-color-chip__color">#8cd600</div>
+
+	<h3>Program Colors</h3>
+	<div class="f-color-chips">
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Walk</div>
+			<div class="f-color-chip__color">#fa6323</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Ride</div>
+			<div class="f-color-chip__color">#00a862</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">DIY</div>
+			<div class="f-color-chip__color">#e01279</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Gala</div>
+			<div class="f-color-chip__color">#6e267b</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Peak</div>
+			<div class="f-color-chip__color">#aa72bf</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Voice</div>
+			<div class="f-color-chip__color">#fdb823</div>
+		</div>
 	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Accent Orange</div>
-		<div class="f-color-chip__color">#fcd116</div>
+
+	<h3>Grey Palette</h3>
+	<div class="f-color-chips">
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Grey 1</div>
+			<div class="f-color-chip__color">#fafafa</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Grey 2</div>
+			<div class="f-color-chip__color">#f5f5f5</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Grey 3</div>
+			<div class="f-color-chip__color">#eeeeee</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Grey 4</div>
+			<div class="f-color-chip__color">#e0e0e0</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Grey 5</div>
+			<div class="f-color-chip__color">#bdbdbd</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Grey 6</div>
+			<div class="f-color-chip__color">#9e9e9e</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Grey 7</div>
+			<div class="f-color-chip__color">#757575</div>
+		</div>
 	</div>
-</div>
-<div class="f-color-chips">
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Walk</div>
-		<div class="f-color-chip__color">#fa6323</div>
+
+	<h3>Text Colors</h3>
+	<div class="f-color-chips">
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Primary</div>
+			<div class="f-color-chip__color">rgba(0, 0, 0, 0.87)</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Secondary</div>
+			<div class="f-color-chip__color">rgba(0, 0, 0, 0.54)</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Disabled</div>
+			<div class="f-color-chip__color">rgba(0, 0, 0, 0.38)</div>
+		</div>
+		<div class="f-color-chip">
+			<div class="f-color-chip__name">Dividers</div>
+			<div class="f-color-chip__color">rgba(0, 0, 0, 0.54)</div>
+		</div>
 	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Ride</div>
-		<div class="f-color-chip__color">#00a862</div>
-	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">DIY</div>
-		<div class="f-color-chip__color">#e01279</div>
-	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Gala</div>
-		<div class="f-color-chip__color">#6e267b</div>
-	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Peak</div>
-		<div class="f-color-chip__color">#aa72bf</div>
-	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Voice</div>
-		<div class="f-color-chip__color">#fdb823</div>
-	</div>
-</div>
-<div class="f-color-chips">
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Grey 1</div>
-		<div class="f-color-chip__color">#fafafa</div>
-	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Grey 2</div>
-		<div class="f-color-chip__color">#f5f5f5</div>
-	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Grey 3</div>
-		<div class="f-color-chip__color">#eeeeee</div>
-	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Grey 4</div>
-		<div class="f-color-chip__color">#e0e0e0</div>
-	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Grey 5</div>
-		<div class="f-color-chip__color">#bdbdbd</div>
-	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Grey 6</div>
-		<div class="f-color-chip__color">#9e9e9e</div>
-	</div>
-	<div class="f-color-chip">
-		<div class="f-color-chip__name">Grey 7</div>
-		<div class="f-color-chip__color">#757575</div>
-	</div>
-</div>
+
+	<p>The reverse of these colors (white text on a darker color) would be as follows:</p>
+
+	<ul>
+		<li>Primary at 100% white: <code class="language-markup">#ffffff</code></li>
+		<li>Secondary at 76% white: <code class="language-markup">rgba(255, 255, 255, 0.76)</code></li>
+		<li>Disabled at 50% white: <code class="language-markup">rgba(255, 255, 255, 0.5)</code></li>
+	</ul>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;f-color-chips&quot;&gt;
+	<pre><code class="language-markup">&lt;h3&gt;Primary Colors&lt;/h3&gt;
+&lt;div class=&quot;f-color-chips&quot;&gt;
 	&lt;div class=&quot;f-color-chip&quot;&gt;
 		&lt;div class=&quot;f-color-chip__name&quot;&gt;Blue&lt;/div&gt;
 		&lt;div class=&quot;f-color-chip__color&quot;&gt;#0073cf&lt;/div&gt;
@@ -292,6 +339,8 @@
 		&lt;div class=&quot;f-color-chip__color&quot;&gt;#002855&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
+
+&lt;h3&gt;Button Colors&lt;/h3&gt;
 &lt;div class=&quot;f-color-chips&quot;&gt;
 	&lt;div class=&quot;f-color-chip&quot;&gt;
 		&lt;div class=&quot;f-color-chip__name&quot;&gt;Green&lt;/div&gt;
@@ -313,81 +362,113 @@
 		&lt;div class=&quot;f-color-chip__name&quot;&gt;Blue&lt;/div&gt;
 		&lt;div class=&quot;f-color-chip__color&quot;&gt;#0073cf&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;White&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#ffffff&lt;/div&gt;
-	&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;f-color-chips&quot;&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Accent Blue&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#09bcef&lt;/div&gt;
+
+&lt;p&gt;The color white &lt;code class=&quot;language-markup&quot;&gt;#ffffff&lt;/code&gt; is used as a background for the &lt;a href=&quot;/dist/components.html#buttons&quot;&gt;outline button style&lt;/a&gt;.
+
+	&lt;h3&gt;Accent Colors&lt;/h3&gt;
+	&lt;div class=&quot;f-color-chips&quot;&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Accent Blue&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#09bcef&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Accent Green&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#8cd600&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Accent Orange&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#fcd116&lt;/div&gt;
+		&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Accent Green&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#8cd600&lt;/div&gt;
+
+	&lt;h3&gt;Program Colors&lt;/h3&gt;
+	&lt;div class=&quot;f-color-chips&quot;&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Walk&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#fa6323&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Ride&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#00a862&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;DIY&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#e01279&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Gala&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#6e267b&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Peak&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#aa72bf&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Voice&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#fdb823&lt;/div&gt;
+		&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Accent Orange&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#fcd116&lt;/div&gt;
+
+	&lt;h3&gt;Grey Palette&lt;/h3&gt;
+	&lt;div class=&quot;f-color-chips&quot;&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 1&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#fafafa&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 2&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#f5f5f5&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 3&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#eeeeee&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 4&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#e0e0e0&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 5&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#bdbdbd&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 6&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#9e9e9e&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 7&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;#757575&lt;/div&gt;
+		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;f-color-chips&quot;&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Walk&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#fa6323&lt;/div&gt;
+
+	&lt;h3&gt;Text Colors&lt;/h3&gt;
+	&lt;div class=&quot;f-color-chips&quot;&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Primary&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;rgba(0, 0, 0, 0.87)&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Secondary&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;rgba(0, 0, 0, 0.54)&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Disabled&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;rgba(0, 0, 0, 0.38)&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip&quot;&gt;
+			&lt;div class=&quot;f-color-chip__name&quot;&gt;Dividers&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__color&quot;&gt;rgba(0, 0, 0, 0.54)&lt;/div&gt;
+		&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Ride&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#00a862&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;DIY&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#e01279&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Gala&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#6e267b&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Peak&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#aa72bf&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Voice&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#fdb823&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;f-color-chips&quot;&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 1&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#fafafa&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 2&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#f5f5f5&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 3&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#eeeeee&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 4&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#e0e0e0&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 5&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#bdbdbd&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 6&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#9e9e9e&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;f-color-chip&quot;&gt;
-		&lt;div class=&quot;f-color-chip__name&quot;&gt;Grey 7&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__color&quot;&gt;#757575&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+
+	&lt;p&gt;The reverse of these colors (white text on a darker color) would be as follows:&lt;/p&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;Primary at 100% white: &lt;code class=&quot;language-markup&quot;&gt;#ffffff&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;Secondary at 76% white: &lt;code class=&quot;language-markup&quot;&gt;rgba(255, 255, 255, 0.76)&lt;/code&gt;&lt;/li&gt;
+		&lt;li&gt;Disabled at 50% white: &lt;code class=&quot;language-markup&quot;&gt;rgba(255, 255, 255, 0.5)&lt;/code&gt;&lt;/li&gt;
+	&lt;/ul&gt;</code></pre>
 </div>
 
 
@@ -399,78 +480,75 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Elevation</h2>
 	</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>Elevations are applied using the <code>elevation-</code> class and are numbered one to five. <code>elevation-one</code> would be the lowest elevation versus <code>elevation-five</code> is the highest.</p>
+	<p>Elevations are applied using the <code>ds-elevation-</code> class and are numbered one to five. <code>.ds-elevation-one</code> would be the lowest ds-elevation versus <code>.ds-elevation-five</code> is the highest.</p>
+<p>Buttons in most cases start with <code>.ds-elevation-one</code> and raise to <code>.ds-elevation-three</code> on <code>:hover</code>, <code>:focus</code> and <code>:active</code> states. The <code>.ds-btn-flat</code> style of buttons start with no elevation and raise to <code>.ds-elevation-two</code> on <code>:hover</code>, <code>:focus</code> and <code>:active</code> states.</p>
 
 </div>
 <div class="f-item-preview">
 	<div class="f-example-inline">
-	<div class="f-rectangle elevation-one"></div>
+	<div class="f-rectangle ds-elevation-one"></div>
 
-	<p class="f-example-desc">Elevation 1</p>
+	<p class="f-example-desc">ds-elevation 1</p>
 </div>
 <div class="f-example-inline">
-	<div class="f-rectangle elevation-two"></div>
+	<div class="f-rectangle ds-elevation-two"></div>
 
-	<p class="f-example-desc">Elevation 2</p>
+	<p class="f-example-desc">ds-elevation 2</p>
 </div>
 <div class="f-example-inline">
-	<div class="f-rectangle elevation-three"></div>
+	<div class="f-rectangle ds-elevation-three"></div>
 
-	<p class="f-example-desc">Elevation 3</p>
+	<p class="f-example-desc">ds-elevation 3</p>
 </div>
 <div class="f-example-inline">
-	<div class="f-rectangle elevation-four"></div>
+	<div class="f-rectangle ds-elevation-four"></div>
 
-	<p class="f-example-desc">Elevation 4</p>
+	<p class="f-example-desc">ds-elevation 4</p>
 </div>
 <div class="f-example-inline">
-	<div class="f-rectangle elevation-five"></div>
+	<div class="f-rectangle ds-elevation-five"></div>
 
-	<p class="f-example-desc">Elevation 5</p>
+	<p class="f-example-desc">ds-elevation 5</p>
 </div>
-
-<pre class="language-markup">
-		<code class="language-markup">&lt;div class="f-rectangle elevation-one"&gt;&lt;/div&gt;
-		&lt;div class="f-rectangle elevation-two"&gt;&lt;/div&gt;
-		&lt;div class="f-rectangle elevation-three"&gt;&lt;/div&gt;
-		&lt;div class="f-rectangle elevation-four"&gt;&lt;/div&gt;
-		&lt;div class="f-rectangle elevation-five"&gt;&lt;/div&gt;</code>
-	</pre>
+<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-elevation-one&quot;>&lt;/div>
+&lt;div class=&quot;ds-elevation-two&quot;>&lt;/div>
+&lt;div class=&quot;ds-elevation-three&quot;>&lt;/div>
+&lt;div class=&quot;ds-elevation-four&quot;>&lt;/div>
+&lt;div class=&quot;ds-elevation-five&quot;>&lt;/div>
+</code></pre>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class=&quot;f-example-inline&quot;&gt;
-	&lt;div class=&quot;f-rectangle elevation-one&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;f-rectangle ds-elevation-one&quot;&gt;&lt;/div&gt;
 
-	&lt;p class=&quot;f-example-desc&quot;&gt;Elevation 1&lt;/p&gt;
+	&lt;p class=&quot;f-example-desc&quot;&gt;ds-elevation 1&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;f-example-inline&quot;&gt;
-	&lt;div class=&quot;f-rectangle elevation-two&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;f-rectangle ds-elevation-two&quot;&gt;&lt;/div&gt;
 
-	&lt;p class=&quot;f-example-desc&quot;&gt;Elevation 2&lt;/p&gt;
+	&lt;p class=&quot;f-example-desc&quot;&gt;ds-elevation 2&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;f-example-inline&quot;&gt;
-	&lt;div class=&quot;f-rectangle elevation-three&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;f-rectangle ds-elevation-three&quot;&gt;&lt;/div&gt;
 
-	&lt;p class=&quot;f-example-desc&quot;&gt;Elevation 3&lt;/p&gt;
+	&lt;p class=&quot;f-example-desc&quot;&gt;ds-elevation 3&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;f-example-inline&quot;&gt;
-	&lt;div class=&quot;f-rectangle elevation-four&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;f-rectangle ds-elevation-four&quot;&gt;&lt;/div&gt;
 
-	&lt;p class=&quot;f-example-desc&quot;&gt;Elevation 4&lt;/p&gt;
+	&lt;p class=&quot;f-example-desc&quot;&gt;ds-elevation 4&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;f-example-inline&quot;&gt;
-	&lt;div class=&quot;f-rectangle elevation-five&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;f-rectangle ds-elevation-five&quot;&gt;&lt;/div&gt;
 
-	&lt;p class=&quot;f-example-desc&quot;&gt;Elevation 5&lt;/p&gt;
+	&lt;p class=&quot;f-example-desc&quot;&gt;ds-elevation 5&lt;/p&gt;
 &lt;/div&gt;
-
-&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&quot;f-rectangle elevation-one&quot;&amp;gt;&amp;lt;/div&amp;gt;
-		&amp;lt;div class=&quot;f-rectangle elevation-two&quot;&amp;gt;&amp;lt;/div&amp;gt;
-		&amp;lt;div class=&quot;f-rectangle elevation-three&quot;&amp;gt;&amp;lt;/div&amp;gt;
-		&amp;lt;div class=&quot;f-rectangle elevation-four&quot;&amp;gt;&amp;lt;/div&amp;gt;
-		&amp;lt;div class=&quot;f-rectangle elevation-five&quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;</code></pre>
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-elevation-one&amp;quot;&gt;&amp;lt;/div&gt;
+&amp;lt;div class=&amp;quot;ds-elevation-two&amp;quot;&gt;&amp;lt;/div&gt;
+&amp;lt;div class=&amp;quot;ds-elevation-three&amp;quot;&gt;&amp;lt;/div&gt;
+&amp;lt;div class=&amp;quot;ds-elevation-four&amp;quot;&gt;&amp;lt;/div&gt;
+&amp;lt;div class=&amp;quot;ds-elevation-five&amp;quot;&gt;&amp;lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
 </div>
 
 
@@ -483,36 +561,37 @@
 		<h2 class="f-item-heading">Icons</h2>
 	</div><div class="f-item-notes" data-f-toggle="notes">
 	<p>We're using <a href="https://github.com/google/material-design-icons" target="_blank">Material Icons</a> for icons across the Design System.</p>
-<p>It is recommended to make use of the <code>sr-only</code> class to include screen-reader text that is visually hidden, but can help identify icons to screen reader users.</p>
+<p>It is recommended to make use of the <code>ds-sr-only</code> class to include screen-reader text that is visually hidden, but can help identify icons to screen reader users.</p>
 <p>Material Icons have a <a href="http://google.github.io/material-design-icons/#icon-font-for-the-web">ligatures feature</a> that allows icons to show by typing within the element. Due to this feature, depending on whether the button is icon only or icon with text, the structure of the HTML will have to change slightly.</p>
+<p>Icons inside buttons will use existing <a href="/dist/components.html#buttons">button classes</a> in addition to the <code>.ds-btn-icon</code> class.</p>
 
 </div>
 <div class="f-item-preview">
 	<section class="f-section">
 	<h3 class="f-example-title">Icon Only Buttons</h3>
 	<div class="f-example">
-		<button type="button" name="mood-button-example" class="material-icons mi-mood btn-icon btn btn-primary">
-			<span class="sr-only">Primary button with mood icon.</span>
+		<button type="button" name="mood-button-example" class="material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary" id="phantom-ds-btn-icon-primary">
+			<span class="ds-sr-only">Primary button with mood icon.</span>
 		</button>
 
-		<button type="button" name="mood-button-example" class="material-icons mi-mood btn-icon btn btn-primary-outline">
-			<span class="sr-only">Outline button with mood icon.</span>
+		<button type="button" name="mood-button-example" class="material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary-outline" id="phantom-ds-btn-icon-outline">
+			<span class="ds-sr-only">Outline button with mood icon.</span>
 		</button>
 
-		<button type="button" name="mood-button-example" class="material-icons mi-mood btn-icon btn btn-flat">
-			<span class="sr-only">Flat button with mood icon.</span>
+		<button type="button" name="mood-button-example" class="material-icons mi-mood ds-btn-icon ds-btn ds-btn-flat" id="phantom-ds-btn-icon-flat">
+			<span class="ds-sr-only">Flat button with mood icon.</span>
 		</button>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn-icon btn btn-primary&quot;>
-	&lt;span class=&quot;sr-only&quot;>Primary button with mood icon.&lt;/span>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary&quot;>
+	&lt;span class=&quot;ds-sr-only&quot;>Primary button with mood icon.&lt;/span>
 &lt;/button>
 
-&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn-icon btn btn-primary-outline&quot;>
-	&lt;span class=&quot;sr-only&quot;>Outline button with mood icon.&lt;/span>
+&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary-outline&quot;>
+	&lt;span class=&quot;ds-sr-only&quot;>Outline button with mood icon.&lt;/span>
 &lt;/button>
 
-&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn-icon btn btn-flat&quot;>
-	&lt;span class=&quot;sr-only&quot;>Flat button with mood icon.&lt;/span>
+&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-flat&quot;>
+	&lt;span class=&quot;ds-sr-only&quot;>Flat button with mood icon.&lt;/span>
 &lt;/button></code></pre>
 </section>
 
@@ -520,28 +599,28 @@
 	<h3 class="f-example-title">Left Icon with Text</h3>
 
 	<div class="f-example">
-		<button type="button" name="app-button-example" class="btn btn-primary btn-lg btn-icon">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-icon" id="phantom-ds-btn-left-icon-lg">
 			<span class="material-icons mi-get-app" aria-hidden="true"></span>
 			<span>Icon Left</span>
 		</button>
-		<button type="button" name="app-button-example" class="btn btn-primary btn-icon">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-icon" id="phantom-ds-btn-left-icon-normal">
 			<span class="material-icons mi-get-app" aria-hidden="true"></span>
 			<span>Icon Left</span>
 		</button>
-		<button type="button" name="app-button-example" class="btn btn-primary btn-sm btn-icon">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-sm ds-btn-icon" id="phantom-ds-btn-left-icon-sm">
 			<span class="material-icons mi-get-app" aria-hidden="true"></span>
 			<span>Icon Left</span>
 		</button>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-lg btn-icon&quot;>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&quot;>
 	&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;>&lt;/span>
 	&lt;span>Icon Left&lt;/span>
 &lt;/button>
-&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-icon&quot;>
+&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-icon&quot;>
 	&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;>&lt;/span>
 	&lt;span>Icon Left&lt;/span>
 &lt;/button>
-&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-sm btn-icon&quot;>
+&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&quot;>
 	&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;>&lt;/span>
 	&lt;span>Icon Left&lt;/span>
 &lt;/button></code></pre>
@@ -551,28 +630,28 @@
 	<h3 class="f-example-title">Right Icon with Text</h3>
 
 	<div class="f-example">
-		<button type="button" name="app-button-example" class="btn btn-primary btn-lg btn-icon">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-icon" id="phantom-ds-btn-right-icon-lg">
 			<span>Icon Right</span>
 			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
 		</button>
-		<button type="button" name="app-button-example" class="btn btn-primary btn-icon">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-icon" id="phantom-ds-btn-right-icon-normal">
 			<span>Icon Right</span>
 			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
 		</button>
-		<button type="button" name="app-button-example" class="btn btn-primary btn-sm btn-icon">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-sm ds-btn-icon" id="phantom-ds-btn-right-icon-sm">
 			<span>Icon Right</span>
 			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
 		</button>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-lg btn-icon&quot;>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&quot;>
 	&lt;span>Icon Right&lt;/span>
 	&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;>&lt;/span>
 &lt;/button>
-&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-icon&quot;>
+&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-icon&quot;>
 	&lt;span>Icon Right&lt;/span>
 	&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;>&lt;/span>
 &lt;/button>
-&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-sm btn-icon&quot;>
+&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&quot;>
 	&lt;span>Icon Right&lt;/span>
 	&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;>&lt;/span>
 &lt;/button></code></pre>
@@ -582,28 +661,28 @@
 	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Icon Only Buttons&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn-icon btn btn-primary&quot;&gt;
-			&lt;span class=&quot;sr-only&quot;&gt;Primary button with mood icon.&lt;/span&gt;
+		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary&quot; id=&quot;phantom-ds-btn-icon-primary&quot;&gt;
+			&lt;span class=&quot;ds-sr-only&quot;&gt;Primary button with mood icon.&lt;/span&gt;
 		&lt;/button&gt;
 
-		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn-icon btn btn-primary-outline&quot;&gt;
-			&lt;span class=&quot;sr-only&quot;&gt;Outline button with mood icon.&lt;/span&gt;
+		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary-outline&quot; id=&quot;phantom-ds-btn-icon-outline&quot;&gt;
+			&lt;span class=&quot;ds-sr-only&quot;&gt;Outline button with mood icon.&lt;/span&gt;
 		&lt;/button&gt;
 
-		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood btn-icon btn btn-flat&quot;&gt;
-			&lt;span class=&quot;sr-only&quot;&gt;Flat button with mood icon.&lt;/span&gt;
+		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-flat&quot; id=&quot;phantom-ds-btn-icon-flat&quot;&gt;
+			&lt;span class=&quot;ds-sr-only&quot;&gt;Flat button with mood icon.&lt;/span&gt;
 		&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;mood-button-example&amp;quot; class=&amp;quot;material-icons mi-mood btn-icon btn btn-primary&amp;quot;&gt;
-	&amp;lt;span class=&amp;quot;sr-only&amp;quot;&gt;Primary button with mood icon.&amp;lt;/span&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;mood-button-example&amp;quot; class=&amp;quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;ds-sr-only&amp;quot;&gt;Primary button with mood icon.&amp;lt;/span&gt;
 &amp;lt;/button&gt;
 
-&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;mood-button-example&amp;quot; class=&amp;quot;material-icons mi-mood btn-icon btn btn-primary-outline&amp;quot;&gt;
-	&amp;lt;span class=&amp;quot;sr-only&amp;quot;&gt;Outline button with mood icon.&amp;lt;/span&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;mood-button-example&amp;quot; class=&amp;quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary-outline&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;ds-sr-only&amp;quot;&gt;Outline button with mood icon.&amp;lt;/span&gt;
 &amp;lt;/button&gt;
 
-&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;mood-button-example&amp;quot; class=&amp;quot;material-icons mi-mood btn-icon btn btn-flat&amp;quot;&gt;
-	&amp;lt;span class=&amp;quot;sr-only&amp;quot;&gt;Flat button with mood icon.&amp;lt;/span&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;mood-button-example&amp;quot; class=&amp;quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-flat&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;ds-sr-only&amp;quot;&gt;Flat button with mood icon.&amp;lt;/span&gt;
 &amp;lt;/button&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
@@ -611,28 +690,28 @@
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Left Icon with Text&lt;/h3&gt;
 
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-lg btn-icon&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&quot; id=&quot;phantom-ds-btn-left-icon-lg&quot;&gt;
 			&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 			&lt;span&gt;Icon Left&lt;/span&gt;
 		&lt;/button&gt;
-		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-icon&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-icon&quot; id=&quot;phantom-ds-btn-left-icon-normal&quot;&gt;
 			&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 			&lt;span&gt;Icon Left&lt;/span&gt;
 		&lt;/button&gt;
-		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-sm btn-icon&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&quot; id=&quot;phantom-ds-btn-left-icon-sm&quot;&gt;
 			&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 			&lt;span&gt;Icon Left&lt;/span&gt;
 		&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;btn btn-primary btn-lg btn-icon&amp;quot;&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&amp;quot;&gt;
 	&amp;lt;span class=&amp;quot;material-icons mi-get-app&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
 	&amp;lt;span&gt;Icon Left&amp;lt;/span&gt;
 &amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;btn btn-primary btn-icon&amp;quot;&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-icon&amp;quot;&gt;
 	&amp;lt;span class=&amp;quot;material-icons mi-get-app&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
 	&amp;lt;span&gt;Icon Left&amp;lt;/span&gt;
 &amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;btn btn-primary btn-sm btn-icon&amp;quot;&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&amp;quot;&gt;
 	&amp;lt;span class=&amp;quot;material-icons mi-get-app&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
 	&amp;lt;span&gt;Icon Left&amp;lt;/span&gt;
 &amp;lt;/button&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -642,28 +721,28 @@
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Right Icon with Text&lt;/h3&gt;
 
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-lg btn-icon&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&quot; id=&quot;phantom-ds-btn-right-icon-lg&quot;&gt;
 			&lt;span&gt;Icon Right&lt;/span&gt;
 			&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 		&lt;/button&gt;
-		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-icon&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-icon&quot; id=&quot;phantom-ds-btn-right-icon-normal&quot;&gt;
 			&lt;span&gt;Icon Right&lt;/span&gt;
 			&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 		&lt;/button&gt;
-		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;btn btn-primary btn-sm btn-icon&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&quot; id=&quot;phantom-ds-btn-right-icon-sm&quot;&gt;
 			&lt;span&gt;Icon Right&lt;/span&gt;
 			&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 		&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;btn btn-primary btn-lg btn-icon&amp;quot;&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&amp;quot;&gt;
 	&amp;lt;span&gt;Icon Right&amp;lt;/span&gt;
 	&amp;lt;span class=&amp;quot;material-icons mi-arrow-forward&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
 &amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;btn btn-primary btn-icon&amp;quot;&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-icon&amp;quot;&gt;
 	&amp;lt;span&gt;Icon Right&amp;lt;/span&gt;
 	&amp;lt;span class=&amp;quot;material-icons mi-arrow-forward&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
 &amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;btn btn-primary btn-sm btn-icon&amp;quot;&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&amp;quot;&gt;
 	&amp;lt;span&gt;Icon Right&amp;lt;/span&gt;
 	&amp;lt;span class=&amp;quot;material-icons mi-arrow-forward&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
 &amp;lt;/button&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -679,13 +758,14 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Typography</h2>
 	</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>These are notes associated with Typography</p>
+	<p>When using font families, all font weights are at <code>normal</code> or <code>400</code>. The font families themselves will take care of the visual weight.</p>
+<p>Some styles change sizes depending on the breakpoint. The Design System's breakpoints are based on <a href="http://v4-alpha.getbootstrap.com/layout/grid/#variables" target="_blank">Bootstrap's default breakpoints</a> except for the <code>small</code> size at <code>360px</code>. All breakpoints are using the mobile first approach where mobile is the default.</p>
 
 </div>
 <div class="f-item-preview">
 	<section class="f-section">
 	<h3 class="f-example-title">Font Families</h3>
-	<div class="f-example">
+	<div class="f-example" id="phantom-ds-font-families">
 		<p class="f-family-book">Gotham Book</p>
 		<p class="f-family-book-italic">Gotham Book Italic</p>
 		<p class="f-family-light">Gotham Light</p>
@@ -693,87 +773,156 @@
 		<p class="f-family-medium">Gotham Medium</p>
 		<p class="f-family-medium-italic">Gotham Medium Italic</p>
 		<p class="f-family-bold">Gotham Bold</p>
+		<p class="f-family-bold-italic">Gotham Bold Italic</p>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">font-family: "Gotham Book";
+	<pre class="language-markup"><code class="language-markup">font-family: &quot;Gotham Book&quot;;
 
-		font-family: "Gotham Book Italic";
+font-family: &quot;Gotham Book Italic&quot;;
 
-		font-family: "Gotham Light";
+font-family: &quot;Gotham Light&quot;;
 
-		font-family: "Gotham Light Italic";
+font-family: &quot;Gotham Light Italic&quot;;
 
-		font-family: "Gotham Medium";
+font-family: &quot;Gotham Medium&quot;;
 
-		font-family: "Gotham Medium Italic";
+font-family: &quot;Gotham Medium Italic&quot;;
 
-		font-family: "Gotham Bold";
-		</code>
-	</pre>
+font-family: &quot;Gotham Bold&quot;;</code></pre>
+
+	<p>Italic fonts will apply normally to any elements that are naturally italic such as the <code class="language-markup">&lt;i&gt;</code> and <code class="language-markup">&lt;em&gt;</code> tags. For other elements not normally italic by default, such as
+		a heading, a style should be applied to ensure it is italic. If this is not set, the fonts will not render properly in Safari/IOS.
+
+		<pre class="language-markup"><code class="language-markup">h2.my-custom-heading {
+	font-family: &quot;Gotham Book Italic&quot;;
+	font-style: italic;
+}
+</code></pre>
 </section>
 
+<section class="f-section">
+	<h3 class="f-example-title">Spacing</h3>
+	<p>All heading elements—e.g., <code class="language-markup">&lt;h1&gt;</code>—and <code class="language-markup">&lt;p&gt;</code> are reset to have their margin-top removed. Headings have a margin-bottom equal to half their line-height. Paragraphs have a
+		margin-bottom equal to their line-height.</p>
+</section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Headings</h3>
+	<p>Headings three through six use the `Gotham Medium` font family. Heading three changes to `Gotham Book` on the smallest breakpoint.</p>
 	<div class="f-example">
-		<h1>Heading One</h1>
-		<h2>Heading Two</h2>
-		<h3>Heading Three</h3>
-		<h4>Heading Four</h4>
-		<h5>Heading Five</h5>
-		<h6>Heading Six</h6>
+		<h1 id="phantom-ds-heading-1">Heading One</h1>
+		<h2 id="phantom-ds-heading-2">Heading Two</h2>
+		<h3 id="phantom-ds-heading-3">Heading Three</h3>
+		<h4 id="phantom-ds-heading-4">Heading Four</h4>
+		<h5 id="phantom-ds-heading-5">Heading Five</h5>
+		<h6 id="phantom-ds-heading-6">Heading Six</h6>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;h1&gt;Heading One&lt;/h1&gt;
-		&lt;h2&gt;Heading Two&lt;/h2&gt;
-		&lt;h3&gt;Heading Three&lt;/h3&gt;
-		&lt;h4&gt;Heading Four&lt;/h4&gt;
-		&lt;h5&gt;Heading Five&lt;/h5&gt;
-		&lt;h6&gt;Heading Six&lt;/h6&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">&lt;h1>Heading One&lt;/h1>
+&lt;h2>Heading Two&lt;/h2>
+&lt;h3>Heading Three&lt;/h3>
+&lt;h4>Heading Four&lt;/h4>
+&lt;h5>Heading Five&lt;/h5>
+&lt;h6>Heading Six&lt;/h6></code></pre>
+
+	<p>Heading sizes differ depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Heading One</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Book, 32px/36px</li>
+				<li><strong>Small:</strong> Gotham Book, 36px/40px</li>
+				<li><strong>Medium:</strong> Gotham Book, 48px/56px</li>
+			</ul>
+		</li>
+		<li><strong>Heading Two</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Book, 24px/28px</li>
+				<li><strong>Small:</strong> Gotham Book, 28px/32px</li>
+				<li><strong>Medium:</strong> Gotham Book, 36px/40px</li>
+			</ul>
+		</li>
+		<li><strong>Heading Three</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Book, 20px/28px</li>
+				<li><strong>Small:</strong> Gotham Medium, 24px/28px</li>
+			</ul>
+		</li>
+	</ul>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Display</h3>
 	<div class="f-example">
-		<h2 class="display-1">Display One</h2>
-		<h2 class="display-2">Display Two</h2>
+		<h2 class="ds-display-1" id="phantom-ds-display-1">Display One</h2>
+		<h2 class="ds-display-2" id="phantom-ds-display-2">Display Two</h2>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;h2 class=&quot;display-1&quot;>Display 1&lt;/h2>
-&lt;h2 class=&quot;display-2&quot;>Display 2&lt;/h2></code></pre>
+
+	<pre class="language-markup"><code class="language-markup">&lt;h2 class=&quot;ds-display-1&quot;>Display 1&lt;/h2>
+&lt;h2 class=&quot;ds-display-2&quot;>Display 2&lt;/h2>
+</code></pre>
+
+	<p>Display sizes differ depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Display One</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Light, 56px/56px</li>
+				<li><strong>Small:</strong> Gotham Light, 60px/60px</li>
+				<li><strong>Medium:</strong> Gotham Light, 72px/72px</li>
+			</ul>
+		</li>
+		<li><strong>Display Two</strong>
+			<ul>
+				<li><strong>Extra Small:</strong> Gotham Light, 48px/48px</li>
+				<li><strong>Small:</strong> Gotham Light, 56px/56px</li>
+				<li><strong>Medium:</strong> Gotham Light, 60px/60px</li>
+			</ul>
+		</li>
+	</ul>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Lead</h3>
 	<div class="f-example">
-		<p class="lead">
+		<p class="ds-lead" id="phantom-ds-lead">
 			Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
 		</p>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;p class="lead"&gt;
-		  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-		&lt;/p&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">&lt;p class=&quot;ds-lead&quot;>
+	Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+&lt;/p>
+</code></pre>
+
+	<p>The lead size differs depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Extra Small:</strong> Gotham Light, 16px/24px</li>
+		<li><strong>Small:</strong> Gotham Book, 18px/24px</li>
+		<li><strong>Medium:</strong> Gotham Light, 20px/28px</li>
+	</ul>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Paragraph</h3>
 	<div class="f-example">
-		<p>JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications</p>
+		<p id="phantom-ds-paragraph">JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications</p>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;p&gt;JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications&lt;/p&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">&lt;p>JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications.&lt;/p></code></pre>
+
+	<p>The paragraph size differs depending on the breakpoint:</p>
+
+	<ul>
+		<li><strong>Extra Small:</strong> Gotham Book, 14px/20px</li>
+		<li><strong>Small:</strong> Gotham Book, 16px/24px</li>
+	</ul>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Inline Text Elements</h3>
-	<div class="f-example">
+	<div class="f-example" id="phantom-ds-inline-elements">
 		<p>You can use the mark tag to <mark>highlight</mark> text.</p>
 		<p><del>This line of text is meant to be treated as deleted text.</del></p>
 		<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
@@ -784,54 +933,49 @@
 		<p><em>This line rendered as italicized text.</em></p>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight</mark> text.&lt;/p&gt;
-		&lt;p&gt;&lt;del&gt;This line of text is meant to be treated as deleted text.&lt;/del&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;s&gt;This line of text is meant to be treated as no longer accurate.&lt;/s&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;ins&gt;This line of text is meant to be treated as an addition to the document.&lt;/ins&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;u&gt;This line of text will render as underlined&lt;/u&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.</small>&lt;/p&gt;
-		&lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;
-		&lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">&lt;p>You can use the mark tag to &lt;mark>highlight&lt;/mark> text.&lt;/p>
+&lt;p>&lt;del>This line of text is meant to be treated as deleted text.&lt;/del>&lt;/p>
+&lt;p>&lt;s>This line of text is meant to be treated as no longer accurate.&lt;/s>&lt;/p>
+&lt;p>&lt;ins>This line of text is meant to be treated as an addition to the document.&lt;/ins>&lt;/p>
+&lt;p>&lt;u>This line of text will render as underlined&lt;/u>&lt;/p>
+&lt;p>&lt;small>This line of text is meant to be treated as fine print.&lt;/small>&lt;/p>
+&lt;p>&lt;strong>This line rendered as bold text.&lt;/strong>&lt;/p>
+&lt;p>&lt;em>This line rendered as italicized text.&lt;/em>&lt;/p></code></pre>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Blockquotes</h3>
 	<div class="f-example">
-		<blockquote class="blockquote">
-			<p class="m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+		<blockquote class="ds-blockquote" id="phantom-ds-blockquote">
+			<p class="ds-m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 		</blockquote>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">&lt;blockquote class="blockquote"&gt;
-		  &lt;p class="m-b-0"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
-		&lt;/blockquote&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">&lt;blockquote class=&quot;ds-blockquote&quot;>
+	&lt;p class=&quot;ds-m-b-0&quot;>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p>
+&lt;/blockquote>
+</code></pre>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Anchor Links</h3>
-	<div class="f-example">
+	<div class="f-example" id="phantom-ds-anchors">
 		Jump down to our <a href="#jdrf-section">JDRF section</a> for details!
 		<div id="jdrf-section">
 			Here are the details to JDRF.
 		</div>
 	</div>
 
-	<pre class="language-markup">
-		<code class="language-markup">Jump down to our &lt;a href="#jdrf-section"&gt;JDRF section&lt;/a&gt; for details!
-		&lt;div id="jdrf-section"&gt;
-			Here are the details to JDRF.
-		&lt;/div&gt;</code>
-	</pre>
+	<pre class="language-markup"><code class="language-markup">Jump down to our &lt;a href=&quot;#jdrf-section&quot;>JDRF section&lt;/a> for details!
+&lt;div id=&quot;jdrf-section&quot;>
+	Here are the details to JDRF.
+&lt;/div></code></pre>
 </section>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Font Families&lt;/h3&gt;
-	&lt;div class=&quot;f-example&quot;&gt;
+	&lt;div class=&quot;f-example&quot; id=&quot;phantom-ds-font-families&quot;&gt;
 		&lt;p class=&quot;f-family-book&quot;&gt;Gotham Book&lt;/p&gt;
 		&lt;p class=&quot;f-family-book-italic&quot;&gt;Gotham Book Italic&lt;/p&gt;
 		&lt;p class=&quot;f-family-light&quot;&gt;Gotham Light&lt;/p&gt;
@@ -839,87 +983,156 @@
 		&lt;p class=&quot;f-family-medium&quot;&gt;Gotham Medium&lt;/p&gt;
 		&lt;p class=&quot;f-family-medium-italic&quot;&gt;Gotham Medium Italic&lt;/p&gt;
 		&lt;p class=&quot;f-family-bold&quot;&gt;Gotham Bold&lt;/p&gt;
+		&lt;p class=&quot;f-family-bold-italic&quot;&gt;Gotham Bold Italic&lt;/p&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;font-family: &quot;Gotham Book&quot;;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;font-family: &amp;quot;Gotham Book&amp;quot;;
 
-		font-family: &quot;Gotham Book Italic&quot;;
+font-family: &amp;quot;Gotham Book Italic&amp;quot;;
 
-		font-family: &quot;Gotham Light&quot;;
+font-family: &amp;quot;Gotham Light&amp;quot;;
 
-		font-family: &quot;Gotham Light Italic&quot;;
+font-family: &amp;quot;Gotham Light Italic&amp;quot;;
 
-		font-family: &quot;Gotham Medium&quot;;
+font-family: &amp;quot;Gotham Medium&amp;quot;;
 
-		font-family: &quot;Gotham Medium Italic&quot;;
+font-family: &amp;quot;Gotham Medium Italic&amp;quot;;
 
-		font-family: &quot;Gotham Bold&quot;;
-		&lt;/code&gt;
-	&lt;/pre&gt;
+font-family: &amp;quot;Gotham Bold&amp;quot;;&lt;/code&gt;&lt;/pre&gt;
+
+	&lt;p&gt;Italic fonts will apply normally to any elements that are naturally italic such as the &lt;code class=&quot;language-markup&quot;&gt;&amp;lt;i&amp;gt;&lt;/code&gt; and &lt;code class=&quot;language-markup&quot;&gt;&amp;lt;em&amp;gt;&lt;/code&gt; tags. For other elements not normally italic by default, such as
+		a heading, a style should be applied to ensure it is italic. If this is not set, the fonts will not render properly in Safari/IOS.
+
+		&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;h2.my-custom-heading {
+	font-family: &amp;quot;Gotham Book Italic&amp;quot;;
+	font-style: italic;
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Spacing&lt;/h3&gt;
+	&lt;p&gt;All heading elements—e.g., &lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—and &lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt; are reset to have their margin-top removed. Headings have a margin-bottom equal to half their line-height. Paragraphs have a
+		margin-bottom equal to their line-height.&lt;/p&gt;
+&lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Headings&lt;/h3&gt;
+	&lt;p&gt;Headings three through six use the &#x60;Gotham Medium&#x60; font family. Heading three changes to &#x60;Gotham Book&#x60; on the smallest breakpoint.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;h1&gt;Heading One&lt;/h1&gt;
-		&lt;h2&gt;Heading Two&lt;/h2&gt;
-		&lt;h3&gt;Heading Three&lt;/h3&gt;
-		&lt;h4&gt;Heading Four&lt;/h4&gt;
-		&lt;h5&gt;Heading Five&lt;/h5&gt;
-		&lt;h6&gt;Heading Six&lt;/h6&gt;
+		&lt;h1 id=&quot;phantom-ds-heading-1&quot;&gt;Heading One&lt;/h1&gt;
+		&lt;h2 id=&quot;phantom-ds-heading-2&quot;&gt;Heading Two&lt;/h2&gt;
+		&lt;h3 id=&quot;phantom-ds-heading-3&quot;&gt;Heading Three&lt;/h3&gt;
+		&lt;h4 id=&quot;phantom-ds-heading-4&quot;&gt;Heading Four&lt;/h4&gt;
+		&lt;h5 id=&quot;phantom-ds-heading-5&quot;&gt;Heading Five&lt;/h5&gt;
+		&lt;h6 id=&quot;phantom-ds-heading-6&quot;&gt;Heading Six&lt;/h6&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;Heading One&amp;lt;/h1&amp;gt;
-		&amp;lt;h2&amp;gt;Heading Two&amp;lt;/h2&amp;gt;
-		&amp;lt;h3&amp;gt;Heading Three&amp;lt;/h3&amp;gt;
-		&amp;lt;h4&amp;gt;Heading Four&amp;lt;/h4&amp;gt;
-		&amp;lt;h5&amp;gt;Heading Five&amp;lt;/h5&amp;gt;
-		&amp;lt;h6&amp;gt;Heading Six&amp;lt;/h6&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&gt;Heading One&amp;lt;/h1&gt;
+&amp;lt;h2&gt;Heading Two&amp;lt;/h2&gt;
+&amp;lt;h3&gt;Heading Three&amp;lt;/h3&gt;
+&amp;lt;h4&gt;Heading Four&amp;lt;/h4&gt;
+&amp;lt;h5&gt;Heading Five&amp;lt;/h5&gt;
+&amp;lt;h6&gt;Heading Six&amp;lt;/h6&gt;&lt;/code&gt;&lt;/pre&gt;
+
+	&lt;p&gt;Heading sizes differ depending on the breakpoint:&lt;/p&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Heading One&lt;/strong&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Book, 32px/36px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Book, 36px/40px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Medium:&lt;/strong&gt; Gotham Book, 48px/56px&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Heading Two&lt;/strong&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Book, 24px/28px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Book, 28px/32px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Medium:&lt;/strong&gt; Gotham Book, 36px/40px&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Heading Three&lt;/strong&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Book, 20px/28px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Medium, 24px/28px&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Display&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;h2 class=&quot;display-1&quot;&gt;Display One&lt;/h2&gt;
-		&lt;h2 class=&quot;display-2&quot;&gt;Display Two&lt;/h2&gt;
+		&lt;h2 class=&quot;ds-display-1&quot; id=&quot;phantom-ds-display-1&quot;&gt;Display One&lt;/h2&gt;
+		&lt;h2 class=&quot;ds-display-2&quot; id=&quot;phantom-ds-display-2&quot;&gt;Display Two&lt;/h2&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h2 class=&amp;quot;display-1&amp;quot;&gt;Display 1&amp;lt;/h2&gt;
-&amp;lt;h2 class=&amp;quot;display-2&amp;quot;&gt;Display 2&amp;lt;/h2&gt;&lt;/code&gt;&lt;/pre&gt;
+
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h2 class=&amp;quot;ds-display-1&amp;quot;&gt;Display 1&amp;lt;/h2&gt;
+&amp;lt;h2 class=&amp;quot;ds-display-2&amp;quot;&gt;Display 2&amp;lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+	&lt;p&gt;Display sizes differ depending on the breakpoint:&lt;/p&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Display One&lt;/strong&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Light, 56px/56px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Light, 60px/60px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Medium:&lt;/strong&gt; Gotham Light, 72px/72px&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Display Two&lt;/strong&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Light, 48px/48px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Light, 56px/56px&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Medium:&lt;/strong&gt; Gotham Light, 60px/60px&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Lead&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;p class=&quot;lead&quot;&gt;
+		&lt;p class=&quot;ds-lead&quot; id=&quot;phantom-ds-lead&quot;&gt;
 			Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
 		&lt;/p&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p class=&quot;lead&quot;&amp;gt;
-		  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-		&amp;lt;/p&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p class=&amp;quot;ds-lead&amp;quot;&gt;
+	Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+&amp;lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+	&lt;p&gt;The lead size differs depending on the breakpoint:&lt;/p&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Light, 16px/24px&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Book, 18px/24px&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Medium:&lt;/strong&gt; Gotham Light, 20px/28px&lt;/li&gt;
+	&lt;/ul&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Paragraph&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;p&gt;JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications&lt;/p&gt;
+		&lt;p id=&quot;phantom-ds-paragraph&quot;&gt;JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications&lt;/p&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&amp;gt;JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications&amp;lt;/p&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&gt;JDRF’s mission is to accelerate life-changing breakthroughs to cure, prevent and treat T1D and its complications.&amp;lt;/p&gt;&lt;/code&gt;&lt;/pre&gt;
+
+	&lt;p&gt;The paragraph size differs depending on the breakpoint:&lt;/p&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;strong&gt;Extra Small:&lt;/strong&gt; Gotham Book, 14px/20px&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;Small:&lt;/strong&gt; Gotham Book, 16px/24px&lt;/li&gt;
+	&lt;/ul&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Inline Text Elements&lt;/h3&gt;
-	&lt;div class=&quot;f-example&quot;&gt;
+	&lt;div class=&quot;f-example&quot; id=&quot;phantom-ds-inline-elements&quot;&gt;
 		&lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight&lt;/mark&gt; text.&lt;/p&gt;
 		&lt;p&gt;&lt;del&gt;This line of text is meant to be treated as deleted text.&lt;/del&gt;&lt;/p&gt;
 		&lt;p&gt;&lt;s&gt;This line of text is meant to be treated as no longer accurate.&lt;/s&gt;&lt;/p&gt;
@@ -930,48 +1143,43 @@
 		&lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&amp;gt;You can use the mark tag to &amp;lt;mark&amp;gt;highlight&lt;/mark&gt; text.&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;del&amp;gt;This line of text is meant to be treated as deleted text.&amp;lt;/del&amp;gt;&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;s&amp;gt;This line of text is meant to be treated as no longer accurate.&amp;lt;/s&amp;gt;&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;ins&amp;gt;This line of text is meant to be treated as an addition to the document.&amp;lt;/ins&amp;gt;&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;u&amp;gt;This line of text will render as underlined&amp;lt;/u&amp;gt;&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;small&amp;gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;This line rendered as bold text.&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;This line rendered as italicized text.&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&gt;You can use the mark tag to &amp;lt;mark&gt;highlight&amp;lt;/mark&gt; text.&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;del&gt;This line of text is meant to be treated as deleted text.&amp;lt;/del&gt;&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;s&gt;This line of text is meant to be treated as no longer accurate.&amp;lt;/s&gt;&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;ins&gt;This line of text is meant to be treated as an addition to the document.&amp;lt;/ins&gt;&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;u&gt;This line of text will render as underlined&amp;lt;/u&gt;&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;small&gt;This line of text is meant to be treated as fine print.&amp;lt;/small&gt;&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;strong&gt;This line rendered as bold text.&amp;lt;/strong&gt;&amp;lt;/p&gt;
+&amp;lt;p&gt;&amp;lt;em&gt;This line rendered as italicized text.&amp;lt;/em&gt;&amp;lt;/p&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Blockquotes&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;blockquote class=&quot;blockquote&quot;&gt;
-			&lt;p class=&quot;m-b-0&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+		&lt;blockquote class=&quot;ds-blockquote&quot; id=&quot;phantom-ds-blockquote&quot;&gt;
+			&lt;p class=&quot;ds-m-b-0&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
 		&lt;/blockquote&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;blockquote class=&quot;blockquote&quot;&amp;gt;
-		  &amp;lt;p class=&quot;m-b-0&quot;&amp;gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&amp;lt;/p&amp;gt;
-		&amp;lt;/blockquote&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;blockquote class=&amp;quot;ds-blockquote&amp;quot;&gt;
+	&amp;lt;p class=&amp;quot;ds-m-b-0&amp;quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&amp;lt;/p&gt;
+&amp;lt;/blockquote&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Anchor Links&lt;/h3&gt;
-	&lt;div class=&quot;f-example&quot;&gt;
+	&lt;div class=&quot;f-example&quot; id=&quot;phantom-ds-anchors&quot;&gt;
 		Jump down to our &lt;a href=&quot;#jdrf-section&quot;&gt;JDRF section&lt;/a&gt; for details!
 		&lt;div id=&quot;jdrf-section&quot;&gt;
 			Here are the details to JDRF.
 		&lt;/div&gt;
 	&lt;/div&gt;
 
-	&lt;pre class=&quot;language-markup&quot;&gt;
-		&lt;code class=&quot;language-markup&quot;&gt;Jump down to our &amp;lt;a href=&quot;#jdrf-section&quot;&amp;gt;JDRF section&amp;lt;/a&amp;gt; for details!
-		&amp;lt;div id=&quot;jdrf-section&quot;&amp;gt;
-			Here are the details to JDRF.
-		&amp;lt;/div&amp;gt;&lt;/code&gt;
-	&lt;/pre&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;Jump down to our &amp;lt;a href=&amp;quot;#jdrf-section&amp;quot;&gt;JDRF section&amp;lt;/a&gt; for details!
+&amp;lt;div id=&amp;quot;jdrf-section&amp;quot;&gt;
+	Here are the details to JDRF.
+&amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;</code></pre>
 </div>
 
@@ -979,15 +1187,15 @@
 </div>
 
 
-	</main>
+				</main>
+			</div>
+		</div>
+		<!-- Design System scripts: requires jQuery -->
+		<script src="./assets/design-system/scripts/design-system.js"></script>
+		<!-- /Design System scripts: requires jQuery -->
 
-	</div>
-	<script src=".//assets/fabricator/scripts/f.js"></script>
-	<script src=".//assets/fabricator/scripts/search.js"></script>
-
-	<!-- Design System scripts: requires jQuery -->
-	<script src=".//assets/design-system/scripts/design-system.js"></script>
-	<!-- /Design System scripts: requires jQuery -->
+		<script src="./assets/fabricator/scripts/f.js"></script>
+		<script src="./assets/fabricator/scripts/search.js"></script>
 
 </body>
 </html>
