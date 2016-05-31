@@ -1,6 +1,7 @@
 @import "scss/button-group";
 
-.btn-group {
+.btn-group,
+.btn-group-vertical {
 	@include border-radius($border-radius);
 
 	.btn {
