@@ -88,3 +88,69 @@ notes: |
 	</div>
 	{{example 'button.animations'}}
 </section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Toggle Segment</h3>
+	<div class="f-example">
+		<div class="ds-btn-group" role="group" aria-label="Basic example">
+			<button type="button" class="ds-btn">Left</button>
+			<button type="button" class="ds-btn ds-active">Center</button>
+			<button type="button" class="ds-btn">Right</button>
+		</div>
+	</div>
+	{{example 'button.togglesegment'}}
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Toggle Icon Bar</h3>
+	<div class="f-example">
+		<div class="ds-btn-group ds-btn-icon-group" role="group" aria-label="Basic example">
+			<button type="button" class="material-icons mi-format-align-left ds-btn">
+				<span class="ds-sr-only">Primary button with align left icon.</span>
+			</button>
+			<button type="button" class="material-icons mi-format-align-center ds-btn ds-active">
+				<span class="ds-sr-only">Primary button with align center icon.</span>
+			</button>
+			<button type="button" class="material-icons mi-format-align-right ds-btn">
+				<span class="ds-sr-only">Primary button with align right icon.</span>
+			</button>
+		</div>
+	</div>
+	{{example 'button.toggleiconbar'}}
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Checkbox Buttons</h3>
+	<div class="f-example">
+		<div class="ds-btn-group" data-toggle="buttons">
+			<label class="ds-btn ds-btn-primary ds-active btn-icon">
+				<input type="checkbox" checked autocomplete="off"> Checkbox 1 (pre-checked)
+			</label>
+			<label class="ds-btn ds-btn-primary btn-icon">
+				<input type="checkbox" autocomplete="off"> Checkbox 2
+			</label>
+			<label class="ds-btn ds-btn-primary btn-icon">
+				<input type="checkbox" autocomplete="off"> Checkbox 3
+			</label>
+		</div>
+	</div>
+	{{example 'button.checkbox'}}
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Radio Buttons</h3>
+	<div class="f-example">
+		<div class="ds-btn-group" data-toggle="buttons">
+			<label class="ds-btn ds-btn-primary ds-active">
+				<input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+			</label>
+			<label class="ds-btn ds-btn-primary">
+				<input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+			</label>
+			<label class="ds-btn ds-btn-primary">
+				<input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+			</label>
+		</div>
+	</div>
+	{{example 'button.radio'}}
+</section>
