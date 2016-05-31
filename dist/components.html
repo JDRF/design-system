@@ -8,294 +8,272 @@
 
 	<title>Components</title>
 
-	<!-- Design System styles --><link rel="stylesheet" href="./assets/fabricator/styles/f.css">
+	<link rel="stylesheet" href=".//assets/fabricator/styles/f.css">
+
+	<!-- Design System styles -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="./assets/design-system/styles/design-system.css">
+	<link rel="stylesheet" href=".//assets/design-system/styles/design-system.css">
 	<!-- /Design System styles -->
 
 </head>
 <body>
-	<header class="f-header-top ds-container" role="banner">
-			<div class="f-control-bar ds-hidden-md-up">
-				<button class="f-control f-menu-toggle" aria-expanded="false" name="menu-trigger">
-					<svg>
-						<use xlink:href="#f-icon-menu" />
-					</svg>
-					<span class="ds-sr-only">Toggle Menu</spam>
-				</button>
-			</div>
-			<h1 class="f-logo">
-				<svg width="75px">
-					<use xlink:href="#f-icon-logo" width="75px"/>
-				</svg>
-				<span>Design System</span>
-			</h1>
-			<nav class="f-nav" aria-label="primary-nav" role="navigation">
-				<ul class="ds-nav">
-					<li class="ds-nav-item">
-						<a href="#" class="ds-nav-link">
-							Documentation <span class="ds-sr-only"> will trigger a new window or tab.</span>
-						</a>
-					</li>
-					<li class="ds-nav-item">
-						<a href="https://github.com/JDRF/design-system" target="_blank" class="ds-nav-link">
-							Github <span class="ds-sr-only"> will trigger a new window or tab.</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<div class="f-header ds-container-fluid">
-		<div class="f-header-center ds-container">
+	<div class="f-header-top">
+		<h1 class="f-logo">
+			<svg width="75px">
+				<use xlink:href="#f-icon-logo" width="75px"/>
+			</svg>
+			<span>Design System</span>
+		</h1>
+		<nav class="f-nav"aria-label="primary-nav">
+			<ul class="nav">
+				<li class="nav-item">
+					<a href="#" class="nav-link">
+						Documentation <span class="sr-only"> will trigger a new window or tab.</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="https://github.com/JDRF/design-system" target="_blank" class="nav-link">
+						Github <span class="sr-only"> will trigger a new window or tab.</span>
+					</a>
+				</li>
+			</ul>
+		</nav></div>
+	<div class="f-header">
+		<div class="f-header-center">
 			<h2 class="f-header-title">Components</h2>
-			<p class="f-header-content">You are viewing the "Components" page.</p>
+			<p class="f-header-content">This is the Components page.</p>
 		</div>
 	</div>
 
-		<div class="f-container ds-container">
-			<div class="ds-row">
-					<!-- fabricator icons -->
-					<svg style="display: none;">
-						<symbol id="f-icon-menu" viewBox="0 0 512 512">
-							<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
-						</symbol>
-						<symbol id="f-icon-logo" viewBox="0 0 166.7 72.7">
-							<path class="st0" d="M6,52.2c1.7-1.1,2.9-2.7,4.4-4c0.8-0.7,1.4-1.8,2.2-1.9c0.8-0.2,1.3,1.2,2,1.8c1.3,1.2,2.8,1.9,4.6,2.1
-								c3.3,0.3,5.9-1.3,6.8-4.6c0.7-2.5,0.9-5,1.3-7.6c0.7-4.6,1.2-9.3,1.9-13.9c0.1-1-0.2-1-1-1c-2.9,0-5.9,0-8.8,0c-0.8,0-1-0.2-0.9-1
-								c0.3-1.7,0.5-3.4,0.7-5.1c0.2-1.6,0.2-1.6,1.8-1.6c14.4,0,28.8,0,43.1,0c1.8,0,3.6,0.1,5.3,0.5c8.4,1.7,14.9,7.4,14.9,17.6
-								c0,11.3-8,21-19.3,23.6C62.6,57.9,60,58,57.4,58c-4.7,0-9.4,0-14,0c-0.9,0-1.1-0.3-1-1.2c1.1-7.7,2.1-15.4,3.2-23.2
-								c0.1-0.7-0.1-0.7-0.6-0.7c-0.8,0-1.7,0-2.7,0c0.8-1.7,1.6-3.3,2.2-5c0.6-1.6,1.4-2.1,3.1-2c2.1,0.2,4.2,0.1,6.3,0
-								c1,0,1.3,0.2,1.2,1.3c-0.6,3.9-1.1,7.9-1.7,11.8c-0.5,3.3-0.9,6.5-1.4,9.8c-0.1,0.4-0.1,0.8,0.6,0.8c3.4-0.1,6.9,0.3,10.3-0.3
-								c6.7-1.2,11.5-6.8,11.8-13.7c0.2-4.3-1-7.9-4.6-10.5c-2.3-1.7-4.9-1.9-7.6-1.9c-7.4,0-14.7,0-22.1,0c-1.2,0-1.5,0.5-1.6,1.5
-								C37.9,31.6,37,38.3,35.9,45c-1.5,9.4-9.1,14.4-18.5,13.8c-4.7-0.3-8.5-2.5-11.4-6.1C6,52.5,6,52.3,6,52.2z"/>
-							<path class="st0" d="M121.4,58.2c-3.5,0-6.9,0-10.2,0c-0.7,0-0.9-0.5-1.2-1c-2.8-5.5-5.6-11.1-8.3-16.6c-0.5-1.1-1.1-2.2-1.7-3.3
-								c-0.4-0.7-0.4-1,0.6-1c2.3,0,4.7,0,7-0.1c4.2-0.2,7.1-3.2,7-7.2c0-2.6-1.6-4.4-4.5-4.8c-3.5-0.5-7.1-0.2-10.7-0.2
-								c-0.6,0-0.8,0.4-0.9,0.9c-0.8,6.1-1.7,12.1-2.5,18.2c-0.6,4.6-1.3,9.1-1.8,13.7c-0.1,1-0.5,1.3-1.5,1.3c-2.3-0.1-4.6,0-6.9,0
-								c-0.7,0-1.1,0-0.9-1c1.5-10.6,2.9-21.2,4.4-31.7c0.4-2.9,0.9-5.8,1.2-8.7c0.1-0.8,0.4-1,1.1-1c6.8,0,13.6,0,20.4,0.1
-								c3,0,5.8,0.9,8.2,2.8c2.5,1.9,3.7,4.4,3.9,7.4c0.6,7.6-3,13.6-10.1,16.6c-0.8,0.3-0.9,0.6-0.4,1.3
-								C116.2,48.6,118.7,53.3,121.4,58.2z"/>
-							<path class="st0" d="M145.9,15.8c5,0,10,0,15,0c1,0,1.2,0.3,1.1,1.2c-0.3,2-0.6,4-0.8,5.9c-0.1,1-0.5,1.3-1.5,1.3
-								c-6.8,0-13.6,0-20.4-0.1c-1.1,0-1.5,0.4-1.6,1.4c-0.2,2.1-0.5,4.3-0.9,6.4c-0.2,1,0,1.3,1.1,1.3c5.9-0.1,11.8,0,17.7,0
-								c1.3,0,1.3,0.1,1.2,1.3c-0.3,1.9-0.6,3.9-0.8,5.8c-0.1,0.9-0.4,1.3-1.4,1.3c-5.9-0.1-11.8,0-17.7-0.1c-1,0-1.4,0.3-1.5,1.3
-								c-0.6,4.6-1.3,9.2-1.9,13.8c-0.1,1.1-0.4,1.5-1.6,1.5c-2.3-0.1-4.6-0.1-6.9,0c-0.8,0-1-0.1-0.9-1c0.9-6.1,1.7-12.3,2.5-18.4
-								c1-7.3,2.1-14.7,3-22c0.1-0.8,0.4-1,1.2-1C135.9,15.8,140.9,15.8,145.9,15.8z"/>
-							<path class="st0" d="M120.5,9.8c-0.3,2.4-0.3,2.4-2.6,2.4c-28.7,0-57.5,0-86.2,0c-0.2,0-0.4,0-0.7,0c-0.6-0.1-1.4,0.1-1.3-0.9
-								c0.1-0.8,0.1-1.5,1.3-1.5c27.9,0,55.8,0,83.8,0C116.7,9.8,118.6,9.8,120.5,9.8z"/>
-							<path class="st0" d="M139,61.6c-0.2,2.2-0.2,2.2-2.4,2.2c-25.4,0-50.9,0-76.3,0c-0.4,0-1.2,0.5-1.3-0.5c-0.1-1.2,0.4-1.7,1.4-1.7
-								c25.9,0,51.8,0,77.7,0C138.5,61.5,138.7,61.6,139,61.6z"/>
-						</symbol>
-					</svg>
-					<!-- /fabricator icons -->
-						<!-- fabricator menu -->
-						<div class="f-menu-canvas ds-sidebar ds-col-md-4 ds-col-lg-3">
-						
-							<nav class="f-nav" aria-label="primary-nav" role="navigation">
-								<ul class="ds-nav">
-									<li class="ds-nav-item">
-										<a href="#" class="ds-nav-link">
-											Documentation <span class="ds-sr-only"> will trigger a new window or tab.</span>
-										</a>
-									</li>
-									<li class="ds-nav-item">
-										<a href="https://github.com/JDRF/design-system" target="_blank" class="ds-nav-link">
-											Github <span class="ds-sr-only"> will trigger a new window or tab.</span>
-										</a>
-									</li>
-								</ul>
-							</nav>
-							<nav class="f-menu" aria-label="sidebar-nav" role="navigation">
-						
-								<form class="f-search" role="search">
-									<fieldset class="ds-form-group">
-										<input type="text" class="ds-form-control" id="search-input" placeholder="Search..." autocomplete="off">
-										<div class="ds-form-control bd-search-results ds-hide" id="search-results"></div>
-									</fieldset>
-								</form>
-						
-								<ul class="ds-nav">
-						
-									<li class="ds-nav-item">
-										<a href="./index.html" class="f-menu__heading ds-nav-link">Overview</a>
-										<a href="./download.html" class="f-menu__heading ds-nav-link">Download</a>
-										<a href="./faq.html" class="f-menu__heading ds-nav-link">FAQ</a>
-									</li>
-						
-									<li class="ds-nav-item">
-										<a href="./components.html" class="f-menu__heading ds-nav-link">Components</a>
-										<ul class="ds-nav">
-											<li>
-												<a href="./components.html#buttons" class="ds-nav-link">Buttons</a>
-											</li>
-						
-						
-											<li>
-												<a href="./components.html#side-navigation" class="ds-nav-link">Side Navigation</a>
-											</li>
-						
-										</ul>
-									</li>
-									<li class="ds-nav-item">
-										<a href="./content.html" class="f-menu__heading ds-nav-link">Content</a>
-										<ul class="ds-nav">
-											<li>
-												<a href="./content.html#colors" class="ds-nav-link">Colors</a>
-											</li>
-						
-											<li>
-												<a href="./content.html#elevation" class="ds-nav-link">Elevation</a>
-											</li>
-						
-											<li>
-												<a href="./content.html#icons" class="ds-nav-link">Icons</a>
-											</li>
-						
-											<li>
-												<a href="./content.html#typography" class="ds-nav-link">Typography</a>
-											</li>
-						
-										</ul>
-									</li>
-									<li class="ds-nav-item">
-										<a href="./layout.html" class="f-menu__heading ds-nav-link">Layout</a>
-										<ul class="ds-nav">
-											<li>
-												<a href="./layout.html#grid" class="ds-nav-link">Grid</a>
-											</li>
-						
-										</ul>
-									</li>
-						
-						
-								</ul>
-						
-						
-							</nav>
+	<div class="f-container">
+		<!-- fabricator icons -->
+		<svg style="display: none;">
+			<symbol id="f-icon-menu" viewBox="0 0 512 512">
+				<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+			</symbol>
+			<symbol id="f-icon-logo" viewBox="0 0 166.7 72.7">
+				<path class="st0" d="M6,52.2c1.7-1.1,2.9-2.7,4.4-4c0.8-0.7,1.4-1.8,2.2-1.9c0.8-0.2,1.3,1.2,2,1.8c1.3,1.2,2.8,1.9,4.6,2.1
+					c3.3,0.3,5.9-1.3,6.8-4.6c0.7-2.5,0.9-5,1.3-7.6c0.7-4.6,1.2-9.3,1.9-13.9c0.1-1-0.2-1-1-1c-2.9,0-5.9,0-8.8,0c-0.8,0-1-0.2-0.9-1
+					c0.3-1.7,0.5-3.4,0.7-5.1c0.2-1.6,0.2-1.6,1.8-1.6c14.4,0,28.8,0,43.1,0c1.8,0,3.6,0.1,5.3,0.5c8.4,1.7,14.9,7.4,14.9,17.6
+					c0,11.3-8,21-19.3,23.6C62.6,57.9,60,58,57.4,58c-4.7,0-9.4,0-14,0c-0.9,0-1.1-0.3-1-1.2c1.1-7.7,2.1-15.4,3.2-23.2
+					c0.1-0.7-0.1-0.7-0.6-0.7c-0.8,0-1.7,0-2.7,0c0.8-1.7,1.6-3.3,2.2-5c0.6-1.6,1.4-2.1,3.1-2c2.1,0.2,4.2,0.1,6.3,0
+					c1,0,1.3,0.2,1.2,1.3c-0.6,3.9-1.1,7.9-1.7,11.8c-0.5,3.3-0.9,6.5-1.4,9.8c-0.1,0.4-0.1,0.8,0.6,0.8c3.4-0.1,6.9,0.3,10.3-0.3
+					c6.7-1.2,11.5-6.8,11.8-13.7c0.2-4.3-1-7.9-4.6-10.5c-2.3-1.7-4.9-1.9-7.6-1.9c-7.4,0-14.7,0-22.1,0c-1.2,0-1.5,0.5-1.6,1.5
+					C37.9,31.6,37,38.3,35.9,45c-1.5,9.4-9.1,14.4-18.5,13.8c-4.7-0.3-8.5-2.5-11.4-6.1C6,52.5,6,52.3,6,52.2z"/>
+				<path class="st0" d="M121.4,58.2c-3.5,0-6.9,0-10.2,0c-0.7,0-0.9-0.5-1.2-1c-2.8-5.5-5.6-11.1-8.3-16.6c-0.5-1.1-1.1-2.2-1.7-3.3
+					c-0.4-0.7-0.4-1,0.6-1c2.3,0,4.7,0,7-0.1c4.2-0.2,7.1-3.2,7-7.2c0-2.6-1.6-4.4-4.5-4.8c-3.5-0.5-7.1-0.2-10.7-0.2
+					c-0.6,0-0.8,0.4-0.9,0.9c-0.8,6.1-1.7,12.1-2.5,18.2c-0.6,4.6-1.3,9.1-1.8,13.7c-0.1,1-0.5,1.3-1.5,1.3c-2.3-0.1-4.6,0-6.9,0
+					c-0.7,0-1.1,0-0.9-1c1.5-10.6,2.9-21.2,4.4-31.7c0.4-2.9,0.9-5.8,1.2-8.7c0.1-0.8,0.4-1,1.1-1c6.8,0,13.6,0,20.4,0.1
+					c3,0,5.8,0.9,8.2,2.8c2.5,1.9,3.7,4.4,3.9,7.4c0.6,7.6-3,13.6-10.1,16.6c-0.8,0.3-0.9,0.6-0.4,1.3
+					C116.2,48.6,118.7,53.3,121.4,58.2z"/>
+				<path class="st0" d="M145.9,15.8c5,0,10,0,15,0c1,0,1.2,0.3,1.1,1.2c-0.3,2-0.6,4-0.8,5.9c-0.1,1-0.5,1.3-1.5,1.3
+					c-6.8,0-13.6,0-20.4-0.1c-1.1,0-1.5,0.4-1.6,1.4c-0.2,2.1-0.5,4.3-0.9,6.4c-0.2,1,0,1.3,1.1,1.3c5.9-0.1,11.8,0,17.7,0
+					c1.3,0,1.3,0.1,1.2,1.3c-0.3,1.9-0.6,3.9-0.8,5.8c-0.1,0.9-0.4,1.3-1.4,1.3c-5.9-0.1-11.8,0-17.7-0.1c-1,0-1.4,0.3-1.5,1.3
+					c-0.6,4.6-1.3,9.2-1.9,13.8c-0.1,1.1-0.4,1.5-1.6,1.5c-2.3-0.1-4.6-0.1-6.9,0c-0.8,0-1-0.1-0.9-1c0.9-6.1,1.7-12.3,2.5-18.4
+					c1-7.3,2.1-14.7,3-22c0.1-0.8,0.4-1,1.2-1C135.9,15.8,140.9,15.8,145.9,15.8z"/>
+				<path class="st0" d="M120.5,9.8c-0.3,2.4-0.3,2.4-2.6,2.4c-28.7,0-57.5,0-86.2,0c-0.2,0-0.4,0-0.7,0c-0.6-0.1-1.4,0.1-1.3-0.9
+					c0.1-0.8,0.1-1.5,1.3-1.5c27.9,0,55.8,0,83.8,0C116.7,9.8,118.6,9.8,120.5,9.8z"/>
+				<path class="st0" d="M139,61.6c-0.2,2.2-0.2,2.2-2.4,2.2c-25.4,0-50.9,0-76.3,0c-0.4,0-1.2,0.5-1.3-0.5c-0.1-1.2,0.4-1.7,1.4-1.7
+					c25.9,0,51.8,0,77.7,0C138.5,61.5,138.7,61.6,139,61.6z"/>
+			</symbol>
+		</svg>
+		<!-- /fabricator icons -->
+			<!-- fabricator menu -->
+			<div class="f-menu-canvas sidebar">
+			
+				<nav class="f-nav"aria-label="primary-nav">
+					<ul class="nav">
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								Documentation <span class="sr-only"> will trigger a new window or tab.</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="https://github.com/JDRF/design-system" target="_blank" class="nav-link">
+								Github <span class="sr-only"> will trigger a new window or tab.</span>
+							</a>
+						</li>
+					</ul>
+				</nav>	<nav class="f-menu" aria-label="sidebar-nav">
+			
+					<div class="row">
+						<div class="col-md-10 hidden-sm-down">
+							<form>
+								<fieldset class="form-group">
+									<input type="text" class="form-control" id="search-input" placeholder="Search..." autocomplete="off">
+									<div class="form-control bd-search-results hide" id="search-results"></div>
+								</fieldset>
+							</form>
 						</div>
-						<!-- /fabricator menu -->
-				<main class="f-content ds-col-md-8 ds-col-lg-9" role="main">
-					
+					</div>
+			
+					<ul class="nav">
+			
+						<li class="nav-item">
+							<a href="./index.html" class="f-menu__heading nav-link">Overview</a>
+							<a href="./download.html" class="f-menu__heading nav-link">Download</a>
+							<a href="./faq.html" class="f-menu__heading nav-link">FAQ</a>
+						</li>
+			
+						<li class="nav-item">
+							<a href="./components.html" class="f-menu__heading nav-link">Components</a>
+							<ul class="nav">
+								<li>
+									<a href="./components.html#buttons" class="nav-link">Buttons</a>
+								</li>
+								<li>
+									<a href="./components.html#forms" class="nav-link">Forms</a>
+								</li>
+								<li>
+									<a href="./components.html#side-navigation" class="nav-link">Side Navigation</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="./content.html" class="f-menu__heading nav-link">Content</a>
+							<ul class="nav">
+								<li>
+									<a href="./content.html#colors" class="nav-link">Colors</a>
+								</li>
+								<li>
+									<a href="./content.html#elevation" class="nav-link">Elevation</a>
+								</li>
+								<li>
+									<a href="./content.html#icons" class="nav-link">Icons</a>
+								</li>
+								<li>
+									<a href="./content.html#typography" class="nav-link">Typography</a>
+								</li>
+							</ul>
+						</li>
+			
+			
+					</ul>
+			
+			
+				</nav>
+			</div>
+			<!-- /fabricator menu -->
 
+	<main class="f-content">
+		<div class="f-control-bar">
+			<div class="f-control f-menu-toggle">
+				<svg>
+					<use xlink:href="#f-icon-menu" />
+				</svg>
+			</div>
+		</div>
+		
 
 <div class="f-item-group" id="buttons">
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Buttons</h2>
 	</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>The <code>button</code> components are based on Bootstrap's button classes combined with our own customizations.</p>
-<p>You can find documentation on <a href="http://v4-alpha.getbootstrap.com/components/buttons/" target="_blank">Bootstrap's button components</a> on their site.</p>
+	<p>These are notes associated with the <code>button</code> components.</p>
 
 </div>
 <div class="f-item-preview">
 	<section class="f-section">
 	<h3 class="f-example-title">Primary</h3>
 	<div class="f-example">
-		<button type="button" class="ds-btn ds-btn-primary" id="phantom-ds-btn-primary">Primary</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-active" id="phantom-ds-btn-primary-active">Hover</button>
-		<button type="button" class="ds-btn ds-btn-primary" id="phantom-ds-btn-primary-disabled" disabled>Disabled</button>
+		<button type="button" class="btn btn-primary">Primary</button>
+		<button type="button" class="btn btn-primary active">Hover</button>
+		<button type="button" class="btn btn-primary" disabled>Disabled</button>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary&quot;>Primary&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-active&quot;>Hover&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary&quot; disabled>Disabled&lt;/button>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;>Primary&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary active&quot;>Hover&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; disabled>Disabled&lt;/button>
 </code></pre>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Outline</h3>
 	<div class="f-example">
-		<button type="button" class="ds-btn ds-btn-primary-outline" id="phantom-ds-btn-outline">Outline</button>
-		<button type="button" class="ds-btn ds-btn-primary-outline ds-active" id="phantom-ds-btn-outline-active">Hover</button>
-		<button type="button" class="ds-btn ds-btn-primary-outline" id="phantom-ds-btn-outline-disabled" disabled>Disabled</button>
+		<button type="button" class="btn btn-primary-outline">Outline</button>
+		<button type="button" class="btn btn-primary-outline active">Hover</button>
+		<button type="button" class="btn btn-primary-outline" disabled>Disabled</button>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary-outline&quot;>Outline&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary-outline ds-active&quot;>Hover&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary-outline&quot; disabled>Disabled&lt;/button>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary-outline&quot;>Outline&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary-outline active&quot;>Hover&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary-outline&quot; disabled>Disabled&lt;/button>
 </code></pre>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Flat</h3>
 	<div class="f-example">
-		<button type="button" class="ds-btn ds-btn-flat" id="phantom-ds-btn-flat">Flat</button>
-		<button type="button" class="ds-btn ds-btn-flat ds-active" id="phantom-ds-btn-flat-active">Hover</button>
-		<button type="button" class="ds-btn ds-btn-flat" id="phantom-ds-btn-flat-disabled" disabled>Disabled</button>
+		<button type="button" class="btn btn-flat">Flat</button>
+		<button type="button" class="btn btn-flat active">Hover</button>
+		<button type="button" class="btn btn-flat" disabled>Disabled</button>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-flat&quot;>Flat&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-flat ds-active&quot;>Hover&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-flat&quot; disabled>Disabled&lt;/button>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;btn btn-flat&quot;>Flat&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-flat active&quot;>Hover&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-flat&quot; disabled>Disabled&lt;/button>
 </code></pre>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Text</h3>
 	<div class="f-example">
-		<button type="button" class="ds-btn ds-btn-link" id="phantom-ds-btn-link">Text</button>
-		<button type="button" class="ds-btn ds-btn-link ds-active" id="phantom-ds-btn-link-active">Hover</button>
-		<button type="button" class="ds-btn ds-btn-link" id="phantom-ds-btn-link-disabled" disabled>Disabled</button>
+		<button type="button" class="btn btn-link">Text</button>
+		<button type="button" class="btn btn-link active">Hover</button>
+		<button type="button" class="btn btn-link" disabled>Disabled</button>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-link&quot;>Text&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-link ds-active&quot;>Hover&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-link&quot; disabled>Disabled&lt;/button>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;>Text&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-link active&quot;>Hover&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot; disabled>Disabled&lt;/button>
 </code></pre>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Large</h3>
 	<div class="f-example">
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg" id="phantom-ds-btn-lg">Large</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-active" id="phantom-ds-btn-lg-active">Hover</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg" id="phantom-ds-btn-lg-disabled" disabled>Disabled</button>
+		<button type="button" class="btn btn-primary btn-lg">Large</button>
+		<button type="button" class="btn btn-primary btn-lg active">Hover</button>
+		<button type="button" class="btn btn-primary btn-lg" disabled>Disabled</button>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg&quot;>Large&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-active&quot;>Hover&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg&quot; disabled>Disabled&lt;/button>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot;>Large&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg active&quot;>Hover&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot; disabled>Disabled&lt;/button>
 </code></pre>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Small</h3>
 	<div class="f-example">
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm" id="phantom-ds-btn-sm">Small</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm ds-active" id="phantom-ds-btn-sm-active">Hover</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm" id="phantom-ds-btn-sm-disabled" disabled>Disabled</button>
+		<button type="button" class="btn btn-primary btn-sm">Small</button>
+		<button type="button" class="btn btn-primary btn-sm active">Hover</button>
+		<button type="button" class="btn btn-primary btn-sm" disabled>Disabled</button>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm&quot;>Small&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-active&quot;>Hover&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm&quot; disabled>Disabled&lt;/button>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;>Small&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm active&quot;>Hover&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot; disabled>Disabled&lt;/button>
 </code></pre>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Block</h3>
 	<div class="f-example">
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-block" id="phantom-ds-btn-block">Block</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-block ds-active" id="phantom-ds-btn-block-active">Hover</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-block" id="phantom-ds-btn-block-disabled" disabled>Disabled</button>
+		<button type="button" class="btn btn-primary btn-lg btn-block">Block</button>
+		<button type="button" class="btn btn-primary btn-lg btn-block active">Hover</button>
+		<button type="button" class="btn btn-primary btn-lg btn-block" disabled>Disabled</button>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block&quot;>Block&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block ds-active&quot;>Hover&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block&quot; disabled>Disabled&lt;/button>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg btn-block&quot;>Block&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg btn-block active&quot;>Hover&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg btn-block&quot; disabled>Disabled&lt;/button>
 </code></pre>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Button Animations</h3>
-	<p>The ripple animations are applied to all buttons on click. The loading icon can be added into a button by adding a class of `.ds-btn-loading` to existing button classes.</p>
+	<p>Animations not yet complete.</p>
 	<div class="f-example">
-		<button type="button" class="ds-btn ds-btn-primary" id="phantom-ds-btn-ripple">Click me for Ripple</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-loading" id="phantom-ds-btn-loading">
-			<svg class="ds-spinner" viewBox="25 25 50 50" xmlns="http://www.w3.org/2000/svg">
-				<circle class="ds-path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"></circle>
-			</svg>
-		</button>
+		<button type="button" class="btn btn-primary">Ripple</button>
+		<button type="button" class="btn btn-primary">Loading</button>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary&quot;>Click me for Ripple&lt;/button>
-
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-loading&quot;>
-	&lt;svg class=&quot;ds-spinner&quot; viewBox=&quot;25 25 50 50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>
-		&lt;circle class=&quot;ds-path&quot; cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;none&quot; stroke-width=&quot;4&quot; stroke-miterlimit=&quot;10&quot;>&lt;/circle>
-	&lt;/svg>
-&lt;/button>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;>Ripple&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;>Loading&lt;/button>
 </code></pre>
 </section>
 </div>
@@ -303,112 +281,103 @@
 	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Primary&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary&quot; id=&quot;phantom-ds-btn-primary&quot;&gt;Primary&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-active&quot; id=&quot;phantom-ds-btn-primary-active&quot;&gt;Hover&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary&quot; id=&quot;phantom-ds-btn-primary-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;Primary&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-active&amp;quot;&gt;Hover&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary&amp;quot;&gt;Primary&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary active&amp;quot;&gt;Hover&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Outline&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary-outline&quot; id=&quot;phantom-ds-btn-outline&quot;&gt;Outline&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary-outline ds-active&quot; id=&quot;phantom-ds-btn-outline-active&quot;&gt;Hover&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary-outline&quot; id=&quot;phantom-ds-btn-outline-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary-outline&quot;&gt;Outline&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary-outline active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary-outline&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary-outline&amp;quot;&gt;Outline&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary-outline ds-active&amp;quot;&gt;Hover&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary-outline&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary-outline&amp;quot;&gt;Outline&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary-outline active&amp;quot;&gt;Hover&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary-outline&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Flat&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-flat&quot; id=&quot;phantom-ds-btn-flat&quot;&gt;Flat&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-flat ds-active&quot; id=&quot;phantom-ds-btn-flat-active&quot;&gt;Hover&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-flat&quot; id=&quot;phantom-ds-btn-flat-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-flat&quot;&gt;Flat&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-flat active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-flat&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-flat&amp;quot;&gt;Flat&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-flat ds-active&amp;quot;&gt;Hover&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-flat&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-flat&amp;quot;&gt;Flat&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-flat active&amp;quot;&gt;Hover&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-flat&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Text&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-link&quot; id=&quot;phantom-ds-btn-link&quot;&gt;Text&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-link ds-active&quot; id=&quot;phantom-ds-btn-link-active&quot;&gt;Hover&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-link&quot; id=&quot;phantom-ds-btn-link-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Text&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-link active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-link&amp;quot;&gt;Text&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-link ds-active&amp;quot;&gt;Hover&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-link&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-link&amp;quot;&gt;Text&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-link active&amp;quot;&gt;Hover&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-link&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Large&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg&quot; id=&quot;phantom-ds-btn-lg&quot;&gt;Large&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-active&quot; id=&quot;phantom-ds-btn-lg-active&quot;&gt;Hover&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg&quot; id=&quot;phantom-ds-btn-lg-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Large&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg&amp;quot;&gt;Large&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg ds-active&amp;quot;&gt;Hover&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary btn-lg&amp;quot;&gt;Large&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary btn-lg active&amp;quot;&gt;Hover&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary btn-lg&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Small&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm&quot; id=&quot;phantom-ds-btn-sm&quot;&gt;Small&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-active&quot; id=&quot;phantom-ds-btn-sm-active&quot;&gt;Hover&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm&quot; id=&quot;phantom-ds-btn-sm-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Small&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-sm&amp;quot;&gt;Small&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-sm ds-active&amp;quot;&gt;Hover&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-sm&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary btn-sm&amp;quot;&gt;Small&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary btn-sm active&amp;quot;&gt;Hover&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary btn-sm&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Block&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block&quot; id=&quot;phantom-ds-btn-block&quot;&gt;Block&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block ds-active&quot; id=&quot;phantom-ds-btn-block-active&quot;&gt;Hover&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block&quot; id=&quot;phantom-ds-btn-block-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg btn-block&quot;&gt;Block&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg btn-block active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg btn-block&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block&amp;quot;&gt;Block&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block ds-active&amp;quot;&gt;Hover&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary btn-lg btn-block&amp;quot;&gt;Block&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary btn-lg btn-block active&amp;quot;&gt;Hover&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary btn-lg btn-block&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Button Animations&lt;/h3&gt;
-	&lt;p&gt;The ripple animations are applied to all buttons on click. The loading icon can be added into a button by adding a class of &#x60;.ds-btn-loading&#x60; to existing button classes.&lt;/p&gt;
+	&lt;p&gt;Animations not yet complete.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary&quot; id=&quot;phantom-ds-btn-ripple&quot;&gt;Click me for Ripple&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-loading&quot; id=&quot;phantom-ds-btn-loading&quot;&gt;
-			&lt;svg class=&quot;ds-spinner&quot; viewBox=&quot;25 25 50 50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-				&lt;circle class=&quot;ds-path&quot; cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;20&quot; fill=&quot;none&quot; stroke-width=&quot;4&quot; stroke-miterlimit=&quot;10&quot;&gt;&lt;/circle&gt;
-			&lt;/svg&gt;
-		&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Ripple&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Loading&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;Click me for Ripple&amp;lt;/button&gt;
-
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-loading&amp;quot;&gt;
-	&amp;lt;svg class=&amp;quot;ds-spinner&amp;quot; viewBox=&amp;quot;25 25 50 50&amp;quot; xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot;&gt;
-		&amp;lt;circle class=&amp;quot;ds-path&amp;quot; cx=&amp;quot;50&amp;quot; cy=&amp;quot;50&amp;quot; r=&amp;quot;20&amp;quot; fill=&amp;quot;none&amp;quot; stroke-width=&amp;quot;4&amp;quot; stroke-miterlimit=&amp;quot;10&amp;quot;&gt;&amp;lt;/circle&gt;
-	&amp;lt;/svg&gt;
-&amp;lt;/button&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary&amp;quot;&gt;Ripple&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-primary&amp;quot;&gt;Loading&amp;lt;/button&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;</code></pre>
 </div>
@@ -417,8 +386,1014 @@
 </div>
 
 
+<div class="f-item-group" id="forms">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Forms</h2>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>These are notes associated with the <code>form</code> component.</p>
+<p>For more information on Bootstrap's classes for form layouts, control sizing, validation and so on, refer to <a href="http://v4-alpha.getbootstrap.com/components/forms/" target="_blank">Bootstrap's form documentation</a>.</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="f-section">
+	<h3 class="f-example-title">Email Field</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group row">
+				<label for="exampleInputEmail1" class="col-sm-3 form-control-label">Email Address</label>
+				<div class="col-sm-6">
+					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+					<small class="text-muted">We'll never share your email with anyone else.</small>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleInputEmail1&quot; class=&quot;form-control-label&quot;>Email Address&lt;/label>
+		&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Enter email&quot;>
+		&lt;small class=&quot;text-muted&quot;>We&apos;ll never share your email with anyone else.&lt;/small>
+	&lt;/fieldset>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Telephone Field</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group row">
+				<label for="exampleInputTel" class="col-sm-3 col-md-2 form-control-label">Telephone</label>
+				<div class="col-sm-5">
+					<input type="tel" class="form-control" id="exampleInputTel" placeholder="Enter phone number">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleInputTel&quot; class=&quot;form-control-label&quot;&amp;gt;Telephone&lt;/label>
+		&lt;input type=&quot;tel&quot; class=&quot;form-control&quot; id=&quot;exampleInputTel&quot; placeholder=&quot;Enter phone number&quot;>
+	&lt;/fieldset>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Date Field</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group row">
+				<label for="exampleInputDate" class="col-sm-3 col-md-2 form-control-label">Date</label>
+				<div class="col-sm-5">
+					<input type="date" class="form-control" id="exampleInputTel">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleInputDate&quot; class=&quot;form-control-label&quot;>Date&lt;/label>
+		&lt;input type=&quot;date&quot; class=&quot;form-control&quot; id=&quot;exampleInputTel&quot;>
+	&lt;/fieldset>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">International Address</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group">
+				<label for="exampleInputAddress1">Street Address</label>
+				<input type="address" class="form-control" id="exampleInputAddress1" placeholder="Enter Street Address">
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="exampleInputAddress2">Address Line 2</label>
+				<input type="address" class="form-control" id="exampleInputAddress2" placeholder="Enter Address Line 2">
+			</fieldset>
+			<div class="form-inline">
+				<fieldset class="form-group">
+					<label for="exampleCity">City</label>
+					<input type="text" class="form-control" id="exampleCity" placeholder="Enter City">
+				</fieldset>
+				<fieldset class="form-group">
+					<label for="exampleState">State/Province/Region</label>
+					<input type="email" class="form-control" id="exampleState" placeholder="Enter State/Province/Region">
+				</fieldset>
+			</div>
+			<div class="form-inline">
+				<fieldset class="form-group">
+					<label for="exampleZip">Zip/Postal Code</label>
+					<input type="text" class="form-control" id="exampleZip" placeholder="Enter Zip/Postal Code">
+				</fieldset>
+				<fieldset class="form-group">
+					<label for="exampleCountry">Country</label>
+					<select class="form-control" id="exampleCountry">
+						<option>Country 1</option>
+						<option>Country 2</option>
+						<option>Country 3</option>
+						<option>Country 4</option>
+						<option>Country 5</option>
+					</select>
+				</fieldset>
+			</div>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleInputAddress1&quot;>Street Address&lt;/label>
+		&lt;input type=&quot;address&quot; class=&quot;form-control&quot; id=&quot;exampleInputAddress1&quot; placeholder=&quot;Enter Street Address&quot;>
+	&lt;/fieldset>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleInputAddress2&quot;>Address Line 2&lt;/label>
+		&lt;input type=&quot;address&quot; class=&quot;form-control&quot; id=&quot;exampleInputAddress2&quot; placeholder=&quot;Enter Address Line 2&quot;>
+	&lt;/fieldset>
+	&lt;div class=&quot;form-inline&quot;>
+		&lt;fieldset class=&quot;form-group&quot;>
+			&lt;label for=&quot;exampleCity&quot;>City&lt;/label>
+			&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleCity&quot; placeholder=&quot;Enter City&quot;>
+		&lt;/fieldset>
+		&lt;fieldset class=&quot;form-group&quot;>
+			&lt;label for=&quot;exampleState&quot;>State/Province/Region&lt;/label>
+			&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleState&quot; placeholder=&quot;Enter State/Province/Region&quot;>
+		&lt;/fieldset>
+	&lt;/div>
+	&lt;div class=&quot;form-inline&quot;>
+		&lt;fieldset class=&quot;form-group&quot;>
+			&lt;label for=&quot;exampleZip&quot;>Zip/Postal Code&lt;/label>
+			&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleZip&quot; placeholder=&quot;Enter Zip/Postal Code&quot;>
+		&lt;/fieldset>
+		&lt;fieldset class=&quot;form-group&quot;>
+			&lt;label for=&quot;exampleCountry&quot;>Country&lt;/label>
+			&lt;select class=&quot;form-control&quot; id=&quot;exampleCountry&quot;>
+				&lt;option>Country 1&lt;/option>
+				&lt;option>Country 2&lt;/option>
+				&lt;option>Country 3&lt;/option>
+				&lt;option>Country 4&lt;/option>
+				&lt;option>Country 5&lt;/option>
+			&lt;/select>
+		&lt;/fieldset>
+	&lt;/div>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">USA Address</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group">
+				<label for="exampleInputAddress3">Street Address</label>
+				<input type="address" class="form-control" id="exampleInputAddress3" placeholder="Enter Street Address">
+			</fieldset>
+			<fieldset class="form-group">
+				<label for="exampleInputAddress4">Address Line 2</label>
+				<input type="address" class="form-control" id="exampleInputAddress4" placeholder="Enter Address Line 2">
+			</fieldset>
+			<div class="form-inline">
+				<fieldset class="form-group">
+					<label for="exampleCity1">City</label>
+					<input type="text" class="form-control" id="exampleCity1" placeholder="Enter City">
+				</fieldset>
+				<fieldset class="form-group">
+					<label for="exampleState1">State</label>
+					<input type="email" class="form-control" id="exampleState1" placeholder="Enter State">
+				</fieldset>
+			</div>
+			<fieldset class="form-group">
+				<label for="exampleZip1">Zip Code</label>
+				<input type="text" class="form-control" id="exampleZip1" placeholder="Enter Zip Code">
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleInputAddress3&quot;>Street Address&lt;/label>
+		&lt;input type=&quot;address&quot; class=&quot;form-control&quot; id=&quot;exampleInputAddress3&quot; placeholder=&quot;Enter Street Address&quot;>
+	&lt;/fieldset>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleInputAddress4&quot;>Address Line 2&lt;/label>
+		&lt;input type=&quot;address&quot; class=&quot;form-control&quot; id=&quot;exampleInputAddress4&quot; placeholder=&quot;Enter Address Line 2&quot;>
+	&lt;/fieldset>
+	&lt;div class=&quot;form-inline&quot;>
+		&lt;fieldset class=&quot;form-group&quot;>
+			&lt;label for=&quot;exampleCity1&quot;>City&lt;/label>
+			&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleCity1&quot; placeholder=&quot;Enter City&quot;>
+		&lt;/fieldset>
+		&lt;fieldset class=&quot;form-group&quot;>
+			&lt;label for=&quot;exampleState1&quot;>State&lt;/label>
+			&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleState1&quot; placeholder=&quot;Enter State&quot;>
+		&lt;/fieldset>
+	&lt;/div>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleZip1&quot;>Zip Code&lt;/label>
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleZip1&quot; placeholder=&quot;Enter Zip Code&quot;>
+	&lt;/fieldset>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Password Field</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group row">
+				<label for="exampleInputPassword1" class="col-sm-3 col-md-2 form-control-label">Password</label>
+				<div class="col-sm-6 col-md-5">
+					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleInputPassword1&quot; class=&quot;form-control-label&quot;>Password&lt;/label>
+		&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Enter Password&quot;>
+	&lt;/fieldset>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Select Box</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group row">
+				<label for="exampleSelect1" class="col-sm-3 col-md-2 form-control-label">Select Box</label>
+				<div class="col-sm-6 col-md-5">
+					<select class="form-control" id="exampleSelect1">
+					  <option>1</option>
+					  <option>2</option>
+					  <option>3</option>
+					  <option>4</option>
+					  <option>5</option>
+					</select>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleSelect1&quot; class=&quot;form-control-label&quot;>Select Box&lt;/label>
+		&lt;select class=&quot;form-control&quot; id=&quot;exampleSelect1&quot;>
+			&lt;option>1&lt;/option>
+			&lt;option>2&lt;/option>
+			&lt;option>3&lt;/option>
+			&lt;option>4&lt;/option>
+			&lt;option>5&lt;/option>
+		&lt;/select>
+	&lt;/fieldset>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Multiple Select Box</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group row">
+				<label for="exampleSelect2" class="col-sm-4 col-md-3 form-control-label">Multiple Select Box</label>
+				<div class="col-sm-7 col-md-6">
+					<select multiple class="form-control" id="exampleSelect2">
+					  <option>1</option>
+					  <option>2</option>
+					  <option>3</option>
+					  <option>4</option>
+					  <option>5</option>
+					</select>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleSelect2&quot; class=&quot;form-control-label&quot;>Multiple Select Box&lt;/label>
+		&lt;select multiple class=&quot;form-control&quot; id=&quot;exampleSelect2&quot;>
+			&lt;option>1&lt;/option>
+			&lt;option>2&lt;/option>
+			&lt;option>3&lt;/option>
+			&lt;option>4&lt;/option>
+			&lt;option>5&lt;/option>
+		&lt;/select>
+	&lt;/fieldset>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Custom Select Box</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group row">
+				<label for="exampleSelect1" class="col-sm-3 col-md-2 form-control-label">Custom Select</label>
+				<div class="col-sm-6 col-md-5">
+					<select class="c-select" id="exampleSelect1">
+					  <option>Red</option>
+					  <option>Blue</option>
+					  <option>Green</option>
+					  <option>Yellow</option>
+					  <option>Orange</option>
+					</select>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleSelect1&quot; class=&quot;form-control-label&quot;>Custom Select&lt;/label>
+		&lt;select class=&quot;c-select&quot; id=&quot;exampleSelect1&quot;>
+			&lt;option>Red&lt;/option>
+			&lt;option>Blue&lt;/option>
+			&lt;option>Green&lt;/option>
+			&lt;option>Yellow&lt;/option>
+			&lt;option>Orange&lt;/option>
+		&lt;/select>
+	&lt;/fieldset>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Text Field</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group row">
+				<label for="exampleInputText1" class="col-sm-3 col-md-2 form-control-label">Text Field</label>
+				<div class="col-sm-6 col-md-5">
+					<input type="text" class="form-control" id="exampleInputText1" placeholder="Enter Text">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleInputText1&quot; class=&quot;form-control-label&quot;>Text Field&lt;/label>
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleInputText1&quot; placeholder=&quot;Enter Text&quot;>
+	&lt;/fieldset>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Textarea</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="form-group row">
+				<label for="exampleTextarea" class="col-sm-3 col-md-2 form-control-label">Textarea</label>
+				<div class="col-sm-6 col-md-5">
+					<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleTextarea&quot; class=&quot;form-control-label&quot;>Textarea&lt;/label>
+		&lt;textarea class=&quot;form-control&quot; id=&quot;exampleTextarea&quot; rows=&quot;3&quot;>&lt;/textarea>
+	&lt;/fieldset>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Radio Options</h3>
+	<div class="f-example">
+		<form>
+			<div class="radio">
+				<label>
+				  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				  Option one is this and that&mdash;be sure to include why it's great
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+				  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				  Option two can be something else and selecting it will deselect option one
+				</label>
+			</div>
+			<div class="radio disabled">
+				<label>
+				  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+				  Option three is disabled
+				</label>
+			</div>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;div class=&quot;radio&quot;>
+		&lt;label>
+			&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked>
+			Option one is this and that&amp;mdash;be sure to include why it&apos;s great
+		&lt;/label>
+	&lt;/div>
+	&lt;div class=&quot;radio&quot;>
+		&lt;label>
+			&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;>
+			Option two can be something else and selecting it will deselect option one
+		&lt;/label>
+	&lt;/div>
+	&lt;div class=&quot;radio disabled&quot;>
+		&lt;label>
+			&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios3&quot; value=&quot;option3&quot; disabled>
+			Option three is disabled
+		&lt;/label>
+	&lt;/div>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Checkbox</h3>
+	<div class="f-example">
+		<form>
+			<div class="checkbox">
+				<label>
+				  <input type="checkbox"> Check me out
+				</label>
+			</div>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;div class=&quot;checkbox&quot;>
+		&lt;label>
+			&lt;input type=&quot;checkbox&quot;> Check me out
+		&lt;/label>
+	&lt;/div>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Inline Forms: Visible Labels</h3>
+	<div class="f-example">
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="exampleInputName2">Name</label>
+				<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail2">Email</label>
+				<input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+			</div>
+			<button type="submit" class="btn btn-primary">Send invitation</button>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form class=&quot;form-inline&quot;>
+	&lt;div class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleInputName2&quot;>Name&lt;/label>
+		&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleInputName2&quot; placeholder=&quot;Jane Doe&quot;>
+	&lt;/div>
+	&lt;div class=&quot;form-group&quot;>
+		&lt;label for=&quot;exampleInputEmail2&quot;>Email&lt;/label>
+		&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail2&quot; placeholder=&quot;jane.doe@example.com&quot;>
+	&lt;/div>
+	&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;>Send invitation&lt;/button>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Inline Forms: Hidden Labels</h3>
+	<div class="f-example">
+		<form class="form-inline">
+			<div class="form-group">
+				<label class="sr-only" for="exampleInputEmail3">Email address</label>
+				<input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+			</div>
+			<div class="form-group">
+				<label class="sr-only" for="exampleInputPassword3">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+			</div>
+			<div class="checkbox">
+				<label>
+			  <input type="checkbox"> Remember me
+			</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Sign in</button>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form class=&quot;form-inline&quot;>
+	&lt;div class=&quot;form-group&quot;>
+		&lt;label class=&quot;sr-only&quot; for=&quot;exampleInputEmail3&quot;>Email address&lt;/label>
+		&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail3&quot; placeholder=&quot;Enter email&quot;>
+	&lt;/div>
+	&lt;div class=&quot;form-group&quot;>
+		&lt;label class=&quot;sr-only&quot; for=&quot;exampleInputPassword3&quot;>Password&lt;/label>
+		&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword3&quot; placeholder=&quot;Password&quot;>
+	&lt;/div>
+	&lt;div class=&quot;checkbox&quot;>
+		&lt;label>
+			&lt;input type=&quot;checkbox&quot;> Remember me
+		&lt;/label>
+	&lt;/div>
+	&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;>Sign in&lt;/button>
+&lt;/form>
+</code></pre>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Email Field&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group row&quot;&gt;
+				&lt;label for=&quot;exampleInputEmail1&quot; class=&quot;col-sm-3 form-control-label&quot;&gt;Email Address&lt;/label&gt;
+				&lt;div class=&quot;col-sm-6&quot;&gt;
+					&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Enter email&quot;&gt;
+					&lt;small class=&quot;text-muted&quot;&gt;We&#x27;ll never share your email with anyone else.&lt;/small&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputEmail1&amp;quot; class=&amp;quot;form-control-label&amp;quot;&gt;Email Address&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;email&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleInputEmail1&amp;quot; placeholder=&amp;quot;Enter email&amp;quot;&gt;
+		&amp;lt;small class=&amp;quot;text-muted&amp;quot;&gt;We&amp;apos;ll never share your email with anyone else.&amp;lt;/small&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Telephone Field&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group row&quot;&gt;
+				&lt;label for=&quot;exampleInputTel&quot; class=&quot;col-sm-3 col-md-2 form-control-label&quot;&gt;Telephone&lt;/label&gt;
+				&lt;div class=&quot;col-sm-5&quot;&gt;
+					&lt;input type=&quot;tel&quot; class=&quot;form-control&quot; id=&quot;exampleInputTel&quot; placeholder=&quot;Enter phone number&quot;&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputTel&amp;quot; class=&amp;quot;form-control-label&amp;quot;&amp;amp;gt;Telephone&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;tel&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleInputTel&amp;quot; placeholder=&amp;quot;Enter phone number&amp;quot;&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Date Field&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group row&quot;&gt;
+				&lt;label for=&quot;exampleInputDate&quot; class=&quot;col-sm-3 col-md-2 form-control-label&quot;&gt;Date&lt;/label&gt;
+				&lt;div class=&quot;col-sm-5&quot;&gt;
+					&lt;input type=&quot;date&quot; class=&quot;form-control&quot; id=&quot;exampleInputTel&quot;&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputDate&amp;quot; class=&amp;quot;form-control-label&amp;quot;&gt;Date&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;date&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleInputTel&amp;quot;&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;International Address&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleInputAddress1&quot;&gt;Street Address&lt;/label&gt;
+				&lt;input type=&quot;address&quot; class=&quot;form-control&quot; id=&quot;exampleInputAddress1&quot; placeholder=&quot;Enter Street Address&quot;&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleInputAddress2&quot;&gt;Address Line 2&lt;/label&gt;
+				&lt;input type=&quot;address&quot; class=&quot;form-control&quot; id=&quot;exampleInputAddress2&quot; placeholder=&quot;Enter Address Line 2&quot;&gt;
+			&lt;/fieldset&gt;
+			&lt;div class=&quot;form-inline&quot;&gt;
+				&lt;fieldset class=&quot;form-group&quot;&gt;
+					&lt;label for=&quot;exampleCity&quot;&gt;City&lt;/label&gt;
+					&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleCity&quot; placeholder=&quot;Enter City&quot;&gt;
+				&lt;/fieldset&gt;
+				&lt;fieldset class=&quot;form-group&quot;&gt;
+					&lt;label for=&quot;exampleState&quot;&gt;State/Province/Region&lt;/label&gt;
+					&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleState&quot; placeholder=&quot;Enter State/Province/Region&quot;&gt;
+				&lt;/fieldset&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;form-inline&quot;&gt;
+				&lt;fieldset class=&quot;form-group&quot;&gt;
+					&lt;label for=&quot;exampleZip&quot;&gt;Zip/Postal Code&lt;/label&gt;
+					&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleZip&quot; placeholder=&quot;Enter Zip/Postal Code&quot;&gt;
+				&lt;/fieldset&gt;
+				&lt;fieldset class=&quot;form-group&quot;&gt;
+					&lt;label for=&quot;exampleCountry&quot;&gt;Country&lt;/label&gt;
+					&lt;select class=&quot;form-control&quot; id=&quot;exampleCountry&quot;&gt;
+						&lt;option&gt;Country 1&lt;/option&gt;
+						&lt;option&gt;Country 2&lt;/option&gt;
+						&lt;option&gt;Country 3&lt;/option&gt;
+						&lt;option&gt;Country 4&lt;/option&gt;
+						&lt;option&gt;Country 5&lt;/option&gt;
+					&lt;/select&gt;
+				&lt;/fieldset&gt;
+			&lt;/div&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputAddress1&amp;quot;&gt;Street Address&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;address&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleInputAddress1&amp;quot; placeholder=&amp;quot;Enter Street Address&amp;quot;&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputAddress2&amp;quot;&gt;Address Line 2&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;address&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleInputAddress2&amp;quot; placeholder=&amp;quot;Enter Address Line 2&amp;quot;&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;div class=&amp;quot;form-inline&amp;quot;&gt;
+		&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleCity&amp;quot;&gt;City&amp;lt;/label&gt;
+			&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleCity&amp;quot; placeholder=&amp;quot;Enter City&amp;quot;&gt;
+		&amp;lt;/fieldset&gt;
+		&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleState&amp;quot;&gt;State/Province/Region&amp;lt;/label&gt;
+			&amp;lt;input type=&amp;quot;email&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleState&amp;quot; placeholder=&amp;quot;Enter State/Province/Region&amp;quot;&gt;
+		&amp;lt;/fieldset&gt;
+	&amp;lt;/div&gt;
+	&amp;lt;div class=&amp;quot;form-inline&amp;quot;&gt;
+		&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleZip&amp;quot;&gt;Zip/Postal Code&amp;lt;/label&gt;
+			&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleZip&amp;quot; placeholder=&amp;quot;Enter Zip/Postal Code&amp;quot;&gt;
+		&amp;lt;/fieldset&gt;
+		&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleCountry&amp;quot;&gt;Country&amp;lt;/label&gt;
+			&amp;lt;select class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleCountry&amp;quot;&gt;
+				&amp;lt;option&gt;Country 1&amp;lt;/option&gt;
+				&amp;lt;option&gt;Country 2&amp;lt;/option&gt;
+				&amp;lt;option&gt;Country 3&amp;lt;/option&gt;
+				&amp;lt;option&gt;Country 4&amp;lt;/option&gt;
+				&amp;lt;option&gt;Country 5&amp;lt;/option&gt;
+			&amp;lt;/select&gt;
+		&amp;lt;/fieldset&gt;
+	&amp;lt;/div&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;USA Address&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleInputAddress3&quot;&gt;Street Address&lt;/label&gt;
+				&lt;input type=&quot;address&quot; class=&quot;form-control&quot; id=&quot;exampleInputAddress3&quot; placeholder=&quot;Enter Street Address&quot;&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleInputAddress4&quot;&gt;Address Line 2&lt;/label&gt;
+				&lt;input type=&quot;address&quot; class=&quot;form-control&quot; id=&quot;exampleInputAddress4&quot; placeholder=&quot;Enter Address Line 2&quot;&gt;
+			&lt;/fieldset&gt;
+			&lt;div class=&quot;form-inline&quot;&gt;
+				&lt;fieldset class=&quot;form-group&quot;&gt;
+					&lt;label for=&quot;exampleCity1&quot;&gt;City&lt;/label&gt;
+					&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleCity1&quot; placeholder=&quot;Enter City&quot;&gt;
+				&lt;/fieldset&gt;
+				&lt;fieldset class=&quot;form-group&quot;&gt;
+					&lt;label for=&quot;exampleState1&quot;&gt;State&lt;/label&gt;
+					&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleState1&quot; placeholder=&quot;Enter State&quot;&gt;
+				&lt;/fieldset&gt;
+			&lt;/div&gt;
+			&lt;fieldset class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleZip1&quot;&gt;Zip Code&lt;/label&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleZip1&quot; placeholder=&quot;Enter Zip Code&quot;&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputAddress3&amp;quot;&gt;Street Address&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;address&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleInputAddress3&amp;quot; placeholder=&amp;quot;Enter Street Address&amp;quot;&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputAddress4&amp;quot;&gt;Address Line 2&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;address&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleInputAddress4&amp;quot; placeholder=&amp;quot;Enter Address Line 2&amp;quot;&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;div class=&amp;quot;form-inline&amp;quot;&gt;
+		&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleCity1&amp;quot;&gt;City&amp;lt;/label&gt;
+			&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleCity1&amp;quot; placeholder=&amp;quot;Enter City&amp;quot;&gt;
+		&amp;lt;/fieldset&gt;
+		&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleState1&amp;quot;&gt;State&amp;lt;/label&gt;
+			&amp;lt;input type=&amp;quot;email&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleState1&amp;quot; placeholder=&amp;quot;Enter State&amp;quot;&gt;
+		&amp;lt;/fieldset&gt;
+	&amp;lt;/div&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleZip1&amp;quot;&gt;Zip Code&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleZip1&amp;quot; placeholder=&amp;quot;Enter Zip Code&amp;quot;&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Password Field&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group row&quot;&gt;
+				&lt;label for=&quot;exampleInputPassword1&quot; class=&quot;col-sm-3 col-md-2 form-control-label&quot;&gt;Password&lt;/label&gt;
+				&lt;div class=&quot;col-sm-6 col-md-5&quot;&gt;
+					&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Enter Password&quot;&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputPassword1&amp;quot; class=&amp;quot;form-control-label&amp;quot;&gt;Password&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;password&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleInputPassword1&amp;quot; placeholder=&amp;quot;Enter Password&amp;quot;&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Select Box&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group row&quot;&gt;
+				&lt;label for=&quot;exampleSelect1&quot; class=&quot;col-sm-3 col-md-2 form-control-label&quot;&gt;Select Box&lt;/label&gt;
+				&lt;div class=&quot;col-sm-6 col-md-5&quot;&gt;
+					&lt;select class=&quot;form-control&quot; id=&quot;exampleSelect1&quot;&gt;
+					  &lt;option&gt;1&lt;/option&gt;
+					  &lt;option&gt;2&lt;/option&gt;
+					  &lt;option&gt;3&lt;/option&gt;
+					  &lt;option&gt;4&lt;/option&gt;
+					  &lt;option&gt;5&lt;/option&gt;
+					&lt;/select&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleSelect1&amp;quot; class=&amp;quot;form-control-label&amp;quot;&gt;Select Box&amp;lt;/label&gt;
+		&amp;lt;select class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleSelect1&amp;quot;&gt;
+			&amp;lt;option&gt;1&amp;lt;/option&gt;
+			&amp;lt;option&gt;2&amp;lt;/option&gt;
+			&amp;lt;option&gt;3&amp;lt;/option&gt;
+			&amp;lt;option&gt;4&amp;lt;/option&gt;
+			&amp;lt;option&gt;5&amp;lt;/option&gt;
+		&amp;lt;/select&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Multiple Select Box&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group row&quot;&gt;
+				&lt;label for=&quot;exampleSelect2&quot; class=&quot;col-sm-4 col-md-3 form-control-label&quot;&gt;Multiple Select Box&lt;/label&gt;
+				&lt;div class=&quot;col-sm-7 col-md-6&quot;&gt;
+					&lt;select multiple class=&quot;form-control&quot; id=&quot;exampleSelect2&quot;&gt;
+					  &lt;option&gt;1&lt;/option&gt;
+					  &lt;option&gt;2&lt;/option&gt;
+					  &lt;option&gt;3&lt;/option&gt;
+					  &lt;option&gt;4&lt;/option&gt;
+					  &lt;option&gt;5&lt;/option&gt;
+					&lt;/select&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleSelect2&amp;quot; class=&amp;quot;form-control-label&amp;quot;&gt;Multiple Select Box&amp;lt;/label&gt;
+		&amp;lt;select multiple class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleSelect2&amp;quot;&gt;
+			&amp;lt;option&gt;1&amp;lt;/option&gt;
+			&amp;lt;option&gt;2&amp;lt;/option&gt;
+			&amp;lt;option&gt;3&amp;lt;/option&gt;
+			&amp;lt;option&gt;4&amp;lt;/option&gt;
+			&amp;lt;option&gt;5&amp;lt;/option&gt;
+		&amp;lt;/select&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Custom Select Box&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group row&quot;&gt;
+				&lt;label for=&quot;exampleSelect1&quot; class=&quot;col-sm-3 col-md-2 form-control-label&quot;&gt;Custom Select&lt;/label&gt;
+				&lt;div class=&quot;col-sm-6 col-md-5&quot;&gt;
+					&lt;select class=&quot;c-select&quot; id=&quot;exampleSelect1&quot;&gt;
+					  &lt;option&gt;Red&lt;/option&gt;
+					  &lt;option&gt;Blue&lt;/option&gt;
+					  &lt;option&gt;Green&lt;/option&gt;
+					  &lt;option&gt;Yellow&lt;/option&gt;
+					  &lt;option&gt;Orange&lt;/option&gt;
+					&lt;/select&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleSelect1&amp;quot; class=&amp;quot;form-control-label&amp;quot;&gt;Custom Select&amp;lt;/label&gt;
+		&amp;lt;select class=&amp;quot;c-select&amp;quot; id=&amp;quot;exampleSelect1&amp;quot;&gt;
+			&amp;lt;option&gt;Red&amp;lt;/option&gt;
+			&amp;lt;option&gt;Blue&amp;lt;/option&gt;
+			&amp;lt;option&gt;Green&amp;lt;/option&gt;
+			&amp;lt;option&gt;Yellow&amp;lt;/option&gt;
+			&amp;lt;option&gt;Orange&amp;lt;/option&gt;
+		&amp;lt;/select&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Text Field&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group row&quot;&gt;
+				&lt;label for=&quot;exampleInputText1&quot; class=&quot;col-sm-3 col-md-2 form-control-label&quot;&gt;Text Field&lt;/label&gt;
+				&lt;div class=&quot;col-sm-6 col-md-5&quot;&gt;
+					&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleInputText1&quot; placeholder=&quot;Enter Text&quot;&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputText1&amp;quot; class=&amp;quot;form-control-label&amp;quot;&gt;Text Field&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleInputText1&amp;quot; placeholder=&amp;quot;Enter Text&amp;quot;&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Textarea&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;form-group row&quot;&gt;
+				&lt;label for=&quot;exampleTextarea&quot; class=&quot;col-sm-3 col-md-2 form-control-label&quot;&gt;Textarea&lt;/label&gt;
+				&lt;div class=&quot;col-sm-6 col-md-5&quot;&gt;
+					&lt;textarea class=&quot;form-control&quot; id=&quot;exampleTextarea&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleTextarea&amp;quot; class=&amp;quot;form-control-label&amp;quot;&gt;Textarea&amp;lt;/label&gt;
+		&amp;lt;textarea class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleTextarea&amp;quot; rows=&amp;quot;3&amp;quot;&gt;&amp;lt;/textarea&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Radio Options&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;div class=&quot;radio&quot;&gt;
+				&lt;label&gt;
+				  &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
+				  Option one is this and that&amp;mdash;be sure to include why it&#x27;s great
+				&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;radio&quot;&gt;
+				&lt;label&gt;
+				  &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&gt;
+				  Option two can be something else and selecting it will deselect option one
+				&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;radio disabled&quot;&gt;
+				&lt;label&gt;
+				  &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios3&quot; value=&quot;option3&quot; disabled&gt;
+				  Option three is disabled
+				&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;div class=&amp;quot;radio&amp;quot;&gt;
+		&amp;lt;label&gt;
+			&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios1&amp;quot; value=&amp;quot;option1&amp;quot; checked&gt;
+			Option one is this and that&amp;amp;mdash;be sure to include why it&amp;apos;s great
+		&amp;lt;/label&gt;
+	&amp;lt;/div&gt;
+	&amp;lt;div class=&amp;quot;radio&amp;quot;&gt;
+		&amp;lt;label&gt;
+			&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios2&amp;quot; value=&amp;quot;option2&amp;quot;&gt;
+			Option two can be something else and selecting it will deselect option one
+		&amp;lt;/label&gt;
+	&amp;lt;/div&gt;
+	&amp;lt;div class=&amp;quot;radio disabled&amp;quot;&gt;
+		&amp;lt;label&gt;
+			&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios3&amp;quot; value=&amp;quot;option3&amp;quot; disabled&gt;
+			Option three is disabled
+		&amp;lt;/label&gt;
+	&amp;lt;/div&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Checkbox&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;div class=&quot;checkbox&quot;&gt;
+				&lt;label&gt;
+				  &lt;input type=&quot;checkbox&quot;&gt; Check me out
+				&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;div class=&amp;quot;checkbox&amp;quot;&gt;
+		&amp;lt;label&gt;
+			&amp;lt;input type=&amp;quot;checkbox&amp;quot;&gt; Check me out
+		&amp;lt;/label&gt;
+	&amp;lt;/div&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Inline Forms: Visible Labels&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form class=&quot;form-inline&quot;&gt;
+			&lt;div class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleInputName2&quot;&gt;Name&lt;/label&gt;
+				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleInputName2&quot; placeholder=&quot;Jane Doe&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;form-group&quot;&gt;
+				&lt;label for=&quot;exampleInputEmail2&quot;&gt;Email&lt;/label&gt;
+				&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail2&quot; placeholder=&quot;jane.doe@example.com&quot;&gt;
+			&lt;/div&gt;
+			&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Send invitation&lt;/button&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form class=&amp;quot;form-inline&amp;quot;&gt;
+	&amp;lt;div class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputName2&amp;quot;&gt;Name&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleInputName2&amp;quot; placeholder=&amp;quot;Jane Doe&amp;quot;&gt;
+	&amp;lt;/div&gt;
+	&amp;lt;div class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputEmail2&amp;quot;&gt;Email&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;email&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleInputEmail2&amp;quot; placeholder=&amp;quot;jane.doe@example.com&amp;quot;&gt;
+	&amp;lt;/div&gt;
+	&amp;lt;button type=&amp;quot;submit&amp;quot; class=&amp;quot;btn btn-primary&amp;quot;&gt;Send invitation&amp;lt;/button&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Inline Forms: Hidden Labels&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form class=&quot;form-inline&quot;&gt;
+			&lt;div class=&quot;form-group&quot;&gt;
+				&lt;label class=&quot;sr-only&quot; for=&quot;exampleInputEmail3&quot;&gt;Email address&lt;/label&gt;
+				&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail3&quot; placeholder=&quot;Enter email&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;form-group&quot;&gt;
+				&lt;label class=&quot;sr-only&quot; for=&quot;exampleInputPassword3&quot;&gt;Password&lt;/label&gt;
+				&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword3&quot; placeholder=&quot;Password&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;checkbox&quot;&gt;
+				&lt;label&gt;
+			  &lt;input type=&quot;checkbox&quot;&gt; Remember me
+			&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Sign in&lt;/button&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form class=&amp;quot;form-inline&amp;quot;&gt;
+	&amp;lt;div class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label class=&amp;quot;sr-only&amp;quot; for=&amp;quot;exampleInputEmail3&amp;quot;&gt;Email address&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;email&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleInputEmail3&amp;quot; placeholder=&amp;quot;Enter email&amp;quot;&gt;
+	&amp;lt;/div&gt;
+	&amp;lt;div class=&amp;quot;form-group&amp;quot;&gt;
+		&amp;lt;label class=&amp;quot;sr-only&amp;quot; for=&amp;quot;exampleInputPassword3&amp;quot;&gt;Password&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;password&amp;quot; class=&amp;quot;form-control&amp;quot; id=&amp;quot;exampleInputPassword3&amp;quot; placeholder=&amp;quot;Password&amp;quot;&gt;
+	&amp;lt;/div&gt;
+	&amp;lt;div class=&amp;quot;checkbox&amp;quot;&gt;
+		&amp;lt;label&gt;
+			&amp;lt;input type=&amp;quot;checkbox&amp;quot;&gt; Remember me
+		&amp;lt;/label&gt;
+	&amp;lt;/div&gt;
+	&amp;lt;button type=&amp;quot;submit&amp;quot; class=&amp;quot;btn btn-primary&amp;quot;&gt;Sign in&amp;lt;/button&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;</code></pre>
+</div>
 
 
+</div>
 
 
 <div class="f-item-group" id="side-navigation">
@@ -433,33 +1408,33 @@
 	<section class="f-section">
 	<h3 class="f-example-title">Sidebar: Single Level</h3>
 	<div class="f-example">
-		<ul class="ds-nav ds-sidebar" id="phantom-sidebar-single">
-			<li class="ds-nav-item">
-				<a class="ds-nav-link ds-current" href="#!">Current Parent</a>
+		<ul class="nav sidebar">
+			<li class="nav-item">
+				<a class="nav-link current" href="#!">Current Parent</a>
 			</li>
-			<li class="ds-nav-item">
-				<a class="ds-nav-link" href="#!">Parent Link</a>
+			<li class="nav-item">
+				<a class="nav-link" href="#!">Parent Link</a>
 			</li>
-			<li class="ds-nav-item">
-				<a class="ds-nav-link" href="#!">Parent Link</a>
+			<li class="nav-item">
+				<a class="nav-link" href="#!">Parent Link</a>
 			</li>
-			<li class="ds-nav-item">
-				<a class="ds-nav-link" href="#!">Parent Link</a>
+			<li class="nav-item">
+				<a class="nav-link" href="#!">Parent Link</a>
 			</li>
 		</ul>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;ul class=&quot;ds-nav ds-sidebar&quot;>
-	&lt;li class=&quot;ds-nav-item&quot;>
-		&lt;a class=&quot;ds-nav-link current&quot; href=&quot;#!&quot;>Current Parent&lt;/a>
+	<pre class="language-markup"><code class="language-markup">&lt;ul class=&quot;nav sidebar&quot;>
+	&lt;li class=&quot;nav-item&quot;>
+		&lt;a class=&quot;nav-link current&quot; href=&quot;#!&quot;>Current Parent&lt;/a>
 	&lt;/li>
-	&lt;li class=&quot;ds-nav-item&quot;>
-		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
+	&lt;li class=&quot;nav-item&quot;>
+		&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
 	&lt;/li>
-	&lt;li class=&quot;ds-nav-item&quot;>
-		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
+	&lt;li class=&quot;nav-item&quot;>
+		&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
 	&lt;/li>
-	&lt;li class=&quot;ds-nav-item&quot;>
-		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
+	&lt;li class=&quot;nav-item&quot;>
+		&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
 	&lt;/li>
 &lt;/ul>
 </code></pre>
@@ -468,49 +1443,49 @@
 <section class="f-section">
 	<h3 class="f-example-title">Sidebar: Two Levels</h3>
 	<div class="f-example">
-		<ul class="ds-nav ds-sidebar" id="phantom-sidebar-two">
-			<li class="ds-nav-item">
-				<a class="ds-nav-link" href="#!">Parent Link</a>
+		<ul class="nav sidebar">
+			<li class="nav-item">
+				<a class="nav-link" href="#!">Parent Link</a>
 			</li>
-			<li class="ds-nav-item">
-				<a class="ds-nav-link" href="#!">Parent Link</a>
-				<ul class="ds-nav">
-					<li class="ds-nav-item">
-						<a class="ds-nav-link ds-current" href="#!">Child Link</a>
+			<li class="nav-item">
+				<a class="nav-link" href="#!">Parent Link</a>
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link current" href="#!">Child Link</a>
 					</li>
-					<li class="ds-nav-item">
-						<a class="ds-nav-link" href="#!">Child Link</a>
+					<li class="nav-item">
+						<a class="nav-link" href="#!">Child Link</a>
 					</li>
-					<li class="ds-nav-item">
-						<a class="ds-nav-link" href="#!">Child Link</a>
+					<li class="nav-item">
+						<a class="nav-link" href="#!">Child Link</a>
 					</li>
 				</ul>
 			</li>
-			<li class="ds-nav-item">
-				<a class="ds-nav-link" href="#!">Parent Link</a>
+			<li class="nav-item">
+				<a class="nav-link" href="#!">Parent Link</a>
 			</li>
 		</ul>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;ul class=&quot;ds-nav ds-sidebar&quot;>
-	&lt;li class=&quot;ds-nav-item&quot;>
-		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
+	<pre class="language-markup"><code class="language-markup">&lt;ul class=&quot;nav sidebar&quot;>
+	&lt;li class=&quot;nav-item&quot;>
+		&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
 	&lt;/li>
-	&lt;li class=&quot;ds-nav-item&quot;>
-		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
-		&lt;ul class=&quot;ds-nav&quot;>
-			&lt;li class=&quot;ds-nav-item&quot;>
-				&lt;a class=&quot;ds-nav-link current&quot; href=&quot;#!&quot;>Current Child&lt;/a>
+	&lt;li class=&quot;nav-item&quot;>
+		&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
+		&lt;ul class=&quot;nav&quot;>
+			&lt;li class=&quot;nav-item&quot;>
+				&lt;a class=&quot;nav-link current&quot; href=&quot;#!&quot;>Current Child&lt;/a>
 			&lt;/li>
-			&lt;li class=&quot;ds-nav-item&quot;>
-				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
+			&lt;li class=&quot;nav-item&quot;>
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
 			&lt;/li>
-			&lt;li class=&quot;ds-nav-item&quot;>
-				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
+			&lt;li class=&quot;nav-item&quot;>
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
 			&lt;/li>
 		&lt;/ul>
 	&lt;/li>
-	&lt;li class=&quot;ds-nav-item&quot;>
-		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
+	&lt;li class=&quot;nav-item&quot;>
+		&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
 	&lt;/li>
 &lt;/ul>
 </code></pre>
@@ -520,33 +1495,33 @@
 	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Sidebar: Single Level&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;ul class=&quot;ds-nav ds-sidebar&quot; id=&quot;phantom-sidebar-single&quot;&gt;
-			&lt;li class=&quot;ds-nav-item&quot;&gt;
-				&lt;a class=&quot;ds-nav-link ds-current&quot; href=&quot;#!&quot;&gt;Current Parent&lt;/a&gt;
+		&lt;ul class=&quot;nav sidebar&quot;&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;
+				&lt;a class=&quot;nav-link current&quot; href=&quot;#!&quot;&gt;Current Parent&lt;/a&gt;
 			&lt;/li&gt;
-			&lt;li class=&quot;ds-nav-item&quot;&gt;
-				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
 			&lt;/li&gt;
-			&lt;li class=&quot;ds-nav-item&quot;&gt;
-				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
 			&lt;/li&gt;
-			&lt;li class=&quot;ds-nav-item&quot;&gt;
-				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
 			&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;ul class=&amp;quot;ds-nav ds-sidebar&amp;quot;&gt;
-	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-		&amp;lt;a class=&amp;quot;ds-nav-link current&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Current Parent&amp;lt;/a&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;ul class=&amp;quot;nav sidebar&amp;quot;&gt;
+	&amp;lt;li class=&amp;quot;nav-item&amp;quot;&gt;
+		&amp;lt;a class=&amp;quot;nav-link current&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Current Parent&amp;lt;/a&gt;
 	&amp;lt;/li&gt;
-	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
+	&amp;lt;li class=&amp;quot;nav-item&amp;quot;&gt;
+		&amp;lt;a class=&amp;quot;nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
 	&amp;lt;/li&gt;
-	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
+	&amp;lt;li class=&amp;quot;nav-item&amp;quot;&gt;
+		&amp;lt;a class=&amp;quot;nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
 	&amp;lt;/li&gt;
-	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
+	&amp;lt;li class=&amp;quot;nav-item&amp;quot;&gt;
+		&amp;lt;a class=&amp;quot;nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
 	&amp;lt;/li&gt;
 &amp;lt;/ul&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -555,49 +1530,49 @@
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Sidebar: Two Levels&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;ul class=&quot;ds-nav ds-sidebar&quot; id=&quot;phantom-sidebar-two&quot;&gt;
-			&lt;li class=&quot;ds-nav-item&quot;&gt;
-				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
+		&lt;ul class=&quot;nav sidebar&quot;&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
 			&lt;/li&gt;
-			&lt;li class=&quot;ds-nav-item&quot;&gt;
-				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
-				&lt;ul class=&quot;ds-nav&quot;&gt;
-					&lt;li class=&quot;ds-nav-item&quot;&gt;
-						&lt;a class=&quot;ds-nav-link ds-current&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
+				&lt;ul class=&quot;nav&quot;&gt;
+					&lt;li class=&quot;nav-item&quot;&gt;
+						&lt;a class=&quot;nav-link current&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
 					&lt;/li&gt;
-					&lt;li class=&quot;ds-nav-item&quot;&gt;
-						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
+					&lt;li class=&quot;nav-item&quot;&gt;
+						&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
 					&lt;/li&gt;
-					&lt;li class=&quot;ds-nav-item&quot;&gt;
-						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
+					&lt;li class=&quot;nav-item&quot;&gt;
+						&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
 					&lt;/li&gt;
 				&lt;/ul&gt;
 			&lt;/li&gt;
-			&lt;li class=&quot;ds-nav-item&quot;&gt;
-				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
+			&lt;li class=&quot;nav-item&quot;&gt;
+				&lt;a class=&quot;nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
 			&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;ul class=&amp;quot;ds-nav ds-sidebar&amp;quot;&gt;
-	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;ul class=&amp;quot;nav sidebar&amp;quot;&gt;
+	&amp;lt;li class=&amp;quot;nav-item&amp;quot;&gt;
+		&amp;lt;a class=&amp;quot;nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
 	&amp;lt;/li&gt;
-	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
-		&amp;lt;ul class=&amp;quot;ds-nav&amp;quot;&gt;
-			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-				&amp;lt;a class=&amp;quot;ds-nav-link current&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Current Child&amp;lt;/a&gt;
+	&amp;lt;li class=&amp;quot;nav-item&amp;quot;&gt;
+		&amp;lt;a class=&amp;quot;nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
+		&amp;lt;ul class=&amp;quot;nav&amp;quot;&gt;
+			&amp;lt;li class=&amp;quot;nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;nav-link current&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Current Child&amp;lt;/a&gt;
 			&amp;lt;/li&gt;
-			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
+			&amp;lt;li class=&amp;quot;nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
 			&amp;lt;/li&gt;
-			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
+			&amp;lt;li class=&amp;quot;nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
 			&amp;lt;/li&gt;
 		&amp;lt;/ul&gt;
 	&amp;lt;/li&gt;
-	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
+	&amp;lt;li class=&amp;quot;nav-item&amp;quot;&gt;
+		&amp;lt;a class=&amp;quot;nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
 	&amp;lt;/li&gt;
 &amp;lt;/ul&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -608,16 +1583,15 @@
 </div>
 
 
+	</main>
 
-				</main>
-			</div>
-		</div>
-		<!-- Design System scripts: requires jQuery -->
-		<script src="./assets/design-system/scripts/design-system.js"></script>
-		<!-- /Design System scripts: requires jQuery -->
+	</div>
+	<script src=".//assets/fabricator/scripts/f.js"></script>
+	<script src=".//assets/fabricator/scripts/search.js"></script>
 
-		<script src="./assets/fabricator/scripts/f.js"></script>
-		<script src="./assets/fabricator/scripts/search.js"></script>
+	<!-- Design System scripts: requires jQuery -->
+	<script src=".//assets/design-system/scripts/design-system.js"></script>
+	<!-- /Design System scripts: requires jQuery -->
 
 </body>
 </html>
