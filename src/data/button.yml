@@ -1,7 +1,17 @@
 colors:
   buttons:
-    Green: "#00a862"
-    Purple: "#a75ccc"
-    Magenta: "#e01279"
-    Orange: "#fa6323"
-    Blue: "#0073cf"
+    Green:
+      hex: "#00a862"
+      var: "$jdrf-green"
+    Purple:
+      hex: "#a75ccc"
+      var: "$jdrf-purple"
+    Magenta:
+      hex: "#e01279"
+      var: "$jdrf-magenta"
+    Orange:
+      hex: "#fa6323"
+      var: "$jdrf-orange"
+    Blue:
+      hex: "#0073cf"
+      var: "$jdrf-blue"

@@ -1,8 +1,20 @@
 colors:
   programs:
-    Walk: "#fa6323"
-    Ride: "#00a862"
-    DIY: "#e01279"
-    Gala: "#6e267b"
-    Peak: "#aa72bf"
-    Voice: "#fdb823"
+    Walk:
+      hex: "#fa6323"
+      var: "$pro-walk"
+    Ride:
+      hex: "#00a862"
+      var: "$pro-ride"
+    DIY:
+      hex: "#e01279"
+      var: "$pro-diy"
+    Gala:
+      hex: "#6e267b"
+      var: "$pro-gala"
+    Peak:
+      hex: "#aa72bf"
+      var: "$pro-peak"
+    Voice:
+      hex: "#fdb823"
+      var: "$pro-voice"

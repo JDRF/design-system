@@ -1,5 +1,11 @@
 colors:
   accents:
-    Accent Blue: "#09bcef"
-    Accent Green: "#8cd600"
-    Accent Orange: "#fcd116"
+    Accent Blue:
+      hex: "#09bcef"
+      var: "$accent-blue"
+    Accent Green:
+      hex: "#8cd600"
+      var: "#accent-green"
+    Accent Orange:
+      hex: "#fcd116"
+      var: "$accent-orange"
