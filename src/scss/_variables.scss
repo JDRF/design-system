@@ -47,7 +47,14 @@ $grey-5: #bdbdbd;
 $grey-6: #9e9e9e;
 $grey-7: #757575;
 
-$text-default: rgba(0, 0, 0, 0.87);
+$text-primary: rgba(0, 0, 0, 0.87);
+$text-secondary: rgba(0, 0, 0, 0.54);
+$text-disabled: rgba(0, 0, 0, 0.38);
+$text-dividers: rgba(0, 0, 0, 0.12);
+
+$text-reverse-primary: $jdrf-white;
+$text-reverse-secondary: rgba(255, 255, 255, 0.76);
+$text-reverse-disabled: rgba(255, 255, 255, 0.50);
 
 $gray-dark: $grey-7;
 $gray: $grey-5;
@@ -67,6 +74,8 @@ $link-hover-color: $jdrf-green;
 $btn-link-disabled-color: $grey-6;
 
 /* == Fonts ======== */
+
+$text-default: $text-primary;
 
 $font-thin: "Gotham Thin", sans-serif;
 $font-light: "Gotham Light", sans-serif;
@@ -142,7 +151,7 @@ $h6-lineheight: 1.25rem;
 
 /* == Buttons ======== */
 
-$btn-font: $font-regular;
+$btn-font: $font-medium;
 $btn-font-transform: uppercase;
 $btn-font-size: 0.875rem; /* 14px */
 $btn-line-height: 0.875rem; /* 14px */
