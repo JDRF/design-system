@@ -11,6 +11,12 @@
 		}
 	}
 
+	.ds-btn-group-vertical {
+		@include desktop {
+			margin-left: 1rem;
+		}
+	}
+
 	.ds-btn {
 		margin-bottom: 1rem;
 
