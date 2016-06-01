@@ -91,18 +91,25 @@ notes: |
 
 <section class="f-section">
 	<h3 class="f-example-title">Toggle Segment</h3>
-	<div class="f-example">
+	<div class="f-example" id="phantom-ds-toggle-segment">
 		<div class="ds-btn-group" role="group" aria-label="Basic example">
 			<button type="button" class="ds-btn">Left</button>
 			<button type="button" class="ds-btn ds-active">Center</button>
 			<button type="button" class="ds-btn">Right</button>
 		</div>
+
+		<div class="ds-btn-group-vertical">
+			<button type="button" class="ds-btn">Left</button>
+			<button type="button" class="ds-btn ds-active">Center</button>
+			<button type="button" class="ds-btn">Right</button>
+		</div>
 	</div>
+	{{example 'button.togglesegment'}}
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Toggle Icon Bar</h3>
-	<div class="f-example">
+	<div class="f-example" id="phantom-ds-toggle-icon-bar">
 		<div class="ds-btn-group ds-btn-icon-group" role="group" aria-label="Basic example">
 			<button type="button" class="material-icons mi-format-align-left ds-btn">
 				<span class="ds-sr-only">Primary button with align left icon.</span>
@@ -115,11 +122,12 @@ notes: |
 			</button>
 		</div>
 	</div>
+	{{example 'button.toggleiconbar'}}
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Checkbox Buttons</h3>
-	<div class="f-example">
+	<div class="f-example" id="phantom-ds-checkbox-buttons">
 		<div class="ds-btn-group" data-toggle="buttons">
 			<label class="ds-btn ds-btn-primary ds-active btn-icon">
 				<input type="checkbox" checked autocomplete="off"> Checkbox 1 (pre-checked)
@@ -132,11 +140,12 @@ notes: |
 			</label>
 		</div>
 	</div>
+	{{example 'button.checkbox'}}
 </section>
 
 <section class="f-section">
-	<h3 class="f-example-title">Checkbox Buttons</h3>
-	<div class="f-example">
+	<h3 class="f-example-title">Radio Buttons</h3>
+	<div class="f-example" id="phantom-ds-radio-buttons">
 		<div class="ds-btn-group" data-toggle="buttons">
 			<label class="ds-btn ds-btn-primary ds-active">
 				<input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
@@ -149,4 +158,5 @@ notes: |
 			</label>
 		</div>
 	</div>
+	{{example 'button.radio'}}
 </section>
