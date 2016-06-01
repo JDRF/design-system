@@ -3,6 +3,8 @@ notes: |
   Elevations are applied using the `ds-elevation-` class and are numbered one to five. `.ds-elevation-one` would be the lowest ds-elevation versus `.ds-elevation-five` is the highest.
 
   Buttons in most cases start with `.ds-elevation-one` and raise to `.ds-elevation-three` on `:hover`, `:focus` and `:active` states. The `.ds-btn-flat` style of buttons start with no elevation and raise to `.ds-elevation-two` on `:hover`, `:focus` and `:active` states.
+
+  There is a "flat" state not pictured below. Currently the `.ds-btn-flat` buttons are flat (without box shadows) in their normal state. To remove elevations on a button that isn't flat by default, you can use the `@include elevation-remove;` Sass mixin.
 ---
 
 <div class="f-example-inline">
