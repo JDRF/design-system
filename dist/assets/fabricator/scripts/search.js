@@ -875,7 +875,7 @@ module.exports = {
 			color;
 
 		for ( var i = chips.length - 1; i >= 0; i-- ) {
-			color = chips[ i ].querySelector( '.f-color-chip__color' ).innerHTML;
+			color = chips[ i ].querySelector( '.f-color-chip__hex' ).innerHTML;
 			chips[ i ].style.borderTopColor = color;
 			chips[ i ].style.borderBottomColor = color;
 		}
@@ -1089,8 +1089,8 @@ module.exports = {
 		this.results = document.getElementById( 'search-results' );
 		this.loop =	document.querySelectorAll( '.f-menu .ds-nav a' );
 
-		this.input.addEventListener( 'change', this.watch.bind( this ), false );
 		this.input.addEventListener( 'keyup', this.watch.bind( this ), false );
+		this.input.addEventListener( 'keypress', this.submit.bind( this ), false );
 	},
 
 	watch: function() {
@@ -1111,6 +1111,22 @@ module.exports = {
 			this.clean();
 		}
 
+	},
+
+	/**
+	 * Check which key was press. If `enter`, prevent the default action
+	 *
+	 * @param  {object} e    Base JavaScript event
+	 * @return {object} this
+	 */
+	submit: function( e ) {
+		var key = e.which || e.keyCode;
+
+		if ( key === 13 ) {
+			e.preventDefault();
+		}
+
+		return this;
 	},
 
 	/**
