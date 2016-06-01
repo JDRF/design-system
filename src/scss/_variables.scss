@@ -3,16 +3,16 @@
 /* == Grid ======== */
 
 $grid-breakpoints: (
-  // Extra small screen / phone
-  xs: 0,
-  // Small screen / phone
-  sm: 360px,
-  // Medium screen / tablet
-  md: 768px,
-  // Large screen / desktop
-  lg: 992px,
-  // Extra large screen / wide desktop
-  xl: 1200px
+	// Extra small screen / phone
+	xs: 0,
+	// Small screen / phone
+	sm: 360px,
+	// Medium screen / tablet
+	md: 768px,
+	// Large screen / desktop
+	lg: 992px,
+	// Extra large screen / wide desktop
+	xl: 1200px
 );
 
 /* == Colors ======== */
@@ -173,3 +173,6 @@ $border-radius-sm: 0.125rem;
 $btn-border-radius: $border-radius;
 $btn-border-radius-lg: $border-radius;
 $btn-border-radius-sm: $border-radius;
+
+/* Border width at 2px */
+$input-btn-border-width: 2px;
