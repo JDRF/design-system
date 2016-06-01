@@ -1,6 +1,6 @@
 ---
 notes: |
-  These are the colors that all JDRF brands should adhere to.
+  These are the colors that all JDRF brands should adhere to. Pictured below are each colors name, hex/rgba values and Design System variable for use.
 ---
 
 <h3>Primary Colors</h3>
@@ -9,7 +9,8 @@ notes: |
 	{{#each this}}
 		<div class="f-color-chip">
 			<div class="f-color-chip__name">{{@key}}</div>
-			<div class="f-color-chip__color">{{this}}</div>
+			<div class="f-color-chip__hex">{{this.hex}}</div>
+			<div class="f-color-chip__var">{{this.var}}</div>
 		</div>
 	{{/each}}
 	</div>
@@ -21,13 +22,14 @@ notes: |
 	{{#each this}}
 		<div class="f-color-chip">
 			<div class="f-color-chip__name">{{@key}}</div>
-			<div class="f-color-chip__color">{{this}}</div>
+			<div class="f-color-chip__hex">{{this.hex}}</div>
+			<div class="f-color-chip__var">{{this.var}}</div>
 		</div>
 	{{/each}}
 	</div>
 {{/each}}
 
-<p>The color white <code class="language-markup">#ffffff</code> is used as a background for the <a href="/dist/components.html#buttons">outline button style</a>.
+<p>The color white <code class="language-markup">$jdrf-white (hex value: #ffffff)</code> is used as a background for the <a href="/dist/components.html#buttons">outline button style</a>.
 
 <h3>Accent Colors</h3>
 {{#each accents.colors}}
@@ -35,7 +37,8 @@ notes: |
 	{{#each this}}
 		<div class="f-color-chip">
 			<div class="f-color-chip__name">{{@key}}</div>
-			<div class="f-color-chip__color">{{this}}</div>
+			<div class="f-color-chip__hex">{{this.hex}}</div>
+			<div class="f-color-chip__var">{{this.var}}</div>
 		</div>
 	{{/each}}
 	</div>
@@ -47,7 +50,8 @@ notes: |
 	{{#each this}}
 		<div class="f-color-chip">
 			<div class="f-color-chip__name">{{@key}}</div>
-			<div class="f-color-chip__color">{{this}}</div>
+			<div class="f-color-chip__hex">{{this.hex}}</div>
+			<div class="f-color-chip__var">{{this.var}}</div>
 		</div>
 	{{/each}}
 	</div>
@@ -59,7 +63,8 @@ notes: |
 	{{#each this}}
 		<div class="f-color-chip">
 			<div class="f-color-chip__name">{{@key}}</div>
-			<div class="f-color-chip__color">{{this}}</div>
+			<div class="f-color-chip__hex">{{this.hex}}</div>
+			<div class="f-color-chip__var">{{this.var}}</div>
 		</div>
 	{{/each}}
 	</div>
@@ -71,7 +76,8 @@ notes: |
 	{{#each this}}
 		<div class="f-color-chip">
 			<div class="f-color-chip__name">{{@key}}</div>
-			<div class="f-color-chip__color">{{this}}</div>
+			<div class="f-color-chip__hex">{{this.hex}}</div>
+			<div class="f-color-chip__var">{{this.var}}</div>
 		</div>
 	{{/each}}
 	</div>
@@ -80,7 +86,7 @@ notes: |
 <p>The reverse of these colors (white text on a darker color) would be as follows:</p>
 
 <ul>
-	<li>Primary at 100% white: <code class="language-markup">#ffffff</code></li>
-	<li>Secondary at 76% white: <code class="language-markup">rgba(255, 255, 255, 0.76)</code></li>
-	<li>Disabled at 50% white: <code class="language-markup">rgba(255, 255, 255, 0.5)</code></li>
+	<li>Primary at 100% white: <code class="language-markup">$text-reverse-primary (hex value: #ffffff)</code></li>
+	<li>Secondary at 76% white: <code class="language-markup">$text-reverse-secondary (rgba value: rgba(255, 255, 255, 0.76))</code></li>
+	<li>Disabled at 50% white: <code class="language-markup">$text-reverse-disabled (rgba value: rgba(255, 255, 255, 0.5))</code></li>
 </ul>

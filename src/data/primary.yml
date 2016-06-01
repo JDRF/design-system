@@ -1,4 +1,8 @@
 colors:
   primary:
-    Blue: "#0073cf"
-    Dark Blue: "#002855"
+    Blue:
+      hex: "#0073cf"
+      var: "$primary-blue"
+    Dark Blue:
+      hex: "#002855"
+      var: "$primary-dark-blue"
