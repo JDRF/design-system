@@ -2523,6 +2523,8 @@
 
 /* Border radius at 2px */
 
+/* Border width at 2px */
+
 /* Bootstrap overwrites: mixins.scss */
 
 /* Bootstrap @import "scss/mixins/border-radius.scss */
@@ -4602,7 +4604,7 @@ mark,
   color: #55595c;
   background-color: #fff;
   background-image: none;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 0.25rem;
 }
 
@@ -4976,7 +4978,7 @@ input[type="checkbox"].ds-disabled {
   user-select: none;
   font-family: "Gotham Medium", sans-serif;
   text-transform: uppercase;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   line-height: 0.875rem;
@@ -6005,7 +6007,7 @@ input[type="button"].ds-btn-block {
 .ds-btn-group .ds-btn + .ds-btn-group,
 .ds-btn-group .ds-btn-group + .ds-btn,
 .ds-btn-group .ds-btn-group + .ds-btn-group {
-  margin-left: -1px;
+  margin-left: -2px;
 }
 
 .ds-btn-toolbar {
@@ -6121,7 +6123,7 @@ input[type="button"].ds-btn-block {
 .ds-btn-group-vertical > .ds-btn + .ds-btn-group,
 .ds-btn-group-vertical > .ds-btn-group + .ds-btn,
 .ds-btn-group-vertical > .ds-btn-group + .ds-btn-group {
-  margin-top: -1px;
+  margin-top: -2px;
   margin-left: 0;
 }
 
