@@ -2,10 +2,8 @@
 	return function () {
 		var stream = gulp.src([
 			// Don't include bootstrap yet. Proof of future Concept
-			//'./node_modules/bootstrap/dist/js/bootstrap.js',
 			'./node_modules/jquery/dist/jquery.min.js',
-			//adding ripple js
-			__dirname + '/../src/js/ripple.js',
+			'./node_modules/bootstrap/dist/js/umd/button.js',
 			__dirname + '/../src/js/**/*.js',
 		])
 		// JSCS
@@ -16,6 +14,12 @@
 		.pipe(plugins.eslint())
 		.pipe(plugins.eslint.format())
 		.pipe(plugins.eslint.failAfterError())
+
+		// Replace classes with namespaced classes
+		.pipe(plugins.replace('\'active\'', '\'ds-active\''))
+		.pipe(plugins.replace('\'btn\'', '\'ds-btn\''))
+		.pipe(plugins.replace('.active', '.ds-active'))
+		.pipe(plugins.replace('.btn', '.ds-btn'))
 
 		.pipe(plugins.concat('design-system.js'))
 		.pipe(gulp.dest(__dirname + '/../dist/js'));
