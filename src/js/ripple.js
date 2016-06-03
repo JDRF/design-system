@@ -1,12 +1,12 @@
 'use strict';
 
 var jQuery = typeof jQuery !== 'undefined' ? window.jQuery : global.jQuery;
-var document = typeof window !== 'undefined' ? document : global.document;
-var window = typeof window !== 'undefined' ? window : global.window;
+var doc = typeof window !== 'undefined' ? document : global.document;
+var win = typeof window !== 'undefined' ? window : global.window;
 
 ( function( $ ) {
 
-	window.ripple = function( selector, options ) {
+	win.ripple = function( selector, options ) {
 
 		var init = function() {
 
@@ -31,7 +31,7 @@ var window = typeof window !== 'undefined' ? window : global.window;
 
 			self.defaults = $.extend( {}, self.defaults, options );
 
-			$( document ).on( self.defaults.on, self.selector, rippleTrigger.bind( self ) );
+			$( doc ).on( self.defaults.on, self.selector, rippleTrigger.bind( self ) );
 		};
 
 		var rippleTrigger = function( e ) {
@@ -164,4 +164,4 @@ var window = typeof window !== 'undefined' ? window : global.window;
 
 	};
 
-} )( jQuery, document );
+} )( jQuery, doc );
