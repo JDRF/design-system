@@ -15,6 +15,9 @@ colors:
     Peak:
       hex: "#aa72bf"
       var: "$pro-peak"
+    Golf:
+      hex: "#5b6334"
+      var: "$pro-golf"
     Voice:
       hex: "#fdb823"
       var: "$pro-voice"
