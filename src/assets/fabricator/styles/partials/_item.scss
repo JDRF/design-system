@@ -42,6 +42,10 @@
 	@include clearfix;
 }
 
+.f-item-scroll {
+	overflow-x: scroll;
+}
+
 .f-item-border-bottom {
 	border-bottom: 1px solid color(light);
 }
