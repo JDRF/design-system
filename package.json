@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "prepull": "git checkout gh-pages && git pull origin gh-pages",
-    "pull": "npm install && cd design-system && npm run setup && cd .. && gulp",
+    "pull": "npm install && cd design-system && npm run pull && cd .. && gulp",
     "test": "gulp test",
     "build": "gulp",
     "build-from-dev": "gulp --env=dev build",
