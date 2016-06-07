@@ -204,9 +204,10 @@ input[type="button"] {
 	}
 
 	.path {
-		stroke-dasharray: 1,200;
+		stroke-dasharray: 90;
 		stroke-dashoffset: 0;
 		transform-origin: center;
+		stroke-linecap: round;
 		@include animation(
 			'spinner-dash 1.5s ease-in-out infinite',
 			'spinner-colors 6s ease-in-out infinite'

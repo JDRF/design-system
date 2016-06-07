@@ -3,7 +3,8 @@ var gulp       = require('gulp'),
 	plugins    = require('gulp-load-plugins')({
 		rename: {
 			'gulp-scss-lint': 'scsslint',
-			'gulp-clean-css': 'minifycss'
+			'gulp-clean-css': 'minifycss',
+			'gulp-autoprefixer' : 'prefix',
 		}
 	}),
 	paths      = {
