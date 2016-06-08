@@ -25,25 +25,37 @@
 
 	@include media-breakpoint-up(md) {
 		display: flex;
-		flex-flow: row nowrap;
+		flex-flow: row wrap;
 	}
 
 	.card-hero-block {
-		&:nth-child(1) {
+		position: relative;
+		z-index: 2;
+
+		&-1 {
 			@include media-breakpoint-up(md) {
 				width: 40%;
 			}
 		}
 
-		&:nth-child(2) {
+		&-2 {
 			@include media-breakpoint-up(md) {
 				width: 60%;
 			}
 		}
 	}
 
+	.card-img {
+		max-width: 100%;
+		border-radius: 0;
+	}
+
 	.card-subtitle {
 		margin-bottom: 0.75rem;
+	}
+
+	.card-header {
+		width: 100%;
 	}
 
 	.card-footer {
@@ -88,11 +100,6 @@
 		max-width: 100%;
 		object-fit: cover;
 	}
-}
-
-.card-hero-block {
-	position: relative;
-	z-index: 2;
 }
 
 .card-header {
