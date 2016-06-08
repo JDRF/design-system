@@ -12,7 +12,7 @@ module.exports = function (gulp, plugins, config) {
 			.pipe(plugins.sourcemaps.init())
 			.pipe(plugins.sass().on('error', plugins.sass.logError))
 			.pipe(plugins.prefix({
-				browsers: ['last 2 versions']
+				browsers: ['last 2 versions', 'ie 9']
 			}))
 			.pipe(plugins.gulpif(!config.dev, plugins.csso()))
 			.pipe(plugins.rename('f.css'))
