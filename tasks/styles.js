@@ -24,6 +24,9 @@ module.exports = function (gulp, plugins) {
 					'material-icons'
 				]
 			}))
+			.pipe(plugins.prefix({
+				browsers: ['last 2 versions', 'ie 9']
+			}))
 			/*
 			* After scss lint and including bootstrap path,
 			* rename to plain css in a file called sass-files.css

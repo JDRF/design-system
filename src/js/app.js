@@ -5,8 +5,20 @@
 
 	//check for IE9 and lower, return if we are in IE9 or lower
 	if ( navigator.appVersion.indexOf( 'MSIE 9.', 'MSIE 8.' ) !== -1 ) {
+
+		jQuery( document ).ready( function() {
+			var loaderBtn = $( document.querySelector( '.ds-btn-loading' ) );
+			var loaderSpinner = $( document.querySelector( '.ds-spinner' ) );
+
+			loaderSpinner.remove();
+			loaderBtn.text( 'Loading...' );
+			loaderBtn.addClass( 'ds-btn-ie-fallback' );
+		} );
+
 		return;
+
 	} else {
+
 		jQuery( document ).ready( function() {
 			var ripple = window.ripple( '.ds-btn', {
 				debug: false, // Turn Ripple.js logging on/off
