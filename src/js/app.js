@@ -8,7 +8,7 @@
 
 		jQuery( document ).ready( function() {
 			var loaderBtn = $( document.querySelector( '.ds-btn-loading' ) );
-			var	loaderSpinner = $( document.querySelector( '.ds-spinner' ) );
+			var loaderSpinner = $( document.querySelector( '.ds-spinner' ) );
 
 			loaderSpinner.remove();
 			loaderBtn.text( 'Loading...' );
