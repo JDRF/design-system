@@ -16,3 +16,69 @@
 	color: $jdrf-blue;
 }
 
+.card-program {
+	display: flex;
+	flex-flow: row wrap;
+	border-left: 2px solid $jdrf-blue;
+	border-radius: $border-radius;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+
+	.card-block {
+		&:nth-child(1) {
+			width: 60%;
+			border-radius: $border-radius 0 0 $border-radius;
+
+			@include media-breakpoint-up(sm) {
+				width: 80%;
+			}
+		}
+
+		&:nth-child(2) {
+			width: 40%;
+			border-radius: 0 $border-radius $border-radius 0;
+			text-align: right;
+
+			@include media-breakpoint-up(sm) {
+				width: 20%;
+			}
+		}
+	}
+
+	.card-subtitle {
+		font-size: $paragraph-size;
+
+		@include media-breakpoint-up(md) {
+			font-size: $paragraph-size-sm;
+		}
+	}
+
+	.card-title {
+		margin-bottom: 0.25rem;
+		font-size: $font-size-h5;
+		line-height: $h5-lineheight;
+
+		@include media-breakpoint-up(md) {
+			font-size: $font-size-h2;
+			line-height: $h2-lineheight;
+		}
+	}
+
+	.card-location {
+		margin-bottom: 0;
+		color: $text-secondary;
+		font-size: $paragraph-size;
+
+		@include media-breakpoint-up(md) {
+			font-size: $paragraph-size-sm;
+		}
+	}
+
+	.card-category {
+		color: $text-secondary;
+		font-size: $paragraph-size-x-sm;
+
+		@include media-breakpoint-up(md) {
+			font-size: $paragraph-size;
+		}
+	}
+}
