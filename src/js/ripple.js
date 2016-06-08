@@ -34,14 +34,10 @@ var win = typeof window !== 'undefined' ? window : global.window;
 			self.defaults = $.extend( {}, self.defaults, options );
 
 			$( doc ).on( self.defaults.on, self.selector, rippleTrigger.bind( self ) );
+
 		};
 
 		var rippleTrigger = function( e ) {
-
-			//check for IE9 and lower, return if we are in IE9 or lower
-			if ( navigator.appVersion.indexOf( 'MSIE 9.', 'MSIE 8.' ) !== -1 ) {
-				return;
-			}
 
 			var $this = $( e.target );
 			var $ripple;
