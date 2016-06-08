@@ -1,0 +1,18 @@
+@import 'scss/card';
+@import 'scss/list-group';
+
+/* Bootstrap overwrites: card.scss */
+
+.card {
+	border-radius: 0 0 $border-radius $border-radius;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+	border-radius: 0;
+}
+
+.card-title {
+	color: $jdrf-blue;
+}
+
