@@ -15,7 +15,10 @@
 # Local Development
 
 #### Setting up
-This will require that the master branch to be setup in a sub folder at ./design-system. This will pull the latest code, run npm install, and afterwords run gulp.
+### Installation
+This will require that the master branch to be setup in a sub folder at ./design-system. Be sure that you have switched to the gh-pages branch and cloned another copy of the repo (master branch) into your working directory. The structure should be similar to above.
+
+Once your file structure matches the above, you can run the below command to npm install and build the correct files.
 ```
 npm run pull
 ```

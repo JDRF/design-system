@@ -3,8 +3,7 @@
 'use strict';
 
 var //search = require( './search' ),
-	fabricator = require( './fabricator' ),
-	ripple = require( './ripple' );
+	fabricator = require( './fabricator' );
 
 require( 'prismjs' );
 
@@ -15,6 +14,5 @@ require( 'prismjs' );
 	fabricator.buildColorChips();
 	fabricator.setActiveItem();
 	fabricator.fixSidebar();
-	ripple.init();
 
 } )();
