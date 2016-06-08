@@ -12,8 +12,96 @@
 	border-radius: 0;
 }
 
+.card-img-left {
+	border-radius: $border-radius 0 0 $border-radius;
+}
+
 .card-title {
 	color: $jdrf-blue;
+}
+
+.card-featured {
+	overflow: hidden;
+
+	@include media-breakpoint-up(md) {
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	.card-hero-block {
+		&:nth-child(1) {
+			@include media-breakpoint-up(md) {
+				width: 40%;
+			}
+		}
+
+		&:nth-child(2) {
+			@include media-breakpoint-up(md) {
+				width: 60%;
+			}
+		}
+	}
+
+	.card-subtitle {
+		margin-bottom: 0.75rem;
+	}
+
+	.card-footer {
+		border-top: 0;
+
+		.card-link {
+			font-size: $paragraph-size;
+		}
+	}
+}
+
+.card-hero {
+	width: 100%;
+	height: 100%;
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -40%;
+		right: 0;
+		z-index: 1;
+		display: block;
+		width: 100%;
+		height: 50%;
+		transform: skewY(3deg);
+		background-color: $jdrf-white;
+
+		@include media-breakpoint-up(md) {
+			top: 0;
+			bottom: auto;
+			right: -35%;
+			display: block;
+			width: 50%;
+			height: 100%;
+			transform: skewX(-10deg);
+		}
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		object-fit: cover;
+	}
+}
+
+.card-hero-block {
+	position: relative;
+	z-index: 2;
+}
+
+.card-header {
+	background-color: $jdrf-white;
+	color: $text-secondary;
+}
+
+.card-footer {
+	background-color: $jdrf-white;
 }
 
 .card-program {
@@ -28,7 +116,7 @@
 			width: 60%;
 			border-radius: $border-radius 0 0 $border-radius;
 
-			@include media-breakpoint-up(sm) {
+			@include media-breakpoint-up(md) {
 				width: 80%;
 			}
 		}
@@ -38,7 +126,7 @@
 			border-radius: 0 $border-radius $border-radius 0;
 			text-align: right;
 
-			@include media-breakpoint-up(sm) {
+			@include media-breakpoint-up(md) {
 				width: 20%;
 			}
 		}
