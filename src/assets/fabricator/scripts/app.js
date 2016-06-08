@@ -4,7 +4,6 @@
 
 var //search = require( './search' ),
 	fabricator = require( './fabricator' );
-//ripple = require( './ripple' );
 
 require( 'prismjs' );
 
@@ -15,6 +14,5 @@ require( 'prismjs' );
 	fabricator.buildColorChips();
 	fabricator.setActiveItem();
 	fabricator.fixSidebar();
-	//ripple.init();
 
 } )();
