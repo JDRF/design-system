@@ -65,12 +65,7 @@ Below are the different available Design System elements. If possible, an elemen
 Please review the contributing doc found [here](https://github.com/JDRF/design-system/blob/master/CONTRIBUTING.md)
 
 ### Installation
-This will require that the master branch to be setup in a sub folder at ./design-system. This will pull the latest code, run npm install, and afterwords run gulp.
-```
-npm run pull
-```
-It will setup your working directory to the below file structure
-
+This will require that the master branch to be setup in a sub folder at ./design-system. Be sure that you have switched to the gh-pages branch and cloned another copy of the repo (master branch) into your working directory. The structure should be similar to below.
 ````
 └── working-directory (gh-pages branch)
 	├── /design-system/ (master branch)
@@ -79,6 +74,10 @@ It will setup your working directory to the below file structure
 	├── gulpfile.js
 	└── package.json
 ````
+Once your file structure matches the above, you can run the below command to npm install and build the correct files.
+```
+npm run pull
+```
 
 To find available commands from this recommended setup, please visit the [gh-pages](https://github.com/JDRF/design-system/tree/gh-pages) branch
 
