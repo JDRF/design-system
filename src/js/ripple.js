@@ -26,12 +26,15 @@ var win = typeof window !== 'undefined' ? window : global.window;
 					return pxPerSecond;
 				},
 
+				exclude: ['ds-no-ripple'],
+
 				easing: 'linear'
 			};
 
 			self.defaults = $.extend( {}, self.defaults, options );
 
 			$( doc ).on( self.defaults.on, self.selector, rippleTrigger.bind( self ) );
+
 		};
 
 		var rippleTrigger = function( e ) {
@@ -39,6 +42,21 @@ var win = typeof window !== 'undefined' ? window : global.window;
 			var $this = $( e.target );
 			var $ripple;
 			var settings;
+
+			var excludeClasses = this.defaults.exclude;
+			var removeRipple = false;
+
+			if ( Array.isArray( excludeClasses ) ) {
+				$.each( excludeClasses, function( index, value ) {
+					if ( $this.hasClass( value ) ) {
+						removeRipple = true;
+					}
+				} );
+
+				if ( removeRipple === true ) {
+					return;
+				}
+			}
 
 			// Add ds-has-ripple class
 			$this.addClass( 'ds-has-ripple' );
