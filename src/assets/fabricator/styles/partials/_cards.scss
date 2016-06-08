@@ -3,7 +3,28 @@
 		max-width: 20rem;
 	}
 
+	.ds-card-featured,
 	.ds-card-program {
 		max-width: 100%;
+	}
+
+	.ds-card-featured {
+		@include desktop {
+			height: 300px;
+		}
+
+		@include mobile {
+			height: auto;
+		}
+
+		.ds-card-img-left {
+			@include desktop {
+				height: 300px;
+			}
+
+			@include mobile {
+				height: auto;
+			}
+		}
 	}
 }
