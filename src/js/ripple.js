@@ -34,6 +34,7 @@ var win = typeof window !== 'undefined' ? window : global.window;
 			self.defaults = $.extend( {}, self.defaults, options );
 
 			$( doc ).on( self.defaults.on, self.selector, rippleTrigger.bind( self ) );
+
 		};
 
 		var rippleTrigger = function( e ) {
