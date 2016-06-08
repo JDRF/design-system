@@ -5912,6 +5912,10 @@ input[type="button"].ds-btn-block {
   width: 100%;
 }
 
+.ds-btn-icon:before {
+  display: block;
+}
+
 .ds-btn-icon span {
   display: inline-block;
   vertical-align: middle;
@@ -6223,6 +6227,11 @@ input[type="button"].ds-btn-block {
 .ds-btn-group-vertical.ds-btn-icon-group .ds-btn:focus {
   background-color: #e0e0e0;
   border-color: #e0e0e0;
+}
+
+.ds-btn-group.ds-btn-icon-group .ds-btn:before,
+.ds-btn-group-vertical.ds-btn-icon-group .ds-btn:before {
+  display: block;
 }
 
 /* Design System Custom - No Bootstrap Default */

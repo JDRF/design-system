@@ -196,6 +196,30 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 
 ( function() {
 
+	jQuery( document ).ready( function() {
+		var ripple = window.ripple( '.ds-btn', {
+			debug: false, // Turn Ripple.js logging on/off
+			on: 'mousedown', // The event to trigger a ripple effect
+
+			opacity: 0.4, // The opacity of the ripple
+			color: 'auto', // Set the background color. If set to "auto", it will use the text color
+			multi: false, // Allow multiple ripples per element
+
+			duration: 0.5, // The duration of the ripple
+			exclude: ['ds-no-ripple'], //Exclude ripple on this selector
+
+			// Filter function for modifying the speed of the ripple
+			rate: function( pxPerSecond ) {
+				return pxPerSecond;
+			},
+
+			easing: 'linear' // The CSS3 easing function of the ripple
+		} );
+
+		ripple.init();
+
+	} );
+
 } )();
 
 'use strict';
@@ -226,6 +250,8 @@ var win = typeof window !== 'undefined' ? window : global.window;
 					return pxPerSecond;
 				},
 
+				exclude: ['ds-no-ripple'],
+
 				easing: 'linear'
 			};
 
@@ -239,6 +265,21 @@ var win = typeof window !== 'undefined' ? window : global.window;
 			var $this = $( e.target );
 			var $ripple;
 			var settings;
+
+			var excludeClasses = this.defaults.exclude;
+			var removeRipple = false;
+
+			if ( Array.isArray( excludeClasses ) ) {
+				$.each( excludeClasses, function( index, value ) {
+					if ( $this.hasClass( value ) ) {
+						removeRipple = true;
+					}
+				} );
+
+				if ( removeRipple === true ) {
+					return;
+				}
+			}
 
 			// Add ds-has-ripple class
 			$this.addClass( 'ds-has-ripple' );

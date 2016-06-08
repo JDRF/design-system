@@ -187,6 +187,10 @@ input[type="button"] {
 }
 
 .btn-icon {
+	&:before {
+		display: block;
+	}
+
 	span {
 		display: inline-block;
 		vertical-align: middle;
