@@ -38,6 +38,11 @@ var win = typeof window !== 'undefined' ? window : global.window;
 
 		var rippleTrigger = function( e ) {
 
+			//check for IE9 and lower, return if we are in IE9 or lower
+			if ( navigator.appVersion.indexOf( 'MSIE 9.', 'MSIE 8.' ) !== -1 ) {
+				return;
+			}
+
 			var $this = $( e.target );
 			var $ripple;
 			var settings;
