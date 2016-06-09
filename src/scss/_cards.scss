@@ -10,6 +10,7 @@
 
 .card-img {
 	max-width: 100%;
+	border-radius: 0;
 }
 
 .card-img-top {
@@ -37,16 +38,11 @@
 }
 
 .card-featured {
-	overflow: hidden;
-
-	@include media-breakpoint-up(md) {
-		display: flex;
-		flex-flow: row wrap;
-	}
-
 	.card-hero-block {
-		position: relative;
-		z-index: 2;
+		@if $enable-flex {} @else {
+			display: table-cell;
+			vertical-align: top;
+		}
 
 		&-1 {
 			@include media-breakpoint-up(md) {
@@ -61,10 +57,6 @@
 		}
 	}
 
-	.card-img {
-		border-radius: 0;
-	}
-
 	.card-subtitle {
 		margin-bottom: 0.75rem;
 	}
@@ -74,15 +66,33 @@
 	}
 
 	.card-footer {
-		border-top: 0;
-
 		.card-link {
 			font-size: $paragraph-size;
 		}
 	}
 }
 
+.card-featured-hero {
+	@if $enable-flex {
+		@include media-breakpoint-up(md) {
+			display: flex;
+			flex-flow: row wrap;
+		}
+	} @else {
+		@include media-breakpoint-up(md) {
+			display: table;
+			table-layout: fixed;
+		}
+	}
+
+	.card-hero-block {
+		position: relative;
+		z-index: 2;
+	}
+}
+
 .card-hero {
+	overflow: hidden;
 	width: 100%;
 	height: 100%;
 
@@ -116,6 +126,20 @@
 	}
 }
 
+.card-hero-group {
+	@if $enable-flex {
+		@include media-breakpoint-up(md) {
+			display: flex;
+			flex-flow: row wrap;
+		}
+	} @else {
+		@include media-breakpoint-up(md) {
+			display: table;
+			table-layout: fixed;
+		}
+	}
+}
+
 .card-header {
 	background-color: $jdrf-white;
 }
@@ -125,17 +149,38 @@
 	background-color: $jdrf-white;
 }
 
+.card-content {
+	address {
+		font-size: $paragraph-size;
+
+		strong {
+			color: $jdrf-black;
+		}
+	}
+}
+
 .card-program {
-	display: flex;
-	flex-flow: row wrap;
 	border-left: 2px solid $jdrf-blue;
 	border-radius: $border-radius;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+
+	@if $enable-flex {
+		display: flex;
+		flex-flow: row wrap;
+	} @else {
+		display: table;
+		table-layout: fixed;
+	}
 
 	.card-block {
 		&:nth-child(1) {
 			width: 60%;
 			border-radius: $border-radius 0 0 $border-radius;
+
+			@if $enable-flex {} @else {
+				display: table-cell;
+				vertical-align: top;
+			}
 
 			@include media-breakpoint-up(md) {
 				width: 80%;
@@ -146,6 +191,11 @@
 			width: 40%;
 			border-radius: 0 $border-radius $border-radius 0;
 			text-align: right;
+
+			@if $enable-flex {} @else {
+				display: table-cell;
+				vertical-align: top;
+			}
 
 			@include media-breakpoint-up(md) {
 				width: 20%;
