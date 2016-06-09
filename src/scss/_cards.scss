@@ -40,8 +40,10 @@
 .card-featured {
 	.card-hero-block {
 		@if $enable-flex {} @else {
-			display: table-cell;
-			vertical-align: top;
+			@include media-breakpoint-up(md) {
+				display: table-cell;
+				vertical-align: top;
+			}
 		}
 
 		&-1 {
@@ -75,13 +77,17 @@
 .card-featured-hero {
 	@if $enable-flex {
 		@include media-breakpoint-up(md) {
-			display: flex;
-			flex-flow: row wrap;
+			@include media-breakpoint-up(md) {
+				display: flex;
+				flex-flow: row wrap;
+			}
 		}
 	} @else {
 		@include media-breakpoint-up(md) {
-			display: table;
-			table-layout: fixed;
+			@include media-breakpoint-up(md) {
+				display: table;
+				table-layout: fixed;
+			}
 		}
 	}
 
