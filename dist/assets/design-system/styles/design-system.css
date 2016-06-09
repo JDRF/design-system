@@ -2773,10 +2773,6 @@ html {
   width: device-width;
 }
 
-@-o-viewport {
-  width: device-width;
-}
-
 @-webkit-viewport {
   width: device-width;
 }
@@ -2899,7 +2895,8 @@ label,
 select,
 summary,
 textarea {
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 table {
@@ -4618,6 +4615,21 @@ mark,
   outline: none;
 }
 
+.ds-form-control::-webkit-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.ds-form-control::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.ds-form-control:-ms-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
 .ds-form-control::placeholder {
   color: #999;
   opacity: 1;
@@ -4975,7 +4987,10 @@ input[type="checkbox"].ds-disabled {
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-family: "Gotham Medium", sans-serif;
   text-transform: uppercase;
   border: 2px solid transparent;
@@ -5923,6 +5938,9 @@ input[type="button"].ds-btn-block {
 
 .ds-btn-loading {
   min-width: 100px;
+}
+
+.ds-btn-loading:not(.ds-btn-ie-fallback) {
   padding: 0.5rem 1rem;
 }
 
@@ -5933,9 +5951,11 @@ input[type="button"].ds-btn-block {
 }
 
 .ds-btn-loading .ds-path {
-  stroke-dasharray: 1,200;
+  stroke-dasharray: 90;
   stroke-dashoffset: 0;
-  transform-origin: center;
+  -ms-transform-origin: center;
+      transform-origin: center;
+  stroke-linecap: round;
   animation: spinner-dash 1.5s ease-in-out infinite, spinner-colors 6s ease-in-out infinite;
 }
 
@@ -7116,8 +7136,6 @@ a.ds-bg-danger:hover {
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
 }
 
 .ds-ripple {
@@ -7125,7 +7143,8 @@ a.ds-bg-danger:hover {
   position: absolute;
   pointer-events: none;
   border-radius: 50%;
-  transform: scale(0);
+  -ms-transform: scale(0);
+      transform: scale(0);
   background: #fff;
   opacity: 1;
 }
@@ -7138,7 +7157,5 @@ a.ds-bg-danger:hover {
   100% {
     opacity: 0;
     transform: scale(2);
-    -webkit-transform: scale(2);
-    -ms-transform: scale(2);
   }
 }
