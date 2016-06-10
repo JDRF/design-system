@@ -7191,6 +7191,15 @@ button.ds-list-group-item-danger.ds-active:hover {
   color: #0073cf;
 }
 
+.ds-sidebar .ds-nav-item > .ds-nav {
+  display: none;
+}
+
+.ds-sidebar .ds-nav-item > .ds-nav.ds-current,
+.ds-sidebar .ds-nav-item > .ds-nav.ds-nav-show {
+  display: block;
+}
+
 .ds-sidebar .ds-nav-item > .ds-nav .ds-nav-link {
   padding-left: 2.5rem;
   font-family: "Gotham Book", sans-serif;

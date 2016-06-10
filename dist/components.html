@@ -1342,16 +1342,14 @@
 
 <section class="f-section">
 	<h3 class="f-example-title">Sidebar: Two Levels</h3>
+	<p>By default, all child menus are collapsed. To enable these by default, add the `.ds-nav-show` class. If you wish to show the class using a JavaScript interaction, add the '.ds-current' class to the child menu.</p>
 	<div class="f-example">
 		<ul class="ds-nav ds-sidebar" id="phantom-sidebar-two">
 			<li class="ds-nav-item">
 				<a class="ds-nav-link" href="#!">Parent Link</a>
-			</li>
-			<li class="ds-nav-item">
-				<a class="ds-nav-link" href="#!">Parent Link</a>
 				<ul class="ds-nav">
 					<li class="ds-nav-item">
-						<a class="ds-nav-link ds-current" href="#!">Child Link</a>
+						<a class="ds-nav-link" href="#!">Current Child</a>
 					</li>
 					<li class="ds-nav-item">
 						<a class="ds-nav-link" href="#!">Child Link</a>
@@ -1363,18 +1361,40 @@
 			</li>
 			<li class="ds-nav-item">
 				<a class="ds-nav-link" href="#!">Parent Link</a>
+				<ul class="ds-nav ds-current">
+					<li class="ds-nav-item">
+						<a class="ds-nav-link ds-current" href="#!">Current Child</a>
+					</li>
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Child Link</a>
+					</li>
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Child Link</a>
+					</li>
+				</ul>
+			</li>
+			<li class="ds-nav-item">
+				<a class="ds-nav-link" href="#!">Parent Link</a>
+				<ul class="ds-nav ds-nav-show">
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Current Child</a>
+					</li>
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Child Link</a>
+					</li>
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Child Link</a>
+					</li>
+				</ul>
 			</li>
 		</ul>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;ul class=&quot;ds-nav ds-sidebar&quot;>
 	&lt;li class=&quot;ds-nav-item&quot;>
 		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
-	&lt;/li>
-	&lt;li class=&quot;ds-nav-item&quot;>
-		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
 		&lt;ul class=&quot;ds-nav&quot;>
 			&lt;li class=&quot;ds-nav-item&quot;>
-				&lt;a class=&quot;ds-nav-link current&quot; href=&quot;#!&quot;>Current Child&lt;/a>
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Current Child&lt;/a>
 			&lt;/li>
 			&lt;li class=&quot;ds-nav-item&quot;>
 				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
@@ -1386,6 +1406,31 @@
 	&lt;/li>
 	&lt;li class=&quot;ds-nav-item&quot;>
 		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
+		&lt;ul class=&quot;ds-nav ds-current&quot;>
+			&lt;li class=&quot;ds-nav-item&quot;>
+				&lt;a class=&quot;ds-nav-link ds-current&quot; href=&quot;#!&quot;>Current Child&lt;/a>
+			&lt;/li>
+			&lt;li class=&quot;ds-nav-item&quot;>
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
+			&lt;/li>
+			&lt;li class=&quot;ds-nav-item&quot;>
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
+			&lt;/li>
+		&lt;/ul>
+	&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>
+		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
+		&lt;ul class=&quot;ds-nav ds-nav-show&quot;>
+			&lt;li class=&quot;ds-nav-item&quot;>
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Current Child&lt;/a>
+			&lt;/li>
+			&lt;li class=&quot;ds-nav-item&quot;>
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
+			&lt;/li>
+			&lt;li class=&quot;ds-nav-item&quot;>
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
+			&lt;/li>
+		&lt;/ul>
 	&lt;/li>
 &lt;/ul>
 </code></pre>
@@ -1429,16 +1474,14 @@
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Sidebar: Two Levels&lt;/h3&gt;
+	&lt;p&gt;By default, all child menus are collapsed. To enable these by default, add the &#x60;.ds-nav-show&#x60; class. If you wish to show the class using a JavaScript interaction, add the &#x27;.ds-current&#x27; class to the child menu.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;ul class=&quot;ds-nav ds-sidebar&quot; id=&quot;phantom-sidebar-two&quot;&gt;
 			&lt;li class=&quot;ds-nav-item&quot;&gt;
 				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
-			&lt;/li&gt;
-			&lt;li class=&quot;ds-nav-item&quot;&gt;
-				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
 				&lt;ul class=&quot;ds-nav&quot;&gt;
 					&lt;li class=&quot;ds-nav-item&quot;&gt;
-						&lt;a class=&quot;ds-nav-link ds-current&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
+						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Current Child&lt;/a&gt;
 					&lt;/li&gt;
 					&lt;li class=&quot;ds-nav-item&quot;&gt;
 						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
@@ -1450,18 +1493,40 @@
 			&lt;/li&gt;
 			&lt;li class=&quot;ds-nav-item&quot;&gt;
 				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
+				&lt;ul class=&quot;ds-nav ds-current&quot;&gt;
+					&lt;li class=&quot;ds-nav-item&quot;&gt;
+						&lt;a class=&quot;ds-nav-link ds-current&quot; href=&quot;#!&quot;&gt;Current Child&lt;/a&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;ds-nav-item&quot;&gt;
+						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;ds-nav-item&quot;&gt;
+						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
+				&lt;ul class=&quot;ds-nav ds-nav-show&quot;&gt;
+					&lt;li class=&quot;ds-nav-item&quot;&gt;
+						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Current Child&lt;/a&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;ds-nav-item&quot;&gt;
+						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;ds-nav-item&quot;&gt;
+						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
 			&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;ul class=&amp;quot;ds-nav ds-sidebar&amp;quot;&gt;
 	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
 		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
-	&amp;lt;/li&gt;
-	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
 		&amp;lt;ul class=&amp;quot;ds-nav&amp;quot;&gt;
 			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-				&amp;lt;a class=&amp;quot;ds-nav-link current&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Current Child&amp;lt;/a&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Current Child&amp;lt;/a&gt;
 			&amp;lt;/li&gt;
 			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
 				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
@@ -1473,6 +1538,31 @@
 	&amp;lt;/li&gt;
 	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
 		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
+		&amp;lt;ul class=&amp;quot;ds-nav ds-current&amp;quot;&gt;
+			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link ds-current&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Current Child&amp;lt;/a&gt;
+			&amp;lt;/li&gt;
+			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
+			&amp;lt;/li&gt;
+			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
+			&amp;lt;/li&gt;
+		&amp;lt;/ul&gt;
+	&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
+		&amp;lt;ul class=&amp;quot;ds-nav ds-nav-show&amp;quot;&gt;
+			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Current Child&amp;lt;/a&gt;
+			&amp;lt;/li&gt;
+			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
+			&amp;lt;/li&gt;
+			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
+			&amp;lt;/li&gt;
+		&amp;lt;/ul&gt;
 	&amp;lt;/li&gt;
 &amp;lt;/ul&gt;
 &lt;/code&gt;&lt;/pre&gt;
