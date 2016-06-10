@@ -122,6 +122,7 @@ module.exports = {
 			href = item.getAttribute( 'href' ).replace( /^\//g, '' );
 
 			if ( href === current ) {
+				helpers.removeClass( item.parentNode.querySelector( 'ul.ds-nav' ), 'hide-children' );
 				helpers.addClass( item, 'ds-current' );
 			} else {
 				helpers.removeClass( item, 'ds-current' );
