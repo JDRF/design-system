@@ -22,6 +22,7 @@
 		.pipe(plugins.replace('.btn', '.ds-btn'))
 		.pipe(plugins.replace('ds-activeElement', 'activeElement'))
 		.pipe(plugins.replace('ds-active++', 'active++'))
+		.pipe(plugins.replace('ds-active||', 'active||'))		
 
 		.pipe(plugins.concat('design-system.js'))
 		.pipe(gulp.dest(__dirname + '/../dist/js'));
