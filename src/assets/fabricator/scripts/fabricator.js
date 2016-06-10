@@ -123,6 +123,7 @@ module.exports = {
 
 			if ( href === current ) {
 				helpers.addClass( item, 'ds-current' );
+				helpers.addClass( item.parentNode.querySelector( 'ul.ds-nav' ), 'ds-current' );
 			} else {
 				helpers.removeClass( item, 'ds-current' );
 			}

@@ -26,16 +26,14 @@ notes: |
 
 <section class="f-section">
 	<h3 class="f-example-title">Sidebar: Two Levels</h3>
+	<p>By default, all child menus are collapsed. To enable these by default, add the `.ds-nav-show` class. If you wish to show the class using a JavaScript interaction, add the '.ds-current' class to the child menu.</p>
 	<div class="f-example">
 		<ul class="ds-nav ds-sidebar" id="phantom-sidebar-two">
 			<li class="ds-nav-item">
 				<a class="ds-nav-link" href="#!">Parent Link</a>
-			</li>
-			<li class="ds-nav-item">
-				<a class="ds-nav-link" href="#!">Parent Link</a>
 				<ul class="ds-nav">
 					<li class="ds-nav-item">
-						<a class="ds-nav-link ds-current" href="#!">Child Link</a>
+						<a class="ds-nav-link" href="#!">Current Child</a>
 					</li>
 					<li class="ds-nav-item">
 						<a class="ds-nav-link" href="#!">Child Link</a>
@@ -47,6 +45,31 @@ notes: |
 			</li>
 			<li class="ds-nav-item">
 				<a class="ds-nav-link" href="#!">Parent Link</a>
+				<ul class="ds-nav ds-current">
+					<li class="ds-nav-item">
+						<a class="ds-nav-link ds-current" href="#!">Current Child</a>
+					</li>
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Child Link</a>
+					</li>
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Child Link</a>
+					</li>
+				</ul>
+			</li>
+			<li class="ds-nav-item">
+				<a class="ds-nav-link" href="#!">Parent Link</a>
+				<ul class="ds-nav ds-nav-show">
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Current Child</a>
+					</li>
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Child Link</a>
+					</li>
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Child Link</a>
+					</li>
+				</ul>
 			</li>
 		</ul>
 	</div>
