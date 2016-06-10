@@ -8,6 +8,7 @@
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
+// Images
 .card-img {
 	max-width: 100%;
 	border-radius: 0;
@@ -29,6 +30,7 @@
 	margin-right: auto;
 }
 
+// Text
 .text-center {
 	text-align: center;
 }
@@ -37,109 +39,7 @@
 	color: $jdrf-blue;
 }
 
-.card-featured {
-	.card-hero-block {
-		@if $enable-flex {} @else {
-			display: table-cell;
-			vertical-align: top;
-		}
-
-		&-1 {
-			@include media-breakpoint-up(md) {
-				width: 40%;
-			}
-		}
-
-		&-2 {
-			@include media-breakpoint-up(md) {
-				width: 60%;
-			}
-		}
-	}
-
-	.card-subtitle {
-		margin-bottom: 0.75rem;
-	}
-
-	.card-header {
-		width: 100%;
-	}
-
-	.card-footer {
-		.card-link {
-			font-size: $paragraph-size;
-		}
-	}
-}
-
-.card-featured-hero {
-	@if $enable-flex {
-		@include media-breakpoint-up(md) {
-			display: flex;
-			flex-flow: row wrap;
-		}
-	} @else {
-		@include media-breakpoint-up(md) {
-			display: table;
-			table-layout: fixed;
-		}
-	}
-
-	.card-hero-block {
-		position: relative;
-		z-index: 2;
-	}
-}
-
-.card-hero {
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-
-	&:after {
-		content: "";
-		position: absolute;
-		bottom: -40%;
-		right: 0;
-		z-index: 1;
-		display: block;
-		width: 100%;
-		height: 50%;
-		transform: skewY(3deg);
-		background-color: $jdrf-white;
-
-		@include media-breakpoint-up(md) {
-			top: 0;
-			bottom: auto;
-			right: -35%;
-			display: block;
-			width: 50%;
-			height: 100%;
-			transform: skewX(-10deg);
-		}
-	}
-
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-}
-
-.card-hero-group {
-	@if $enable-flex {
-		@include media-breakpoint-up(md) {
-			display: flex;
-			flex-flow: row wrap;
-		}
-	} @else {
-		@include media-breakpoint-up(md) {
-			display: table;
-			table-layout: fixed;
-		}
-	}
-}
-
+// Layout
 .card-header {
 	background-color: $jdrf-white;
 }
@@ -159,6 +59,123 @@
 	}
 }
 
+// Featured card
+.card-featured {
+	.card-hero-block {
+		@if $enable-flex {} @else {
+			@include media-breakpoint-up(md) {
+				display: table-cell;
+				vertical-align: top;
+			}
+		}
+
+		&-1 {
+			@include media-breakpoint-up(md) {
+				width: 40%;
+			}
+		}
+
+		&-2 {
+			@include media-breakpoint-up(md) {
+				width: 60%;
+			}
+		}
+	}
+
+	.card-img {
+		@extend .card-img-center;
+	}
+
+	.card-subtitle {
+		margin-bottom: 0.75rem;
+	}
+
+	.card-header {
+		width: 100%;
+		@extend .text-center;
+
+		@include media-breakpoint-up(md) {
+			text-align: left;
+		}
+	}
+
+	.card-footer {
+		.card-link {
+			font-size: $paragraph-size;
+		}
+	}
+}
+
+// Featured card with momentum line mask
+.card-featured-hero {
+	overflow: hidden;
+
+	> .card-header {
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+	}
+
+	.card-hero-block {
+		position: relative;
+		z-index: 2;
+
+		> .card-header {
+			display: none;
+
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
+		}
+	}
+}
+
+// Featured card hero with momentum line mask
+.card-hero {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: -35%;
+		z-index: 1;
+		display: none;
+		width: 50%;
+		height: 100%;
+		transform: skewX(-10deg);
+		background-color: $jdrf-white;
+
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+// Hero columns
+.card-hero-group {
+	@if $enable-flex {
+		@include media-breakpoint-up(md) {
+			display: flex;
+			flex-flow: row wrap;
+		}
+	} @else {
+		@include media-breakpoint-up(md) {
+			display: table;
+			table-layout: fixed;
+		}
+	}
+}
+
+// Content type Program card
 .card-program {
 	border-left: 2px solid $jdrf-blue;
 	border-radius: $border-radius;
