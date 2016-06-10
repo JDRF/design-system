@@ -49,7 +49,9 @@
     "jquery": "^2.2.4",
     "material-icons": "^0.1.0",
     "merge-stream": "^1.0.0",
-    "run-sequence": "^1.2.1"
+    "run-sequence": "^1.2.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1"
   },
   "dependencies": {
     "gulp": "^3.9.1",
