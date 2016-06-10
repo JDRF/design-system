@@ -28,7 +28,7 @@
 
 		> .nav {
 			display: none;
-			&.current {
+			&.current, &.nav-show {
 				display: block;
 			}
 			.nav-link {
