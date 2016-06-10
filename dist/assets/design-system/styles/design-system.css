@@ -6809,13 +6809,15 @@ button.ds-list-group-item-danger.ds-active:hover {
   border-radius: 0.125rem 0 0 0.125rem;
 }
 
-.ds-card-img-center {
+.ds-card-img-center,
+.ds-card-featured .ds-card-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.ds-text-center {
+.ds-text-center,
+.ds-card-featured .ds-card-header {
   text-align: center;
 }
 
@@ -6823,9 +6825,28 @@ button.ds-list-group-item-danger.ds-active:hover {
   color: #0073cf;
 }
 
-.ds-card-featured .ds-card-hero-block {
-  display: table-cell;
-  vertical-align: top;
+.ds-card-header {
+  background-color: #ffffff;
+}
+
+.ds-card-footer {
+  border: 0;
+  background-color: #ffffff;
+}
+
+.ds-card-content address {
+  font-size: 0.875rem;
+}
+
+.ds-card-content address strong {
+  color: #000000;
+}
+
+@media (min-width: 768px) {
+  .ds-card-featured .ds-card-hero-block {
+    display: table-cell;
+    vertical-align: top;
+  }
 }
 
 @media (min-width: 768px) {
@@ -6848,20 +6869,39 @@ button.ds-list-group-item-danger.ds-active:hover {
   width: 100%;
 }
 
+@media (min-width: 768px) {
+  .ds-card-featured .ds-card-header {
+    text-align: left;
+  }
+}
+
 .ds-card-featured .ds-card-footer .ds-card-link {
   font-size: 0.875rem;
 }
 
+.ds-card-featured-hero {
+  overflow: hidden;
+}
+
 @media (min-width: 768px) {
-  .ds-card-featured-hero {
-    display: table;
-    table-layout: fixed;
+  .ds-card-featured-hero > .ds-card-header {
+    display: none;
   }
 }
 
 .ds-card-featured-hero .ds-card-hero-block {
   position: relative;
   z-index: 2;
+}
+
+.ds-card-featured-hero .ds-card-hero-block > .ds-card-header {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .ds-card-featured-hero .ds-card-hero-block > .ds-card-header {
+    display: block;
+  }
 }
 
 .ds-card-hero {
@@ -6873,27 +6913,20 @@ button.ds-list-group-item-danger.ds-active:hover {
 .ds-card-hero:after {
   content: "";
   position: absolute;
-  bottom: -40%;
-  right: 0;
+  top: 0;
+  right: -35%;
   z-index: 1;
-  display: block;
-  width: 100%;
-  height: 50%;
-  -ms-transform: skewY(3deg);
-      transform: skewY(3deg);
+  display: none;
+  width: 50%;
+  height: 100%;
+  -ms-transform: skewX(-10deg);
+      transform: skewX(-10deg);
   background-color: #ffffff;
 }
 
 @media (min-width: 768px) {
   .ds-card-hero:after {
-    top: 0;
-    bottom: auto;
-    right: -35%;
     display: block;
-    width: 50%;
-    height: 100%;
-    -ms-transform: skewX(-10deg);
-        transform: skewX(-10deg);
   }
 }
 
@@ -6908,23 +6941,6 @@ button.ds-list-group-item-danger.ds-active:hover {
     display: table;
     table-layout: fixed;
   }
-}
-
-.ds-card-header {
-  background-color: #ffffff;
-}
-
-.ds-card-footer {
-  border: 0;
-  background-color: #ffffff;
-}
-
-.ds-card-content address {
-  font-size: 0.875rem;
-}
-
-.ds-card-content address strong {
-  color: #000000;
 }
 
 .ds-card-program {
