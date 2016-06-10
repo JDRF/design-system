@@ -27,6 +27,10 @@
 		}
 
 		> .nav {
+			display: none;
+			&.current {
+				display: block;
+			}
 			.nav-link {
 				padding-left: 2.5rem;
 				font-family: $font-regular;
