@@ -15,7 +15,7 @@
 			{{#each materials}}
 			<li class="ds-nav-item">
 				<a href="./{{@key}}.html" class="f-menu__heading ds-nav-link">{{name}}</a>
-				<ul class="ds-nav">
+				<ul class="ds-nav hide-children">
 					{{#each items}}
 					{{#if_not_eq 'Forms' name}}
 					<li>
