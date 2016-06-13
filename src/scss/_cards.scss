@@ -115,6 +115,7 @@
 
 	.card-img {
 		@extend .card-img-center;
+		border: 1px solid $card-hero-border-color;
 	}
 
 	.card-subtitle {
