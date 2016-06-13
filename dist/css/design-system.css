@@ -6821,6 +6821,14 @@ button.ds-list-group-item-danger.ds-active:hover {
   text-align: center;
 }
 
+.ds-text-address {
+  font-size: 0.875rem;
+}
+
+.ds-text-address strong {
+  color: #000000;
+}
+
 .ds-card-title {
   color: #0073cf;
 }
