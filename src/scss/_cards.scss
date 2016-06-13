@@ -35,6 +35,14 @@
 	text-align: center;
 }
 
+.text-address {
+	font-size: $font-size-lg;
+
+	strong {
+		color: $jdrf-black;
+	}
+}
+
 .card-title {
 	color: $jdrf-blue;
 }
