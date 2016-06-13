@@ -2529,6 +2529,8 @@
 
 /* Border width at 2px */
 
+/* Cards */
+
 /* Bootstrap overwrites: mixins.scss */
 
 /* Bootstrap @import "scss/mixins/border-radius.scss */
@@ -6283,22 +6285,22 @@ input[type="button"].ds-btn-block {
 .ds-card {
   position: relative;
   display: block;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.625rem;
   background-color: #fff;
   border: 1px solid #e5e5e5;
   border-radius: 0.25rem;
 }
 
 .ds-card-block {
-  padding: 1.25rem;
+  padding: 1.5rem;
 }
 
 .ds-card-title {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.625rem;
 }
 
 .ds-card-subtitle {
-  margin-top: -0.375rem;
+  margin-top: -0.3125rem;
   margin-bottom: 0;
 }
 
@@ -6311,7 +6313,7 @@ input[type="button"].ds-btn-block {
 }
 
 .ds-card-link + .ds-card-link {
-  margin-left: 1.25rem;
+  margin-left: 1.5rem;
 }
 
 .ds-card > .ds-list-group:first-child .list-group-item {
@@ -6323,7 +6325,7 @@ input[type="button"].ds-btn-block {
 }
 
 .ds-card-header {
-  padding: 0.75rem 1.25rem;
+  padding: 0.625rem 1.5rem;
   background-color: #f5f5f5;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -6333,7 +6335,7 @@ input[type="button"].ds-btn-block {
 }
 
 .ds-card-footer {
-  padding: 0.75rem 1.25rem;
+  padding: 0.625rem 1.5rem;
   background-color: #f5f5f5;
   border-top: 1px solid #e5e5e5;
 }
@@ -6835,6 +6837,15 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card-header {
   background-color: #ffffff;
+}
+
+.ds-card-header.ds-h1,
+.ds-card-header.ds-h2,
+.ds-card-header.ds-h3,
+.ds-card-header.ds-h4,
+.ds-card-header.ds-h5,
+.ds-card-header.ds-h6 {
+  margin-bottom: 0;
 }
 
 .ds-card-footer {
