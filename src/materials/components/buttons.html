@@ -79,13 +79,14 @@ notes: |
 	<h3 class="f-example-title">Button Animations</h3>
 	<p>The ripple animations are applied to all buttons by default.* To remove the ripple effect, there are two routes you can take. The first is to use the Design System's preset class <code class="language-markup">.ds-no-ripple</code> and add it to the button in which you want the ripple effect removed (pictured below).</p>
 	<p>The second route is to create a custom JS file and set up your own overwrite function using the <code class="language-markup">exclude</code> parameter. Refer to <a href="https://github.com/JDRF/design-system/blob/master/src/js/app.js" target="_blank">app.js</a> for reference. Using the second route, multiple classes can be added to remove the ripple effect.</p>
-	<p>The loading icon can be added into a button by adding a class of <code class="language-markup">.ds-btn-loading</code> to existing button classes.</p>
-	<p><small>* Ripple effect supported in IE10+ in addition to modern browsers.</small></p>
+	<p>The loading icon can be added into a button by adding a class of <code class="language-markup">.ds-btn-loading</code> to existing button classes.*</p>
+	<p><small>* Ripple effect supported in IE10+ in addition to modern browsers.</small><br/>
+	<small>* Loading icon is replaced with the word "Loading..." in IE9 and lower.</small></p>
 	<div class="f-example">
 		<button type="button" class="ds-btn ds-btn-primary ds-no-ripple" id="phantom-ds-btn-ripple">Remove Ripple</button>
 		<button type="button" class="ds-btn ds-btn-primary ds-btn-loading" id="phantom-ds-btn-loading">
 			<svg class="ds-spinner" viewBox="25 25 50 50" xmlns="http://www.w3.org/2000/svg">
-				<circle class="ds-path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10"></circle>
+				<circle class="ds-path" cx="50" cy="50" r="20" fill="none" stroke="#ffffff" stroke-width="4" stroke-miterlimit="10"></circle>
 			</svg>
 		</button>
 	</div>
