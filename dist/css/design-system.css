@@ -6831,6 +6831,10 @@ button.ds-list-group-item-danger.ds-active:hover {
   color: #000000;
 }
 
+.ds-card-text-wrapper p:last-child {
+  margin-bottom: 0;
+}
+
 .ds-card-title {
   color: #0073cf;
 }
