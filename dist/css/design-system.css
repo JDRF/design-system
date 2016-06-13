@@ -2912,7 +2912,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #818a91;
+  color: rgba(0, 0, 0, 0.54);
   text-align: left;
   caption-side: bottom;
 }
@@ -6825,6 +6825,8 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-text-address {
   font-size: 0.875rem;
+  font-family: "Gotham Medium", sans-serif;
+  color: rgba(0, 0, 0, 0.54);
 }
 
 .ds-text-address strong {
@@ -6840,6 +6842,10 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-card-header {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: rgba(0, 0, 0, 0.54);
   background-color: #ffffff;
 }
 
@@ -6863,6 +6869,13 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card-content address strong {
   color: #000000;
+}
+
+.ds-card-subtitle {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgba(0, 0, 0, 0.54);
 }
 
 @media (min-width: 768px) {
@@ -7448,7 +7461,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-text-muted {
-  color: #818a91;
+  color: rgba(0, 0, 0, 0.54);
 }
 
 .ds-text-primary {

@@ -37,6 +37,8 @@
 
 .text-address {
 	font-size: $font-size-lg;
+	font-family: $font-medium;
+	color: $text-muted;
 
 	strong {
 		color: $jdrf-black;
@@ -55,6 +57,10 @@
 
 // Layout
 .card-header {
+	font-family: $card-header-font-family;
+	font-size: $card-header-font-size;
+	line-height: $card-header-line-height;
+	color: $text-muted;
 	background-color: $jdrf-white;
 
 	&.h1, &.h2, &.h3, &.h4, &.h5, &.h6 {
@@ -75,6 +81,13 @@
 			color: $jdrf-black;
 		}
 	}
+}
+
+.card-subtitle {
+	font-family: $card-subtitle-font-family;
+	font-size: $card-subtitle-font-size;
+	line-height: $card-subtitle-line-height;
+	color: $text-muted;
 }
 
 // Featured card
