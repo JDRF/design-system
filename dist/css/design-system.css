@@ -6885,16 +6885,41 @@ button.ds-list-group-item-danger.ds-active:hover {
   }
 }
 
+@media (max-width: 991px) {
+  .ds-card-featured .ds-card-hero-block-1 {
+    padding-bottom: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .ds-card-featured .ds-card-hero-block-1 {
     width: 40%;
+    padding-right: 0;
   }
 }
 
 @media (min-width: 768px) {
   .ds-card-featured .ds-card-hero-block-2 {
-    width: 60%;
+    width: 40%;
   }
+}
+
+@media (max-width: 991px) {
+  .ds-card-featured .ds-card-hero-block-3 {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .ds-card-featured .ds-card-hero-block-3 {
+    padding-left: 0;
+    width: 15%;
+  }
+}
+
+.ds-card-featured .ds-card-img {
+  width: 100%;
+  height: auto;
 }
 
 .ds-card-featured .ds-card-subtitle {
