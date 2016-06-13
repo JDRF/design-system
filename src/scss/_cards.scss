@@ -43,6 +43,12 @@
 	}
 }
 
+.card-text-wrapper {
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
 .card-title {
 	color: $jdrf-blue;
 }
