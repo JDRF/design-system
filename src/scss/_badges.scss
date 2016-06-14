@@ -1,4 +1,5 @@
 @import 'scss/labels';
+@import 'scss/nav';
 
 /**
  * In Bootstrap v4, Badges are replaced by Labels
@@ -7,9 +8,9 @@
 
 // Label
 .label {
-	padding: 0.15em 0.4em;
-	border-radius: 10rem;
-	vertical-align: middle;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	border-radius: 0.75rem;
 }
 
 // Colors
@@ -17,4 +18,23 @@
 	border: 1px solid $text-primary;
 	background-color: $jdrf-white;
 	color: $text-primary;
+}
+
+// Button
+.btn {
+	&-primary,
+	&-flat {
+		.label-default {
+			background-color: $jdrf-white;
+			color: $jdrf-green;
+		}
+	}
+
+	&-link,
+	&-primary-outline {
+		.label-default {
+			background-color: $jdrf-green;
+			color: $jdrf-white;
+		}
+	}
 }
