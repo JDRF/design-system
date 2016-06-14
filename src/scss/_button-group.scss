@@ -49,3 +49,22 @@
 		}
 	}
 }
+
+.checkbox-buttons,
+.radio-buttons {
+	&.btn-group {
+		.btn {
+			margin-left: 0.25rem;
+			margin-right: 0.25rem;
+			border-radius: $btn-border-radius;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
