@@ -74,6 +74,20 @@ fieldset[disabled] a.btn {
 
 .btn-primary-outline {
 	@include button-outline-variant($btn-primary-bg);
+	@include elevation-remove;
+
+	&:active,
+	&.active {
+		@include elevation-remove;
+	}
+
+	@include hover-focus {
+		@include elevation-remove;
+	}
+
+	&.focus {
+		@include elevation-remove;
+	}
 }
 .btn-secondary-outline {
 	@include button-outline-variant($btn-secondary-border);
