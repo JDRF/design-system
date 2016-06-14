@@ -62,10 +62,19 @@ Below are the different available Design System elements. If possible, an elemen
 	* Example: [here](http://jdrf.github.io/design-system/dist/content.html#typography)
 
 # Contributing
-Please review the contributing doc found [here](https://github.com/JDRF/design-system/blob/master/CONTRIBUTING.md)
 
 ### Installation
 This will require that the master branch to be setup in a sub folder at ./design-system. Be sure that you have switched to the gh-pages branch and cloned another copy of the repo (master branch) into your working directory. The structure should be similar to below.
+
+````
+# Fork the repo in GitHub
+git clone https://github.com/<GIT USERNAME>/design-system.git
+git remote add upstream https://github.com/JDRF/design-system.git
+git checkout -b gh-pages upstream/gh-pages
+git push origin gh-pages
+git clone https://github.com/<GIT USERNAME>/design-system.git
+````
+Now your file structure matches the below, you can run the next below command to npm install and build the correct files.
 ````
 └── working-directory (gh-pages branch)
 	├── /design-system/ (master branch)
@@ -74,12 +83,15 @@ This will require that the master branch to be setup in a sub folder at ./design
 	├── gulpfile.js
 	└── package.json
 ````
-Once your file structure matches the above, you can run the below command to npm install and build the correct files.
+
 ```
 npm run pull
 ```
 
 To find available commands from this recommended setup, please visit the [gh-pages](https://github.com/JDRF/design-system/tree/gh-pages) branch
+
+### Pull Requests
+Please review the contributing doc found [here](https://github.com/JDRF/design-system/blob/master/CONTRIBUTING.md)
 
 ### Tests
 Tests can be run from the master branch. There are two kinds of testing currently in the Design System - Visual Regression and Unit Tests. Visual Regression relies on PhantomCSS and CasperJS as tools and the gh-pages static site as a visual source. As a result, the testing actually gets executed from that branch when the environment is setup properly (see Installation above). Unit Tests rely on Tape and Node scripting for generating mocks and tests.
