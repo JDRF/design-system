@@ -26,6 +26,7 @@ $jdrf-magenta: #e01279;
 $jdrf-orange: #fa6323;
 $jdrf-blue: $primary-blue;
 $jdrf-white: #ffffff;
+$jdrf-black: #000000;
 
 $accent-blue: #09bcef;
 $accent-green: #8cd600;
@@ -110,6 +111,9 @@ $lead-font-size-sm: 1.125rem;
 $lead-font-size-md: 1.25rem;
 $lead-line-height-md: 1.75rem;
 
+$paragraph-size-x-sm: 0.75rem; /* 12px */
+$paragraph-lineheight-x-sm: 1.125rem; /* 18px */
+
 $paragraph-size: 0.875rem; /* 14px */
 $paragraph-lineheight: 1.25rem; /* 20px */
 
@@ -176,3 +180,14 @@ $btn-border-radius-sm: $border-radius;
 
 /* Border width at 2px */
 $input-btn-border-width: 2px;
+
+/* Cards */
+$card-spacer-y: 0.625rem;
+$card-spacer-x: 1.5rem;
+$text-muted: $text-secondary;
+$card-header-font-size: 1rem;
+$card-header-line-height: 1.5rem;
+$card-header-font-family: $font-medium;
+$card-subtitle-font-size: 0.875rem;
+$card-subtitle-line-height: 1.25rem;
+$card-subtitle-font-family: $font-medium;
