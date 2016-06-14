@@ -6920,6 +6920,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 .ds-card-featured .ds-card-img {
   width: 100%;
   height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .ds-card-featured .ds-card-subtitle {
