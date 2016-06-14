@@ -133,6 +133,7 @@
 		width: 100%;
 		height: auto;
 		@extend .card-img-center;
+		border: 1px solid $text-dividers;
 	}
 
 	.card-subtitle {
