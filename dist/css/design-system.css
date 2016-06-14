@@ -6278,6 +6278,23 @@ input[type="button"].ds-btn-block {
   display: block;
 }
 
+.ds-checkbox-buttons.ds-btn-group .ds-btn,
+.ds-radio-buttons.ds-btn-group .ds-btn {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  border-radius: 0.125rem;
+}
+
+.ds-checkbox-buttons.ds-btn-group .ds-btn:first-child,
+.ds-radio-buttons.ds-btn-group .ds-btn:first-child {
+  margin-left: 0;
+}
+
+.ds-checkbox-buttons.ds-btn-group .ds-btn:last-child,
+.ds-radio-buttons.ds-btn-group .ds-btn:last-child {
+  margin-right: 0;
+}
+
 /* Design System Custom - No Bootstrap Default */
 
 .ds-elevation-one {
