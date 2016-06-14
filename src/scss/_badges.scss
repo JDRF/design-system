@@ -1,0 +1,20 @@
+@import 'scss/labels';
+
+/**
+ * In Bootstrap v4, Badges are replaced by Labels
+ * Bootstrap overwrites: labels.scss
+ */
+
+// Label
+.label {
+	padding: 0.15em 0.4em;
+	border-radius: 10rem;
+	vertical-align: top;
+}
+
+// Colors
+.label-outline {
+	border: 1px solid $text-primary;
+	background-color: $jdrf-white;
+	color: $text-primary;
+}
