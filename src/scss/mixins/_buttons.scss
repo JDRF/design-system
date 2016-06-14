@@ -89,20 +89,20 @@
 	&:disabled {
 		color: $grey-6;
 		border-color: $grey-6;
-		background-color: $jdrf-white;
+		background-color: transparent;
 		@include elevation-remove;
 
 		&:focus,
 		&.focus {
 			color: $grey-6;
 			border-color: $grey-6;
-			background-color: $jdrf-white;
+			background-color: transparent;
 		}
 
 		@include hover {
 			color: $grey-6;
 			border-color: $grey-6;
-			background-color: $jdrf-white;
+			background-color: transparent;
 		}
 	}
 }
