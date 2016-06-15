@@ -106,6 +106,10 @@
 										<a href="./components.html" class="f-menu__heading ds-nav-link">Components</a>
 										<ul class="ds-nav">
 											<li>
+												<a href="./components.html#badges" class="ds-nav-link">Badges</a>
+											</li>
+						
+											<li>
 												<a href="./components.html#buttons" class="ds-nav-link">Buttons</a>
 											</li>
 						
@@ -128,10 +132,6 @@
 											</li>
 						
 											<li>
-												<a href="./content.html#elevation" class="ds-nav-link">Elevation</a>
-											</li>
-						
-											<li>
 												<a href="./content.html#icons" class="ds-nav-link">Icons</a>
 											</li>
 						
@@ -144,6 +144,10 @@
 									<li class="ds-nav-item">
 										<a href="./layout.html" class="f-menu__heading ds-nav-link">Layout</a>
 										<ul class="ds-nav">
+											<li>
+												<a href="./layout.html#elevation" class="ds-nav-link">Elevation</a>
+											</li>
+						
 											<li>
 												<a href="./layout.html#grid" class="ds-nav-link">Grid</a>
 											</li>
@@ -160,6 +164,212 @@
 						<!-- /fabricator menu -->
 				<main class="f-content ds-col-md-8 ds-col-lg-9" role="main">
 					
+
+
+<div class="f-item-group" id="badges">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Badges</h2>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>The <code>badges</code> components are based on Bootstrap's label classes combined with our own customizations. In Bootstrap version 4, <code>badges</code> are replaced with <code>labels</code>.</p>
+<p>You can find documentation on <a href="https://v4-alpha.getbootstrap.com/components/label/" target="_blank">Bootstrap's label components</a> on their site.</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="f-section">
+	<h3 class="f-example-title">Outline</h3>
+	<div class="f-example">
+		<h3>Heading Three <span class="ds-label ds-label-outline">10</span></h3>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;h3>Heading Three &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h3></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Outline</h3>
+	<div class="f-example">
+		<h3>Heading Three <span class="ds-label ds-label-default">10</span></h3>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;h3>Heading Three &lt;span class=&quot;ds-label ds-label-default&quot;>10&lt;/span>&lt;/h3></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Sizes</h3>
+	<p>The Badge type size is 75% of the heading type size.</p>
+	<div class="f-example">
+		<h1>Heading One <span class="ds-label ds-label-outline">10</span></h1>
+		<h2>Heading Two <span class="ds-label ds-label-outline">10</span></h2>
+		<h3>Heading Three <span class="ds-label ds-label-outline">10</span></h3>
+		<h4>Heading Four <span class="ds-label ds-label-outline">10</span></h4>
+		<h5>Heading Five <span class="ds-label ds-label-outline">10</span></h5>
+		<h6>Heading Six <span class="ds-label ds-label-outline">10</span></h6>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;h1>Heading One &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h1>
+&lt;h2>Heading Two &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h2>
+&lt;h3>Heading Three &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h3>
+&lt;h4>Heading Four &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h4>
+&lt;h5>Heading Five &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h5>
+&lt;h6>Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h6></code></pre>
+</section>
+
+<section class="f-section">
+	<div class="f-example">
+		<h1>Heading One <span class="ds-label ds-label-default">10</span></h1>
+		<h2>Heading Two <span class="ds-label ds-label-default">10</span></h2>
+		<h3>Heading Three <span class="ds-label ds-label-default">10</span></h3>
+		<h4>Heading Four <span class="ds-label ds-label-default">10</span></h4>
+		<h5>Heading Five <span class="ds-label ds-label-default">10</span></h5>
+		<h6>Heading Six <span class="ds-label ds-label-default">10</span></h6>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;h1>Heading One &lt;span class=&quot;ds-label ds-label-solid&quot;>10&lt;/span>&lt;/h1>
+&lt;h2>Heading Two &lt;span class=&quot;ds-label ds-label-solid&quot;>10&lt;/span>&lt;/h2>
+&lt;h3>Heading Three &lt;span class=&quot;ds-label ds-label-solid&quot;>10&lt;/span>&lt;/h3>
+&lt;h4>Heading Four &lt;span class=&quot;ds-label ds-label-solid&quot;>10&lt;/span>&lt;/h4>
+&lt;h5>Heading Five &lt;span class=&quot;ds-label ds-label-solid&quot;>10&lt;/span>&lt;/h5>
+&lt;h6>Heading Six &lt;span class=&quot;ds-label ds-label-solid&quot;>10&lt;/span>&lt;/h6></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Variations</h3>
+	<div class="f-example">
+		<ul class="ds-nav ds-nav-pills">
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-h6">Heading Six <span class="ds-label ds-label-outline">1</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-h6">Heading Six <span class="ds-label ds-label-outline">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-h6">Heading Six <span class="ds-label ds-label-outline">Label</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-h6">Heading Six <span class="ds-label ds-label-outline">Long Label</span></a></li>
+		</ul>
+		<ul class="ds-nav ds-nav-pills">
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-primary">Primary <span class="ds-label ds-label-default">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-primary-outline">Outline <span class="ds-label ds-label-default">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-flat">Flat <span class="ds-label ds-label-default">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-link">Text <span class="ds-label ds-label-default">10</span></a></li>
+		</ul>
+		<ul class="ds-nav ds-nav-pills">
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-primary">Primary <span class="ds-label ds-label-outline">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-primary-outline">Outline <span class="ds-label ds-label-outline">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-flat">Flat <span class="ds-label ds-label-outline">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-link">Text <span class="ds-label ds-label-outline">10</span></a></li>
+		</ul>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;ul class=&quot;ds-nav ds-nav-pills&quot;>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;>Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;>1&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;>Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;>Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;>Label&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;>Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;>Long Label&lt;/span>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;ul class=&quot;ds-nav ds-nav-pills&quot;>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary&quot;>Primary &lt;span class=&quot;ds-label ds-label-default&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary-outline&quot;>Outline &lt;span class=&quot;ds-label ds-label-default&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-flat&quot;>Flat &lt;span class=&quot;ds-label ds-label-default&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-link&quot;>Text &lt;span class=&quot;ds-label ds-label-default&quot;>10&lt;/span>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;ul class=&quot;ds-nav ds-nav-pills&quot;>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary&quot;>Primary &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary-outline&quot;>Outline &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-flat&quot;>Flat &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-link&quot;>Text &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/a>&lt;/li>
+&lt;/ul></code></pre>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Outline&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;h3&gt;Heading Three &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h3&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h3&gt;Heading Three &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h3&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Outline&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;h3&gt;Heading Three &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h3&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h3&gt;Heading Three &amp;lt;span class=&amp;quot;ds-label ds-label-default&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h3&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Sizes&lt;/h3&gt;
+	&lt;p&gt;The Badge type size is 75% of the heading type size.&lt;/p&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;h1&gt;Heading One &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h1&gt;
+		&lt;h2&gt;Heading Two &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h2&gt;
+		&lt;h3&gt;Heading Three &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h3&gt;
+		&lt;h4&gt;Heading Four &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h4&gt;
+		&lt;h5&gt;Heading Five &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h5&gt;
+		&lt;h6&gt;Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h6&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&gt;Heading One &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h1&gt;
+&amp;lt;h2&gt;Heading Two &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h2&gt;
+&amp;lt;h3&gt;Heading Three &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h3&gt;
+&amp;lt;h4&gt;Heading Four &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h4&gt;
+&amp;lt;h5&gt;Heading Five &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h5&gt;
+&amp;lt;h6&gt;Heading Six &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h6&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;h1&gt;Heading One &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h1&gt;
+		&lt;h2&gt;Heading Two &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h2&gt;
+		&lt;h3&gt;Heading Three &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h3&gt;
+		&lt;h4&gt;Heading Four &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h4&gt;
+		&lt;h5&gt;Heading Five &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h5&gt;
+		&lt;h6&gt;Heading Six &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h6&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&gt;Heading One &amp;lt;span class=&amp;quot;ds-label ds-label-solid&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h1&gt;
+&amp;lt;h2&gt;Heading Two &amp;lt;span class=&amp;quot;ds-label ds-label-solid&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h2&gt;
+&amp;lt;h3&gt;Heading Three &amp;lt;span class=&amp;quot;ds-label ds-label-solid&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h3&gt;
+&amp;lt;h4&gt;Heading Four &amp;lt;span class=&amp;quot;ds-label ds-label-solid&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h4&gt;
+&amp;lt;h5&gt;Heading Five &amp;lt;span class=&amp;quot;ds-label ds-label-solid&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h5&gt;
+&amp;lt;h6&gt;Heading Six &amp;lt;span class=&amp;quot;ds-label ds-label-solid&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h6&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Variations&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;ul class=&quot;ds-nav ds-nav-pills&quot;&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;&gt;Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;&gt;Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;&gt;Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;Label&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;&gt;Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;Long Label&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;ul class=&quot;ds-nav ds-nav-pills&quot;&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary&quot;&gt;Primary &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary-outline&quot;&gt;Outline &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-flat&quot;&gt;Flat &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-link&quot;&gt;Text &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;ul class=&quot;ds-nav ds-nav-pills&quot;&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary&quot;&gt;Primary &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary-outline&quot;&gt;Outline &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-flat&quot;&gt;Flat &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-link&quot;&gt;Text &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;ul class=&amp;quot;ds-nav ds-nav-pills&amp;quot;&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-h6&amp;quot;&gt;Heading Six &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;1&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-h6&amp;quot;&gt;Heading Six &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-h6&amp;quot;&gt;Heading Six &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;Label&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-h6&amp;quot;&gt;Heading Six &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;Long Label&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+&amp;lt;/ul&gt;
+&amp;lt;ul class=&amp;quot;ds-nav ds-nav-pills&amp;quot;&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-primary&amp;quot;&gt;Primary &amp;lt;span class=&amp;quot;ds-label ds-label-default&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-primary-outline&amp;quot;&gt;Outline &amp;lt;span class=&amp;quot;ds-label ds-label-default&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-flat&amp;quot;&gt;Flat &amp;lt;span class=&amp;quot;ds-label ds-label-default&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-link&amp;quot;&gt;Text &amp;lt;span class=&amp;quot;ds-label ds-label-default&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+&amp;lt;/ul&gt;
+&amp;lt;ul class=&amp;quot;ds-nav ds-nav-pills&amp;quot;&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-primary&amp;quot;&gt;Primary &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-primary-outline&amp;quot;&gt;Outline &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-flat&amp;quot;&gt;Flat &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-link&amp;quot;&gt;Text &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+&amp;lt;/ul&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+
+</div>
+
+
 
 
 <div class="f-item-group" id="buttons">
@@ -292,27 +502,27 @@
 <section class="f-section">
 	<h3 class="f-example-title">Button Group</h3>
 	<div class="f-example" id="phantom-ds-toggle-segment">
-		<div class="ds-btn-group" role="group" aria-label="Basic example" data-toggle="buttons">
+		<div class="ds-btn-group" role="group" aria-label="Button Group Horizontal">
 			<button type="button" class="ds-btn">Left</button>
-			<button type="button" class="ds-btn ds-active">Center</button>
+			<button type="button" class="ds-btn">Center</button>
 			<button type="button" class="ds-btn">Right</button>
 		</div>
 
-		<div class="ds-btn-group-vertical" data-toggle="buttons">
+		<div class="ds-btn-group-vertical" role="group" aria-label="Button Group Vertical">
 			<button type="button" class="ds-btn">Left</button>
-			<button type="button" class="ds-btn ds-active">Center</button>
+			<button type="button" class="ds-btn">Center</button>
 			<button type="button" class="ds-btn">Right</button>
 		</div>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-btn-group&quot; role=&quot;group&quot; aria-label=&quot;Basic example&quot;>
+	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-btn-group&quot; role=&quot;group&quot; aria-label=&quot;Button Group Horizontal&quot;>
 	&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;>Left&lt;/button>
-	&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-active&quot;>Center&lt;/button>
+	&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;>Center&lt;/button>
 	&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;>Right&lt;/button>
 &lt;/div>
 
-&lt;div class=&quot;ds-btn-group-vertical&quot;>
+&lt;div class=&quot;ds-btn-group-vertical&quot; role=&quot;group&quot; aria-label=&quot;Button Group Vertical&quot;>
 	&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;>Left&lt;/button>
-	&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-active&quot;>Center&lt;/button>
+	&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;>Center&lt;/button>
 	&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;>Right&lt;/button>
 &lt;/div></code></pre>
 </section>
@@ -524,27 +734,27 @@
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Button Group&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot; id=&quot;phantom-ds-toggle-segment&quot;&gt;
-		&lt;div class=&quot;ds-btn-group&quot; role=&quot;group&quot; aria-label=&quot;Basic example&quot; data-toggle=&quot;buttons&quot;&gt;
+		&lt;div class=&quot;ds-btn-group&quot; role=&quot;group&quot; aria-label=&quot;Button Group Horizontal&quot;&gt;
 			&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;&gt;Left&lt;/button&gt;
-			&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-active&quot;&gt;Center&lt;/button&gt;
+			&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;&gt;Center&lt;/button&gt;
 			&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;&gt;Right&lt;/button&gt;
 		&lt;/div&gt;
 
-		&lt;div class=&quot;ds-btn-group-vertical&quot; data-toggle=&quot;buttons&quot;&gt;
+		&lt;div class=&quot;ds-btn-group-vertical&quot; role=&quot;group&quot; aria-label=&quot;Button Group Vertical&quot;&gt;
 			&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;&gt;Left&lt;/button&gt;
-			&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-active&quot;&gt;Center&lt;/button&gt;
+			&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;&gt;Center&lt;/button&gt;
 			&lt;button type=&quot;button&quot; class=&quot;ds-btn&quot;&gt;Right&lt;/button&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-btn-group&amp;quot; role=&amp;quot;group&amp;quot; aria-label=&amp;quot;Basic example&amp;quot;&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-btn-group&amp;quot; role=&amp;quot;group&amp;quot; aria-label=&amp;quot;Button Group Horizontal&amp;quot;&gt;
 	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn&amp;quot;&gt;Left&amp;lt;/button&gt;
-	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-active&amp;quot;&gt;Center&amp;lt;/button&gt;
+	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn&amp;quot;&gt;Center&amp;lt;/button&gt;
 	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn&amp;quot;&gt;Right&amp;lt;/button&gt;
 &amp;lt;/div&gt;
 
-&amp;lt;div class=&amp;quot;ds-btn-group-vertical&amp;quot;&gt;
+&amp;lt;div class=&amp;quot;ds-btn-group-vertical&amp;quot; role=&amp;quot;group&amp;quot; aria-label=&amp;quot;Button Group Vertical&amp;quot;&gt;
 	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn&amp;quot;&gt;Left&amp;lt;/button&gt;
-	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-active&amp;quot;&gt;Center&amp;lt;/button&gt;
+	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn&amp;quot;&gt;Center&amp;lt;/button&gt;
 	&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn&amp;quot;&gt;Right&amp;lt;/button&gt;
 &amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
