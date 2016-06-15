@@ -3,14 +3,6 @@ notes: |
   The `button` components are based on Bootstrap's button classes combined with our own customizations.
 
   You can find documentation on <a href="http://v4-alpha.getbootstrap.com/components/buttons/" target="_blank">Bootstrap's button components</a> on their site.
-
-  We're using <a href="https://github.com/google/material-design-icons" target="_blank">Material Icons</a> for icons across the Design System. The Design System includes all the necessary styles to use Material Icons, however there's some <a href="https://github.com/JDRF/design-system#using-design-system" target="_blank">additional setup</a> required to use them.
-
-  It is recommended to make use of the `ds-sr-only` class to include screen-reader text that is visually hidden, but can help identify icons to screen reader users.
-
-  Material Icons have a <a href="http://google.github.io/material-design-icons/#icon-font-for-the-web">ligatures feature</a> that allows icons to show by typing within the element. Due to this feature, depending on whether the button is icon only or icon with text, the structure of the HTML will have to change slightly.
-
-  Icons inside buttons will use existing <a href="./components.html#buttons">button classes</a> in addition to the `.ds-btn-icon` class.
 ---
 
 <section class="f-section">
@@ -173,6 +165,15 @@ notes: |
 		</div>
 	</div>
 	{{example 'button.radio'}}
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Using Icons with Buttons</h3>
+	<p>It is recommended to make use of the <code class="language-markup">.ds-sr-only</code> class to include screen-reader text that is visually hidden, but can help identify icons to screen reader users.</p>
+
+	<p>Material Icons have a <a href="http://google.github.io/material-design-icons/#icon-font-for-the-web">ligatures feature</a> that allows icons to show by typing within the element. Due to this feature, depending on whether the button is icon only or icon with text, the structure of the HTML will have to change slightly.</p>
+
+	<p>Icons inside buttons will use existing <a href="./components.html#buttons">button classes</a> in addition to the <code class="language-markup">.ds-btn-icon</code> class.</p>
 </section>
 
 <section class="f-section">
