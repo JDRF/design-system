@@ -5029,11 +5029,13 @@ input[type="checkbox"].ds-disabled {
 .ds-btn.ds-active {
   background-image: none;
   outline: 0;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-btn.ds-disabled,
 .ds-btn:disabled {
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 .ds-btn.material-icons {
@@ -6876,8 +6878,18 @@ button.ds-list-group-item-danger.ds-active:hover {
   color: rgba(0, 0, 0, 0.87);
 }
 
+.ds-text-address-link .material-icons {
+  vertical-align: middle;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.38);
+}
+
 .ds-card-text-wrapper p:last-child {
   margin-bottom: 0;
+}
+
+.ds-card-text-wrapper + .ds-card-block {
+  padding-top: 0.5rem;
 }
 
 .ds-card-title {
@@ -6885,6 +6897,8 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-card-subtitle {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
   font-family: "Gotham Medium", sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -7065,6 +7079,11 @@ button.ds-list-group-item-danger.ds-active:hover {
     display: table;
     table-layout: fixed;
   }
+}
+
+.ds-card-content .ds-card-footer {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .ds-card-program {
