@@ -65,6 +65,7 @@
 }
 
 .card-title {
+	margin-bottom: 1rem;
 	color: $jdrf-blue;
 }
 
@@ -75,6 +76,10 @@
 	font-size: $card-subtitle-font-size;
 	line-height: $card-subtitle-line-height;
 	color: $text-muted;
+}
+
+.card-text {
+	margin-bottom: 1rem;
 }
 
 // Layout
