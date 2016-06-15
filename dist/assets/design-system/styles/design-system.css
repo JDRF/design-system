@@ -6311,23 +6311,23 @@ input[type="button"].ds-btn-block {
 
 /* Design System Custom - No Bootstrap Default */
 
-.ds-elevation-one {
+.ds-elevation-1 {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
-.ds-elevation-two {
+.ds-elevation-2 {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24), 0 0 4px 0 rgba(0, 0, 0, 0.12);
 }
 
-.ds-elevation-three {
+.ds-elevation-3 {
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
-.ds-elevation-four {
+.ds-elevation-4 {
   box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
 }
 
-.ds-elevation-five {
+.ds-elevation-5 {
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3), 0 16px 12px 0 rgba(0, 0, 0, 0.22);
 }
 
