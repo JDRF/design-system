@@ -36,7 +36,7 @@
 
 	.ds-card-featured-hero {
 		@include desktop {
-			height: 300px;
+			height: 320px;
 		}
 
 		@include mobile {
@@ -45,7 +45,7 @@
 
 		.ds-card-img-left {
 			@include desktop {
-				height: 300px;
+				height: 320px;
 			}
 
 			@include mobile {
