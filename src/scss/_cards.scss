@@ -239,6 +239,7 @@
 
 			@include media-breakpoint-up(md) {
 				padding-left: 0;
+				padding-right: 2.5rem;
 			}
 		}
 
@@ -267,7 +268,7 @@
 		content: "";
 		position: absolute;
 		top: 0;
-		right: -35%;
+		right: -32%;
 		z-index: 1;
 		display: none;
 		width: 50%;
