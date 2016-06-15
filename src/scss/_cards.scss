@@ -91,7 +91,7 @@
 	line-height: $card-header-line-height;
 	color: $text-muted;
 	background-color: $jdrf-white;
-	border-bottom-width: 2px;
+	border-bottom: 1px solid $card-header-border-color;
 
 	&.h1, &.h2, &.h3, &.h4, &.h5, &.h6 {
 		margin-bottom: 0;
