@@ -9,6 +9,18 @@
 		max-width: 100%;
 	}
 
+	.ds-card {
+		.ds-btn {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	.ds-card-block-btns {
+		.ds-btn {
+			margin-bottom: 0;
+		}
+	}
+
 	.ds-card-featured,
 	.ds-card-footer {
 		.ds-btn {
@@ -16,9 +28,9 @@
 		}
 	}
 
-	.ds-card-block-btns {
+	.ds-card-featured-hero {
 		.ds-btn {
-			margin-bottom: 0;
+			margin-left: -0.5rem;
 		}
 	}
 
