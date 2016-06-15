@@ -174,6 +174,14 @@
 
 			@include media-breakpoint-up(md) {
 				display: block;
+				padding-left: 0;
+			}
+		}
+
+		> .card-block,
+		> .card-footer {
+			@include media-breakpoint-up(md) {
+				padding-left: 0;
 			}
 		}
 	}
