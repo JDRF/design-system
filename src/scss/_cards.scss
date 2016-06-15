@@ -76,6 +76,12 @@
 	font-size: $card-subtitle-font-size;
 	line-height: $card-subtitle-line-height;
 	color: $text-muted;
+
+	.material-icons {
+		margin-right: 0.5rem;
+		vertical-align: middle;
+		font-size: 1.25rem;
+	}
 }
 
 .card-text {
@@ -154,14 +160,14 @@
 
 			@include media-breakpoint-up(md) {
 				width: 40%;
-				padding-right: 0;
-				padding-bottom: 1.5rem;
+				padding: 1.5rem 0 2rem 1.5rem;
 			}
 		}
 
 		&-2 {
 			@include media-breakpoint-up(md) {
 				width: 40%;
+				padding: 1.5rem;
 			}
 		}
 
@@ -183,12 +189,25 @@
 		border: 1px solid $text-dividers;
 	}
 
+	.card-title {
+		margin-bottom: 0.75rem;
+		color: $primary-dark-blue;
+	}
+
 	.card-subtitle {
 		margin-bottom: 0.75rem;
+		padding-top: 0;
+		padding-bottom: 0;
+
+		+ .btn {
+			margin-top: 0.25rem;
+		}
 	}
 
 	.card-header {
 		width: 100%;
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
 		@extend .text-center;
 
 		@include media-breakpoint-up(md) {
