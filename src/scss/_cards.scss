@@ -56,6 +56,13 @@
 	color: $jdrf-blue;
 }
 
+.card-subtitle {
+	font-family: $card-subtitle-font-family;
+	font-size: $card-subtitle-font-size;
+	line-height: $card-subtitle-line-height;
+	color: $text-muted;
+}
+
 // Layout
 .card-header {
 	font-family: $card-header-font-family;
@@ -85,11 +92,19 @@
 	}
 }
 
-.card-subtitle {
-	font-family: $card-subtitle-font-family;
-	font-size: $card-subtitle-font-size;
-	line-height: $card-subtitle-line-height;
-	color: $text-muted;
+.card-block {
+	padding: 1rem;
+
+	&-btns {
+		padding: 0.5rem;
+	}
+}
+
+// List
+.list-group-item {
+	.card & {
+		padding: 1rem;
+	}
 }
 
 // Featured card
