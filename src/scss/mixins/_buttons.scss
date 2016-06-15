@@ -6,18 +6,18 @@
 	text-transform: $btn-font-transform;
 	background-color: $background;
 	border-color: $border;
-	@include elevation-one;
+	@include elevation-1;
 	@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
 
 	@include hover {
 		color: $color;
-		@include elevation-three;
+		@include elevation-3;
 	}
 
 	&:focus,
 	&.focus {
 		color: $color;
-		@include elevation-three;
+		@include elevation-3;
 	}
 
 	&:active,
@@ -26,7 +26,7 @@
 		color: $color;
 		// Remove the gradient for the pressed/active state
 		background-image: none;
-		@include elevation-three;
+		@include elevation-3;
 
 		&:hover,
 		&:focus,
@@ -64,7 +64,7 @@
 	background-image: none;
 	background-color: transparent;
 	border-color: $color;
-	@include elevation-one;
+	@include elevation-1;
 
 
 	&:focus,
@@ -75,14 +75,14 @@
 		color: $jdrf-white;
 		background-color: $color;
 		border-color: $color;
-		@include elevation-three;
+		@include elevation-3;
 	}
 
 	@include hover {
 		color: $jdrf-white;
 		background-color: $color;
 		border-color: $color;
-		@include elevation-three;
+		@include elevation-3;
 	}
 
 	&.disabled,

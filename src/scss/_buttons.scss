@@ -34,7 +34,7 @@
 	&.active {
 		background-image: none;
 		outline: 0;
-		@include elevation-three;
+		@include elevation-3;
 	}
 
 	&.disabled,
@@ -145,7 +145,7 @@ fieldset[disabled] a.btn {
 	@include elevation-remove;
 
 	@include hover {
-		@include elevation-two;
+		@include elevation-2;
 	}
 
 	&:focus,
@@ -153,7 +153,7 @@ fieldset[disabled] a.btn {
 	&:active,
 	&.active,
 	.open > &.dropdown-toggle {
-		@include elevation-two;
+		@include elevation-2;
 	}
 
 	&.disabled,
@@ -181,14 +181,14 @@ fieldset[disabled] a.btn {
 	padding: $btn-block-y $btn-block-x;
 
 	&:hover {
-		@include elevation-three;
+		@include elevation-3;
 	}
 
 	&:focus,
 	&.focus,
 	&:active,
 	&.active {
-		@include elevation-three;
+		@include elevation-3;
 	}
 
 	&.disabled,
