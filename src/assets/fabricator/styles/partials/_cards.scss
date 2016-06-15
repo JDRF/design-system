@@ -36,28 +36,28 @@
 
 	.ds-card-featured-hero {
 		@media screen and ( min-width: 768px ) {
-			height: 468px;
+			height: 440px;
 		}
 
 		@media screen and ( min-width: 992px ) {
-			height: 368px;
+			height: 340px;
 		}
 
 		@media screen and ( min-width: 1199px ) {
-			height: 320px;
+			height: 292px;
 		}
 
 		.ds-card-img-left {
 			@media screen and ( min-width: 768px ) {
-				height: 468px;
+				height: 440px;
 			}
 
 			@media screen and ( min-width: 992px ) {
-				height: 368px;
+				height: 340px;
 			}
 
 			@media screen and ( min-width: 1199px ) {
-				height: 320px;
+				height: 292px;
 			}
 		}
 	}
