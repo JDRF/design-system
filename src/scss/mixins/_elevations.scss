@@ -5,22 +5,22 @@
 	box-shadow: none;
 }
 
-@mixin elevation-one() {
+@mixin elevation-1() {
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
-@mixin elevation-two() {
+@mixin elevation-2() {
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24), 0 0 4px 0 rgba(0, 0, 0, 0.12);
 }
 
-@mixin elevation-three() {
+@mixin elevation-3() {
 	box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
-@mixin elevation-four() {
+@mixin elevation-4() {
 	box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
 }
 
-@mixin elevation-five() {
+@mixin elevation-5() {
 	box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3), 0 16px 12px 0 rgba(0, 0, 0, 0.22);
 }
