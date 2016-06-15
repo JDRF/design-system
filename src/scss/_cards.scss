@@ -4,8 +4,9 @@
 /* Bootstrap overwrites: card.scss */
 
 .card {
+	border: 0;
 	border-radius: 0 0 $border-radius $border-radius;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
+	@include elevation-one;
 }
 
 // Images
@@ -62,6 +63,7 @@
 	line-height: $card-header-line-height;
 	color: $text-muted;
 	background-color: $jdrf-white;
+	border-bottom-width: 2px;
 
 	&.h1, &.h2, &.h3, &.h4, &.h5, &.h6 {
 		margin-bottom: 0;
