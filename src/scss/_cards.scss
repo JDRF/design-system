@@ -215,7 +215,18 @@
 			}
 		}
 
+		> .card-block {
+			padding-top: 1.5rem;
+
+			@include media-breakpoint-up(md) {
+				padding-left: 0;
+			}
+		}
+
 		> .card-footer {
+			padding-top: 0;
+			padding-bottom: 1rem;
+
 			@include media-breakpoint-up(md) {
 				padding-left: 0;
 
