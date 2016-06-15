@@ -1,0 +1,40 @@
+@import 'scss/labels';
+@import 'scss/nav';
+
+/**
+ * In Bootstrap v4, Badges are replaced by Labels
+ * Bootstrap overwrites: labels.scss
+ */
+
+// Label
+.label {
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	border-radius: 0.75rem;
+}
+
+// Colors
+.label-outline {
+	border: 1px solid $text-primary;
+	background-color: $jdrf-white;
+	color: $text-primary;
+}
+
+// Button
+.btn {
+	&-primary,
+	&-flat {
+		.label-default {
+			background-color: $jdrf-white;
+			color: $jdrf-green;
+		}
+	}
+
+	&-link,
+	&-primary-outline {
+		.label-default {
+			background-color: $jdrf-green;
+			color: $jdrf-white;
+		}
+	}
+}
