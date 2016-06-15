@@ -6898,6 +6898,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-card-title {
+  margin-bottom: 1rem;
   color: #0073cf;
 }
 
@@ -6908,6 +6909,10 @@ button.ds-list-group-item-danger.ds-active:hover {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: rgba(0, 0, 0, 0.54);
+}
+
+.ds-card-text {
+  margin-bottom: 1rem;
 }
 
 .ds-card-header {
@@ -7053,6 +7058,31 @@ button.ds-list-group-item-danger.ds-active:hover {
   .ds-card-featured-hero .ds-card-hero-block > .ds-card-block,
   .ds-card-featured-hero .ds-card-hero-block > .ds-card-footer {
     padding-left: 0;
+  }
+}
+
+.ds-card-featured-hero .ds-card-hero-block > .ds-card-block {
+  padding-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .ds-card-featured-hero .ds-card-hero-block > .ds-card-block {
+    padding-left: 0;
+  }
+}
+
+.ds-card-featured-hero .ds-card-hero-block > .ds-card-footer {
+  padding-top: 0;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .ds-card-featured-hero .ds-card-hero-block > .ds-card-footer {
+    padding-left: 0;
+  }
+
+  .ds-card-featured-hero .ds-card-hero-block > .ds-card-footer .ds-btn {
+    margin-left: -0.5rem;
   }
 }
 
