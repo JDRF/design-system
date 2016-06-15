@@ -1,13 +1,8 @@
----
-notes: |
-  We're using <a href="https://github.com/google/material-design-icons" target="_blank">Material Icons</a> for icons across the Design System.
-
-  It is recommended to make use of the `ds-sr-only` class to include screen-reader text that is visually hidden, but can help identify icons to screen reader users.
-
-  Material Icons have a <a href="http://google.github.io/material-design-icons/#icon-font-for-the-web">ligatures feature</a> that allows icons to show by typing within the element. Due to this feature, depending on whether the button is icon only or icon with text, the structure of the HTML will have to change slightly.
-
-  Icons inside buttons will use existing <a href="./components.html#buttons">button classes</a> in addition to the `.ds-btn-icon` class.
----
+<p>The Design System uses <a href="https://github.com/google/material-design-icons" target="_blank">Material Icons</a> for icons across the Design System. The fonts are not included by default, so if you wish to show them you must include the font file from Google's CDN. Include this in the HEAD html tag right before the Design System css file.</p>
+{{example 'icon.head'}}
+<p>It is recommended to make use of the `ds-sr-only` class to include screen-reader text that is visually hidden, but can help identify icons to screen reader users.</p>
+<p>Material Icons have a <a href="http://google.github.io/material-design-icons/#icon-font-for-the-web">ligatures feature</a> that allows icons to show by typing within the element. Due to this feature, depending on whether the button is icon only or icon with text, the structure of the HTML will have to change slightly.</p>
+<p>Icons inside buttons will use existing <a href="./components.html#buttons">button classes</a> in addition to the `.ds-btn-icon` class.</p>
 
 <section class="f-section">
 	<h3 class="f-example-title">Icon Only Buttons</h3>
