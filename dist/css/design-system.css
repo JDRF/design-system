@@ -5953,6 +5953,10 @@ input[type="button"].ds-btn-block {
   width: 100%;
 }
 
+.ds-btn-icon {
+  height: auto;
+}
+
 .ds-btn-icon:before {
   display: block;
 }
