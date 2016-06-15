@@ -1,6 +1,6 @@
 .f-example {
 	.ds-card {
-		max-width: 20rem;
+		max-width: 18.75rem;
 	}
 
 	.ds-card-featured,
@@ -12,6 +12,12 @@
 	.ds-card-featured {
 		.ds-btn {
 			margin: 0;
+		}
+	}
+
+	.ds-card-block-btns {
+		.ds-btn {
+			margin-bottom: 0;
 		}
 	}
 
