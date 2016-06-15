@@ -6261,6 +6261,7 @@ input[type="button"].ds-btn-block {
   color: rgba(0, 0, 0, 0.54);
   background-color: #ffffff;
   border-color: #f5f5f5;
+  border-width: 1px;
 }
 
 .ds-btn-group.ds-btn-icon-group .ds-btn:hover,
