@@ -5008,28 +5008,31 @@ input[type="checkbox"].ds-disabled {
 }
 
 .ds-btn:active,
+.ds-btn.ds-active {
+  background-image: none;
+  outline: 0;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.ds-btn:active,
 .ds-btn:active.focus,
 .ds-btn.ds-active:focus,
 .ds-btn.ds-active.ds-focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
+  outline: 0;
 }
 
 .ds-btn:focus,
 .ds-btn:hover {
   text-decoration: none;
+  outline: 0;
 }
 
 .ds-btn.ds-focus {
   text-decoration: none;
-}
-
-.ds-btn:active,
-.ds-btn.ds-active {
-  background-image: none;
   outline: 0;
-  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-btn.ds-disabled,
