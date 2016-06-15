@@ -46,9 +46,21 @@
 	}
 }
 
+.text-address-link {
+	.material-icons {
+		vertical-align: middle;
+		font-size: $font-size-lg;
+		color: $text-disabled;
+	}
+}
+
 .card-text-wrapper {
 	p:last-child {
 		margin-bottom: 0;
+	}
+
+	+ .card-block {
+		padding-top: 0.5rem;
 	}
 }
 
@@ -247,6 +259,14 @@
 			display: table;
 			table-layout: fixed;
 		}
+	}
+}
+
+// Content card
+.card-content {
+	.card-footer {
+		padding-top: 1rem;
+		padding-bottom: 2rem;
 	}
 }
 
