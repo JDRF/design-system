@@ -616,6 +616,106 @@
 	&lt;/label>
 &lt;/div></code></pre>
 </section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Using Icons with Buttons</h3>
+	<p>It is recommended to make use of the <code class="language-markup">.ds-sr-only</code> class to include screen-reader text that is visually hidden, but can help identify icons to screen reader users.</p>
+
+	<p>Material Icons have a <a href="http://google.github.io/material-design-icons/#icon-font-for-the-web">ligatures feature</a> that allows icons to show by typing within the element. Due to this feature, depending on whether the button is icon only or icon
+		with text, the structure of the HTML will have to change slightly.</p>
+
+	<p>Icons inside buttons will use existing <a href="./components.html#buttons">button classes</a> in addition to the <code class="language-markup">.ds-btn-icon</code> class.</p>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Icon Only Buttons</h3>
+	<div class="f-example">
+		<button type="button" name="mood-button-example" class="material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary" id="phantom-ds-btn-icon-primary">
+			<span class="ds-sr-only">Primary button with mood icon.</span>
+		</button>
+
+		<button type="button" name="mood-button-example" class="material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary-outline" id="phantom-ds-btn-icon-outline">
+			<span class="ds-sr-only">Outline button with mood icon.</span>
+		</button>
+
+		<button type="button" name="mood-button-example" class="material-icons mi-mood ds-btn-icon ds-btn ds-btn-flat" id="phantom-ds-btn-icon-flat">
+			<span class="ds-sr-only">Flat button with mood icon.</span>
+		</button>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary&quot;>
+	&lt;span class=&quot;ds-sr-only&quot;>Primary button with mood icon.&lt;/span>
+&lt;/button>
+
+&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary-outline&quot;>
+	&lt;span class=&quot;ds-sr-only&quot;>Outline button with mood icon.&lt;/span>
+&lt;/button>
+
+&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-flat&quot;>
+	&lt;span class=&quot;ds-sr-only&quot;>Flat button with mood icon.&lt;/span>
+&lt;/button></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Left Icon with Text</h3>
+
+	<div class="f-example">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-icon" id="phantom-ds-btn-left-icon-lg">
+			<span class="material-icons mi-get-app" aria-hidden="true"></span>
+			<span>Icon Left</span>
+		</button>
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-icon" id="phantom-ds-btn-left-icon-normal">
+			<span class="material-icons mi-get-app" aria-hidden="true"></span>
+			<span>Icon Left</span>
+		</button>
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-sm ds-btn-icon" id="phantom-ds-btn-left-icon-sm">
+			<span class="material-icons mi-get-app" aria-hidden="true"></span>
+			<span>Icon Left</span>
+		</button>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&quot;>
+	&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;>&lt;/span>
+	&lt;span>Icon Left&lt;/span>
+&lt;/button>
+&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-icon&quot;>
+	&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;>&lt;/span>
+	&lt;span>Icon Left&lt;/span>
+&lt;/button>
+&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&quot;>
+	&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;>&lt;/span>
+	&lt;span>Icon Left&lt;/span>
+&lt;/button></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Right Icon with Text</h3>
+
+	<div class="f-example">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-icon" id="phantom-ds-btn-right-icon-lg">
+			<span>Icon Right</span>
+			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
+		</button>
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-icon" id="phantom-ds-btn-right-icon-normal">
+			<span>Icon Right</span>
+			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
+		</button>
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-sm ds-btn-icon" id="phantom-ds-btn-right-icon-sm">
+			<span>Icon Right</span>
+			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
+		</button>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&quot;>
+	&lt;span>Icon Right&lt;/span>
+	&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;>&lt;/span>
+&lt;/button>
+&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-icon&quot;>
+	&lt;span>Icon Right&lt;/span>
+	&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;>&lt;/span>
+&lt;/button>
+&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&quot;>
+	&lt;span>Icon Right&lt;/span>
+	&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;>&lt;/span>
+&lt;/button></code></pre>
+</section>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
@@ -851,6 +951,106 @@
 		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;options&amp;quot; id=&amp;quot;option3&amp;quot; autocomplete=&amp;quot;off&amp;quot;&gt; Radio 3
 	&amp;lt;/label&gt;
 &amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Using Icons with Buttons&lt;/h3&gt;
+	&lt;p&gt;It is recommended to make use of the &lt;code class=&quot;language-markup&quot;&gt;.ds-sr-only&lt;/code&gt; class to include screen-reader text that is visually hidden, but can help identify icons to screen reader users.&lt;/p&gt;
+
+	&lt;p&gt;Material Icons have a &lt;a href=&quot;http://google.github.io/material-design-icons/#icon-font-for-the-web&quot;&gt;ligatures feature&lt;/a&gt; that allows icons to show by typing within the element. Due to this feature, depending on whether the button is icon only or icon
+		with text, the structure of the HTML will have to change slightly.&lt;/p&gt;
+
+	&lt;p&gt;Icons inside buttons will use existing &lt;a href=&quot;./components.html#buttons&quot;&gt;button classes&lt;/a&gt; in addition to the &lt;code class=&quot;language-markup&quot;&gt;.ds-btn-icon&lt;/code&gt; class.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Icon Only Buttons&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary&quot; id=&quot;phantom-ds-btn-icon-primary&quot;&gt;
+			&lt;span class=&quot;ds-sr-only&quot;&gt;Primary button with mood icon.&lt;/span&gt;
+		&lt;/button&gt;
+
+		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary-outline&quot; id=&quot;phantom-ds-btn-icon-outline&quot;&gt;
+			&lt;span class=&quot;ds-sr-only&quot;&gt;Outline button with mood icon.&lt;/span&gt;
+		&lt;/button&gt;
+
+		&lt;button type=&quot;button&quot; name=&quot;mood-button-example&quot; class=&quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-flat&quot; id=&quot;phantom-ds-btn-icon-flat&quot;&gt;
+			&lt;span class=&quot;ds-sr-only&quot;&gt;Flat button with mood icon.&lt;/span&gt;
+		&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;mood-button-example&amp;quot; class=&amp;quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;ds-sr-only&amp;quot;&gt;Primary button with mood icon.&amp;lt;/span&gt;
+&amp;lt;/button&gt;
+
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;mood-button-example&amp;quot; class=&amp;quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-primary-outline&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;ds-sr-only&amp;quot;&gt;Outline button with mood icon.&amp;lt;/span&gt;
+&amp;lt;/button&gt;
+
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;mood-button-example&amp;quot; class=&amp;quot;material-icons mi-mood ds-btn-icon ds-btn ds-btn-flat&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;ds-sr-only&amp;quot;&gt;Flat button with mood icon.&amp;lt;/span&gt;
+&amp;lt;/button&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Left Icon with Text&lt;/h3&gt;
+
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&quot; id=&quot;phantom-ds-btn-left-icon-lg&quot;&gt;
+			&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+			&lt;span&gt;Icon Left&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-icon&quot; id=&quot;phantom-ds-btn-left-icon-normal&quot;&gt;
+			&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+			&lt;span&gt;Icon Left&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&quot; id=&quot;phantom-ds-btn-left-icon-sm&quot;&gt;
+			&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+			&lt;span&gt;Icon Left&lt;/span&gt;
+		&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;material-icons mi-get-app&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
+	&amp;lt;span&gt;Icon Left&amp;lt;/span&gt;
+&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-icon&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;material-icons mi-get-app&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
+	&amp;lt;span&gt;Icon Left&amp;lt;/span&gt;
+&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&amp;quot;&gt;
+	&amp;lt;span class=&amp;quot;material-icons mi-get-app&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
+	&amp;lt;span&gt;Icon Left&amp;lt;/span&gt;
+&amp;lt;/button&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Right Icon with Text&lt;/h3&gt;
+
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&quot; id=&quot;phantom-ds-btn-right-icon-lg&quot;&gt;
+			&lt;span&gt;Icon Right&lt;/span&gt;
+			&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-icon&quot; id=&quot;phantom-ds-btn-right-icon-normal&quot;&gt;
+			&lt;span&gt;Icon Right&lt;/span&gt;
+			&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+		&lt;/button&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&quot; id=&quot;phantom-ds-btn-right-icon-sm&quot;&gt;
+			&lt;span&gt;Icon Right&lt;/span&gt;
+			&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+		&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&amp;quot;&gt;
+	&amp;lt;span&gt;Icon Right&amp;lt;/span&gt;
+	&amp;lt;span class=&amp;quot;material-icons mi-arrow-forward&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
+&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-icon&amp;quot;&gt;
+	&amp;lt;span&gt;Icon Right&amp;lt;/span&gt;
+	&amp;lt;span class=&amp;quot;material-icons mi-arrow-forward&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
+&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; name=&amp;quot;app-button-example&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&amp;quot;&gt;
+	&amp;lt;span&gt;Icon Right&amp;lt;/span&gt;
+	&amp;lt;span class=&amp;quot;material-icons mi-arrow-forward&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;&amp;lt;/span&gt;
+&amp;lt;/button&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;</code></pre>
 </div>
 
