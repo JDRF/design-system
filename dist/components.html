@@ -106,6 +106,10 @@
 										<a href="./components.html" class="f-menu__heading ds-nav-link">Components</a>
 										<ul class="ds-nav">
 											<li>
+												<a href="./components.html#badges" class="ds-nav-link">Badges</a>
+											</li>
+						
+											<li>
 												<a href="./components.html#buttons" class="ds-nav-link">Buttons</a>
 											</li>
 						
@@ -128,10 +132,6 @@
 											</li>
 						
 											<li>
-												<a href="./content.html#elevation" class="ds-nav-link">Elevation</a>
-											</li>
-						
-											<li>
 												<a href="./content.html#icons" class="ds-nav-link">Icons</a>
 											</li>
 						
@@ -144,6 +144,10 @@
 									<li class="ds-nav-item">
 										<a href="./layout.html" class="f-menu__heading ds-nav-link">Layout</a>
 										<ul class="ds-nav">
+											<li>
+												<a href="./layout.html#elevation" class="ds-nav-link">Elevation</a>
+											</li>
+						
 											<li>
 												<a href="./layout.html#grid" class="ds-nav-link">Grid</a>
 											</li>
@@ -162,6 +166,212 @@
 					
 
 
+<div class="f-item-group" id="badges">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Badges</h2>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>The <code>badges</code> components are based on Bootstrap's label classes combined with our own customizations. In Bootstrap version 4, <code>badges</code> are replaced with <code>labels</code>.</p>
+<p>You can find documentation on <a href="https://v4-alpha.getbootstrap.com/components/label/" target="_blank">Bootstrap's label components</a> on their site.</p>
+
+</div>
+<div class="f-item-preview">
+	<section class="f-section">
+	<h3 class="f-example-title">Outline</h3>
+	<div class="f-example">
+		<h3>Heading Three <span class="ds-label ds-label-outline">10</span></h3>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;h3>Heading Three &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h3></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Outline</h3>
+	<div class="f-example">
+		<h3>Heading Three <span class="ds-label ds-label-default">10</span></h3>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;h3>Heading Three &lt;span class=&quot;ds-label ds-label-default&quot;>10&lt;/span>&lt;/h3></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Sizes</h3>
+	<p>The Badge type size is 75% of the heading type size.</p>
+	<div class="f-example">
+		<h1>Heading One <span class="ds-label ds-label-outline">10</span></h1>
+		<h2>Heading Two <span class="ds-label ds-label-outline">10</span></h2>
+		<h3>Heading Three <span class="ds-label ds-label-outline">10</span></h3>
+		<h4>Heading Four <span class="ds-label ds-label-outline">10</span></h4>
+		<h5>Heading Five <span class="ds-label ds-label-outline">10</span></h5>
+		<h6>Heading Six <span class="ds-label ds-label-outline">10</span></h6>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;h1>Heading One &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h1>
+&lt;h2>Heading Two &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h2>
+&lt;h3>Heading Three &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h3>
+&lt;h4>Heading Four &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h4>
+&lt;h5>Heading Five &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h5>
+&lt;h6>Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/h6></code></pre>
+</section>
+
+<section class="f-section">
+	<div class="f-example">
+		<h1>Heading One <span class="ds-label ds-label-default">10</span></h1>
+		<h2>Heading Two <span class="ds-label ds-label-default">10</span></h2>
+		<h3>Heading Three <span class="ds-label ds-label-default">10</span></h3>
+		<h4>Heading Four <span class="ds-label ds-label-default">10</span></h4>
+		<h5>Heading Five <span class="ds-label ds-label-default">10</span></h5>
+		<h6>Heading Six <span class="ds-label ds-label-default">10</span></h6>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;h1>Heading One &lt;span class=&quot;ds-label ds-label-solid&quot;>10&lt;/span>&lt;/h1>
+&lt;h2>Heading Two &lt;span class=&quot;ds-label ds-label-solid&quot;>10&lt;/span>&lt;/h2>
+&lt;h3>Heading Three &lt;span class=&quot;ds-label ds-label-solid&quot;>10&lt;/span>&lt;/h3>
+&lt;h4>Heading Four &lt;span class=&quot;ds-label ds-label-solid&quot;>10&lt;/span>&lt;/h4>
+&lt;h5>Heading Five &lt;span class=&quot;ds-label ds-label-solid&quot;>10&lt;/span>&lt;/h5>
+&lt;h6>Heading Six &lt;span class=&quot;ds-label ds-label-solid&quot;>10&lt;/span>&lt;/h6></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Variations</h3>
+	<div class="f-example">
+		<ul class="ds-nav ds-nav-pills">
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-h6">Heading Six <span class="ds-label ds-label-outline">1</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-h6">Heading Six <span class="ds-label ds-label-outline">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-h6">Heading Six <span class="ds-label ds-label-outline">Label</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-h6">Heading Six <span class="ds-label ds-label-outline">Long Label</span></a></li>
+		</ul>
+		<ul class="ds-nav ds-nav-pills">
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-primary">Primary <span class="ds-label ds-label-default">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-primary-outline">Outline <span class="ds-label ds-label-default">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-flat">Flat <span class="ds-label ds-label-default">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-link">Text <span class="ds-label ds-label-default">10</span></a></li>
+		</ul>
+		<ul class="ds-nav ds-nav-pills">
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-primary">Primary <span class="ds-label ds-label-outline">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-primary-outline">Outline <span class="ds-label ds-label-outline">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-flat">Flat <span class="ds-label ds-label-outline">10</span></a></li>
+			<li class="ds-nav-item"><a href="#" class="ds-nav-link ds-btn ds-btn-link">Text <span class="ds-label ds-label-outline">10</span></a></li>
+		</ul>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;ul class=&quot;ds-nav ds-nav-pills&quot;>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;>Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;>1&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;>Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;>Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;>Label&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;>Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;>Long Label&lt;/span>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;ul class=&quot;ds-nav ds-nav-pills&quot;>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary&quot;>Primary &lt;span class=&quot;ds-label ds-label-default&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary-outline&quot;>Outline &lt;span class=&quot;ds-label ds-label-default&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-flat&quot;>Flat &lt;span class=&quot;ds-label ds-label-default&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-link&quot;>Text &lt;span class=&quot;ds-label ds-label-default&quot;>10&lt;/span>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;ul class=&quot;ds-nav ds-nav-pills&quot;>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary&quot;>Primary &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary-outline&quot;>Outline &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-flat&quot;>Flat &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/a>&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-link&quot;>Text &lt;span class=&quot;ds-label ds-label-outline&quot;>10&lt;/span>&lt;/a>&lt;/li>
+&lt;/ul></code></pre>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Outline&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;h3&gt;Heading Three &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h3&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h3&gt;Heading Three &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h3&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Outline&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;h3&gt;Heading Three &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h3&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h3&gt;Heading Three &amp;lt;span class=&amp;quot;ds-label ds-label-default&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h3&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Sizes&lt;/h3&gt;
+	&lt;p&gt;The Badge type size is 75% of the heading type size.&lt;/p&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;h1&gt;Heading One &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h1&gt;
+		&lt;h2&gt;Heading Two &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h2&gt;
+		&lt;h3&gt;Heading Three &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h3&gt;
+		&lt;h4&gt;Heading Four &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h4&gt;
+		&lt;h5&gt;Heading Five &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h5&gt;
+		&lt;h6&gt;Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/h6&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&gt;Heading One &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h1&gt;
+&amp;lt;h2&gt;Heading Two &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h2&gt;
+&amp;lt;h3&gt;Heading Three &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h3&gt;
+&amp;lt;h4&gt;Heading Four &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h4&gt;
+&amp;lt;h5&gt;Heading Five &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h5&gt;
+&amp;lt;h6&gt;Heading Six &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h6&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;h1&gt;Heading One &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h1&gt;
+		&lt;h2&gt;Heading Two &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h2&gt;
+		&lt;h3&gt;Heading Three &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h3&gt;
+		&lt;h4&gt;Heading Four &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h4&gt;
+		&lt;h5&gt;Heading Five &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h5&gt;
+		&lt;h6&gt;Heading Six &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/h6&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&gt;Heading One &amp;lt;span class=&amp;quot;ds-label ds-label-solid&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h1&gt;
+&amp;lt;h2&gt;Heading Two &amp;lt;span class=&amp;quot;ds-label ds-label-solid&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h2&gt;
+&amp;lt;h3&gt;Heading Three &amp;lt;span class=&amp;quot;ds-label ds-label-solid&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h3&gt;
+&amp;lt;h4&gt;Heading Four &amp;lt;span class=&amp;quot;ds-label ds-label-solid&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h4&gt;
+&amp;lt;h5&gt;Heading Five &amp;lt;span class=&amp;quot;ds-label ds-label-solid&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h5&gt;
+&amp;lt;h6&gt;Heading Six &amp;lt;span class=&amp;quot;ds-label ds-label-solid&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/h6&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Variations&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;ul class=&quot;ds-nav ds-nav-pills&quot;&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;&gt;Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;&gt;Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;&gt;Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;Label&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-h6&quot;&gt;Heading Six &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;Long Label&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;ul class=&quot;ds-nav ds-nav-pills&quot;&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary&quot;&gt;Primary &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary-outline&quot;&gt;Outline &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-flat&quot;&gt;Flat &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-link&quot;&gt;Text &lt;span class=&quot;ds-label ds-label-default&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;ul class=&quot;ds-nav ds-nav-pills&quot;&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary&quot;&gt;Primary &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-primary-outline&quot;&gt;Outline &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-flat&quot;&gt;Flat &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ds-nav-link ds-btn ds-btn-link&quot;&gt;Text &lt;span class=&quot;ds-label ds-label-outline&quot;&gt;10&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;ul class=&amp;quot;ds-nav ds-nav-pills&amp;quot;&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-h6&amp;quot;&gt;Heading Six &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;1&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-h6&amp;quot;&gt;Heading Six &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-h6&amp;quot;&gt;Heading Six &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;Label&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-h6&amp;quot;&gt;Heading Six &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;Long Label&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+&amp;lt;/ul&gt;
+&amp;lt;ul class=&amp;quot;ds-nav ds-nav-pills&amp;quot;&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-primary&amp;quot;&gt;Primary &amp;lt;span class=&amp;quot;ds-label ds-label-default&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-primary-outline&amp;quot;&gt;Outline &amp;lt;span class=&amp;quot;ds-label ds-label-default&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-flat&amp;quot;&gt;Flat &amp;lt;span class=&amp;quot;ds-label ds-label-default&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-link&amp;quot;&gt;Text &amp;lt;span class=&amp;quot;ds-label ds-label-default&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+&amp;lt;/ul&gt;
+&amp;lt;ul class=&amp;quot;ds-nav ds-nav-pills&amp;quot;&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-primary&amp;quot;&gt;Primary &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-primary-outline&amp;quot;&gt;Outline &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-flat&amp;quot;&gt;Flat &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-nav-link ds-btn ds-btn-link&amp;quot;&gt;Text &amp;lt;span class=&amp;quot;ds-label ds-label-outline&amp;quot;&gt;10&amp;lt;/span&gt;&amp;lt;/a&gt;&amp;lt;/li&gt;
+&amp;lt;/ul&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+
+
 <div class="f-item-group" id="buttons">
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
@@ -176,7 +386,7 @@
 	<h3 class="f-example-title">Primary</h3>
 	<div class="f-example">
 		<button type="button" class="ds-btn ds-btn-primary" id="phantom-ds-btn-primary">Primary</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-active" id="phantom-ds-btn-primary-ds-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-active" id="phantom-ds-btn-primary-active">Hover</button>
 		<button type="button" class="ds-btn ds-btn-primary" id="phantom-ds-btn-primary-disabled" disabled>Disabled</button>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary&quot;>Primary&lt;/button>
@@ -189,7 +399,7 @@
 	<h3 class="f-example-title">Outline</h3>
 	<div class="f-example">
 		<button type="button" class="ds-btn ds-btn-primary-outline" id="phantom-ds-btn-outline">Outline</button>
-		<button type="button" class="ds-btn ds-btn-primary-outline ds-active" id="phantom-ds-btn-outline-ds-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary-outline ds-active" id="phantom-ds-btn-outline-active">Hover</button>
 		<button type="button" class="ds-btn ds-btn-primary-outline" id="phantom-ds-btn-outline-disabled" disabled>Disabled</button>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary-outline&quot;>Outline&lt;/button>
@@ -202,7 +412,7 @@
 	<h3 class="f-example-title">Flat</h3>
 	<div class="f-example">
 		<button type="button" class="ds-btn ds-btn-flat" id="phantom-ds-btn-flat">Flat</button>
-		<button type="button" class="ds-btn ds-btn-flat ds-active" id="phantom-ds-btn-flat-ds-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-flat ds-active" id="phantom-ds-btn-flat-active">Hover</button>
 		<button type="button" class="ds-btn ds-btn-flat" id="phantom-ds-btn-flat-disabled" disabled>Disabled</button>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-flat&quot;>Flat&lt;/button>
@@ -215,7 +425,7 @@
 	<h3 class="f-example-title">Text</h3>
 	<div class="f-example">
 		<button type="button" class="ds-btn ds-btn-link" id="phantom-ds-btn-link">Text</button>
-		<button type="button" class="ds-btn ds-btn-link ds-active" id="phantom-ds-btn-link-ds-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-link ds-active" id="phantom-ds-btn-link-active">Hover</button>
 		<button type="button" class="ds-btn ds-btn-link" id="phantom-ds-btn-link-disabled" disabled>Disabled</button>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-link&quot;>Text&lt;/button>
@@ -228,7 +438,7 @@
 	<h3 class="f-example-title">Large</h3>
 	<div class="f-example">
 		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg" id="phantom-ds-btn-lg">Large</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-active" id="phantom-ds-btn-lg-ds-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-active" id="phantom-ds-btn-lg-active">Hover</button>
 		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg" id="phantom-ds-btn-lg-disabled" disabled>Disabled</button>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg&quot;>Large&lt;/button>
@@ -241,7 +451,7 @@
 	<h3 class="f-example-title">Small</h3>
 	<div class="f-example">
 		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm" id="phantom-ds-btn-sm">Small</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm ds-active" id="phantom-ds-btn-sm-ds-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm ds-active" id="phantom-ds-btn-sm-active">Hover</button>
 		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm" id="phantom-ds-btn-sm-disabled" disabled>Disabled</button>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm&quot;>Small&lt;/button>
@@ -253,13 +463,13 @@
 <section class="f-section">
 	<h3 class="f-example-title">Block</h3>
 	<div class="f-example">
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-block" id="phantom-ds-btn-block">Block</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-block ds-active" id="phantom-ds-btn-block-ds-active">Hover</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-block" id="phantom-ds-btn-block-disabled" disabled>Disabled</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-block" id="phantom-ds-btn-block">Block</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-block ds-active" id="phantom-ds-btn-block-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-block" id="phantom-ds-btn-block-disabled" disabled>Disabled</button>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block&quot;>Block&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block ds-active&quot;>Hover&lt;/button>
-&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block&quot; disabled>Disabled&lt;/button>
+	<pre class="language-markup"><code class="language-markup">&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-block&quot;>Block&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-block ds-active&quot;>Hover&lt;/button>
+&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-block&quot; disabled>Disabled&lt;/button>
 </code></pre>
 </section>
 
@@ -347,8 +557,9 @@
 
 <section class="f-section">
 	<h3 class="f-example-title">Checkbox Buttons</h3>
+	<p>Checkbox button groups use <a href="http://v4-alpha.getbootstrap.com/components/buttons/#checkbox-and-radio-buttons" target="_blank">Bootstrap's native classes</a> as well as the <code class="language-markup">.ds-checkbox-buttons</code> class.</p>
 	<div class="f-example" id="phantom-ds-checkbox-buttons">
-		<div class="ds-btn-group" data-toggle="buttons">
+		<div class="ds-btn-group ds-checkbox-buttons" data-toggle="buttons">
 			<label class="ds-btn ds-btn-primary ds-active btn-icon">
 				<input type="checkbox" checked autocomplete="off"> Checkbox 1 (pre-checked)
 			</label>
@@ -360,7 +571,7 @@
 			</label>
 		</div>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-btn-group&quot; data-toggle=&quot;buttons&quot;>
+	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-btn-group ds-checkbox-buttons&quot; data-toggle=&quot;buttons&quot;>
 	&lt;label class=&quot;ds-btn ds-btn-primary ds-active btn-icon&quot;>
 		&lt;input type=&quot;checkbox&quot; checked autocomplete=&quot;off&quot;> Checkbox 1 (pre-checked)
 	&lt;/label>
@@ -375,8 +586,9 @@
 
 <section class="f-section">
 	<h3 class="f-example-title">Radio Buttons</h3>
+	<p>Radio button groups use <a href="http://v4-alpha.getbootstrap.com/components/buttons/#checkbox-and-radio-buttons" target="_blank">Bootstrap's native classes</a> as well as the <code class="language-markup">.ds-radio-buttons</code> class.</p>
 	<div class="f-example" id="phantom-ds-radio-buttons">
-		<div class="ds-btn-group" data-toggle="buttons">
+		<div class="ds-btn-group ds-radio-buttons" data-toggle="buttons">
 			<label class="ds-btn ds-btn-primary ds-active">
 				<input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
 			</label>
@@ -388,7 +600,7 @@
 			</label>
 		</div>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-btn-group&quot; data-toggle=&quot;buttons&quot;>
+	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-btn-group ds-radio-buttons&quot; data-toggle=&quot;buttons&quot;>
 	&lt;label class=&quot;ds-btn ds-btn-primary ds-active&quot;>
 		&lt;input type=&quot;radio&quot; name=&quot;options&quot; id=&quot;option1&quot; autocomplete=&quot;off&quot; checked> Radio 1 (preselected)
 	&lt;/label>
@@ -406,7 +618,7 @@
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Primary&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary&quot; id=&quot;phantom-ds-btn-primary&quot;&gt;Primary&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-active&quot; id=&quot;phantom-ds-btn-primary-ds-active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-active&quot; id=&quot;phantom-ds-btn-primary-active&quot;&gt;Hover&lt;/button&gt;
 		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary&quot; id=&quot;phantom-ds-btn-primary-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;Primary&amp;lt;/button&gt;
@@ -419,7 +631,7 @@
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Outline&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary-outline&quot; id=&quot;phantom-ds-btn-outline&quot;&gt;Outline&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary-outline ds-active&quot; id=&quot;phantom-ds-btn-outline-ds-active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary-outline ds-active&quot; id=&quot;phantom-ds-btn-outline-active&quot;&gt;Hover&lt;/button&gt;
 		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary-outline&quot; id=&quot;phantom-ds-btn-outline-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary-outline&amp;quot;&gt;Outline&amp;lt;/button&gt;
@@ -432,7 +644,7 @@
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Flat&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-flat&quot; id=&quot;phantom-ds-btn-flat&quot;&gt;Flat&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-flat ds-active&quot; id=&quot;phantom-ds-btn-flat-ds-active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-flat ds-active&quot; id=&quot;phantom-ds-btn-flat-active&quot;&gt;Hover&lt;/button&gt;
 		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-flat&quot; id=&quot;phantom-ds-btn-flat-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-flat&amp;quot;&gt;Flat&amp;lt;/button&gt;
@@ -445,7 +657,7 @@
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Text&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-link&quot; id=&quot;phantom-ds-btn-link&quot;&gt;Text&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-link ds-active&quot; id=&quot;phantom-ds-btn-link-ds-active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-link ds-active&quot; id=&quot;phantom-ds-btn-link-active&quot;&gt;Hover&lt;/button&gt;
 		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-link&quot; id=&quot;phantom-ds-btn-link-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-link&amp;quot;&gt;Text&amp;lt;/button&gt;
@@ -458,7 +670,7 @@
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Large&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg&quot; id=&quot;phantom-ds-btn-lg&quot;&gt;Large&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-active&quot; id=&quot;phantom-ds-btn-lg-ds-active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-active&quot; id=&quot;phantom-ds-btn-lg-active&quot;&gt;Hover&lt;/button&gt;
 		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg&quot; id=&quot;phantom-ds-btn-lg-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg&amp;quot;&gt;Large&amp;lt;/button&gt;
@@ -471,7 +683,7 @@
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Small&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm&quot; id=&quot;phantom-ds-btn-sm&quot;&gt;Small&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-active&quot; id=&quot;phantom-ds-btn-sm-ds-active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-active&quot; id=&quot;phantom-ds-btn-sm-active&quot;&gt;Hover&lt;/button&gt;
 		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm&quot; id=&quot;phantom-ds-btn-sm-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-sm&amp;quot;&gt;Small&amp;lt;/button&gt;
@@ -483,13 +695,13 @@
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Block&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block&quot; id=&quot;phantom-ds-btn-block&quot;&gt;Block&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block ds-active&quot; id=&quot;phantom-ds-btn-block-ds-active&quot;&gt;Hover&lt;/button&gt;
-		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block&quot; id=&quot;phantom-ds-btn-block-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-block&quot; id=&quot;phantom-ds-btn-block&quot;&gt;Block&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-block ds-active&quot; id=&quot;phantom-ds-btn-block-active&quot;&gt;Hover&lt;/button&gt;
+		&lt;button type=&quot;button&quot; class=&quot;ds-btn ds-btn-primary ds-btn-block&quot; id=&quot;phantom-ds-btn-block-disabled&quot; disabled&gt;Disabled&lt;/button&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block&amp;quot;&gt;Block&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block ds-active&amp;quot;&gt;Hover&amp;lt;/button&gt;
-&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-block&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-block&amp;quot;&gt;Block&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-block ds-active&amp;quot;&gt;Hover&amp;lt;/button&gt;
+&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;ds-btn ds-btn-primary ds-btn-block&amp;quot; disabled&gt;Disabled&amp;lt;/button&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
@@ -577,8 +789,9 @@
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Checkbox Buttons&lt;/h3&gt;
+	&lt;p&gt;Checkbox button groups use &lt;a href=&quot;http://v4-alpha.getbootstrap.com/components/buttons/#checkbox-and-radio-buttons&quot; target=&quot;_blank&quot;&gt;Bootstrap&#x27;s native classes&lt;/a&gt; as well as the &lt;code class=&quot;language-markup&quot;&gt;.ds-checkbox-buttons&lt;/code&gt; class.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot; id=&quot;phantom-ds-checkbox-buttons&quot;&gt;
-		&lt;div class=&quot;ds-btn-group&quot; data-toggle=&quot;buttons&quot;&gt;
+		&lt;div class=&quot;ds-btn-group ds-checkbox-buttons&quot; data-toggle=&quot;buttons&quot;&gt;
 			&lt;label class=&quot;ds-btn ds-btn-primary ds-active btn-icon&quot;&gt;
 				&lt;input type=&quot;checkbox&quot; checked autocomplete=&quot;off&quot;&gt; Checkbox 1 (pre-checked)
 			&lt;/label&gt;
@@ -590,7 +803,7 @@
 			&lt;/label&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-btn-group&amp;quot; data-toggle=&amp;quot;buttons&amp;quot;&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-btn-group ds-checkbox-buttons&amp;quot; data-toggle=&amp;quot;buttons&amp;quot;&gt;
 	&amp;lt;label class=&amp;quot;ds-btn ds-btn-primary ds-active btn-icon&amp;quot;&gt;
 		&amp;lt;input type=&amp;quot;checkbox&amp;quot; checked autocomplete=&amp;quot;off&amp;quot;&gt; Checkbox 1 (pre-checked)
 	&amp;lt;/label&gt;
@@ -605,8 +818,9 @@
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Radio Buttons&lt;/h3&gt;
+	&lt;p&gt;Radio button groups use &lt;a href=&quot;http://v4-alpha.getbootstrap.com/components/buttons/#checkbox-and-radio-buttons&quot; target=&quot;_blank&quot;&gt;Bootstrap&#x27;s native classes&lt;/a&gt; as well as the &lt;code class=&quot;language-markup&quot;&gt;.ds-radio-buttons&lt;/code&gt; class.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot; id=&quot;phantom-ds-radio-buttons&quot;&gt;
-		&lt;div class=&quot;ds-btn-group&quot; data-toggle=&quot;buttons&quot;&gt;
+		&lt;div class=&quot;ds-btn-group ds-radio-buttons&quot; data-toggle=&quot;buttons&quot;&gt;
 			&lt;label class=&quot;ds-btn ds-btn-primary ds-active&quot;&gt;
 				&lt;input type=&quot;radio&quot; name=&quot;options&quot; id=&quot;option1&quot; autocomplete=&quot;off&quot; checked&gt; Radio 1 (preselected)
 			&lt;/label&gt;
@@ -618,7 +832,7 @@
 			&lt;/label&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-btn-group&amp;quot; data-toggle=&amp;quot;buttons&amp;quot;&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-btn-group ds-radio-buttons&amp;quot; data-toggle=&amp;quot;buttons&amp;quot;&gt;
 	&amp;lt;label class=&amp;quot;ds-btn ds-btn-primary ds-active&amp;quot;&gt;
 		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;options&amp;quot; id=&amp;quot;option1&amp;quot; autocomplete=&amp;quot;off&amp;quot; checked&gt; Radio 1 (preselected)
 	&amp;lt;/label&gt;
@@ -645,6 +859,7 @@
 	</div><div class="f-item-notes" data-f-toggle="notes">
 	<p>The <code>cards</code> components are based on Bootstrap's card classes combined with our own customizations.</p>
 <p>You can find documentation on <a href="http://v4-alpha.getbootstrap.com/components/card/" target="_blank">Bootstrap's card components</a> on their site.</p>
+<p>Title and subtitle markup are interchangeable, though it is recommended to apply the heading classes for the appropriate font size (<code>&lt;h3 class=&quot;ds-card-title ds-h4&quot;&gt;</code>).</p>
 
 </div>
 <div class="f-item-preview">
@@ -652,41 +867,42 @@
 	<h3 class="f-example-title">Featured Cards</h3>
 	<p>The featured card hero image with the momentum line mask requires a header for both the card and the content. It is recommended to apply a fixed height on the card and hero image.</p>
 	<div class="f-example">
-		<div class="ds-card ds-card-featured ds-card-featured-hero">
-			<div class="ds-card-header ds-text-muted">Featured Promotion</div>
+		<div class="ds-card ds-card-featured ds-card-featured-hero" id="phantom-ds-card-featured-hero">
+			<div class="ds-card-header">Featured Promotion
+			</div>
 			<div class="ds-card-hero-group">
 				<div class="ds-card-hero ds-card-hero-block ds-card-hero-block-1">
 					<img class="ds-card-img-left" data-src="holder.js/100px180" alt="Card image cap" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22500%22%20height%3D%22300%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 				</div>
 				<div class="ds-card-hero-block ds-card-hero-block-2">
-					<div class="ds-card-header ds-text-muted">Featured Promotion</div>
+					<div class="ds-card-header">Featured Promotion</div>
 					<div class="ds-card-block">
-						<h4 class="ds-card-title">Alex and Ani Bracelet</h4>
-						<h6 class="ds-card-subtitle ds-text-muted">Start Date - End Date</h6>
+						<h3 class="ds-card-title ds-h4">Alex and Ani Bracelet</h3>
+						<p class="ds-card-subtitle">Start Date - End Date</p>
 						<p class="ds-card-text">Lorem ipsum purchase branded apparel and a wide range of merchandise to show your support—and raise awareness for JDRF.</p>
 					</div>
 					<div class="ds-card-footer">
-						<a href="#" class="ds-card-link">DETAILS</a>
+						<a href="#!" class="ds-card-link">DETAILS</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-card ds-card-featured ds-card-featured-hero&quot;>
-	&lt;div class=&quot;ds-card-header ds-text-muted&quot;>Featured Promotion&lt;/div>
+	&lt;div class=&quot;ds-card-header&quot;>Featured Promotion&lt;/div>
 	&lt;div class=&quot;ds-card-hero-group&quot;>
 		&lt;div class=&quot;ds-card-hero ds-card-hero-block ds-card-hero-block-1&quot;>
 			&lt;img class=&quot;ds-card-img-left&quot; data-src=&quot;...&quot; alt=&quot;Card image cap&quot;>
 		&lt;/div>
 		&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-2&quot;>
-			&lt;div class=&quot;ds-card-header ds-text-muted&quot;>Featured Promotion&lt;/div>
+			&lt;div class=&quot;ds-card-header&quot;>Featured Promotion&lt;/div>
 			&lt;div class=&quot;ds-card-block&quot;>
-				&lt;h4 class=&quot;ds-card-title&quot;>Alex and Ani Bracelet&lt;/h4>
-				&lt;h6 class=&quot;ds-card-subtitle ds-text-muted&quot;>Start Date - End Date&lt;/h6>
+				&lt;h3 class=&quot;ds-card-title ds-h4&quot;>Alex and Ani Bracelet&lt;/h3>
+				&lt;p class=&quot;ds-card-subtitle&quot;>Start Date - End Date&lt;/p>
 				&lt;p class=&quot;ds-card-text&quot;>Lorem ipsum purchase branded apparel and a wide range of merchandise to show your support—and raise awareness for JDRF.&lt;/p>
 			&lt;/div>
 			&lt;div class=&quot;ds-card-footer&quot;>
-				&lt;a href=&quot;#&quot; class=&quot;ds-card-link&quot;>DETAILS&lt;/a>
+				&lt;a href=&quot;#!&quot; class=&quot;ds-card-link&quot;>DETAILS&lt;/a>
 			&lt;/div>
 		&lt;/div>
 	&lt;/div>
@@ -695,21 +911,20 @@
 
 <section class="f-section">
 	<div class="f-example">
-		<div class="ds-card ds-card-featured">
-			<div class="ds-card-header ds-text-muted">Our partner's promotions make it easy for you to contribute</div>
+		<div class="ds-card ds-card-featured" id="phantom-ds-card-featured">
+			<div class="ds-card-header">Our partner's promotions make it easy for you to contribute</div>
 			<div class="ds-card-hero-group">
-				<div class="ds-card-hero-block ds-card-hero-block-1">
-					<div class="ds-card-block">
-						<img class="ds-card-img" data-src="holder.js/100px180" alt="Card image cap" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22286%22%20height%3D%22176%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
-					</div>
+				<div class="ds-card-hero-block ds-card-hero-block-1 ds-card-block">
+					<img class="ds-card-img" data-src="holder.js/100px180" alt="Card image cap" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22286%22%20height%3D%22176%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 				</div>
-				<div class="ds-card-hero-block ds-card-hero-block-2">
-					<div class="ds-card-block">
-						<h4 class="ds-card-title">Walgreen's Flu Shot</h4>
-						<h6 class="ds-card-subtitle ds-text-muted">October 10 - April 15</h6>
-						<h6 class="ds-card-subtitle ds-text-muted">Mission St. Walgreens</h6>
-						<a href="#" class="ds-btn ds-btn-primary">Learn More</a>
-					</div>
+				<div class="ds-card-hero-block ds-card-hero-block-2 ds-card-block">
+					<h3 class="ds-card-title ds-h4">Walgreen's Flu Shot</h3>
+					<p class="ds-card-subtitle">October 10 - April 15</p>
+					<p class="ds-card-subtitle">Mission St. Walgreens</p>
+					<a href="#!" class="ds-btn ds-btn-primary">Learn More</a>
+				</div>
+				<div class="ds-card-hero-block ds-card-hero-block-3 ds-card-block">
+					<!-- social icons here -->
 				</div>
 			</div>
 		</div>
@@ -717,39 +932,39 @@
 	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-card ds-card-featured&quot;>
 	&lt;div class=&quot;ds-card-header ds-text-muted&quot;>Our partner&apos;s promotions make it easy for you to contribute&lt;/div>
 	&lt;div class=&quot;ds-card-hero-group&quot;>
-		&lt;div class=&quot;ds-card-hero ds-card-hero-block ds-card-hero-block-1&quot;>
+		&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-1 ds-card-block&quot;>
 			&lt;img class=&quot;ds-card-img&quot; data-src=&quot;...&quot; alt=&quot;Card image cap&quot;>
 		&lt;/div>
-		&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-2&quot;>
-			&lt;div class=&quot;ds-card-block&quot;>
-				&lt;h4 class=&quot;ds-card-title&quot;>Walgreen&apos;s Flu Shot&lt;/h4>
-				&lt;h6 class=&quot;ds-card-subtitle ds-text-muted&quot;>October 10 - April 15&lt;/h6>
-				&lt;h6 class=&quot;ds-card-subtitle ds-text-muted&quot;>Mission St. Walgreens&lt;/h6>
-			&lt;/div>
-			&lt;div class=&quot;ds-card-block&quot;>
-				&lt;a href=&quot;#&quot; class=&quot;ds-btn ds-btn-primary&quot;>Learn More&lt;/a>
-			&lt;/div>
+		&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-2 ds-card-block&quot;>
+			&lt;h3 class=&quot;ds-card-title ds-h4&quot;>Walgreen&apos;s Flu Shot&lt;/h3>
+			&lt;p class=&quot;ds-card-subtitle&quot;>October 10 - April 15&lt;/p>
+			&lt;p class=&quot;ds-card-subtitle&quot;>Mission St. Walgreens&lt;/p>
+			&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-primary&quot;>Learn More&lt;/a>
+		&lt;/div>
+		&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-3 ds-card-block&quot;>
+			&lt;!-- social icons here -->
 		&lt;/div>
 	&lt;/div>
-&lt;/div></code></pre>
+&lt;/div>
+</code></pre>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">Image Cap Cards</h3>
 	<div class="f-example">
-		<div class="ds-card">
+		<div class="ds-card" id="phantom-ds-card-image-cap">
 			<img class="ds-card-img-top" data-src="holder.js/100px180" alt="Card image cap" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22318%22%20height%3D%22180%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 			<div class="ds-card-block">
-				<h6 class="ds-card-subtitle ds-text-muted">Start Date - End Date</h6>
-				<h4 class="ds-card-title">Promotion title</h4>
+				<p class="ds-card-subtitle">Start Date - End Date</p>
+				<h3 class="ds-card-title ds-h4">Promotion title</h3>
 			</div>
 		</div>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-card&quot;>
 	&lt;img class=&quot;ds-card-img-top&quot; data-src=&quot;...&quot; alt=&quot;Card image&quot;>
 	&lt;div class=&quot;ds-card-block&quot;>
-		&lt;h6 class=&quot;ds-card-subtitle ds-text-muted&quot;>Start Date - End Date&lt;/h6>
-		&lt;h4 class=&quot;ds-card-title&quot;>Promotion title&lt;/h4>
+		&lt;p class=&quot;ds-card-subtitle&quot;>Start Date - End Date&lt;/p>
+		&lt;h3 class=&quot;ds-card-title ds-h4&quot;>Promotion title&lt;/h3>
 	&lt;/div>
 &lt;/div></code></pre>
 </section>
@@ -757,10 +972,10 @@
 <section class="f-section">
 	<h3 class="f-example-title">Content Cards</h3>
 	<div class="f-example">
-		<div class="ds-card ds-card-content">
-			<div class="ds-card-header ds-text-muted">Details</div>
-			<div class="ds-card-block">
-				<p class="ds-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus lacus non porttitor bibendum. Nunc id eros vitae diam aliquam varius et eget urna. Nulla pulvinar porttitor lacus, eget dignissim est pellentesque nec. Quisque in volutpat quam. Quisque
+		<div class="ds-card ds-card-content" id="phantom-ds-card-content-header-footer">
+			<div class="ds-card-header">Details</div>
+			<div class="ds-card-block ds-card-text-wrapper">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus lacus non porttitor bibendum. Nunc id eros vitae diam aliquam varius et eget urna. Nulla pulvinar porttitor lacus, eget dignissim est pellentesque nec. Quisque in volutpat quam. Quisque
 					augue dui, rhoncus et mauris at, tincidunt rhoncus nisi. Proin sit amet tortor quis ligula molestie consectetur. Mauris nec ex dignissim, ultricies nunc sit amet, ullamcorper ex. Praesent in odio ac nulla consequat malesuada. Cum sociis natoque penatibus
 					et magnis dis parturient montes, nascetur ridiculus mus.</p>
 			</div>
@@ -768,53 +983,51 @@
 				<img class="ds-card-img ds-card-img-center" data-src="holder.js/100px180" alt="Card image cap" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22670%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 			</div>
 			<div class="ds-card-footer ds-text-center">
-				<a href="#" class="ds-btn ds-btn-primary">Learn More</a>
+				<a href="#!" class="ds-btn ds-btn-primary">Learn More</a>
 			</div>
 		</div>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-card ds-card-content&quot;>
-	&lt;div class=&quot;ds-card-header ds-text-muted&quot;>Details&lt;/div>
-	&lt;div class=&quot;ds-card-block&quot;>
-		&lt;p class=&quot;ds-card-text&quot;>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus lacus non porttitor bibendum. Nunc id eros vitae diam aliquam varius et eget urna. Nulla pulvinar porttitor lacus, eget dignissim est pellentesque nec. Quisque in volutpat quam. Quisque augue dui, rhoncus et mauris at, tincidunt rhoncus nisi. Proin sit amet tortor quis ligula molestie consectetur. Mauris nec ex dignissim, ultricies nunc sit amet, ullamcorper ex. Praesent in odio ac nulla consequat malesuada. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p>
+	&lt;div class=&quot;ds-card-header&quot;>Details&lt;/div>
+	&lt;div class=&quot;ds-card-block ds-card-text-wrapper&quot;>
+		&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus lacus non porttitor bibendum. Nunc id eros vitae diam aliquam varius et eget urna. Nulla pulvinar porttitor lacus, eget dignissim est pellentesque nec. Quisque in volutpat quam. Quisque augue dui, rhoncus et mauris at, tincidunt rhoncus nisi. Proin sit amet tortor quis ligula molestie consectetur. Mauris nec ex dignissim, ultricies nunc sit amet, ullamcorper ex. Praesent in odio ac nulla consequat malesuada. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p>
 	&lt;/div>
 	&lt;div class=&quot;ds-card-block&quot;>
 		&lt;img class=&quot;ds-card-img ds-card-img-center&quot; data-src=&quot;...&quot; alt=&quot;Card image cap&quot;>
 	&lt;/div>
 	&lt;div class=&quot;ds-card-footer ds-text-center&quot;>
-		&lt;a href=&quot;#&quot; class=&quot;ds-btn ds-btn-primary&quot;>Learn More&lt;/a>
+		&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-primary&quot;>Learn More&lt;/a>
 	&lt;/div>
 &lt;/div></code></pre>
 </section>
 
 <section class="f-section">
 	<div class="f-example">
-		<div class="ds-card ds-card-content">
-			<div class="ds-card-header ds-text-muted">Location</div>
+		<div class="ds-card ds-card-content" id="phantom-ds-card-content-header">
+			<div class="ds-card-header">Location</div>
 			<div class="ds-card-block">
 				<img class="ds-card-img" data-src="holder.js/100px180" alt="Card image cap" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22672%22%20height%3D%22350%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 			</div>
 			<div class="ds-card-block">
-				<address class="ds-text-muted">
-					<strong>Mission St. Walgreens</strong><br>
-					456 Mission St.<br>
-					San Francisco, CA 94106<br>
-					<a href="#">Directions</a>
-				</address>
+				<div class="ds-text-address">
+					<strong>Mission St. Walgreens</strong><br> 456 Mission St.<br> San Francisco, CA 94106<br>
+					<a href="#!">Directions</a>
+				</div>
 			</div>
 		</div>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-card ds-card-content&quot;>
-	&lt;div class=&quot;ds-card-header ds-text-muted&quot;>Location&lt;/div>
+	&lt;div class=&quot;ds-card-header&quot;>Location&lt;/div>
 	&lt;div class=&quot;ds-card-block&quot;>
 		&lt;img class=&quot;ds-card-img&quot; data-src=&quot;...&quot; alt=&quot;Card image cap&quot;>
 	&lt;/div>
 	&lt;div class=&quot;ds-card-block&quot;>
-		&lt;address class=&quot;ds-text-muted&quot;>
+		&lt;div class=&quot;ds-text-address&quot;>
 			&lt;strong>Mission St. Walgreens&lt;/strong>&lt;br>
 			456 Mission St.&lt;br>
 			San Francisco, CA 94106&lt;br>
-			&lt;a href=&quot;#&quot;>Directions&lt;/a>
-		&lt;/address>
+			&lt;a href=&quot;#!&quot;>Directions&lt;/a>
+		&lt;/div>
 	&lt;/div>
 &lt;/div></code></pre>
 </section>
@@ -823,31 +1036,31 @@
 	<h3 class="f-example-title">Content Types</h3>
 	<p>Cards support a wide variety of content, including images, text, list groups, links, and more. Mix and match multiple content types to create the card you need.</p>
 	<div class="f-example">
-		<div class="ds-card">
+		<div class="ds-card" id="phantom-ds-card-content-type-image-title-text-button">
 			<img class="ds-card-img-top" data-src="holder.js/100px180" alt="Card image cap" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22318%22%20height%3D%22180%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 			<div class="ds-card-block">
-				<h4 class="ds-card-title">Card title</h4>
+				<h3 class="ds-card-title ds-h4">Card title</h3>
 				<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="ds-btn ds-btn-primary-outline">Button</a>
+				<a href="#!" class="ds-btn ds-btn-primary-outline">Button</a>
 			</div>
 		</div>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-card&quot;>
 	&lt;img class=&quot;ds-card-img-top&quot; data-src=&quot;...&quot; alt=&quot;Card image cap&quot;>
 	&lt;div class=&quot;ds-card-block&quot;>
-		&lt;h4 class=&quot;ds-card-title&quot;>Card title&lt;/h4>
+		&lt;h3 class=&quot;ds-card-title ds-h4&quot;>Card title&lt;/h3>
 		&lt;p class=&quot;ds-card-text&quot;>Some quick example text to build on the card title and make up the bulk of the card&apos;s content.&lt;/p>
-		&lt;a href=&quot;#&quot; class=&quot;ds-btn ds-btn-primary-outline&quot;>Button&lt;/a>
+		&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-primary-outline&quot;>Button&lt;/a>
 	&lt;/div>
 &lt;/div></code></pre>
 </section>
 
 <section class="f-section">
 	<div class="f-example">
-		<div class="ds-card">
+		<div class="ds-card" id="phantom-ds-card-content-type-image-title-text-list-links">
 			<img class="ds-card-img-top" data-src="holder.js/100px180" alt="Card image cap" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22318%22%20height%3D%22180%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 			<div class="ds-card-block">
-				<h4 class="ds-card-title">Card title</h4>
+				<h3 class="ds-card-title ds-h4">Card title</h3>
 				<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 			</div>
 			<ul class="ds-list-group ds-list-group-flush">
@@ -856,15 +1069,15 @@
 				<li class="ds-list-group-item">Vestibulum at eros</li>
 			</ul>
 			<div class="ds-card-block">
-				<a href="#" class="ds-card-link">Card link</a>
-				<a href="#" class="ds-card-link">Another link</a>
+				<a href="#!" class="ds-card-link">Card link</a>
+				<a href="#!" class="ds-card-link">Another link</a>
 			</div>
 		</div>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-card&quot;>
 	&lt;img class=&quot;ds-card-img-top&quot; data-src=&quot;...&quot; alt=&quot;Card image cap&quot;>
 	&lt;div class=&quot;ds-card-block&quot;>
-		&lt;h4 class=&quot;ds-card-title&quot;>Card title&lt;/h4>
+		&lt;h3 class=&quot;ds-card-title ds-h4&quot;>Card title&lt;/h3>
 		&lt;p class=&quot;ds-card-text&quot;>Some quick example text to build on the card title and make up the bulk of the card&apos;s content.&lt;/p>
 	&lt;/div>
 	&lt;ul class=&quot;ds-list-group ds-list-group-flush&quot;>
@@ -873,31 +1086,31 @@
 		&lt;li class=&quot;ds-list-group-item&quot;>Vestibulum at eros&lt;/li>
 	&lt;/ul>
 	&lt;div class=&quot;ds-card-block&quot;>
-		&lt;a href=&quot;#&quot; class=&quot;ds-card-link&quot;>Card link&lt;/a>
-		&lt;a href=&quot;#&quot; class=&quot;ds-card-link&quot;>Another link&lt;/a>
+		&lt;a href=&quot;#!&quot; class=&quot;ds-card-link&quot;>Card link&lt;/a>
+		&lt;a href=&quot;#!&quot; class=&quot;ds-card-link&quot;>Another link&lt;/a>
 	&lt;/div>
 &lt;/div></code></pre>
 </section>
 
 <section class="f-section">
 	<div class="f-example">
-		<div class="ds-card">
+		<div class="ds-card" id="phantom-ds-card-content-type-title-subtitle-image-text-links">
 			<div class="ds-card-block">
-				<h4 class="ds-card-title">Card title</h4>
-				<h6 class="ds-card-subtitle ds-text-muted">Support card subtitle</h6>
+				<h3 class="ds-card-title ds-h4">Card title</h3>
+				<p class="ds-card-subtitle">Support card subtitle</p>
 			</div>
 			<img class="ds-card-img-top" data-src="holder.js/100px180" alt="Card image cap" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22318%22%20height%3D%22180%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 			<div class="ds-card-block">
 				<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="ds-card-link">Card link</a>
-				<a href="#" class="ds-card-link">Another link</a>
+				<a href="#!" class="ds-card-link">Card link</a>
+				<a href="#!" class="ds-card-link">Another link</a>
 			</div>
 		</div>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-card&quot;>
 	&lt;div class=&quot;ds-card-block&quot;>
-		&lt;h4 class=&quot;ds-card-title&quot;>Card title&lt;/h4>
-		&lt;h6 class=&quot;ds-card-subtitle ds-text-muted&quot;>Support card subtitle&lt;/h6>
+		&lt;h3 class=&quot;ds-card-title ds-h4&quot;>Card title&lt;/h3>
+		&lt;p class=&quot;ds-card-subtitle&quot;>Support card subtitle&lt;/p>
 	&lt;/div>
 	&lt;img data-src=&quot;...&quot; alt=&quot;Card image&quot;>
 	&lt;div class=&quot;ds-card-block&quot;>
@@ -910,7 +1123,7 @@
 
 <section class="f-section">
 	<div class="f-example">
-		<div class="ds-card">
+		<div class="ds-card" id="phantom-ds-card-content-type-image-text">
 			<img class="ds-card-img-top" data-src="holder.js/100px180" alt="Card image cap" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22318%22%20height%3D%22180%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 			<div class="ds-card-block">
 				<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -927,26 +1140,26 @@
 
 <section class="f-section">
 	<div class="f-example">
-		<div class="ds-card ds-card-block">
-			<h4 class="ds-card-title">Card title</h4>
+		<div class="ds-card ds-card-block" id="phantom-ds-card-content-type-title-text-links">
+			<h3 class="ds-card-title ds-h4">Card title</h3>
 			<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<a href="#" class="ds-card-link">Card link</a>
-			<a href="#" class="ds-card-link">Another link</a>
+			<a href="#!" class="ds-card-link">Card link</a>
+			<a href="#!" class="ds-card-link">Another link</a>
 		</div>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-card ds-card-block&quot;>
 	&lt;h4 class=&quot;ds-card-title&quot;>Card title&lt;/h4>
 	&lt;p class=&quot;ds-card-text&quot;>Some quick example text to build on the card title and make up the bulk of the card&apos;s content.&lt;/p>
-	&lt;a href=&quot;#&quot; class=&quot;ds-card-link&quot;>Card link&lt;/a>
-	&lt;a href=&quot;#&quot; class=&quot;ds-card-link&quot;>Another link&lt;/a>
+	&lt;a href=&quot;#!&quot; class=&quot;ds-card-link&quot;>Card link&lt;/a>
+	&lt;a href=&quot;#!&quot; class=&quot;ds-card-link&quot;>Another link&lt;/a>
 &lt;/div></code></pre>
 </section>
 
 <section class="f-section">
 	<div class="f-example">
-		<div class="ds-card ds-card-program">
+		<div class="ds-card ds-card-program" id="phantom-ds-card-content-type-program">
 			<div class="ds-card-block">
-				<h4 class="ds-card-subtitle">MAY 4</h4>
+				<p class="ds-card-subtitle">MAY 4</p>
 				<h2 class="ds-card-title">Adult Type 1 and Type 1.5 Diabetes Support Group</h2>
 				<p class="ds-card-location">Kaiser Hospital, Santa Rosa, CA</p>
 			</div>
@@ -972,41 +1185,42 @@
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Featured Cards&lt;/h3&gt;
 	&lt;p&gt;The featured card hero image with the momentum line mask requires a header for both the card and the content. It is recommended to apply a fixed height on the card and hero image.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;div class=&quot;ds-card ds-card-featured ds-card-featured-hero&quot;&gt;
-			&lt;div class=&quot;ds-card-header ds-text-muted&quot;&gt;Featured Promotion&lt;/div&gt;
+		&lt;div class=&quot;ds-card ds-card-featured ds-card-featured-hero&quot; id=&quot;phantom-ds-card-featured-hero&quot;&gt;
+			&lt;div class=&quot;ds-card-header&quot;&gt;Featured Promotion
+			&lt;/div&gt;
 			&lt;div class=&quot;ds-card-hero-group&quot;&gt;
 				&lt;div class=&quot;ds-card-hero ds-card-hero-block ds-card-hero-block-1&quot;&gt;
 					&lt;img class=&quot;ds-card-img-left&quot; data-src=&quot;holder.js/100px180&quot; alt=&quot;Card image cap&quot; src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22500%22%20height%3D%22300%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;&gt;
 				&lt;/div&gt;
 				&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-2&quot;&gt;
-					&lt;div class=&quot;ds-card-header ds-text-muted&quot;&gt;Featured Promotion&lt;/div&gt;
+					&lt;div class=&quot;ds-card-header&quot;&gt;Featured Promotion&lt;/div&gt;
 					&lt;div class=&quot;ds-card-block&quot;&gt;
-						&lt;h4 class=&quot;ds-card-title&quot;&gt;Alex and Ani Bracelet&lt;/h4&gt;
-						&lt;h6 class=&quot;ds-card-subtitle ds-text-muted&quot;&gt;Start Date - End Date&lt;/h6&gt;
+						&lt;h3 class=&quot;ds-card-title ds-h4&quot;&gt;Alex and Ani Bracelet&lt;/h3&gt;
+						&lt;p class=&quot;ds-card-subtitle&quot;&gt;Start Date - End Date&lt;/p&gt;
 						&lt;p class=&quot;ds-card-text&quot;&gt;Lorem ipsum purchase branded apparel and a wide range of merchandise to show your support—and raise awareness for JDRF.&lt;/p&gt;
 					&lt;/div&gt;
 					&lt;div class=&quot;ds-card-footer&quot;&gt;
-						&lt;a href=&quot;#&quot; class=&quot;ds-card-link&quot;&gt;DETAILS&lt;/a&gt;
+						&lt;a href=&quot;#!&quot; class=&quot;ds-card-link&quot;&gt;DETAILS&lt;/a&gt;
 					&lt;/div&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-card ds-card-featured ds-card-featured-hero&amp;quot;&gt;
-	&amp;lt;div class=&amp;quot;ds-card-header ds-text-muted&amp;quot;&gt;Featured Promotion&amp;lt;/div&gt;
+	&amp;lt;div class=&amp;quot;ds-card-header&amp;quot;&gt;Featured Promotion&amp;lt;/div&gt;
 	&amp;lt;div class=&amp;quot;ds-card-hero-group&amp;quot;&gt;
 		&amp;lt;div class=&amp;quot;ds-card-hero ds-card-hero-block ds-card-hero-block-1&amp;quot;&gt;
 			&amp;lt;img class=&amp;quot;ds-card-img-left&amp;quot; data-src=&amp;quot;...&amp;quot; alt=&amp;quot;Card image cap&amp;quot;&gt;
 		&amp;lt;/div&gt;
 		&amp;lt;div class=&amp;quot;ds-card-hero-block ds-card-hero-block-2&amp;quot;&gt;
-			&amp;lt;div class=&amp;quot;ds-card-header ds-text-muted&amp;quot;&gt;Featured Promotion&amp;lt;/div&gt;
+			&amp;lt;div class=&amp;quot;ds-card-header&amp;quot;&gt;Featured Promotion&amp;lt;/div&gt;
 			&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
-				&amp;lt;h4 class=&amp;quot;ds-card-title&amp;quot;&gt;Alex and Ani Bracelet&amp;lt;/h4&gt;
-				&amp;lt;h6 class=&amp;quot;ds-card-subtitle ds-text-muted&amp;quot;&gt;Start Date - End Date&amp;lt;/h6&gt;
+				&amp;lt;h3 class=&amp;quot;ds-card-title ds-h4&amp;quot;&gt;Alex and Ani Bracelet&amp;lt;/h3&gt;
+				&amp;lt;p class=&amp;quot;ds-card-subtitle&amp;quot;&gt;Start Date - End Date&amp;lt;/p&gt;
 				&amp;lt;p class=&amp;quot;ds-card-text&amp;quot;&gt;Lorem ipsum purchase branded apparel and a wide range of merchandise to show your support—and raise awareness for JDRF.&amp;lt;/p&gt;
 			&amp;lt;/div&gt;
 			&amp;lt;div class=&amp;quot;ds-card-footer&amp;quot;&gt;
-				&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-card-link&amp;quot;&gt;DETAILS&amp;lt;/a&gt;
+				&amp;lt;a href=&amp;quot;#!&amp;quot; class=&amp;quot;ds-card-link&amp;quot;&gt;DETAILS&amp;lt;/a&gt;
 			&amp;lt;/div&gt;
 		&amp;lt;/div&gt;
 	&amp;lt;/div&gt;
@@ -1015,21 +1229,20 @@
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;div class=&quot;ds-card ds-card-featured&quot;&gt;
-			&lt;div class=&quot;ds-card-header ds-text-muted&quot;&gt;Our partner&#x27;s promotions make it easy for you to contribute&lt;/div&gt;
+		&lt;div class=&quot;ds-card ds-card-featured&quot; id=&quot;phantom-ds-card-featured&quot;&gt;
+			&lt;div class=&quot;ds-card-header&quot;&gt;Our partner&#x27;s promotions make it easy for you to contribute&lt;/div&gt;
 			&lt;div class=&quot;ds-card-hero-group&quot;&gt;
-				&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-1&quot;&gt;
-					&lt;div class=&quot;ds-card-block&quot;&gt;
-						&lt;img class=&quot;ds-card-img&quot; data-src=&quot;holder.js/100px180&quot; alt=&quot;Card image cap&quot; src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22286%22%20height%3D%22176%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;&gt;
-					&lt;/div&gt;
+				&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-1 ds-card-block&quot;&gt;
+					&lt;img class=&quot;ds-card-img&quot; data-src=&quot;holder.js/100px180&quot; alt=&quot;Card image cap&quot; src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22286%22%20height%3D%22176%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;&gt;
 				&lt;/div&gt;
-				&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-2&quot;&gt;
-					&lt;div class=&quot;ds-card-block&quot;&gt;
-						&lt;h4 class=&quot;ds-card-title&quot;&gt;Walgreen&#x27;s Flu Shot&lt;/h4&gt;
-						&lt;h6 class=&quot;ds-card-subtitle ds-text-muted&quot;&gt;October 10 - April 15&lt;/h6&gt;
-						&lt;h6 class=&quot;ds-card-subtitle ds-text-muted&quot;&gt;Mission St. Walgreens&lt;/h6&gt;
-						&lt;a href=&quot;#&quot; class=&quot;ds-btn ds-btn-primary&quot;&gt;Learn More&lt;/a&gt;
-					&lt;/div&gt;
+				&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-2 ds-card-block&quot;&gt;
+					&lt;h3 class=&quot;ds-card-title ds-h4&quot;&gt;Walgreen&#x27;s Flu Shot&lt;/h3&gt;
+					&lt;p class=&quot;ds-card-subtitle&quot;&gt;October 10 - April 15&lt;/p&gt;
+					&lt;p class=&quot;ds-card-subtitle&quot;&gt;Mission St. Walgreens&lt;/p&gt;
+					&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-primary&quot;&gt;Learn More&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-3 ds-card-block&quot;&gt;
+					&lt;!-- social icons here --&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -1037,39 +1250,39 @@
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-card ds-card-featured&amp;quot;&gt;
 	&amp;lt;div class=&amp;quot;ds-card-header ds-text-muted&amp;quot;&gt;Our partner&amp;apos;s promotions make it easy for you to contribute&amp;lt;/div&gt;
 	&amp;lt;div class=&amp;quot;ds-card-hero-group&amp;quot;&gt;
-		&amp;lt;div class=&amp;quot;ds-card-hero ds-card-hero-block ds-card-hero-block-1&amp;quot;&gt;
+		&amp;lt;div class=&amp;quot;ds-card-hero-block ds-card-hero-block-1 ds-card-block&amp;quot;&gt;
 			&amp;lt;img class=&amp;quot;ds-card-img&amp;quot; data-src=&amp;quot;...&amp;quot; alt=&amp;quot;Card image cap&amp;quot;&gt;
 		&amp;lt;/div&gt;
-		&amp;lt;div class=&amp;quot;ds-card-hero-block ds-card-hero-block-2&amp;quot;&gt;
-			&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
-				&amp;lt;h4 class=&amp;quot;ds-card-title&amp;quot;&gt;Walgreen&amp;apos;s Flu Shot&amp;lt;/h4&gt;
-				&amp;lt;h6 class=&amp;quot;ds-card-subtitle ds-text-muted&amp;quot;&gt;October 10 - April 15&amp;lt;/h6&gt;
-				&amp;lt;h6 class=&amp;quot;ds-card-subtitle ds-text-muted&amp;quot;&gt;Mission St. Walgreens&amp;lt;/h6&gt;
-			&amp;lt;/div&gt;
-			&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
-				&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;Learn More&amp;lt;/a&gt;
-			&amp;lt;/div&gt;
+		&amp;lt;div class=&amp;quot;ds-card-hero-block ds-card-hero-block-2 ds-card-block&amp;quot;&gt;
+			&amp;lt;h3 class=&amp;quot;ds-card-title ds-h4&amp;quot;&gt;Walgreen&amp;apos;s Flu Shot&amp;lt;/h3&gt;
+			&amp;lt;p class=&amp;quot;ds-card-subtitle&amp;quot;&gt;October 10 - April 15&amp;lt;/p&gt;
+			&amp;lt;p class=&amp;quot;ds-card-subtitle&amp;quot;&gt;Mission St. Walgreens&amp;lt;/p&gt;
+			&amp;lt;a href=&amp;quot;#!&amp;quot; class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;Learn More&amp;lt;/a&gt;
+		&amp;lt;/div&gt;
+		&amp;lt;div class=&amp;quot;ds-card-hero-block ds-card-hero-block-3 ds-card-block&amp;quot;&gt;
+			&amp;lt;!-- social icons here --&gt;
 		&amp;lt;/div&gt;
 	&amp;lt;/div&gt;
-&amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
+&amp;lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Image Cap Cards&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;div class=&quot;ds-card&quot;&gt;
+		&lt;div class=&quot;ds-card&quot; id=&quot;phantom-ds-card-image-cap&quot;&gt;
 			&lt;img class=&quot;ds-card-img-top&quot; data-src=&quot;holder.js/100px180&quot; alt=&quot;Card image cap&quot; src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22318%22%20height%3D%22180%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;&gt;
 			&lt;div class=&quot;ds-card-block&quot;&gt;
-				&lt;h6 class=&quot;ds-card-subtitle ds-text-muted&quot;&gt;Start Date - End Date&lt;/h6&gt;
-				&lt;h4 class=&quot;ds-card-title&quot;&gt;Promotion title&lt;/h4&gt;
+				&lt;p class=&quot;ds-card-subtitle&quot;&gt;Start Date - End Date&lt;/p&gt;
+				&lt;h3 class=&quot;ds-card-title ds-h4&quot;&gt;Promotion title&lt;/h3&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-card&amp;quot;&gt;
 	&amp;lt;img class=&amp;quot;ds-card-img-top&amp;quot; data-src=&amp;quot;...&amp;quot; alt=&amp;quot;Card image&amp;quot;&gt;
 	&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
-		&amp;lt;h6 class=&amp;quot;ds-card-subtitle ds-text-muted&amp;quot;&gt;Start Date - End Date&amp;lt;/h6&gt;
-		&amp;lt;h4 class=&amp;quot;ds-card-title&amp;quot;&gt;Promotion title&amp;lt;/h4&gt;
+		&amp;lt;p class=&amp;quot;ds-card-subtitle&amp;quot;&gt;Start Date - End Date&amp;lt;/p&gt;
+		&amp;lt;h3 class=&amp;quot;ds-card-title ds-h4&amp;quot;&gt;Promotion title&amp;lt;/h3&gt;
 	&amp;lt;/div&gt;
 &amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
@@ -1077,10 +1290,10 @@
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Content Cards&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;div class=&quot;ds-card ds-card-content&quot;&gt;
-			&lt;div class=&quot;ds-card-header ds-text-muted&quot;&gt;Details&lt;/div&gt;
-			&lt;div class=&quot;ds-card-block&quot;&gt;
-				&lt;p class=&quot;ds-card-text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus lacus non porttitor bibendum. Nunc id eros vitae diam aliquam varius et eget urna. Nulla pulvinar porttitor lacus, eget dignissim est pellentesque nec. Quisque in volutpat quam. Quisque
+		&lt;div class=&quot;ds-card ds-card-content&quot; id=&quot;phantom-ds-card-content-header-footer&quot;&gt;
+			&lt;div class=&quot;ds-card-header&quot;&gt;Details&lt;/div&gt;
+			&lt;div class=&quot;ds-card-block ds-card-text-wrapper&quot;&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus lacus non porttitor bibendum. Nunc id eros vitae diam aliquam varius et eget urna. Nulla pulvinar porttitor lacus, eget dignissim est pellentesque nec. Quisque in volutpat quam. Quisque
 					augue dui, rhoncus et mauris at, tincidunt rhoncus nisi. Proin sit amet tortor quis ligula molestie consectetur. Mauris nec ex dignissim, ultricies nunc sit amet, ullamcorper ex. Praesent in odio ac nulla consequat malesuada. Cum sociis natoque penatibus
 					et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
 			&lt;/div&gt;
@@ -1088,53 +1301,51 @@
 				&lt;img class=&quot;ds-card-img ds-card-img-center&quot; data-src=&quot;holder.js/100px180&quot; alt=&quot;Card image cap&quot; src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22670%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;&gt;
 			&lt;/div&gt;
 			&lt;div class=&quot;ds-card-footer ds-text-center&quot;&gt;
-				&lt;a href=&quot;#&quot; class=&quot;ds-btn ds-btn-primary&quot;&gt;Learn More&lt;/a&gt;
+				&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-primary&quot;&gt;Learn More&lt;/a&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-card ds-card-content&amp;quot;&gt;
-	&amp;lt;div class=&amp;quot;ds-card-header ds-text-muted&amp;quot;&gt;Details&amp;lt;/div&gt;
-	&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
-		&amp;lt;p class=&amp;quot;ds-card-text&amp;quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus lacus non porttitor bibendum. Nunc id eros vitae diam aliquam varius et eget urna. Nulla pulvinar porttitor lacus, eget dignissim est pellentesque nec. Quisque in volutpat quam. Quisque augue dui, rhoncus et mauris at, tincidunt rhoncus nisi. Proin sit amet tortor quis ligula molestie consectetur. Mauris nec ex dignissim, ultricies nunc sit amet, ullamcorper ex. Praesent in odio ac nulla consequat malesuada. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&amp;lt;/p&gt;
+	&amp;lt;div class=&amp;quot;ds-card-header&amp;quot;&gt;Details&amp;lt;/div&gt;
+	&amp;lt;div class=&amp;quot;ds-card-block ds-card-text-wrapper&amp;quot;&gt;
+		&amp;lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus lacus non porttitor bibendum. Nunc id eros vitae diam aliquam varius et eget urna. Nulla pulvinar porttitor lacus, eget dignissim est pellentesque nec. Quisque in volutpat quam. Quisque augue dui, rhoncus et mauris at, tincidunt rhoncus nisi. Proin sit amet tortor quis ligula molestie consectetur. Mauris nec ex dignissim, ultricies nunc sit amet, ullamcorper ex. Praesent in odio ac nulla consequat malesuada. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&amp;lt;/p&gt;
 	&amp;lt;/div&gt;
 	&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
 		&amp;lt;img class=&amp;quot;ds-card-img ds-card-img-center&amp;quot; data-src=&amp;quot;...&amp;quot; alt=&amp;quot;Card image cap&amp;quot;&gt;
 	&amp;lt;/div&gt;
 	&amp;lt;div class=&amp;quot;ds-card-footer ds-text-center&amp;quot;&gt;
-		&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;Learn More&amp;lt;/a&gt;
+		&amp;lt;a href=&amp;quot;#!&amp;quot; class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;Learn More&amp;lt;/a&gt;
 	&amp;lt;/div&gt;
 &amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;div class=&quot;ds-card ds-card-content&quot;&gt;
-			&lt;div class=&quot;ds-card-header ds-text-muted&quot;&gt;Location&lt;/div&gt;
+		&lt;div class=&quot;ds-card ds-card-content&quot; id=&quot;phantom-ds-card-content-header&quot;&gt;
+			&lt;div class=&quot;ds-card-header&quot;&gt;Location&lt;/div&gt;
 			&lt;div class=&quot;ds-card-block&quot;&gt;
 				&lt;img class=&quot;ds-card-img&quot; data-src=&quot;holder.js/100px180&quot; alt=&quot;Card image cap&quot; src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22672%22%20height%3D%22350%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;&gt;
 			&lt;/div&gt;
 			&lt;div class=&quot;ds-card-block&quot;&gt;
-				&lt;address class=&quot;ds-text-muted&quot;&gt;
-					&lt;strong&gt;Mission St. Walgreens&lt;/strong&gt;&lt;br&gt;
-					456 Mission St.&lt;br&gt;
-					San Francisco, CA 94106&lt;br&gt;
-					&lt;a href=&quot;#&quot;&gt;Directions&lt;/a&gt;
-				&lt;/address&gt;
+				&lt;div class=&quot;ds-text-address&quot;&gt;
+					&lt;strong&gt;Mission St. Walgreens&lt;/strong&gt;&lt;br&gt; 456 Mission St.&lt;br&gt; San Francisco, CA 94106&lt;br&gt;
+					&lt;a href=&quot;#!&quot;&gt;Directions&lt;/a&gt;
+				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-card ds-card-content&amp;quot;&gt;
-	&amp;lt;div class=&amp;quot;ds-card-header ds-text-muted&amp;quot;&gt;Location&amp;lt;/div&gt;
+	&amp;lt;div class=&amp;quot;ds-card-header&amp;quot;&gt;Location&amp;lt;/div&gt;
 	&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
 		&amp;lt;img class=&amp;quot;ds-card-img&amp;quot; data-src=&amp;quot;...&amp;quot; alt=&amp;quot;Card image cap&amp;quot;&gt;
 	&amp;lt;/div&gt;
 	&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
-		&amp;lt;address class=&amp;quot;ds-text-muted&amp;quot;&gt;
+		&amp;lt;div class=&amp;quot;ds-text-address&amp;quot;&gt;
 			&amp;lt;strong&gt;Mission St. Walgreens&amp;lt;/strong&gt;&amp;lt;br&gt;
 			456 Mission St.&amp;lt;br&gt;
 			San Francisco, CA 94106&amp;lt;br&gt;
-			&amp;lt;a href=&amp;quot;#&amp;quot;&gt;Directions&amp;lt;/a&gt;
-		&amp;lt;/address&gt;
+			&amp;lt;a href=&amp;quot;#!&amp;quot;&gt;Directions&amp;lt;/a&gt;
+		&amp;lt;/div&gt;
 	&amp;lt;/div&gt;
 &amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
@@ -1143,31 +1354,31 @@
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Content Types&lt;/h3&gt;
 	&lt;p&gt;Cards support a wide variety of content, including images, text, list groups, links, and more. Mix and match multiple content types to create the card you need.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;div class=&quot;ds-card&quot;&gt;
+		&lt;div class=&quot;ds-card&quot; id=&quot;phantom-ds-card-content-type-image-title-text-button&quot;&gt;
 			&lt;img class=&quot;ds-card-img-top&quot; data-src=&quot;holder.js/100px180&quot; alt=&quot;Card image cap&quot; src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22318%22%20height%3D%22180%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;&gt;
 			&lt;div class=&quot;ds-card-block&quot;&gt;
-				&lt;h4 class=&quot;ds-card-title&quot;&gt;Card title&lt;/h4&gt;
+				&lt;h3 class=&quot;ds-card-title ds-h4&quot;&gt;Card title&lt;/h3&gt;
 				&lt;p class=&quot;ds-card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&#x27;s content.&lt;/p&gt;
-				&lt;a href=&quot;#&quot; class=&quot;ds-btn ds-btn-primary-outline&quot;&gt;Button&lt;/a&gt;
+				&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-primary-outline&quot;&gt;Button&lt;/a&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-card&amp;quot;&gt;
 	&amp;lt;img class=&amp;quot;ds-card-img-top&amp;quot; data-src=&amp;quot;...&amp;quot; alt=&amp;quot;Card image cap&amp;quot;&gt;
 	&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
-		&amp;lt;h4 class=&amp;quot;ds-card-title&amp;quot;&gt;Card title&amp;lt;/h4&gt;
+		&amp;lt;h3 class=&amp;quot;ds-card-title ds-h4&amp;quot;&gt;Card title&amp;lt;/h3&gt;
 		&amp;lt;p class=&amp;quot;ds-card-text&amp;quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&amp;apos;s content.&amp;lt;/p&gt;
-		&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-btn ds-btn-primary-outline&amp;quot;&gt;Button&amp;lt;/a&gt;
+		&amp;lt;a href=&amp;quot;#!&amp;quot; class=&amp;quot;ds-btn ds-btn-primary-outline&amp;quot;&gt;Button&amp;lt;/a&gt;
 	&amp;lt;/div&gt;
 &amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;div class=&quot;ds-card&quot;&gt;
+		&lt;div class=&quot;ds-card&quot; id=&quot;phantom-ds-card-content-type-image-title-text-list-links&quot;&gt;
 			&lt;img class=&quot;ds-card-img-top&quot; data-src=&quot;holder.js/100px180&quot; alt=&quot;Card image cap&quot; src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22318%22%20height%3D%22180%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;&gt;
 			&lt;div class=&quot;ds-card-block&quot;&gt;
-				&lt;h4 class=&quot;ds-card-title&quot;&gt;Card title&lt;/h4&gt;
+				&lt;h3 class=&quot;ds-card-title ds-h4&quot;&gt;Card title&lt;/h3&gt;
 				&lt;p class=&quot;ds-card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&#x27;s content.&lt;/p&gt;
 			&lt;/div&gt;
 			&lt;ul class=&quot;ds-list-group ds-list-group-flush&quot;&gt;
@@ -1176,15 +1387,15 @@
 				&lt;li class=&quot;ds-list-group-item&quot;&gt;Vestibulum at eros&lt;/li&gt;
 			&lt;/ul&gt;
 			&lt;div class=&quot;ds-card-block&quot;&gt;
-				&lt;a href=&quot;#&quot; class=&quot;ds-card-link&quot;&gt;Card link&lt;/a&gt;
-				&lt;a href=&quot;#&quot; class=&quot;ds-card-link&quot;&gt;Another link&lt;/a&gt;
+				&lt;a href=&quot;#!&quot; class=&quot;ds-card-link&quot;&gt;Card link&lt;/a&gt;
+				&lt;a href=&quot;#!&quot; class=&quot;ds-card-link&quot;&gt;Another link&lt;/a&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-card&amp;quot;&gt;
 	&amp;lt;img class=&amp;quot;ds-card-img-top&amp;quot; data-src=&amp;quot;...&amp;quot; alt=&amp;quot;Card image cap&amp;quot;&gt;
 	&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
-		&amp;lt;h4 class=&amp;quot;ds-card-title&amp;quot;&gt;Card title&amp;lt;/h4&gt;
+		&amp;lt;h3 class=&amp;quot;ds-card-title ds-h4&amp;quot;&gt;Card title&amp;lt;/h3&gt;
 		&amp;lt;p class=&amp;quot;ds-card-text&amp;quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&amp;apos;s content.&amp;lt;/p&gt;
 	&amp;lt;/div&gt;
 	&amp;lt;ul class=&amp;quot;ds-list-group ds-list-group-flush&amp;quot;&gt;
@@ -1193,31 +1404,31 @@
 		&amp;lt;li class=&amp;quot;ds-list-group-item&amp;quot;&gt;Vestibulum at eros&amp;lt;/li&gt;
 	&amp;lt;/ul&gt;
 	&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
-		&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-card-link&amp;quot;&gt;Card link&amp;lt;/a&gt;
-		&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-card-link&amp;quot;&gt;Another link&amp;lt;/a&gt;
+		&amp;lt;a href=&amp;quot;#!&amp;quot; class=&amp;quot;ds-card-link&amp;quot;&gt;Card link&amp;lt;/a&gt;
+		&amp;lt;a href=&amp;quot;#!&amp;quot; class=&amp;quot;ds-card-link&amp;quot;&gt;Another link&amp;lt;/a&gt;
 	&amp;lt;/div&gt;
 &amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;div class=&quot;ds-card&quot;&gt;
+		&lt;div class=&quot;ds-card&quot; id=&quot;phantom-ds-card-content-type-title-subtitle-image-text-links&quot;&gt;
 			&lt;div class=&quot;ds-card-block&quot;&gt;
-				&lt;h4 class=&quot;ds-card-title&quot;&gt;Card title&lt;/h4&gt;
-				&lt;h6 class=&quot;ds-card-subtitle ds-text-muted&quot;&gt;Support card subtitle&lt;/h6&gt;
+				&lt;h3 class=&quot;ds-card-title ds-h4&quot;&gt;Card title&lt;/h3&gt;
+				&lt;p class=&quot;ds-card-subtitle&quot;&gt;Support card subtitle&lt;/p&gt;
 			&lt;/div&gt;
 			&lt;img class=&quot;ds-card-img-top&quot; data-src=&quot;holder.js/100px180&quot; alt=&quot;Card image cap&quot; src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22318%22%20height%3D%22180%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;&gt;
 			&lt;div class=&quot;ds-card-block&quot;&gt;
 				&lt;p class=&quot;ds-card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&#x27;s content.&lt;/p&gt;
-				&lt;a href=&quot;#&quot; class=&quot;ds-card-link&quot;&gt;Card link&lt;/a&gt;
-				&lt;a href=&quot;#&quot; class=&quot;ds-card-link&quot;&gt;Another link&lt;/a&gt;
+				&lt;a href=&quot;#!&quot; class=&quot;ds-card-link&quot;&gt;Card link&lt;/a&gt;
+				&lt;a href=&quot;#!&quot; class=&quot;ds-card-link&quot;&gt;Another link&lt;/a&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-card&amp;quot;&gt;
 	&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
-		&amp;lt;h4 class=&amp;quot;ds-card-title&amp;quot;&gt;Card title&amp;lt;/h4&gt;
-		&amp;lt;h6 class=&amp;quot;ds-card-subtitle ds-text-muted&amp;quot;&gt;Support card subtitle&amp;lt;/h6&gt;
+		&amp;lt;h3 class=&amp;quot;ds-card-title ds-h4&amp;quot;&gt;Card title&amp;lt;/h3&gt;
+		&amp;lt;p class=&amp;quot;ds-card-subtitle&amp;quot;&gt;Support card subtitle&amp;lt;/p&gt;
 	&amp;lt;/div&gt;
 	&amp;lt;img data-src=&amp;quot;...&amp;quot; alt=&amp;quot;Card image&amp;quot;&gt;
 	&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
@@ -1230,7 +1441,7 @@
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;div class=&quot;ds-card&quot;&gt;
+		&lt;div class=&quot;ds-card&quot; id=&quot;phantom-ds-card-content-type-image-text&quot;&gt;
 			&lt;img class=&quot;ds-card-img-top&quot; data-src=&quot;holder.js/100px180&quot; alt=&quot;Card image cap&quot; src=&quot;data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22318%22%20height%3D%22180%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3C!--%0ASource%20URL%3A%20holder.js%2F100px180%2F%3Ftext%3DImage%20cap%0ACreated%20with%20Holder.js%202.8.2.%0ALearn%20more%20at%20http%3A%2F%2Fholderjs.com%0A(c)%202012-2015%20Ivan%20Malopinsky%20-%20http%3A%2F%2Fimsky.co%0A--%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%23holder_1552c855e7e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%5D%5D%3E%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1552c855e7e%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%2F%3E%3Cg%3E%3Ctext%20x%3D%22109.203125%22%20y%3D%2297.2%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;&gt;
 			&lt;div class=&quot;ds-card-block&quot;&gt;
 				&lt;p class=&quot;ds-card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&#x27;s content.&lt;/p&gt;
@@ -1247,26 +1458,26 @@
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;div class=&quot;ds-card ds-card-block&quot;&gt;
-			&lt;h4 class=&quot;ds-card-title&quot;&gt;Card title&lt;/h4&gt;
+		&lt;div class=&quot;ds-card ds-card-block&quot; id=&quot;phantom-ds-card-content-type-title-text-links&quot;&gt;
+			&lt;h3 class=&quot;ds-card-title ds-h4&quot;&gt;Card title&lt;/h3&gt;
 			&lt;p class=&quot;ds-card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&#x27;s content.&lt;/p&gt;
-			&lt;a href=&quot;#&quot; class=&quot;ds-card-link&quot;&gt;Card link&lt;/a&gt;
-			&lt;a href=&quot;#&quot; class=&quot;ds-card-link&quot;&gt;Another link&lt;/a&gt;
+			&lt;a href=&quot;#!&quot; class=&quot;ds-card-link&quot;&gt;Card link&lt;/a&gt;
+			&lt;a href=&quot;#!&quot; class=&quot;ds-card-link&quot;&gt;Another link&lt;/a&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-card ds-card-block&amp;quot;&gt;
 	&amp;lt;h4 class=&amp;quot;ds-card-title&amp;quot;&gt;Card title&amp;lt;/h4&gt;
 	&amp;lt;p class=&amp;quot;ds-card-text&amp;quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&amp;apos;s content.&amp;lt;/p&gt;
-	&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-card-link&amp;quot;&gt;Card link&amp;lt;/a&gt;
-	&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-card-link&amp;quot;&gt;Another link&amp;lt;/a&gt;
+	&amp;lt;a href=&amp;quot;#!&amp;quot; class=&amp;quot;ds-card-link&amp;quot;&gt;Card link&amp;lt;/a&gt;
+	&amp;lt;a href=&amp;quot;#!&amp;quot; class=&amp;quot;ds-card-link&amp;quot;&gt;Another link&amp;lt;/a&gt;
 &amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;div class=&quot;ds-card ds-card-program&quot;&gt;
+		&lt;div class=&quot;ds-card ds-card-program&quot; id=&quot;phantom-ds-card-content-type-program&quot;&gt;
 			&lt;div class=&quot;ds-card-block&quot;&gt;
-				&lt;h4 class=&quot;ds-card-subtitle&quot;&gt;MAY 4&lt;/h4&gt;
+				&lt;p class=&quot;ds-card-subtitle&quot;&gt;MAY 4&lt;/p&gt;
 				&lt;h2 class=&quot;ds-card-title&quot;&gt;Adult Type 1 and Type 1.5 Diabetes Support Group&lt;/h2&gt;
 				&lt;p class=&quot;ds-card-location&quot;&gt;Kaiser Hospital, Santa Rosa, CA&lt;/p&gt;
 			&lt;/div&gt;
@@ -1342,16 +1553,14 @@
 
 <section class="f-section">
 	<h3 class="f-example-title">Sidebar: Two Levels</h3>
+	<p>By default, all child menus are collapsed. To enable these by default, add the `.ds-nav-show` class. If you wish to show the class using a JavaScript interaction, add the '.ds-current' class to the child menu.</p>
 	<div class="f-example">
 		<ul class="ds-nav ds-sidebar" id="phantom-sidebar-two">
 			<li class="ds-nav-item">
 				<a class="ds-nav-link" href="#!">Parent Link</a>
-			</li>
-			<li class="ds-nav-item">
-				<a class="ds-nav-link" href="#!">Parent Link</a>
 				<ul class="ds-nav">
 					<li class="ds-nav-item">
-						<a class="ds-nav-link ds-current" href="#!">Child Link</a>
+						<a class="ds-nav-link" href="#!">Current Child</a>
 					</li>
 					<li class="ds-nav-item">
 						<a class="ds-nav-link" href="#!">Child Link</a>
@@ -1363,18 +1572,40 @@
 			</li>
 			<li class="ds-nav-item">
 				<a class="ds-nav-link" href="#!">Parent Link</a>
+				<ul class="ds-nav ds-current">
+					<li class="ds-nav-item">
+						<a class="ds-nav-link ds-current" href="#!">Current Child</a>
+					</li>
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Child Link</a>
+					</li>
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Child Link</a>
+					</li>
+				</ul>
+			</li>
+			<li class="ds-nav-item">
+				<a class="ds-nav-link" href="#!">Parent Link</a>
+				<ul class="ds-nav ds-nav-show">
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Current Child</a>
+					</li>
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Child Link</a>
+					</li>
+					<li class="ds-nav-item">
+						<a class="ds-nav-link" href="#!">Child Link</a>
+					</li>
+				</ul>
 			</li>
 		</ul>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;ul class=&quot;ds-nav ds-sidebar&quot;>
 	&lt;li class=&quot;ds-nav-item&quot;>
 		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
-	&lt;/li>
-	&lt;li class=&quot;ds-nav-item&quot;>
-		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
 		&lt;ul class=&quot;ds-nav&quot;>
 			&lt;li class=&quot;ds-nav-item&quot;>
-				&lt;a class=&quot;ds-nav-link current&quot; href=&quot;#!&quot;>Current Child&lt;/a>
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Current Child&lt;/a>
 			&lt;/li>
 			&lt;li class=&quot;ds-nav-item&quot;>
 				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
@@ -1386,6 +1617,31 @@
 	&lt;/li>
 	&lt;li class=&quot;ds-nav-item&quot;>
 		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
+		&lt;ul class=&quot;ds-nav ds-current&quot;>
+			&lt;li class=&quot;ds-nav-item&quot;>
+				&lt;a class=&quot;ds-nav-link ds-current&quot; href=&quot;#!&quot;>Current Child&lt;/a>
+			&lt;/li>
+			&lt;li class=&quot;ds-nav-item&quot;>
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
+			&lt;/li>
+			&lt;li class=&quot;ds-nav-item&quot;>
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
+			&lt;/li>
+		&lt;/ul>
+	&lt;/li>
+	&lt;li class=&quot;ds-nav-item&quot;>
+		&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Parent Link&lt;/a>
+		&lt;ul class=&quot;ds-nav ds-nav-show&quot;>
+			&lt;li class=&quot;ds-nav-item&quot;>
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Current Child&lt;/a>
+			&lt;/li>
+			&lt;li class=&quot;ds-nav-item&quot;>
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
+			&lt;/li>
+			&lt;li class=&quot;ds-nav-item&quot;>
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;>Child Link&lt;/a>
+			&lt;/li>
+		&lt;/ul>
 	&lt;/li>
 &lt;/ul>
 </code></pre>
@@ -1429,16 +1685,14 @@
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Sidebar: Two Levels&lt;/h3&gt;
+	&lt;p&gt;By default, all child menus are collapsed. To enable these by default, add the &#x60;.ds-nav-show&#x60; class. If you wish to show the class using a JavaScript interaction, add the &#x27;.ds-current&#x27; class to the child menu.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;ul class=&quot;ds-nav ds-sidebar&quot; id=&quot;phantom-sidebar-two&quot;&gt;
 			&lt;li class=&quot;ds-nav-item&quot;&gt;
 				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
-			&lt;/li&gt;
-			&lt;li class=&quot;ds-nav-item&quot;&gt;
-				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
 				&lt;ul class=&quot;ds-nav&quot;&gt;
 					&lt;li class=&quot;ds-nav-item&quot;&gt;
-						&lt;a class=&quot;ds-nav-link ds-current&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
+						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Current Child&lt;/a&gt;
 					&lt;/li&gt;
 					&lt;li class=&quot;ds-nav-item&quot;&gt;
 						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
@@ -1450,18 +1704,40 @@
 			&lt;/li&gt;
 			&lt;li class=&quot;ds-nav-item&quot;&gt;
 				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
+				&lt;ul class=&quot;ds-nav ds-current&quot;&gt;
+					&lt;li class=&quot;ds-nav-item&quot;&gt;
+						&lt;a class=&quot;ds-nav-link ds-current&quot; href=&quot;#!&quot;&gt;Current Child&lt;/a&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;ds-nav-item&quot;&gt;
+						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;ds-nav-item&quot;&gt;
+						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;ds-nav-item&quot;&gt;
+				&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Parent Link&lt;/a&gt;
+				&lt;ul class=&quot;ds-nav ds-nav-show&quot;&gt;
+					&lt;li class=&quot;ds-nav-item&quot;&gt;
+						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Current Child&lt;/a&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;ds-nav-item&quot;&gt;
+						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
+					&lt;/li&gt;
+					&lt;li class=&quot;ds-nav-item&quot;&gt;
+						&lt;a class=&quot;ds-nav-link&quot; href=&quot;#!&quot;&gt;Child Link&lt;/a&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
 			&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;ul class=&amp;quot;ds-nav ds-sidebar&amp;quot;&gt;
 	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
 		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
-	&amp;lt;/li&gt;
-	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
 		&amp;lt;ul class=&amp;quot;ds-nav&amp;quot;&gt;
 			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
-				&amp;lt;a class=&amp;quot;ds-nav-link current&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Current Child&amp;lt;/a&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Current Child&amp;lt;/a&gt;
 			&amp;lt;/li&gt;
 			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
 				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
@@ -1473,6 +1749,31 @@
 	&amp;lt;/li&gt;
 	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
 		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
+		&amp;lt;ul class=&amp;quot;ds-nav ds-current&amp;quot;&gt;
+			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link ds-current&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Current Child&amp;lt;/a&gt;
+			&amp;lt;/li&gt;
+			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
+			&amp;lt;/li&gt;
+			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
+			&amp;lt;/li&gt;
+		&amp;lt;/ul&gt;
+	&amp;lt;/li&gt;
+	&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+		&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Parent Link&amp;lt;/a&gt;
+		&amp;lt;ul class=&amp;quot;ds-nav ds-nav-show&amp;quot;&gt;
+			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Current Child&amp;lt;/a&gt;
+			&amp;lt;/li&gt;
+			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
+			&amp;lt;/li&gt;
+			&amp;lt;li class=&amp;quot;ds-nav-item&amp;quot;&gt;
+				&amp;lt;a class=&amp;quot;ds-nav-link&amp;quot; href=&amp;quot;#!&amp;quot;&gt;Child Link&amp;lt;/a&gt;
+			&amp;lt;/li&gt;
+		&amp;lt;/ul&gt;
 	&amp;lt;/li&gt;
 &amp;lt;/ul&gt;
 &lt;/code&gt;&lt;/pre&gt;

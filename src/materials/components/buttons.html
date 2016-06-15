@@ -9,7 +9,7 @@ notes: |
 	<h3 class="f-example-title">Primary</h3>
 	<div class="f-example">
 		<button type="button" class="ds-btn ds-btn-primary" id="phantom-ds-btn-primary">Primary</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-active" id="phantom-ds-btn-primary-ds-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-active" id="phantom-ds-btn-primary-active">Hover</button>
 		<button type="button" class="ds-btn ds-btn-primary" id="phantom-ds-btn-primary-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.primary'}}
@@ -19,7 +19,7 @@ notes: |
 	<h3 class="f-example-title">Outline</h3>
 	<div class="f-example">
 		<button type="button" class="ds-btn ds-btn-primary-outline" id="phantom-ds-btn-outline">Outline</button>
-		<button type="button" class="ds-btn ds-btn-primary-outline ds-active" id="phantom-ds-btn-outline-ds-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary-outline ds-active" id="phantom-ds-btn-outline-active">Hover</button>
 		<button type="button" class="ds-btn ds-btn-primary-outline" id="phantom-ds-btn-outline-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.outline'}}
@@ -29,7 +29,7 @@ notes: |
 	<h3 class="f-example-title">Flat</h3>
 	<div class="f-example">
 		<button type="button" class="ds-btn ds-btn-flat" id="phantom-ds-btn-flat">Flat</button>
-		<button type="button" class="ds-btn ds-btn-flat ds-active" id="phantom-ds-btn-flat-ds-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-flat ds-active" id="phantom-ds-btn-flat-active">Hover</button>
 		<button type="button" class="ds-btn ds-btn-flat" id="phantom-ds-btn-flat-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.flat'}}
@@ -39,7 +39,7 @@ notes: |
 	<h3 class="f-example-title">Text</h3>
 	<div class="f-example">
 		<button type="button" class="ds-btn ds-btn-link" id="phantom-ds-btn-link">Text</button>
-		<button type="button" class="ds-btn ds-btn-link ds-active" id="phantom-ds-btn-link-ds-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-link ds-active" id="phantom-ds-btn-link-active">Hover</button>
 		<button type="button" class="ds-btn ds-btn-link" id="phantom-ds-btn-link-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.text'}}
@@ -49,7 +49,7 @@ notes: |
 	<h3 class="f-example-title">Large</h3>
 	<div class="f-example">
 		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg" id="phantom-ds-btn-lg">Large</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-active" id="phantom-ds-btn-lg-ds-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-active" id="phantom-ds-btn-lg-active">Hover</button>
 		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg" id="phantom-ds-btn-lg-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.large'}}
@@ -59,7 +59,7 @@ notes: |
 	<h3 class="f-example-title">Small</h3>
 	<div class="f-example">
 		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm" id="phantom-ds-btn-sm">Small</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm ds-active" id="phantom-ds-btn-sm-ds-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm ds-active" id="phantom-ds-btn-sm-active">Hover</button>
 		<button type="button" class="ds-btn ds-btn-primary ds-btn-sm" id="phantom-ds-btn-sm-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.small'}}
@@ -68,9 +68,9 @@ notes: |
 <section class="f-section">
 	<h3 class="f-example-title">Block</h3>
 	<div class="f-example">
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-block" id="phantom-ds-btn-block">Block</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-block ds-active" id="phantom-ds-btn-block-ds-active">Hover</button>
-		<button type="button" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-block" id="phantom-ds-btn-block-disabled" disabled>Disabled</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-block" id="phantom-ds-btn-block">Block</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-block ds-active" id="phantom-ds-btn-block-active">Hover</button>
+		<button type="button" class="ds-btn ds-btn-primary ds-btn-block" id="phantom-ds-btn-block-disabled" disabled>Disabled</button>
 	</div>
 	{{example 'button.block'}}
 </section>
@@ -131,8 +131,9 @@ notes: |
 
 <section class="f-section">
 	<h3 class="f-example-title">Checkbox Buttons</h3>
+	<p>Checkbox button groups use <a href="http://v4-alpha.getbootstrap.com/components/buttons/#checkbox-and-radio-buttons" target="_blank">Bootstrap's native classes</a> as well as the <code class="language-markup">.ds-checkbox-buttons</code> class.</p>
 	<div class="f-example" id="phantom-ds-checkbox-buttons">
-		<div class="ds-btn-group" data-toggle="buttons">
+		<div class="ds-btn-group ds-checkbox-buttons" data-toggle="buttons">
 			<label class="ds-btn ds-btn-primary ds-active btn-icon">
 				<input type="checkbox" checked autocomplete="off"> Checkbox 1 (pre-checked)
 			</label>
@@ -149,8 +150,9 @@ notes: |
 
 <section class="f-section">
 	<h3 class="f-example-title">Radio Buttons</h3>
+	<p>Radio button groups use <a href="http://v4-alpha.getbootstrap.com/components/buttons/#checkbox-and-radio-buttons" target="_blank">Bootstrap's native classes</a> as well as the <code class="language-markup">.ds-radio-buttons</code> class.</p>
 	<div class="f-example" id="phantom-ds-radio-buttons">
-		<div class="ds-btn-group" data-toggle="buttons">
+		<div class="ds-btn-group ds-radio-buttons" data-toggle="buttons">
 			<label class="ds-btn ds-btn-primary ds-active">
 				<input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
 			</label>
