@@ -35,21 +35,45 @@
 	}
 
 	.ds-card-featured-hero {
-		@include desktop {
+		@media screen and ( min-width: 768px ) {
+			height: 468px;
+		}
+
+		@media screen and ( min-width: 992px ) {
+			height: 368px;
+		}
+
+		@media screen and ( min-width: 1199px ) {
 			height: 320px;
 		}
 
-		@include mobile {
-			height: auto;
-		}
-
 		.ds-card-img-left {
-			@include desktop {
-				height: 320px;
+			@media screen and ( min-width: 768px ) {
+				height: 468px;
 			}
 
-			@include mobile {
-				height: auto;
+			@media screen and ( min-width: 992px ) {
+				height: 368px;
+			}
+
+			@media screen and ( min-width: 1199px ) {
+				height: 320px;
+			}
+		}
+	}
+
+	.ds-card-hero {
+		&:after {
+			@media screen and ( min-width: 768px ) {
+				right: -62%;
+			}
+
+			@media screen and ( min-width: 992px ) {
+				right: -75%;
+			}
+
+			@media screen and ( min-width: 1199px ) {
+				right: -82%;
 			}
 		}
 	}
