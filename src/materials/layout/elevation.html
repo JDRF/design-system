@@ -1,15 +1,22 @@
 ---
 notes: |
-  Elevations are applied using the `ds-elevation-` class and are numbered one to five. `.ds-elevation-1` would be the lowest ds-elevation versus `.ds-elevation-5` is the highest.
+  JDRF websites are primarily flat.  Components that require special attention, such as cards and buttons, have subtle elevations to increase contrast with their surroundings and invite interaction.
 
-  Buttons in most cases start with `.ds-elevation-1` and raise to `.ds-elevation-3` on `:hover`, `:focus` and `:active` states. The `.ds-btn-flat` style of buttons start with no elevation and raise to `.ds-elevation-2` on `:hover`, `:focus` and `:active` states.
+  Elevations are applied using the `ds-elevation-` class and are numbered 1 to 5. `.ds-elevation-1` is the lowest and `.ds-elevation-5` is the highest.
 
-  There is a "flat" state not pictured below. Currently the `.ds-btn-flat` buttons are flat (without box shadows) in their normal state. To remove elevations on a button that isn't flat by default, you can use the `@include elevation-remove;` Sass mixin.
+  Buttons in most cases start with `.ds-elevation-1` and raise to `.ds-elevation-3` on `:hover`, `:focus` and `:active` states. The `.ds-btn-flat` style of buttons start with no elevation and raise to `.ds-elevation-two` on `:hover`, `:focus` and `:active` states.
+
+  To remove elevations on a component that isn't flat by default, you can use the `@include elevation-remove;` Sass mixin.
+
+   Modals, dialogs and menus (coming soon to the Design System) are the rare objects that require higher elevations.
+   
 ---
 
 <div class="f-example-inline">
-	<div class="f-rectangle ds-elevation-1"></div>
+	<div class="f-rectangle ds-elevation-remove"></div>
 
+	<p class="f-example-desc">flat</p>
+</div>
 	<p class="f-example-desc">ds-elevation-1</p>
 </div>
 <div class="f-example-inline">
