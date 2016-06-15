@@ -3067,7 +3067,7 @@ p {
 
 b,
 strong {
-  font-family: "Gotham Bold", sans-serif;
+  font-family: "Gotham Medium", sans-serif;
   font-weight: normal;
 }
 
@@ -4607,7 +4607,7 @@ mark,
   color: #55595c;
   background-color: #fff;
   background-image: none;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 0.25rem;
 }
 
@@ -5000,11 +5000,18 @@ input[type="checkbox"].ds-disabled {
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   line-height: 0.875rem;
   border-radius: 0.125rem;
+}
+
+.ds-btn:active,
+.ds-btn.ds-active {
+  background-image: none;
+  outline: 0;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-btn:active,
@@ -5014,22 +5021,18 @@ input[type="checkbox"].ds-disabled {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
+  outline: 0;
 }
 
 .ds-btn:focus,
 .ds-btn:hover {
   text-decoration: none;
+  outline: 0;
 }
 
 .ds-btn.ds-focus {
   text-decoration: none;
-}
-
-.ds-btn:active,
-.ds-btn.ds-active {
-  background-image: none;
   outline: 0;
-  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-btn.ds-disabled,
@@ -5914,6 +5917,11 @@ fieldset[disabled] a.ds-btn {
   height: 48px;
 }
 
+.ds-btn-lg.ds-btn-primary-outline,
+.ds-btn-group-lg > .ds-btn-primary-outline.ds-btn {
+  border-width: 2px;
+}
+
 .ds-btn-sm,
 .ds-btn-group-sm > .ds-btn {
   padding: 0.5rem 0.5rem;
@@ -6063,7 +6071,7 @@ input[type="button"].ds-btn-block {
 .ds-btn-group .ds-btn + .ds-btn-group,
 .ds-btn-group .ds-btn-group + .ds-btn,
 .ds-btn-group .ds-btn-group + .ds-btn-group {
-  margin-left: -2px;
+  margin-left: -1px;
 }
 
 .ds-btn-toolbar {
@@ -6179,7 +6187,7 @@ input[type="button"].ds-btn-block {
 .ds-btn-group-vertical > .ds-btn + .ds-btn-group,
 .ds-btn-group-vertical > .ds-btn-group + .ds-btn,
 .ds-btn-group-vertical > .ds-btn-group + .ds-btn-group {
-  margin-top: -2px;
+  margin-top: -1px;
   margin-left: 0;
 }
 
@@ -6306,23 +6314,23 @@ input[type="button"].ds-btn-block {
 
 /* Design System Custom - No Bootstrap Default */
 
-.ds-elevation-one {
+.ds-elevation-1 {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
-.ds-elevation-two {
+.ds-elevation-2 {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24), 0 0 4px 0 rgba(0, 0, 0, 0.12);
 }
 
-.ds-elevation-three {
+.ds-elevation-3 {
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
-.ds-elevation-four {
+.ds-elevation-4 {
   box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
 }
 
-.ds-elevation-five {
+.ds-elevation-5 {
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3), 0 16px 12px 0 rgba(0, 0, 0, 0.22);
 }
 
@@ -6878,19 +6886,36 @@ button.ds-list-group-item-danger.ds-active:hover {
   color: rgba(0, 0, 0, 0.87);
 }
 
+.ds-text-address-link .material-icons {
+  vertical-align: middle;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.38);
+}
+
 .ds-card-text-wrapper p:last-child {
   margin-bottom: 0;
 }
 
+.ds-card-text-wrapper + .ds-card-block {
+  padding-top: 0.5rem;
+}
+
 .ds-card-title {
+  margin-bottom: 1rem;
   color: #0073cf;
 }
 
 .ds-card-subtitle {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
   font-family: "Gotham Medium", sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: rgba(0, 0, 0, 0.54);
+}
+
+.ds-card-text {
+  margin-bottom: 1rem;
 }
 
 .ds-card-header {
@@ -6930,6 +6955,15 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card-block-btns {
   padding: 0.5rem;
+}
+
+.ds-card-block .ds-card-title {
+  margin-bottom: 0.5rem;
+}
+
+.ds-card-block .ds-btn.ds-btn-link {
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .ds-card .ds-list-group-item {
@@ -7030,6 +7064,31 @@ button.ds-list-group-item-danger.ds-active:hover {
   }
 }
 
+.ds-card-featured-hero .ds-card-hero-block > .ds-card-block {
+  padding-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .ds-card-featured-hero .ds-card-hero-block > .ds-card-block {
+    padding-left: 0;
+  }
+}
+
+.ds-card-featured-hero .ds-card-hero-block > .ds-card-footer {
+  padding-top: 0;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .ds-card-featured-hero .ds-card-hero-block > .ds-card-footer {
+    padding-left: 0;
+  }
+
+  .ds-card-featured-hero .ds-card-hero-block > .ds-card-footer .ds-btn {
+    margin-left: -0.5rem;
+  }
+}
+
 .ds-card-hero {
   overflow: hidden;
   width: 100%;
@@ -7067,6 +7126,11 @@ button.ds-list-group-item-danger.ds-active:hover {
     display: table;
     table-layout: fixed;
   }
+}
+
+.ds-card-content .ds-card-footer {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .ds-card-program {
