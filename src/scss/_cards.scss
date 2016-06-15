@@ -112,6 +112,17 @@
 	&-btns {
 		padding: 0.5rem;
 	}
+
+	.card-title {
+		margin-bottom: 0.5rem;
+	}
+
+	.btn {
+		&.btn-link {
+			margin-right: 0;
+			margin-bottom: 0;
+		}
+	}
 }
 
 // List
