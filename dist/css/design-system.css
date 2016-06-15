@@ -6914,17 +6914,25 @@ button.ds-list-group-item-danger.ds-active:hover {
   color: rgba(0, 0, 0, 0.54);
 }
 
+.ds-card-subtitle .material-icons {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  font-size: 1.25rem;
+}
+
 .ds-card-text {
   margin-bottom: 1rem;
 }
 
 .ds-card-header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-family: "Gotham Medium", sans-serif;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1rem;
   color: rgba(0, 0, 0, 0.54);
   background-color: #ffffff;
-  border-bottom-width: 2px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .ds-card-header.ds-h1,
@@ -6984,14 +6992,14 @@ button.ds-list-group-item-danger.ds-active:hover {
 @media (min-width: 768px) {
   .ds-card-featured .ds-card-hero-block-1 {
     width: 40%;
-    padding-right: 0;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem 0 2rem 1.5rem;
   }
 }
 
 @media (min-width: 768px) {
   .ds-card-featured .ds-card-hero-block-2 {
     width: 40%;
+    padding: 1.5rem;
   }
 }
 
@@ -7013,12 +7021,25 @@ button.ds-list-group-item-danger.ds-active:hover {
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
+.ds-card-featured .ds-card-title {
+  margin-bottom: 0.75rem;
+  color: #002855;
+}
+
 .ds-card-featured .ds-card-subtitle {
   margin-bottom: 0.75rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.ds-card-featured .ds-card-subtitle + .ds-btn {
+  margin-top: 0.25rem;
 }
 
 .ds-card-featured .ds-card-header {
   width: 100%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 @media (min-width: 768px) {
@@ -7065,18 +7086,20 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-card-featured-hero .ds-card-hero-block > .ds-card-block {
-  padding-top: 1.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
   .ds-card-featured-hero .ds-card-hero-block > .ds-card-block {
     padding-left: 0;
+    padding-right: 2.5rem;
   }
 }
 
 .ds-card-featured-hero .ds-card-hero-block > .ds-card-footer {
   padding-top: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -7099,10 +7122,10 @@ button.ds-list-group-item-danger.ds-active:hover {
   content: "";
   position: absolute;
   top: 0;
-  right: -35%;
+  right: -87%;
   z-index: 1;
   display: none;
-  width: 50%;
+  width: 100%;
   height: 100%;
   -ms-transform: skewX(-10deg);
       transform: skewX(-10deg);
