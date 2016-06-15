@@ -3067,7 +3067,7 @@ p {
 
 b,
 strong {
-  font-family: "Gotham Bold", sans-serif;
+  font-family: "Gotham Medium", sans-serif;
   font-weight: normal;
 }
 
@@ -4607,7 +4607,7 @@ mark,
   color: #55595c;
   background-color: #fff;
   background-image: none;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 0.25rem;
 }
 
@@ -5000,7 +5000,7 @@ input[type="checkbox"].ds-disabled {
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   line-height: 0.875rem;
@@ -5914,6 +5914,11 @@ fieldset[disabled] a.ds-btn {
   height: 48px;
 }
 
+.ds-btn-lg.ds-btn-primary-outline,
+.ds-btn-group-lg > .ds-btn-primary-outline.ds-btn {
+  border-width: 2px;
+}
+
 .ds-btn-sm,
 .ds-btn-group-sm > .ds-btn {
   padding: 0.5rem 0.5rem;
@@ -6063,7 +6068,7 @@ input[type="button"].ds-btn-block {
 .ds-btn-group .ds-btn + .ds-btn-group,
 .ds-btn-group .ds-btn-group + .ds-btn,
 .ds-btn-group .ds-btn-group + .ds-btn-group {
-  margin-left: -2px;
+  margin-left: -1px;
 }
 
 .ds-btn-toolbar {
@@ -6179,7 +6184,7 @@ input[type="button"].ds-btn-block {
 .ds-btn-group-vertical > .ds-btn + .ds-btn-group,
 .ds-btn-group-vertical > .ds-btn-group + .ds-btn,
 .ds-btn-group-vertical > .ds-btn-group + .ds-btn-group {
-  margin-top: -2px;
+  margin-top: -1px;
   margin-left: 0;
 }
 
@@ -6942,6 +6947,15 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card-block-btns {
   padding: 0.5rem;
+}
+
+.ds-card-block .ds-card-title {
+  margin-bottom: 0.5rem;
+}
+
+.ds-card-block .ds-btn.ds-btn-link {
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .ds-card .ds-list-group-item {
