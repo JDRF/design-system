@@ -5953,6 +5953,10 @@ input[type="button"].ds-btn-block {
   width: 100%;
 }
 
+.ds-btn-icon {
+  height: auto;
+}
+
 .ds-btn-icon:before {
   display: block;
 }
@@ -6261,6 +6265,7 @@ input[type="button"].ds-btn-block {
   color: rgba(0, 0, 0, 0.54);
   background-color: #ffffff;
   border-color: #f5f5f5;
+  border-width: 1px;
 }
 
 .ds-btn-group.ds-btn-icon-group .ds-btn:hover,
@@ -6879,6 +6884,13 @@ button.ds-list-group-item-danger.ds-active:hover {
   color: #0073cf;
 }
 
+.ds-card-subtitle {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgba(0, 0, 0, 0.54);
+}
+
 .ds-card-header {
   font-family: "Gotham Medium", sans-serif;
   font-size: 1rem;
@@ -6910,11 +6922,16 @@ button.ds-list-group-item-danger.ds-active:hover {
   color: #000000;
 }
 
-.ds-card-subtitle {
-  font-family: "Gotham Medium", sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: rgba(0, 0, 0, 0.54);
+.ds-card-block {
+  padding: 1rem;
+}
+
+.ds-card-block-btns {
+  padding: 0.5rem;
+}
+
+.ds-card .ds-list-group-item {
+  padding: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -7000,6 +7017,14 @@ button.ds-list-group-item-danger.ds-active:hover {
 @media (min-width: 768px) {
   .ds-card-featured-hero .ds-card-hero-block > .ds-card-header {
     display: block;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .ds-card-featured-hero .ds-card-hero-block > .ds-card-block,
+  .ds-card-featured-hero .ds-card-hero-block > .ds-card-footer {
+    padding-left: 0;
   }
 }
 
