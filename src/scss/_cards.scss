@@ -76,6 +76,12 @@
 	font-size: $card-subtitle-font-size;
 	line-height: $card-subtitle-line-height;
 	color: $text-muted;
+
+	.material-icons {
+		margin-right: 0.5rem;
+		vertical-align: middle;
+		font-size: 1.25rem;
+	}
 }
 
 .card-text {
@@ -84,12 +90,14 @@
 
 // Layout
 .card-header {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	font-family: $card-header-font-family;
 	font-size: $card-header-font-size;
 	line-height: $card-header-line-height;
 	color: $text-muted;
 	background-color: $jdrf-white;
-	border-bottom-width: 2px;
+	border-bottom: 1px solid $card-header-border-color;
 
 	&.h1, &.h2, &.h3, &.h4, &.h5, &.h6 {
 		margin-bottom: 0;
@@ -152,14 +160,14 @@
 
 			@include media-breakpoint-up(md) {
 				width: 40%;
-				padding-right: 0;
-				padding-bottom: 1.5rem;
+				padding: 1.5rem 0 2rem 1.5rem;
 			}
 		}
 
 		&-2 {
 			@include media-breakpoint-up(md) {
 				width: 40%;
+				padding: 1.5rem;
 			}
 		}
 
@@ -181,12 +189,25 @@
 		border: 1px solid $text-dividers;
 	}
 
+	.card-title {
+		margin-bottom: 0.75rem;
+		color: $primary-dark-blue;
+	}
+
 	.card-subtitle {
 		margin-bottom: 0.75rem;
+		padding-top: 0;
+		padding-bottom: 0;
+
+		+ .btn {
+			margin-top: 0.25rem;
+		}
 	}
 
 	.card-header {
 		width: 100%;
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
 		@extend .text-center;
 
 		@include media-breakpoint-up(md) {
@@ -232,16 +253,18 @@
 		}
 
 		> .card-block {
-			padding-top: 1.5rem;
+			padding-top: 2.5rem;
+			padding-bottom: 1.5rem;
 
 			@include media-breakpoint-up(md) {
 				padding-left: 0;
+				padding-right: 2.5rem;
 			}
 		}
 
 		> .card-footer {
 			padding-top: 0;
-			padding-bottom: 1rem;
+			padding-bottom: 0.5rem;
 
 			@include media-breakpoint-up(md) {
 				padding-left: 0;
@@ -264,10 +287,10 @@
 		content: "";
 		position: absolute;
 		top: 0;
-		right: -35%;
+		right: -87%;
 		z-index: 1;
 		display: none;
-		width: 50%;
+		width: 100%;
 		height: 100%;
 		transform: skewX(-10deg);
 		background-color: $jdrf-white;
