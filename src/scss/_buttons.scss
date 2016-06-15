@@ -206,6 +206,8 @@ input[type="button"] {
 }
 
 .btn-icon {
+	height: auto;
+
 	&:before {
 		display: block;
 	}
