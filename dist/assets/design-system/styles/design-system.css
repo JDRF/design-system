@@ -5029,11 +5029,13 @@ input[type="checkbox"].ds-disabled {
 .ds-btn.ds-active {
   background-image: none;
   outline: 0;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-btn.ds-disabled,
 .ds-btn:disabled {
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 .ds-btn.material-icons {
