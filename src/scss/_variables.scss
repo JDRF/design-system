@@ -171,9 +171,9 @@ $btn-padding-y-sm: 0.5rem; /* 8px */
 $btn-padding-x-sm: 0.5rem; /* 8px */
 
 /* Border radius at 2px */
-$border-radius: 0.125rem;
-$border-radius-lg: 0.125rem;
-$border-radius-sm: 0.125rem;
+$border-radius: 2px;
+$border-radius-lg: 2px;
+$border-radius-sm: 2px;
 $btn-border-radius: $border-radius;
 $btn-border-radius-lg: $border-radius;
 $btn-border-radius-sm: $border-radius;
@@ -187,8 +187,9 @@ $card-spacer-y: 0.625rem;
 $card-spacer-x: 1.5rem;
 $text-muted: $text-secondary;
 $card-header-font-size: 1rem;
-$card-header-line-height: 1.5rem;
+$card-header-line-height: 1rem;
 $card-header-font-family: $font-medium;
+$card-header-border-color: $grey-4;
 $card-subtitle-font-size: 0.875rem;
 $card-subtitle-line-height: 1.25rem;
 $card-subtitle-font-family: $font-medium;
