@@ -26,7 +26,7 @@ $jdrf-magenta: #e01279;
 $jdrf-orange: #fa6323;
 $jdrf-blue: $primary-blue;
 $jdrf-white: #ffffff;
-$jdrf-black: #000000;
+$jdrf-black: #212121;
 
 $accent-blue: #09bcef;
 $accent-green: #8cd600;
@@ -48,10 +48,10 @@ $grey-5: #bdbdbd;
 $grey-6: #9e9e9e;
 $grey-7: #757575;
 
-$text-primary: rgba(0, 0, 0, 0.87);
-$text-secondary: rgba(0, 0, 0, 0.54);
-$text-disabled: rgba(0, 0, 0, 0.38);
-$text-dividers: rgba(0, 0, 0, 0.12);
+$text-primary: $jdrf-black;
+$text-secondary: $grey-7;
+$text-disabled: $grey-6;
+$text-dividers: $grey-4;
 
 $text-reverse-primary: $jdrf-white;
 $text-reverse-secondary: rgba(255, 255, 255, 0.76);
