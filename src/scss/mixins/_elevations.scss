@@ -1,7 +1,7 @@
 //Design System Elevations
 
 
-@mixin elevation-remove() {
+@mixin no-elevation() {
 	box-shadow: none;
 }
 
