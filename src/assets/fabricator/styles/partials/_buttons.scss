@@ -29,6 +29,12 @@
 		}
 	}
 
+	.ds-btn-link {
+		@include mobile {
+			display: inline-block;
+		}
+	}
+
 	.ds-btn-group {
 		.ds-btn {
 			@include desktop {

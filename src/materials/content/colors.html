@@ -31,6 +31,12 @@ notes: |
 
 <p>The color white <code class="language-markup">$jdrf-white (hex value: #ffffff)</code> is used as a background for the <a href="./components.html#buttons">outline button style</a>.
 
+<p>Button colors vary by program (see program colors below accent colors). By default, the colors being used are <code class="language-markup">$jdrf-green</code>. Since the Design System is meant to be used as a compiled file with a project, these colors can be overwritten on a per project basis in the stylesheet. We recommend that these colors are overwritten immediately after including the Design System in your project. See below for an example written in Sass.</p>
+
+<p>For a review on how to include the Design System, refer to our <a href="/dist/download.html">Download page</a>.</p>
+
+{{example 'colors.buttons'}}
+
 <h3>Accent Colors</h3>
 {{#each accents.colors}}
 	<div class="f-color-chips">
