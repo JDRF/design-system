@@ -1,5 +1,5 @@
 /**
- * jdrf-design-system - JDRF Design System for managing styles
+ * jdrf-design-system - JDRF Digital Design System
  * @version v0.0.1
  * @link https://github.com/JDRF/design-system#readme
  * @license MIT
@@ -7170,27 +7170,28 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-card-program {
-  border-left: 2px solid #0073cf;
+  border-left: 4px solid #0073cf;
   border-radius: 2px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
   display: table;
   table-layout: fixed;
 }
 
-.ds-card-program .ds-card-block:nth-child(1) {
+.ds-card-program .ds-card-block-1 {
   width: 60%;
+  padding-left: 1.75rem;
   border-radius: 2px 0 0 2px;
   display: table-cell;
   vertical-align: top;
 }
 
 @media (min-width: 768px) {
-  .ds-card-program .ds-card-block:nth-child(1) {
+  .ds-card-program .ds-card-block-1 {
     width: 80%;
   }
 }
 
-.ds-card-program .ds-card-block:nth-child(2) {
+.ds-card-program .ds-card-block-2 {
   width: 40%;
   border-radius: 0 2px 2px 0;
   text-align: right;
@@ -7199,12 +7200,14 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 @media (min-width: 768px) {
-  .ds-card-program .ds-card-block:nth-child(2) {
+  .ds-card-program .ds-card-block-2 {
     width: 20%;
   }
 }
 
 .ds-card-program .ds-card-subtitle {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
   font-size: 0.875rem;
 }
 
@@ -7215,7 +7218,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-card-program .ds-card-title {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -7237,6 +7240,10 @@ button.ds-list-group-item-danger.ds-active:hover {
   .ds-card-program .ds-card-location {
     font-size: 1rem;
   }
+}
+
+.ds-card-program .ds-card-location .material-icons {
+  font-size: 1rem;
 }
 
 .ds-card-program .ds-card-category {
