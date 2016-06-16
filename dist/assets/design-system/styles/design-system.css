@@ -2912,7 +2912,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: rgba(0, 0, 0, 0.54);
+  color: #757575;
   text-align: left;
   caption-side: bottom;
 }
@@ -5461,10 +5461,10 @@ fieldset[disabled] a.ds-btn {
 .ds-btn-primary-outline {
   font-family: "Gotham Medium", sans-serif;
   text-transform: uppercase;
-  color: #00a862;
+  color: #009959;
   background-image: none;
   background-color: transparent;
-  border-color: #00a862;
+  border-color: #009959;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
   box-shadow: none;
 }
@@ -5528,10 +5528,10 @@ fieldset[disabled] a.ds-btn {
 .ds-btn-secondary-outline {
   font-family: "Gotham Medium", sans-serif;
   text-transform: uppercase;
-  color: #00a862;
+  color: #009959;
   background-image: none;
   background-color: transparent;
-  border-color: #00a862;
+  border-color: #009959;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -5580,10 +5580,10 @@ fieldset[disabled] a.ds-btn {
 .ds-btn-info-outline {
   font-family: "Gotham Medium", sans-serif;
   text-transform: uppercase;
-  color: #5bc0de;
+  color: #4ebbdb;
   background-image: none;
   background-color: transparent;
-  border-color: #5bc0de;
+  border-color: #4ebbdb;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -5632,10 +5632,10 @@ fieldset[disabled] a.ds-btn {
 .ds-btn-success-outline {
   font-family: "Gotham Medium", sans-serif;
   text-transform: uppercase;
-  color: #5cb85c;
+  color: #51b351;
   background-image: none;
   background-color: transparent;
-  border-color: #5cb85c;
+  border-color: #51b351;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -5684,10 +5684,10 @@ fieldset[disabled] a.ds-btn {
 .ds-btn-warning-outline {
   font-family: "Gotham Medium", sans-serif;
   text-transform: uppercase;
-  color: #f0ad4e;
+  color: #efa640;
   background-image: none;
   background-color: transparent;
-  border-color: #f0ad4e;
+  border-color: #efa640;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -5736,10 +5736,10 @@ fieldset[disabled] a.ds-btn {
 .ds-btn-danger-outline {
   font-family: "Gotham Medium", sans-serif;
   text-transform: uppercase;
-  color: #d9534f;
+  color: #d64742;
   background-image: none;
   background-color: transparent;
-  border-color: #d9534f;
+  border-color: #d64742;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -5789,7 +5789,7 @@ fieldset[disabled] a.ds-btn {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   font-weight: normal;
-  color: #00a862;
+  color: #009959;
   background-color: transparent;
   border-radius: 2px;
   box-shadow: none;
@@ -6274,7 +6274,7 @@ input[type="button"].ds-btn-block {
   padding: 0.625rem 1rem;
   font-size: 1.25rem;
   line-height: 1.25rem;
-  color: rgba(0, 0, 0, 0.54);
+  color: #757575;
   background-color: #ffffff;
   border-color: #f5f5f5;
   border-width: 1px;
@@ -6881,17 +6881,17 @@ button.ds-list-group-item-danger.ds-active:hover {
 .ds-text-address {
   font-size: 0.875rem;
   font-family: "Gotham Medium", sans-serif;
-  color: rgba(0, 0, 0, 0.54);
+  color: #757575;
 }
 
 .ds-text-address strong {
-  color: rgba(0, 0, 0, 0.87);
+  color: #212121;
 }
 
 .ds-text-address-link .material-icons {
   vertical-align: middle;
   font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.38);
+  color: #9e9e9e;
 }
 
 .ds-card-text-wrapper p:last-child {
@@ -6911,7 +6911,7 @@ button.ds-list-group-item-danger.ds-active:hover {
   font-family: "Gotham Medium", sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: rgba(0, 0, 0, 0.54);
+  color: #757575;
 }
 
 .ds-card-subtitle .material-icons {
@@ -6930,7 +6930,7 @@ button.ds-list-group-item-danger.ds-active:hover {
   font-family: "Gotham Medium", sans-serif;
   font-size: 1rem;
   line-height: 1rem;
-  color: rgba(0, 0, 0, 0.54);
+  color: #757575;
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
 }
@@ -6954,7 +6954,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-card-content address strong {
-  color: #000000;
+  color: #212121;
 }
 
 .ds-card-block {
@@ -7018,7 +7018,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 .ds-card-featured .ds-card-img {
   width: 100%;
   height: auto;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid #e0e0e0;
 }
 
 .ds-card-featured .ds-card-title {
@@ -7151,8 +7151,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-card-image-cap .ds-card-subtitle {
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.375rem;
 }
 
 .ds-card-content .ds-card-footer {
@@ -7163,7 +7162,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 .ds-card-program {
   border-left: 2px solid #0073cf;
   border-radius: 2px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
   display: table;
   table-layout: fixed;
 }
@@ -7220,7 +7219,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card-program .ds-card-location {
   margin-bottom: 0;
-  color: rgba(0, 0, 0, 0.54);
+  color: #757575;
   font-size: 0.875rem;
 }
 
@@ -7231,7 +7230,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-card-program .ds-card-category {
-  color: rgba(0, 0, 0, 0.54);
+  color: #757575;
   font-size: 0.75rem;
 }
 
@@ -7483,9 +7482,9 @@ a.ds-label:hover {
 }
 
 .ds-label-outline {
-  border: 1px solid rgba(0, 0, 0, 0.87);
+  border: 1px solid #212121;
   background-color: #ffffff;
-  color: rgba(0, 0, 0, 0.87);
+  color: #212121;
 }
 
 .ds-btn-primary .ds-label-default,
@@ -7653,7 +7652,7 @@ a.ds-label:hover {
   font-family: "Gotham Medium", sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: rgba(0, 0, 0, 0.87);
+  color: #212121;
   border-left: 2px solid #e0e0e0;
 }
 
@@ -7901,7 +7900,7 @@ a.ds-label:hover {
 }
 
 .ds-text-muted {
-  color: rgba(0, 0, 0, 0.54);
+  color: #757575;
 }
 
 .ds-text-primary {
