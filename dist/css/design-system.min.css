@@ -1,5 +1,5 @@
 /**
- * jdrf-design-system - JDRF Design System for managing styles
+ * jdrf-design-system - JDRF Digital Design System
  * @version v0.0.1
  * @link https://github.com/JDRF/design-system#readme
  * @license MIT
