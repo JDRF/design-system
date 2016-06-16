@@ -70,8 +70,6 @@
 }
 
 .card-subtitle {
-	padding-top: 1rem;
-	padding-bottom: 0.5rem;
 	font-family: $card-subtitle-font-family;
 	font-size: $card-subtitle-font-size;
 	line-height: $card-subtitle-line-height;
@@ -196,8 +194,6 @@
 
 	.card-subtitle {
 		margin-bottom: 0.75rem;
-		padding-top: 0;
-		padding-bottom: 0;
 
 		+ .btn {
 			margin-top: 0.25rem;
@@ -319,6 +315,14 @@
 			display: table;
 			table-layout: fixed;
 		}
+	}
+}
+
+// Image cap card
+.card-image-cap {
+	.card-subtitle {
+		padding-top: 1rem;
+		padding-bottom: 0.5rem;
 	}
 }
 
