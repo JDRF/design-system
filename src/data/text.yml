@@ -1,14 +1,14 @@
 colors:
   default:
     Primary:
-      hex: "rgba(0, 0, 0, 0.87)"
+      hex: "#212121"
       var: "$text-primary"
     Secondary:
-      hex: "rgba(0, 0, 0, 0.54)"
+      hex: "#757575"
       var: "$text-secondary"
     Disabled:
-      hex: "rgba(0, 0, 0, 0.38)"
+      hex: "9e9e9e"
       var: "$text-disabled"
     Dividers:
-      hex: "rgba(0, 0, 0, 0.12)"
+      hex: "e0e0e0"
       var: "$text-dividers"
