@@ -1,4 +1,4 @@
- module.exports = function (gulp, plugins, paths) {
+ module.exports = function (gulp, plugins, comments) {
 	return function () {
 		var stream = gulp.src([
 			// Don't include bootstrap yet. Proof of future Concept
@@ -22,9 +22,10 @@
 		.pipe(plugins.replace('.btn', '.ds-btn'))
 		.pipe(plugins.replace('ds-activeElement', 'activeElement'))
 		.pipe(plugins.replace('ds-active++', 'active++'))
-		.pipe(plugins.replace('ds-active||', 'active||'))		
+		.pipe(plugins.replace('ds-active||', 'active||'))
 
 		.pipe(plugins.concat('design-system.js'))
+		.pipe(plugins.header(comments, {pkg : plugins.pkg}))
 		.pipe(gulp.dest(__dirname + '/../dist/js'));
 		return stream;
 	};
