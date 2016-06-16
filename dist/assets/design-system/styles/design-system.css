@@ -5482,14 +5482,12 @@ fieldset[disabled] a.ds-btn {
 .ds-open > .ds-btn-primary-outline.ds-dropdown-toggle {
   color: #ffffff;
   background-color: #00a862;
-  border-color: #00a862;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-btn-primary-outline:hover {
   color: #ffffff;
   background-color: #00a862;
-  border-color: #00a862;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -5548,14 +5546,12 @@ fieldset[disabled] a.ds-btn {
 .ds-open > .ds-btn-secondary-outline.ds-dropdown-toggle {
   color: #ffffff;
   background-color: #00a862;
-  border-color: #00a862;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-btn-secondary-outline:hover {
   color: #ffffff;
   background-color: #00a862;
-  border-color: #00a862;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -5600,14 +5596,12 @@ fieldset[disabled] a.ds-btn {
 .ds-open > .ds-btn-info-outline.ds-dropdown-toggle {
   color: #ffffff;
   background-color: #5bc0de;
-  border-color: #5bc0de;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-btn-info-outline:hover {
   color: #ffffff;
   background-color: #5bc0de;
-  border-color: #5bc0de;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -5652,14 +5646,12 @@ fieldset[disabled] a.ds-btn {
 .ds-open > .ds-btn-success-outline.ds-dropdown-toggle {
   color: #ffffff;
   background-color: #5cb85c;
-  border-color: #5cb85c;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-btn-success-outline:hover {
   color: #ffffff;
   background-color: #5cb85c;
-  border-color: #5cb85c;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -5704,14 +5696,12 @@ fieldset[disabled] a.ds-btn {
 .ds-open > .ds-btn-warning-outline.ds-dropdown-toggle {
   color: #ffffff;
   background-color: #f0ad4e;
-  border-color: #f0ad4e;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-btn-warning-outline:hover {
   color: #ffffff;
   background-color: #f0ad4e;
-  border-color: #f0ad4e;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -5756,14 +5746,12 @@ fieldset[disabled] a.ds-btn {
 .ds-open > .ds-btn-danger-outline.ds-dropdown-toggle {
   color: #ffffff;
   background-color: #d9534f;
-  border-color: #d9534f;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-btn-danger-outline:hover {
   color: #ffffff;
   background-color: #d9534f;
-  border-color: #d9534f;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -5795,6 +5783,7 @@ fieldset[disabled] a.ds-btn {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   font-weight: normal;
+  color: #00a862;
   color: #009959;
   background-color: transparent;
   border-radius: 2px;
