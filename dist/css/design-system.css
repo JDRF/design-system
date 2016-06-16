@@ -5004,7 +5004,7 @@ input[type="checkbox"].ds-disabled {
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   line-height: 0.875rem;
-  border-radius: 0.125rem;
+  border-radius: 2px;
 }
 
 .ds-btn:active,
@@ -5060,7 +5060,7 @@ fieldset[disabled] a.ds-btn {
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   line-height: 0.875rem;
-  border-radius: 0.125rem;
+  border-radius: 2px;
 }
 
 .ds-btn-primary:hover {
@@ -5128,7 +5128,7 @@ fieldset[disabled] a.ds-btn {
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   line-height: 0.875rem;
-  border-radius: 0.125rem;
+  border-radius: 2px;
 }
 
 .ds-btn-secondary:hover {
@@ -5196,7 +5196,7 @@ fieldset[disabled] a.ds-btn {
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   line-height: 0.875rem;
-  border-radius: 0.125rem;
+  border-radius: 2px;
 }
 
 .ds-btn-info:hover {
@@ -5264,7 +5264,7 @@ fieldset[disabled] a.ds-btn {
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   line-height: 0.875rem;
-  border-radius: 0.125rem;
+  border-radius: 2px;
 }
 
 .ds-btn-success:hover {
@@ -5332,7 +5332,7 @@ fieldset[disabled] a.ds-btn {
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   line-height: 0.875rem;
-  border-radius: 0.125rem;
+  border-radius: 2px;
 }
 
 .ds-btn-warning:hover {
@@ -5400,7 +5400,7 @@ fieldset[disabled] a.ds-btn {
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   line-height: 0.875rem;
-  border-radius: 0.125rem;
+  border-radius: 2px;
 }
 
 .ds-btn-danger:hover {
@@ -5791,24 +5791,26 @@ fieldset[disabled] a.ds-btn {
   font-weight: normal;
   color: #00a862;
   background-color: transparent;
-  border-radius: 0.125rem;
+  border-radius: 2px;
+  box-shadow: none;
 }
 
 .ds-btn-link:active,
 .ds-btn-link.ds-active,
 .ds-btn-link:focus {
-  background-color: #e0e0e0;
+  background-color: #eeeeee;
   text-decoration: none;
+  box-shadow: none;
 }
 
 .ds-btn-link:hover {
-  background-color: #e0e0e0;
+  background-color: #eeeeee;
   text-decoration: none;
 }
 
 .ds-btn-link:focus,
 .ds-btn-link:hover {
-  background-color: #e0e0e0;
+  background-color: #eeeeee;
   text-decoration: none;
 }
 
@@ -5832,7 +5834,7 @@ fieldset[disabled] a.ds-btn {
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   line-height: 0.875rem;
-  border-radius: 0.125rem;
+  border-radius: 2px;
   box-shadow: none;
 }
 
@@ -5913,7 +5915,7 @@ fieldset[disabled] a.ds-btn {
   padding: 1rem 1.5rem;
   font-size: 0.875rem;
   line-height: 0.875rem;
-  border-radius: 0.125rem;
+  border-radius: 2px;
   height: 48px;
 }
 
@@ -5927,7 +5929,7 @@ fieldset[disabled] a.ds-btn {
   padding: 0.5rem 0.5rem;
   font-size: 0.8125rem;
   line-height: 0.8125rem;
-  border-radius: 0.125rem;
+  border-radius: 2px;
   height: 32px;
 }
 
@@ -6196,13 +6198,13 @@ input[type="button"].ds-btn-block {
 }
 
 .ds-btn-group-vertical > .ds-btn:not(:last-child) {
-  border-top-right-radius: 0.125rem;
+  border-top-right-radius: 2px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 .ds-btn-group-vertical > .ds-btn:not(:first-child) {
-  border-bottom-left-radius: 0.125rem;
+  border-bottom-left-radius: 2px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -6233,7 +6235,7 @@ input[type="button"].ds-btn-block {
 
 .ds-btn-group,
 .ds-btn-group-vertical {
-  border-radius: 0.125rem;
+  border-radius: 2px;
 }
 
 .ds-btn-group .ds-btn,
@@ -6258,8 +6260,8 @@ input[type="button"].ds-btn-block {
 
 .ds-btn-group > .ds-btn:last-child,
 .ds-btn-group-vertical > .ds-btn:last-child {
-  border-top-right-radius: 0.125rem;
-  border-bottom-right-radius: 0.125rem;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .ds-btn-group.ds-btn-icon-group,
@@ -6299,7 +6301,7 @@ input[type="button"].ds-btn-block {
 .ds-radio-buttons.ds-btn-group .ds-btn {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
-  border-radius: 0.125rem;
+  border-radius: 2px;
 }
 
 .ds-checkbox-buttons.ds-btn-group .ds-btn:first-child,
@@ -6845,7 +6847,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card {
   border: 0;
-  border-radius: 0 0 0.125rem 0.125rem;
+  border-radius: 0 0 2px 2px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -6861,7 +6863,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card-img-left {
   max-width: 100%;
-  border-radius: 0.125rem 0 0 0.125rem;
+  border-radius: 2px 0 0 2px;
 }
 
 .ds-card-img-center,
@@ -6906,8 +6908,6 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-card-subtitle {
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
   font-family: "Gotham Medium", sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -7028,8 +7028,6 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card-featured .ds-card-subtitle {
   margin-bottom: 0.75rem;
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 .ds-card-featured .ds-card-subtitle + .ds-btn {
@@ -7065,6 +7063,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 .ds-card-featured-hero .ds-card-hero-block {
   position: relative;
   z-index: 2;
+  padding: 0;
 }
 
 .ds-card-featured-hero .ds-card-hero-block > .ds-card-header {
@@ -7151,6 +7150,11 @@ button.ds-list-group-item-danger.ds-active:hover {
   }
 }
 
+.ds-card-image-cap .ds-card-subtitle {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
 .ds-card-content .ds-card-footer {
   padding-top: 1rem;
   padding-bottom: 2rem;
@@ -7158,7 +7162,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card-program {
   border-left: 2px solid #0073cf;
-  border-radius: 0.125rem;
+  border-radius: 2px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
   display: table;
   table-layout: fixed;
@@ -7166,7 +7170,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card-program .ds-card-block:nth-child(1) {
   width: 60%;
-  border-radius: 0.125rem 0 0 0.125rem;
+  border-radius: 2px 0 0 2px;
   display: table-cell;
   vertical-align: top;
 }
@@ -7179,7 +7183,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card-program .ds-card-block:nth-child(2) {
   width: 40%;
-  border-radius: 0 0.125rem 0.125rem 0;
+  border-radius: 0 2px 2px 0;
   text-align: right;
   display: table-cell;
   vertical-align: top;
@@ -7247,7 +7251,7 @@ button.ds-list-group-item-danger.ds-active:hover {
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: 0.125rem;
+  border-radius: 2px;
 }
 
 .ds-label:empty {
@@ -7385,7 +7389,7 @@ a.ds-label:hover {
   display: block;
   padding: 0.5em 1em;
   border: 1px solid transparent;
-  border-radius: 0.125rem 0.125rem 0 0;
+  border-radius: 2px 2px 0 0;
 }
 
 .ds-nav-tabs .ds-nav-link:focus,
@@ -7555,7 +7559,7 @@ a.ds-label:hover {
   display: block;
   padding: 0.5em 1em;
   border: 1px solid transparent;
-  border-radius: 0.125rem 0.125rem 0 0;
+  border-radius: 2px 2px 0 0;
 }
 
 .ds-nav-tabs .ds-nav-link:focus,
