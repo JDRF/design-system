@@ -1,3 +1,7 @@
 @import "scss/utilities";
 
 /* Bootstrap overwrites: utilities.scss */
+
+.text-muted {
+	color: $text-muted;
+}

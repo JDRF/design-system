@@ -2,6 +2,10 @@
 
 @import "mixins/elevations";
 
+.no-elevation {
+	@include no-elevation;
+}
+
 .elevation-1 {
 	@include elevation-1;
 }
