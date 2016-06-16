@@ -5783,7 +5783,6 @@ fieldset[disabled] a.ds-btn {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   font-weight: normal;
-  color: #00a862;
   color: #009959;
   background-color: transparent;
   border-radius: 2px;
@@ -6310,6 +6309,10 @@ input[type="button"].ds-btn-block {
 }
 
 /* Design System Custom - No Bootstrap Default */
+
+.ds-no-elevation {
+  box-shadow: none;
+}
 
 .ds-elevation-1 {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
@@ -6944,14 +6947,6 @@ button.ds-list-group-item-danger.ds-active:hover {
   background-color: #ffffff;
 }
 
-.ds-card-content address {
-  font-size: 0.875rem;
-}
-
-.ds-card-content address strong {
-  color: #212121;
-}
-
 .ds-card-block {
   padding: 1rem;
 }
@@ -7153,9 +7148,25 @@ button.ds-list-group-item-danger.ds-active:hover {
   padding-bottom: 0.375rem;
 }
 
+.ds-card-content .ds-card-header {
+  padding: 0.625rem 1.5rem;
+}
+
+.ds-card-content .ds-card-block {
+  padding: 1.5rem;
+}
+
 .ds-card-content .ds-card-footer {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   padding-bottom: 2rem;
+}
+
+.ds-card-content address {
+  font-size: 0.875rem;
+}
+
+.ds-card-content address strong {
+  color: #212121;
 }
 
 .ds-card-program {
