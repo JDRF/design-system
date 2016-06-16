@@ -40,7 +40,7 @@
 	&.disabled,
 	&:disabled {
 		cursor: $cursor-disabled;
-		@include elevation-remove;
+		@include no-elevation;
 	}
 
 	&.material-icons {
@@ -74,19 +74,19 @@ fieldset[disabled] a.btn {
 
 .btn-primary-outline {
 	@include button-outline-variant($btn-primary-bg);
-	@include elevation-remove;
+	@include no-elevation;
 
 	&:active,
 	&.active {
-		@include elevation-remove;
+		@include no-elevation;
 	}
 
 	@include hover-focus {
-		@include elevation-remove;
+		@include no-elevation;
 	}
 
 	&.focus {
-		@include elevation-remove;
+		@include no-elevation;
 	}
 }
 .btn-secondary-outline {
@@ -112,14 +112,14 @@ fieldset[disabled] a.btn {
 	color: $jdrf-green;
 	background-color: transparent;
 	@include border-radius($border-radius);
-	@include elevation-remove;
+	@include no-elevation;
 
 	&:active,
 	&.active,
 	&:focus {
 		background-color: $grey-3;
 		text-decoration: none;
-		@include elevation-remove;
+		@include no-elevation;
 	}
 
 	@include hover {
@@ -144,7 +144,7 @@ fieldset[disabled] a.btn {
 
 .btn-flat {
 	@include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
-	@include elevation-remove;
+	@include no-elevation;
 
 	@include hover {
 		@include elevation-2;
@@ -160,7 +160,7 @@ fieldset[disabled] a.btn {
 
 	&.disabled,
 	&:disabled {
-		@include elevation-remove;
+		@include no-elevation;
 	}
 }
 
@@ -195,7 +195,7 @@ fieldset[disabled] a.btn {
 
 	&.disabled,
 	&:disabled {
-		@include elevation-remove;
+		@include no-elevation;
 	}
 }
 

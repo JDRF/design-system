@@ -40,7 +40,7 @@
 		color: $grey-6;
 		background-color: $grey-4;
 		border-color: $grey-4;
-		@include elevation-remove;
+		@include no-elevation;
 
 		&:focus,
 		&.focus {
@@ -90,7 +90,7 @@
 		color: $grey-6;
 		border-color: $grey-6;
 		background-color: transparent;
-		@include elevation-remove;
+		@include no-elevation;
 
 		&:focus,
 		&.focus {
