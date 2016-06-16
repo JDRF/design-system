@@ -109,7 +109,6 @@ fieldset[disabled] a.btn {
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 	font-weight: normal;
-	color: $btn-primary-bg;
 	color: darken($btn-primary-bg, 3%);
 	background-color: transparent;
 	@include border-radius($border-radius);
