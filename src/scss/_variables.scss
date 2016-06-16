@@ -3,16 +3,16 @@
 /* == Grid ======== */
 
 $grid-breakpoints: (
-  // Extra small screen / phone
-  xs: 0,
-  // Small screen / phone
-  sm: 360px,
-  // Medium screen / tablet
-  md: 768px,
-  // Large screen / desktop
-  lg: 992px,
-  // Extra large screen / wide desktop
-  xl: 1200px
+	// Extra small screen / phone
+	xs: 0,
+	// Small screen / phone
+	sm: 360px,
+	// Medium screen / tablet
+	md: 768px,
+	// Large screen / desktop
+	lg: 992px,
+	// Extra large screen / wide desktop
+	xl: 1200px
 );
 
 /* == Colors ======== */
@@ -24,7 +24,6 @@ $jdrf-green: #00a862;
 $jdrf-purple: #a75ccc;
 $jdrf-magenta: #e01279;
 $jdrf-orange: #fa6323;
-$jdrf-blue: $primary-blue;
 $jdrf-white: #ffffff;
 $jdrf-black: #212121;
 
