@@ -179,12 +179,12 @@
 	<div class="f-color-chip">
 		<div class="f-color-chip__name">Blue</div>
 		<div class="f-color-chip__hex">#0073cf</div>
-		<div class="f-color-chip__var">$primary-blue</div>
+		<div class="f-color-chip__var">$jdrf-blue</div>
 	</div>
 	<div class="f-color-chip">
 		<div class="f-color-chip__name">Dark Blue</div>
 		<div class="f-color-chip__hex">#002855</div>
-		<div class="f-color-chip__var">$primary-dark-blue</div>
+		<div class="f-color-chip__var">$jdrf-dark-blue</div>
 	</div>
 </div>
 
@@ -218,6 +218,35 @@
 </div>
 
 <p>The color white <code class="language-markup">$jdrf-white (hex value: #ffffff)</code> is used as a background for the <a href="./components.html#buttons">outline button style</a>.
+
+	<p>Button colors vary by program (see program colors below accent colors). By default, the colors being used are <code class="language-markup">$jdrf-green</code>. Since the Design System is meant to be used as a compiled file with a project, these colors
+		can be overwritten on a per project basis in the stylesheet. We recommend that these colors are overwritten immediately after including the Design System in your project. See below for an example written in Sass.</p>
+
+	<p>For a review on how to include the Design System, refer to our <a href="/dist/download.html">Download page</a>.</p>
+
+	<pre class="language-markup"><code class="language-markup">/* Change button colors to $jdrf-blue */
+
+.ds-btn-primary,
+.ds-btn-flat {
+	background-color: #0073cf;
+	border-color: #0073cf;
+}
+
+.ds-btn-primary-outline {
+	color: #0073cf;
+	border-color: #0073cf;
+
+	&amp;:hover,
+	&amp;:active,
+	&amp;:focus {
+		color: #ffffff;
+		background-color: #0073cf;
+	}
+}
+
+.ds-btn-link {
+	color: #0073cf;
+}</code></pre>
 
 	<h3>Accent Colors</h3>
 	<div class="f-color-chips">
@@ -354,12 +383,12 @@
 	&lt;div class=&quot;f-color-chip&quot;&gt;
 		&lt;div class=&quot;f-color-chip__name&quot;&gt;Blue&lt;/div&gt;
 		&lt;div class=&quot;f-color-chip__hex&quot;&gt;#0073cf&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__var&quot;&gt;$primary-blue&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__var&quot;&gt;$jdrf-blue&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;div class=&quot;f-color-chip&quot;&gt;
 		&lt;div class=&quot;f-color-chip__name&quot;&gt;Dark Blue&lt;/div&gt;
 		&lt;div class=&quot;f-color-chip__hex&quot;&gt;#002855&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__var&quot;&gt;$primary-dark-blue&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__var&quot;&gt;$jdrf-dark-blue&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 
@@ -393,6 +422,35 @@
 &lt;/div&gt;
 
 &lt;p&gt;The color white &lt;code class=&quot;language-markup&quot;&gt;$jdrf-white (hex value: #ffffff)&lt;/code&gt; is used as a background for the &lt;a href=&quot;./components.html#buttons&quot;&gt;outline button style&lt;/a&gt;.
+
+	&lt;p&gt;Button colors vary by program (see program colors below accent colors). By default, the colors being used are &lt;code class=&quot;language-markup&quot;&gt;$jdrf-green&lt;/code&gt;. Since the Design System is meant to be used as a compiled file with a project, these colors
+		can be overwritten on a per project basis in the stylesheet. We recommend that these colors are overwritten immediately after including the Design System in your project. See below for an example written in Sass.&lt;/p&gt;
+
+	&lt;p&gt;For a review on how to include the Design System, refer to our &lt;a href=&quot;/dist/download.html&quot;&gt;Download page&lt;/a&gt;.&lt;/p&gt;
+
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;/* Change button colors to $jdrf-blue */
+
+.ds-btn-primary,
+.ds-btn-flat {
+	background-color: #0073cf;
+	border-color: #0073cf;
+}
+
+.ds-btn-primary-outline {
+	color: #0073cf;
+	border-color: #0073cf;
+
+	&amp;amp;:hover,
+	&amp;amp;:active,
+	&amp;amp;:focus {
+		color: #ffffff;
+		background-color: #0073cf;
+	}
+}
+
+.ds-btn-link {
+	color: #0073cf;
+}&lt;/code&gt;&lt;/pre&gt;
 
 	&lt;h3&gt;Accent Colors&lt;/h3&gt;
 	&lt;div class=&quot;f-color-chips&quot;&gt;

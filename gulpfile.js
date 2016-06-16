@@ -20,6 +20,7 @@ plugins.escape = require('html-escape');
 plugins.fs = require('fs');
 plugins.hbs = require('handlebars');
 plugins.merge = require('merge-stream');
+plugins.pkg = require('./design-system/package.json');
 plugins.reload = plugins.browserSync.reload;
 plugins.runSequence = require('run-sequence');
 plugins.source = require('vinyl-source-stream');
@@ -43,6 +44,13 @@ var config = {
 		fonts: './src/assets/design-system/fonts/**/**/*'
 	},
 	dest: 'dist',
+	comments: ['/**',
+		' * <%= pkg.name %> - <%= pkg.description %>',
+		' * @version v<%= pkg.version %>',
+		' * @link <%= pkg.homepage %>',
+		' * @license <%= pkg.license %>',
+		' */',
+		''].join('\n')
 };
 
 function getTask(task) {
@@ -56,7 +64,7 @@ gulp.task('clean-designsystem', getTask('clean-designsystem'));
 // styles
 gulp.task('styles-fabricator', getTask('styles-fabricator'));
 gulp.task('styles-designsystem', getTask('styles-designsystem'));
-gulp.task('styles-from-dev', require('./design-system/tasks/styles')(gulp, plugins));
+gulp.task('styles-from-dev', require('./design-system/tasks/styles')(gulp, plugins, config.comments));
 
 gulp.task('styles', [
 	'styles-fabricator',
@@ -70,7 +78,7 @@ gulp.task('fonts', getTask('fonts-designsystem'));
 gulp.task('scripts-lint', getTask('scripts-lint'));
 gulp.task('scripts-fabricator', getTask('scripts-fabricator'));
 gulp.task('scripts-designsystem', getTask('scripts-designsystem'));
-gulp.task('scripts-from-dev', require('./design-system/tasks/scripts')(gulp, plugins));
+gulp.task('scripts-from-dev', require('./design-system/tasks/scripts')(gulp, plugins, config.comments));
 
 gulp.task('scripts', ['scripts-lint'], function() {
 	// run build
