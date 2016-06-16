@@ -10,13 +10,15 @@ module.exports = function (gulp, plugins, config) {
 			logErrors: config.dev,
 			helpers: {
 				example: function(args, type) {
-					if ( 'undefined' === typeof type ) {
-						type = 'markup';
-					}
 					var string, esacped_string, template_string, template,
-						start = '<pre class="language-' + type + '"><code class="language-' + type + '">',
-						end = '</code></pre>';
+						start, end, lng_type = 'markup';
 
+					if ( 'string' === typeof type ) {
+						lng_type = type;
+					}
+
+					start = '<pre class="language-' + lng_type + '"><code class="language-' + lng_type + '">',
+					end = '</code></pre>';
 
 					string = args.replace( '.', '/' );
 					escaped = plugins.escape( plugins.fs.readFileSync(__dirname + '/../src/html/' + string + '.html', 'utf8') );
