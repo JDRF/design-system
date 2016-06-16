@@ -2,7 +2,7 @@ colors:
   primary:
     Blue:
       hex: "#0073cf"
-      var: "$primary-blue"
+      var: "$jdrf-blue"
     Dark Blue:
       hex: "#002855"
-      var: "$primary-dark-blue"
+      var: "$jdrf-dark-blue"
