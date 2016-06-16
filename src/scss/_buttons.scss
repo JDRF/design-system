@@ -112,21 +112,23 @@ fieldset[disabled] a.btn {
 	color: $jdrf-green;
 	background-color: transparent;
 	@include border-radius($border-radius);
+	@include elevation-remove;
 
 	&:active,
 	&.active,
 	&:focus {
-		background-color: $grey-4;
+		background-color: $grey-3;
 		text-decoration: none;
+		@include elevation-remove;
 	}
 
 	@include hover {
-		background-color: $grey-4;
+		background-color: $grey-3;
 		text-decoration: none;
 	}
 
 	@include hover-focus {
-		background-color: $grey-4;
+		background-color: $grey-3;
 		text-decoration: none;
 	}
 
