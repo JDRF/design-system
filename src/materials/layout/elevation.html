@@ -6,17 +6,20 @@ notes: |
 
   Buttons in most cases start with `.ds-elevation-1` and raise to `.ds-elevation-3` on `:hover`, `:focus` and `:active` states. The `.ds-btn-flat` style of buttons start with no elevation and raise to `.ds-elevation-two` on `:hover`, `:focus` and `:active` states.
 
-  To remove elevations on a component that isn't flat by default, you can use the `@include elevation-remove;` Sass mixin.
+  To remove elevations on a component that isn't flat by default, you can use the `@include no-elevation;` Sass mixin.
 
    Modals, dialogs and menus (coming soon to the Design System) are the rare objects that require higher elevations.
-   
+
 ---
 
 <div class="f-example-inline">
-	<div class="f-rectangle ds-elevation-remove"></div>
+	<div class="f-rectangle"></div>
 
 	<p class="f-example-desc">flat</p>
 </div>
+<div class="f-example-inline">
+	<div class="f-rectangle ds-elevation-1"></div>
+
 	<p class="f-example-desc">ds-elevation-1</p>
 </div>
 <div class="f-example-inline">
