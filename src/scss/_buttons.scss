@@ -109,7 +109,7 @@ fieldset[disabled] a.btn {
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 	font-weight: normal;
-	color: $jdrf-green;
+	color: $btn-primary-bg;
 	background-color: transparent;
 	@include border-radius($border-radius);
 	@include elevation-remove;

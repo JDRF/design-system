@@ -74,14 +74,12 @@
 	.open > &.dropdown-toggle {
 		color: $jdrf-white;
 		background-color: $color;
-		border-color: $color;
 		@include elevation-3;
 	}
 
 	@include hover {
 		color: $jdrf-white;
 		background-color: $color;
-		border-color: $color;
 		@include elevation-3;
 	}
 
