@@ -7149,7 +7149,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-card-content .ds-card-header {
-  padding: 0.625rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 .ds-card-content .ds-card-block {
@@ -7966,6 +7966,10 @@ a.ds-text-danger:hover {
 }
 
 /* Bootstrap overwrites: utilities.scss */
+
+.ds-text-muted {
+  color: #757575;
+}
 
 .ds-bg-inverse {
   color: #f5f5f5;
