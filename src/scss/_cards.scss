@@ -189,7 +189,7 @@
 
 	.card-title {
 		margin-bottom: 0.75rem;
-		color: $primary-dark-blue;
+		color: $jdrf-dark-blue;
 	}
 
 	.card-subtitle {
@@ -322,8 +322,7 @@
 // Image cap card
 .card-image-cap {
 	.card-subtitle {
-		padding-top: 1rem;
-		padding-bottom: 0.5rem;
+		padding-bottom: 0.375rem;
 	}
 }
 
@@ -339,7 +338,7 @@
 .card-program {
 	border-left: 2px solid $jdrf-blue;
 	border-radius: $border-radius;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+	@include elevation-1;
 
 	@if $enable-flex {
 		display: flex;
