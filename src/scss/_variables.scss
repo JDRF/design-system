@@ -17,8 +17,8 @@ $grid-breakpoints: (
 
 /* == Colors ======== */
 
-$primary-blue: #0073cf;
-$primary-dark-blue: #002855;
+$jdrf-blue: #0073cf;
+$jdrf-dark-blue: #002855;
 
 $jdrf-green: #00a862;
 $jdrf-purple: #a75ccc;
@@ -63,7 +63,7 @@ $gray-light: $grey-3;
 $gray-lighter: $grey-2;
 $gray-lightest: $grey-1;
 
-$brand-primary: $primary-blue;
+$brand-primary: $jdrf-blue;
 $btn-primary-bg: $jdrf-green;
 $btn-primary-border: $jdrf-green;
 
