@@ -1,5 +1,18 @@
 @import "scss/variables";
 
+/* Variable overwrite naming conventions are based on Bootstrap.
+*
+* If overwriting an existing Bootstrap var, keep the same name.
+*
+* If creating a new variable related to an original Bootstrap var,
+* keep the variable name from Bootstrap, and append to that name.
+*
+* Example:
+* $font-size = original Bootstrap variable (still in use)
+* $font-size-lg = custom variable based on the above
+* $font-size-sm = custom variable based on the above
+*/
+
 /* == Grid ======== */
 
 $grid-breakpoints: (
