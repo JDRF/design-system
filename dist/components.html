@@ -380,6 +380,7 @@
 	<p>The <code>button</code> components are based on Bootstrap's button classes combined with our own customizations.</p>
 <p>You can find documentation on <a href="http://v4-alpha.getbootstrap.com/components/buttons/" target="_blank">Bootstrap's button components</a> on their site.</p>
 <p>By default, the colors being used for buttons are <code class="language-markup">$jdrf-green</code>. However the button colors should vary by program. View <a href="/dist/content.html#colors">our Colors section</a> for an example of how to overwrite these button colors for your project.</p>
+<p>We are using Sass' built in <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html" target="_blank">darken() function</a> to darken existing button colors for <code class="language-markup">.ds-btn-primary-outline</code> and <code class="language-markup">.ds-btn-link</code>.
 
 </div>
 <div class="f-item-preview">
@@ -1184,8 +1185,7 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus lacus non porttitor bibendum. Nunc id eros vitae diam aliquam varius et eget urna. Nulla pulvinar porttitor lacus, eget dignissim est pellentesque nec. Quisque in volutpat quam. Quisque
 					augue dui, rhoncus et mauris at, tincidunt rhoncus nisi. Proin sit amet tortor quis ligula molestie consectetur. Mauris nec ex dignissim, ultricies nunc sit amet, ullamcorper ex. Praesent in odio ac nulla consequat malesuada. Cum sociis natoque penatibus
 					et magnis dis parturient montes, nascetur ridiculus mus.</p>
-			</div>
-			<div class="ds-card-block">
+
 				<img class="ds-card-img ds-card-img-center" data-src="" alt="Card image" src="http://placehold.it/512x670/777777/ffffff?text=Image">
 			</div>
 			<div class="ds-card-footer ds-text-center">
@@ -1197,8 +1197,7 @@
 	&lt;div class=&quot;ds-card-header&quot;>Details&lt;/div>
 	&lt;div class=&quot;ds-card-block ds-card-text-wrapper&quot;>
 		&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus lacus non porttitor bibendum. Nunc id eros vitae diam aliquam varius et eget urna. Nulla pulvinar porttitor lacus, eget dignissim est pellentesque nec. Quisque in volutpat quam. Quisque augue dui, rhoncus et mauris at, tincidunt rhoncus nisi. Proin sit amet tortor quis ligula molestie consectetur. Mauris nec ex dignissim, ultricies nunc sit amet, ullamcorper ex. Praesent in odio ac nulla consequat malesuada. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p>
-	&lt;/div>
-	&lt;div class=&quot;ds-card-block&quot;>
+
 		&lt;img class=&quot;ds-card-img ds-card-img-center&quot; data-src=&quot;...&quot; alt=&quot;Card image&quot;>
 	&lt;/div>
 	&lt;div class=&quot;ds-card-footer ds-text-center&quot;>
@@ -1308,6 +1307,8 @@
 			<img class="ds-card-img-top" data-src="" alt="Card image" src="http://placehold.it/780x480/777777/ffffff?text=Image">
 			<div class="ds-card-block">
 				<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<div class="ds-card-block ds-card-block-btns">
 				<a href="#!" class="ds-btn ds-btn-link">Card link</a>
 				<a href="#!" class="ds-btn ds-btn-link">Another link</a>
 			</div>
@@ -1321,6 +1322,8 @@
 	&lt;img data-src=&quot;...&quot; alt=&quot;Card image&quot;>
 	&lt;div class=&quot;ds-card-block&quot;>
 		&lt;p class=&quot;ds-card-text&quot;>Some quick example text to build on the card title and make up the bulk of the card&apos;s content.&lt;/p>
+	&lt;/div>
+	&lt;div class=&quot;ds-card-block ds-card-block-btns&quot;>
 		&lt;a href=&quot;#&quot; class=&quot;ds-btn ds-btn-link&quot;>Card link&lt;/a>
 		&lt;a href=&quot;#&quot; class=&quot;ds-btn ds-btn-link&quot;>Another link&lt;/a>
 	&lt;/div>
@@ -1346,18 +1349,26 @@
 
 <section class="f-section">
 	<div class="f-example">
-		<div class="ds-card ds-card-block" id="phantom-ds-card-content-type-title-text-links">
-			<h3 class="ds-card-title ds-h4">Card title</h3>
-			<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<a href="#!" class="ds-btn ds-btn-link">Card link</a>
-			<a href="#!" class="ds-btn ds-btn-link">Another link</a>
+		<div class="ds-card" id="phantom-ds-card-content-type-title-text-links">
+			<div class="ds-card-block">
+				<h3 class="ds-card-title ds-h4">Card title</h3>
+				<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<div class="ds-card-block ds-card-block-btns">
+				<a href="#!" class="ds-btn ds-btn-link">Card link</a>
+				<a href="#!" class="ds-btn ds-btn-link">Another link</a>
+			</div>
 		</div>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-card ds-card-block&quot;>
-	&lt;h4 class=&quot;ds-card-title&quot;>Card title&lt;/h4>
-	&lt;p class=&quot;ds-card-text&quot;>Some quick example text to build on the card title and make up the bulk of the card&apos;s content.&lt;/p>
-	&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-link&quot;>Card link&lt;/a>
-	&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-link&quot;>Another link&lt;/a>
+	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-card&quot;>
+	&lt;div class=&quot;ds-card-block&quot;>
+		&lt;h3 class=&quot;ds-card-title ds-h4&quot;>Card title&lt;/h3>
+		&lt;p class=&quot;ds-card-text&quot;>Some quick example text to build on the card title and make up the bulk of the card&apos;s content.&lt;/p>
+	&lt;/div>
+	&lt;div class=&quot;ds-card-block ds-card-block-btns&quot;>
+		&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-link&quot;>Card link&lt;/a>
+		&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-link&quot;>Another link&lt;/a>
+	&lt;/div>
 &lt;/div></code></pre>
 </section>
 
@@ -1499,8 +1510,7 @@
 				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus lacus non porttitor bibendum. Nunc id eros vitae diam aliquam varius et eget urna. Nulla pulvinar porttitor lacus, eget dignissim est pellentesque nec. Quisque in volutpat quam. Quisque
 					augue dui, rhoncus et mauris at, tincidunt rhoncus nisi. Proin sit amet tortor quis ligula molestie consectetur. Mauris nec ex dignissim, ultricies nunc sit amet, ullamcorper ex. Praesent in odio ac nulla consequat malesuada. Cum sociis natoque penatibus
 					et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
-			&lt;/div&gt;
-			&lt;div class=&quot;ds-card-block&quot;&gt;
+
 				&lt;img class=&quot;ds-card-img ds-card-img-center&quot; data-src=&quot;&quot; alt=&quot;Card image&quot; src=&quot;http://placehold.it/512x670/777777/ffffff?text=Image&quot;&gt;
 			&lt;/div&gt;
 			&lt;div class=&quot;ds-card-footer ds-text-center&quot;&gt;
@@ -1512,8 +1522,7 @@
 	&amp;lt;div class=&amp;quot;ds-card-header&amp;quot;&gt;Details&amp;lt;/div&gt;
 	&amp;lt;div class=&amp;quot;ds-card-block ds-card-text-wrapper&amp;quot;&gt;
 		&amp;lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus lacus non porttitor bibendum. Nunc id eros vitae diam aliquam varius et eget urna. Nulla pulvinar porttitor lacus, eget dignissim est pellentesque nec. Quisque in volutpat quam. Quisque augue dui, rhoncus et mauris at, tincidunt rhoncus nisi. Proin sit amet tortor quis ligula molestie consectetur. Mauris nec ex dignissim, ultricies nunc sit amet, ullamcorper ex. Praesent in odio ac nulla consequat malesuada. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&amp;lt;/p&gt;
-	&amp;lt;/div&gt;
-	&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
+
 		&amp;lt;img class=&amp;quot;ds-card-img ds-card-img-center&amp;quot; data-src=&amp;quot;...&amp;quot; alt=&amp;quot;Card image&amp;quot;&gt;
 	&amp;lt;/div&gt;
 	&amp;lt;div class=&amp;quot;ds-card-footer ds-text-center&amp;quot;&gt;
@@ -1623,6 +1632,8 @@
 			&lt;img class=&quot;ds-card-img-top&quot; data-src=&quot;&quot; alt=&quot;Card image&quot; src=&quot;http://placehold.it/780x480/777777/ffffff?text=Image&quot;&gt;
 			&lt;div class=&quot;ds-card-block&quot;&gt;
 				&lt;p class=&quot;ds-card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&#x27;s content.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;ds-card-block ds-card-block-btns&quot;&gt;
 				&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-link&quot;&gt;Card link&lt;/a&gt;
 				&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-link&quot;&gt;Another link&lt;/a&gt;
 			&lt;/div&gt;
@@ -1636,6 +1647,8 @@
 	&amp;lt;img data-src=&amp;quot;...&amp;quot; alt=&amp;quot;Card image&amp;quot;&gt;
 	&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
 		&amp;lt;p class=&amp;quot;ds-card-text&amp;quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&amp;apos;s content.&amp;lt;/p&gt;
+	&amp;lt;/div&gt;
+	&amp;lt;div class=&amp;quot;ds-card-block ds-card-block-btns&amp;quot;&gt;
 		&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-btn ds-btn-link&amp;quot;&gt;Card link&amp;lt;/a&gt;
 		&amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;ds-btn ds-btn-link&amp;quot;&gt;Another link&amp;lt;/a&gt;
 	&amp;lt;/div&gt;
@@ -1661,18 +1674,26 @@
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;div class=&quot;ds-card ds-card-block&quot; id=&quot;phantom-ds-card-content-type-title-text-links&quot;&gt;
-			&lt;h3 class=&quot;ds-card-title ds-h4&quot;&gt;Card title&lt;/h3&gt;
-			&lt;p class=&quot;ds-card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&#x27;s content.&lt;/p&gt;
-			&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-link&quot;&gt;Card link&lt;/a&gt;
-			&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-link&quot;&gt;Another link&lt;/a&gt;
+		&lt;div class=&quot;ds-card&quot; id=&quot;phantom-ds-card-content-type-title-text-links&quot;&gt;
+			&lt;div class=&quot;ds-card-block&quot;&gt;
+				&lt;h3 class=&quot;ds-card-title ds-h4&quot;&gt;Card title&lt;/h3&gt;
+				&lt;p class=&quot;ds-card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&#x27;s content.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;ds-card-block ds-card-block-btns&quot;&gt;
+				&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-link&quot;&gt;Card link&lt;/a&gt;
+				&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-link&quot;&gt;Another link&lt;/a&gt;
+			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-card ds-card-block&amp;quot;&gt;
-	&amp;lt;h4 class=&amp;quot;ds-card-title&amp;quot;&gt;Card title&amp;lt;/h4&gt;
-	&amp;lt;p class=&amp;quot;ds-card-text&amp;quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&amp;apos;s content.&amp;lt;/p&gt;
-	&amp;lt;a href=&amp;quot;#!&amp;quot; class=&amp;quot;ds-btn ds-btn-link&amp;quot;&gt;Card link&amp;lt;/a&gt;
-	&amp;lt;a href=&amp;quot;#!&amp;quot; class=&amp;quot;ds-btn ds-btn-link&amp;quot;&gt;Another link&amp;lt;/a&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-card&amp;quot;&gt;
+	&amp;lt;div class=&amp;quot;ds-card-block&amp;quot;&gt;
+		&amp;lt;h3 class=&amp;quot;ds-card-title ds-h4&amp;quot;&gt;Card title&amp;lt;/h3&gt;
+		&amp;lt;p class=&amp;quot;ds-card-text&amp;quot;&gt;Some quick example text to build on the card title and make up the bulk of the card&amp;apos;s content.&amp;lt;/p&gt;
+	&amp;lt;/div&gt;
+	&amp;lt;div class=&amp;quot;ds-card-block ds-card-block-btns&amp;quot;&gt;
+		&amp;lt;a href=&amp;quot;#!&amp;quot; class=&amp;quot;ds-btn ds-btn-link&amp;quot;&gt;Card link&amp;lt;/a&gt;
+		&amp;lt;a href=&amp;quot;#!&amp;quot; class=&amp;quot;ds-btn ds-btn-link&amp;quot;&gt;Another link&amp;lt;/a&gt;
+	&amp;lt;/div&gt;
 &amp;lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 

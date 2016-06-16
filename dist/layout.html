@@ -173,17 +173,20 @@
 	<p>JDRF websites are primarily flat.  Components that require special attention, such as cards and buttons, have subtle elevations to increase contrast with their surroundings and invite interaction.</p>
 <p>Elevations are applied using the <code>ds-elevation-</code> class and are numbered 1 to 5. <code>.ds-elevation-1</code> is the lowest and <code>.ds-elevation-5</code> is the highest.</p>
 <p>Buttons in most cases start with <code>.ds-elevation-1</code> and raise to <code>.ds-elevation-3</code> on <code>:hover</code>, <code>:focus</code> and <code>:active</code> states. The <code>.ds-btn-flat</code> style of buttons start with no elevation and raise to <code>.ds-elevation-two</code> on <code>:hover</code>, <code>:focus</code> and <code>:active</code> states.</p>
-<p>To remove elevations on a component that isn't flat by default, you can use the <code>@include elevation-remove;</code> Sass mixin.</p>
+<p>To remove elevations on a component that isn't flat by default, you can use the <code>@include no-elevation;</code> Sass mixin.</p>
 <p>Modals, dialogs and menus (coming soon to the Design System) are the rare objects that require higher elevations.</p>
 
 </div>
 <div class="f-item-preview">
 	<div class="f-example-inline">
-	<div class="f-rectangle ds-elevation-remove"></div>
+	<div class="f-rectangle ds-no-elevation"></div>
 
 	<p class="f-example-desc">flat</p>
 </div>
-<p class="f-example-desc">ds-elevation-1</p>
+<div class="f-example-inline">
+	<div class="f-rectangle ds-elevation-1"></div>
+
+	<p class="f-example-desc">ds-elevation-1</p>
 </div>
 <div class="f-example-inline">
 	<div class="f-rectangle ds-elevation-2"></div>
@@ -205,7 +208,7 @@
 
 	<p class="f-example-desc">ds-elevation-5</p>
 </div>
-<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-elevation-remove&quot;>&lt;/div>
+<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-no-elevation&quot;>&lt;/div>
 &lt;div class=&quot;ds-elevation-1&quot;>&lt;/div>
 &lt;div class=&quot;ds-elevation-2&quot;>&lt;/div>
 &lt;div class=&quot;ds-elevation-3&quot;>&lt;/div>
@@ -215,11 +218,14 @@
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class=&quot;f-example-inline&quot;&gt;
-	&lt;div class=&quot;f-rectangle ds-elevation-remove&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;f-rectangle ds-no-elevation&quot;&gt;&lt;/div&gt;
 
 	&lt;p class=&quot;f-example-desc&quot;&gt;flat&lt;/p&gt;
 &lt;/div&gt;
-&lt;p class=&quot;f-example-desc&quot;&gt;ds-elevation-1&lt;/p&gt;
+&lt;div class=&quot;f-example-inline&quot;&gt;
+	&lt;div class=&quot;f-rectangle ds-elevation-1&quot;&gt;&lt;/div&gt;
+
+	&lt;p class=&quot;f-example-desc&quot;&gt;ds-elevation-1&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;f-example-inline&quot;&gt;
 	&lt;div class=&quot;f-rectangle ds-elevation-2&quot;&gt;&lt;/div&gt;
@@ -241,7 +247,7 @@
 
 	&lt;p class=&quot;f-example-desc&quot;&gt;ds-elevation-5&lt;/p&gt;
 &lt;/div&gt;
-&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-elevation-remove&amp;quot;&gt;&amp;lt;/div&gt;
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-no-elevation&amp;quot;&gt;&amp;lt;/div&gt;
 &amp;lt;div class=&amp;quot;ds-elevation-1&amp;quot;&gt;&amp;lt;/div&gt;
 &amp;lt;div class=&amp;quot;ds-elevation-2&amp;quot;&gt;&amp;lt;/div&gt;
 &amp;lt;div class=&amp;quot;ds-elevation-3&amp;quot;&gt;&amp;lt;/div&gt;
