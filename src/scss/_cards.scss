@@ -266,14 +266,16 @@
 		}
 
 		> .card-footer {
-			padding-top: 0;
-			padding-bottom: 0.5rem;
+			padding: 0 0.5rem 0.5rem 0.5rem;
 
 			@include media-breakpoint-up(md) {
 				padding-left: 0;
+				padding-right: 1.5rem;
 
 				.btn {
-					margin-left: -0.5rem;
+					@include media-breakpoint-up(md) {
+						margin-left: -0.5rem;
+					}
 				}
 			}
 		}
