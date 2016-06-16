@@ -8,7 +8,7 @@
 		background-color: $jdrf-white;
 		color: $jdrf-green;
 		border-color: $jdrf-green;
-		@include elevation-remove;
+		@include no-elevation;
 
 		&:hover,
 		&:active,
