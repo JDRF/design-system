@@ -60,10 +60,10 @@
 @mixin button-outline-variant($color) {
 	font-family: $btn-font;
 	text-transform: $btn-font-transform;
-	color: $color;
+	color: darken($color, 3%);
 	background-image: none;
 	background-color: transparent;
-	border-color: $color;
+	border-color: darken($color, 3%);
 	@include elevation-1;
 
 
