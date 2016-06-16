@@ -7074,6 +7074,8 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card-featured-hero .ds-card-hero-block > .ds-card-header {
   display: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -7103,15 +7105,17 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-card-featured-hero .ds-card-hero-block > .ds-card-footer {
-  padding-top: 0;
-  padding-bottom: 0.5rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
 }
 
 @media (min-width: 768px) {
   .ds-card-featured-hero .ds-card-hero-block > .ds-card-footer {
     padding-left: 0;
+    padding-right: 1.5rem;
   }
+}
 
+@media (min-width: 768px) and (min-width: 768px) {
   .ds-card-featured-hero .ds-card-hero-block > .ds-card-footer .ds-btn {
     margin-left: -0.5rem;
   }
