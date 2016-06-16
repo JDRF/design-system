@@ -9,8 +9,14 @@ module.exports = function (gulp, plugins, config) {
 			dest: 'dist',
 			logErrors: config.dev,
 			helpers: {
-				example: function(args) {
-					var string, esacped_string, template_string, template;
+				example: function(args, type) {
+					if ( 'undefined' === typeof type ) {
+						type = 'markup';
+					}
+					var string, esacped_string, template_string, template,
+						start = '<pre class="language-' + type + '"><code class="language-' + type + '">',
+						end = '</code></pre>';
+
 
 					string = args.replace( '.', '/' );
 					escaped = plugins.escape( plugins.fs.readFileSync(__dirname + '/../src/html/' + string + '.html', 'utf8') );
