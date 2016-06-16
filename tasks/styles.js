@@ -43,7 +43,7 @@ module.exports = function (gulp, plugins, comments) {
 			.pipe(plugins.header(comments, {pkg : plugins.pkg}))
 			.pipe(gulp.dest(__dirname + '/../dist/css'))
 			.pipe(plugins.minifycss())
-			.pipe(plugins.header(comments, {pkg : plugins.pkg}))			
+			.pipe(plugins.header(comments, {pkg : plugins.pkg}))
 			.pipe(plugins.rename('design-system.min.css'))
 			.pipe(gulp.dest(__dirname + '/../dist/css'));
 
