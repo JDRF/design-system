@@ -7,21 +7,20 @@ var gulp       = require('gulp'),
 			'gulp-autoprefixer' : 'prefix',
 		}
 	}),
-	paths      = {
-		bootstrap: {
-			scripts: './node_modules/bootstrap/dist/js/bootstrap.js',
-			styles: './node_modules/bootstrap/'
-		},
-		scripts: './src/js/**/*.js',
-		//the sass source files where `gulp styles` begin
-		styles: './src/scss/style.scss'
-	};
+	comments = ['/**',
+		' * <%= pkg.name %> - <%= pkg.description %>',
+		' * @version v<%= pkg.version %>',
+		' * @link <%= pkg.homepage %>',
+		' * @license <%= pkg.license %>',
+		' */',
+		''].join('\n');
 
 plugins.merge = require('merge-stream');
 plugins.runSequence = require('run-sequence');
+plugins.pkg = require('./package.json');
 
 function getTask(task) {
-	return require('./tasks/' + task)(gulp, plugins, paths);
+	return require('./tasks/' + task)(gulp, plugins, comments);
 }
 
 // Clean the dist directory

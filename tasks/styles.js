@@ -1,4 +1,4 @@
-module.exports = function (gulp, plugins) {
+module.exports = function (gulp, plugins, comments) {
 
 	return function () {
 		//the sass source files directory (Bootstrap overwrites)
@@ -28,9 +28,9 @@ module.exports = function (gulp, plugins) {
 				browsers: ['last 2 versions', 'ie 9']
 			}))
 			/*
-			* After scss lint and including bootstrap path,
-			* rename to plain css in a file called sass-files.css
-			*/
+			 * After scss lint and including bootstrap path,
+			 * rename to plain css in a file called sass-files.css
+			 */
 			.pipe(plugins.rename('sass-files.css'));
 
 		//grab the material icons stylesheet and rename to css-files.css
@@ -40,8 +40,10 @@ module.exports = function (gulp, plugins) {
 		//merge sass-files.css and css-files.css into design-system.css in the dist dir
 		var stream = plugins.merge(sassStream, cssStream)
 			.pipe(plugins.concat('design-system.css'))
+			.pipe(plugins.header(comments, {pkg : plugins.pkg}))
 			.pipe(gulp.dest(__dirname + '/../dist/css'))
 			.pipe(plugins.minifycss())
+			.pipe(plugins.header(comments, {pkg : plugins.pkg}))			
 			.pipe(plugins.rename('design-system.min.css'))
 			.pipe(gulp.dest(__dirname + '/../dist/css'));
 
