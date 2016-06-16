@@ -30,34 +30,36 @@
 
 	.ds-card-featured-hero {
 		.ds-btn {
-			margin-left: -0.5rem;
+			@media screen and ( min-width: 768px ) {
+				margin-left: -0.5rem;
+			}
 		}
 	}
 
 	.ds-card-featured-hero {
 		@media screen and ( min-width: 768px ) {
-			height: 440px;
+			height: 448px;
 		}
 
 		@media screen and ( min-width: 992px ) {
-			height: 340px;
+			height: 348px;
 		}
 
 		@media screen and ( min-width: 1199px ) {
-			height: 292px;
+			height: 300px;
 		}
 
 		.ds-card-img-left {
 			@media screen and ( min-width: 768px ) {
-				height: 440px;
+				height: 448px;
 			}
 
 			@media screen and ( min-width: 992px ) {
-				height: 340px;
+				height: 348px;
 			}
 
 			@media screen and ( min-width: 1199px ) {
-				height: 292px;
+				height: 300px;
 			}
 		}
 	}

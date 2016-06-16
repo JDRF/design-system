@@ -379,6 +379,7 @@
 	</div><div class="f-item-notes" data-f-toggle="notes">
 	<p>The <code>button</code> components are based on Bootstrap's button classes combined with our own customizations.</p>
 <p>You can find documentation on <a href="http://v4-alpha.getbootstrap.com/components/buttons/" target="_blank">Bootstrap's button components</a> on their site.</p>
+<p>By default, the colors being used for buttons are <code class="language-markup">$jdrf-green</code>. However the button colors should vary by program. View <a href="/dist/content.html#colors">our Colors section</a> for an example of how to overwrite these button colors for your project.</p>
 
 </div>
 <div class="f-item-preview">
@@ -1119,7 +1120,6 @@
 <section class="f-section">
 	<div class="f-example">
 		<div class="ds-card ds-card-featured" id="phantom-ds-card-featured">
-			<div class="ds-card-header">Our partner's promotions make it easy for you to contribute</div>
 			<div class="ds-card-hero-group">
 				<div class="ds-card-hero-block ds-card-hero-block-1 ds-card-block">
 					<img class="ds-card-img" data-src="" alt="Card image" src="http://placehold.it/780x480/777777/ffffff?text=Image">
@@ -1127,7 +1127,7 @@
 				<div class="ds-card-hero-block ds-card-hero-block-2 ds-card-block">
 					<h3 class="ds-card-title ds-h4">Walgreen's Flu Shot</h3>
 					<p class="ds-card-subtitle"><span class="material-icons" aria-hidden="true">date_range</span> October 10 - April 15</p>
-					<p class="ds-card-subtitle"><span class="material-icons" aria-hidden="true">add_location</span> Mission St. Walgreens</p>
+					<p class="ds-card-subtitle"><span class="material-icons" aria-hidden="true">location_on</span> Mission St. Walgreens</p>
 					<a href="#!" class="ds-btn ds-btn-primary">Learn More</a>
 				</div>
 				<div class="ds-card-hero-block ds-card-hero-block-3 ds-card-block">
@@ -1137,7 +1137,6 @@
 		</div>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-card ds-card-featured&quot;>
-	&lt;div class=&quot;ds-card-header&quot;>Our partner&apos;s promotions make it easy for you to contribute&lt;/div>
 	&lt;div class=&quot;ds-card-hero-group&quot;>
 		&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-1 ds-card-block&quot;>
 			&lt;img class=&quot;ds-card-img&quot; data-src=&quot;...&quot; alt=&quot;Card image&quot;>
@@ -1145,7 +1144,7 @@
 		&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-2 ds-card-block&quot;>
 			&lt;h3 class=&quot;ds-card-title ds-h4&quot;>Walgreen&apos;s Flu Shot&lt;/h3>
 			&lt;p class=&quot;ds-card-subtitle&quot;>&lt;span class=&quot;material-icons&quot; aria-hidden=&quot;true&quot;>date_range&lt;/span> October 10 - April 15&lt;/p>
-			&lt;p class=&quot;ds-card-subtitle&quot;>&lt;span class=&quot;material-icons&quot; aria-hidden=&quot;true&quot;>add_location&lt;/span> Mission St. Walgreens&lt;/p>
+			&lt;p class=&quot;ds-card-subtitle&quot;>&lt;span class=&quot;material-icons&quot; aria-hidden=&quot;true&quot;>location_on&lt;/span>Mission St. Walgreens&lt;/p>
 			&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-primary&quot;>Learn More&lt;/a>
 		&lt;/div>
 		&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-3 ds-card-block&quot;>
@@ -1436,7 +1435,6 @@
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;div class=&quot;ds-card ds-card-featured&quot; id=&quot;phantom-ds-card-featured&quot;&gt;
-			&lt;div class=&quot;ds-card-header&quot;&gt;Our partner&#x27;s promotions make it easy for you to contribute&lt;/div&gt;
 			&lt;div class=&quot;ds-card-hero-group&quot;&gt;
 				&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-1 ds-card-block&quot;&gt;
 					&lt;img class=&quot;ds-card-img&quot; data-src=&quot;&quot; alt=&quot;Card image&quot; src=&quot;http://placehold.it/780x480/777777/ffffff?text=Image&quot;&gt;
@@ -1444,7 +1442,7 @@
 				&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-2 ds-card-block&quot;&gt;
 					&lt;h3 class=&quot;ds-card-title ds-h4&quot;&gt;Walgreen&#x27;s Flu Shot&lt;/h3&gt;
 					&lt;p class=&quot;ds-card-subtitle&quot;&gt;&lt;span class=&quot;material-icons&quot; aria-hidden=&quot;true&quot;&gt;date_range&lt;/span&gt; October 10 - April 15&lt;/p&gt;
-					&lt;p class=&quot;ds-card-subtitle&quot;&gt;&lt;span class=&quot;material-icons&quot; aria-hidden=&quot;true&quot;&gt;add_location&lt;/span&gt; Mission St. Walgreens&lt;/p&gt;
+					&lt;p class=&quot;ds-card-subtitle&quot;&gt;&lt;span class=&quot;material-icons&quot; aria-hidden=&quot;true&quot;&gt;location_on&lt;/span&gt; Mission St. Walgreens&lt;/p&gt;
 					&lt;a href=&quot;#!&quot; class=&quot;ds-btn ds-btn-primary&quot;&gt;Learn More&lt;/a&gt;
 				&lt;/div&gt;
 				&lt;div class=&quot;ds-card-hero-block ds-card-hero-block-3 ds-card-block&quot;&gt;
@@ -1454,7 +1452,6 @@
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-card ds-card-featured&amp;quot;&gt;
-	&amp;lt;div class=&amp;quot;ds-card-header&amp;quot;&gt;Our partner&amp;apos;s promotions make it easy for you to contribute&amp;lt;/div&gt;
 	&amp;lt;div class=&amp;quot;ds-card-hero-group&amp;quot;&gt;
 		&amp;lt;div class=&amp;quot;ds-card-hero-block ds-card-hero-block-1 ds-card-block&amp;quot;&gt;
 			&amp;lt;img class=&amp;quot;ds-card-img&amp;quot; data-src=&amp;quot;...&amp;quot; alt=&amp;quot;Card image&amp;quot;&gt;
@@ -1462,7 +1459,7 @@
 		&amp;lt;div class=&amp;quot;ds-card-hero-block ds-card-hero-block-2 ds-card-block&amp;quot;&gt;
 			&amp;lt;h3 class=&amp;quot;ds-card-title ds-h4&amp;quot;&gt;Walgreen&amp;apos;s Flu Shot&amp;lt;/h3&gt;
 			&amp;lt;p class=&amp;quot;ds-card-subtitle&amp;quot;&gt;&amp;lt;span class=&amp;quot;material-icons&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;date_range&amp;lt;/span&gt; October 10 - April 15&amp;lt;/p&gt;
-			&amp;lt;p class=&amp;quot;ds-card-subtitle&amp;quot;&gt;&amp;lt;span class=&amp;quot;material-icons&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;add_location&amp;lt;/span&gt; Mission St. Walgreens&amp;lt;/p&gt;
+			&amp;lt;p class=&amp;quot;ds-card-subtitle&amp;quot;&gt;&amp;lt;span class=&amp;quot;material-icons&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&gt;location_on&amp;lt;/span&gt;Mission St. Walgreens&amp;lt;/p&gt;
 			&amp;lt;a href=&amp;quot;#!&amp;quot; class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;Learn More&amp;lt;/a&gt;
 		&amp;lt;/div&gt;
 		&amp;lt;div class=&amp;quot;ds-card-hero-block ds-card-hero-block-3 ds-card-block&amp;quot;&gt;
