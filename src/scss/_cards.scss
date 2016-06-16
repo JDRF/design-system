@@ -107,16 +107,6 @@
 	background-color: $jdrf-white;
 }
 
-.card-content {
-	address {
-		font-size: $paragraph-size;
-
-		strong {
-			color: $jdrf-black;
-		}
-	}
-}
-
 .card-block {
 	padding: 1rem;
 
@@ -332,9 +322,25 @@
 
 // Content card
 .card-content {
+	.card-header {
+		padding: 0.625rem 1.5rem;
+	}
+
+	.card-block {
+		padding: 1.5rem;
+	}
+
 	.card-footer {
-		padding-top: 1rem;
+		padding-top: 0.5rem;
 		padding-bottom: 2rem;
+	}
+
+	address {
+		font-size: $paragraph-size;
+
+		strong {
+			color: $jdrf-black;
+		}
 	}
 }
 
