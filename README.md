@@ -23,16 +23,21 @@ If icons are a requirement, Design System already includes all necessary styles,
 # Design System Pieces
 Below are the different available Design System elements. If possible, an element is built upon existing Bootstrap-v4 components.
 ### Components
+* Badges
+	* Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/components/label/)
+	* Template Path in gh-pages: `src/materials/components/badges.html`
+	* Style Path: `src/scss/_badges.scss`, `src/scss/_variables.scss`
+	* Example: [here](http://jdrf.github.io/design-system/dist/components.html#badges)
 * Buttons
 	* Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/components/buttons/)
 	* Template Path in gh-pages: `src/materials/components/buttons.html`
 	* Style Path: `src/scss/_buttons.scss`, `src/scss/mixins/_buttons.scss`, `src/scss/_variables.scss`
 	* Example: [here](http://jdrf.github.io/design-system/dist/components.html#buttons)
-* Forms _Currently in development_
-	* Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/components/forms/)
-	* Template Path in gh-pages: `src/materials/components/forms.html`
-	* Style Path: N/A
-	* Example: [here](http://jdrf.github.io/design-system/dist/components.html#forms)
+* Cards
+	* Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/components/card/)
+	* Template Path in gh-pages: `src/materials/components/cards.html`
+	* Style Path: `src/scss/_cards.scss`, `src/scss/_variables.scss`
+	* Example: [here](http://jdrf.github.io/design-system/dist/components.html#cards)
 * Side Navigation
 	* Bootstrap Doc Reference: N/A
 	* Template Path in gh-pages: `src/materials/components/navigation.html`
@@ -45,11 +50,6 @@ Below are the different available Design System elements. If possible, an elemen
 	* Template Path in gh-pages: `src/materials/content/colors.html`, `src/data/toolkit.yml`
 	* Style Path: `src/scss/_variables.scss`
 	* Example: [here](http://jdrf.github.io/design-system/dist/content.html#colors)
-* Elevation
-	* Bootstrap Doc Reference: N/A
-	* Template Path in gh-pages: `src/materials/content/elevation.html`
-	* Style Path: `src/scss/_elevations.scss`, `src/scss/_elevations.scss`
-	* Example: [here](http://jdrf.github.io/design-system/dist/content.html#elevation)
 * Icons
 	* Bootstrap Doc Reference: N/A
 	* Template Path in gh-pages: `src/materials/content/icons.html`
@@ -60,6 +60,19 @@ Below are the different available Design System elements. If possible, an elemen
 	* Template Path in gh-pages: `src/materials/content/typography.html`
 	* Style Path: `src/scss/_type.scss`, `src/scss/_variables.scss`
 	* Example: [here](http://jdrf.github.io/design-system/dist/content.html#typography)
+
+###Layout
+* Elevation
+	* Bootstrap Doc Reference: N/A
+	* Template Path in gh-pages: `src/materials/layout/elevation.html`
+	* Style Path: `src/scss/_elevations.scss`, `src/scss/_variables.scss`
+	* Example: [here](http://jdrf.github.io/design-system/dist/layout.html#elevation)
+* Grid
+	* Bootstrap Doc Reference: [here](http://v4-alpha.getbootstrap.com/layout/grid/)
+	* Template Path in gh-pages: `src/materials/layout/grid.html`
+	* Style Path: `src/scss/_grid.scss`, `src/scss/mixins/_grid.scss`
+	* Example: [here](http://jdrf.github.io/design-system/dist/layout.html#grid)
+
 
 # Contributing
 
