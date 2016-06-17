@@ -8,41 +8,57 @@
 
 			<li class="ds-nav-item">
 				<a href="./index.html" class="f-menu__heading ds-nav-link">Overview</a>
-				<a href="./download.html" class="f-menu__heading ds-nav-link">Download</a>
+			</li>
+			<li class="ds-nav-item">
+				<a href="./getting-started.html" class="f-menu__heading ds-nav-link">{{materials.getting-started.name}}</a>
+				<ul class="ds-nav">
+					{{#each materials.getting-started.items}}
+						<li>
+							<a href="./getting-started.html#{{@key}}" class="ds-nav-link">{{name}}</a>
+						</li>
+					{{/each}}
+				</ul>
+			</li>
+			<li class="ds-nav-item">
 				<a href="./faq.html" class="f-menu__heading ds-nav-link">FAQ</a>
 			</li>
-
-			{{#each materials}}
+			<!-- Layouts -->
 			<li class="ds-nav-item">
-				<a href="./{{@key}}.html" class="f-menu__heading ds-nav-link">{{name}}</a>
+				<a href="./layout.html" class="f-menu__heading ds-nav-link">{{materials.layout.name}}</a>
 				<ul class="ds-nav">
-					{{#each items}}
-					{{#if_not_eq 'Forms' name}}
-					<li>
-						<a href="./{{@../key}}.html#{{@key}}" class="ds-nav-link">{{name}}</a>
-					</li>
-					{{/if_not_eq}}
-
+					{{#each materials.layout.items}}
+						<li>
+							<a href="./layout.html#{{@key}}" class="ds-nav-link">{{name}}</a>
+						</li>
 					{{/each}}
 				</ul>
 			</li>
-			{{/each}}
 
-			{{#each views}}
+			<!-- Content -->
 			<li class="ds-nav-item">
-				<a href="./{{@key}}.html" class="f-menu__heading ds-nav-link">{{name}}</a>
+				<a href="./content.html" class="f-menu__heading ds-nav-link">{{materials.content.name}}</a>
 				<ul class="ds-nav">
-					{{#each items}}
-					<li>
-						<a href="./{{@../key}}/{{@key}}.html" class="ds-nav-link">{{name}}</a>
-					</li>
+					{{#each materials.content.items}}
+						<li>
+							<a href="./content.html#{{@key}}" class="ds-nav-link">{{name}}</a>
+						</li>
 					{{/each}}
 				</ul>
 			</li>
-			{{/each}}
+
+			<!-- Components -->
+			<li class="ds-nav-item">
+				<a href="./components.html" class="f-menu__heading ds-nav-link">{{materials.components.name}}</a>
+				<ul class="ds-nav">
+					{{#each materials.components.items}}
+						<li>
+							<a href="./components.html#{{@key}}" class="ds-nav-link">{{name}}</a>
+						</li>
+					{{/each}}
+				</ul>
+			</li>
 
 		</ul>
-
 
 	</nav>
 </div>
