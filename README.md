@@ -1,11 +1,13 @@
 # JDRF Design System
 
+> Build web experiences that feel beautifully at home in the JDRF ecosystem — without needing to write any CSS or Javascript.
+
 # Using Design System
 To use Design System, copy/download the file found in the [dist folder](https://github.com/JDRF/design-system/tree/master/dist/css) to your website. This file contains all current components and provides support for any needed icons, typography, or styling. We recommend including it in the `HEAD` html tag for use throughout your website/application.
 ````
 <link rel="stylesheet" href="/<PATH TO CSS>/design-system.css">
 ````
-Currently, Design System only supports a few components - none of which require JavaScript. If font files are needed for the website/application, copy/download the font files found in the [dist folder](https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham). It's recommended to place the font folder in a similar path to the CSS files.
+If font files are needed for the website/application, copy/download the font files found in the [dist folder](https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham). It's recommended to place the font folder in a similar path to the CSS files.
 ````
 └── ./
 	├── css/

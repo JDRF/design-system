@@ -89,6 +89,7 @@ $btn-link-disabled-color: $grey-6;
 /* == Fonts ======== */
 
 $text-default: $text-primary;
+$text-muted: $text-secondary;
 
 $font-thin: "Gotham Thin", sans-serif;
 $font-light: "Gotham Light", sans-serif;
@@ -182,6 +183,10 @@ $btn-padding-x-lg: 1.5rem; /* 24px */
 $btn-padding-y-sm: 0.5rem; /* 8px */
 $btn-padding-x-sm: 0.5rem; /* 8px */
 
+$btn-icon-height: 40px;
+$btn-icon-height-lg: 48px;
+$btn-icon-height-sm: 32px;
+
 /* Border radius at 2px */
 $border-radius: 2px;
 $border-radius-lg: 2px;
@@ -197,7 +202,6 @@ $input-btn-border-width-lg: 2px;
 /* Cards */
 $card-spacer-y: 0.625rem;
 $card-spacer-x: 1.5rem;
-$text-muted: $text-secondary;
 $card-header-font-size: 1rem;
 $card-header-line-height: 1rem;
 $card-header-font-family: $font-medium;
