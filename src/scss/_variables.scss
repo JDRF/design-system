@@ -89,6 +89,7 @@ $btn-link-disabled-color: $grey-6;
 /* == Fonts ======== */
 
 $text-default: $text-primary;
+$text-muted: $text-secondary;
 
 $font-thin: "Gotham Thin", sans-serif;
 $font-light: "Gotham Light", sans-serif;
@@ -197,7 +198,6 @@ $input-btn-border-width-lg: 2px;
 /* Cards */
 $card-spacer-y: 0.625rem;
 $card-spacer-x: 1.5rem;
-$text-muted: $text-secondary;
 $card-header-font-size: 1rem;
 $card-header-line-height: 1rem;
 $card-header-font-family: $font-medium;
