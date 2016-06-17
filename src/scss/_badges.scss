@@ -8,8 +8,8 @@
 
 // Label
 .label {
-	padding-left: 0.4em;
-	padding-right: 0.4em;
+	font-weight: normal;
+	padding: 0.25rem 0.5rem;
 	border-radius: 0.75rem;
 }
 
@@ -18,6 +18,17 @@
 	border: 1px solid $text-primary;
 	background-color: $jdrf-white;
 	color: $text-primary;
+}
+
+// Headings
+
+h1,
+.h1,
+h2,
+.h2 {
+	.label {
+		font-family: $headings-font-family;
+	}
 }
 
 // Button
