@@ -37,7 +37,7 @@
 }
 
 .text-address {
-	font-size: $font-size-lg;
+	font-size: $font-size-md;
 	font-family: $font-medium;
 	color: $text-muted;
 
@@ -49,7 +49,7 @@
 .text-address-link {
 	.material-icons {
 		vertical-align: middle;
-		font-size: $font-size-lg;
+		font-size: $font-size-md;
 		color: $text-disabled;
 	}
 }

@@ -165,11 +165,11 @@ fieldset[disabled] a.btn {
 }
 
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-md, $line-height-md, $btn-border-radius-lg);
   height: 48px;
 
   &.btn-primary-outline {
-  	border-width: $input-btn-border-width-lg;
+	  border-width: $input-btn-border-width-lg;
   }
 }
 .btn-sm {
@@ -223,22 +223,22 @@ input[type="button"] {
 		vertical-align: middle;
 	}
 
-	&.btn-icon-height {
+	&.btn-has-icon {
 		padding-top: .5rem;
 		padding-bottom: .5rem;
-		height: $btn-icon-height;
+		height: $btn-has-icon-height;
 	}
 
-	&.btn-icon-height-lg {
+	&.btn-has-icon-lg {
 		padding-top: .7rem;
 		padding-bottom: .7rem;
-		height: $btn-icon-height-lg;
+		height: $btn-has-icon-height-lg;
 	}
 
-	&.btn-icon-height-sm {
+	&.btn-has-icon-sm {
 		padding-top: .25rem;
 		padding-bottom: .25rem;
-		height: $btn-icon-height-sm;
+		height: $btn-has-icon-height-sm;
 	}
 }
 
