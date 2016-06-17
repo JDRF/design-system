@@ -222,6 +222,24 @@ input[type="button"] {
 		display: inline-block;
 		vertical-align: middle;
 	}
+
+	&.btn-icon-height {
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+		height: $btn-icon-height;
+	}
+
+	&.btn-icon-height-lg {
+		padding-top: .7rem;
+		padding-bottom: .7rem;
+		height: $btn-icon-height-lg;
+	}
+
+	&.btn-icon-height-sm {
+		padding-top: .25rem;
+		padding-bottom: .25rem;
+		height: $btn-icon-height-sm;
+	}
 }
 
 .btn-loading {
