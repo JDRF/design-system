@@ -7743,12 +7743,6 @@ h2 .ds-label,
   color: #ffffff;
 }
 
-.ds-btn-link:hover .ds-label-default,
-.ds-btn-primary-outline:hover .ds-label-default {
-  border: 2px solid #ffffff;
-  padding: 0.125rem 0.375rem;
-}
-
 .ds-nav-pills .ds-nav-link {
   padding: .625rem 1rem;
 }
