@@ -5985,6 +5985,24 @@ input[type="button"].ds-btn-block {
   vertical-align: middle;
 }
 
+.ds-btn-icon.ds-btn-icon-height {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  height: 40px;
+}
+
+.ds-btn-icon.ds-btn-icon-height-lg {
+  padding-top: .7rem;
+  padding-bottom: .7rem;
+  height: 48px;
+}
+
+.ds-btn-icon.ds-btn-icon-height-sm {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  height: 32px;
+}
+
 .ds-btn-loading {
   min-width: 100px;
 }
