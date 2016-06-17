@@ -627,6 +627,9 @@
 		with text, the structure of the HTML will have to change slightly.</p>
 
 	<p>Icons inside buttons will use existing <a href="./components.html#buttons">button classes</a> in addition to the <code class="language-markup">.ds-btn-icon</code> class.</p>
+
+	<p>The <code class="language-markup">.ds-btn-icon</code> class lets the padding determine the height of the button and is required when using icons inside buttons. For fixed heights, one of three classes can be used in addition to <code class="language-markup">.ds-btn-icon</code>.
+		These classes are: <code class="language-markup">.btn-icon-height, .btn-icon-height-lg, .btn-icon-height-sm</code></p>
 </section>
 
 <section class="f-section">
@@ -659,17 +662,16 @@
 
 <section class="f-section">
 	<h3 class="f-example-title">Left Icon with Text</h3>
-
 	<div class="f-example">
-		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-icon" id="phantom-ds-btn-left-icon-lg">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-icon ds-btn-icon-height-lg" id="phantom-ds-btn-left-icon-lg">
 			<span class="material-icons mi-get-app" aria-hidden="true"></span>
 			<span>Icon Left</span>
 		</button>
-		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-icon" id="phantom-ds-btn-left-icon-normal">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-icon ds-btn-icon-height" id="phantom-ds-btn-left-icon-normal">
 			<span class="material-icons mi-get-app" aria-hidden="true"></span>
 			<span>Icon Left</span>
 		</button>
-		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-sm ds-btn-icon" id="phantom-ds-btn-left-icon-sm">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-sm ds-btn-icon ds-btn-icon-height-sm" id="phantom-ds-btn-left-icon-sm">
 			<span class="material-icons mi-get-app" aria-hidden="true"></span>
 			<span>Icon Left</span>
 		</button>
@@ -692,15 +694,15 @@
 	<h3 class="f-example-title">Right Icon with Text</h3>
 
 	<div class="f-example">
-		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-icon" id="phantom-ds-btn-right-icon-lg">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-lg ds-btn-icon ds-btn-icon-height-lg" id="phantom-ds-btn-right-icon-lg">
 			<span>Icon Right</span>
 			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
 		</button>
-		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-icon" id="phantom-ds-btn-right-icon-normal">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-icon ds-btn-icon-height" id="phantom-ds-btn-right-icon-normal">
 			<span>Icon Right</span>
 			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
 		</button>
-		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-sm ds-btn-icon" id="phantom-ds-btn-right-icon-sm">
+		<button type="button" name="app-button-example" class="ds-btn ds-btn-primary ds-btn-sm ds-btn-icon ds-btn-icon-height-sm" id="phantom-ds-btn-right-icon-sm">
 			<span>Icon Right</span>
 			<span class="material-icons mi-arrow-forward" aria-hidden="true"></span>
 		</button>
@@ -963,6 +965,9 @@
 		with text, the structure of the HTML will have to change slightly.&lt;/p&gt;
 
 	&lt;p&gt;Icons inside buttons will use existing &lt;a href=&quot;./components.html#buttons&quot;&gt;button classes&lt;/a&gt; in addition to the &lt;code class=&quot;language-markup&quot;&gt;.ds-btn-icon&lt;/code&gt; class.&lt;/p&gt;
+
+	&lt;p&gt;The &lt;code class=&quot;language-markup&quot;&gt;.ds-btn-icon&lt;/code&gt; class lets the padding determine the height of the button and is required when using icons inside buttons. For fixed heights, one of three classes can be used in addition to &lt;code class=&quot;language-markup&quot;&gt;.ds-btn-icon&lt;/code&gt;.
+		These classes are: &lt;code class=&quot;language-markup&quot;&gt;.btn-icon-height, .btn-icon-height-lg, .btn-icon-height-sm&lt;/code&gt;&lt;/p&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
@@ -995,17 +1000,16 @@
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Left Icon with Text&lt;/h3&gt;
-
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&quot; id=&quot;phantom-ds-btn-left-icon-lg&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon ds-btn-icon-height-lg&quot; id=&quot;phantom-ds-btn-left-icon-lg&quot;&gt;
 			&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 			&lt;span&gt;Icon Left&lt;/span&gt;
 		&lt;/button&gt;
-		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-icon&quot; id=&quot;phantom-ds-btn-left-icon-normal&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-icon ds-btn-icon-height&quot; id=&quot;phantom-ds-btn-left-icon-normal&quot;&gt;
 			&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 			&lt;span&gt;Icon Left&lt;/span&gt;
 		&lt;/button&gt;
-		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&quot; id=&quot;phantom-ds-btn-left-icon-sm&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon ds-btn-icon-height-sm&quot; id=&quot;phantom-ds-btn-left-icon-sm&quot;&gt;
 			&lt;span class=&quot;material-icons mi-get-app&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 			&lt;span&gt;Icon Left&lt;/span&gt;
 		&lt;/button&gt;
@@ -1028,15 +1032,15 @@
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Right Icon with Text&lt;/h3&gt;
 
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon&quot; id=&quot;phantom-ds-btn-right-icon-lg&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-lg ds-btn-icon ds-btn-icon-height-lg&quot; id=&quot;phantom-ds-btn-right-icon-lg&quot;&gt;
 			&lt;span&gt;Icon Right&lt;/span&gt;
 			&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 		&lt;/button&gt;
-		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-icon&quot; id=&quot;phantom-ds-btn-right-icon-normal&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-icon ds-btn-icon-height&quot; id=&quot;phantom-ds-btn-right-icon-normal&quot;&gt;
 			&lt;span&gt;Icon Right&lt;/span&gt;
 			&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 		&lt;/button&gt;
-		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon&quot; id=&quot;phantom-ds-btn-right-icon-sm&quot;&gt;
+		&lt;button type=&quot;button&quot; name=&quot;app-button-example&quot; class=&quot;ds-btn ds-btn-primary ds-btn-sm ds-btn-icon ds-btn-icon-height-sm&quot; id=&quot;phantom-ds-btn-right-icon-sm&quot;&gt;
 			&lt;span&gt;Icon Right&lt;/span&gt;
 			&lt;span class=&quot;material-icons mi-arrow-forward&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
 		&lt;/button&gt;
