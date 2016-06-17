@@ -2456,13 +2456,21 @@
 
 /* == Fonts ======== */
 
+/* 13px */
+
+/* 13px */
+
 /* 14px */
 
 /* 14px */
 
-/* 13px */
+/* 16px */
 
-/* 13px */
+/* 16px */
+
+/* 18px */
+
+/* 18px */
 
 /* 56px */
 
@@ -4739,8 +4747,8 @@ mark,
 
 .ds-form-control-lg {
   padding: 0.75rem 1.25rem;
-  font-size: 0.875rem;
-  line-height: 0.875rem;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
   border-radius: 0.3rem;
 }
 
@@ -5985,19 +5993,19 @@ input[type="button"].ds-btn-block {
   vertical-align: middle;
 }
 
-.ds-btn-icon.ds-btn-icon-height {
+.ds-btn-icon.ds-btn-has-icon {
   padding-top: .5rem;
   padding-bottom: .5rem;
   height: 40px;
 }
 
-.ds-btn-icon.ds-btn-icon-height-lg {
+.ds-btn-icon.ds-btn-has-icon-lg {
   padding-top: .7rem;
   padding-bottom: .7rem;
   height: 48px;
 }
 
-.ds-btn-icon.ds-btn-icon-height-sm {
+.ds-btn-icon.ds-btn-has-icon-sm {
   padding-top: .25rem;
   padding-bottom: .25rem;
   height: 32px;
