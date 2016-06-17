@@ -170,21 +170,22 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Colors</h2>
 	</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>These are the colors that all JDRF brands should adhere to. Pictured below are each colors name, hex/rgba values and Design System variable for use.</p>
+	<p>JDRF websites are primarily white and blue to reinforce the brand and create a bright, fresh atmosphere.  Program and accent colors should be used with restraint.</p>
 
 </div>
 <div class="f-item-preview">
 	<h3>Primary Colors</h3>
+<p>JDRF Blue and JDRF Dark Blue are the colors used in teh JDRF logo.</p>
 <div class="f-color-chips">
 	<div class="f-color-chip">
 		<div class="f-color-chip__name">Blue</div>
 		<div class="f-color-chip__hex">#0073cf</div>
-		<div class="f-color-chip__var">$primary-blue</div>
+		<div class="f-color-chip__var">$jdrf-blue</div>
 	</div>
 	<div class="f-color-chip">
 		<div class="f-color-chip__name">Dark Blue</div>
 		<div class="f-color-chip__hex">#002855</div>
-		<div class="f-color-chip__var">$primary-dark-blue</div>
+		<div class="f-color-chip__var">$jdrf-dark-blue</div>
 	</div>
 </div>
 
@@ -217,9 +218,17 @@
 	</div>
 </div>
 
-<p>The color white <code class="language-markup">$jdrf-white (hex value: #ffffff)</code> is used as a background for the <a href="./components.html#buttons">outline button style</a>.
+<h4>Choosing a Button Color</h4>
+<p>Only one button color is used per website. Most JDRF programs align with a button color. If not, use the default button color.</p>
+
+<p>The color white <code class="language-markup">$jdrf-white (hex value: #ffffff)</code> is used for the outline button and a variant of the primary <a href="./components.html#buttons">button style</a>. White buttons can be used in combination with other
+	button colors on the same site.</a>.
+
+	<p>For a review on how to include the Design System, refer to our <a href="/dist/download.html">Download page</a>.</p>
+
 
 	<h3>Accent Colors</h3>
+	<p>Accent colors must comprise 10% or less of your design.</p>
 	<div class="f-color-chips">
 		<div class="f-color-chip">
 			<div class="f-color-chip__name">Accent Blue</div>
@@ -239,6 +248,7 @@
 	</div>
 
 	<h3>Program Colors</h3>
+	<p>Only one program color can be used per website &mdash; unless it is an overview of multiple JDRF programs.</p>
 	<div class="f-color-chips">
 		<div class="f-color-chip">
 			<div class="f-color-chip__name">Walk</div>
@@ -320,22 +330,22 @@
 	<div class="f-color-chips">
 		<div class="f-color-chip">
 			<div class="f-color-chip__name">Primary</div>
-			<div class="f-color-chip__hex">rgba(0, 0, 0, 0.87)</div>
+			<div class="f-color-chip__hex">#212121</div>
 			<div class="f-color-chip__var">$text-primary</div>
 		</div>
 		<div class="f-color-chip">
 			<div class="f-color-chip__name">Secondary</div>
-			<div class="f-color-chip__hex">rgba(0, 0, 0, 0.54)</div>
+			<div class="f-color-chip__hex">#757575</div>
 			<div class="f-color-chip__var">$text-secondary</div>
 		</div>
 		<div class="f-color-chip">
 			<div class="f-color-chip__name">Disabled</div>
-			<div class="f-color-chip__hex">rgba(0, 0, 0, 0.38)</div>
+			<div class="f-color-chip__hex">9e9e9e</div>
 			<div class="f-color-chip__var">$text-disabled</div>
 		</div>
 		<div class="f-color-chip">
 			<div class="f-color-chip__name">Dividers</div>
-			<div class="f-color-chip__hex">rgba(0, 0, 0, 0.12)</div>
+			<div class="f-color-chip__hex">e0e0e0</div>
 			<div class="f-color-chip__var">$text-dividers</div>
 		</div>
 	</div>
@@ -350,16 +360,17 @@
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;h3&gt;Primary Colors&lt;/h3&gt;
+&lt;p&gt;JDRF Blue and JDRF Dark Blue are the colors used in teh JDRF logo.&lt;/p&gt;
 &lt;div class=&quot;f-color-chips&quot;&gt;
 	&lt;div class=&quot;f-color-chip&quot;&gt;
 		&lt;div class=&quot;f-color-chip__name&quot;&gt;Blue&lt;/div&gt;
 		&lt;div class=&quot;f-color-chip__hex&quot;&gt;#0073cf&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__var&quot;&gt;$primary-blue&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__var&quot;&gt;$jdrf-blue&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;div class=&quot;f-color-chip&quot;&gt;
 		&lt;div class=&quot;f-color-chip__name&quot;&gt;Dark Blue&lt;/div&gt;
 		&lt;div class=&quot;f-color-chip__hex&quot;&gt;#002855&lt;/div&gt;
-		&lt;div class=&quot;f-color-chip__var&quot;&gt;$primary-dark-blue&lt;/div&gt;
+		&lt;div class=&quot;f-color-chip__var&quot;&gt;$jdrf-dark-blue&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 
@@ -392,9 +403,17 @@
 	&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;The color white &lt;code class=&quot;language-markup&quot;&gt;$jdrf-white (hex value: #ffffff)&lt;/code&gt; is used as a background for the &lt;a href=&quot;./components.html#buttons&quot;&gt;outline button style&lt;/a&gt;.
+&lt;h4&gt;Choosing a Button Color&lt;/h4&gt;
+&lt;p&gt;Only one button color is used per website. Most JDRF programs align with a button color. If not, use the default button color.&lt;/p&gt;
+
+&lt;p&gt;The color white &lt;code class=&quot;language-markup&quot;&gt;$jdrf-white (hex value: #ffffff)&lt;/code&gt; is used for the outline button and a variant of the primary &lt;a href=&quot;./components.html#buttons&quot;&gt;button style&lt;/a&gt;. White buttons can be used in combination with other
+	button colors on the same site.&lt;/a&gt;.
+
+	&lt;p&gt;For a review on how to include the Design System, refer to our &lt;a href=&quot;/dist/download.html&quot;&gt;Download page&lt;/a&gt;.&lt;/p&gt;
+
 
 	&lt;h3&gt;Accent Colors&lt;/h3&gt;
+	&lt;p&gt;Accent colors must comprise 10% or less of your design.&lt;/p&gt;
 	&lt;div class=&quot;f-color-chips&quot;&gt;
 		&lt;div class=&quot;f-color-chip&quot;&gt;
 			&lt;div class=&quot;f-color-chip__name&quot;&gt;Accent Blue&lt;/div&gt;
@@ -414,6 +433,7 @@
 	&lt;/div&gt;
 
 	&lt;h3&gt;Program Colors&lt;/h3&gt;
+	&lt;p&gt;Only one program color can be used per website &amp;mdash; unless it is an overview of multiple JDRF programs.&lt;/p&gt;
 	&lt;div class=&quot;f-color-chips&quot;&gt;
 		&lt;div class=&quot;f-color-chip&quot;&gt;
 			&lt;div class=&quot;f-color-chip__name&quot;&gt;Walk&lt;/div&gt;
@@ -495,22 +515,22 @@
 	&lt;div class=&quot;f-color-chips&quot;&gt;
 		&lt;div class=&quot;f-color-chip&quot;&gt;
 			&lt;div class=&quot;f-color-chip__name&quot;&gt;Primary&lt;/div&gt;
-			&lt;div class=&quot;f-color-chip__hex&quot;&gt;rgba(0, 0, 0, 0.87)&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__hex&quot;&gt;#212121&lt;/div&gt;
 			&lt;div class=&quot;f-color-chip__var&quot;&gt;$text-primary&lt;/div&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;f-color-chip&quot;&gt;
 			&lt;div class=&quot;f-color-chip__name&quot;&gt;Secondary&lt;/div&gt;
-			&lt;div class=&quot;f-color-chip__hex&quot;&gt;rgba(0, 0, 0, 0.54)&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__hex&quot;&gt;#757575&lt;/div&gt;
 			&lt;div class=&quot;f-color-chip__var&quot;&gt;$text-secondary&lt;/div&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;f-color-chip&quot;&gt;
 			&lt;div class=&quot;f-color-chip__name&quot;&gt;Disabled&lt;/div&gt;
-			&lt;div class=&quot;f-color-chip__hex&quot;&gt;rgba(0, 0, 0, 0.38)&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__hex&quot;&gt;9e9e9e&lt;/div&gt;
 			&lt;div class=&quot;f-color-chip__var&quot;&gt;$text-disabled&lt;/div&gt;
 		&lt;/div&gt;
 		&lt;div class=&quot;f-color-chip&quot;&gt;
 			&lt;div class=&quot;f-color-chip__name&quot;&gt;Dividers&lt;/div&gt;
-			&lt;div class=&quot;f-color-chip__hex&quot;&gt;rgba(0, 0, 0, 0.12)&lt;/div&gt;
+			&lt;div class=&quot;f-color-chip__hex&quot;&gt;e0e0e0&lt;/div&gt;
 			&lt;div class=&quot;f-color-chip__var&quot;&gt;$text-dividers&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;

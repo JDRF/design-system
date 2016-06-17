@@ -166,25 +166,29 @@
 					
 <h2>Download</h2>
 
-<p>You can download the latest pre-release
-	<a href="https://github.com/JDRF/design-system/tree/v0.0.1" target="_blank">
-		here on Github</a>. We'd suggest following the outlined options below.</p>
+<p class="ds-lead">Get started by downloading the <a href="https://github.com/JDRF/design-system/tree/master" target="_blank">latest release on Github</a> and following the outlined options below.</p>
+
+<p><a class="ds-btn ds-btn-primary href="href="https://github.com/JDRF/design-system/archive/master.zip" target="_blank">Download v0.0.1</a></p>
 
 
-<p>To use Design System, copy/download the file found on the
-	<a href="https://github.com/JDRF/design-system/tree/master/dist/css" target="_blank">master branch</a>
-	to your website. This file contains all current components and provides
-	support for any needed icons, typography, or styling. We recommend including
-	it in the HEAD html tag for use throughout your website/application.
+<p>To begin using the Design System, simply add a single css file to your website/application.  The <a href="https://github.com/JDRF/design-system/tree/master/dist/css" target="_blank">CSS file</a> can be found in the master branch.</p>
+
+<p>This file contains all current components and provides support for any needed icons, typography, or styling. We recommend including it in the HEAD html tag.</p>
 
 <pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;/&lt;PATH TO CSS>/design-system.css&quot;></code></pre>
-</p>
 
-<p>Currently, Design System only supports a few components - none of which require
-	JavaScript. If font files are needed for the website/application, copy/download
+<h3>Fonts</h3>
+
+<p>If font files are needed for the website/application, copy/download the <a href="https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham" target="_blank">font files</a> found in the
+master branch.  It's recommended to place the font folder in a similar path to the CSS files.</p>
+
+<p>Your website's domain will need to be whitelisted by JDRF before Gotham can display properly.  Email pmckowen at jdrf dot org for instructions.
+
+<p>If font files are needed for the website/application, copy/download
 	the font files found in the
 	<a href="https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham" target="_blank">master branch</a>
 	It's recommended to place the font folder in a similar path to the CSS files.
+
 <pre class="language-markup"><code class="language-markup">
 └── ./
  ├── css/
@@ -192,6 +196,39 @@
  └── fonts/
   └──  gotham/
 </code></pre>
+
+<h3>Button and Link Colors</h3>
+
+<p>By default, button are set to <code class="language-markup">$jdrf-green</code>. However if your site aligns with a specific JDRF program color &mdash; (for example the JDRF One Walk&reg; brand aligns with <code class="language-markup">$jdrf-orange</code>) &mdash; you must override the default color.  Learn more about color options on the <a href="./content.html#colors">Colors Page.</a></p>
+
+<p>Since the Design System is meant to be used as a compiled file, these colors can be overwritten on a per project basis with inline style in the HEAD html tag. We recommend that these colors are overwritten immediately after including the Design System in your project. See below for an example written in css.</p>
+
+
+<pre class="language-markup"><code class="language-markup">/* Change button colors to $jdrf-blue */
+
+.ds-btn-primary,
+.ds-btn-flat {
+	background-color: #0073cf;
+	border-color: #0073cf;
+}
+
+.ds-btn-primary-outline {
+	color: #0073cf;
+	border-color: #0073cf;
+
+	&amp;:hover,
+	&amp;:active,
+	&amp;:focus {
+		color: #ffffff;
+		background-color: #0073cf;
+	}
+}
+
+.ds-btn-link {
+	color: #0073cf;
+}</code></pre>
+
+<h3>Icons</h3>
 
 If icons are a requirement, Design System already includes all necessary styles, but requires the font file from Google's CDN. Include this in the `HEAD` html tag right before the Design System css file.
 

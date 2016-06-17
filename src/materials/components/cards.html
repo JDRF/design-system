@@ -8,15 +8,76 @@ notes: |
 ---
 
 <section class="f-section">
-	<h3 class="f-example-title">Featured Cards</h3>
+	<h3 class="f-example-title">Image Cap Cards</h3>
+	<div class="f-example">
+		<div class="ds-card ds-card-image-cap" id="phantom-ds-card-image-cap">
+			<img class="ds-card-img-top" data-src="" alt="Card image" src="http://placehold.it/780x480/777777/ffffff?text=Image+Cap">
+			<div class="ds-card-block">
+				<p class="ds-card-subtitle">Start Date - End Date</p>
+				<h3 class="ds-card-title ds-h4">Promotion title</h3>
+			</div>
+		</div>
+	</div>
+	{{example 'card.image-cap'}}
+</section>
+
+<section class="f-section">
+	<div class="f-example">
+		<div class="ds-card" id="phantom-ds-card-content-type-image-title-text-button">
+			<img class="ds-card-img-top" data-src="" alt="Card image cap" src="http://placehold.it/780x480/777777/ffffff?text=Image+Cap">
+			<div class="ds-card-block">
+				<h3 class="ds-card-title ds-h4">Card title</h3>
+				<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<a href="#!" class="ds-btn ds-btn-primary-outline">Button</a>
+			</div>
+		</div>
+	</div>
+	{{example 'card.content-type-image-title-text-button'}}
+</section>
+
+<section class="f-section">
+	<div class="f-example">
+		<div class="ds-card" id="phantom-ds-card-content-type-image-title-text-list-links">
+			<img class="ds-card-img-top" data-src="" alt="Card image cap" src="http://placehold.it/780x480/777777/ffffff?text=Image+Cap">
+			<div class="ds-card-block">
+				<h3 class="ds-card-title ds-h4">Card title</h3>
+				<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<ul class="ds-list-group ds-list-group-flush">
+				<li class="ds-list-group-item">Cras justo odio</li>
+				<li class="ds-list-group-item">Dapibus ac facilisis in</li>
+				<li class="ds-list-group-item">Vestibulum at eros</li>
+			</ul>
+			<div class="ds-card-block ds-card-block-btns">
+				<a href="#!" class="ds-btn ds-btn-link">Card link</a>
+				<a href="#!" class="ds-btn ds-btn-link">Another link</a>
+			</div>
+		</div>
+	</div>
+	{{example 'card.content-type-image-title-text-list-links'}}
+</section>
+
+<section class="f-section">
+	<div class="f-example">
+		<div class="ds-card" id="phantom-ds-card-content-type-image-text">
+			<img class="ds-card-img-top" data-src="" alt="Card image cap" src="http://placehold.it/780x480/777777/ffffff?text=Image+Cap">
+			<div class="ds-card-block">
+				<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+		</div>
+	</div>
+	{{example 'card.content-type-image-text'}}
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Header and Footer</h3>
 	<p>The featured card hero image with the momentum line mask requires a header for both the card and the content. It is recommended to apply a fixed height on the card and hero image.</p>
 	<div class="f-example">
 		<div class="ds-card ds-card-featured ds-card-featured-hero" id="phantom-ds-card-featured-hero">
-			<div class="ds-card-header">Featured Promotion
-			</div>
+			<div class="ds-card-header">Featured Promotion</div>
 			<div class="ds-card-hero-group">
 				<div class="ds-card-hero ds-card-hero-block ds-card-hero-block-1">
-					<img class="ds-card-img-left" data-src="" alt="Card image" src="http://placehold.it/780x480/777777/ffffff?text=Image+Cap">
+					<img class="ds-card-img-left" data-src="" alt="Card image cap" src="http://placehold.it/780x480/777777/ffffff?text=Image+Cap">
 				</div>
 				<div class="ds-card-hero-block ds-card-hero-block-2">
 					<div class="ds-card-header">Featured Promotion</div>
@@ -38,15 +99,14 @@ notes: |
 <section class="f-section">
 	<div class="f-example">
 		<div class="ds-card ds-card-featured" id="phantom-ds-card-featured">
-			<div class="ds-card-header">Our partner's promotions make it easy for you to contribute</div>
 			<div class="ds-card-hero-group">
 				<div class="ds-card-hero-block ds-card-hero-block-1 ds-card-block">
 					<img class="ds-card-img" data-src="" alt="Card image" src="http://placehold.it/780x480/777777/ffffff?text=Image">
 				</div>
 				<div class="ds-card-hero-block ds-card-hero-block-2 ds-card-block">
 					<h3 class="ds-card-title ds-h4">Walgreen's Flu Shot</h3>
-					<p class="ds-card-subtitle">October 10 - April 15</p>
-					<p class="ds-card-subtitle">Mission St. Walgreens</p>
+					<p class="ds-card-subtitle"><span class="material-icons" aria-hidden="true">date_range</span> October 10 - April 15</p>
+					<p class="ds-card-subtitle"><span class="material-icons" aria-hidden="true">location_on</span> Mission St. Walgreens</p>
 					<a href="#!" class="ds-btn ds-btn-primary">Learn More</a>
 				</div>
 				<div class="ds-card-hero-block ds-card-hero-block-3 ds-card-block">
@@ -59,28 +119,12 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h3 class="f-example-title">Image Cap Cards</h3>
-	<div class="f-example">
-		<div class="ds-card" id="phantom-ds-card-image-cap">
-			<img class="ds-card-img-top" data-src="" alt="Card image" src="http://placehold.it/780x480/777777/ffffff?text=Image+Cap">
-			<div class="ds-card-block">
-				<p class="ds-card-subtitle">Start Date - End Date</p>
-				<h3 class="ds-card-title ds-h4">Promotion title</h3>
-			</div>
-		</div>
-	</div>
-	{{example 'card.image-cap'}}
-</section>
-
-<section class="f-section">
-	<h3 class="f-example-title">Content Cards</h3>
 	<div class="f-example">
 		<div class="ds-card ds-card-content" id="phantom-ds-card-content-header-footer">
 			<div class="ds-card-header">Details</div>
 			<div class="ds-card-block ds-card-text-wrapper">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus lacus non porttitor bibendum. Nunc id eros vitae diam aliquam varius et eget urna. Nulla pulvinar porttitor lacus, eget dignissim est pellentesque nec. Quisque in volutpat quam. Quisque augue dui, rhoncus et mauris at, tincidunt rhoncus nisi. Proin sit amet tortor quis ligula molestie consectetur. Mauris nec ex dignissim, ultricies nunc sit amet, ullamcorper ex. Praesent in odio ac nulla consequat malesuada. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-			</div>
-			<div class="ds-card-block">
+
 				<img class="ds-card-img ds-card-img-center" data-src="" alt="Card image" src="http://placehold.it/512x670/777777/ffffff?text=Image">
 			</div>
 			<div class="ds-card-footer ds-text-center">
@@ -103,50 +147,12 @@ notes: |
 					<strong>Mission St. Walgreens</strong><br>
 					456 Mission St.<br>
 					San Francisco, CA 94106<br>
-					<a href="#!" class="ds-text-address-link">Directions <span class="material-icons">launch</span></a>
+					<a href="#!" class="ds-text-address-link">Directions <span class="material-icons" aria-hidden="true">launch</span></a>
 				</div>
 			</div>
 		</div>
 	</div>
 	{{example 'card.content-header'}}
-</section>
-
-<section class="f-section">
-	<h3 class="f-example-title">Content Types</h3>
-	<p>Cards support a wide variety of content, including images, text, list groups, links, and more. Mix and match multiple content types to create the card you need.</p>
-	<div class="f-example">
-		<div class="ds-card" id="phantom-ds-card-content-type-image-title-text-button">
-			<img class="ds-card-img-top" data-src="" alt="Card image" src="http://placehold.it/780x480/777777/ffffff?text=Image+Cap">
-			<div class="ds-card-block">
-				<h3 class="ds-card-title ds-h4">Card title</h3>
-				<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#!" class="ds-btn ds-btn-primary-outline">Button</a>
-			</div>
-		</div>
-	</div>
-	{{example 'card.content-type-image-title-text-button'}}
-</section>
-
-<section class="f-section">
-	<div class="f-example">
-		<div class="ds-card" id="phantom-ds-card-content-type-image-title-text-list-links">
-			<img class="ds-card-img-top" data-src="" alt="Card image" src="http://placehold.it/780x480/777777/ffffff?text=Image+Cap">
-			<div class="ds-card-block">
-				<h3 class="ds-card-title ds-h4">Card title</h3>
-				<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			</div>
-			<ul class="ds-list-group ds-list-group-flush">
-				<li class="ds-list-group-item">Cras justo odio</li>
-				<li class="ds-list-group-item">Dapibus ac facilisis in</li>
-				<li class="ds-list-group-item">Vestibulum at eros</li>
-			</ul>
-			<div class="ds-card-block ds-card-block-btns">
-				<a href="#!" class="ds-btn ds-btn-link">Card link</a>
-				<a href="#!" class="ds-btn ds-btn-link">Another link</a>
-			</div>
-		</div>
-	</div>
-	{{example 'card.content-type-image-title-text-list-links'}}
 </section>
 
 <section class="f-section">
@@ -159,6 +165,8 @@ notes: |
 			<img class="ds-card-img-top" data-src="" alt="Card image" src="http://placehold.it/780x480/777777/ffffff?text=Image">
 			<div class="ds-card-block">
 				<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+			<div class="ds-card-block ds-card-block-btns">
 				<a href="#!" class="ds-btn ds-btn-link">Card link</a>
 				<a href="#!" class="ds-btn ds-btn-link">Another link</a>
 			</div>
@@ -169,27 +177,16 @@ notes: |
 
 <section class="f-section">
 	<div class="f-example">
-		<div class="ds-card" id="phantom-ds-card-content-type-image-text">
-			<img class="ds-card-img-top" data-src="" alt="Card image" src="http://placehold.it/780x480/777777/ffffff?text=Image+Cap">
+		<div class="ds-card" id="phantom-ds-card-content-type-title-text-links">
 			<div class="ds-card-block">
+				<h3 class="ds-card-title ds-h4">Card title</h3>
 				<p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 			</div>
+			<div class="ds-card-block ds-card-block-btns">
+				<a href="#!" class="ds-btn ds-btn-link">Card link</a>
+				<a href="#!" class="ds-btn ds-btn-link">Another link</a>
+			</div>
 		</div>
-	</div>
-	{{example 'card.content-type-image-text'}}
-</section>
-
-<section class="f-section">
-	<div class="ds-card">
-        <div class="ds-card-block">
-            <h3 class="ds-card-title">Card title</h3>
-            <p class="ds-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-        </div>
-        <div class="ds-card-block ds-card-block-btns">
-             <a href="#!" class="ds-btn ds-btn-link">Card link</a>
-             <a href="#!" class="ds-btn ds-btn-link">Another link</a>
-        </div>
 	</div>
 	{{example 'card.content-type-title-text-links'}}
 </section>
@@ -197,12 +194,12 @@ notes: |
 <section class="f-section">
 	<div class="f-example">
 		<div class="ds-card ds-card-program" id="phantom-ds-card-content-type-program">
-			<div class="ds-card-block">
+			<div class="ds-card-block ds-card-block-1">
 				<p class="ds-card-subtitle">MAY 4</p>
-				<h2 class="ds-card-title">Adult Type 1 and Type 1.5 Diabetes Support Group</h2>
-				<p class="ds-card-location">Kaiser Hospital, Santa Rosa, CA</p>
+				<h3 class="ds-card-title">Adult Type 1 and Type 1.5 Diabetes Support Group</h3>
+				<p class="ds-card-location"><span class="material-icons" aria-hidden="true">location_on</span> Kaiser Hospital, Santa Rosa, CA</p>
 			</div>
-			<div class="ds-card-block">
+			<div class="ds-card-block ds-card-block-2">
 				<div class="ds-card-category">Support</div>
 			</div>
 		</div>

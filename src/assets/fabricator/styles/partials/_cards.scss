@@ -30,26 +30,52 @@
 
 	.ds-card-featured-hero {
 		.ds-btn {
-			margin-left: -0.5rem;
+			@media screen and ( min-width: 768px ) {
+				margin-left: -0.5rem;
+			}
 		}
 	}
 
 	.ds-card-featured-hero {
-		@include desktop {
+		@media screen and ( min-width: 768px ) {
+			height: 448px;
+		}
+
+		@media screen and ( min-width: 992px ) {
+			height: 348px;
+		}
+
+		@media screen and ( min-width: 1199px ) {
 			height: 300px;
 		}
 
-		@include mobile {
-			height: auto;
-		}
-
 		.ds-card-img-left {
-			@include desktop {
-				height: 300px;
+			@media screen and ( min-width: 768px ) {
+				height: 448px;
 			}
 
-			@include mobile {
-				height: auto;
+			@media screen and ( min-width: 992px ) {
+				height: 348px;
+			}
+
+			@media screen and ( min-width: 1199px ) {
+				height: 300px;
+			}
+		}
+	}
+
+	.ds-card-hero {
+		&:after {
+			@media screen and ( min-width: 768px ) {
+				right: -62%;
+			}
+
+			@media screen and ( min-width: 992px ) {
+				right: -75%;
+			}
+
+			@media screen and ( min-width: 1199px ) {
+				right: -82%;
 			}
 		}
 	}

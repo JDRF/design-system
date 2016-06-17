@@ -1,9 +1,10 @@
 ---
 notes: |
-  These are the colors that all JDRF brands should adhere to. Pictured below are each colors name, hex/rgba values and Design System variable for use.
+  JDRF websites are primarily white and blue to reinforce the brand and create a bright, fresh atmosphere.  Program and accent colors should be used with restraint.
 ---
 
 <h3>Primary Colors</h3>
+<p>JDRF Blue and JDRF Dark Blue are the colors used in teh JDRF logo.</p>
 {{#each primary.colors}}
 	<div class="f-color-chips">
 	{{#each this}}
@@ -29,9 +30,16 @@ notes: |
 	</div>
 {{/each}}
 
-<p>The color white <code class="language-markup">$jdrf-white (hex value: #ffffff)</code> is used as a background for the <a href="./components.html#buttons">outline button style</a>.
+<h4>Choosing a Button Color</h4>
+<p>Only one button color is used per website.  Most JDRF programs align with a button color.  If not, use the default button color.</p>
+
+<p>The color white <code class="language-markup">$jdrf-white (hex value: #ffffff)</code> is used for the outline button and a variant of the primary <a href="./components.html#buttons">button style</a>.  White buttons can be used in combination with other button colors on the same site.</a>.
+
+<p>For a review on how to include the Design System, refer to our <a href="/dist/download.html">Download page</a>.</p>
+
 
 <h3>Accent Colors</h3>
+<p>Accent colors must comprise 10% or less of your design.</p>
 {{#each accents.colors}}
 	<div class="f-color-chips">
 	{{#each this}}
@@ -45,6 +53,7 @@ notes: |
 {{/each}}
 
 <h3>Program Colors</h3>
+<p>Only one program color can be used per website &mdash; unless it is an overview of multiple JDRF programs.</p>
 {{#each program.colors}}
 	<div class="f-color-chips">
 	{{#each this}}
