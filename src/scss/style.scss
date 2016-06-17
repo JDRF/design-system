@@ -14,6 +14,9 @@
 // Reset and dependencies
 @import 'normalize';
 
+// Components
+@import 'nav';
+
 // Core CSS
 @import 'reboot';
 @import 'fonts';
@@ -25,9 +28,6 @@
 @import 'elevations';
 @import 'cards';
 @import 'badges';
-
-// Components
-@import 'nav';
 
 // Utility classes
 @import 'utilities';
