@@ -99,17 +99,18 @@
 	font-size: 0.875rem;
 }
 
-.f-section {
-	.f-example {
-		padding: 1.25rem;
-		border: 2px solid map-get($code-colors, light-gray);
-	}
+.f-section { }
 
-	.f-example-title {
-		margin-top: 2rem;
-		color: color(primary-dark);
-	}
+.f-example {
+	padding: 1.25rem;
+	border: 2px solid map-get($code-colors, light-gray);
 }
+
+.f-example-title {
+	margin-top: 2rem;
+	color: color(primary-dark);
+}
+
 
 .f-example-inline {
 	@include desktop {
