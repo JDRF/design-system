@@ -6,7 +6,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Layout</title>
+	<title>Getting Started</title>
 
 	<!-- Design System styles --><link rel="stylesheet" href="./assets/fabricator/styles/f.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -42,7 +42,7 @@
 	</header>
 	<div class="f-header ds-container-fluid">
 		<div class="f-header-center ds-container">
-			<h2 class="f-header-title">Layout</h2>
+			<h2 class="f-header-title">Getting Started</h2>
 		</div>
 	</div>
 
@@ -172,186 +172,166 @@
 				<main class="f-content ds-col-md-8 ds-col-lg-9" role="main">
 					
 
-<div class="f-item-group" id="elevation">
+<div class="f-item-group" id="download">
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
-		<h2 class="f-item-heading">Elevation</h2>
-	</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>JDRF websites are primarily flat.  Components that require special attention, such as cards and buttons, have subtle elevations to increase contrast with their surroundings and invite interaction.</p>
-<p>Elevations are applied using the <code>ds-elevation-</code> class and are numbered 1 to 5. <code>.ds-elevation-1</code> is the lowest and <code>.ds-elevation-5</code> is the highest.</p>
-<p>Buttons in most cases start with <code>.ds-elevation-1</code> and raise to <code>.ds-elevation-3</code> on <code>:hover</code>, <code>:focus</code> and <code>:active</code> states. The <code>.ds-btn-flat</code> style of buttons start with no elevation and raise to <code>.ds-elevation-two</code> on <code>:hover</code>, <code>:focus</code> and <code>:active</code> states.</p>
-<p>To remove elevations on a component that isn't flat by default, you can use the <code>@include no-elevation;</code> Sass mixin.</p>
-<p>Modals, dialogs and menus (coming soon to the Design System) are the rare objects that require higher elevations.</p>
+		<h2 class="f-item-heading">Download</h2>
+	</div><div class="f-item-preview">
+	<p class="ds-lead">Get started by downloading the <a href="https://github.com/JDRF/design-system/tree/master" target="_blank">latest release on Github</a> and following the outlined options below.</p>
 
-</div>
-<div class="f-item-preview">
-	<div class="f-example-inline">
-	<div class="f-rectangle ds-no-elevation"></div>
+<p><a class="ds-btn ds-btn-primary href=" href="https://github.com/JDRF/design-system/archive/master.zip" target="_blank">Download v0.0.1</a></p>
 
-	<p class="f-example-desc">flat</p>
-</div>
-<div class="f-example-inline">
-	<div class="f-rectangle ds-elevation-1"></div>
 
-	<p class="f-example-desc">ds-elevation-1</p>
-</div>
-<div class="f-example-inline">
-	<div class="f-rectangle ds-elevation-2"></div>
+<p>To begin using the Design System, simply add a single css file to your website/application. The <a href="https://github.com/JDRF/design-system/tree/master/dist/css" target="_blank">CSS file</a> can be found in the master branch.</p>
 
-	<p class="f-example-desc">ds-elevation-2</p>
-</div>
-<div class="f-example-inline">
-	<div class="f-rectangle ds-elevation-3"></div>
+<p>This file contains all current components and provides support for any needed icons, typography, or styling. We recommend including it in the HEAD html tag.</p>
 
-	<p class="f-example-desc">ds-elevation-3</p>
-</div>
-<div class="f-example-inline">
-	<div class="f-rectangle ds-elevation-4"></div>
+<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;/&lt;PATH TO CSS>/design-system.css&quot;></code></pre>
 
-	<p class="f-example-desc">ds-elevation-4</p>
-</div>
-<div class="f-example-inline">
-	<div class="f-rectangle ds-elevation-5"></div>
+<h3>Fonts</h3>
 
-	<p class="f-example-desc">ds-elevation-5</p>
-</div>
-<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-no-elevation&quot;>&lt;/div>
-&lt;div class=&quot;ds-elevation-1&quot;>&lt;/div>
-&lt;div class=&quot;ds-elevation-2&quot;>&lt;/div>
-&lt;div class=&quot;ds-elevation-3&quot;>&lt;/div>
-&lt;div class=&quot;ds-elevation-4&quot;>&lt;/div>
-&lt;div class=&quot;ds-elevation-5&quot;>&lt;/div>
+<p>If font files are needed for the website/application, copy/download the <a href="https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham" target="_blank">font files</a> found in the master branch. It's recommended to place the font folder
+	in a similar path to the CSS files.</p>
+
+<p>Your website's domain will need to be whitelisted by JDRF before Gotham can display properly. Email pmckowen at jdrf dot org for instructions.
+
+	<p>If font files are needed for the website/application, copy/download the font files found in the
+		<a href="https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham" target="_blank">master branch</a> It's recommended to place the font folder in a similar path to the CSS files.
+
+		<pre class="language-markup"><code class="language-markup">
+└── ./
+ ├── css/
+  └──  design-system.css
+ └── fonts/
+  └──  gotham/
 </code></pre>
+
+		<h3>Button and Link Colors</h3>
+
+		<p>By default, button are set to <code class="language-markup">$jdrf-green</code>. However if your site aligns with a specific JDRF program color &mdash; (for example the JDRF One Walk&reg; brand aligns with <code class="language-markup">$jdrf-orange</code>)
+			&mdash; you must override the default color. Learn more about color options on the <a href="./content.html#colors">Colors Page.</a></p>
+
+		<p>Since the Design System is meant to be used as a compiled file, these colors can be overwritten on a per project basis with inline style in the HEAD html tag. We recommend that these colors are overwritten immediately after including the Design System
+			in your project. See below for an example written in css.</p>
+
+
+		<pre class="language-css"><code class="language-css">/* Change button colors to $jdrf-blue */
+
+.ds-btn-primary,
+.ds-btn-flat {
+	background-color: #0073cf;
+	border-color: #0073cf;
+}
+
+.ds-btn-primary-outline {
+	color: #0073cf;
+	border-color: #0073cf;
+
+	&amp;:hover,
+	&amp;:active,
+	&amp;:focus {
+		color: #ffffff;
+		background-color: #0073cf;
+	}
+}
+
+.ds-btn-link {
+	color: #0073cf;
+}</code></pre>
+
+		<h3>Icons</h3> If icons are a requirement, Design System already includes all necessary styles, but requires the font file from Google's CDN. Include this in the `HEAD` html tag right before the Design System css file.
+
+		<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/&lt;PATH TO CSS>/design-system.css&quot;></code></pre>
+	</p>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;f-example-inline&quot;&gt;
-	&lt;div class=&quot;f-rectangle ds-no-elevation&quot;&gt;&lt;/div&gt;
+	<pre><code class="language-markup">&lt;p class=&quot;ds-lead&quot;&gt;Get started by downloading the &lt;a href=&quot;https://github.com/JDRF/design-system/tree/master&quot; target=&quot;_blank&quot;&gt;latest release on Github&lt;/a&gt; and following the outlined options below.&lt;/p&gt;
 
-	&lt;p class=&quot;f-example-desc&quot;&gt;flat&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;f-example-inline&quot;&gt;
-	&lt;div class=&quot;f-rectangle ds-elevation-1&quot;&gt;&lt;/div&gt;
-
-	&lt;p class=&quot;f-example-desc&quot;&gt;ds-elevation-1&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;f-example-inline&quot;&gt;
-	&lt;div class=&quot;f-rectangle ds-elevation-2&quot;&gt;&lt;/div&gt;
-
-	&lt;p class=&quot;f-example-desc&quot;&gt;ds-elevation-2&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;f-example-inline&quot;&gt;
-	&lt;div class=&quot;f-rectangle ds-elevation-3&quot;&gt;&lt;/div&gt;
-
-	&lt;p class=&quot;f-example-desc&quot;&gt;ds-elevation-3&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;f-example-inline&quot;&gt;
-	&lt;div class=&quot;f-rectangle ds-elevation-4&quot;&gt;&lt;/div&gt;
-
-	&lt;p class=&quot;f-example-desc&quot;&gt;ds-elevation-4&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;f-example-inline&quot;&gt;
-	&lt;div class=&quot;f-rectangle ds-elevation-5&quot;&gt;&lt;/div&gt;
-
-	&lt;p class=&quot;f-example-desc&quot;&gt;ds-elevation-5&lt;/p&gt;
-&lt;/div&gt;
-&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-no-elevation&amp;quot;&gt;&amp;lt;/div&gt;
-&amp;lt;div class=&amp;quot;ds-elevation-1&amp;quot;&gt;&amp;lt;/div&gt;
-&amp;lt;div class=&amp;quot;ds-elevation-2&amp;quot;&gt;&amp;lt;/div&gt;
-&amp;lt;div class=&amp;quot;ds-elevation-3&amp;quot;&gt;&amp;lt;/div&gt;
-&amp;lt;div class=&amp;quot;ds-elevation-4&amp;quot;&gt;&amp;lt;/div&gt;
-&amp;lt;div class=&amp;quot;ds-elevation-5&amp;quot;&gt;&amp;lt;/div&gt;
-&lt;/code&gt;&lt;/pre&gt;</code></pre>
-</div>
+&lt;p&gt;&lt;a class=&quot;ds-btn ds-btn-primary href=&quot; href=&quot;https://github.com/JDRF/design-system/archive/master.zip&quot; target=&quot;_blank&quot;&gt;Download v0.0.1&lt;/a&gt;&lt;/p&gt;
 
 
-</div>
+&lt;p&gt;To begin using the Design System, simply add a single css file to your website/application. The &lt;a href=&quot;https://github.com/JDRF/design-system/tree/master/dist/css&quot; target=&quot;_blank&quot;&gt;CSS file&lt;/a&gt; can be found in the master branch.&lt;/p&gt;
 
+&lt;p&gt;This file contains all current components and provides support for any needed icons, typography, or styling. We recommend including it in the HEAD html tag.&lt;/p&gt;
 
-<div class="f-item-group" id="grid">
+&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;/&amp;lt;PATH TO CSS&gt;/design-system.css&amp;quot;&gt;&lt;/code&gt;&lt;/pre&gt;
 
-	<div class="f-item-heading-group" data-f-toggle="labels">
-		<h2 class="f-item-heading">Grid</h2>
-	</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>The Design System is using most of the  classes and breakpoints from Bootstrap's grid component. The grid is based on a 12 column layout and s using multiple tiers, one for each <a href="http://v4-alpha.getbootstrap.com/layout/overview/#responsive-breakpoints" target="_blank">media query range</a>.</p>
-<p>There are the three major components to working with the grid: <strong>containers</strong>, <strong>rows</strong>, and <strong>columns</strong>.</p>
-<ul>
-<li>
-<p><em>Containers</em> center your site's contents and help align your grid content. There are two types of containers: <code>.ds-container</code> for a fixed width and <code>.ds-container-fluid</code> for full width.</p>
-</li>
-<li>
-<p><em>Rows</em> are wrappers for your columns that ensure the columns align properly.</p>
-</li>
-<li>
-<p><em>Column</em> classes should indicate the number of columns you'd like to use out of the possible 12 columns per row. E.g. <code>.ds-col-sm-4</code> for three equal columns from any sizes greater than the small breakpoint.</p>
-</li>
-</ul>
-<p>The Design System differs by using different breakpoints and max-width for containers. Our smallest break point (Extra Small) is <code>&lt;360px</code> instead of Bootstrap's <code>&lt;375px</code>.</p>
-<p>For more examples on how to use the grid, <a href="http://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">review Bootstrap's documentation</a>.</p>
+&lt;h3&gt;Fonts&lt;/h3&gt;
 
-</div>
-<div class="f-item-preview">
-	<section class="f-section">
-	<h3 class="f-example-title">Three columns</h3>
-	<div class="f-example">
-		<div class="ds-container">
-			<div class="ds-row">
-				<div class="ds-col-md-4 f-col one">
-					First of three columns
-				</div>
-				<div class="ds-col-md-4 f-col two">
-					Second of three columns
-				</div>
-				<div class="ds-col-md-4 f-col three">
-					Third of three columns
-				</div>
-			</div>
-		</div>
-	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;div class=&quot;ds-row&quot;>
-	&lt;div class=&quot;ds-col-md-4&quot;>
-	  First of three columns
-	&lt;/div>
-	&lt;div class=&quot;ds-col-md-4&quot;>
-	  Second of three columns
-	&lt;/div>
-	&lt;div class=&quot;ds-col-md-4&quot;>
-	  Third of three columns
-	&lt;/div>
-&lt;/div>
-</code></pre>
-</section>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
-	&lt;h3 class=&quot;f-example-title&quot;&gt;Three columns&lt;/h3&gt;
-	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;div class=&quot;ds-container&quot;&gt;
-			&lt;div class=&quot;ds-row&quot;&gt;
-				&lt;div class=&quot;ds-col-md-4 f-col one&quot;&gt;
-					First of three columns
-				&lt;/div&gt;
-				&lt;div class=&quot;ds-col-md-4 f-col two&quot;&gt;
-					Second of three columns
-				&lt;/div&gt;
-				&lt;div class=&quot;ds-col-md-4 f-col three&quot;&gt;
-					Third of three columns
-				&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;div class=&amp;quot;ds-row&amp;quot;&gt;
-	&amp;lt;div class=&amp;quot;ds-col-md-4&amp;quot;&gt;
-	  First of three columns
-	&amp;lt;/div&gt;
-	&amp;lt;div class=&amp;quot;ds-col-md-4&amp;quot;&gt;
-	  Second of three columns
-	&amp;lt;/div&gt;
-	&amp;lt;div class=&amp;quot;ds-col-md-4&amp;quot;&gt;
-	  Third of three columns
-	&amp;lt;/div&gt;
-&amp;lt;/div&gt;
+&lt;p&gt;If font files are needed for the website/application, copy/download the &lt;a href=&quot;https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham&quot; target=&quot;_blank&quot;&gt;font files&lt;/a&gt; found in the master branch. It&#x27;s recommended to place the font folder
+	in a similar path to the CSS files.&lt;/p&gt;
+
+&lt;p&gt;Your website&#x27;s domain will need to be whitelisted by JDRF before Gotham can display properly. Email pmckowen at jdrf dot org for instructions.
+
+	&lt;p&gt;If font files are needed for the website/application, copy/download the font files found in the
+		&lt;a href=&quot;https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham&quot; target=&quot;_blank&quot;&gt;master branch&lt;/a&gt; It&#x27;s recommended to place the font folder in a similar path to the CSS files.
+
+		&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;
+└── ./
+ ├── css/
+  └──  design-system.css
+ └── fonts/
+  └──  gotham/
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/section&gt;</code></pre>
+
+		&lt;h3&gt;Button and Link Colors&lt;/h3&gt;
+
+		&lt;p&gt;By default, button are set to &lt;code class=&quot;language-markup&quot;&gt;$jdrf-green&lt;/code&gt;. However if your site aligns with a specific JDRF program color &amp;mdash; (for example the JDRF One Walk&amp;reg; brand aligns with &lt;code class=&quot;language-markup&quot;&gt;$jdrf-orange&lt;/code&gt;)
+			&amp;mdash; you must override the default color. Learn more about color options on the &lt;a href=&quot;./content.html#colors&quot;&gt;Colors Page.&lt;/a&gt;&lt;/p&gt;
+
+		&lt;p&gt;Since the Design System is meant to be used as a compiled file, these colors can be overwritten on a per project basis with inline style in the HEAD html tag. We recommend that these colors are overwritten immediately after including the Design System
+			in your project. See below for an example written in css.&lt;/p&gt;
+
+
+		&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;/* Change button colors to $jdrf-blue */
+
+.ds-btn-primary,
+.ds-btn-flat {
+	background-color: #0073cf;
+	border-color: #0073cf;
+}
+
+.ds-btn-primary-outline {
+	color: #0073cf;
+	border-color: #0073cf;
+
+	&amp;amp;:hover,
+	&amp;amp;:active,
+	&amp;amp;:focus {
+		color: #ffffff;
+		background-color: #0073cf;
+	}
+}
+
+.ds-btn-link {
+	color: #0073cf;
+}&lt;/code&gt;&lt;/pre&gt;
+
+		&lt;h3&gt;Icons&lt;/h3&gt; If icons are a requirement, Design System already includes all necessary styles, but requires the font file from Google&#x27;s CDN. Include this in the &#x60;HEAD&#x60; html tag right before the Design System css file.
+
+		&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://fonts.googleapis.com/icon?family=Material+Icons&amp;quot;&gt;
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;/&amp;lt;PATH TO CSS&gt;/design-system.css&amp;quot;&gt;&lt;/code&gt;&lt;/pre&gt;
+	&lt;/p&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="javascript">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Javascript</h2>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Using Javascript</p>
+
+</div>
+<div class="f-item-preview">
+	
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup"></code></pre>
 </div>
 
 
