@@ -7077,6 +7077,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 .ds-card-img-top {
   max-width: 100%;
   border-radius: 0;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-card-img-left {
