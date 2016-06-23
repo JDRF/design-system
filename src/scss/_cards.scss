@@ -215,11 +215,11 @@
 	}
 
 	@include media-breakpoint-up(lg) {
-		height: 316px;
+		height: 340px;
 	}
 
 	@include media-breakpoint-up(xl) {
-		height: 292px;
+		height: 300px;
 	}
 
 	.card-header {
@@ -228,11 +228,7 @@
 
 	.card-content-wrapper {
 		height: 100%;
-
-		@include media-breakpoint-up(md) {
-			display: flex;
-			flex-wrap: wrap;
-		}
+		overflow: hidden;
 
 		.card-hero-block-left,
 		.card-hero-block-right {
@@ -240,20 +236,31 @@
 
 			@include media-breakpoint-up(md) {
 				position: relative;
-				display: inline-block;
-				vertical-align: top;
 				width: 50%;
 				height: 100%;
 			}
 		}
 
 		.card-hero-block-left {
+			@include media-breakpoint-up(md) {
+				float: left;
+			}
+
 			.card-hero-bg {
 				width: 100%;
 				height: 100%;
 				background-size: cover;
 				background-repeat: no-repeat;
 				background-position: 50% 50%;
+
+				@include media-breakpoint-up(md) {
+					background-image: none;
+				}
+
+				img {
+					width: 100%;
+					height: auto;
+				}
 			}
 
 			&:after {
@@ -283,11 +290,18 @@
 		}
 
 		.card-hero-block-right {
-			z-index: 10;
+			@include media-breakpoint-up(md) {
+				z-index: 10;
+				float: right;
+			}
 
 			.card-block {
 				padding-top: 2.5rem;
     			padding-bottom: 1.5rem;
+
+    			@include media-breakpoint-up(md) {
+    				padding-left: 0;
+    			}
 			}
 		}
 	}
@@ -297,7 +311,7 @@
 
 		.btn {
 			@include media-breakpoint-up(md) {
-				margin-left: -0.5rem;
+				margin-left: -1rem;
 			}
 		}
 	}
