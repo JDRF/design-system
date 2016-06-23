@@ -208,93 +208,98 @@
 	}
 }
 
-// Featured card with momentum line mask
+// Featured card hero with momentum line
 .card-featured-hero {
-	overflow: hidden;
-
-	> .card-header {
-		@include media-breakpoint-up(md) {
-			display: none;
-		}
+	@include media-breakpoint-up(md) {
+		height: 440px;
 	}
 
-	.card-hero-block {
-		position: relative;
-		z-index: 2;
-		padding: 0;
+	@include media-breakpoint-up(lg) {
+		height: 316px;
+	}
 
-		> .card-header {
-			display: none;
-			padding-top: 1rem;
-			padding-bottom: 1rem;
+	@include media-breakpoint-up(xl) {
+		height: 292px;
+	}
+
+	.card-header {
+		padding-left: 0;
+	}
+
+	.card-content-wrapper {
+		height: 100%;
+
+		@include media-breakpoint-up(md) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.card-hero-block-left,
+		.card-hero-block-right {
+			background-color: $jdrf-white;
 
 			@include media-breakpoint-up(md) {
-				display: block;
-				padding-left: 0;
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				width: 50%;
+				height: 100%;
 			}
 		}
 
-		> .card-block,
-		> .card-footer {
-			@include media-breakpoint-up(md) {
-				padding-left: 0;
+		.card-hero-block-left {
+			.card-hero-bg {
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
 			}
-		}
 
-		> .card-block {
-			padding-top: 2.5rem;
-			padding-bottom: 1.5rem;
+			&:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				z-index: 1;
+				display: none;
+				width: 100%;
+				height: 100%;
+				transform: skewX(-10deg);
+				background-color: $jdrf-white;
 
-			@include media-breakpoint-up(md) {
-				padding-left: 0;
-				padding-right: 2.5rem;
-			}
-		}
+				@include media-breakpoint-up(md) {
+					display: block;
+					right: -62%;
+				}
 
-		> .card-footer {
-			padding: 0 0.5rem 0.5rem 0.5rem;
+				@include media-breakpoint-up(lg) {
+					right: -75%;
+				}
 
-			@include media-breakpoint-up(md) {
-				padding-left: 0;
-				padding-right: 1.5rem;
-
-				.btn {
-					@include media-breakpoint-up(md) {
-						margin-left: -0.5rem;
-					}
+				@include media-breakpoint-up(xl) {
+					right: -87%;
 				}
 			}
 		}
-	}
-}
 
-// Featured card hero with momentum line mask
-.card-hero {
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
+		.card-hero-block-right {
+			z-index: 10;
 
-	&:after {
-		content: "";
-		position: absolute;
-		top: 0;
-		right: -87%;
-		z-index: 1;
-		display: none;
-		width: 100%;
-		height: 100%;
-		transform: skewX(-10deg);
-		background-color: $jdrf-white;
-
-		@include media-breakpoint-up(md) {
-			display: block;
+			.card-block {
+				padding-top: 2.5rem;
+    			padding-bottom: 1.5rem;
+			}
 		}
 	}
 
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+	.card-footer {
+		padding: 0 0.5rem 0.5rem 0.5rem;
+
+		.btn {
+			@include media-breakpoint-up(md) {
+				margin-left: -0.5rem;
+			}
+		}
 	}
 }
 
