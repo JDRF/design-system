@@ -71,13 +71,20 @@ notes: |
 
 <section class="f-section">
 	<h3 class="f-example-title">Header and Footer</h3>
-	<p>The featured card hero image with the momentum line mask requires a header for both the card and the content. It is recommended to apply a fixed height on the card and hero image.</p>
+	<p>The featured card hero image with the momentum line mask requires a header for both the card and the content. The headers make use of Bootstrap's utilities class to show/hide between mobile and desktop.</p>
+
+	<p>For IE9+ support as well as mobile coverage, the structure below is necessary to have the hero responsive and correctly sized across all browsers. The background image is set for desktop while the `img` tags nested inside are used for mobile.</p>
+
+	<p>It is recommended to set fixed heights on this card or ensure heights are controlled via the content. The Design System <a href="https://github.com/JDRF/design-system/blob/master/src/scss/_cards.scss" target="_blank">has heights in place</a>, but can be overwritten in the project it's being used in.</p>
+
 	<div class="f-example">
 		<div class="ds-card ds-card-featured ds-card-featured-hero" id="phantom-ds-card-featured-hero">
 			<div class="ds-card-header ds-hidden-md-up">Featured Promotion</div>
 			<div class="ds-card-content-wrapper">
 				<div class="ds-card-hero-block ds-card-hero-block-left">
-					<div class="ds-card-hero-bg" style="background-image: url('http://placehold.it/780x480/777777/ffffff?text=Image+Cap');"></div>
+					<div class="ds-card-hero-bg" style="background-image: url('http://placehold.it/780x480/777777/ffffff?text=Image+Cap');">
+						<img src="http://placehold.it/780x480/777777/ffffff?text=Image+Cap" class="ds-hidden-md-up"/>
+					</div>
 				</div>
 
 				<div class="ds-card-hero-block ds-card-hero-block-right">
@@ -88,7 +95,8 @@ notes: |
 						<p class="ds-card-text">Lorem ipsum purchase branded apparel and a wide range of merchandise to show your support—and raise awareness for JDRF.</p>
 					</div>
 					<div class="ds-card-footer">
-						<a href="#!" class="ds-btn ds-btn-link">DETAILS</a>
+						<a href="#!" class="ds-btn ds-btn-link ds-hidden-sm-down">DETAILS</a>
+						<a href="#!" class="ds-btn ds-btn-primary ds-hidden-md-up">DETAILS</a>
 					</div>
 				</div>
 			</div>
