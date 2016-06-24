@@ -223,22 +223,19 @@ input[type="button"] {
 		vertical-align: middle;
 	}
 
-	&.btn-has-icon {
-		padding-top: .5rem;
-		padding-bottom: .5rem;
-		height: $btn-has-icon-height;
+	&.btn {
+		padding-top: .4375rem;
+		padding-bottom: .4375rem;
 	}
 
-	&.btn-has-icon-lg {
-		padding-top: .7rem;
-		padding-bottom: .7rem;
-		height: $btn-has-icon-height-lg;
+	&.btn-lg {
+		padding-top: .6875rem;
+		padding-bottom: .6875rem;
 	}
 
-	&.btn-has-icon-sm {
-		padding-top: .25rem;
-		padding-bottom: .25rem;
-		height: $btn-has-icon-height-sm;
+	&.btn-sm {
+		padding-top: .1875rem;
+		padding-bottom: .1875rem;
 	}
 }
 
