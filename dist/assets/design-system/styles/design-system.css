@@ -6174,22 +6174,21 @@ input[type="button"].ds-btn-block {
   vertical-align: middle;
 }
 
-.ds-btn-icon.ds-btn-has-icon {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  height: 40px;
+.ds-btn-icon.ds-btn {
+  padding-top: .4375rem;
+  padding-bottom: .4375rem;
 }
 
-.ds-btn-icon.ds-btn-has-icon-lg {
-  padding-top: .7rem;
-  padding-bottom: .7rem;
-  height: 48px;
+.ds-btn-icon.ds-btn-lg,
+.ds-btn-group-lg > .ds-btn-icon.ds-btn {
+  padding-top: .6875rem;
+  padding-bottom: .6875rem;
 }
 
-.ds-btn-icon.ds-btn-has-icon-sm {
-  padding-top: .25rem;
-  padding-bottom: .25rem;
-  height: 32px;
+.ds-btn-icon.ds-btn-sm,
+.ds-btn-group-sm > .ds-btn-icon.ds-btn {
+  padding-top: .1875rem;
+  padding-bottom: .1875rem;
 }
 
 .ds-btn-loading {
@@ -7260,82 +7259,76 @@ button.ds-list-group-item-danger.ds-active:hover {
   font-size: 0.875rem;
 }
 
-.ds-card-featured-hero {
+@media (min-width: 768px) {
+  .ds-card-featured-hero {
+    height: 440px;
+  }
+}
+
+@media (min-width: 992px) {
+  .ds-card-featured-hero {
+    height: 340px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ds-card-featured-hero {
+    height: 300px;
+  }
+}
+
+.ds-card-featured-hero .ds-card-header {
+  padding-left: 0;
+}
+
+.ds-card-featured-hero .ds-card-content-wrapper {
+  height: 100%;
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
-  .ds-card-featured-hero > .ds-card-header {
-    display: none;
-  }
-}
-
-.ds-card-featured-hero .ds-card-hero-block {
-  position: relative;
-  z-index: 2;
-  padding: 0;
-}
-
-.ds-card-featured-hero .ds-card-hero-block > .ds-card-header {
-  display: none;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-left,
+.ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-right {
+  background-color: #ffffff;
 }
 
 @media (min-width: 768px) {
-  .ds-card-featured-hero .ds-card-hero-block > .ds-card-header {
-    display: block;
-    padding-left: 0;
+  .ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-left,
+  .ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-right {
+    position: relative;
+    width: 50%;
+    height: 100%;
   }
 }
 
 @media (min-width: 768px) {
-  .ds-card-featured-hero .ds-card-hero-block > .ds-card-block,
-  .ds-card-featured-hero .ds-card-hero-block > .ds-card-footer {
-    padding-left: 0;
+  .ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-left {
+    float: left;
   }
 }
 
-.ds-card-featured-hero .ds-card-hero-block > .ds-card-block {
-  padding-top: 2.5rem;
-  padding-bottom: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .ds-card-featured-hero .ds-card-hero-block > .ds-card-block {
-    padding-left: 0;
-    padding-right: 2.5rem;
-  }
-}
-
-.ds-card-featured-hero .ds-card-hero-block > .ds-card-footer {
-  padding: 0 0.5rem 0.5rem 0.5rem;
-}
-
-@media (min-width: 768px) {
-  .ds-card-featured-hero .ds-card-hero-block > .ds-card-footer {
-    padding-left: 0;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 768px) and (min-width: 768px) {
-  .ds-card-featured-hero .ds-card-hero-block > .ds-card-footer .ds-btn {
-    margin-left: -0.5rem;
-  }
-}
-
-.ds-card-hero {
-  overflow: hidden;
+.ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-left .ds-card-hero-bg {
   width: 100%;
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
-.ds-card-hero:after {
+@media (min-width: 768px) {
+  .ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-left .ds-card-hero-bg {
+    background-image: none;
+  }
+}
+
+.ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-left .ds-card-hero-bg img {
+  width: 100%;
+  height: auto;
+}
+
+.ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-left:after {
   content: "";
   position: absolute;
   top: 0;
-  right: -87%;
   z-index: 1;
   display: none;
   width: 100%;
@@ -7346,15 +7339,50 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 @media (min-width: 768px) {
-  .ds-card-hero:after {
+  .ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-left:after {
     display: block;
+    right: -62%;
   }
 }
 
-.ds-card-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+@media (min-width: 992px) {
+  .ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-left:after {
+    right: -75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-left:after {
+    right: -87%;
+  }
+}
+
+@media (min-width: 768px) {
+  .ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-right {
+    z-index: 10;
+    float: right;
+  }
+}
+
+.ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-right .ds-card-block {
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-right .ds-card-block {
+    padding-left: 0;
+  }
+}
+
+.ds-card-featured-hero .ds-card-footer {
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .ds-card-featured-hero .ds-card-footer .ds-btn {
+    margin-left: -1rem;
+  }
 }
 
 @media (min-width: 768px) {

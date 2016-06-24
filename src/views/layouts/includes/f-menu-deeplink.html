@@ -16,11 +16,9 @@
 			<a href="../{{@key}}.html" class="f-menu__heading ds-nav-link">{{name}}</a>
 			<ul class="ds-nav">
 				{{#each items}}
-				{{#if_not_eq 'Forms' name}}
 					<li>
 						<a href="../{{@../key}}.html#{{@key}}" class="ds-nav-link">{{name}}</a>
 					</li>
-				{{/if_not_eq}}
 				{{/each}}
 			</ul>
 		</li>
