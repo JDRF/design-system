@@ -178,10 +178,6 @@
 		border: 1px solid $text-dividers;
 	}
 
-	.card-title {
-		margin-bottom: 0.75rem;
-	}
-
 	.card-subtitle {
 		margin-bottom: 0.75rem;
 
@@ -192,8 +188,6 @@
 
 	.card-header {
 		width: 100%;
-		padding-top: 0.75rem;
-		padding-bottom: 0.75rem;
 		@extend .text-center;
 
 		@include media-breakpoint-up(md) {
@@ -296,10 +290,11 @@
 			}
 
 			.card-block {
-				padding-top: 2.5rem;
-    			padding-bottom: 1.5rem;
+				padding-top: 1rem;
+				padding-bottom: 0;
 
     			@include media-breakpoint-up(md) {
+    				padding-top: 2.5rem;
     				padding-left: 0;
     			}
 			}
