@@ -5,10 +5,6 @@ fabricator: true
 
 {{#each materials.components.items}}
 
-{{#if_not_eq 'Forms' this.name}}
-
 {{> f-item this}}
-
-{{/if_not_eq}}
 
 {{/each}}
