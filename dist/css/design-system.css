@@ -7275,6 +7275,10 @@ button.ds-list-group-item-danger.ds-active:hover {
   padding-left: 0;
 }
 
+.ds-card-featured-hero .ds-card-subtitle {
+  margin-bottom: 1rem;
+}
+
 .ds-card-featured-hero .ds-card-content-wrapper {
   height: 100%;
   overflow: hidden;
