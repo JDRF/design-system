@@ -237,24 +237,37 @@ notes: |
 	<h3 class="f-example-title">Radio Options</h3>
 	<div class="f-example">
 		<form>
-			<div class="radio">
-				<label>
-				  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-				  Option one is this and that&mdash;be sure to include why it's great
-				</label>
-			</div>
-			<div class="radio">
-				<label>
-				  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-				  Option two can be something else and selecting it will deselect option one
-				</label>
-			</div>
-			<div class="radio disabled">
-				<label>
-				  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-				  Option three is disabled
-				</label>
-			</div>
+			<p>A vertical set of radios are pictured below.</p>
+			<label>
+				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				Option one is this and that&mdash;be sure to include why it's great
+			</label>
+			<label>
+				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				Option two can be something else and selecting it will deselect option one
+			</label>
+			<label class="ds-disabled">
+				<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+				Option three is disabled
+			</label>
+		</form>
+	</div>
+	{{example 'form.radio-options'}}
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Radio Options</h3>
+	<div class="f-example">
+		<form>
+			<p>A horizontal set of radios are pictured below.</p>
+			<label class="ds-radio-inline">
+				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				USA
+			</label>
+			<label class="ds-radio-inline">
+				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				International
+			</label>
 		</form>
 	</div>
 	{{example 'form.radio-options'}}
