@@ -261,17 +261,47 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h3 class="f-example-title">Checkbox</h3>
+	<h3 class="f-example-title">Vertical Checkboxes</h3>
 	<div class="f-example">
 		<form>
-			<div class="checkbox">
+			<p>Example of vertical checkbox set below:</p>
+			<div class="ds-checkbox">
 				<label>
-				  <input type="checkbox"> Check me out
+					<input type="checkbox" value="option1"> Option 1
+				</label>
+			</div>
+			<div class="ds-checkbox">
+				<label>
+					<input type="checkbox" value="option2"> Option 2
+				</label>
+			</div>
+			<div class="ds-checkbox">
+				<label class="ds-disabled">
+					<input type="checkbox" value="option3" disabled> Option 3 disabled
 				</label>
 			</div>
 		</form>
 	</div>
 	{{example 'form.checkbox'}}
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Horizontal Checkboxes</h3>
+	<div class="f-example">
+		<form>
+			<p>Example of horizontal checkbox set below:</p>
+			<label class="ds-checkbox-inline">
+				<input type="checkbox" value="option1"> Option 1
+			</label>
+			<label class="ds-checkbox-inline">
+				<input type="checkbox" value="option2"> Option 2
+			</label>
+			<label class="ds-checkbox-inline ds-disabled">
+				<input type="checkbox" value="option3" disabled> Option 3 disabled
+			</label>
+		</form>
+	</div>
+	{{example 'form.checkbox-two'}}
 </section>
 
 <section class="f-section">
