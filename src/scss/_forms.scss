@@ -22,3 +22,14 @@
 		}
 	}
 }
+
+.form-control {
+	line-height: $font-size-base;
+}
+
+.form-control-label {
+	font-family: $font-medium;
+	font-size: $input-label-font-size;
+	line-height: $input-label-line-height;
+	color: $input-label-color;
+}
