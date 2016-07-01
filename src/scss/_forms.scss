@@ -33,3 +33,10 @@
 	line-height: $input-label-line-height;
 	color: $input-label-color;
 }
+
+label {
+	.disabled &,
+	&.disabled {
+		color: $grey-6;
+	}
+}
