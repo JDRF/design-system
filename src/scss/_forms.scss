@@ -69,11 +69,11 @@ label {
 		height: 24px;
 	}
 
-	input[type="radio"] + .radio-custom-label:before {
-		content: '\e836';
+	input[type="radio"] ~ .radio-custom-label:before {
+		content: "\e836";
 	}
 
-	input[type="radio"]:checked + .radio-custom-label:before {
-		content: '\e837';
+	input[type="radio"]:checked ~ .radio-custom-label:before {
+		content: "\e837";
 	}
 }
