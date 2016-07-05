@@ -52,12 +52,12 @@ label {
 .radio-custom {
 	position: relative;
 
-	input[type="radio"] {
+	input {
 		opacity: 0;
 		margin-right: 0.75rem;
 	}
 
-	.radio-custom-label:before {
+	input ~ span:before {
 		position: absolute;
 		top: 1px;
 		left: -4px;
@@ -67,13 +67,11 @@ label {
 		line-height: 1.5rem;
 		width: 24px;
 		height: 24px;
-	}
-
-	input[type="radio"] ~ .radio-custom-label:before {
 		content: "\e836";
 	}
 
-	input[type="radio"]:checked ~ .radio-custom-label:before {
+	input:checked ~ span:before {
 		content: "\e837";
+		background: green;
 	}
 }
