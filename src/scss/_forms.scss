@@ -33,3 +33,18 @@
 	line-height: $input-label-line-height;
 	color: $input-label-color;
 }
+
+label {
+	.disabled &,
+	&.disabled {
+		color: $grey-6;
+	}
+}
+
+.radio-inline + .radio-inline {
+	margin-left: 1.5rem;
+}
+
+.checkbox-inline + .checkbox-inline {
+	margin-left: 1.688rem;
+}
