@@ -2114,47 +2114,72 @@
 	<h3 class="f-example-title">Radio Options</h3>
 	<div class="f-example">
 		<form>
-			<div class="radio">
-				<label>
-				  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-				  Option one is this and that&mdash;be sure to include why it's great
-				</label>
-			</div>
-			<div class="radio">
-				<label>
-				  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-				  Option two can be something else and selecting it will deselect option one
-				</label>
-			</div>
-			<div class="radio disabled">
-				<label>
-				  <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-				  Option three is disabled
-				</label>
-			</div>
+			<p>A vertical set of radios are pictured below.</p>
+			<label>
+				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				Option one is this and that&mdash;be sure to include why it's great
+			</label>
+			<label>
+				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				Option two can be something else and selecting it will deselect option one
+			</label>
+			<label class="ds-disabled">
+				<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+				Option three is disabled
+			</label>
 		</form>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;form>
-	&lt;div class=&quot;radio&quot;>
-		&lt;label>
-			&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked>
-			Option one is this and that&amp;mdash;be sure to include why it&apos;s great
-		&lt;/label>
-	&lt;/div>
-	&lt;div class=&quot;radio&quot;>
-		&lt;label>
-			&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;>
-			Option two can be something else and selecting it will deselect option one
-		&lt;/label>
-	&lt;/div>
-	&lt;div class=&quot;radio disabled&quot;>
-		&lt;label>
-			&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios3&quot; value=&quot;option3&quot; disabled>
-			Option three is disabled
-		&lt;/label>
-	&lt;/div>
-&lt;/form>
-</code></pre>
+	&lt;p>A vertical set of radios are pictured below.&lt;/p>
+	&lt;label>
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked>
+		Option one is this and that&amp;mdash;be sure to include why it&apos;s great
+	&lt;/label>
+	&lt;label>
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;>
+		Option two can be something else and selecting it will deselect option one
+	&lt;/label>
+	&lt;label class=&quot;ds-disabled&quot;>
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios3&quot; value=&quot;option3&quot; disabled>
+		Option three is disabled
+	&lt;/label>
+&lt;/form></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Radio Options</h3>
+	<div class="f-example">
+		<form>
+			<p>A horizontal set of radios are pictured below.</p>
+			<label class="ds-radio-inline">
+				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				USA
+			</label>
+			<label class="ds-radio-inline">
+				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				International
+			</label>
+			<label class="ds-disabled ds-radio-inline">
+				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" disabled>
+				Other
+			</label>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;p>A horizontal set of radios are pictured below.&lt;/p>
+	&lt;label class=&quot;ds-radio-inline&quot;>
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked>
+		USA
+	&lt;/label>
+	&lt;label class=&quot;ds-radio-inline&quot;>
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;>
+		International
+	&lt;/label>
+	&lt;label class=&quot;ds-disabled ds-radio-inline&quot;>
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot; disabled>
+		Other
+	&lt;/label>
+&lt;/form></code></pre>
 </section>
 
 <section class="f-section">
@@ -2612,47 +2637,72 @@
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Radio Options&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;form&gt;
-			&lt;div class=&quot;radio&quot;&gt;
-				&lt;label&gt;
-				  &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
-				  Option one is this and that&amp;mdash;be sure to include why it&#x27;s great
-				&lt;/label&gt;
-			&lt;/div&gt;
-			&lt;div class=&quot;radio&quot;&gt;
-				&lt;label&gt;
-				  &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&gt;
-				  Option two can be something else and selecting it will deselect option one
-				&lt;/label&gt;
-			&lt;/div&gt;
-			&lt;div class=&quot;radio disabled&quot;&gt;
-				&lt;label&gt;
-				  &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios3&quot; value=&quot;option3&quot; disabled&gt;
-				  Option three is disabled
-				&lt;/label&gt;
-			&lt;/div&gt;
+			&lt;p&gt;A vertical set of radios are pictured below.&lt;/p&gt;
+			&lt;label&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
+				Option one is this and that&amp;mdash;be sure to include why it&#x27;s great
+			&lt;/label&gt;
+			&lt;label&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&gt;
+				Option two can be something else and selecting it will deselect option one
+			&lt;/label&gt;
+			&lt;label class=&quot;ds-disabled&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios3&quot; value=&quot;option3&quot; disabled&gt;
+				Option three is disabled
+			&lt;/label&gt;
 		&lt;/form&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
-	&amp;lt;div class=&amp;quot;radio&amp;quot;&gt;
-		&amp;lt;label&gt;
-			&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios1&amp;quot; value=&amp;quot;option1&amp;quot; checked&gt;
-			Option one is this and that&amp;amp;mdash;be sure to include why it&amp;apos;s great
-		&amp;lt;/label&gt;
-	&amp;lt;/div&gt;
-	&amp;lt;div class=&amp;quot;radio&amp;quot;&gt;
-		&amp;lt;label&gt;
-			&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios2&amp;quot; value=&amp;quot;option2&amp;quot;&gt;
-			Option two can be something else and selecting it will deselect option one
-		&amp;lt;/label&gt;
-	&amp;lt;/div&gt;
-	&amp;lt;div class=&amp;quot;radio disabled&amp;quot;&gt;
-		&amp;lt;label&gt;
-			&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios3&amp;quot; value=&amp;quot;option3&amp;quot; disabled&gt;
-			Option three is disabled
-		&amp;lt;/label&gt;
-	&amp;lt;/div&gt;
-&amp;lt;/form&gt;
-&lt;/code&gt;&lt;/pre&gt;
+	&amp;lt;p&gt;A vertical set of radios are pictured below.&amp;lt;/p&gt;
+	&amp;lt;label&gt;
+		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios1&amp;quot; value=&amp;quot;option1&amp;quot; checked&gt;
+		Option one is this and that&amp;amp;mdash;be sure to include why it&amp;apos;s great
+	&amp;lt;/label&gt;
+	&amp;lt;label&gt;
+		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios2&amp;quot; value=&amp;quot;option2&amp;quot;&gt;
+		Option two can be something else and selecting it will deselect option one
+	&amp;lt;/label&gt;
+	&amp;lt;label class=&amp;quot;ds-disabled&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios3&amp;quot; value=&amp;quot;option3&amp;quot; disabled&gt;
+		Option three is disabled
+	&amp;lt;/label&gt;
+&amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Radio Options&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;p&gt;A horizontal set of radios are pictured below.&lt;/p&gt;
+			&lt;label class=&quot;ds-radio-inline&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
+				USA
+			&lt;/label&gt;
+			&lt;label class=&quot;ds-radio-inline&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&gt;
+				International
+			&lt;/label&gt;
+			&lt;label class=&quot;ds-disabled ds-radio-inline&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot; disabled&gt;
+				Other
+			&lt;/label&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;p&gt;A horizontal set of radios are pictured below.&amp;lt;/p&gt;
+	&amp;lt;label class=&amp;quot;ds-radio-inline&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios1&amp;quot; value=&amp;quot;option1&amp;quot; checked&gt;
+		USA
+	&amp;lt;/label&gt;
+	&amp;lt;label class=&amp;quot;ds-radio-inline&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios2&amp;quot; value=&amp;quot;option2&amp;quot;&gt;
+		International
+	&amp;lt;/label&gt;
+	&amp;lt;label class=&amp;quot;ds-disabled ds-radio-inline&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios2&amp;quot; value=&amp;quot;option2&amp;quot; disabled&gt;
+		Other
+	&amp;lt;/label&gt;
+&amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
