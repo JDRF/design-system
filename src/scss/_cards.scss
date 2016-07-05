@@ -308,10 +308,8 @@
 	.card-footer {
 		padding: 0 0.5rem 0.5rem 0.5rem;
 
-		.btn {
-			@include media-breakpoint-up(md) {
-				margin-left: 0.5rem;
-			}
+		@include media-breakpoint-up(md) {
+			padding-left: 0;
 		}
 	}
 }
