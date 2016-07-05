@@ -5206,6 +5206,19 @@ input[type="checkbox"].ds-disabled {
   color: #212121;
 }
 
+.ds-disabled label,
+label.ds-disabled {
+  color: #9e9e9e;
+}
+
+.ds-radio-inline + .ds-radio-inline {
+  margin-left: 1.5rem;
+}
+
+.ds-checkbox-inline + .ds-checkbox-inline {
+  margin-left: 1.688rem;
+}
+
 /* Bootstrap overwrites: buttons.scss */
 
 .ds-btn {
@@ -7393,7 +7406,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 @media (min-width: 768px) {
   .ds-card-featured-hero .ds-card-footer .ds-btn {
-    margin-left: -1rem;
+    margin-left: 0.5rem;
   }
 }
 
