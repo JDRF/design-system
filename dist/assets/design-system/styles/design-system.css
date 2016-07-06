@@ -7405,8 +7405,8 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 @media (min-width: 768px) {
-  .ds-card-featured-hero .ds-card-footer {
-    padding-left: 0;
+  .ds-card-featured-hero .ds-card-footer .ds-btn {
+    margin-left: 0.5rem;
   }
 }
 
