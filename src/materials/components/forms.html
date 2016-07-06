@@ -183,27 +183,6 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h3 class="f-example-title">Custom Select Box</h3>
-	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group ds-row">
-				<label for="exampleSelect1" class="ds-col-md-4 ds-col-lg-3 ds-form-control-label">Custom Select</label>
-				<div class="ds-col-md-6">
-					<select class="c-select" id="exampleSelect1">
-					  <option>Red</option>
-					  <option>Blue</option>
-					  <option>Green</option>
-					  <option>Yellow</option>
-					  <option>Orange</option>
-					</select>
-				</div>
-			</fieldset>
-		</form>
-	</div>
-	{{example 'form.custom-select'}}
-</section>
-
-<section class="f-section">
 	<h3 class="f-example-title">Text Field</h3>
 	<div class="f-example">
 		<form>
@@ -238,17 +217,17 @@ notes: |
 	<div class="f-example">
 		<form>
 			<p>A vertical set of radios are pictured below.</p>
-			<label for="optionsRadios1" class="ds-radio-custom">
+			<label for="optionsRadios1">
 				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-				<span class="ds-radio-custom-label">Option one is this and that&mdash;be sure to include why it's great</span>
+				<span>Option one is this and that&mdash;be sure to include why it's great</span>
 			</label>
-			<label for="optionsRadios2" class="ds-radio-custom">
+			<label for="optionsRadios2">
 				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-				<span class="ds-radio-custom-label">Option two can be something else and selecting it will deselect option one</span>
+				<span>Option two can be something else and selecting it will deselect option one</span>
 			</label>
-			<label for="optionsRadios3" class="ds-disabled ds-radio-custom">
+			<label for="optionsRadios3" class="ds-disabled">
 				<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-				<span class="ds-radio-custom-label">Option three is disabled</span>
+				<span>Option three is disabled</span>
 			</label>
 		</form>
 	</div>
@@ -278,17 +257,47 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h3 class="f-example-title">Checkbox</h3>
+	<h3 class="f-example-title">Vertical Checkboxes</h3>
 	<div class="f-example">
 		<form>
-			<div class="checkbox">
+			<p>Example of vertical checkbox set below:</p>
+			<div class="ds-checkbox">
 				<label>
-				  <input type="checkbox"> Check me out
+					<input type="checkbox" value="option1"> Option 1
+				</label>
+			</div>
+			<div class="ds-checkbox">
+				<label>
+					<input type="checkbox" value="option2"> Option 2
+				</label>
+			</div>
+			<div class="ds-checkbox">
+				<label class="ds-disabled">
+					<input type="checkbox" value="option3" disabled> Option 3 disabled
 				</label>
 			</div>
 		</form>
 	</div>
 	{{example 'form.checkbox'}}
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Horizontal Checkboxes</h3>
+	<div class="f-example">
+		<form>
+			<p>Example of horizontal checkbox set below:</p>
+			<label class="ds-checkbox-inline">
+				<input type="checkbox" value="option1"> Option 1
+			</label>
+			<label class="ds-checkbox-inline">
+				<input type="checkbox" value="option2"> Option 2
+			</label>
+			<label class="ds-checkbox-inline ds-disabled">
+				<input type="checkbox" value="option3" disabled> Option 3 disabled
+			</label>
+		</form>
+	</div>
+	{{example 'form.checkbox-two'}}
 </section>
 
 <section class="f-section">
