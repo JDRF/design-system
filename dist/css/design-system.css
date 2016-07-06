@@ -5219,6 +5219,52 @@ label.ds-disabled {
   margin-left: 1.688rem;
 }
 
+.ds-radio-inline,
+.ds-checkbox-inline {
+  padding-left: 0;
+}
+
+.ds-radio-custom {
+  position: relative;
+}
+
+.ds-radio-custom input[type=radio] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.ds-radio-custom span {
+  position: relative;
+  padding-left: 2rem;
+  text-align: left;
+}
+
+.ds-radio-custom input[type=radio] ~ span:before {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  content: "\e836";
+  font-family: 'Material Icons';
+  font-size: 24px;
+  line-height: 24px;
+  color: #757575;
+}
+
+.ds-radio-custom input[type=radio]:checked ~ span:before {
+  content: "\e837";
+  color: #0073cf;
+}
+
+.ds-radio-custom.ds-disabled input[type=radio] ~ span:before {
+  color: #9e9e9e;
+}
+
 /* Bootstrap overwrites: buttons.scss */
 
 .ds-btn {
