@@ -48,3 +48,51 @@ label {
 .checkbox-inline + .checkbox-inline {
 	margin-left: 1.688rem;
 }
+
+.radio-inline,
+.checkbox-inline {
+	padding-left: 0;
+}
+
+.radio-custom {
+	position: relative;
+
+	input[type=radio] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	span {
+		position: relative;
+		padding-left: 2rem;
+		text-align: left;
+	}
+
+	input[type=radio] ~ span:before {
+		position: absolute;
+		top: -2px;
+		left:  0;
+		width: 24px;
+ 	 	height: 24px;
+ 		content: "\e836";
+ 		font-family: 'Material Icons';
+ 		font-size: 24px;
+ 		line-height: 24px;
+ 		color: $grey-7;
+	}
+
+	input[type=radio]:checked ~ span:before  {
+		content: "\e837";
+		color: $jdrf-blue;
+	}
+
+	&.disabled {
+		input[type=radio] ~ span:before {
+			color: $grey-6;
+		}
+	}
+}
