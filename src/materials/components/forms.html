@@ -214,18 +214,19 @@ notes: |
 
 <section class="f-section">
 	<h3 class="f-example-title">Vertical Radio Options</h3>
+	<p>When using custom radio buttons, the <code class="language-markup">.ds-radio-custom</code> class needs to be added to the parent wrapper with the radio button and span nested inside. View examples below for both horizontal and vertical radio buttons.</p>
 	<div class="f-example">
 		<form>
 			<p>A vertical set of radios are pictured below.</p>
-			<label for="optionsRadios1">
+			<label class="ds-radio-custom">
 				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
 				<span>Option one is this and that&mdash;be sure to include why it's great</span>
 			</label>
-			<label for="optionsRadios2">
+			<label class="ds-radio-custom">
 				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
 				<span>Option two can be something else and selecting it will deselect option one</span>
 			</label>
-			<label for="optionsRadios3" class="ds-disabled">
+			<label class="ds-radio-custom ds-disabled">
 				<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
 				<span>Option three is disabled</span>
 			</label>
@@ -239,17 +240,17 @@ notes: |
 	<div class="f-example">
 		<form>
 			<p>A horizontal set of radios are pictured below.</p>
-			<label class="ds-radio-inline">
+			<label class="ds-radio-custom ds-radio-inline">
 				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-				USA
+				<span>USA</span>
 			</label>
-			<label class="ds-radio-inline">
+			<label class="ds-radio-custom ds-radio-inline">
 				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-				International
+				<span>International</span>
 			</label>
-			<label class="ds-disabled ds-radio-inline">
+			<label class="ds-radio-custom ds-disabled ds-radio-inline">
 				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" disabled>
-				Other
+				<span>Other is disabled</span>
 			</label>
 		</form>
 	</div>
