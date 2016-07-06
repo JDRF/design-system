@@ -49,28 +49,45 @@ label {
 	margin-left: 1.688rem;
 }
 
+.radio-inline,
+.checkbox-inline {
+	padding-left: 0;
+}
+
 .radio-custom {
 	position: relative;
 
-	input {
-		opacity: 0;
-		margin-right: 0.75rem;
-	}
-
-	input ~ span:before {
+	input[type=radio] {
 		position: absolute;
-		top: 1px;
-		left: -4px;
-		display: inline-block;
-		font-family: 'Material Icons';
-		font-size: 1.5rem;
-		line-height: 1.5rem;
-		width: 24px;
-		height: 24px;
-		content: "\e836";
+		top: 0;
+		left: 0;
+		opacity: 0;
 	}
 
-	input:checked ~ span:before {
+	input[type=radio], span:before {
+		display: inline-block;
+		vertical-align: bottom;
+	}
+
+	input[type=radio] ~ span:before {
+		width: 24px;
+ 		height: 24px;
+ 		content: "\e836";
+ 		margin-right: 0.75rem;
+ 		font-family: 'Material Icons';
+ 		font-size: 1.5rem;
+ 		line-height: 1.5rem;
+ 		color: $grey-7;
+	}
+
+	input[type=radio]:checked ~ span:before  {
 		content: "\e837";
+		color: $jdrf-blue;
+	}
+
+	&.disabled {
+		input[type=radio] ~ span:before {
+			color: $grey-6;
+		}
 	}
 }
