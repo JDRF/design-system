@@ -78,8 +78,8 @@ label {
 		left:  0;
 		width: 24px;
  	 	height: 24px;
- 		content: "\e836";
  		font-family: 'Material Icons';
+ 		content: "\e836";
  		font-size: 24px;
  		line-height: 24px;
  		color: $grey-7;
@@ -92,6 +92,49 @@ label {
 
 	&.disabled {
 		input[type=radio] ~ span:before {
+			color: $grey-6;
+		}
+	}
+}
+
+.checkbox-custom {
+	position: relative;
+
+	input[type=checkbox] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	span {
+		position: relative;
+		padding-left: 2rem;
+		text-align: left;
+	}
+
+	input[type=checkbox] ~ span:before {
+		position: absolute;
+		top: -2px;
+		left:  0;
+		width: 24px;
+ 	 	height: 24px;
+ 		font-family: 'Material Icons';
+ 		content: "\e835";
+ 		font-size: 24px;
+ 		line-height: 24px;
+ 		color: $grey-7;
+	}
+
+	input[type=checkbox]:checked ~ span:before  {
+		content: "\e834";
+		color: $jdrf-blue;
+	}
+
+	&.disabled {
+		input[type=checkbox] ~ span:before {
 			color: $grey-6;
 		}
 	}
