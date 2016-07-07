@@ -6,12 +6,42 @@ notes: |
 ---
 
 <section class="f-section">
+	<h3 class="f-example-title">Text Field</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="ds-form-group ds-row ds-has-danger">
+				<div class="ds-col-md-6">
+					<label for="phantom-exampleInputText1" class="ds-form-control-label">Text Field</label>
+					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="Enter Text">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	{{example 'form.text'}}
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Textarea</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-6">
+					<label for="phantom-exampleTextarea" class="ds-form-control-label">Textarea</label>
+					<textarea class="ds-form-control" id="phantom-exampleTextarea" ds-rows="3"></textarea>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	{{example 'form.textarea'}}
+</section>
+
+<section class="f-section">
 	<h3 class="f-example-title">Email Field</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<label for="phantom-exampleInputEmail1" class="ds-col-md-3 ds-form-control-label">Email Address</label>
 				<div class="ds-col-md-6">
+					<label for="phantom-exampleInputEmail1" class="ds-form-control-label">Email Address</label>
 					<input type="email" class="ds-form-control" id="phantom-exampleInputEmail1" placeholder="Enter email">
 					<small class="ds-text-muted">We'll never share your email with anyone else.</small>
 				</div>
@@ -22,12 +52,27 @@ notes: |
 </section>
 
 <section class="f-section">
+	<h3 class="f-example-title">Password Field</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-6">
+					<label for="exampleInputPassword1" class="ds-form-control-label">Password</label>
+					<input type="password" class="ds-form-control" id="exampleInputPassword1" placeholder="Enter Password">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	{{example 'form.password'}}
+</section>
+
+<section class="f-section">
 	<h3 class="f-example-title">Telephone Field</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<label for="phantom-exampleInputTel" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Telephone</label>
-				<div class="ds-col-md-5">
+				<div class="ds-col-md-6">
+					<label for="phantom-exampleInputTel" class="ds-form-control-label">Telephone</label>
 					<input type="tel" class="ds-form-control" id="phantom-exampleInputTel" placeholder="Enter phone number">
 				</div>
 			</fieldset>
@@ -41,8 +86,8 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<label for="phantom-exampleInputDate" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Date</label>
-				<div class="ds-col-md-5">
+				<div class="ds-col-md-6">
+					<label for="phantom-exampleInputDate" class="ds-form-control-label">Date</label>
 					<input type="date" class="ds-form-control" id="phantom-exampleInputDate">
 				</div>
 			</fieldset>
@@ -126,27 +171,12 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h3 class="f-example-title">Password Field</h3>
-	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group ds-row">
-				<label for="exampleInputPassword1" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Password</label>
-				<div class="ds-col-md-6">
-					<input type="password" class="ds-form-control" id="exampleInputPassword1" placeholder="Enter Password">
-				</div>
-			</fieldset>
-		</form>
-	</div>
-	{{example 'form.password'}}
-</section>
-
-<section class="f-section">
 	<h3 class="f-example-title">Select Box</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<label for="exampleSelect1" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Select Box</label>
-				<div class="ds-col-md-6">
+				<div class="ds-col-md-4">
+					<label for="exampleSelect1" class="ds-form-control-label">Select Box</label>
 					<select class="ds-form-control" id="exampleSelect1">
 					  <option>1</option>
 					  <option>2</option>
@@ -166,8 +196,8 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<label for="exampleSelect2" class="ds-col-md-4 ds-col-lg-3 ds-form-control-label">Multiple Select Box</label>
-				<div class="ds-col-md-7">
+				<div class="ds-col-md-4">
+					<label for="exampleSelect2" class="ds-form-control-label">Multiple Select Box</label>
 					<select multiple class="ds-form-control" id="exampleSelect2">
 					  <option>1</option>
 					  <option>2</option>
@@ -180,36 +210,6 @@ notes: |
 		</form>
 	</div>
 	{{example 'form.multi-select'}}
-</section>
-
-<section class="f-section">
-	<h3 class="f-example-title">Text Field</h3>
-	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group ds-row">
-				<label for="phantom-exampleInputText1" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Text Field</label>
-				<div class="ds-col-md-6">
-					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="Enter Text">
-				</div>
-			</fieldset>
-		</form>
-	</div>
-	{{example 'form.text'}}
-</section>
-
-<section class="f-section">
-	<h3 class="f-example-title">Textarea</h3>
-	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group ds-row">
-				<label for="phantom-exampleTextarea" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Textarea</label>
-				<div class="ds-col-md-6">
-					<textarea class="ds-form-control" id="phantom-exampleTextarea" ds-rows="3"></textarea>
-				</div>
-			</fieldset>
-		</form>
-	</div>
-	{{example 'form.textarea'}}
 </section>
 
 <section class="f-section">
