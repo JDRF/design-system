@@ -54,52 +54,11 @@ label {
 	padding-left: 0;
 }
 
-.radio-custom {
-	position: relative;
-
-	input[type=radio] {
-		position: absolute;
-		top: 0;
-		left: 0;
-		opacity: 0;
-		margin: 0;
-		padding: 0;
-	}
-
-	span {
-		position: relative;
-		padding-left: 2rem;
-		text-align: left;
-	}
-
-	input[type=radio] ~ span:before {
-		position: absolute;
-		top: -2px;
-		left:  0;
-		width: 24px;
- 	 	height: 24px;
- 		font-family: 'Material Icons';
- 		content: "\e836";
- 		font-size: 24px;
- 		line-height: 24px;
- 		color: $grey-7;
-	}
-
-	input[type=radio]:checked ~ span:before  {
-		content: "\e837";
-		color: $jdrf-blue;
-	}
-
-	&.disabled {
-		input[type=radio] ~ span:before {
-			color: $grey-6;
-		}
-	}
-}
-
+.radio-custom,
 .checkbox-custom {
 	position: relative;
 
+	input[type=radio],
 	input[type=checkbox] {
 		position: absolute;
 		top: 0;
@@ -115,6 +74,7 @@ label {
 		text-align: left;
 	}
 
+	input[type=radio] ~ span:before,
 	input[type=checkbox] ~ span:before {
 		position: absolute;
 		top: -2px;
@@ -122,20 +82,40 @@ label {
 		width: 24px;
  	 	height: 24px;
  		font-family: 'Material Icons';
- 		content: "\e835";
- 		font-size: 24px;
+		font-size: 24px;
  		line-height: 24px;
  		color: $grey-7;
 	}
 
-	input[type=checkbox]:checked ~ span:before  {
-		content: "\e834";
+	input[type=radio]:checked ~ span:before,
+	input[type=checkbox]:checked ~ span:before {
 		color: $jdrf-blue;
 	}
 
 	&.disabled {
+		input[type=radio] ~ span:before,
 		input[type=checkbox] ~ span:before {
 			color: $grey-6;
 		}
+	}
+}
+
+.radio-custom {
+	input[type=radio] ~ span:before {
+ 		content: "\e836";
+	}
+
+	input[type=radio]:checked ~ span:before  {
+		content: "\e837";
+	}
+}
+
+.checkbox-custom {
+	input[type=checkbox] ~ span:before  {
+		content: "\e835";
+	}
+
+	input[type=checkbox]:checked ~ span:before  {
+		content: "\e834";
 	}
 }
