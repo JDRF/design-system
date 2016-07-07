@@ -2078,37 +2078,74 @@
 </section>
 
 <section class="f-section">
-	<h3 class="f-example-title">Radio Options</h3>
+	<h3 class="f-example-title">Vertical Radio Options</h3>
+	<p>When using custom radio buttons, the <code class="language-markup">.ds-radio-custom</code> class needs to be added to the parent wrapper with the radio button and span nested inside. View examples below for both horizontal and vertical radio buttons.</p>
 	<div class="f-example">
 		<form>
 			<p>A vertical set of radios are pictured below.</p>
-			<label>
+			<label class="ds-radio-custom">
 				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-				Option one is this and that&mdash;be sure to include why it's great
+				<span>Option one is this and that&mdash;be sure to include why it's great</span>
 			</label>
-			<label>
+			<label class="ds-radio-custom">
 				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-				Option two can be something else and selecting it will deselect option one
+				<span>Option two can be something else and selecting it will deselect option one</span>
 			</label>
-			<label class="ds-disabled">
+			<label class="ds-radio-custom ds-disabled">
 				<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-				Option three is disabled
+				<span>Option three is disabled</span>
 			</label>
 		</form>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;form>
 	&lt;p>A vertical set of radios are pictured below.&lt;/p>
-	&lt;label>
+	&lt;label class=&quot;ds-radio-custom&quot;>
 		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked>
-		Option one is this and that&amp;mdash;be sure to include why it&apos;s great
+		&lt;span>Option one is this and that&amp;mdash;be sure to include why it&apos;s great&lt;/span>
 	&lt;/label>
-	&lt;label>
+	&lt;label class=&quot;ds-radio-custom&quot;>
 		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;>
-		Option two can be something else and selecting it will deselect option one
+		&lt;span>Option two can be something else and selecting it will deselect option one&lt;/span>
 	&lt;/label>
-	&lt;label class=&quot;ds-disabled&quot;>
+	&lt;label class=&quot;ds-radio-custom ds-disabled&quot;>
 		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios3&quot; value=&quot;option3&quot; disabled>
-		Option three is disabled
+		&lt;span>Option three is disabled&lt;/span>
+	&lt;/label>
+&lt;/form></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Horizontal Radio Options</h3>
+	<div class="f-example">
+		<form>
+			<p>A horizontal set of radios are pictured below.</p>
+			<label class="ds-radio-custom ds-radio-inline">
+				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				<span>USA</span>
+			</label>
+			<label class="ds-radio-custom ds-radio-inline">
+				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				<span>International</span>
+			</label>
+			<label class="ds-radio-custom ds-disabled ds-radio-inline">
+				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" disabled>
+				<span>Other is disabled</span>
+			</label>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;p>A horizontal set of radios are pictured below.&lt;/p>
+	&lt;label class=&quot;ds-radio-custom ds-radio-inline&quot;>
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked>
+		&lt;span>USA&lt;/span>
+	&lt;/label>
+	&lt;label class=&quot;ds-radio-custom ds-radio-inline&quot;>
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;>
+		&lt;span>International&lt;/span>
+	&lt;/label>
+	&lt;label class=&quot;ds-radio-custom ds-disabled ds-radio-inline&quot;>
+		&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot; disabled>
+		&lt;span>Other is disabled&lt;/span>
 	&lt;/label>
 &lt;/form></code></pre>
 </section>
@@ -2583,37 +2620,74 @@
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
-	&lt;h3 class=&quot;f-example-title&quot;&gt;Radio Options&lt;/h3&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Vertical Radio Options&lt;/h3&gt;
+	&lt;p&gt;When using custom radio buttons, the &lt;code class=&quot;language-markup&quot;&gt;.ds-radio-custom&lt;/code&gt; class needs to be added to the parent wrapper with the radio button and span nested inside. View examples below for both horizontal and vertical radio buttons.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;form&gt;
 			&lt;p&gt;A vertical set of radios are pictured below.&lt;/p&gt;
-			&lt;label&gt;
+			&lt;label class=&quot;ds-radio-custom&quot;&gt;
 				&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
-				Option one is this and that&amp;mdash;be sure to include why it&#x27;s great
+				&lt;span&gt;Option one is this and that&amp;mdash;be sure to include why it&#x27;s great&lt;/span&gt;
 			&lt;/label&gt;
-			&lt;label&gt;
+			&lt;label class=&quot;ds-radio-custom&quot;&gt;
 				&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&gt;
-				Option two can be something else and selecting it will deselect option one
+				&lt;span&gt;Option two can be something else and selecting it will deselect option one&lt;/span&gt;
 			&lt;/label&gt;
-			&lt;label class=&quot;ds-disabled&quot;&gt;
+			&lt;label class=&quot;ds-radio-custom ds-disabled&quot;&gt;
 				&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios3&quot; value=&quot;option3&quot; disabled&gt;
-				Option three is disabled
+				&lt;span&gt;Option three is disabled&lt;/span&gt;
 			&lt;/label&gt;
 		&lt;/form&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
 	&amp;lt;p&gt;A vertical set of radios are pictured below.&amp;lt;/p&gt;
-	&amp;lt;label&gt;
+	&amp;lt;label class=&amp;quot;ds-radio-custom&amp;quot;&gt;
 		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios1&amp;quot; value=&amp;quot;option1&amp;quot; checked&gt;
-		Option one is this and that&amp;amp;mdash;be sure to include why it&amp;apos;s great
+		&amp;lt;span&gt;Option one is this and that&amp;amp;mdash;be sure to include why it&amp;apos;s great&amp;lt;/span&gt;
 	&amp;lt;/label&gt;
-	&amp;lt;label&gt;
+	&amp;lt;label class=&amp;quot;ds-radio-custom&amp;quot;&gt;
 		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios2&amp;quot; value=&amp;quot;option2&amp;quot;&gt;
-		Option two can be something else and selecting it will deselect option one
+		&amp;lt;span&gt;Option two can be something else and selecting it will deselect option one&amp;lt;/span&gt;
 	&amp;lt;/label&gt;
-	&amp;lt;label class=&amp;quot;ds-disabled&amp;quot;&gt;
+	&amp;lt;label class=&amp;quot;ds-radio-custom ds-disabled&amp;quot;&gt;
 		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios3&amp;quot; value=&amp;quot;option3&amp;quot; disabled&gt;
-		Option three is disabled
+		&amp;lt;span&gt;Option three is disabled&amp;lt;/span&gt;
+	&amp;lt;/label&gt;
+&amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Horizontal Radio Options&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;p&gt;A horizontal set of radios are pictured below.&lt;/p&gt;
+			&lt;label class=&quot;ds-radio-custom ds-radio-inline&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
+				&lt;span&gt;USA&lt;/span&gt;
+			&lt;/label&gt;
+			&lt;label class=&quot;ds-radio-custom ds-radio-inline&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot;&gt;
+				&lt;span&gt;International&lt;/span&gt;
+			&lt;/label&gt;
+			&lt;label class=&quot;ds-radio-custom ds-disabled ds-radio-inline&quot;&gt;
+				&lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot; disabled&gt;
+				&lt;span&gt;Other is disabled&lt;/span&gt;
+			&lt;/label&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;p&gt;A horizontal set of radios are pictured below.&amp;lt;/p&gt;
+	&amp;lt;label class=&amp;quot;ds-radio-custom ds-radio-inline&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios1&amp;quot; value=&amp;quot;option1&amp;quot; checked&gt;
+		&amp;lt;span&gt;USA&amp;lt;/span&gt;
+	&amp;lt;/label&gt;
+	&amp;lt;label class=&amp;quot;ds-radio-custom ds-radio-inline&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios2&amp;quot; value=&amp;quot;option2&amp;quot;&gt;
+		&amp;lt;span&gt;International&amp;lt;/span&gt;
+	&amp;lt;/label&gt;
+	&amp;lt;label class=&amp;quot;ds-radio-custom ds-disabled ds-radio-inline&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;optionsRadios&amp;quot; id=&amp;quot;optionsRadios2&amp;quot; value=&amp;quot;option2&amp;quot; disabled&gt;
+		&amp;lt;span&gt;Other is disabled&amp;lt;/span&gt;
 	&amp;lt;/label&gt;
 &amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
