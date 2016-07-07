@@ -7815,7 +7815,6 @@ a.ds-label:hover {
   font-weight: normal;
   padding: 0.25rem 0.5rem;
   border-radius: 0.75rem;
-  min-width: 30px;
 }
 
 .ds-label-outline {
