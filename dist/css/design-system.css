@@ -5224,11 +5224,15 @@ label.ds-disabled {
   padding-left: 0;
 }
 
-.ds-radio-custom {
+.ds-radio-custom,
+.ds-checkbox-custom {
   position: relative;
 }
 
-.ds-radio-custom input[type=radio] {
+.ds-radio-custom input[type=radio],
+.ds-radio-custom input[type=checkbox],
+.ds-checkbox-custom input[type=radio],
+.ds-checkbox-custom input[type=checkbox] {
   position: absolute;
   top: 0;
   left: 0;
@@ -5237,32 +5241,56 @@ label.ds-disabled {
   padding: 0;
 }
 
-.ds-radio-custom span {
+.ds-radio-custom span,
+.ds-checkbox-custom span {
   position: relative;
   padding-left: 2rem;
   text-align: left;
 }
 
-.ds-radio-custom input[type=radio] ~ span:before {
+.ds-radio-custom input[type=radio] ~ span:before,
+.ds-radio-custom input[type=checkbox] ~ span:before,
+.ds-checkbox-custom input[type=radio] ~ span:before,
+.ds-checkbox-custom input[type=checkbox] ~ span:before {
   position: absolute;
   top: -2px;
   left: 0;
   width: 24px;
   height: 24px;
-  content: "\e836";
   font-family: 'Material Icons';
   font-size: 24px;
   line-height: 24px;
   color: #757575;
 }
 
-.ds-radio-custom input[type=radio]:checked ~ span:before {
-  content: "\e837";
+.ds-radio-custom input[type=radio]:checked ~ span:before,
+.ds-radio-custom input[type=checkbox]:checked ~ span:before,
+.ds-checkbox-custom input[type=radio]:checked ~ span:before,
+.ds-checkbox-custom input[type=checkbox]:checked ~ span:before {
   color: #0073cf;
 }
 
-.ds-radio-custom.ds-disabled input[type=radio] ~ span:before {
+.ds-radio-custom.ds-disabled input[type=radio] ~ span:before,
+.ds-radio-custom.ds-disabled input[type=checkbox] ~ span:before,
+.ds-checkbox-custom.ds-disabled input[type=radio] ~ span:before,
+.ds-checkbox-custom.ds-disabled input[type=checkbox] ~ span:before {
   color: #9e9e9e;
+}
+
+.ds-radio-custom input[type=radio] ~ span:before {
+  content: "\e836";
+}
+
+.ds-radio-custom input[type=radio]:checked ~ span:before {
+  content: "\e837";
+}
+
+.ds-checkbox-custom input[type=checkbox] ~ span:before {
+  content: "\e835";
+}
+
+.ds-checkbox-custom input[type=checkbox]:checked ~ span:before {
+  content: "\e834";
 }
 
 /* Bootstrap overwrites: buttons.scss */
