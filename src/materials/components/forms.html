@@ -214,7 +214,7 @@ notes: |
 
 <section class="f-section">
 	<h3 class="f-example-title">Vertical Radio Options</h3>
-	<p>When using custom radio buttons, the <code class="language-markup">.ds-radio-custom</code> class needs to be added to the parent wrapper with the radio button and span nested inside. View examples below for both horizontal and vertical radio buttons.</p>
+	<p>When using custom radio buttons, the <code class="language-markup">.ds-radio-custom</code> class needs to be added to the parent wrapper with the radio button and a span nested inside. View examples below for both horizontal and vertical radio buttons.</p>
 	<div class="f-example">
 		<form>
 			<p>A vertical set of radios are pictured below.</p>
@@ -259,24 +259,22 @@ notes: |
 
 <section class="f-section">
 	<h3 class="f-example-title">Vertical Checkboxes</h3>
+	<p>When using custom checkboxes, the <code class="language-markup">.ds-checkbox-custom</code> class needs to be added to the parent wrapper with the checkbox and a span nested inside. View examples below for both horizontal and vertical checkboxes.</p>
 	<div class="f-example">
 		<form>
 			<p>Example of vertical checkbox set below:</p>
-			<div class="ds-checkbox">
-				<label>
-					<input type="checkbox" value="option1"> Option 1
-				</label>
-			</div>
-			<div class="ds-checkbox">
-				<label>
-					<input type="checkbox" value="option2"> Option 2
-				</label>
-			</div>
-			<div class="ds-checkbox">
-				<label class="ds-disabled">
-					<input type="checkbox" value="option3" disabled> Option 3 disabled
-				</label>
-			</div>
+			<label class="ds-checkbox ds-checkbox-custom">
+				<input type="checkbox" value="option1" checked>
+				<span>Option 1</span>
+			</label>
+			<label class="ds-checkbox ds-checkbox-custom">
+				<input type="checkbox" value="option2">
+				<span>Option 2</span>
+			</label>
+			<label class="ds-checkbox ds-checkbox-custom ds-disabled">
+				<input type="checkbox" value="option3" disabled>
+				<span>Option 3 disabled</span>
+			</label>
 		</form>
 	</div>
 	{{example 'form.checkbox'}}
@@ -287,14 +285,17 @@ notes: |
 	<div class="f-example">
 		<form>
 			<p>Example of horizontal checkbox set below:</p>
-			<label class="ds-checkbox-inline">
-				<input type="checkbox" value="option1"> Option 1
+			<label class="ds-checkbox-custom ds-checkbox-inline">
+				<input type="checkbox" value="option1" checked>
+				<span>Option 1</span>
 			</label>
-			<label class="ds-checkbox-inline">
-				<input type="checkbox" value="option2"> Option 2
+			<label class="ds-checkbox-custom ds-checkbox-inline">
+				<input type="checkbox" value="option2">
+				<span>Option 2</span>
 			</label>
-			<label class="ds-checkbox-inline ds-disabled">
-				<input type="checkbox" value="option3" disabled> Option 3 disabled
+			<label class="ds-checkbox-custom ds-checkbox-inline ds-disabled">
+				<input type="checkbox" value="option3" disabled>
+				<span>Option 3 disabled</span>
 			</label>
 		</form>
 	</div>
