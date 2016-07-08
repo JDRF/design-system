@@ -100,14 +100,16 @@ label {
 	&.disabled {
 		color: $grey-6;
 
-		.has-danger & {
+		.has-danger &,
+		.has-success & {
 			color: $grey-6;
 		}
 	}
 
 	&.checkbox-custom {
 		&:not(.ds-disabled) {
-			.has-danger & {
+			.has-danger &,
+			.has-success & {
 				color: $jdrf-black;
 			}
 		}
@@ -123,6 +125,10 @@ label {
 .text-label {
 	.has-danger & {
 		color: $brand-danger;
+	}
+
+	.has-success & {
+		color: $brand-success;
 	}
 
 	span {
@@ -217,10 +223,13 @@ label {
 * Checkbox groups
 */
 .checkbox-group {
-	&.has-danger {
+
+	&.has-danger,
+	&.has-success {
 		.text-help {
 			position: relative;
 			padding-left: 2rem;
+
 			&:before {
 				position: absolute;
 				top: 0;
@@ -230,7 +239,22 @@ label {
 		 		font-family: 'Material Icons';
 				font-size: 24px;
 		 		line-height: 24px;
+		 	}
+		}
+	}
+
+	&.has-danger {
+		.text-help {
+			&:before {
 		 		content: "\e000";
+			}
+		}
+	}
+
+	&.has-success {
+		.text-help {
+			&:before {
+		 		content: "\e5ca";
 			}
 		}
 	}
