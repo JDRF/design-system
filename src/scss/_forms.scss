@@ -140,6 +140,7 @@ label {
 		font-size: 24px;
  		line-height: 24px;
  		color: $grey-7;
+ 		cursor: pointer;
 	}
 
 	input[type=radio]:checked ~ span:before,
@@ -151,6 +152,7 @@ label {
 		input[type=radio] ~ span:before,
 		input[type=checkbox] ~ span:before {
 			color: $grey-6;
+			cursor: $cursor-disabled;
 		}
 	}
 }
