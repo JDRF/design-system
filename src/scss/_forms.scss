@@ -23,16 +23,60 @@
 	}
 }
 
-.form-control {
-	line-height: $font-size-base;
-}
-
 .form-control-label {
 	font-family: $font-medium;
 	font-size: $input-label-font-size;
 	line-height: $input-label-line-height;
 	color: $input-label-color;
 	padding: 0.25rem 0;
+	@include clearfix();
+
+	fieldset & {
+		width: 100%;
+	}
+
+	.disabled &,
+	&.disabled {
+		background-color: $grey-1;
+		border-color: $grey-4;
+	}
+
+	.has-focus & {
+		color: $input-border-focus;
+	}
+
+	.has-filled &,
+	.has-success &  {
+		font-family: $font-regular;
+		color: $grey-7;
+	}
+
+	fieldset:disabled & {
+		color: $grey-6;
+	}
+
+	> span {
+		font-family: $font-italic;
+		color: $grey-7;
+		float: right;
+	}
+}
+
+.form-control {
+	line-height: $font-size-base;
+
+	fieldset:disabled & {
+		border-color: $grey-4;
+	}
+
+	.has-focus & {
+		border-color: $input-border-focus;
+	}
+
+	.has-filled &,
+	.has-success & {
+		border-color: $grey-4;
+	}
 }
 
 label {
@@ -40,6 +84,10 @@ label {
 	&.disabled {
 		color: $grey-6;
 	}
+}
+
+.text-help {
+	font-family: $font-medium;
 }
 
 .radio-inline + .radio-inline {
