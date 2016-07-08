@@ -23,7 +23,14 @@
 	}
 }
 
+.form-group {
+	position: relative;
+}
+
 .form-control-label {
+	position: absolute;
+	top: 0;
+	left: 0;
 	font-family: $font-medium;
 	font-size: $input-label-font-size;
 	line-height: $input-label-line-height;
@@ -70,6 +77,10 @@
 .form-control {
 	line-height: $font-size-base;
 
+	fieldset & {
+		margin-top: 28px;
+	}
+
 	fieldset:disabled & {
 		border-color: $grey-4;
 	}
@@ -95,26 +106,6 @@ label {
 .text-label {
 	font-family: $font-medium;
 	font-size: 0.875rem;
-}
-
-.text-help {
-	position: relative;
-	padding-left: 2rem;
-
-	.has-danger & {
-		&:before {
-			position: absolute;
-			top: 0;
-			left: 0;
-			margin-right: 0.75rem;
-			width: 24px;
-	 	 	height: 24px;
-	 		font-family: 'Material Icons';
-			font-size: 24px;
-	 		line-height: 24px;
-			content: "\e000";
-		}
-	}
 }
 
 .text-label {
