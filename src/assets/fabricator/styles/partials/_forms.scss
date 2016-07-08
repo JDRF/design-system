@@ -1,5 +1,7 @@
 .f-example {
 	.ds-form-group {
-		max-width: 304px;
+		@include desktop {
+			max-width: 304px;
+		}
 	}
 }
