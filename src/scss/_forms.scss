@@ -23,21 +23,95 @@
 	}
 }
 
-.form-control {
-	line-height: $font-size-base;
+.form-group {
+	position: relative;
 }
 
 .form-control-label {
+	position: absolute;
+	top: 0;
+	left: 0;
 	font-family: $font-medium;
 	font-size: $input-label-font-size;
 	line-height: $input-label-line-height;
 	color: $input-label-color;
+	padding: 0.25rem 0;
+	@include clearfix();
+
+	fieldset & {
+		width: 100%;
+	}
+
+	.disabled &,
+	&.disabled {
+		background-color: $grey-1;
+		border-color: $grey-4;
+	}
+
+	.has-filled &,
+	.has-success &  {
+		font-family: $font-regular;
+		color: $grey-7;
+	}
+
+	fieldset:disabled & {
+		color: $grey-6;
+	}
+
+	> span {
+		font-family: $font-italic;
+		color: $grey-7;
+		float: right;
+	}
+}
+
+.form-control {
+	line-height: $font-size-base;
+
+	fieldset & {
+		margin-top: 28px;
+	}
+
+	fieldset:disabled & {
+		border-color: $grey-4;
+	}
+
+	.has-filled &,
+	.has-success & {
+		border-color: $grey-4;
+	}
+
+	&:focus {
+		border-color: $input-border-focus;
+	}
+}
+
+.form-control:focus ~ .form-control-label {
+	font-family: $font-medium;
+	color: $input-border-focus;
 }
 
 label {
 	.disabled &,
 	&.disabled {
 		color: $grey-6;
+	}
+}
+
+.text-required {
+	font-family: $font-regular;
+	color: $grey-7;
+}
+
+.text-help,
+.text-label {
+	font-family: $font-medium;
+	font-size: 0.875rem;
+}
+
+.text-label {
+	.has-danger & {
+		color: $brand-danger;
 	}
 }
 
@@ -58,8 +132,8 @@ label {
 .checkbox-custom {
 	position: relative;
 
-	input[type=radio],
-	input[type=checkbox] {
+	input[type="radio"],
+	input[type="checkbox"] {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -74,8 +148,8 @@ label {
 		text-align: left;
 	}
 
-	input[type=radio] ~ span:before,
-	input[type=checkbox] ~ span:before {
+	input[type="radio"] ~ span:before,
+	input[type="checkbox"] ~ span:before {
 		position: absolute;
 		top: -2px;
 		left:  0;
@@ -85,37 +159,39 @@ label {
 		font-size: 24px;
  		line-height: 24px;
  		color: $grey-7;
+ 		cursor: pointer;
 	}
 
-	input[type=radio]:checked ~ span:before,
-	input[type=checkbox]:checked ~ span:before {
+	input[type="radio"]:checked ~ span:before,
+	input[type="checkbox"]:checked ~ span:before {
 		color: $jdrf-blue;
 	}
 
 	&.disabled {
-		input[type=radio] ~ span:before,
-		input[type=checkbox] ~ span:before {
+		input[type="radio"] ~ span:before,
+		input[type="checkbox"] ~ span:before {
 			color: $grey-6;
+			cursor: $cursor-disabled;
 		}
 	}
 }
 
 .radio-custom {
-	input[type=radio] ~ span:before {
+	input[type="radio"] ~ span:before {
  		content: "\e836";
 	}
 
-	input[type=radio]:checked ~ span:before  {
+	input[type="radio"]:checked ~ span:before  {
 		content: "\e837";
 	}
 }
 
 .checkbox-custom {
-	input[type=checkbox] ~ span:before  {
+	input[type="checkbox"] ~ span:before  {
 		content: "\e835";
 	}
 
-	input[type=checkbox]:checked ~ span:before  {
+	input[type="checkbox"]:checked ~ span:before  {
 		content: "\e834";
 	}
 }
