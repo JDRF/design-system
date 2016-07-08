@@ -2,6 +2,8 @@
 notes: |
    The `form` components are based on Bootstrap's form components combined with our own customizations.
 
+   We are currently using class based validation. These classes must be applied to a container so validation styles can be applied to any form fields, form labels and help text. These classes are: `.ds-has-focus, .ds-has-filled, .ds-has-success, .ds-has-danger`. For general descriptions, use the `.ds-text-muted` class. For error or success messages, use the `.ds-text-help` class.
+
    For more information on Bootstrap's classes for form layouts, control sizing, validation and so on, refer to <a href="http://v4-alpha.getbootstrap.com/components/forms/" target="_blank">Bootstrap's form documentation</a>.
 ---
 
@@ -10,27 +12,42 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<div class="ds-col-md-6">
-					<label for="phantom-exampleInputText1" class="ds-form-control-label">Default Text Field</label>
-					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="Enter Text">
+				<div class="ds-col-md-7">
+					<label for="phantom-exampleInputText1" class="ds-form-control-label">Default <span>Required</span></label>
+					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="First name">
 				</div>
 			</fieldset>
-			<fieldset class="ds-form-group ds-row ds-has-danger">
-				<div class="ds-col-md-6">
-					<label for="phantom-exampleInputText1" class="ds-form-control-label">Text Field that has an error</label>
-					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="Enter Text">
+			<fieldset class="ds-form-group ds-row ds-has-focus">
+				<div class="ds-col-md-7">
+					<label for="phantom-exampleInputText1" class="ds-form-control-label">Focus <span>Required</span></label>
+					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="First name">
+				</div>
+			</fieldset>
+			<fieldset class="ds-form-group ds-row ds-has-filled">
+				<div class="ds-col-md-7">
+					<label for="phantom-exampleInputText1" class="ds-form-control-label">Filled <span>Required</span></label>
+					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="First name" value="Frederick">
 				</div>
 			</fieldset>
 			<fieldset class="ds-form-group ds-row ds-has-success">
-				<div class="ds-col-md-6">
-					<label for="phantom-exampleInputText1" class="ds-form-control-label">Text Field that is successful</label>
-					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="Enter Text">
+				<div class="ds-col-md-7">
+					<label for="phantom-exampleInputText1" class="ds-form-control-label">Valid <span>Required</span></label>
+					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="First name" value="Frederick">
+				</div>
+			</fieldset>
+			<fieldset class="ds-form-group ds-row ds-has-danger">
+				<div class="ds-col-md-7">
+					<label for="phantom-exampleInputText1" class="ds-form-control-label">Error <span>Required</span></label>
+					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="First name">
+					<small class="ds-text-help">
+					  Helpful error message.
+					</small>
 				</div>
 			</fieldset>
 			<fieldset class="ds-form-group ds-row" disabled>
-				<div class="ds-col-md-6">
-					<label for="phantom-exampleInputText1" class="ds-form-control-label">Text Field that is disabled</label>
-					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="Enter Text">
+				<div class="ds-col-md-7">
+					<label for="phantom-exampleInputText1" class="ds-form-control-label">Disabled</label>
+					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="First name">
 				</div>
 			</fieldset>
 		</form>
@@ -43,7 +60,7 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<div class="ds-col-md-6">
+				<div class="ds-col-md-7">
 					<label for="phantom-exampleTextarea" class="ds-form-control-label">Textarea</label>
 					<textarea class="ds-form-control" id="phantom-exampleTextarea" ds-rows="3"></textarea>
 				</div>
@@ -58,7 +75,7 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<div class="ds-col-md-6">
+				<div class="ds-col-md-7">
 					<label for="phantom-exampleInputEmail1" class="ds-form-control-label">Email Address</label>
 					<input type="email" class="ds-form-control" id="phantom-exampleInputEmail1" placeholder="Enter email">
 					<small class="ds-text-muted">We'll never share your email with anyone else.</small>
@@ -74,7 +91,7 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<div class="ds-col-md-6">
+				<div class="ds-col-md-7">
 					<label for="exampleInputPassword1" class="ds-form-control-label">Password</label>
 					<input type="password" class="ds-form-control" id="exampleInputPassword1" placeholder="Enter Password">
 				</div>
@@ -89,7 +106,7 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<div class="ds-col-md-6">
+				<div class="ds-col-md-7">
 					<label for="phantom-exampleInputTel" class="ds-form-control-label">Telephone</label>
 					<input type="tel" class="ds-form-control" id="phantom-exampleInputTel" placeholder="Enter phone number">
 				</div>
@@ -104,7 +121,7 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<div class="ds-col-md-6">
+				<div class="ds-col-md-7">
 					<label for="phantom-exampleInputDate" class="ds-form-control-label">Date</label>
 					<input type="date" class="ds-form-control" id="phantom-exampleInputDate">
 				</div>
