@@ -62,6 +62,11 @@
 	}
 }
 
+.text-required {
+	font-family: $font-regular;
+	color: $grey-7;
+}
+
 .form-control {
 	line-height: $font-size-base;
 
