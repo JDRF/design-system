@@ -91,9 +91,36 @@ label {
 	}
 }
 
-.text-help {
+.text-help,
+.text-label {
 	font-family: $font-medium;
 	font-size: 0.875rem;
+}
+
+.text-help {
+	position: relative;
+	padding-left: 2rem;
+
+	.has-danger & {
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin-right: 0.75rem;
+			width: 24px;
+	 	 	height: 24px;
+	 		font-family: 'Material Icons';
+			font-size: 24px;
+	 		line-height: 24px;
+			content: "\e000";
+		}
+	}
+}
+
+.text-label {
+	.has-danger & {
+		color: $brand-danger;
+	}
 }
 
 .radio-inline + .radio-inline {
@@ -113,8 +140,8 @@ label {
 .checkbox-custom {
 	position: relative;
 
-	input[type=radio],
-	input[type=checkbox] {
+	input[type="radio"],
+	input[type="checkbox"] {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -129,8 +156,8 @@ label {
 		text-align: left;
 	}
 
-	input[type=radio] ~ span:before,
-	input[type=checkbox] ~ span:before {
+	input[type="radio"] ~ span:before,
+	input[type="checkbox"] ~ span:before {
 		position: absolute;
 		top: -2px;
 		left:  0;
@@ -143,14 +170,14 @@ label {
  		cursor: pointer;
 	}
 
-	input[type=radio]:checked ~ span:before,
-	input[type=checkbox]:checked ~ span:before {
+	input[type="radio"]:checked ~ span:before,
+	input[type="checkbox"]:checked ~ span:before {
 		color: $jdrf-blue;
 	}
 
 	&.disabled {
-		input[type=radio] ~ span:before,
-		input[type=checkbox] ~ span:before {
+		input[type="radio"] ~ span:before,
+		input[type="checkbox"] ~ span:before {
 			color: $grey-6;
 			cursor: $cursor-disabled;
 		}
@@ -158,21 +185,21 @@ label {
 }
 
 .radio-custom {
-	input[type=radio] ~ span:before {
+	input[type="radio"] ~ span:before {
  		content: "\e836";
 	}
 
-	input[type=radio]:checked ~ span:before  {
+	input[type="radio"]:checked ~ span:before  {
 		content: "\e837";
 	}
 }
 
 .checkbox-custom {
-	input[type=checkbox] ~ span:before  {
+	input[type="checkbox"] ~ span:before  {
 		content: "\e835";
 	}
 
-	input[type=checkbox]:checked ~ span:before  {
+	input[type="checkbox"]:checked ~ span:before  {
 		content: "\e834";
 	}
 }
