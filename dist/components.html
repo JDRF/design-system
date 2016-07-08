@@ -1745,18 +1745,97 @@
 		<h2 class="f-item-heading">Forms</h2>
 	</div><div class="f-item-notes" data-f-toggle="notes">
 	<p>The <code>form</code> components are based on Bootstrap's form components combined with our own customizations.</p>
+<p>We are currently using class based validation. These classes must be applied to a container so validation styles can be applied to any form fields, form labels and help text. These classes are: <code>.ds-has-filled, .ds-has-success, .ds-has-danger</code>. There are also the <code>.ds-form-control-success</code> and <code>.ds-form-control-danger</code> classes that can be applied to form controls to enable success and error icons.</p>
+<p>For general descriptions, use the <code>.ds-text-muted</code> class. For error or success messages, use the <code>.ds-text-help</code> class. To give the appearance of a label to text that isn't a semantic label, use the <code>.ds-text-label</code> class. Note that this class should not be used to remove and replace labels with a non-semantic version. Refer to the &quot;Checkboxes with Error&quot; section for a working example.</p>
 <p>For more information on Bootstrap's classes for form layouts, control sizing, validation and so on, refer to <a href="http://v4-alpha.getbootstrap.com/components/forms/" target="_blank">Bootstrap's form documentation</a>.</p>
 
 </div>
 <div class="f-item-preview">
 	<section class="f-section">
+	<h3 class="f-example-title">Text Field</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="ds-form-group">
+				<input type="text" class="ds-form-control" id="phantom-inputtext1" placeholder="First name">
+				<label for="phantom-inputtext1" class="ds-form-control-label">Default <span>Required</span></label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-has-filled">
+				<input type="text" class="ds-form-control" id="phantom-inputtext2" placeholder="First name" value="Frederick">
+				<label for="phantom-inputtext2" class="ds-form-control-label">Filled <span>Required</span></label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-has-success">
+				<input type="text" class="ds-form-control ds-form-control-success" id="phantom-inputtext3" placeholder="First name" value="Frederick">
+				<label for="phantom-inputtext3" class="ds-form-control-label">Valid <span>Required</span></label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-has-danger">
+				<input type="text" class="ds-form-control ds-form-control-danger" id="phantom-inputtext4" placeholder="First name">
+				<label for="phantom-inputtext4" class="ds-form-control-label">Error <span>Required</span></label>
+				<small class="ds-text-help">
+					  Helpful error message.
+					</small>
+			</fieldset>
+			<fieldset class="ds-form-group" disabled>
+				<input type="text" class="ds-form-control" id="phantom-inputtext5" placeholder="First name">
+				<label for="phantom-inputtext5" class="ds-form-control-label">Disabled</label>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;ds-form-group&quot;>
+			&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;inputtext1&quot; placeholder=&quot;First name&quot;>
+			&lt;label for=&quot;inputtext1&quot; class=&quot;ds-form-control-label&quot;>Default &lt;span>Required&lt;/span>&lt;/label>
+	&lt;/fieldset>
+	&lt;fieldset class=&quot;ds-form-group ds-has-filled&quot;>
+			&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;inputtext2&quot; placeholder=&quot;First name&quot; value=&quot;Frederick&quot;>
+			&lt;label for=&quot;inputtext2&quot; class=&quot;ds-form-control-label&quot;>Filled &lt;span>Required&lt;/span>&lt;/label>
+	&lt;/fieldset>
+	&lt;fieldset class=&quot;ds-form-group ds-has-success&quot;>
+			&lt;input type=&quot;text&quot; class=&quot;ds-form-control ds-form-control-success&quot; id=&quot;inputtext3&quot; placeholder=&quot;First name&quot; value=&quot;Frederick&quot;>
+			&lt;label for=&quot;inputtext3&quot; class=&quot;ds-form-control-label&quot;>Valid &lt;span>Required&lt;/span>&lt;/label>
+	&lt;/fieldset>
+	&lt;fieldset class=&quot;ds-form-group ds-has-danger&quot;>
+			&lt;input type=&quot;text&quot; class=&quot;ds-form-control ds-form-control-danger&quot; id=&quot;inputtext4&quot; placeholder=&quot;First name&quot;>
+			&lt;label for=&quot;inputtext4&quot; class=&quot;ds-form-control-label&quot;>Error &lt;span>Required&lt;/span>&lt;/label>
+			&lt;small class=&quot;ds-text-help&quot;>
+			  Helpful error message.
+			&lt;/small>
+	&lt;/fieldset>
+	&lt;fieldset class=&quot;ds-form-group&quot; disabled>
+			&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;inputtext5&quot; placeholder=&quot;First name&quot;>
+			&lt;label for=&quot;inputtext5&quot; class=&quot;ds-form-control-label&quot;>Disabled&lt;/label>
+	&lt;/fieldset>
+&lt;/form></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Textarea</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-7">
+					<label for="phantom-exampleTextarea" class="ds-form-control-label">Your Message <span>Optional</span></label>
+					<textarea class="ds-form-control" id="phantom-exampleTextarea" ds-rows="3" placeholder="Placeholder"></textarea>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;ds-form-group&quot;>
+		&lt;label for=&quot;exampleTextarea&quot; class=&quot;ds-form-control-label&quot;>Textarea&lt;/label>
+		&lt;textarea class=&quot;ds-form-control&quot; id=&quot;exampleTextarea&quot; rows=&quot;3&quot;>&lt;/textarea>
+	&lt;/fieldset>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
 	<h3 class="f-example-title">Email Field</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<label for="phantom-exampleInputEmail1" class="ds-col-md-3 ds-form-control-label">Email Address</label>
-				<div class="ds-col-md-6">
+				<div class="ds-col-md-7">
 					<input type="email" class="ds-form-control" id="phantom-exampleInputEmail1" placeholder="Enter email">
+					<label for="phantom-exampleInputEmail1" class="ds-form-control-label">Email Address</label>
 					<small class="ds-text-muted">We'll never share your email with anyone else.</small>
 				</div>
 			</fieldset>
@@ -1773,13 +1852,34 @@
 </section>
 
 <section class="f-section">
+	<h3 class="f-example-title">Password Field</h3>
+	<div class="f-example">
+		<form>
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-7">
+					<input type="password" class="ds-form-control" id="exampleInputPassword1" placeholder="Enter Password">
+					<label for="exampleInputPassword1" class="ds-form-control-label">Password</label>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;ds-form-group&quot;>
+		&lt;label for=&quot;exampleInputPassword1&quot; class=&quot;ds-form-control-label&quot;>Password&lt;/label>
+		&lt;input type=&quot;password&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Enter Password&quot;>
+	&lt;/fieldset>
+&lt;/form>
+</code></pre>
+</section>
+
+<section class="f-section">
 	<h3 class="f-example-title">Telephone Field</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<label for="phantom-exampleInputTel" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Telephone</label>
-				<div class="ds-col-md-5">
+				<div class="ds-col-md-7">
 					<input type="tel" class="ds-form-control" id="phantom-exampleInputTel" placeholder="Enter phone number">
+					<label for="phantom-exampleInputTel" class="ds-form-control-label">Telephone</label>
 				</div>
 			</fieldset>
 		</form>
@@ -1798,9 +1898,9 @@
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<label for="phantom-exampleInputDate" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Date</label>
-				<div class="ds-col-md-5">
+				<div class="ds-col-md-7">
 					<input type="date" class="ds-form-control" id="phantom-exampleInputDate">
+					<label for="phantom-exampleInputDate" class="ds-form-control-label">Date</label>
 				</div>
 			</fieldset>
 		</form>
@@ -1949,33 +2049,12 @@
 </section>
 
 <section class="f-section">
-	<h3 class="f-example-title">Password Field</h3>
-	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group ds-row">
-				<label for="exampleInputPassword1" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Password</label>
-				<div class="ds-col-md-6">
-					<input type="password" class="ds-form-control" id="exampleInputPassword1" placeholder="Enter Password">
-				</div>
-			</fieldset>
-		</form>
-	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;form>
-	&lt;fieldset class=&quot;ds-form-group&quot;>
-		&lt;label for=&quot;exampleInputPassword1&quot; class=&quot;ds-form-control-label&quot;>Password&lt;/label>
-		&lt;input type=&quot;password&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Enter Password&quot;>
-	&lt;/fieldset>
-&lt;/form>
-</code></pre>
-</section>
-
-<section class="f-section">
 	<h3 class="f-example-title">Select Box</h3>
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<label for="exampleSelect1" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Select Box</label>
-				<div class="ds-col-md-6">
+				<div class="ds-col-md-4">
+					<label for="exampleSelect1" class="ds-form-control-label">Select Box</label>
 					<select class="ds-form-control" id="exampleSelect1">
 					  <option>1</option>
 					  <option>2</option>
@@ -2007,8 +2086,8 @@
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-row">
-				<label for="exampleSelect2" class="ds-col-md-4 ds-col-lg-3 ds-form-control-label">Multiple Select Box</label>
-				<div class="ds-col-md-7">
+				<div class="ds-col-md-4">
+					<label for="exampleSelect2" class="ds-form-control-label">Multiple Select Box</label>
 					<select multiple class="ds-form-control" id="exampleSelect2">
 					  <option>1</option>
 					  <option>2</option>
@@ -2036,50 +2115,8 @@
 </section>
 
 <section class="f-section">
-	<h3 class="f-example-title">Text Field</h3>
-	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group ds-row">
-				<label for="phantom-exampleInputText1" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Text Field</label>
-				<div class="ds-col-md-6">
-					<input type="text" class="ds-form-control" id="phantom-exampleInputText1" placeholder="Enter Text">
-				</div>
-			</fieldset>
-		</form>
-	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;form>
-	&lt;fieldset class=&quot;ds-form-group&quot;>
-		&lt;label for=&quot;exampleInputText1&quot; class=&quot;ds-form-control-label&quot;>Text Field&lt;/label>
-		&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputText1&quot; placeholder=&quot;Enter Text&quot;>
-	&lt;/fieldset>
-&lt;/form>
-</code></pre>
-</section>
-
-<section class="f-section">
-	<h3 class="f-example-title">Textarea</h3>
-	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group ds-row">
-				<label for="phantom-exampleTextarea" class="ds-col-md-3 ds-col-lg-2 ds-form-control-label">Textarea</label>
-				<div class="ds-col-md-6">
-					<textarea class="ds-form-control" id="phantom-exampleTextarea" ds-rows="3"></textarea>
-				</div>
-			</fieldset>
-		</form>
-	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;form>
-	&lt;fieldset class=&quot;ds-form-group&quot;>
-		&lt;label for=&quot;exampleTextarea&quot; class=&quot;ds-form-control-label&quot;>Textarea&lt;/label>
-		&lt;textarea class=&quot;ds-form-control&quot; id=&quot;exampleTextarea&quot; rows=&quot;3&quot;>&lt;/textarea>
-	&lt;/fieldset>
-&lt;/form>
-</code></pre>
-</section>
-
-<section class="f-section">
 	<h3 class="f-example-title">Vertical Radio Options</h3>
-	<p>When using custom radio buttons, the <code class="language-markup">.ds-radio-custom</code> class needs to be added to the parent wrapper with the radio button and span nested inside. View examples below for both horizontal and vertical radio buttons.</p>
+	<p>When using custom radio buttons, the <code class="language-markup">.ds-radio-custom</code> class needs to be added to the parent wrapper with the radio button and a span nested inside. View examples below for both horizontal and vertical radio buttons.</p>
 	<div class="f-example">
 		<form>
 			<p>A vertical set of radios are pictured below.</p>
@@ -2152,43 +2189,38 @@
 
 <section class="f-section">
 	<h3 class="f-example-title">Vertical Checkboxes</h3>
+	<p>When using custom checkboxes, the <code class="language-markup">.ds-checkbox-custom</code> class needs to be added to the parent wrapper with the checkbox and a span nested inside. View examples below for both horizontal and vertical checkboxes.</p>
 	<div class="f-example">
 		<form>
 			<p>Example of vertical checkbox set below:</p>
-			<div class="ds-checkbox">
-				<label>
-					<input type="checkbox" value="option1"> Option 1
-				</label>
-			</div>
-			<div class="ds-checkbox">
-				<label>
-					<input type="checkbox" value="option2"> Option 2
-				</label>
-			</div>
-			<div class="ds-checkbox">
-				<label class="ds-disabled">
-					<input type="checkbox" value="option3" disabled> Option 3 disabled
-				</label>
-			</div>
+			<label class="ds-checkbox ds-checkbox-custom">
+				<input type="checkbox" value="option1" checked>
+				<span>Option 1</span>
+			</label>
+			<label class="ds-checkbox ds-checkbox-custom">
+				<input type="checkbox" value="option2">
+				<span>Option 2</span>
+			</label>
+			<label class="ds-checkbox ds-checkbox-custom ds-disabled">
+				<input type="checkbox" value="option3" disabled>
+				<span>Option 3 disabled</span>
+			</label>
 		</form>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;form>
 	&lt;p>Example of vertical checkbox set below:&lt;/p>
-	&lt;div class=&quot;ds-checkbox&quot;>
-		&lt;label>
-			&lt;input type=&quot;checkbox&quot; value=&quot;option1&quot;> Option 1
-		&lt;/label>
-	&lt;/div>
-	&lt;div class=&quot;ds-checkbox&quot;>
-		&lt;label>
-			&lt;input type=&quot;checkbox&quot; value=&quot;option2&quot;> Option 2
-		&lt;/label>
-	&lt;/div>
-	&lt;div class=&quot;ds-checkbox&quot;>
-		&lt;label class=&quot;ds-disabled&quot;>
-			&lt;input type=&quot;checkbox&quot; value=&quot;option3&quot; disabled> Option 3 disabled
-		&lt;/label>
-	&lt;/div>
+	&lt;label class=&quot;ds-checkbox ds-checkbox-custom&quot;>
+		&lt;input type=&quot;checkbox&quot; value=&quot;option1&quot; checked>
+		&lt;span>Option 1&lt;/span>
+	&lt;/label>
+	&lt;label class=&quot;ds-checkbox ds-checkbox-custom&quot;>
+		&lt;input type=&quot;checkbox&quot; value=&quot;option2&quot;>
+		&lt;span>Option 2&lt;/span>
+	&lt;/label>
+	&lt;label class=&quot;ds-checkbox ds-checkbox-custom ds-disabled&quot;>
+		&lt;input type=&quot;checkbox&quot; value=&quot;option3&quot; disabled>
+		&lt;span>Option 3 disabled&lt;/span>
+	&lt;/label>
 &lt;/form></code></pre>
 </section>
 
@@ -2197,28 +2229,76 @@
 	<div class="f-example">
 		<form>
 			<p>Example of horizontal checkbox set below:</p>
-			<label class="ds-checkbox-inline">
-				<input type="checkbox" value="option1"> Option 1
+			<label class="ds-checkbox-custom ds-checkbox-inline">
+				<input type="checkbox" value="option1" checked>
+				<span>Option 1</span>
 			</label>
-			<label class="ds-checkbox-inline">
-				<input type="checkbox" value="option2"> Option 2
+			<label class="ds-checkbox-custom ds-checkbox-inline">
+				<input type="checkbox" value="option2">
+				<span>Option 2</span>
 			</label>
-			<label class="ds-checkbox-inline ds-disabled">
-				<input type="checkbox" value="option3" disabled> Option 3 disabled
+			<label class="ds-checkbox-custom ds-checkbox-inline ds-disabled">
+				<input type="checkbox" value="option3" disabled>
+				<span>Option 3 disabled</span>
 			</label>
 		</form>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;form>
 	&lt;p>Example of horizontal checkbox set below:&lt;/p>
-	&lt;label class=&quot;ds-checkbox-inline&quot;>
-		&lt;input type=&quot;checkbox&quot; value=&quot;option1&quot;> Option 1
+	&lt;label class=&quot;ds-checkbox-custom ds-checkbox-inline&quot;>
+		&lt;input type=&quot;checkbox&quot; value=&quot;option1&quot; checked>
+		&lt;span>Option 1&lt;/span>
 	&lt;/label>
-	&lt;label class=&quot;ds-checkbox-inline&quot;>
-		&lt;input type=&quot;checkbox&quot; value=&quot;option2&quot;> Option 2
+	&lt;label class=&quot;ds-checkbox-custom ds-checkbox-inline&quot;>
+		&lt;input type=&quot;checkbox&quot; value=&quot;option2&quot;>
+		&lt;span>Option 2&lt;/span>
 	&lt;/label>
-	&lt;label class=&quot;ds-checkbox-inline ds-disabled&quot;>
-		&lt;input type=&quot;checkbox&quot; value=&quot;option3&quot; disabled> Option 3 disabled
+	&lt;label class=&quot;ds-checkbox-custom ds-checkbox-inline ds-disabled&quot;>
+		&lt;input type=&quot;checkbox&quot; value=&quot;option3&quot; disabled>
+		&lt;span>Option 3 disabled&lt;/span>
 	&lt;/label>
+&lt;/form></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Checkboxes with Error</h3>
+	<div class="f-example">
+		<form>
+			<div class="ds-has-danger">
+				<p class="ds-text-label">What is your jersey size? <span class="ds-text-required">(Required)</span></p>
+				<p class="ds-text-help">This field is required.</p>
+				<label class="ds-checkbox ds-checkbox-custom">
+					<input type="checkbox" value="option1">
+					<span>Small</span>
+				</label>
+				<label class="ds-checkbox ds-checkbox-custom">
+					<input type="checkbox" value="option2">
+					<span>Medium</span>
+				</label>
+				<label class="ds-checkbox ds-checkbox-custom">
+					<input type="checkbox" value="option3">
+					<span>Large</span>
+				</label>
+			</div>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;div class=&quot;ds-has-danger&quot;>
+		&lt;p class=&quot;ds-text-label&quot;>What is your jersey size? &lt;span class=&quot;ds-text-required&quot;>(Required)&lt;/span>&lt;/p>
+		&lt;p class=&quot;ds-text-help&quot;>This field is required.&lt;/p>
+		&lt;label class=&quot;ds-checkbox ds-checkbox-custom&quot;>
+			&lt;input type=&quot;checkbox&quot; value=&quot;option1&quot;>
+			&lt;span>Small&lt;/span>
+		&lt;/label>
+		&lt;label class=&quot;ds-checkbox ds-checkbox-custom&quot;>
+			&lt;input type=&quot;checkbox&quot; value=&quot;option2&quot;>
+			&lt;span>Medium&lt;/span>
+		&lt;/label>
+		&lt;label class=&quot;ds-checkbox ds-checkbox-custom&quot;>
+			&lt;input type=&quot;checkbox&quot; value=&quot;option3&quot;>
+			&lt;span>Large&lt;/span>
+		&lt;/label>
+	&lt;/div>
 &lt;/form></code></pre>
 </section>
 
@@ -2256,11 +2336,11 @@
 	<div class="f-example">
 		<form class="ds-form-inline">
 			<div class="ds-form-group">
-				<label class="sr-only" for="exampleInputEmail3">Email address</label>
+				<label class="ds-sr-only" for="exampleInputEmail3">Email address</label>
 				<input type="email" class="ds-form-control" id="exampleInputEmail3" placeholder="Enter email">
 			</div>
 			<div class="ds-form-group">
-				<label class="sr-only" for="exampleInputPassword3">Password</label>
+				<label class="ds-sr-only" for="exampleInputPassword3">Password</label>
 				<input type="password" class="ds-form-control" id="exampleInputPassword3" placeholder="Password">
 			</div>
 			<div class="checkbox">
@@ -2292,13 +2372,90 @@
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Text Field&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;ds-form-group&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;phantom-inputtext1&quot; placeholder=&quot;First name&quot;&gt;
+				&lt;label for=&quot;phantom-inputtext1&quot; class=&quot;ds-form-control-label&quot;&gt;Default &lt;span&gt;Required&lt;/span&gt;&lt;/label&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-has-filled&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;phantom-inputtext2&quot; placeholder=&quot;First name&quot; value=&quot;Frederick&quot;&gt;
+				&lt;label for=&quot;phantom-inputtext2&quot; class=&quot;ds-form-control-label&quot;&gt;Filled &lt;span&gt;Required&lt;/span&gt;&lt;/label&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-has-success&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;ds-form-control ds-form-control-success&quot; id=&quot;phantom-inputtext3&quot; placeholder=&quot;First name&quot; value=&quot;Frederick&quot;&gt;
+				&lt;label for=&quot;phantom-inputtext3&quot; class=&quot;ds-form-control-label&quot;&gt;Valid &lt;span&gt;Required&lt;/span&gt;&lt;/label&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-has-danger&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;ds-form-control ds-form-control-danger&quot; id=&quot;phantom-inputtext4&quot; placeholder=&quot;First name&quot;&gt;
+				&lt;label for=&quot;phantom-inputtext4&quot; class=&quot;ds-form-control-label&quot;&gt;Error &lt;span&gt;Required&lt;/span&gt;&lt;/label&gt;
+				&lt;small class=&quot;ds-text-help&quot;&gt;
+					  Helpful error message.
+					&lt;/small&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;ds-form-group&quot; disabled&gt;
+				&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;phantom-inputtext5&quot; placeholder=&quot;First name&quot;&gt;
+				&lt;label for=&quot;phantom-inputtext5&quot; class=&quot;ds-form-control-label&quot;&gt;Disabled&lt;/label&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
+			&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;inputtext1&amp;quot; placeholder=&amp;quot;First name&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;inputtext1&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Default &amp;lt;span&gt;Required&amp;lt;/span&gt;&amp;lt;/label&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-has-filled&amp;quot;&gt;
+			&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;inputtext2&amp;quot; placeholder=&amp;quot;First name&amp;quot; value=&amp;quot;Frederick&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;inputtext2&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Filled &amp;lt;span&gt;Required&amp;lt;/span&gt;&amp;lt;/label&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-has-success&amp;quot;&gt;
+			&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control ds-form-control-success&amp;quot; id=&amp;quot;inputtext3&amp;quot; placeholder=&amp;quot;First name&amp;quot; value=&amp;quot;Frederick&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;inputtext3&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Valid &amp;lt;span&gt;Required&amp;lt;/span&gt;&amp;lt;/label&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-has-danger&amp;quot;&gt;
+			&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control ds-form-control-danger&amp;quot; id=&amp;quot;inputtext4&amp;quot; placeholder=&amp;quot;First name&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;inputtext4&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Error &amp;lt;span&gt;Required&amp;lt;/span&gt;&amp;lt;/label&gt;
+			&amp;lt;small class=&amp;quot;ds-text-help&amp;quot;&gt;
+			  Helpful error message.
+			&amp;lt;/small&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot; disabled&gt;
+			&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;inputtext5&amp;quot; placeholder=&amp;quot;First name&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;inputtext5&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Disabled&amp;lt;/label&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Textarea&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
+				&lt;div class=&quot;ds-col-md-7&quot;&gt;
+					&lt;label for=&quot;phantom-exampleTextarea&quot; class=&quot;ds-form-control-label&quot;&gt;Your Message &lt;span&gt;Optional&lt;/span&gt;&lt;/label&gt;
+					&lt;textarea class=&quot;ds-form-control&quot; id=&quot;phantom-exampleTextarea&quot; ds-rows=&quot;3&quot; placeholder=&quot;Placeholder&quot;&gt;&lt;/textarea&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleTextarea&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Textarea&amp;lt;/label&gt;
+		&amp;lt;textarea class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleTextarea&amp;quot; rows=&amp;quot;3&amp;quot;&gt;&amp;lt;/textarea&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Email Field&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;form&gt;
 			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
-				&lt;label for=&quot;phantom-exampleInputEmail1&quot; class=&quot;ds-col-md-3 ds-form-control-label&quot;&gt;Email Address&lt;/label&gt;
-				&lt;div class=&quot;ds-col-md-6&quot;&gt;
+				&lt;div class=&quot;ds-col-md-7&quot;&gt;
 					&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;phantom-exampleInputEmail1&quot; placeholder=&quot;Enter email&quot;&gt;
+					&lt;label for=&quot;phantom-exampleInputEmail1&quot; class=&quot;ds-form-control-label&quot;&gt;Email Address&lt;/label&gt;
 					&lt;small class=&quot;ds-text-muted&quot;&gt;We&#x27;ll never share your email with anyone else.&lt;/small&gt;
 				&lt;/div&gt;
 			&lt;/fieldset&gt;
@@ -2315,13 +2472,34 @@
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Password Field&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
+				&lt;div class=&quot;ds-col-md-7&quot;&gt;
+					&lt;input type=&quot;password&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Enter Password&quot;&gt;
+					&lt;label for=&quot;exampleInputPassword1&quot; class=&quot;ds-form-control-label&quot;&gt;Password&lt;/label&gt;
+				&lt;/div&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputPassword1&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Password&amp;lt;/label&gt;
+		&amp;lt;input type=&amp;quot;password&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputPassword1&amp;quot; placeholder=&amp;quot;Enter Password&amp;quot;&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Telephone Field&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;form&gt;
 			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
-				&lt;label for=&quot;phantom-exampleInputTel&quot; class=&quot;ds-col-md-3 ds-col-lg-2 ds-form-control-label&quot;&gt;Telephone&lt;/label&gt;
-				&lt;div class=&quot;ds-col-md-5&quot;&gt;
+				&lt;div class=&quot;ds-col-md-7&quot;&gt;
 					&lt;input type=&quot;tel&quot; class=&quot;ds-form-control&quot; id=&quot;phantom-exampleInputTel&quot; placeholder=&quot;Enter phone number&quot;&gt;
+					&lt;label for=&quot;phantom-exampleInputTel&quot; class=&quot;ds-form-control-label&quot;&gt;Telephone&lt;/label&gt;
 				&lt;/div&gt;
 			&lt;/fieldset&gt;
 		&lt;/form&gt;
@@ -2340,9 +2518,9 @@
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;form&gt;
 			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
-				&lt;label for=&quot;phantom-exampleInputDate&quot; class=&quot;ds-col-md-3 ds-col-lg-2 ds-form-control-label&quot;&gt;Date&lt;/label&gt;
-				&lt;div class=&quot;ds-col-md-5&quot;&gt;
+				&lt;div class=&quot;ds-col-md-7&quot;&gt;
 					&lt;input type=&quot;date&quot; class=&quot;ds-form-control&quot; id=&quot;phantom-exampleInputDate&quot;&gt;
+					&lt;label for=&quot;phantom-exampleInputDate&quot; class=&quot;ds-form-control-label&quot;&gt;Date&lt;/label&gt;
 				&lt;/div&gt;
 			&lt;/fieldset&gt;
 		&lt;/form&gt;
@@ -2491,33 +2669,12 @@
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
-	&lt;h3 class=&quot;f-example-title&quot;&gt;Password Field&lt;/h3&gt;
-	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;form&gt;
-			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
-				&lt;label for=&quot;exampleInputPassword1&quot; class=&quot;ds-col-md-3 ds-col-lg-2 ds-form-control-label&quot;&gt;Password&lt;/label&gt;
-				&lt;div class=&quot;ds-col-md-6&quot;&gt;
-					&lt;input type=&quot;password&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Enter Password&quot;&gt;
-				&lt;/div&gt;
-			&lt;/fieldset&gt;
-		&lt;/form&gt;
-	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
-	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label for=&amp;quot;exampleInputPassword1&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Password&amp;lt;/label&gt;
-		&amp;lt;input type=&amp;quot;password&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputPassword1&amp;quot; placeholder=&amp;quot;Enter Password&amp;quot;&gt;
-	&amp;lt;/fieldset&gt;
-&amp;lt;/form&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/section&gt;
-
-&lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Select Box&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;form&gt;
 			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
-				&lt;label for=&quot;exampleSelect1&quot; class=&quot;ds-col-md-3 ds-col-lg-2 ds-form-control-label&quot;&gt;Select Box&lt;/label&gt;
-				&lt;div class=&quot;ds-col-md-6&quot;&gt;
+				&lt;div class=&quot;ds-col-md-4&quot;&gt;
+					&lt;label for=&quot;exampleSelect1&quot; class=&quot;ds-form-control-label&quot;&gt;Select Box&lt;/label&gt;
 					&lt;select class=&quot;ds-form-control&quot; id=&quot;exampleSelect1&quot;&gt;
 					  &lt;option&gt;1&lt;/option&gt;
 					  &lt;option&gt;2&lt;/option&gt;
@@ -2549,8 +2706,8 @@
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;form&gt;
 			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
-				&lt;label for=&quot;exampleSelect2&quot; class=&quot;ds-col-md-4 ds-col-lg-3 ds-form-control-label&quot;&gt;Multiple Select Box&lt;/label&gt;
-				&lt;div class=&quot;ds-col-md-7&quot;&gt;
+				&lt;div class=&quot;ds-col-md-4&quot;&gt;
+					&lt;label for=&quot;exampleSelect2&quot; class=&quot;ds-form-control-label&quot;&gt;Multiple Select Box&lt;/label&gt;
 					&lt;select multiple class=&quot;ds-form-control&quot; id=&quot;exampleSelect2&quot;&gt;
 					  &lt;option&gt;1&lt;/option&gt;
 					  &lt;option&gt;2&lt;/option&gt;
@@ -2578,50 +2735,8 @@
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
-	&lt;h3 class=&quot;f-example-title&quot;&gt;Text Field&lt;/h3&gt;
-	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;form&gt;
-			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
-				&lt;label for=&quot;phantom-exampleInputText1&quot; class=&quot;ds-col-md-3 ds-col-lg-2 ds-form-control-label&quot;&gt;Text Field&lt;/label&gt;
-				&lt;div class=&quot;ds-col-md-6&quot;&gt;
-					&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;phantom-exampleInputText1&quot; placeholder=&quot;Enter Text&quot;&gt;
-				&lt;/div&gt;
-			&lt;/fieldset&gt;
-		&lt;/form&gt;
-	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
-	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label for=&amp;quot;exampleInputText1&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Text Field&amp;lt;/label&gt;
-		&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputText1&amp;quot; placeholder=&amp;quot;Enter Text&amp;quot;&gt;
-	&amp;lt;/fieldset&gt;
-&amp;lt;/form&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/section&gt;
-
-&lt;section class=&quot;f-section&quot;&gt;
-	&lt;h3 class=&quot;f-example-title&quot;&gt;Textarea&lt;/h3&gt;
-	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;form&gt;
-			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
-				&lt;label for=&quot;phantom-exampleTextarea&quot; class=&quot;ds-col-md-3 ds-col-lg-2 ds-form-control-label&quot;&gt;Textarea&lt;/label&gt;
-				&lt;div class=&quot;ds-col-md-6&quot;&gt;
-					&lt;textarea class=&quot;ds-form-control&quot; id=&quot;phantom-exampleTextarea&quot; ds-rows=&quot;3&quot;&gt;&lt;/textarea&gt;
-				&lt;/div&gt;
-			&lt;/fieldset&gt;
-		&lt;/form&gt;
-	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
-	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label for=&amp;quot;exampleTextarea&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Textarea&amp;lt;/label&gt;
-		&amp;lt;textarea class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleTextarea&amp;quot; rows=&amp;quot;3&amp;quot;&gt;&amp;lt;/textarea&gt;
-	&amp;lt;/fieldset&gt;
-&amp;lt;/form&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/section&gt;
-
-&lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Vertical Radio Options&lt;/h3&gt;
-	&lt;p&gt;When using custom radio buttons, the &lt;code class=&quot;language-markup&quot;&gt;.ds-radio-custom&lt;/code&gt; class needs to be added to the parent wrapper with the radio button and span nested inside. View examples below for both horizontal and vertical radio buttons.&lt;/p&gt;
+	&lt;p&gt;When using custom radio buttons, the &lt;code class=&quot;language-markup&quot;&gt;.ds-radio-custom&lt;/code&gt; class needs to be added to the parent wrapper with the radio button and a span nested inside. View examples below for both horizontal and vertical radio buttons.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;form&gt;
 			&lt;p&gt;A vertical set of radios are pictured below.&lt;/p&gt;
@@ -2694,43 +2809,38 @@
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;Vertical Checkboxes&lt;/h3&gt;
+	&lt;p&gt;When using custom checkboxes, the &lt;code class=&quot;language-markup&quot;&gt;.ds-checkbox-custom&lt;/code&gt; class needs to be added to the parent wrapper with the checkbox and a span nested inside. View examples below for both horizontal and vertical checkboxes.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;form&gt;
 			&lt;p&gt;Example of vertical checkbox set below:&lt;/p&gt;
-			&lt;div class=&quot;ds-checkbox&quot;&gt;
-				&lt;label&gt;
-					&lt;input type=&quot;checkbox&quot; value=&quot;option1&quot;&gt; Option 1
-				&lt;/label&gt;
-			&lt;/div&gt;
-			&lt;div class=&quot;ds-checkbox&quot;&gt;
-				&lt;label&gt;
-					&lt;input type=&quot;checkbox&quot; value=&quot;option2&quot;&gt; Option 2
-				&lt;/label&gt;
-			&lt;/div&gt;
-			&lt;div class=&quot;ds-checkbox&quot;&gt;
-				&lt;label class=&quot;ds-disabled&quot;&gt;
-					&lt;input type=&quot;checkbox&quot; value=&quot;option3&quot; disabled&gt; Option 3 disabled
-				&lt;/label&gt;
-			&lt;/div&gt;
+			&lt;label class=&quot;ds-checkbox ds-checkbox-custom&quot;&gt;
+				&lt;input type=&quot;checkbox&quot; value=&quot;option1&quot; checked&gt;
+				&lt;span&gt;Option 1&lt;/span&gt;
+			&lt;/label&gt;
+			&lt;label class=&quot;ds-checkbox ds-checkbox-custom&quot;&gt;
+				&lt;input type=&quot;checkbox&quot; value=&quot;option2&quot;&gt;
+				&lt;span&gt;Option 2&lt;/span&gt;
+			&lt;/label&gt;
+			&lt;label class=&quot;ds-checkbox ds-checkbox-custom ds-disabled&quot;&gt;
+				&lt;input type=&quot;checkbox&quot; value=&quot;option3&quot; disabled&gt;
+				&lt;span&gt;Option 3 disabled&lt;/span&gt;
+			&lt;/label&gt;
 		&lt;/form&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
 	&amp;lt;p&gt;Example of vertical checkbox set below:&amp;lt;/p&gt;
-	&amp;lt;div class=&amp;quot;ds-checkbox&amp;quot;&gt;
-		&amp;lt;label&gt;
-			&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option1&amp;quot;&gt; Option 1
-		&amp;lt;/label&gt;
-	&amp;lt;/div&gt;
-	&amp;lt;div class=&amp;quot;ds-checkbox&amp;quot;&gt;
-		&amp;lt;label&gt;
-			&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option2&amp;quot;&gt; Option 2
-		&amp;lt;/label&gt;
-	&amp;lt;/div&gt;
-	&amp;lt;div class=&amp;quot;ds-checkbox&amp;quot;&gt;
-		&amp;lt;label class=&amp;quot;ds-disabled&amp;quot;&gt;
-			&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option3&amp;quot; disabled&gt; Option 3 disabled
-		&amp;lt;/label&gt;
-	&amp;lt;/div&gt;
+	&amp;lt;label class=&amp;quot;ds-checkbox ds-checkbox-custom&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option1&amp;quot; checked&gt;
+		&amp;lt;span&gt;Option 1&amp;lt;/span&gt;
+	&amp;lt;/label&gt;
+	&amp;lt;label class=&amp;quot;ds-checkbox ds-checkbox-custom&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option2&amp;quot;&gt;
+		&amp;lt;span&gt;Option 2&amp;lt;/span&gt;
+	&amp;lt;/label&gt;
+	&amp;lt;label class=&amp;quot;ds-checkbox ds-checkbox-custom ds-disabled&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option3&amp;quot; disabled&gt;
+		&amp;lt;span&gt;Option 3 disabled&amp;lt;/span&gt;
+	&amp;lt;/label&gt;
 &amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
@@ -2739,28 +2849,76 @@
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;form&gt;
 			&lt;p&gt;Example of horizontal checkbox set below:&lt;/p&gt;
-			&lt;label class=&quot;ds-checkbox-inline&quot;&gt;
-				&lt;input type=&quot;checkbox&quot; value=&quot;option1&quot;&gt; Option 1
+			&lt;label class=&quot;ds-checkbox-custom ds-checkbox-inline&quot;&gt;
+				&lt;input type=&quot;checkbox&quot; value=&quot;option1&quot; checked&gt;
+				&lt;span&gt;Option 1&lt;/span&gt;
 			&lt;/label&gt;
-			&lt;label class=&quot;ds-checkbox-inline&quot;&gt;
-				&lt;input type=&quot;checkbox&quot; value=&quot;option2&quot;&gt; Option 2
+			&lt;label class=&quot;ds-checkbox-custom ds-checkbox-inline&quot;&gt;
+				&lt;input type=&quot;checkbox&quot; value=&quot;option2&quot;&gt;
+				&lt;span&gt;Option 2&lt;/span&gt;
 			&lt;/label&gt;
-			&lt;label class=&quot;ds-checkbox-inline ds-disabled&quot;&gt;
-				&lt;input type=&quot;checkbox&quot; value=&quot;option3&quot; disabled&gt; Option 3 disabled
+			&lt;label class=&quot;ds-checkbox-custom ds-checkbox-inline ds-disabled&quot;&gt;
+				&lt;input type=&quot;checkbox&quot; value=&quot;option3&quot; disabled&gt;
+				&lt;span&gt;Option 3 disabled&lt;/span&gt;
 			&lt;/label&gt;
 		&lt;/form&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
 	&amp;lt;p&gt;Example of horizontal checkbox set below:&amp;lt;/p&gt;
-	&amp;lt;label class=&amp;quot;ds-checkbox-inline&amp;quot;&gt;
-		&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option1&amp;quot;&gt; Option 1
+	&amp;lt;label class=&amp;quot;ds-checkbox-custom ds-checkbox-inline&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option1&amp;quot; checked&gt;
+		&amp;lt;span&gt;Option 1&amp;lt;/span&gt;
 	&amp;lt;/label&gt;
-	&amp;lt;label class=&amp;quot;ds-checkbox-inline&amp;quot;&gt;
-		&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option2&amp;quot;&gt; Option 2
+	&amp;lt;label class=&amp;quot;ds-checkbox-custom ds-checkbox-inline&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option2&amp;quot;&gt;
+		&amp;lt;span&gt;Option 2&amp;lt;/span&gt;
 	&amp;lt;/label&gt;
-	&amp;lt;label class=&amp;quot;ds-checkbox-inline ds-disabled&amp;quot;&gt;
-		&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option3&amp;quot; disabled&gt; Option 3 disabled
+	&amp;lt;label class=&amp;quot;ds-checkbox-custom ds-checkbox-inline ds-disabled&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option3&amp;quot; disabled&gt;
+		&amp;lt;span&gt;Option 3 disabled&amp;lt;/span&gt;
 	&amp;lt;/label&gt;
+&amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Checkboxes with Error&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;div class=&quot;ds-has-danger&quot;&gt;
+				&lt;p class=&quot;ds-text-label&quot;&gt;What is your jersey size? &lt;span class=&quot;ds-text-required&quot;&gt;(Required)&lt;/span&gt;&lt;/p&gt;
+				&lt;p class=&quot;ds-text-help&quot;&gt;This field is required.&lt;/p&gt;
+				&lt;label class=&quot;ds-checkbox ds-checkbox-custom&quot;&gt;
+					&lt;input type=&quot;checkbox&quot; value=&quot;option1&quot;&gt;
+					&lt;span&gt;Small&lt;/span&gt;
+				&lt;/label&gt;
+				&lt;label class=&quot;ds-checkbox ds-checkbox-custom&quot;&gt;
+					&lt;input type=&quot;checkbox&quot; value=&quot;option2&quot;&gt;
+					&lt;span&gt;Medium&lt;/span&gt;
+				&lt;/label&gt;
+				&lt;label class=&quot;ds-checkbox ds-checkbox-custom&quot;&gt;
+					&lt;input type=&quot;checkbox&quot; value=&quot;option3&quot;&gt;
+					&lt;span&gt;Large&lt;/span&gt;
+				&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;div class=&amp;quot;ds-has-danger&amp;quot;&gt;
+		&amp;lt;p class=&amp;quot;ds-text-label&amp;quot;&gt;What is your jersey size? &amp;lt;span class=&amp;quot;ds-text-required&amp;quot;&gt;(Required)&amp;lt;/span&gt;&amp;lt;/p&gt;
+		&amp;lt;p class=&amp;quot;ds-text-help&amp;quot;&gt;This field is required.&amp;lt;/p&gt;
+		&amp;lt;label class=&amp;quot;ds-checkbox ds-checkbox-custom&amp;quot;&gt;
+			&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option1&amp;quot;&gt;
+			&amp;lt;span&gt;Small&amp;lt;/span&gt;
+		&amp;lt;/label&gt;
+		&amp;lt;label class=&amp;quot;ds-checkbox ds-checkbox-custom&amp;quot;&gt;
+			&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option2&amp;quot;&gt;
+			&amp;lt;span&gt;Medium&amp;lt;/span&gt;
+		&amp;lt;/label&gt;
+		&amp;lt;label class=&amp;quot;ds-checkbox ds-checkbox-custom&amp;quot;&gt;
+			&amp;lt;input type=&amp;quot;checkbox&amp;quot; value=&amp;quot;option3&amp;quot;&gt;
+			&amp;lt;span&gt;Large&amp;lt;/span&gt;
+		&amp;lt;/label&gt;
+	&amp;lt;/div&gt;
 &amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
@@ -2798,11 +2956,11 @@
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;form class=&quot;ds-form-inline&quot;&gt;
 			&lt;div class=&quot;ds-form-group&quot;&gt;
-				&lt;label class=&quot;sr-only&quot; for=&quot;exampleInputEmail3&quot;&gt;Email address&lt;/label&gt;
+				&lt;label class=&quot;ds-sr-only&quot; for=&quot;exampleInputEmail3&quot;&gt;Email address&lt;/label&gt;
 				&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputEmail3&quot; placeholder=&quot;Enter email&quot;&gt;
 			&lt;/div&gt;
 			&lt;div class=&quot;ds-form-group&quot;&gt;
-				&lt;label class=&quot;sr-only&quot; for=&quot;exampleInputPassword3&quot;&gt;Password&lt;/label&gt;
+				&lt;label class=&quot;ds-sr-only&quot; for=&quot;exampleInputPassword3&quot;&gt;Password&lt;/label&gt;
 				&lt;input type=&quot;password&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputPassword3&quot; placeholder=&quot;Password&quot;&gt;
 			&lt;/div&gt;
 			&lt;div class=&quot;checkbox&quot;&gt;
