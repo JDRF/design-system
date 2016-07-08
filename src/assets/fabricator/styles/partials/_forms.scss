@@ -1,5 +1,7 @@
 .f-example {
 	.ds-form-group {
-		max-width: 304px;
+		&:not(.ds-checkbox-group) {
+			max-width: 304px;
+		}
 	}
 }
