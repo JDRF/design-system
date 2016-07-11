@@ -3,23 +3,20 @@
 /* Bootstrap overwrites: forms.scss */
 
 .form-inline {
-	.form-group {
-		margin-bottom: 1rem;
-		width: 100%;
-
-		@include media-breakpoint-up(md) {
-			width: auto;
+	&:not(.ds-row) {
+		.form-group {
+			@include media-breakpoint-up(md) {
+				width: auto;
+			}
 		}
 	}
 
-	.form-control {
-		display: block;
-		width: 100%;
+	.form-group {
+		margin-bottom: 1rem;
+	}
 
-		@include media-breakpoint-up(md) {
-			display: inline-block;
-			width: auto;
-		}
+	.form-control {
+		width: 100%;
 	}
 }
 
