@@ -5343,6 +5343,7 @@ label.ds-disabled {
   position: relative;
   padding-left: 2rem;
   text-align: left;
+  cursor: pointer;
 }
 
 .ds-radio-custom input[type="radio"] ~ span:before,
