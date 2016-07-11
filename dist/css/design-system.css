@@ -5026,21 +5026,21 @@ input[type="checkbox"].ds-disabled {
 .ds-has-success.ds-checkbox label,
 .ds-has-success.ds-radio-inline label,
 .ds-has-success.ds-checkbox-inline label {
-  color: #e0e0e0;
+  color: #009456;
 }
 
 .ds-has-success .ds-form-control {
-  border-color: #e0e0e0;
+  border-color: #009456;
 }
 
 .ds-has-success .ds-input-group-addon {
-  color: #e0e0e0;
-  border-color: #e0e0e0;
-  background-color: white;
+  color: #009456;
+  border-color: #009456;
+  background-color: #61ffbd;
 }
 
 .ds-has-success .ds-form-control-feedback {
-  color: #e0e0e0;
+  color: #009456;
 }
 
 .ds-has-success .ds-form-control-success {
@@ -5200,9 +5200,6 @@ input[type="checkbox"].ds-disabled {
 }
 
 .ds-form-control-label {
-  position: absolute;
-  top: 0;
-  left: 0;
   font-family: "Gotham Medium", sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -5238,6 +5235,7 @@ fieldset:disabled .ds-form-control-label {
 
 .ds-form-control-label > span {
   font-family: "Gotham Book Italic", sans-serif;
+  font-style: italic;
   color: #757575;
   float: right;
 }
@@ -5268,14 +5266,27 @@ fieldset:disabled .ds-form-control {
   color: #0073cf;
 }
 
+label.ds-form-control-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .ds-disabled label,
 label.ds-disabled {
   color: #9e9e9e;
 }
 
-.ds-text-required {
-  font-family: "Gotham Book", sans-serif;
-  color: #757575;
+.ds-has-danger .ds-disabled label,
+.ds-has-success .ds-disabled label,
+.ds-has-danger label.ds-disabled,
+.ds-has-success label.ds-disabled {
+  color: #9e9e9e;
+}
+
+.ds-has-danger label.ds-checkbox-custom:not(.ds-disabled),
+.ds-has-success label.ds-checkbox-custom:not(.ds-disabled) {
+  color: #212121;
 }
 
 .ds-text-help,
@@ -5286,6 +5297,15 @@ label.ds-disabled {
 
 .ds-has-danger .ds-text-label {
   color: #d7006d;
+}
+
+.ds-has-success .ds-text-label {
+  color: #009456;
+}
+
+.ds-text-label span {
+  font-family: "Gotham Book", sans-serif;
+  color: #757575;
 }
 
 .ds-radio-inline + .ds-radio-inline {
@@ -5370,6 +5390,37 @@ label.ds-disabled {
 
 .ds-checkbox-custom input[type="checkbox"]:checked ~ span:before {
   content: "\e834";
+}
+
+/*
+* Place icons before "fake" labels in validation
+* Checkbox groups
+*/
+
+.ds-checkbox-group.ds-has-danger .ds-text-help,
+.ds-checkbox-group.ds-has-success .ds-text-help {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.ds-checkbox-group.ds-has-danger .ds-text-help:before,
+.ds-checkbox-group.ds-has-success .ds-text-help:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  font-family: 'Material Icons';
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.ds-checkbox-group.ds-has-danger .ds-text-help:before {
+  content: "\e000";
+}
+
+.ds-checkbox-group.ds-has-success .ds-text-help:before {
+  content: "\e5ca";
 }
 
 /* Bootstrap overwrites: buttons.scss */
@@ -6800,8 +6851,8 @@ input[type="button"].ds-btn-block {
 }
 
 .ds-card-success {
-  background-color: #e0e0e0;
-  border-color: #e0e0e0;
+  background-color: #009456;
+  border-color: #009456;
 }
 
 .ds-card-info {
@@ -8186,12 +8237,12 @@ a.ds-text-primary:hover {
 }
 
 .ds-text-success {
-  color: #e0e0e0 !important;
+  color: #009456 !important;
 }
 
 a.ds-text-success:focus,
 a.ds-text-success:hover {
-  color: #c7c7c7;
+  color: #006138;
 }
 
 .ds-text-info {
@@ -8244,12 +8295,12 @@ a.ds-bg-primary:hover {
 
 .ds-bg-success {
   color: #fff !important;
-  background-color: #e0e0e0 !important;
+  background-color: #009456 !important;
 }
 
 a.ds-bg-success:focus,
 a.ds-bg-success:hover {
-  background-color: #c7c7c7;
+  background-color: #006138;
 }
 
 .ds-bg-info {
