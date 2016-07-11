@@ -28,9 +28,6 @@
 }
 
 .form-control-label {
-	position: absolute;
-	top: 0;
-	left: 0;
 	font-family: $font-medium;
 	font-size: $input-label-font-size;
 	line-height: $input-label-line-height;
@@ -60,6 +57,7 @@
 
 	> span {
 		font-family: $font-italic;
+		font-style: italic;
 		color: $grey-7;
 		float: right;
 	}
@@ -92,15 +90,30 @@
 }
 
 label {
+	&.form-control-label {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
 	.disabled &,
 	&.disabled {
 		color: $grey-6;
-	}
-}
 
-.text-required {
-	font-family: $font-regular;
-	color: $grey-7;
+		.has-danger &,
+		.has-success & {
+			color: $grey-6;
+		}
+	}
+
+	&.checkbox-custom {
+		&:not(.ds-disabled) {
+			.has-danger &,
+			.has-success & {
+				color: $jdrf-black;
+			}
+		}
+	}
 }
 
 .text-help,
@@ -112,6 +125,15 @@ label {
 .text-label {
 	.has-danger & {
 		color: $brand-danger;
+	}
+
+	.has-success & {
+		color: $brand-success;
+	}
+
+	span {
+		font-family: $font-regular;
+		color: $grey-7;
 	}
 }
 
@@ -193,5 +215,47 @@ label {
 
 	input[type="checkbox"]:checked ~ span:before  {
 		content: "\e834";
+	}
+}
+
+/*
+* Place icons before "fake" labels in validation
+* Checkbox groups
+*/
+.checkbox-group {
+
+	&.has-danger,
+	&.has-success {
+		.text-help {
+			position: relative;
+			padding-left: 2rem;
+
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 24px;
+		 	 	height: 24px;
+		 		font-family: 'Material Icons';
+				font-size: 24px;
+		 		line-height: 24px;
+		 	}
+		}
+	}
+
+	&.has-danger {
+		.text-help {
+			&:before {
+		 		content: "\e000";
+			}
+		}
+	}
+
+	&.has-success {
+		.text-help {
+			&:before {
+		 		content: "\e5ca";
+			}
+		}
 	}
 }
