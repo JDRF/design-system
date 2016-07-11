@@ -76,6 +76,10 @@
 		border-color: $grey-4;
 	}
 
+	.hidden-labels & {
+		margin-top: 0;
+	}
+
 	.has-filled &,
 	.has-success & {
 		border-color: $grey-4;
