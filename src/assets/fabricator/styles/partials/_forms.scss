@@ -6,4 +6,12 @@
 			}
 		}
 	}
+
+	.ds-form-address {
+		.ds-form-group {
+			@include desktop {
+				max-width: none;
+			}
+		}
+	}
 }
