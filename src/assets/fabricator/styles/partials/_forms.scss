@@ -1,7 +1,9 @@
 .f-example {
 	.ds-form-group {
-		@include desktop {
-			max-width: 304px;
+		&:not(.ds-checkbox-group) {
+			@include desktop {
+				max-width: 304px;
+			}
 		}
 	}
 }

@@ -4,7 +4,7 @@ notes: |
 
    We are currently using class based validation. These classes must be applied to a container so validation styles can be applied to any form fields, form labels and help text. These classes are: `.ds-has-filled, .ds-has-success, .ds-has-danger`. There are also the `.ds-form-control-success` and `.ds-form-control-danger` classes that can be applied to form controls to enable success and error icons.
 
-   For general descriptions, use the `.ds-text-muted` class. For error or success messages, use the `.ds-text-help` class. To give the appearance of a label to text that isn't a semantic label, use the `.ds-text-label` class. Note that this class should not be used to remove and replace labels with a non-semantic version. Refer to the "Checkboxes with Error" section for a working example.
+   For general descriptions, use the `.ds-text-muted` class. For error or success messages, use the `.ds-text-help` class. To give the appearance of a label to text that isn't a semantic label, use the `.ds-text-label` class. Note that this class should not be used to remove and replace labels with a non-semantic version.
 
    For more information on Bootstrap's classes for form layouts, control sizing, validation and so on, refer to <a href="http://v4-alpha.getbootstrap.com/components/forms/" target="_blank">Bootstrap's form documentation</a>.
 ---
@@ -273,19 +273,21 @@ notes: |
 	<p>When using custom checkboxes, the <code class="language-markup">.ds-checkbox-custom</code> class needs to be added to the parent wrapper with the checkbox and a span nested inside. View examples below for both horizontal and vertical checkboxes.</p>
 	<div class="f-example">
 		<form>
-			<p>Example of vertical checkbox set below:</p>
-			<label class="ds-checkbox ds-checkbox-custom">
-				<input type="checkbox" value="option1" checked>
-				<span>Option 1</span>
-			</label>
-			<label class="ds-checkbox ds-checkbox-custom">
-				<input type="checkbox" value="option2">
-				<span>Option 2</span>
-			</label>
-			<label class="ds-checkbox ds-checkbox-custom ds-disabled">
-				<input type="checkbox" value="option3" disabled>
-				<span>Option 3 disabled</span>
-			</label>
+			<fieldset class="ds-form-group ds-checkbox-group">
+				<p class="ds-text-label">Example of vertical checkbox set below:</p>
+				<label class="ds-checkbox ds-checkbox-custom">
+					<input type="checkbox" value="option1" checked>
+					<span>Option 1</span>
+				</label>
+				<label class="ds-checkbox ds-checkbox-custom">
+					<input type="checkbox" value="option2">
+					<span>Option 2</span>
+				</label>
+				<label class="ds-checkbox ds-checkbox-custom ds-disabled">
+					<input type="checkbox" value="option3" disabled>
+					<span>Option 3 disabled</span>
+				</label>
+			</fieldset>
 		</form>
 	</div>
 	{{example 'form.checkbox'}}
@@ -295,19 +297,21 @@ notes: |
 	<h3 class="f-example-title">Horizontal Checkboxes</h3>
 	<div class="f-example">
 		<form>
-			<p>Example of horizontal checkbox set below:</p>
-			<label class="ds-checkbox-custom ds-checkbox-inline">
-				<input type="checkbox" value="option1" checked>
-				<span>Option 1</span>
-			</label>
-			<label class="ds-checkbox-custom ds-checkbox-inline">
-				<input type="checkbox" value="option2">
-				<span>Option 2</span>
-			</label>
-			<label class="ds-checkbox-custom ds-checkbox-inline ds-disabled">
-				<input type="checkbox" value="option3" disabled>
-				<span>Option 3 disabled</span>
-			</label>
+			<fieldset class="ds-form-group ds-checkbox-group">
+				<p class="ds-text-label">Example of horizontal checkbox set below:</p>
+				<label class="ds-checkbox-custom ds-checkbox-inline">
+					<input type="checkbox" value="option1" checked>
+					<span>Option 1</span>
+				</label>
+				<label class="ds-checkbox-custom ds-checkbox-inline">
+					<input type="checkbox" value="option2">
+					<span>Option 2</span>
+				</label>
+				<label class="ds-checkbox-custom ds-checkbox-inline ds-disabled">
+					<input type="checkbox" value="option3" disabled>
+					<span>Option 3 disabled</span>
+				</label>
+			</fieldset>
 		</form>
 	</div>
 	{{example 'form.checkbox-two'}}
@@ -315,10 +319,11 @@ notes: |
 
 <section class="f-section">
 	<h3 class="f-example-title">Checkboxes with Error</h3>
+	<p>The <code class="language-markup">.ds-checkbox-group</code> class can be applied in addition to the <code class="language-markup">.ds-form-group</code> class for checkbox groups. This is necessary for class based validation on checkbox groups using the <code class="language-markup">.ds-text-help</code> class for error/success messages.</p>
 	<div class="f-example">
 		<form>
-			<div class="ds-has-danger">
-				<p class="ds-text-label">What is your jersey size? <span class="ds-text-required">(Required)</span></p>
+			<fieldset class="ds-form-group ds-checkbox-group ds-has-danger">
+				<p class="ds-text-label">What is your jersey size? <span>(Required)</span></p>
 				<p class="ds-text-help">This field is required.</p>
 				<label class="ds-checkbox ds-checkbox-custom">
 					<input type="checkbox" value="option1">
@@ -332,7 +337,11 @@ notes: |
 					<input type="checkbox" value="option3">
 					<span>Large</span>
 				</label>
-			</div>
+				<label class="ds-checkbox ds-checkbox-custom">
+					<input type="checkbox" value="option4">
+					<span>Extra Large</span>
+				</label>
+			</fieldset>
 		</form>
 	</div>
 	{{example 'form.checkbox-error'}}
