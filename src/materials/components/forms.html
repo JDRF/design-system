@@ -55,6 +55,64 @@ notes: |
 </section>
 
 <section class="f-section">
+	<h3 class="f-example-title">Text Field &amp; Hidden Labels</h3>
+	<p>The <code class="language-markup">.ds-hidden-labels</code> class should be placed on form groups with hidden labels in addition to the <code class="language-markup">.ds-sr-only</code> class on the labels themselves. Also keep in mind that <a href="http://v4-alpha.getbootstrap.com/getting-started/browsers-devices/#internet-explorer-9" target="_blank">IE9 does not support placeholders</a>, therefore leaving fields without visible labels missing context.</p>
+	<div class="f-example">
+		<form>
+			<fieldset class="ds-form-group ds-hidden-labels">
+				<input type="text" class="ds-form-control" id="phantom-inputtext1" placeholder="Default">
+				<label for="phantom-inputtext1" class="ds-form-control-label ds-sr-only">Default</label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-hidden-labels ds-has-filled">
+				<input type="text" class="ds-form-control" id="phantom-inputtext2" placeholder="Filled" value="Filled">
+				<label for="phantom-inputtext2" class="ds-form-control-label ds-sr-only">Filled</label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-hidden-labels" disabled>
+				<input type="text" class="ds-form-control" id="phantom-inputtext3" placeholder="Disabled">
+				<label for="phantom-inputtext3" class="ds-form-control-label ds-sr-only">Disabled</label>
+			</fieldset>
+		</form>
+	</div>
+	{{example 'form.hidden'}}
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Inline Forms: Visible Labels</h3>
+	<div class="f-example">
+		<form class="ds-form-inline">
+			<fieldset class="ds-form-group">
+				<input type="text" class="ds-form-control" id="exampleInputName2" placeholder="Jane Doe">
+				<label for="exampleInputName2" class="ds-form-control-label">Name</label>
+			</fieldset>
+			<fieldset class="ds-form-group">
+				<input type="email" class="ds-form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+				<label for="exampleInputEmail2" class="ds-form-control-label">Email</label>
+			</fieldset>
+			<button type="submit" class="ds-btn ds-btn-primary f-inline-form-btn">Send invitation</button>
+		</form>
+	</div>
+	{{example 'form.inline-forms-visible'}}
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Inline Forms: Hidden Labels</h3>
+	<div class="f-example">
+		<form class="ds-form-inline">
+			<fieldset class="ds-form-group ds-hidden-labels">
+				<input type="email" class="ds-form-control" id="exampleInputEmail3" placeholder="Enter email">
+				<label class="ds-sr-only" for="exampleInputEmail3">Email address</label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-hidden-labels">
+				<input type="password" class="ds-form-control" id="exampleInputPassword3" placeholder="Password">
+				<label class="ds-sr-only" for="exampleInputPassword3">Password</label>
+			</fieldset>
+			<button type="submit" class="ds-btn ds-btn-primary f-inline-form-btn">Sign in</button>
+		</form>
+	</div>
+	{{example 'form.inline-forms-hidden'}}
+</section>
+
+<section class="f-section">
 	<h3 class="f-example-title">Email Field</h3>
 	<div class="f-example">
 		<form>
@@ -355,45 +413,4 @@ notes: |
 		</form>
 	</div>
 	{{example 'form.checkbox-error'}}
-</section>
-
-<section class="f-section">
-	<h3 class="f-example-title">Inline Forms: Visible Labels</h3>
-	<div class="f-example">
-		<form class="ds-form-inline">
-		  <div class="ds-form-group">
-			<label for="exampleInputName2">Name</label>
-			<input type="text" class="ds-form-control" id="exampleInputName2" placeholder="Jane Doe">
-		  </div>
-		  <div class="ds-form-group">
-			<label for="exampleInputEmail2">Email</label>
-			<input type="email" class="ds-form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-		  </div>
-		  <button type="submit" class="ds-btn ds-btn-primary">Send invitation</button>
-		</form>
-	</div>
-	{{example 'form.inline-forms-visible'}}
-</section>
-
-<section class="f-section">
-	<h3 class="f-example-title">Inline Forms: Hidden Labels</h3>
-	<div class="f-example">
-		<form class="ds-form-inline">
-		  <div class="ds-form-group">
-			<label class="ds-sr-only" for="exampleInputEmail3">Email address</label>
-			<input type="email" class="ds-form-control" id="exampleInputEmail3" placeholder="Enter email">
-		  </div>
-		  <div class="ds-form-group">
-			<label class="ds-sr-only" for="exampleInputPassword3">Password</label>
-			<input type="password" class="ds-form-control" id="exampleInputPassword3" placeholder="Password">
-		  </div>
-		  <div class="checkbox">
-			<label>
-			  <input type="checkbox"> Remember me
-			</label>
-		  </div>
-		  <button type="submit" class="ds-btn ds-btn-primary">Sign in</button>
-		</form>
-	</div>
-	{{example 'form.inline-forms-hidden'}}
 </section>
