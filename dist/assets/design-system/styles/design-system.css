@@ -5172,27 +5172,25 @@ input[type="checkbox"].ds-disabled {
 
 /* Bootstrap overwrites: forms.scss */
 
+@media (min-width: 768px) {
+  .ds-form-inline:not(.ds-row) .form-group {
+    width: auto;
+  }
+}
+
 .ds-form-inline .ds-form-group {
   margin-bottom: 1rem;
-  width: 100%;
+  display: block;
 }
 
 @media (min-width: 768px) {
   .ds-form-inline .ds-form-group {
-    width: auto;
+    display: inline-block;
   }
 }
 
 .ds-form-inline .ds-form-control {
-  display: block;
   width: 100%;
-}
-
-@media (min-width: 768px) {
-  .ds-form-inline .ds-form-control {
-    display: inline-block;
-    width: auto;
-  }
 }
 
 .ds-form-group {
@@ -5250,6 +5248,10 @@ fieldset .ds-form-control {
 
 fieldset:disabled .ds-form-control {
   border-color: #e0e0e0;
+}
+
+.ds-hidden-labels .ds-form-control {
+  margin-top: 0;
 }
 
 .ds-has-filled .ds-form-control,
@@ -5343,6 +5345,7 @@ label.ds-disabled {
   position: relative;
   padding-left: 2rem;
   text-align: left;
+  cursor: pointer;
 }
 
 .ds-radio-custom input[type="radio"] ~ span:before,
@@ -5421,6 +5424,21 @@ label.ds-disabled {
 
 .ds-checkbox-group.ds-has-success .ds-text-help:before {
   content: "\e5ca";
+}
+
+.ds-form-address [class*="ds-col-"] .ds-form-control-label {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+.ds-form-address div[class*="ds-col-"] {
+  position: static;
+}
+
+@media (min-width: 768px) {
+  .ds-form-address div[class*="ds-col-"] {
+    position: relative;
+  }
 }
 
 /* Bootstrap overwrites: buttons.scss */
