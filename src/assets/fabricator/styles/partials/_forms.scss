@@ -7,6 +7,14 @@
 		}
 	}
 
+	.ds-form-address {
+		.ds-form-group {
+			@include desktop {
+				max-width: none;
+			}
+		}
+	}
+
 	.f-inline-form-btn {
 		@include desktop {
 			display: inline-block;

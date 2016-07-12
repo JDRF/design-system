@@ -1,24 +1,30 @@
-<form>
-	<fieldset class="ds-form-group">
-		<label for="exampleInputAddress3">Street Address</label>
-		<input type="address" class="ds-form-control" id="exampleInputAddress3" placeholder="Enter Street Address">
+<form class="ds-form-address ds-container">
+	<fieldset class="ds-form-group ds-row">
+		<div class="ds-col-md-8">
+			<input type="address" class="ds-form-control" id="exampleInputAddress3" placeholder="Enter Street Address">
+			<label for="exampleInputAddress3" class="ds-form-control-label">Street Address</label>
+		</div>
 	</fieldset>
-	<fieldset class="ds-form-group">
-		<label for="exampleInputAddress4">Address Line 2</label>
-		<input type="address" class="ds-form-control" id="exampleInputAddress4" placeholder="Enter Address Line 2">
+	<fieldset class="ds-form-group ds-row">
+		<div class="ds-col-md-8">
+			<input type="address" class="ds-form-control" id="exampleInputAddress4" placeholder="Enter Address Line 2">
+			<label for="exampleInputAddress4" class="ds-form-control-label">Address Line 2</label>
+		</div>
 	</fieldset>
-	<div class="ds-form-inline">
-		<fieldset class="ds-form-group">
-			<label for="exampleCity1">City</label>
+	<div class="ds-form-inline ds-row">
+		<fieldset class="ds-form-group ds-col-md-4">
 			<input type="text" class="ds-form-control" id="exampleCity1" placeholder="Enter City">
+			<label for="exampleCity1" class="ds-form-control-label">City</label>
 		</fieldset>
-		<fieldset class="ds-form-group">
-			<label for="exampleState1">State</label>
+		<fieldset class="ds-form-group ds-col-md-4" class="ds-form-control-label">
 			<input type="email" class="ds-form-control" id="exampleState1" placeholder="Enter State">
+			<label for="exampleState1" class="ds-form-control-label">State</label>
 		</fieldset>
 	</div>
-	<fieldset class="ds-form-group">
-		<label for="exampleZip1">Zip Code</label>
-		<input type="text" class="ds-form-control" id="exampleZip1" placeholder="Enter Zip Code">
+	<fieldset class="ds-form-group ds-row">
+		<div class="ds-col-md-4">
+			<input type="text" class="ds-form-control" id="exampleZip1" placeholder="Enter Zip Code">
+			<label for="exampleZip1" class="ds-form-control-label">Zip Code</label>
+		</div>
 	</fieldset>
 </form>
