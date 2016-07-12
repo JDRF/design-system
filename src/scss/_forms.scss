@@ -13,6 +13,11 @@
 
 	.form-group {
 		margin-bottom: 1rem;
+		display: block;
+
+		@include media-breakpoint-up(md) {
+			display: inline-block;
+		}
 	}
 
 	.form-control {
@@ -258,6 +263,24 @@ label {
 			&:before {
 		 		content: "\e5ca";
 			}
+		}
+	}
+}
+
+.form-address {
+	[class*="ds-col-"] {
+
+		.form-control-label {
+			padding-left: 0.9375rem;
+			padding-right: 0.9375rem;
+		}
+	}
+
+	div[class*="ds-col-"] {
+		position: static;
+
+		@include media-breakpoint-up(md) {
+			position: relative;
 		}
 	}
 }
