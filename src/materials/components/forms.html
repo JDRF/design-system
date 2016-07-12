@@ -240,45 +240,57 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h3 class="f-example-title">Select Box</h3>
+	<h3 class="f-example-title">Custom Select Box</h3>
 	<div class="f-example">
 		<form>
-			<fieldset class="ds-form-group ds-row">
-				<div class="ds-col-md-4">
-					<label for="exampleSelect1" class="ds-form-control-label">Select Box</label>
-					<select class="ds-form-control" id="exampleSelect1">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
-					</select>
-				</div>
+			<fieldset class="ds-form-group">
+				<select class="ds-form-control ds-c-select" id="exampleSelect1">
+					<option disabled selected value=""></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<label for="exampleSelect1" class="ds-form-control-label">Default <span>Required</span></label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-has-filled">
+				<select class="ds-form-control ds-c-select" id="exampleSelect2">
+					<option disabled value=""></option>
+					<option value="1">1</option>
+					<option value="2" selected>2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<label for="exampleSelect2" class="ds-form-control-label">Filled/Valid <span>Required</span></label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-has-danger">
+				<select class="ds-form-control ds-c-select" id="exampleSelect3">
+					<option disabled selected value=""></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<label for="exampleSelect3" class="ds-form-control-label">Error <span>Required</span></label>
+				<small class="ds-text-help">This field is required</small>
+			</fieldset>
+			<fieldset class="ds-form-group" disabled>
+				<select class="ds-form-control ds-c-select" id="exampleSelect4">
+					<option disabled selected value=""></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<label for="exampleSelect4" class="ds-form-control-label">Disabled</label>
 			</fieldset>
 		</form>
 	</div>
 	{{example 'form.select'}}
-</section>
-
-<section class="f-section">
-	<h3 class="f-example-title">Multiple Select Box</h3>
-	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group ds-row">
-				<div class="ds-col-md-4">
-					<label for="exampleSelect2" class="ds-form-control-label">Multiple Select Box</label>
-					<select multiple class="ds-form-control" id="exampleSelect2">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
-					</select>
-				</div>
-			</fieldset>
-		</form>
-	</div>
-	{{example 'form.multi-select'}}
 </section>
 
 <section class="f-section">
