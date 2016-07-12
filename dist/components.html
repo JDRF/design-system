@@ -1826,6 +1826,98 @@
 </section>
 
 <section class="f-section">
+	<h3 class="f-example-title">Text Field &amp; Hidden Labels</h3>
+	<p>The <code class="language-markup">.ds-hidden-labels</code> class should be placed on form groups with hidden labels in addition to the <code class="language-markup">.ds-sr-only</code> class on the labels themselves. Also keep in mind that <a href="http://v4-alpha.getbootstrap.com/getting-started/browsers-devices/#internet-explorer-9"
+			target="_blank">IE9 does not support placeholders</a>, therefore leaving fields without visible labels missing context.</p>
+	<div class="f-example">
+		<form>
+			<fieldset class="ds-form-group ds-hidden-labels">
+				<input type="text" class="ds-form-control" id="phantom-inputtext1" placeholder="Default">
+				<label for="phantom-inputtext1" class="ds-form-control-label ds-sr-only">Default</label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-hidden-labels ds-has-filled">
+				<input type="text" class="ds-form-control" id="phantom-inputtext2" placeholder="Filled" value="Filled">
+				<label for="phantom-inputtext2" class="ds-form-control-label ds-sr-only">Filled</label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-hidden-labels" disabled>
+				<input type="text" class="ds-form-control" id="phantom-inputtext3" placeholder="Disabled">
+				<label for="phantom-inputtext3" class="ds-form-control-label ds-sr-only">Disabled</label>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form>
+	&lt;fieldset class=&quot;ds-form-group ds-hidden-labels&quot;>
+		&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;inputtext1&quot; placeholder=&quot;Default&quot;>
+		&lt;label for=&quot;inputtext1&quot; class=&quot;ds-form-control-label ds-sr-only&quot;>Default&lt;/label>
+	&lt;/fieldset>
+	&lt;fieldset class=&quot;ds-form-group ds-hidden-labels ds-has-filled&quot;>
+		&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;inputtext2&quot; placeholder=&quot;Filled&quot; value=&quot;Filled&quot;>
+		&lt;label for=&quot;inputtext2&quot; class=&quot;ds-form-control-label ds-sr-only&quot;>Filled&lt;/label>
+	&lt;/fieldset>
+	&lt;fieldset class=&quot;ds-form-group ds-hidden-labels&quot; disabled>
+		&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;inputtext3&quot; placeholder=&quot;Disabled&quot;>
+		&lt;label for=&quot;inputtext3&quot; class=&quot;ds-form-control-label ds-sr-only&quot;>Disabled&lt;/label>
+	&lt;/fieldset>
+&lt;/form></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Inline Forms: Visible Labels</h3>
+	<div class="f-example">
+		<form class="ds-form-inline">
+			<fieldset class="ds-form-group">
+				<input type="text" class="ds-form-control" id="exampleInputName2" placeholder="Jane Doe">
+				<label for="exampleInputName2" class="ds-form-control-label">Name</label>
+			</fieldset>
+			<fieldset class="ds-form-group">
+				<input type="email" class="ds-form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+				<label for="exampleInputEmail2" class="ds-form-control-label">Email</label>
+			</fieldset>
+			<button type="submit" class="ds-btn ds-btn-primary f-inline-form-btn">Send invitation</button>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form class=&quot;ds-form-inline&quot;>
+	&lt;fieldset class=&quot;ds-form-group&quot;>
+		&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputName2&quot; placeholder=&quot;Jane Doe&quot;>
+		&lt;label for=&quot;exampleInputName2&quot; class=&quot;ds-form-control-label&quot;>Name&lt;/label>
+	&lt;/fieldset>
+	&lt;fieldset class=&quot;ds-form-group&quot;>
+		&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputEmail2&quot; placeholder=&quot;jane.doe@example.com&quot;>
+		&lt;label for=&quot;exampleInputEmail2&quot; class=&quot;ds-form-control-label&quot;>Email&lt;/label>
+	&lt;/fieldset>
+	&lt;button type=&quot;submit&quot; class=&quot;ds-btn ds-btn-primary&quot;>Send invitation&lt;/button>
+&lt;/form></code></pre>
+</section>
+
+<section class="f-section">
+	<h3 class="f-example-title">Inline Forms: Hidden Labels</h3>
+	<div class="f-example">
+		<form class="ds-form-inline">
+			<fieldset class="ds-form-group ds-hidden-labels">
+				<input type="email" class="ds-form-control" id="exampleInputEmail3" placeholder="Enter email">
+				<label class="ds-sr-only" for="exampleInputEmail3">Email address</label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-hidden-labels">
+				<input type="password" class="ds-form-control" id="exampleInputPassword3" placeholder="Password">
+				<label class="ds-sr-only" for="exampleInputPassword3">Password</label>
+			</fieldset>
+			<button type="submit" class="ds-btn ds-btn-primary f-inline-form-btn">Sign in</button>
+		</form>
+	</div>
+	<pre class="language-markup"><code class="language-markup">&lt;form class=&quot;ds-form-inline&quot;>
+	&lt;fieldset class=&quot;ds-form-group ds-hidden-labels&quot;>
+		&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputEmail3&quot; placeholder=&quot;Enter email&quot;>
+		&lt;label class=&quot;ds-sr-only&quot; for=&quot;exampleInputEmail3&quot;>Email address&lt;/label>
+	&lt;/fieldset>
+	&lt;fieldset class=&quot;ds-form-group ds-hidden-labels&quot;>
+		&lt;input type=&quot;password&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputPassword3&quot; placeholder=&quot;Password&quot;>
+		&lt;label class=&quot;ds-sr-only&quot; for=&quot;exampleInputPassword3&quot;>Password&lt;/label>
+	&lt;/fieldset>
+	&lt;button type=&quot;submit&quot; class=&quot;ds-btn ds-btn-primary&quot;>Sign in&lt;/button>
+&lt;/form></code></pre>
+</section>
+
+<section class="f-section">
 	<h3 class="f-example-title">Email Field</h3>
 	<div class="f-example">
 		<form>
@@ -2304,74 +2396,6 @@
 	&lt;/fieldset>
 &lt;/form></code></pre>
 </section>
-
-<section class="f-section">
-	<h3 class="f-example-title">Inline Forms: Visible Labels</h3>
-	<div class="f-example">
-		<form class="ds-form-inline">
-			<div class="ds-form-group">
-				<label for="exampleInputName2">Name</label>
-				<input type="text" class="ds-form-control" id="exampleInputName2" placeholder="Jane Doe">
-			</div>
-			<div class="ds-form-group">
-				<label for="exampleInputEmail2">Email</label>
-				<input type="email" class="ds-form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-			</div>
-			<button type="submit" class="ds-btn ds-btn-primary">Send invitation</button>
-		</form>
-	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;form class=&quot;ds-form-inline&quot;>
-	&lt;div class=&quot;ds-form-group&quot;>
-		&lt;label for=&quot;exampleInputName2&quot;>Name&lt;/label>
-		&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputName2&quot; placeholder=&quot;Jane Doe&quot;>
-	&lt;/div>
-	&lt;div class=&quot;ds-form-group&quot;>
-		&lt;label for=&quot;exampleInputEmail2&quot;>Email&lt;/label>
-		&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputEmail2&quot; placeholder=&quot;jane.doe@example.com&quot;>
-	&lt;/div>
-	&lt;button type=&quot;submit&quot; class=&quot;ds-btn ds-btn-primary&quot;>Send invitation&lt;/button>
-&lt;/form>
-</code></pre>
-</section>
-
-<section class="f-section">
-	<h3 class="f-example-title">Inline Forms: Hidden Labels</h3>
-	<div class="f-example">
-		<form class="ds-form-inline">
-			<div class="ds-form-group">
-				<label class="ds-sr-only" for="exampleInputEmail3">Email address</label>
-				<input type="email" class="ds-form-control" id="exampleInputEmail3" placeholder="Enter email">
-			</div>
-			<div class="ds-form-group">
-				<label class="ds-sr-only" for="exampleInputPassword3">Password</label>
-				<input type="password" class="ds-form-control" id="exampleInputPassword3" placeholder="Password">
-			</div>
-			<div class="checkbox">
-				<label>
-			  <input type="checkbox"> Remember me
-			</label>
-			</div>
-			<button type="submit" class="ds-btn ds-btn-primary">Sign in</button>
-		</form>
-	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;form class=&quot;ds-form-inline&quot;>
-	&lt;div class=&quot;ds-form-group&quot;>
-		&lt;label class=&quot;ds-sr-only&quot; for=&quot;exampleInputEmail3&quot;>Email address&lt;/label>
-		&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputEmail3&quot; placeholder=&quot;Enter email&quot;>
-	&lt;/div>
-	&lt;div class=&quot;ds-form-group&quot;>
-		&lt;label class=&quot;ds-sr-only&quot; for=&quot;exampleInputPassword3&quot;>Password&lt;/label>
-		&lt;input type=&quot;password&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputPassword3&quot; placeholder=&quot;Password&quot;>
-	&lt;/div>
-	&lt;div class=&quot;checkbox&quot;>
-		&lt;label>
-			&lt;input type=&quot;checkbox&quot;> Remember me
-		&lt;/label>
-	&lt;/div>
-	&lt;button type=&quot;submit&quot; class=&quot;ds-btn ds-btn-primary&quot;>Sign in&lt;/button>
-&lt;/form>
-</code></pre>
-</section>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;section class=&quot;f-section&quot;&gt;
@@ -2445,6 +2469,98 @@
 		&amp;lt;textarea class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleTextarea&amp;quot; rows=&amp;quot;7&amp;quot; placeholder=&amp;quot;Placeholder&amp;quot;&gt;&amp;lt;/textarea&gt;
 		&amp;lt;label for=&amp;quot;exampleTextarea&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Your Message &amp;lt;span&gt;Optional&amp;lt;/span&gt;&amp;lt;/label&gt;
 	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Text Field &amp;amp; Hidden Labels&lt;/h3&gt;
+	&lt;p&gt;The &lt;code class=&quot;language-markup&quot;&gt;.ds-hidden-labels&lt;/code&gt; class should be placed on form groups with hidden labels in addition to the &lt;code class=&quot;language-markup&quot;&gt;.ds-sr-only&lt;/code&gt; class on the labels themselves. Also keep in mind that &lt;a href=&quot;http://v4-alpha.getbootstrap.com/getting-started/browsers-devices/#internet-explorer-9&quot;
+			target=&quot;_blank&quot;&gt;IE9 does not support placeholders&lt;/a&gt;, therefore leaving fields without visible labels missing context.&lt;/p&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-hidden-labels&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;phantom-inputtext1&quot; placeholder=&quot;Default&quot;&gt;
+				&lt;label for=&quot;phantom-inputtext1&quot; class=&quot;ds-form-control-label ds-sr-only&quot;&gt;Default&lt;/label&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-hidden-labels ds-has-filled&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;phantom-inputtext2&quot; placeholder=&quot;Filled&quot; value=&quot;Filled&quot;&gt;
+				&lt;label for=&quot;phantom-inputtext2&quot; class=&quot;ds-form-control-label ds-sr-only&quot;&gt;Filled&lt;/label&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-hidden-labels&quot; disabled&gt;
+				&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;phantom-inputtext3&quot; placeholder=&quot;Disabled&quot;&gt;
+				&lt;label for=&quot;phantom-inputtext3&quot; class=&quot;ds-form-control-label ds-sr-only&quot;&gt;Disabled&lt;/label&gt;
+			&lt;/fieldset&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-hidden-labels&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;inputtext1&amp;quot; placeholder=&amp;quot;Default&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;inputtext1&amp;quot; class=&amp;quot;ds-form-control-label ds-sr-only&amp;quot;&gt;Default&amp;lt;/label&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-hidden-labels ds-has-filled&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;inputtext2&amp;quot; placeholder=&amp;quot;Filled&amp;quot; value=&amp;quot;Filled&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;inputtext2&amp;quot; class=&amp;quot;ds-form-control-label ds-sr-only&amp;quot;&gt;Filled&amp;lt;/label&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-hidden-labels&amp;quot; disabled&gt;
+		&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;inputtext3&amp;quot; placeholder=&amp;quot;Disabled&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;inputtext3&amp;quot; class=&amp;quot;ds-form-control-label ds-sr-only&amp;quot;&gt;Disabled&amp;lt;/label&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Inline Forms: Visible Labels&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form class=&quot;ds-form-inline&quot;&gt;
+			&lt;fieldset class=&quot;ds-form-group&quot;&gt;
+				&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputName2&quot; placeholder=&quot;Jane Doe&quot;&gt;
+				&lt;label for=&quot;exampleInputName2&quot; class=&quot;ds-form-control-label&quot;&gt;Name&lt;/label&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;ds-form-group&quot;&gt;
+				&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputEmail2&quot; placeholder=&quot;jane.doe@example.com&quot;&gt;
+				&lt;label for=&quot;exampleInputEmail2&quot; class=&quot;ds-form-control-label&quot;&gt;Email&lt;/label&gt;
+			&lt;/fieldset&gt;
+			&lt;button type=&quot;submit&quot; class=&quot;ds-btn ds-btn-primary f-inline-form-btn&quot;&gt;Send invitation&lt;/button&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form class=&amp;quot;ds-form-inline&amp;quot;&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputName2&amp;quot; placeholder=&amp;quot;Jane Doe&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputName2&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Name&amp;lt;/label&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;email&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputEmail2&amp;quot; placeholder=&amp;quot;jane.doe@example.com&amp;quot;&gt;
+		&amp;lt;label for=&amp;quot;exampleInputEmail2&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Email&amp;lt;/label&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;button type=&amp;quot;submit&amp;quot; class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;Send invitation&amp;lt;/button&gt;
+&amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;f-section&quot;&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Inline Forms: Hidden Labels&lt;/h3&gt;
+	&lt;div class=&quot;f-example&quot;&gt;
+		&lt;form class=&quot;ds-form-inline&quot;&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-hidden-labels&quot;&gt;
+				&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputEmail3&quot; placeholder=&quot;Enter email&quot;&gt;
+				&lt;label class=&quot;ds-sr-only&quot; for=&quot;exampleInputEmail3&quot;&gt;Email address&lt;/label&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-hidden-labels&quot;&gt;
+				&lt;input type=&quot;password&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputPassword3&quot; placeholder=&quot;Password&quot;&gt;
+				&lt;label class=&quot;ds-sr-only&quot; for=&quot;exampleInputPassword3&quot;&gt;Password&lt;/label&gt;
+			&lt;/fieldset&gt;
+			&lt;button type=&quot;submit&quot; class=&quot;ds-btn ds-btn-primary f-inline-form-btn&quot;&gt;Sign in&lt;/button&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form class=&amp;quot;ds-form-inline&amp;quot;&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-hidden-labels&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;email&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputEmail3&amp;quot; placeholder=&amp;quot;Enter email&amp;quot;&gt;
+		&amp;lt;label class=&amp;quot;ds-sr-only&amp;quot; for=&amp;quot;exampleInputEmail3&amp;quot;&gt;Email address&amp;lt;/label&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-hidden-labels&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;password&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputPassword3&amp;quot; placeholder=&amp;quot;Password&amp;quot;&gt;
+		&amp;lt;label class=&amp;quot;ds-sr-only&amp;quot; for=&amp;quot;exampleInputPassword3&amp;quot;&gt;Password&amp;lt;/label&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;button type=&amp;quot;submit&amp;quot; class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;Sign in&amp;lt;/button&gt;
 &amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
@@ -2926,74 +3042,6 @@
 		&amp;lt;/label&gt;
 	&amp;lt;/fieldset&gt;
 &amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/section&gt;
-
-&lt;section class=&quot;f-section&quot;&gt;
-	&lt;h3 class=&quot;f-example-title&quot;&gt;Inline Forms: Visible Labels&lt;/h3&gt;
-	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;form class=&quot;ds-form-inline&quot;&gt;
-			&lt;div class=&quot;ds-form-group&quot;&gt;
-				&lt;label for=&quot;exampleInputName2&quot;&gt;Name&lt;/label&gt;
-				&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputName2&quot; placeholder=&quot;Jane Doe&quot;&gt;
-			&lt;/div&gt;
-			&lt;div class=&quot;ds-form-group&quot;&gt;
-				&lt;label for=&quot;exampleInputEmail2&quot;&gt;Email&lt;/label&gt;
-				&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputEmail2&quot; placeholder=&quot;jane.doe@example.com&quot;&gt;
-			&lt;/div&gt;
-			&lt;button type=&quot;submit&quot; class=&quot;ds-btn ds-btn-primary&quot;&gt;Send invitation&lt;/button&gt;
-		&lt;/form&gt;
-	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form class=&amp;quot;ds-form-inline&amp;quot;&gt;
-	&amp;lt;div class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label for=&amp;quot;exampleInputName2&amp;quot;&gt;Name&amp;lt;/label&gt;
-		&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputName2&amp;quot; placeholder=&amp;quot;Jane Doe&amp;quot;&gt;
-	&amp;lt;/div&gt;
-	&amp;lt;div class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label for=&amp;quot;exampleInputEmail2&amp;quot;&gt;Email&amp;lt;/label&gt;
-		&amp;lt;input type=&amp;quot;email&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputEmail2&amp;quot; placeholder=&amp;quot;jane.doe@example.com&amp;quot;&gt;
-	&amp;lt;/div&gt;
-	&amp;lt;button type=&amp;quot;submit&amp;quot; class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;Send invitation&amp;lt;/button&gt;
-&amp;lt;/form&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/section&gt;
-
-&lt;section class=&quot;f-section&quot;&gt;
-	&lt;h3 class=&quot;f-example-title&quot;&gt;Inline Forms: Hidden Labels&lt;/h3&gt;
-	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;form class=&quot;ds-form-inline&quot;&gt;
-			&lt;div class=&quot;ds-form-group&quot;&gt;
-				&lt;label class=&quot;ds-sr-only&quot; for=&quot;exampleInputEmail3&quot;&gt;Email address&lt;/label&gt;
-				&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputEmail3&quot; placeholder=&quot;Enter email&quot;&gt;
-			&lt;/div&gt;
-			&lt;div class=&quot;ds-form-group&quot;&gt;
-				&lt;label class=&quot;ds-sr-only&quot; for=&quot;exampleInputPassword3&quot;&gt;Password&lt;/label&gt;
-				&lt;input type=&quot;password&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputPassword3&quot; placeholder=&quot;Password&quot;&gt;
-			&lt;/div&gt;
-			&lt;div class=&quot;checkbox&quot;&gt;
-				&lt;label&gt;
-			  &lt;input type=&quot;checkbox&quot;&gt; Remember me
-			&lt;/label&gt;
-			&lt;/div&gt;
-			&lt;button type=&quot;submit&quot; class=&quot;ds-btn ds-btn-primary&quot;&gt;Sign in&lt;/button&gt;
-		&lt;/form&gt;
-	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form class=&amp;quot;ds-form-inline&amp;quot;&gt;
-	&amp;lt;div class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label class=&amp;quot;ds-sr-only&amp;quot; for=&amp;quot;exampleInputEmail3&amp;quot;&gt;Email address&amp;lt;/label&gt;
-		&amp;lt;input type=&amp;quot;email&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputEmail3&amp;quot; placeholder=&amp;quot;Enter email&amp;quot;&gt;
-	&amp;lt;/div&gt;
-	&amp;lt;div class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label class=&amp;quot;ds-sr-only&amp;quot; for=&amp;quot;exampleInputPassword3&amp;quot;&gt;Password&amp;lt;/label&gt;
-		&amp;lt;input type=&amp;quot;password&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputPassword3&amp;quot; placeholder=&amp;quot;Password&amp;quot;&gt;
-	&amp;lt;/div&gt;
-	&amp;lt;div class=&amp;quot;checkbox&amp;quot;&gt;
-		&amp;lt;label&gt;
-			&amp;lt;input type=&amp;quot;checkbox&amp;quot;&gt; Remember me
-		&amp;lt;/label&gt;
-	&amp;lt;/div&gt;
-	&amp;lt;button type=&amp;quot;submit&amp;quot; class=&amp;quot;ds-btn ds-btn-primary&amp;quot;&gt;Sign in&amp;lt;/button&gt;
-&amp;lt;/form&gt;
-&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;</code></pre>
 </div>
 

@@ -6,4 +6,18 @@
 			}
 		}
 	}
+
+	.f-inline-form-btn {
+		@include desktop {
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: 27px;
+		}
+	}
+
+	.ds-hidden-labels ~ .f-inline-form-btn {
+		@include desktop {
+			margin-top: 0;
+		}
+	}
 }
