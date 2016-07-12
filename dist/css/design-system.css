@@ -5252,6 +5252,10 @@ fieldset:disabled .ds-form-control {
   border-color: #e0e0e0;
 }
 
+.ds-hidden-labels .ds-form-control {
+  margin-top: 0;
+}
+
 .ds-has-filled .ds-form-control,
 .ds-has-success .ds-form-control {
   border-color: #e0e0e0;
@@ -5343,6 +5347,7 @@ label.ds-disabled {
   position: relative;
   padding-left: 2rem;
   text-align: left;
+  cursor: pointer;
 }
 
 .ds-radio-custom input[type="radio"] ~ span:before,
