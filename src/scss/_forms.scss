@@ -3,23 +3,25 @@
 /* Bootstrap overwrites: forms.scss */
 
 .form-inline {
+	&:not(.ds-row) {
+		.form-group {
+			@include media-breakpoint-up(md) {
+				width: auto;
+			}
+		}
+	}
+
 	.form-group {
 		margin-bottom: 1rem;
-		width: 100%;
+		display: block;
 
 		@include media-breakpoint-up(md) {
-			width: auto;
+			display: inline-block;
 		}
 	}
 
 	.form-control {
-		display: block;
 		width: 100%;
-
-		@include media-breakpoint-up(md) {
-			display: inline-block;
-			width: auto;
-		}
 	}
 }
 
@@ -261,6 +263,24 @@ label {
 			&:before {
 		 		content: "\e5ca";
 			}
+		}
+	}
+}
+
+.form-address {
+	[class*="ds-col-"] {
+
+		.form-control-label {
+			padding-left: 0.9375rem;
+			padding-right: 0.9375rem;
+		}
+	}
+
+	div[class*="ds-col-"] {
+		position: static;
+
+		@include media-breakpoint-up(md) {
+			position: relative;
 		}
 	}
 }
