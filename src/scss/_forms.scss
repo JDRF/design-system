@@ -68,6 +68,10 @@
 .form-control {
 	line-height: $font-size-base;
 
+	&:not(textarea) {
+		height: 54px;
+	}
+
 	fieldset & {
 		margin-top: 28px;
 	}
