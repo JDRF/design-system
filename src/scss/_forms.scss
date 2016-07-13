@@ -69,6 +69,10 @@
 	//normal line-height vertically aligns placeholder in Safari
 	line-height: normal;
 
+	&:not(textarea) {
+		height: 54px;
+	}
+
 	fieldset & {
 		margin-top: 28px;
 	}
