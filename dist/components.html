@@ -1978,14 +1978,14 @@
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group">
-				<input type="date" class="ds-form-control" id="phantom-exampleInputDate">
+				<input type="date" class="ds-form-control" id="phantom-exampleInputDate" placeholder="mm/dd/yyyy">
 				<label for="phantom-exampleInputDate" class="ds-form-control-label">Date</label>
 			</fieldset>
 		</form>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;form>
 	&lt;fieldset class=&quot;ds-form-group&quot;>
-		&lt;input type=&quot;date&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputDate&quot;>
+		&lt;input type=&quot;date&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputDate&quot; placeholder=&quot;mm/dd/yyyy&quot;>
 		&lt;label for=&quot;exampleInputDate&quot; class=&quot;ds-form-control-label&quot;>Date&lt;/label>
 	&lt;/fieldset>
 &lt;/form></code></pre>
@@ -1993,33 +1993,37 @@
 
 <section class="f-section">
 	<h3 class="f-example-title">International Address</h3>
+	<p>Address forms use the <code class="language-markup">.ds-form-address</code> class on the form element in addition to Bootstrap's grid classes.</p>
 	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group">
-				<label for="exampleInputAddress1">Street Address</label>
-				<input type="address" class="ds-form-control" id="exampleInputAddress1" placeholder="Enter Street Address">
+		<form class="ds-form-address ds-container">
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-8">
+					<input type="address" class="ds-form-control" id="exampleInputAddress1" placeholder="Enter Street Address">
+					<label for="exampleInputAddress1" class="ds-form-control-label">Street Address</label>
+				</div>
 			</fieldset>
-			<fieldset class="ds-form-group">
-				<label for="exampleInputAddress2">Address Line 2</label>
-				<input type="address" class="ds-form-control" id="exampleInputAddress2" placeholder="Enter Address Line 2">
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-8">
+					<input type="address" class="ds-form-control" id="exampleInputAddress2" placeholder="Enter Address Line 2">
+					<label for="exampleInputAddress2" class="ds-form-control-label">Address Line 2</label>
+				</div>
 			</fieldset>
-			<div class="ds-form-inline">
-				<fieldset class="ds-form-group">
-					<label for="exampleCity">City</label>
+			<div class="ds-form-inline ds-row">
+				<fieldset class="ds-form-group ds-col-md-4">
 					<input type="text" class="ds-form-control" id="exampleCity" placeholder="Enter City">
+					<label for="exampleCity" class="ds-form-control-label">City</label>
 				</fieldset>
-				<fieldset class="ds-form-group">
-					<label for="exampleState">State/Province/Region</label>
+				<fieldset class="ds-form-group ds-col-md-4">
 					<input type="email" class="ds-form-control" id="exampleState" placeholder="Enter State/Province/Region">
+					<label for="exampleState" class="ds-form-control-label">State/Province/Region</label>
 				</fieldset>
 			</div>
-			<div class="ds-form-inline">
-				<fieldset class="ds-form-group">
-					<label for="exampleZip">Zip/Postal Code</label>
+			<div class="ds-form-inline ds-row">
+				<fieldset class="ds-form-group ds-col-md-4">
 					<input type="text" class="ds-form-control" id="exampleZip" placeholder="Enter Zip/Postal Code">
+					<label for="exampleZip" class="ds-form-control-label">Zip/Postal Code</label>
 				</fieldset>
-				<fieldset class="ds-form-group">
-					<label for="exampleCountry">Country</label>
+				<fieldset class="ds-form-group ds-col-md-4">
 					<select class="ds-form-control" id="exampleCountry">
 						<option>Country 1</option>
 						<option>Country 2</option>
@@ -2027,36 +2031,40 @@
 						<option>Country 4</option>
 						<option>Country 5</option>
 					</select>
+					<label for="exampleCountry" class="ds-form-control-label">Country</label>
 				</fieldset>
 			</div>
 		</form>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;form>
-	&lt;fieldset class=&quot;ds-form-group&quot;>
-		&lt;label for=&quot;exampleInputAddress1&quot;>Street Address&lt;/label>
-		&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress1&quot; placeholder=&quot;Enter Street Address&quot;>
+	<pre class="language-markup"><code class="language-markup">&lt;form class=&quot;ds-form-address ds-container&quot;>
+	&lt;fieldset class=&quot;ds-form-group ds-row&quot;>
+		&lt;div class=&quot;ds-col-md-8&quot;>
+			&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress1&quot; placeholder=&quot;Enter Street Address&quot;>
+			&lt;label for=&quot;exampleInputAddress1&quot; class=&quot;ds-form-control-label&quot;>Street Address&lt;/label>
+		&lt;/div>
 	&lt;/fieldset>
-	&lt;fieldset class=&quot;ds-form-group&quot;>
-		&lt;label for=&quot;exampleInputAddress2&quot;>Address Line 2&lt;/label>
-		&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress2&quot; placeholder=&quot;Enter Address Line 2&quot;>
+	&lt;fieldset class=&quot;ds-form-group ds-row&quot;>
+		&lt;div class=&quot;ds-col-md-8&quot;>
+			&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress2&quot; placeholder=&quot;Enter Address Line 2&quot;>
+			&lt;label for=&quot;exampleInputAddress2&quot; class=&quot;ds-form-control-label&quot;>Address Line 2&lt;/label>
+		&lt;/div>
 	&lt;/fieldset>
-	&lt;div class=&quot;ds-form-inline&quot;>
-		&lt;fieldset class=&quot;ds-form-group&quot;>
-			&lt;label for=&quot;exampleCity&quot;>City&lt;/label>
+	&lt;div class=&quot;ds-form-inline ds-row&quot;>
+		&lt;fieldset class=&quot;ds-form-group ds-col-md-4&quot;>
 			&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleCity&quot; placeholder=&quot;Enter City&quot;>
+			&lt;label for=&quot;exampleCity&quot; class=&quot;ds-form-control-label&quot;>City&lt;/label>
 		&lt;/fieldset>
-		&lt;fieldset class=&quot;ds-form-group&quot;>
-			&lt;label for=&quot;exampleState&quot;>State/Province/Region&lt;/label>
+		&lt;fieldset class=&quot;ds-form-group ds-col-md-4&quot;>
 			&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;exampleState&quot; placeholder=&quot;Enter State/Province/Region&quot;>
+			&lt;label for=&quot;exampleState&quot; class=&quot;ds-form-control-label&quot;>State/Province/Region&lt;/label>
 		&lt;/fieldset>
 	&lt;/div>
-	&lt;div class=&quot;ds-form-inline&quot;>
-		&lt;fieldset class=&quot;ds-form-group&quot;>
-			&lt;label for=&quot;exampleZip&quot;>Zip/Postal Code&lt;/label>
+	&lt;div class=&quot;ds-form-inline ds-row&quot;>
+		&lt;fieldset class=&quot;ds-form-group ds-col-md-4&quot;>
 			&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleZip&quot; placeholder=&quot;Enter Zip/Postal Code&quot;>
+			&lt;label for=&quot;exampleZip&quot; class=&quot;ds-form-control-label&quot;>Zip/Postal Code&lt;/label>
 		&lt;/fieldset>
-		&lt;fieldset class=&quot;ds-form-group&quot;>
-			&lt;label for=&quot;exampleCountry&quot;>Country&lt;/label>
+		&lt;fieldset class=&quot;ds-form-group ds-col-md-4&quot;>
 			&lt;select class=&quot;ds-form-control&quot; id=&quot;exampleCountry&quot;>
 				&lt;option>Country 1&lt;/option>
 				&lt;option>Country 2&lt;/option>
@@ -2064,131 +2072,177 @@
 				&lt;option>Country 4&lt;/option>
 				&lt;option>Country 5&lt;/option>
 			&lt;/select>
+			&lt;label for=&quot;exampleCountry&quot; class=&quot;ds-form-control-label&quot;>Country&lt;/label>
 		&lt;/fieldset>
 	&lt;/div>
-&lt;/form>
-</code></pre>
+&lt;/form></code></pre>
 </section>
 
 <section class="f-section">
 	<h3 class="f-example-title">USA Address</h3>
 	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group">
-				<label for="exampleInputAddress3">Street Address</label>
-				<input type="address" class="ds-form-control" id="exampleInputAddress3" placeholder="Enter Street Address">
+		<form class="ds-form-address ds-container">
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-8">
+					<input type="address" class="ds-form-control" id="exampleInputAddress3" placeholder="Enter Street Address">
+					<label for="exampleInputAddress3" class="ds-form-control-label">Street Address</label>
+				</div>
 			</fieldset>
-			<fieldset class="ds-form-group">
-				<label for="exampleInputAddress4">Address Line 2</label>
-				<input type="address" class="ds-form-control" id="exampleInputAddress4" placeholder="Enter Address Line 2">
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-8">
+					<input type="address" class="ds-form-control" id="exampleInputAddress4" placeholder="Enter Address Line 2">
+					<label for="exampleInputAddress4" class="ds-form-control-label">Address Line 2</label>
+				</div>
 			</fieldset>
-			<div class="ds-form-inline">
-				<fieldset class="ds-form-group">
-					<label for="exampleCity1">City</label>
+			<div class="ds-form-inline ds-row">
+				<fieldset class="ds-form-group ds-col-md-4">
 					<input type="text" class="ds-form-control" id="exampleCity1" placeholder="Enter City">
+					<label for="exampleCity1" class="ds-form-control-label">City</label>
 				</fieldset>
-				<fieldset class="ds-form-group">
-					<label for="exampleState1">State</label>
+				<fieldset class="ds-form-group ds-col-md-4" class="ds-form-control-label">
 					<input type="email" class="ds-form-control" id="exampleState1" placeholder="Enter State">
+					<label for="exampleState1" class="ds-form-control-label">State</label>
 				</fieldset>
 			</div>
-			<fieldset class="ds-form-group">
-				<label for="exampleZip1">Zip Code</label>
-				<input type="text" class="ds-form-control" id="exampleZip1" placeholder="Enter Zip Code">
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-4">
+					<input type="text" class="ds-form-control" id="exampleZip1" placeholder="Enter Zip Code">
+					<label for="exampleZip1" class="ds-form-control-label">Zip Code</label>
+				</div>
 			</fieldset>
 		</form>
 	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;form>
-	&lt;fieldset class=&quot;ds-form-group&quot;>
-		&lt;label for=&quot;exampleInputAddress3&quot;>Street Address&lt;/label>
-		&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress3&quot; placeholder=&quot;Enter Street Address&quot;>
+	<pre class="language-markup"><code class="language-markup">&lt;form class=&quot;ds-form-address ds-container&quot;>
+	&lt;fieldset class=&quot;ds-form-group ds-row&quot;>
+		&lt;div class=&quot;ds-col-md-8&quot;>
+			&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress3&quot; placeholder=&quot;Enter Street Address&quot;>
+			&lt;label for=&quot;exampleInputAddress3&quot; class=&quot;ds-form-control-label&quot;>Street Address&lt;/label>
+		&lt;/div>
 	&lt;/fieldset>
-	&lt;fieldset class=&quot;ds-form-group&quot;>
-		&lt;label for=&quot;exampleInputAddress4&quot;>Address Line 2&lt;/label>
-		&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress4&quot; placeholder=&quot;Enter Address Line 2&quot;>
+	&lt;fieldset class=&quot;ds-form-group ds-row&quot;>
+		&lt;div class=&quot;ds-col-md-8&quot;>
+			&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress4&quot; placeholder=&quot;Enter Address Line 2&quot;>
+			&lt;label for=&quot;exampleInputAddress4&quot; class=&quot;ds-form-control-label&quot;>Address Line 2&lt;/label>
+		&lt;/div>
 	&lt;/fieldset>
-	&lt;div class=&quot;ds-form-inline&quot;>
-		&lt;fieldset class=&quot;ds-form-group&quot;>
-			&lt;label for=&quot;exampleCity1&quot;>City&lt;/label>
+	&lt;div class=&quot;ds-form-inline ds-row&quot;>
+		&lt;fieldset class=&quot;ds-form-group ds-col-md-4&quot;>
 			&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleCity1&quot; placeholder=&quot;Enter City&quot;>
+			&lt;label for=&quot;exampleCity1&quot; class=&quot;ds-form-control-label&quot;>City&lt;/label>
 		&lt;/fieldset>
-		&lt;fieldset class=&quot;ds-form-group&quot;>
-			&lt;label for=&quot;exampleState1&quot;>State&lt;/label>
+		&lt;fieldset class=&quot;ds-form-group ds-col-md-4&quot; class=&quot;ds-form-control-label&quot;>
 			&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;exampleState1&quot; placeholder=&quot;Enter State&quot;>
+			&lt;label for=&quot;exampleState1&quot; class=&quot;ds-form-control-label&quot;>State&lt;/label>
 		&lt;/fieldset>
 	&lt;/div>
-	&lt;fieldset class=&quot;ds-form-group&quot;>
-		&lt;label for=&quot;exampleZip1&quot;>Zip Code&lt;/label>
-		&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleZip1&quot; placeholder=&quot;Enter Zip Code&quot;>
+	&lt;fieldset class=&quot;ds-form-group ds-row&quot;>
+		&lt;div class=&quot;ds-col-md-4&quot;>
+			&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleZip1&quot; placeholder=&quot;Enter Zip Code&quot;>
+			&lt;label for=&quot;exampleZip1&quot; class=&quot;ds-form-control-label&quot;>Zip Code&lt;/label>
+		&lt;/div>
 	&lt;/fieldset>
-&lt;/form>
-</code></pre>
+&lt;/form></code></pre>
 </section>
 
 <section class="f-section">
-	<h3 class="f-example-title">Select Box</h3>
+	<h3 class="f-example-title">Custom Select Box</h3>
+	<p>The select box needs the <code class="language-markup">.ds-c-select</code> class on the select element for custom styles to apply. You can view <a href="http://v4-alpha.getbootstrap.com/components/forms/#select-menu" target="_blank">Bootstrap's example</a>		on their form documentation.</p>
 	<div class="f-example">
 		<form>
-			<fieldset class="ds-form-group ds-row">
-				<div class="ds-col-md-4">
-					<label for="exampleSelect1" class="ds-form-control-label">Select Box</label>
-					<select class="ds-form-control" id="exampleSelect1">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
-					</select>
-				</div>
+			<fieldset class="ds-form-group">
+				<select class="ds-form-control ds-c-select" id="exampleSelect1">
+					<option disabled selected value=""></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<label for="exampleSelect1" class="ds-form-control-label">Default <span>Required</span></label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-has-filled">
+				<select class="ds-form-control ds-c-select" id="exampleSelect2">
+					<option disabled value=""></option>
+					<option value="1">1</option>
+					<option value="2" selected>2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<label for="exampleSelect2" class="ds-form-control-label">Filled/Valid <span>Required</span></label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-has-danger">
+				<select class="ds-form-control ds-c-select" id="exampleSelect3">
+					<option disabled selected value=""></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<label for="exampleSelect3" class="ds-form-control-label">Error <span>Required</span></label>
+				<small class="ds-text-help">This field is required</small>
+			</fieldset>
+			<fieldset class="ds-form-group" disabled>
+				<select class="ds-form-control ds-c-select" id="exampleSelect4">
+					<option disabled selected value=""></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<label for="exampleSelect4" class="ds-form-control-label">Disabled</label>
 			</fieldset>
 		</form>
 	</div>
 	<pre class="language-markup"><code class="language-markup">&lt;form>
 	&lt;fieldset class=&quot;ds-form-group&quot;>
-		&lt;label for=&quot;exampleSelect1&quot; class=&quot;ds-form-control-label&quot;>Select Box&lt;/label>
-		&lt;select class=&quot;ds-form-control&quot; id=&quot;exampleSelect1&quot;>
-			&lt;option>1&lt;/option>
-			&lt;option>2&lt;/option>
-			&lt;option>3&lt;/option>
-			&lt;option>4&lt;/option>
-			&lt;option>5&lt;/option>
+		&lt;select class=&quot;ds-form-control ds-c-select&quot; id=&quot;exampleSelect1&quot;>
+			&lt;option disabled selected value=&quot;&quot;>&lt;/option>
+			&lt;option value=&quot;1&quot;>1&lt;/option>
+			&lt;option value=&quot;2&quot;>2&lt;/option>
+			&lt;option value=&quot;3&quot;>3&lt;/option>
+			&lt;option value=&quot;4&quot;>4&lt;/option>
+			&lt;option value=&quot;5&quot;>5&lt;/option>
 		&lt;/select>
+		&lt;label for=&quot;exampleSelect1&quot; class=&quot;ds-form-control-label&quot;>Default &lt;span>Required&lt;/span>&lt;/label>
 	&lt;/fieldset>
-&lt;/form>
-</code></pre>
-</section>
-
-<section class="f-section">
-	<h3 class="f-example-title">Multiple Select Box</h3>
-	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group ds-row">
-				<div class="ds-col-md-4">
-					<label for="exampleSelect2" class="ds-form-control-label">Multiple Select Box</label>
-					<select multiple class="ds-form-control" id="exampleSelect2">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
-					</select>
-				</div>
-			</fieldset>
-		</form>
-	</div>
-	<pre class="language-markup"><code class="language-markup">&lt;form>
-	&lt;fieldset class=&quot;ds-form-group&quot;>
-		&lt;label for=&quot;exampleSelect2&quot; class=&quot;ds-form-control-label&quot;>Multiple Select Box&lt;/label>
-		&lt;select multiple class=&quot;ds-form-control&quot; id=&quot;exampleSelect2&quot;>
-			&lt;option>1&lt;/option>
-			&lt;option>2&lt;/option>
-			&lt;option>3&lt;/option>
-			&lt;option>4&lt;/option>
-			&lt;option>5&lt;/option>
+	&lt;fieldset class=&quot;ds-form-group ds-has-filled&quot;>
+		&lt;select class=&quot;ds-form-control ds-c-select&quot; id=&quot;exampleSelect2&quot;>
+			&lt;option disabled value=&quot;&quot;>&lt;/option>
+			&lt;option value=&quot;1&quot;>1&lt;/option>
+			&lt;option value=&quot;2&quot; selected>2&lt;/option>
+			&lt;option value=&quot;3&quot;>3&lt;/option>
+			&lt;option value=&quot;4&quot;>4&lt;/option>
+			&lt;option value=&quot;5&quot;>5&lt;/option>
 		&lt;/select>
+		&lt;label for=&quot;exampleSelect2&quot; class=&quot;ds-form-control-label&quot;>Filled/Valid &lt;span>Required&lt;/span>&lt;/label>
 	&lt;/fieldset>
-&lt;/form>
-</code></pre>
+	&lt;fieldset class=&quot;ds-form-group ds-has-danger&quot;>
+		&lt;select class=&quot;ds-form-control ds-c-select&quot; id=&quot;exampleSelect3&quot;>
+			&lt;option disabled selected value=&quot;&quot;>&lt;/option>
+			&lt;option value=&quot;1&quot;>1&lt;/option>
+			&lt;option value=&quot;2&quot;>2&lt;/option>
+			&lt;option value=&quot;3&quot;>3&lt;/option>
+			&lt;option value=&quot;4&quot;>4&lt;/option>
+			&lt;option value=&quot;5&quot;>5&lt;/option>
+		&lt;/select>
+		&lt;label for=&quot;exampleSelect3&quot; class=&quot;ds-form-control-label&quot;>Error &lt;span>Required&lt;/span>&lt;/label>
+		&lt;small class=&quot;ds-text-help&quot;>This field is required&lt;/small>
+	&lt;/fieldset>
+	&lt;fieldset class=&quot;ds-form-group&quot; disabled>
+		&lt;select class=&quot;ds-form-control ds-c-select&quot; id=&quot;exampleSelect4&quot;>
+			&lt;option disabled selected value=&quot;&quot;>&lt;/option>
+			&lt;option value=&quot;1&quot;>1&lt;/option>
+			&lt;option value=&quot;2&quot;>2&lt;/option>
+			&lt;option value=&quot;3&quot;>3&lt;/option>
+			&lt;option value=&quot;4&quot;>4&lt;/option>
+			&lt;option value=&quot;5&quot;>5&lt;/option>
+		&lt;/select>
+		&lt;label for=&quot;exampleSelect4&quot; class=&quot;ds-form-control-label&quot;>Disabled&lt;/label>
+	&lt;/fieldset>
+&lt;/form></code></pre>
 </section>
 
 <section class="f-section">
@@ -2625,14 +2679,14 @@
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;form&gt;
 			&lt;fieldset class=&quot;ds-form-group&quot;&gt;
-				&lt;input type=&quot;date&quot; class=&quot;ds-form-control&quot; id=&quot;phantom-exampleInputDate&quot;&gt;
+				&lt;input type=&quot;date&quot; class=&quot;ds-form-control&quot; id=&quot;phantom-exampleInputDate&quot; placeholder=&quot;mm/dd/yyyy&quot;&gt;
 				&lt;label for=&quot;phantom-exampleInputDate&quot; class=&quot;ds-form-control-label&quot;&gt;Date&lt;/label&gt;
 			&lt;/fieldset&gt;
 		&lt;/form&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
 	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;input type=&amp;quot;date&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputDate&amp;quot;&gt;
+		&amp;lt;input type=&amp;quot;date&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputDate&amp;quot; placeholder=&amp;quot;mm/dd/yyyy&amp;quot;&gt;
 		&amp;lt;label for=&amp;quot;exampleInputDate&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Date&amp;lt;/label&gt;
 	&amp;lt;/fieldset&gt;
 &amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -2640,33 +2694,37 @@
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;International Address&lt;/h3&gt;
+	&lt;p&gt;Address forms use the &lt;code class=&quot;language-markup&quot;&gt;.ds-form-address&lt;/code&gt; class on the form element in addition to Bootstrap&#x27;s grid classes.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;form&gt;
-			&lt;fieldset class=&quot;ds-form-group&quot;&gt;
-				&lt;label for=&quot;exampleInputAddress1&quot;&gt;Street Address&lt;/label&gt;
-				&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress1&quot; placeholder=&quot;Enter Street Address&quot;&gt;
+		&lt;form class=&quot;ds-form-address ds-container&quot;&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
+				&lt;div class=&quot;ds-col-md-8&quot;&gt;
+					&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress1&quot; placeholder=&quot;Enter Street Address&quot;&gt;
+					&lt;label for=&quot;exampleInputAddress1&quot; class=&quot;ds-form-control-label&quot;&gt;Street Address&lt;/label&gt;
+				&lt;/div&gt;
 			&lt;/fieldset&gt;
-			&lt;fieldset class=&quot;ds-form-group&quot;&gt;
-				&lt;label for=&quot;exampleInputAddress2&quot;&gt;Address Line 2&lt;/label&gt;
-				&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress2&quot; placeholder=&quot;Enter Address Line 2&quot;&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
+				&lt;div class=&quot;ds-col-md-8&quot;&gt;
+					&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress2&quot; placeholder=&quot;Enter Address Line 2&quot;&gt;
+					&lt;label for=&quot;exampleInputAddress2&quot; class=&quot;ds-form-control-label&quot;&gt;Address Line 2&lt;/label&gt;
+				&lt;/div&gt;
 			&lt;/fieldset&gt;
-			&lt;div class=&quot;ds-form-inline&quot;&gt;
-				&lt;fieldset class=&quot;ds-form-group&quot;&gt;
-					&lt;label for=&quot;exampleCity&quot;&gt;City&lt;/label&gt;
+			&lt;div class=&quot;ds-form-inline ds-row&quot;&gt;
+				&lt;fieldset class=&quot;ds-form-group ds-col-md-4&quot;&gt;
 					&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleCity&quot; placeholder=&quot;Enter City&quot;&gt;
+					&lt;label for=&quot;exampleCity&quot; class=&quot;ds-form-control-label&quot;&gt;City&lt;/label&gt;
 				&lt;/fieldset&gt;
-				&lt;fieldset class=&quot;ds-form-group&quot;&gt;
-					&lt;label for=&quot;exampleState&quot;&gt;State/Province/Region&lt;/label&gt;
+				&lt;fieldset class=&quot;ds-form-group ds-col-md-4&quot;&gt;
 					&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;exampleState&quot; placeholder=&quot;Enter State/Province/Region&quot;&gt;
+					&lt;label for=&quot;exampleState&quot; class=&quot;ds-form-control-label&quot;&gt;State/Province/Region&lt;/label&gt;
 				&lt;/fieldset&gt;
 			&lt;/div&gt;
-			&lt;div class=&quot;ds-form-inline&quot;&gt;
-				&lt;fieldset class=&quot;ds-form-group&quot;&gt;
-					&lt;label for=&quot;exampleZip&quot;&gt;Zip/Postal Code&lt;/label&gt;
+			&lt;div class=&quot;ds-form-inline ds-row&quot;&gt;
+				&lt;fieldset class=&quot;ds-form-group ds-col-md-4&quot;&gt;
 					&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleZip&quot; placeholder=&quot;Enter Zip/Postal Code&quot;&gt;
+					&lt;label for=&quot;exampleZip&quot; class=&quot;ds-form-control-label&quot;&gt;Zip/Postal Code&lt;/label&gt;
 				&lt;/fieldset&gt;
-				&lt;fieldset class=&quot;ds-form-group&quot;&gt;
-					&lt;label for=&quot;exampleCountry&quot;&gt;Country&lt;/label&gt;
+				&lt;fieldset class=&quot;ds-form-group ds-col-md-4&quot;&gt;
 					&lt;select class=&quot;ds-form-control&quot; id=&quot;exampleCountry&quot;&gt;
 						&lt;option&gt;Country 1&lt;/option&gt;
 						&lt;option&gt;Country 2&lt;/option&gt;
@@ -2674,36 +2732,40 @@
 						&lt;option&gt;Country 4&lt;/option&gt;
 						&lt;option&gt;Country 5&lt;/option&gt;
 					&lt;/select&gt;
+					&lt;label for=&quot;exampleCountry&quot; class=&quot;ds-form-control-label&quot;&gt;Country&lt;/label&gt;
 				&lt;/fieldset&gt;
 			&lt;/div&gt;
 		&lt;/form&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
-	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label for=&amp;quot;exampleInputAddress1&amp;quot;&gt;Street Address&amp;lt;/label&gt;
-		&amp;lt;input type=&amp;quot;address&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputAddress1&amp;quot; placeholder=&amp;quot;Enter Street Address&amp;quot;&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form class=&amp;quot;ds-form-address ds-container&amp;quot;&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-row&amp;quot;&gt;
+		&amp;lt;div class=&amp;quot;ds-col-md-8&amp;quot;&gt;
+			&amp;lt;input type=&amp;quot;address&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputAddress1&amp;quot; placeholder=&amp;quot;Enter Street Address&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleInputAddress1&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Street Address&amp;lt;/label&gt;
+		&amp;lt;/div&gt;
 	&amp;lt;/fieldset&gt;
-	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label for=&amp;quot;exampleInputAddress2&amp;quot;&gt;Address Line 2&amp;lt;/label&gt;
-		&amp;lt;input type=&amp;quot;address&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputAddress2&amp;quot; placeholder=&amp;quot;Enter Address Line 2&amp;quot;&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-row&amp;quot;&gt;
+		&amp;lt;div class=&amp;quot;ds-col-md-8&amp;quot;&gt;
+			&amp;lt;input type=&amp;quot;address&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputAddress2&amp;quot; placeholder=&amp;quot;Enter Address Line 2&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleInputAddress2&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Address Line 2&amp;lt;/label&gt;
+		&amp;lt;/div&gt;
 	&amp;lt;/fieldset&gt;
-	&amp;lt;div class=&amp;quot;ds-form-inline&amp;quot;&gt;
-		&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-			&amp;lt;label for=&amp;quot;exampleCity&amp;quot;&gt;City&amp;lt;/label&gt;
+	&amp;lt;div class=&amp;quot;ds-form-inline ds-row&amp;quot;&gt;
+		&amp;lt;fieldset class=&amp;quot;ds-form-group ds-col-md-4&amp;quot;&gt;
 			&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleCity&amp;quot; placeholder=&amp;quot;Enter City&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleCity&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;City&amp;lt;/label&gt;
 		&amp;lt;/fieldset&gt;
-		&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-			&amp;lt;label for=&amp;quot;exampleState&amp;quot;&gt;State/Province/Region&amp;lt;/label&gt;
+		&amp;lt;fieldset class=&amp;quot;ds-form-group ds-col-md-4&amp;quot;&gt;
 			&amp;lt;input type=&amp;quot;email&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleState&amp;quot; placeholder=&amp;quot;Enter State/Province/Region&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleState&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;State/Province/Region&amp;lt;/label&gt;
 		&amp;lt;/fieldset&gt;
 	&amp;lt;/div&gt;
-	&amp;lt;div class=&amp;quot;ds-form-inline&amp;quot;&gt;
-		&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-			&amp;lt;label for=&amp;quot;exampleZip&amp;quot;&gt;Zip/Postal Code&amp;lt;/label&gt;
+	&amp;lt;div class=&amp;quot;ds-form-inline ds-row&amp;quot;&gt;
+		&amp;lt;fieldset class=&amp;quot;ds-form-group ds-col-md-4&amp;quot;&gt;
 			&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleZip&amp;quot; placeholder=&amp;quot;Enter Zip/Postal Code&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleZip&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Zip/Postal Code&amp;lt;/label&gt;
 		&amp;lt;/fieldset&gt;
-		&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-			&amp;lt;label for=&amp;quot;exampleCountry&amp;quot;&gt;Country&amp;lt;/label&gt;
+		&amp;lt;fieldset class=&amp;quot;ds-form-group ds-col-md-4&amp;quot;&gt;
 			&amp;lt;select class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleCountry&amp;quot;&gt;
 				&amp;lt;option&gt;Country 1&amp;lt;/option&gt;
 				&amp;lt;option&gt;Country 2&amp;lt;/option&gt;
@@ -2711,131 +2773,177 @@
 				&amp;lt;option&gt;Country 4&amp;lt;/option&gt;
 				&amp;lt;option&gt;Country 5&amp;lt;/option&gt;
 			&amp;lt;/select&gt;
+			&amp;lt;label for=&amp;quot;exampleCountry&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Country&amp;lt;/label&gt;
 		&amp;lt;/fieldset&gt;
 	&amp;lt;/div&gt;
-&amp;lt;/form&gt;
-&lt;/code&gt;&lt;/pre&gt;
+&amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
 	&lt;h3 class=&quot;f-example-title&quot;&gt;USA Address&lt;/h3&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;form&gt;
-			&lt;fieldset class=&quot;ds-form-group&quot;&gt;
-				&lt;label for=&quot;exampleInputAddress3&quot;&gt;Street Address&lt;/label&gt;
-				&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress3&quot; placeholder=&quot;Enter Street Address&quot;&gt;
+		&lt;form class=&quot;ds-form-address ds-container&quot;&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
+				&lt;div class=&quot;ds-col-md-8&quot;&gt;
+					&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress3&quot; placeholder=&quot;Enter Street Address&quot;&gt;
+					&lt;label for=&quot;exampleInputAddress3&quot; class=&quot;ds-form-control-label&quot;&gt;Street Address&lt;/label&gt;
+				&lt;/div&gt;
 			&lt;/fieldset&gt;
-			&lt;fieldset class=&quot;ds-form-group&quot;&gt;
-				&lt;label for=&quot;exampleInputAddress4&quot;&gt;Address Line 2&lt;/label&gt;
-				&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress4&quot; placeholder=&quot;Enter Address Line 2&quot;&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
+				&lt;div class=&quot;ds-col-md-8&quot;&gt;
+					&lt;input type=&quot;address&quot; class=&quot;ds-form-control&quot; id=&quot;exampleInputAddress4&quot; placeholder=&quot;Enter Address Line 2&quot;&gt;
+					&lt;label for=&quot;exampleInputAddress4&quot; class=&quot;ds-form-control-label&quot;&gt;Address Line 2&lt;/label&gt;
+				&lt;/div&gt;
 			&lt;/fieldset&gt;
-			&lt;div class=&quot;ds-form-inline&quot;&gt;
-				&lt;fieldset class=&quot;ds-form-group&quot;&gt;
-					&lt;label for=&quot;exampleCity1&quot;&gt;City&lt;/label&gt;
+			&lt;div class=&quot;ds-form-inline ds-row&quot;&gt;
+				&lt;fieldset class=&quot;ds-form-group ds-col-md-4&quot;&gt;
 					&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleCity1&quot; placeholder=&quot;Enter City&quot;&gt;
+					&lt;label for=&quot;exampleCity1&quot; class=&quot;ds-form-control-label&quot;&gt;City&lt;/label&gt;
 				&lt;/fieldset&gt;
-				&lt;fieldset class=&quot;ds-form-group&quot;&gt;
-					&lt;label for=&quot;exampleState1&quot;&gt;State&lt;/label&gt;
+				&lt;fieldset class=&quot;ds-form-group ds-col-md-4&quot; class=&quot;ds-form-control-label&quot;&gt;
 					&lt;input type=&quot;email&quot; class=&quot;ds-form-control&quot; id=&quot;exampleState1&quot; placeholder=&quot;Enter State&quot;&gt;
+					&lt;label for=&quot;exampleState1&quot; class=&quot;ds-form-control-label&quot;&gt;State&lt;/label&gt;
 				&lt;/fieldset&gt;
 			&lt;/div&gt;
-			&lt;fieldset class=&quot;ds-form-group&quot;&gt;
-				&lt;label for=&quot;exampleZip1&quot;&gt;Zip Code&lt;/label&gt;
-				&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleZip1&quot; placeholder=&quot;Enter Zip Code&quot;&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
+				&lt;div class=&quot;ds-col-md-4&quot;&gt;
+					&lt;input type=&quot;text&quot; class=&quot;ds-form-control&quot; id=&quot;exampleZip1&quot; placeholder=&quot;Enter Zip Code&quot;&gt;
+					&lt;label for=&quot;exampleZip1&quot; class=&quot;ds-form-control-label&quot;&gt;Zip Code&lt;/label&gt;
+				&lt;/div&gt;
 			&lt;/fieldset&gt;
 		&lt;/form&gt;
 	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
-	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label for=&amp;quot;exampleInputAddress3&amp;quot;&gt;Street Address&amp;lt;/label&gt;
-		&amp;lt;input type=&amp;quot;address&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputAddress3&amp;quot; placeholder=&amp;quot;Enter Street Address&amp;quot;&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form class=&amp;quot;ds-form-address ds-container&amp;quot;&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-row&amp;quot;&gt;
+		&amp;lt;div class=&amp;quot;ds-col-md-8&amp;quot;&gt;
+			&amp;lt;input type=&amp;quot;address&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputAddress3&amp;quot; placeholder=&amp;quot;Enter Street Address&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleInputAddress3&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Street Address&amp;lt;/label&gt;
+		&amp;lt;/div&gt;
 	&amp;lt;/fieldset&gt;
-	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label for=&amp;quot;exampleInputAddress4&amp;quot;&gt;Address Line 2&amp;lt;/label&gt;
-		&amp;lt;input type=&amp;quot;address&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputAddress4&amp;quot; placeholder=&amp;quot;Enter Address Line 2&amp;quot;&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-row&amp;quot;&gt;
+		&amp;lt;div class=&amp;quot;ds-col-md-8&amp;quot;&gt;
+			&amp;lt;input type=&amp;quot;address&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleInputAddress4&amp;quot; placeholder=&amp;quot;Enter Address Line 2&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleInputAddress4&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Address Line 2&amp;lt;/label&gt;
+		&amp;lt;/div&gt;
 	&amp;lt;/fieldset&gt;
-	&amp;lt;div class=&amp;quot;ds-form-inline&amp;quot;&gt;
-		&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-			&amp;lt;label for=&amp;quot;exampleCity1&amp;quot;&gt;City&amp;lt;/label&gt;
+	&amp;lt;div class=&amp;quot;ds-form-inline ds-row&amp;quot;&gt;
+		&amp;lt;fieldset class=&amp;quot;ds-form-group ds-col-md-4&amp;quot;&gt;
 			&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleCity1&amp;quot; placeholder=&amp;quot;Enter City&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleCity1&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;City&amp;lt;/label&gt;
 		&amp;lt;/fieldset&gt;
-		&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-			&amp;lt;label for=&amp;quot;exampleState1&amp;quot;&gt;State&amp;lt;/label&gt;
+		&amp;lt;fieldset class=&amp;quot;ds-form-group ds-col-md-4&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;
 			&amp;lt;input type=&amp;quot;email&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleState1&amp;quot; placeholder=&amp;quot;Enter State&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleState1&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;State&amp;lt;/label&gt;
 		&amp;lt;/fieldset&gt;
 	&amp;lt;/div&gt;
-	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label for=&amp;quot;exampleZip1&amp;quot;&gt;Zip Code&amp;lt;/label&gt;
-		&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleZip1&amp;quot; placeholder=&amp;quot;Enter Zip Code&amp;quot;&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-row&amp;quot;&gt;
+		&amp;lt;div class=&amp;quot;ds-col-md-4&amp;quot;&gt;
+			&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleZip1&amp;quot; placeholder=&amp;quot;Enter Zip Code&amp;quot;&gt;
+			&amp;lt;label for=&amp;quot;exampleZip1&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Zip Code&amp;lt;/label&gt;
+		&amp;lt;/div&gt;
 	&amp;lt;/fieldset&gt;
-&amp;lt;/form&gt;
-&lt;/code&gt;&lt;/pre&gt;
+&amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;
-	&lt;h3 class=&quot;f-example-title&quot;&gt;Select Box&lt;/h3&gt;
+	&lt;h3 class=&quot;f-example-title&quot;&gt;Custom Select Box&lt;/h3&gt;
+	&lt;p&gt;The select box needs the &lt;code class=&quot;language-markup&quot;&gt;.ds-c-select&lt;/code&gt; class on the select element for custom styles to apply. You can view &lt;a href=&quot;http://v4-alpha.getbootstrap.com/components/forms/#select-menu&quot; target=&quot;_blank&quot;&gt;Bootstrap&#x27;s example&lt;/a&gt;		on their form documentation.&lt;/p&gt;
 	&lt;div class=&quot;f-example&quot;&gt;
 		&lt;form&gt;
-			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
-				&lt;div class=&quot;ds-col-md-4&quot;&gt;
-					&lt;label for=&quot;exampleSelect1&quot; class=&quot;ds-form-control-label&quot;&gt;Select Box&lt;/label&gt;
-					&lt;select class=&quot;ds-form-control&quot; id=&quot;exampleSelect1&quot;&gt;
-					  &lt;option&gt;1&lt;/option&gt;
-					  &lt;option&gt;2&lt;/option&gt;
-					  &lt;option&gt;3&lt;/option&gt;
-					  &lt;option&gt;4&lt;/option&gt;
-					  &lt;option&gt;5&lt;/option&gt;
-					&lt;/select&gt;
-				&lt;/div&gt;
+			&lt;fieldset class=&quot;ds-form-group&quot;&gt;
+				&lt;select class=&quot;ds-form-control ds-c-select&quot; id=&quot;exampleSelect1&quot;&gt;
+					&lt;option disabled selected value=&quot;&quot;&gt;&lt;/option&gt;
+					&lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;
+					&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;
+					&lt;option value=&quot;3&quot;&gt;3&lt;/option&gt;
+					&lt;option value=&quot;4&quot;&gt;4&lt;/option&gt;
+					&lt;option value=&quot;5&quot;&gt;5&lt;/option&gt;
+				&lt;/select&gt;
+				&lt;label for=&quot;exampleSelect1&quot; class=&quot;ds-form-control-label&quot;&gt;Default &lt;span&gt;Required&lt;/span&gt;&lt;/label&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-has-filled&quot;&gt;
+				&lt;select class=&quot;ds-form-control ds-c-select&quot; id=&quot;exampleSelect2&quot;&gt;
+					&lt;option disabled value=&quot;&quot;&gt;&lt;/option&gt;
+					&lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;
+					&lt;option value=&quot;2&quot; selected&gt;2&lt;/option&gt;
+					&lt;option value=&quot;3&quot;&gt;3&lt;/option&gt;
+					&lt;option value=&quot;4&quot;&gt;4&lt;/option&gt;
+					&lt;option value=&quot;5&quot;&gt;5&lt;/option&gt;
+				&lt;/select&gt;
+				&lt;label for=&quot;exampleSelect2&quot; class=&quot;ds-form-control-label&quot;&gt;Filled/Valid &lt;span&gt;Required&lt;/span&gt;&lt;/label&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;ds-form-group ds-has-danger&quot;&gt;
+				&lt;select class=&quot;ds-form-control ds-c-select&quot; id=&quot;exampleSelect3&quot;&gt;
+					&lt;option disabled selected value=&quot;&quot;&gt;&lt;/option&gt;
+					&lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;
+					&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;
+					&lt;option value=&quot;3&quot;&gt;3&lt;/option&gt;
+					&lt;option value=&quot;4&quot;&gt;4&lt;/option&gt;
+					&lt;option value=&quot;5&quot;&gt;5&lt;/option&gt;
+				&lt;/select&gt;
+				&lt;label for=&quot;exampleSelect3&quot; class=&quot;ds-form-control-label&quot;&gt;Error &lt;span&gt;Required&lt;/span&gt;&lt;/label&gt;
+				&lt;small class=&quot;ds-text-help&quot;&gt;This field is required&lt;/small&gt;
+			&lt;/fieldset&gt;
+			&lt;fieldset class=&quot;ds-form-group&quot; disabled&gt;
+				&lt;select class=&quot;ds-form-control ds-c-select&quot; id=&quot;exampleSelect4&quot;&gt;
+					&lt;option disabled selected value=&quot;&quot;&gt;&lt;/option&gt;
+					&lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;
+					&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;
+					&lt;option value=&quot;3&quot;&gt;3&lt;/option&gt;
+					&lt;option value=&quot;4&quot;&gt;4&lt;/option&gt;
+					&lt;option value=&quot;5&quot;&gt;5&lt;/option&gt;
+				&lt;/select&gt;
+				&lt;label for=&quot;exampleSelect4&quot; class=&quot;ds-form-control-label&quot;&gt;Disabled&lt;/label&gt;
 			&lt;/fieldset&gt;
 		&lt;/form&gt;
 	&lt;/div&gt;
 	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
 	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label for=&amp;quot;exampleSelect1&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Select Box&amp;lt;/label&gt;
-		&amp;lt;select class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleSelect1&amp;quot;&gt;
-			&amp;lt;option&gt;1&amp;lt;/option&gt;
-			&amp;lt;option&gt;2&amp;lt;/option&gt;
-			&amp;lt;option&gt;3&amp;lt;/option&gt;
-			&amp;lt;option&gt;4&amp;lt;/option&gt;
-			&amp;lt;option&gt;5&amp;lt;/option&gt;
+		&amp;lt;select class=&amp;quot;ds-form-control ds-c-select&amp;quot; id=&amp;quot;exampleSelect1&amp;quot;&gt;
+			&amp;lt;option disabled selected value=&amp;quot;&amp;quot;&gt;&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;1&amp;quot;&gt;1&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;2&amp;quot;&gt;2&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;3&amp;quot;&gt;3&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;4&amp;quot;&gt;4&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;5&amp;quot;&gt;5&amp;lt;/option&gt;
 		&amp;lt;/select&gt;
+		&amp;lt;label for=&amp;quot;exampleSelect1&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Default &amp;lt;span&gt;Required&amp;lt;/span&gt;&amp;lt;/label&gt;
 	&amp;lt;/fieldset&gt;
-&amp;lt;/form&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/section&gt;
-
-&lt;section class=&quot;f-section&quot;&gt;
-	&lt;h3 class=&quot;f-example-title&quot;&gt;Multiple Select Box&lt;/h3&gt;
-	&lt;div class=&quot;f-example&quot;&gt;
-		&lt;form&gt;
-			&lt;fieldset class=&quot;ds-form-group ds-row&quot;&gt;
-				&lt;div class=&quot;ds-col-md-4&quot;&gt;
-					&lt;label for=&quot;exampleSelect2&quot; class=&quot;ds-form-control-label&quot;&gt;Multiple Select Box&lt;/label&gt;
-					&lt;select multiple class=&quot;ds-form-control&quot; id=&quot;exampleSelect2&quot;&gt;
-					  &lt;option&gt;1&lt;/option&gt;
-					  &lt;option&gt;2&lt;/option&gt;
-					  &lt;option&gt;3&lt;/option&gt;
-					  &lt;option&gt;4&lt;/option&gt;
-					  &lt;option&gt;5&lt;/option&gt;
-					&lt;/select&gt;
-				&lt;/div&gt;
-			&lt;/fieldset&gt;
-		&lt;/form&gt;
-	&lt;/div&gt;
-	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;form&gt;
-	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot;&gt;
-		&amp;lt;label for=&amp;quot;exampleSelect2&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Multiple Select Box&amp;lt;/label&gt;
-		&amp;lt;select multiple class=&amp;quot;ds-form-control&amp;quot; id=&amp;quot;exampleSelect2&amp;quot;&gt;
-			&amp;lt;option&gt;1&amp;lt;/option&gt;
-			&amp;lt;option&gt;2&amp;lt;/option&gt;
-			&amp;lt;option&gt;3&amp;lt;/option&gt;
-			&amp;lt;option&gt;4&amp;lt;/option&gt;
-			&amp;lt;option&gt;5&amp;lt;/option&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-has-filled&amp;quot;&gt;
+		&amp;lt;select class=&amp;quot;ds-form-control ds-c-select&amp;quot; id=&amp;quot;exampleSelect2&amp;quot;&gt;
+			&amp;lt;option disabled value=&amp;quot;&amp;quot;&gt;&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;1&amp;quot;&gt;1&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;2&amp;quot; selected&gt;2&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;3&amp;quot;&gt;3&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;4&amp;quot;&gt;4&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;5&amp;quot;&gt;5&amp;lt;/option&gt;
 		&amp;lt;/select&gt;
+		&amp;lt;label for=&amp;quot;exampleSelect2&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Filled/Valid &amp;lt;span&gt;Required&amp;lt;/span&gt;&amp;lt;/label&gt;
 	&amp;lt;/fieldset&gt;
-&amp;lt;/form&gt;
-&lt;/code&gt;&lt;/pre&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group ds-has-danger&amp;quot;&gt;
+		&amp;lt;select class=&amp;quot;ds-form-control ds-c-select&amp;quot; id=&amp;quot;exampleSelect3&amp;quot;&gt;
+			&amp;lt;option disabled selected value=&amp;quot;&amp;quot;&gt;&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;1&amp;quot;&gt;1&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;2&amp;quot;&gt;2&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;3&amp;quot;&gt;3&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;4&amp;quot;&gt;4&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;5&amp;quot;&gt;5&amp;lt;/option&gt;
+		&amp;lt;/select&gt;
+		&amp;lt;label for=&amp;quot;exampleSelect3&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Error &amp;lt;span&gt;Required&amp;lt;/span&gt;&amp;lt;/label&gt;
+		&amp;lt;small class=&amp;quot;ds-text-help&amp;quot;&gt;This field is required&amp;lt;/small&gt;
+	&amp;lt;/fieldset&gt;
+	&amp;lt;fieldset class=&amp;quot;ds-form-group&amp;quot; disabled&gt;
+		&amp;lt;select class=&amp;quot;ds-form-control ds-c-select&amp;quot; id=&amp;quot;exampleSelect4&amp;quot;&gt;
+			&amp;lt;option disabled selected value=&amp;quot;&amp;quot;&gt;&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;1&amp;quot;&gt;1&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;2&amp;quot;&gt;2&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;3&amp;quot;&gt;3&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;4&amp;quot;&gt;4&amp;lt;/option&gt;
+			&amp;lt;option value=&amp;quot;5&amp;quot;&gt;5&amp;lt;/option&gt;
+		&amp;lt;/select&gt;
+		&amp;lt;label for=&amp;quot;exampleSelect4&amp;quot; class=&amp;quot;ds-form-control-label&amp;quot;&gt;Disabled&amp;lt;/label&gt;
+	&amp;lt;/fieldset&gt;
+&amp;lt;/form&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/section&gt;
 
 &lt;section class=&quot;f-section&quot;&gt;

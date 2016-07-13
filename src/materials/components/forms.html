@@ -157,7 +157,7 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group">
-				<input type="date" class="ds-form-control" id="phantom-exampleInputDate">
+				<input type="date" class="ds-form-control" id="phantom-exampleInputDate" placeholder="mm/dd/yyyy">
 				<label for="phantom-exampleInputDate" class="ds-form-control-label">Date</label>
 			</fieldset>
 		</form>
@@ -167,33 +167,37 @@ notes: |
 
 <section class="f-section">
 	<h3 class="f-example-title">International Address</h3>
+	<p>Address forms use the <code class="language-markup">.ds-form-address</code> class on the form element in addition to Bootstrap's grid classes.</p>
 	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group">
-				<label for="exampleInputAddress1">Street Address</label>
-				<input type="address" class="ds-form-control" id="exampleInputAddress1" placeholder="Enter Street Address">
+		<form class="ds-form-address ds-container">
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-8">
+					<input type="address" class="ds-form-control" id="exampleInputAddress1" placeholder="Enter Street Address">
+					<label for="exampleInputAddress1" class="ds-form-control-label">Street Address</label>
+				</div>
 			</fieldset>
-			<fieldset class="ds-form-group">
-				<label for="exampleInputAddress2">Address Line 2</label>
-				<input type="address" class="ds-form-control" id="exampleInputAddress2" placeholder="Enter Address Line 2">
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-8">
+					<input type="address" class="ds-form-control" id="exampleInputAddress2" placeholder="Enter Address Line 2">
+					<label for="exampleInputAddress2" class="ds-form-control-label">Address Line 2</label>
+				</div>
 			</fieldset>
-			<div class="ds-form-inline">
-				<fieldset class="ds-form-group">
-					<label for="exampleCity">City</label>
+			<div class="ds-form-inline ds-row">
+				<fieldset class="ds-form-group ds-col-md-4">
 					<input type="text" class="ds-form-control" id="exampleCity" placeholder="Enter City">
+					<label for="exampleCity" class="ds-form-control-label">City</label>
 				</fieldset>
-				<fieldset class="ds-form-group">
-					<label for="exampleState">State/Province/Region</label>
+				<fieldset class="ds-form-group ds-col-md-4">
 					<input type="email" class="ds-form-control" id="exampleState" placeholder="Enter State/Province/Region">
+					<label for="exampleState" class="ds-form-control-label">State/Province/Region</label>
 				</fieldset>
 			</div>
-			<div class="ds-form-inline">
-				<fieldset class="ds-form-group">
-					<label for="exampleZip">Zip/Postal Code</label>
+			<div class="ds-form-inline ds-row">
+				<fieldset class="ds-form-group ds-col-md-4">
 					<input type="text" class="ds-form-control" id="exampleZip" placeholder="Enter Zip/Postal Code">
+					<label for="exampleZip" class="ds-form-control-label">Zip/Postal Code</label>
 				</fieldset>
-				<fieldset class="ds-form-group">
-					<label for="exampleCountry">Country</label>
+				<fieldset class="ds-form-group ds-col-md-4">
 					<select class="ds-form-control" id="exampleCountry">
 						<option>Country 1</option>
 						<option>Country 2</option>
@@ -201,6 +205,7 @@ notes: |
 						<option>Country 4</option>
 						<option>Country 5</option>
 					</select>
+					<label for="exampleCountry" class="ds-form-control-label">Country</label>
 				</fieldset>
 			</div>
 		</form>
@@ -211,28 +216,34 @@ notes: |
 <section class="f-section">
 	<h3 class="f-example-title">USA Address</h3>
 	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group">
-				<label for="exampleInputAddress3">Street Address</label>
-				<input type="address" class="ds-form-control" id="exampleInputAddress3" placeholder="Enter Street Address">
+		<form class="ds-form-address ds-container">
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-8">
+					<input type="address" class="ds-form-control" id="exampleInputAddress3" placeholder="Enter Street Address">
+					<label for="exampleInputAddress3" class="ds-form-control-label">Street Address</label>
+				</div>
 			</fieldset>
-			<fieldset class="ds-form-group">
-				<label for="exampleInputAddress4">Address Line 2</label>
-				<input type="address" class="ds-form-control" id="exampleInputAddress4" placeholder="Enter Address Line 2">
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-8">
+					<input type="address" class="ds-form-control" id="exampleInputAddress4" placeholder="Enter Address Line 2">
+					<label for="exampleInputAddress4" class="ds-form-control-label">Address Line 2</label>
+				</div>
 			</fieldset>
-			<div class="ds-form-inline">
-				<fieldset class="ds-form-group">
-					<label for="exampleCity1">City</label>
+			<div class="ds-form-inline ds-row">
+				<fieldset class="ds-form-group ds-col-md-4">
 					<input type="text" class="ds-form-control" id="exampleCity1" placeholder="Enter City">
+					<label for="exampleCity1" class="ds-form-control-label">City</label>
 				</fieldset>
-				<fieldset class="ds-form-group">
-					<label for="exampleState1">State</label>
+				<fieldset class="ds-form-group ds-col-md-4" class="ds-form-control-label">
 					<input type="email" class="ds-form-control" id="exampleState1" placeholder="Enter State">
+					<label for="exampleState1" class="ds-form-control-label">State</label>
 				</fieldset>
 			</div>
-			<fieldset class="ds-form-group">
-				<label for="exampleZip1">Zip Code</label>
-				<input type="text" class="ds-form-control" id="exampleZip1" placeholder="Enter Zip Code">
+			<fieldset class="ds-form-group ds-row">
+				<div class="ds-col-md-4">
+					<input type="text" class="ds-form-control" id="exampleZip1" placeholder="Enter Zip Code">
+					<label for="exampleZip1" class="ds-form-control-label">Zip Code</label>
+				</div>
 			</fieldset>
 		</form>
 	</div>
@@ -240,45 +251,58 @@ notes: |
 </section>
 
 <section class="f-section">
-	<h3 class="f-example-title">Select Box</h3>
+	<h3 class="f-example-title">Custom Select Box</h3>
+	<p>The select box needs the <code class="language-markup">.ds-c-select</code> class on the select element for custom styles to apply. You can view <a href="http://v4-alpha.getbootstrap.com/components/forms/#select-menu" target="_blank">Bootstrap's example</a> on their form documentation.</p>
 	<div class="f-example">
 		<form>
-			<fieldset class="ds-form-group ds-row">
-				<div class="ds-col-md-4">
-					<label for="exampleSelect1" class="ds-form-control-label">Select Box</label>
-					<select class="ds-form-control" id="exampleSelect1">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
-					</select>
-				</div>
+			<fieldset class="ds-form-group">
+				<select class="ds-form-control ds-c-select" id="exampleSelect1">
+					<option disabled selected value=""></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<label for="exampleSelect1" class="ds-form-control-label">Default <span>Required</span></label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-has-filled">
+				<select class="ds-form-control ds-c-select" id="exampleSelect2">
+					<option disabled value=""></option>
+					<option value="1">1</option>
+					<option value="2" selected>2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<label for="exampleSelect2" class="ds-form-control-label">Filled/Valid <span>Required</span></label>
+			</fieldset>
+			<fieldset class="ds-form-group ds-has-danger">
+				<select class="ds-form-control ds-c-select" id="exampleSelect3">
+					<option disabled selected value=""></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<label for="exampleSelect3" class="ds-form-control-label">Error <span>Required</span></label>
+				<small class="ds-text-help">This field is required</small>
+			</fieldset>
+			<fieldset class="ds-form-group" disabled>
+				<select class="ds-form-control ds-c-select" id="exampleSelect4">
+					<option disabled selected value=""></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<label for="exampleSelect4" class="ds-form-control-label">Disabled</label>
 			</fieldset>
 		</form>
 	</div>
 	{{example 'form.select'}}
-</section>
-
-<section class="f-section">
-	<h3 class="f-example-title">Multiple Select Box</h3>
-	<div class="f-example">
-		<form>
-			<fieldset class="ds-form-group ds-row">
-				<div class="ds-col-md-4">
-					<label for="exampleSelect2" class="ds-form-control-label">Multiple Select Box</label>
-					<select multiple class="ds-form-control" id="exampleSelect2">
-					  <option>1</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
-					</select>
-				</div>
-			</fieldset>
-		</form>
-	</div>
-	{{example 'form.multi-select'}}
 </section>
 
 <section class="f-section">
