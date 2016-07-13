@@ -5239,7 +5239,11 @@ fieldset:disabled .ds-form-control-label {
 }
 
 .ds-form-control {
-  line-height: 1rem;
+  line-height: normal;
+}
+
+.ds-form-control:not(textarea) {
+  height: 54px;
 }
 
 fieldset .ds-form-control {
@@ -5621,6 +5625,8 @@ label.ds-disabled {
 .ds-c-select {
   padding: 1rem 0.75rem;
   background: #fff url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBpZD0iaWNfYXJyb3dfZHJvcF9kb3duXzI0cHgiPjxwYXRoIGQ9Ik03IDEwbDUgNSA1LTV6IiBmaWxsPSIjNzU3NTc1Ii8+PC9zdmc+) no-repeat right 0.75rem center;
+  color: transparent;
+  text-shadow: 0 0 0 #000;
 }
 
 /* Bootstrap overwrites: buttons.scss */
@@ -7661,6 +7667,10 @@ button.ds-list-group-item-danger.ds-active:hover {
   border: 1px solid #e0e0e0;
 }
 
+.ds-card-featured .ds-card-title {
+  margin-bottom: 1rem;
+}
+
 .ds-card-featured .ds-card-subtitle {
   margin-bottom: 0.75rem;
 }
@@ -7826,7 +7836,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 }
 
 .ds-card-content .ds-card-header {
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.5rem;
 }
 
 .ds-card-content .ds-card-block {
