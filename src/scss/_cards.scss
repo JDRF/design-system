@@ -89,8 +89,7 @@
 
 // Layout
 .card-header {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding: 0.75rem 1.5rem;
 	font-family: $card-header-font-family;
 	font-size: $card-header-font-size;
 	line-height: $card-header-line-height;
@@ -342,10 +341,6 @@
 
 // Content card
 .card-content {
-	.card-header {
-		padding: 0.75rem 1.5rem;
-	}
-
 	.card-block {
 		padding: 1.5rem;
 	}
