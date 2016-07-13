@@ -66,7 +66,8 @@
 }
 
 .form-control {
-	line-height: $font-size-base;
+	//normal line-height vertically aligns placeholder in Safari
+	line-height: normal;
 
 	fieldset & {
 		margin-top: 28px;
