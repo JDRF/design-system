@@ -1,6 +1,6 @@
 /**
  * jdrf-design-system - JDRF Digital Design System
- * @version v0.0.1
+ * @version v0.0.2
  * @link https://github.com/JDRF/design-system#readme
  * @license MIT
  */
