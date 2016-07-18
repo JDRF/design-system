@@ -3,7 +3,7 @@ var tapSpec = require('tap-spec');
 // Uses node globals since there is no window to attach to.
 var ripple = require('../../../src/js/ripple');
 
-test('ripple Test', function (t) {
+test('Duration test for RippleJS', function (t) {
 	t.plan(2);
 
 	var r = window.ripple(),
