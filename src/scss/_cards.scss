@@ -301,10 +301,19 @@
 	}
 
 	.card-footer {
+		position: relative;
 		padding: 0 1rem 1.375rem;
 
 		@include media-breakpoint-up(md) {
 			padding-left: 0;
+		}
+
+		.btn {
+			@include media-breakpoint-up(md) {
+				position: absolute;
+				top: 0;
+				left: -9px;
+			}
 		}
 	}
 }
