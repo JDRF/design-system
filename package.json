@@ -1,7 +1,7 @@
 {
   "name": "jdrf-design-system",
-  "version": "0.0.1",
-  "description": "jdrf design system for managing styles",
+  "version": "0.0.2",
+  "description": "JDRF Design System for managing styles",
   "author": "patrick mckowen <pmckowen@jdrf.org>",
   "contributors": [
     {
