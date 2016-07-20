@@ -10,7 +10,7 @@ All of the team will be working directly on GitHub.
 
 Use `npm run test` to run the full test suite with PhantomCSS and eventually PhantomJS.
 
-Just make sure to run the whole test suite before submitting a pull request!
+Just make sure to run the whole test suite before submitting a pull request! Any PR without tests will be rejected.
 
 ### Pull Requests
 
