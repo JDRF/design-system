@@ -7498,7 +7498,7 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card {
   border: 0;
-  border-radius: 0 0 2px 2px;
+  border-radius: 2px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
