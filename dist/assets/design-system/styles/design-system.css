@@ -7742,6 +7742,8 @@ button.ds-list-group-item-danger.ds-active:hover {
 @media (min-width: 768px) {
   .ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-left .ds-card-hero-bg {
     background-image: none;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
   }
 }
 
@@ -7786,6 +7788,8 @@ button.ds-list-group-item-danger.ds-active:hover {
   .ds-card-featured-hero .ds-card-content-wrapper .ds-card-hero-block-right {
     z-index: 10;
     float: right;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
   }
 }
 
