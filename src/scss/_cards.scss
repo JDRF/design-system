@@ -248,6 +248,8 @@
 
 				@include media-breakpoint-up(md) {
 					background-image: none;
+					border-top-left-radius: $border-radius;
+					border-bottom-left-radius: $border-radius;
 				}
 
 				img {
@@ -286,6 +288,8 @@
 			@include media-breakpoint-up(md) {
 				z-index: 10;
 				float: right;
+				border-top-right-radius: $border-radius;
+				border-bottom-right-radius: $border-radius;
 			}
 
 			.card-block {
