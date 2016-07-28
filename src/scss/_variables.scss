@@ -16,16 +16,18 @@
 /* == Grid ======== */
 
 $grid-breakpoints: (
-	// Extra small screen / phone
 	xs: 0,
-	// Small screen / phone
 	sm: 360px,
-	// Medium screen / tablet
 	md: 768px,
-	// Large screen / desktop
 	lg: 992px,
-	// Extra large screen / wide desktop
 	xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 940px,
+  xl: 1088px
 );
 
 /* == Colors ======== */
