@@ -7651,8 +7651,10 @@ button.ds-list-group-item-danger.ds-active:hover {
   border: 1px solid #e0e0e0;
 }
 
-.ds-card-featured .ds-card-title {
-  margin-bottom: 1rem;
+@media (min-width: 768px) {
+  .ds-card-featured .ds-card-title {
+    margin-bottom: 1rem;
+  }
 }
 
 .ds-card-featured .ds-card-subtitle {
