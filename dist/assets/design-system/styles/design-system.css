@@ -5408,26 +5408,17 @@ label.ds-disabled {
 .ds-checkbox-group.ds-has-success .ds-text-help {
   position: relative;
   padding-left: 2rem;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 1.4625rem;
 }
 
-.ds-checkbox-group.ds-has-danger .ds-text-help:before,
-.ds-checkbox-group.ds-has-success .ds-text-help:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 24px;
-  height: 24px;
-  font-family: 'Material Icons';
-  font-size: 24px;
-  line-height: 24px;
+.ds-checkbox-group.ds-has-danger .ds-text-help {
+  background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBpZD0iaWNfZXJyb3JfMjRweCI+PHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTEgMTVoLTJ2LTJoMnYyem0wLTRoLTJWN2gydjZ6IiBmaWxsPSIjZTAxMjc5Ii8+PC9zdmc+");
 }
 
-.ds-checkbox-group.ds-has-danger .ds-text-help:before {
-  content: "\e000";
-}
-
-.ds-checkbox-group.ds-has-success .ds-text-help:before {
-  content: "\e5ca";
+.ds-checkbox-group.ds-has-success .ds-text-help {
+  background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBpZD0iaWNfY2hlY2tfMjRweCI+PHBhdGggZD0iTTkgMTYuMTdMNC44MyAxMmwtMS40MiAxLjQxTDkgMTkgMjEgN2wtMS40MS0xLjQxeiIgZmlsbD0iIzAwOTQ1NiIvPjwvc3ZnPg==");
 }
 
 .ds-form-address [class*="ds-col-"] .ds-form-control-label {
@@ -7667,6 +7658,8 @@ button.ds-list-group-item-danger.ds-active:hover {
 
 .ds-card-featured .ds-card-header {
   width: 100%;
+  border: none;
+  box-shadow: 0px 1px 0px 0px #e0e0e0;
 }
 
 @media (min-width: 768px) {
