@@ -241,33 +241,21 @@ label {
 		.text-help {
 			position: relative;
 			padding-left: 2rem;
-
-			&:before {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 24px;
-		 	 	height: 24px;
-		 		font-family: 'Material Icons';
-				font-size: 24px;
-		 		line-height: 24px;
-		 	}
+			background-repeat: no-repeat;
+			background-position: center left;
+			background-size: 1.4625rem;
 		}
 	}
 
 	&.has-danger {
 		.text-help {
-			&:before {
-		 		content: "\e000";
-			}
+			background-image: url($form-icon-danger);
 		}
 	}
 
 	&.has-success {
 		.text-help {
-			&:before {
-		 		content: "\e5ca";
-			}
+			background-image: url($form-icon-success);
 		}
 	}
 }
