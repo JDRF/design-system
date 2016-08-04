@@ -5277,6 +5277,10 @@ fieldset:disabled .ds-form-control {
   color: #0073cf;
 }
 
+label {
+  display: block;
+}
+
 label.ds-form-control-label {
   position: absolute;
   top: 0;
@@ -5330,6 +5334,7 @@ label.ds-disabled {
 .ds-radio-inline,
 .ds-checkbox-inline {
   padding-left: 0;
+  display: inline-block;
 }
 
 .ds-radio-custom,
