@@ -1,3 +1,9 @@
 @import "scss/reboot";
 
 /* Bootstrap overwrites: reboot.scss */
+
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

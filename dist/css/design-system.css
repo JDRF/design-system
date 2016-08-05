@@ -3185,6 +3185,11 @@ output {
 
 /* Bootstrap overwrites: reboot.scss */
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Design System Custom - No Bootstrap Default */
 
 @font-face {
@@ -5272,6 +5277,10 @@ fieldset:disabled .ds-form-control {
   color: #0073cf;
 }
 
+label {
+  display: block;
+}
+
 label.ds-form-control-label {
   position: absolute;
   top: 0;
@@ -5325,6 +5334,7 @@ label.ds-disabled {
 .ds-radio-inline,
 .ds-checkbox-inline {
   padding-left: 0;
+  display: inline-block;
 }
 
 .ds-radio-custom,
@@ -7221,10 +7231,12 @@ input[type="button"].ds-btn-block {
 
 @media (min-width: 360px) {
   .ds-card-columns {
-    -moz-column-count: 3;
-         column-count: 3;
-    -moz-column-gap: 1.25rem;
-         column-gap: 1.25rem;
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+    -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
+            column-gap: 1.25rem;
   }
 
   .ds-card-columns .ds-card {

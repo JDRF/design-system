@@ -101,6 +101,8 @@
 }
 
 label {
+	display: block;
+
 	&.form-control-label {
 		position: absolute;
 		top: 0;
@@ -159,6 +161,7 @@ label {
 .radio-inline,
 .checkbox-inline {
 	padding-left: 0;
+	display: inline-block;
 }
 
 .radio-custom,
