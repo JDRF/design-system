@@ -2550,7 +2550,7 @@
 
 /* 8px */
 
-/* 8px */
+/* 12px */
 
 /* Border radius at 2px */
 
@@ -3075,7 +3075,7 @@ a {
 
 a:focus,
 a:hover {
-  color: #00a862;
+  color: #0073cf;
   text-decoration: underline;
 }
 
@@ -5699,8 +5699,8 @@ fieldset[disabled] a.ds-btn {
   font-family: "Gotham Medium", sans-serif;
   color: #fff;
   text-transform: uppercase;
-  background-color: #00a862;
-  border-color: #00a862;
+  background-color: #0073cf;
+  border-color: #0073cf;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
@@ -5767,8 +5767,8 @@ fieldset[disabled] a.ds-btn {
   font-family: "Gotham Medium", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
-  background-color: #00a862;
-  border-color: #00a862;
+  background-color: #0073cf;
+  border-color: #0073cf;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
@@ -6106,10 +6106,10 @@ fieldset[disabled] a.ds-btn {
 .ds-btn-primary-outline {
   font-family: "Gotham Medium", sans-serif;
   text-transform: uppercase;
-  color: #009959;
+  color: #006bc0;
   background-image: none;
   background-color: transparent;
-  border-color: #009959;
+  border-color: #006bc0;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
   box-shadow: none;
 }
@@ -6120,13 +6120,13 @@ fieldset[disabled] a.ds-btn {
 .ds-btn-primary-outline.ds-active,
 .ds-open > .ds-btn-primary-outline.ds-dropdown-toggle {
   color: #ffffff;
-  background-color: #00a862;
+  background-color: #0073cf;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-btn-primary-outline:hover {
   color: #ffffff;
-  background-color: #00a862;
+  background-color: #0073cf;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -6171,10 +6171,10 @@ fieldset[disabled] a.ds-btn {
 .ds-btn-secondary-outline {
   font-family: "Gotham Medium", sans-serif;
   text-transform: uppercase;
-  color: #009959;
+  color: #006bc0;
   background-image: none;
   background-color: transparent;
-  border-color: #009959;
+  border-color: #006bc0;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -6184,13 +6184,13 @@ fieldset[disabled] a.ds-btn {
 .ds-btn-secondary-outline.ds-active,
 .ds-open > .ds-btn-secondary-outline.ds-dropdown-toggle {
   color: #ffffff;
-  background-color: #00a862;
+  background-color: #0073cf;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .ds-btn-secondary-outline:hover {
   color: #ffffff;
-  background-color: #00a862;
+  background-color: #0073cf;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -6422,7 +6422,7 @@ fieldset[disabled] a.ds-btn {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   font-weight: normal;
-  color: #009959;
+  color: #006bc0;
   background-color: transparent;
   border-radius: 2px;
   box-shadow: none;
@@ -6461,8 +6461,8 @@ fieldset[disabled] a.ds-btn {
   font-family: "Gotham Medium", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
-  background-color: #00a862;
-  border-color: #00a862;
+  background-color: #0073cf;
+  border-color: #0073cf;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.2);
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
@@ -6559,7 +6559,7 @@ fieldset[disabled] a.ds-btn {
 
 .ds-btn-sm,
 .ds-btn-group-sm > .ds-btn {
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.75rem;
   font-size: 0.8125rem;
   line-height: 0.8125rem;
   border-radius: 2px;
@@ -6891,8 +6891,8 @@ input[type="button"].ds-btn-block {
 .ds-btn-group .ds-btn,
 .ds-btn-group-vertical .ds-btn {
   background-color: #ffffff;
-  color: #00a862;
-  border-color: #00a862;
+  color: #0073cf;
+  border-color: #0073cf;
   box-shadow: none;
 }
 
@@ -6904,7 +6904,7 @@ input[type="button"].ds-btn-block {
 .ds-btn-group-vertical .ds-btn:active,
 .ds-btn-group-vertical .ds-btn.ds-active,
 .ds-btn-group-vertical .ds-btn:focus {
-  background-color: #00a862;
+  background-color: #0073cf;
   color: #ffffff;
 }
 
@@ -7079,12 +7079,12 @@ input[type="button"].ds-btn-block {
 
 .ds-card-primary-outline {
   background-color: transparent;
-  border-color: #00a862;
+  border-color: #0073cf;
 }
 
 .ds-card-secondary-outline {
   background-color: transparent;
-  border-color: #00a862;
+  border-color: #0073cf;
 }
 
 .ds-card-info-outline {
@@ -7513,6 +7513,10 @@ button.ds-list-group-item-danger.ds-active:hover {
 .ds-card-img-top {
   max-width: 100%;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+.ds-card-block + .ds-card-img-top {
+  border-radius: 0;
 }
 
 .ds-card-img-left {
