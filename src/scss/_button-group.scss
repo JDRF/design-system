@@ -6,15 +6,15 @@
 
 	.btn {
 		background-color: $jdrf-white;
-		color: $jdrf-green;
-		border-color: $jdrf-green;
+		color: $jdrf-blue;
+		border-color: $jdrf-blue;
 		@include no-elevation;
 
 		&:hover,
 		&:active,
 		&.active,
 		&:focus {
-			background-color: $jdrf-green;
+			background-color: $jdrf-blue;
 			color: $jdrf-white;
 		}
 	}
