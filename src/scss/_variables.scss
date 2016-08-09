@@ -78,14 +78,14 @@ $gray-lighter: $grey-2;
 $gray-lightest: $grey-1;
 
 $brand-primary: $jdrf-blue;
-$btn-primary-bg: $jdrf-green;
-$btn-primary-border: $jdrf-green;
+$btn-primary-bg: $jdrf-blue;
+$btn-primary-border: $jdrf-blue;
 
 $btn-secondary-color: $jdrf-white;
-$btn-secondary-bg: $jdrf-green;
-$btn-secondary-border: $jdrf-green;
+$btn-secondary-bg: $jdrf-blue;
+$btn-secondary-border: $jdrf-blue;
 
-$link-hover-color: $jdrf-green;
+$link-hover-color: $jdrf-blue;
 $btn-link-disabled-color: $grey-6;
 
 $label-default-bg: $grey-6;
@@ -189,7 +189,7 @@ $btn-padding-y: 0.75rem; /* 12px */
 $btn-padding-y-lg: 1rem; /* 16px */
 $btn-padding-x-lg: 1.5rem; /* 24px */
 $btn-padding-y-sm: 0.5rem; /* 8px */
-$btn-padding-x-sm: 0.5rem; /* 8px */
+$btn-padding-x-sm: 0.75rem; /* 12px */
 
 /* Border radius at 2px */
 $border-radius: 2px;
