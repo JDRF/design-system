@@ -190,15 +190,12 @@
 
 <h3>Fonts</h3>
 
-<p>If font files are needed for the website/application, copy/download the <a href="https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham" target="_blank">font files</a> found in the master branch. It's recommended to place the font folder
-	in a similar path to the CSS files.</p>
+<p>Your website's domain will need to be whitelisted by JDRF before Gotham can display properly. Email pmckowen at jdrf dot org for instructions.</p>
 
-<p>Your website's domain will need to be whitelisted by JDRF before Gotham can display properly. Email pmckowen at jdrf dot org for instructions.
+<p>If font files are needed for the website/application, copy/download the font files found in the
+	<a href="https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham" target="_blank">master branch</a>. It's recommended to place the font folder in a similar path to the CSS files.
 
-	<p>If font files are needed for the website/application, copy/download the font files found in the
-		<a href="https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham" target="_blank">master branch</a> It's recommended to place the font folder in a similar path to the CSS files.
-
-		<pre class="language-markup"><code class="language-markup">
+	<pre class="language-markup"><code class="language-markup">
 └── ./
  ├── css/
   └──  design-system.css
@@ -206,16 +203,128 @@
   └──  gotham/
 </code></pre>
 
-		<h3>Button and Link Colors</h3>
+	<p>After downloading the fonts and setting up a folder structure, you will need to connect the fonts to your site using <code class="language-markup">@fontface</code>.</p>
 
-		<p>By default, button are set to <code class="language-markup">$jdrf-green</code>. However if your site aligns with a specific JDRF program color &mdash; (for example the JDRF One Walk&reg; brand aligns with <code class="language-markup">$jdrf-orange</code>)
-			&mdash; you must override the default color. Learn more about color options on the <a href="./content.html#colors">Colors Page.</a></p>
+	<pre class="language-css"><code class="language-css">/* Replace [path to fonts] with your path */
 
-		<p>Since the Design System is meant to be used as a compiled file, these colors can be overwritten on a per project basis with inline style in the HEAD html tag. We recommend that these colors are overwritten immediately after including the Design System
-			in your project. See below for an example written in css.</p>
+@font-face {
+	font-family: &apos;Gotham Thin&apos;;
+	src: url(&apos;[path to fonts]/gotham/thin/gotham-thin-webfont.eot&apos;);
+	src: url(&apos;[path to fonts]/gotham/thin/gotham-thin-webfont.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;),
+		url(&apos;[path to fonts]/gotham/thin/gotham-thin-webfont.woff2&apos;) format(&apos;woff2&apos;),
+		url(&apos;[path to fonts]/gotham/thin/gotham-thin-webfont.woff&apos;) format(&apos;woff&apos;),
+		url(&apos;[path to fonts]/gotham/thin/gotham-thin-webfont.ttf&apos;)  format(&apos;truetype&apos;),
+		url(&apos;[path to fonts]/gotham/thin/gotham-thin-webfont.svg#gothamthin&apos;) format(&apos;svg&apos;);
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: &apos;Gotham Light&apos;;
+	src: url(&apos;[path to fonts]/gotham/light/gotham-light-webfont.eot&apos;);
+	src: url(&apos;[path to fonts]/gotham/light/gotham-light-webfont.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;),
+		url(&apos;[path to fonts]/gotham/light/gotham-light-webfont.woff2&apos;) format(&apos;woff2&apos;),
+		url(&apos;[path to fonts]/gotham/light/gotham-light-webfont.woff&apos;) format(&apos;woff&apos;),
+		url(&apos;[path to fonts]/gotham/light/gotham-light-webfont.ttf&apos;)  format(&apos;truetype&apos;),
+		url(&apos;[path to fonts]/gotham/light/gotham-light-webfont.svg#gothamlight&apos;) format(&apos;svg&apos;);
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: &apos;Gotham Light Italic&apos;;
+	src: url(&apos;[path to fonts]/gotham/light/gotham-lightitalic-webfont.eot&apos;);
+	src: url(&apos;[path to fonts]/gotham/light/gotham-lightitalic-webfont.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;),
+		url(&apos;[path to fonts]/gotham/light/gotham-lightitalic-webfont.woff2&apos;) format(&apos;woff2&apos;),
+		url(&apos;[path to fonts]/gotham/light/gotham-lightitalic-webfont.woff&apos;) format(&apos;woff&apos;),
+		url(&apos;[path to fonts]/gotham/light/gotham-lightitalic-webfont.ttf&apos;)  format(&apos;truetype&apos;),
+		url(&apos;[path to fonts]/gotham/light/gotham-lightitalic-webfont.svg#gothamlight_italic&apos;) format(&apos;svg&apos;);
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: &apos;Gotham Book&apos;;
+	src: url(&apos;[path to fonts]/gotham/book/gotham-book-webfont.eot&apos;);
+	src: url(&apos;[path to fonts]/gotham/book/gotham-book-webfont.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;),
+		url(&apos;[path to fonts]/gotham/book/gotham-book-webfont.woff2&apos;) format(&apos;woff2&apos;),
+		url(&apos;[path to fonts]/gotham/book/gotham-book-webfont.woff&apos;) format(&apos;woff&apos;),
+		url(&apos;[path to fonts]/gotham/book/gotham-book-webfont.ttf&apos;)  format(&apos;truetype&apos;),
+		url(&apos;[path to fonts]/gotham/book/gotham-book-webfont.svg#gothambook&apos;) format(&apos;svg&apos;);
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: &apos;Gotham Book Italic&apos;;
+	src: url(&apos;[path to fonts]/gotham/book/gotham-bookitalic-webfont.eot&apos;);
+	src: url(&apos;[path to fonts]/gotham/book/gotham-bookitalic-webfont.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;),
+		url(&apos;[path to fonts]/gotham/book/gotham-bookitalic-webfont.woff2&apos;) format(&apos;woff2&apos;),
+		url(&apos;[path to fonts]/gotham/book/gotham-bookitalic-webfont.woff&apos;) format(&apos;woff&apos;),
+		url(&apos;[path to fonts]/gotham/book/gotham-bookitalic-webfont.ttf&apos;)  format(&apos;truetype&apos;),
+		url(&apos;[path to fonts]/gotham/book/gotham-bookitalic-webfont.svg#gothambook_italic&apos;) format(&apos;svg&apos;);
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: &apos;Gotham Medium&apos;;
+	src: url(&apos;[path to fonts]/gotham/medium/gotham-medium-webfont.eot&apos;);
+	src: url(&apos;[path to fonts]/gotham/medium/gotham-medium-webfont.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;),
+		url(&apos;[path to fonts]/gotham/medium/gotham-medium-webfont.woff2&apos;) format(&apos;woff2&apos;),
+		url(&apos;[path to fonts]/gotham/medium/gotham-medium-webfont.woff&apos;) format(&apos;woff&apos;),
+		url(&apos;[path to fonts]/gotham/medium/gotham-medium-webfont.ttf&apos;)  format(&apos;truetype&apos;),
+		url(&apos;[path to fonts]/gotham/medium/gotham-medium-webfont.svg#gothammedium&apos;) format(&apos;svg&apos;);
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: &apos;Gotham Medium Italic&apos;;
+	src: url(&apos;[path to fonts]/gotham/medium/gotham-mediumitalic-webfont.eot&apos;);
+	src: url(&apos;[path to fonts]/gotham/medium/gotham-mediumitalic-webfont.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;),
+		url(&apos;[path to fonts]/gotham/medium/gotham-mediumitalic-webfont.woff2&apos;) format(&apos;woff2&apos;),
+		url(&apos;[path to fonts]/gotham/medium/gotham-mediumitalic-webfont.woff&apos;) format(&apos;woff&apos;),
+		url(&apos;[path to fonts]/gotham/medium/gotham-mediumitalic-webfont.ttf&apos;)  format(&apos;truetype&apos;),
+		url(&apos;[path to fonts]/gotham/medium/gotham-mediumitalic-webfont.svg#gothammedium_italic&apos;) format(&apos;svg&apos;);
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: &apos;Gotham Bold&apos;;
+	src: url(&apos;[path to fonts]/gotham/bold/gotham-bold-webfont.eot&apos;);
+	src: url(&apos;[path to fonts]/gotham/bold/gotham-bold-webfont.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;),
+		url(&apos;[path to fonts]/gotham/bold/gotham-bold-webfont.woff2&apos;) format(&apos;woff2&apos;),
+		url(&apos;[path to fonts]/gotham/bold/gotham-bold-webfont.woff&apos;) format(&apos;woff&apos;),
+		url(&apos;[path to fonts]/gotham/bold/gotham-bold-webfont.ttf&apos;)  format(&apos;truetype&apos;),
+		url(&apos;[path to fonts]/gotham/bold/gotham-bold-webfont.svg#gothambold&apos;) format(&apos;svg&apos;);
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: &apos;Gotham Bold Italic&apos;;
+	src: url(&apos;[path to fonts]/gotham/bold/gotham-bolditalic-webfont.eot&apos;);
+	src: url(&apos;[path to fonts]/gotham/bold/gotham-bolditalic-webfont.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;),
+		url(&apos;[path to fonts]/gotham/bold/gotham-bolditalic-webfont.woff2&apos;) format(&apos;woff2&apos;),
+		url(&apos;[path to fonts]/gotham/bold/gotham-bolditalic-webfont.woff&apos;) format(&apos;woff&apos;),
+		url(&apos;[path to fonts]/gotham/bold/gotham-bolditalic-webfont.ttf&apos;)  format(&apos;truetype&apos;),
+		url(&apos;[path to fonts]/gotham/bold/gotham-bolditalic-webfont.svg#gothambold_italic&apos;) format(&apos;svg&apos;);
+	font-weight: 700;
+	font-style: italic;
+}</code></pre>
+
+	<h3>Button and Link Colors</h3>
+
+	<p>By default, button are set to <code class="language-markup">$jdrf-green</code>. However if your site aligns with a specific JDRF program color &mdash; (for example the JDRF One Walk&reg; brand aligns with <code class="language-markup">$jdrf-orange</code>)
+		&mdash; you must override the default color. Learn more about color options on the <a href="./content.html#colors">Colors Page.</a></p>
+
+	<p>Since the Design System is meant to be used as a compiled file, these colors can be overwritten on a per project basis with inline style in the HEAD html tag. We recommend that these colors are overwritten immediately after including the Design System
+		in your project. See below for an example written in css.</p>
 
 
-		<pre class="language-css"><code class="language-css">/* Change button colors to $jdrf-blue */
+	<pre class="language-css"><code class="language-css">/* Change button colors to $jdrf-blue */
 
 .ds-btn-primary,
 .ds-btn-flat {
@@ -239,11 +348,11 @@
 	color: #0073cf;
 }</code></pre>
 
-		<h3>Icons</h3> If icons are a requirement, Design System already includes all necessary styles, but requires the font file from Google's CDN. Include this in the `HEAD` html tag right before the Design System css file.
+	<h3>Icons</h3> If icons are a requirement, Design System already includes all necessary styles, but requires the font file from Google's CDN. Include this in the `HEAD` html tag right before the Design System css file.
 
-		<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;>
+	<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/&lt;PATH TO CSS>/design-system.css&quot;></code></pre>
-	</p>
+</p>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;p class=&quot;ds-lead&quot;&gt;Get started by downloading the &lt;a href=&quot;https://github.com/JDRF/design-system/tree/master&quot; target=&quot;_blank&quot;&gt;latest release on Github&lt;/a&gt; and following the outlined options below.&lt;/p&gt;
@@ -259,15 +368,12 @@
 
 &lt;h3&gt;Fonts&lt;/h3&gt;
 
-&lt;p&gt;If font files are needed for the website/application, copy/download the &lt;a href=&quot;https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham&quot; target=&quot;_blank&quot;&gt;font files&lt;/a&gt; found in the master branch. It&#x27;s recommended to place the font folder
-	in a similar path to the CSS files.&lt;/p&gt;
+&lt;p&gt;Your website&#x27;s domain will need to be whitelisted by JDRF before Gotham can display properly. Email pmckowen at jdrf dot org for instructions.&lt;/p&gt;
 
-&lt;p&gt;Your website&#x27;s domain will need to be whitelisted by JDRF before Gotham can display properly. Email pmckowen at jdrf dot org for instructions.
+&lt;p&gt;If font files are needed for the website/application, copy/download the font files found in the
+	&lt;a href=&quot;https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham&quot; target=&quot;_blank&quot;&gt;master branch&lt;/a&gt;. It&#x27;s recommended to place the font folder in a similar path to the CSS files.
 
-	&lt;p&gt;If font files are needed for the website/application, copy/download the font files found in the
-		&lt;a href=&quot;https://github.com/JDRF/design-system/tree/master/dist/fonts/gotham&quot; target=&quot;_blank&quot;&gt;master branch&lt;/a&gt; It&#x27;s recommended to place the font folder in a similar path to the CSS files.
-
-		&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;
 └── ./
  ├── css/
   └──  design-system.css
@@ -275,16 +381,128 @@
   └──  gotham/
 &lt;/code&gt;&lt;/pre&gt;
 
-		&lt;h3&gt;Button and Link Colors&lt;/h3&gt;
+	&lt;p&gt;After downloading the fonts and setting up a folder structure, you will need to connect the fonts to your site using &lt;code class=&quot;language-markup&quot;&gt;@fontface&lt;/code&gt;.&lt;/p&gt;
 
-		&lt;p&gt;By default, button are set to &lt;code class=&quot;language-markup&quot;&gt;$jdrf-green&lt;/code&gt;. However if your site aligns with a specific JDRF program color &amp;mdash; (for example the JDRF One Walk&amp;reg; brand aligns with &lt;code class=&quot;language-markup&quot;&gt;$jdrf-orange&lt;/code&gt;)
-			&amp;mdash; you must override the default color. Learn more about color options on the &lt;a href=&quot;./content.html#colors&quot;&gt;Colors Page.&lt;/a&gt;&lt;/p&gt;
+	&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;/* Replace [path to fonts] with your path */
 
-		&lt;p&gt;Since the Design System is meant to be used as a compiled file, these colors can be overwritten on a per project basis with inline style in the HEAD html tag. We recommend that these colors are overwritten immediately after including the Design System
-			in your project. See below for an example written in css.&lt;/p&gt;
+@font-face {
+	font-family: &amp;apos;Gotham Thin&amp;apos;;
+	src: url(&amp;apos;[path to fonts]/gotham/thin/gotham-thin-webfont.eot&amp;apos;);
+	src: url(&amp;apos;[path to fonts]/gotham/thin/gotham-thin-webfont.eot?#iefix&amp;apos;) format(&amp;apos;embedded-opentype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/thin/gotham-thin-webfont.woff2&amp;apos;) format(&amp;apos;woff2&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/thin/gotham-thin-webfont.woff&amp;apos;) format(&amp;apos;woff&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/thin/gotham-thin-webfont.ttf&amp;apos;)  format(&amp;apos;truetype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/thin/gotham-thin-webfont.svg#gothamthin&amp;apos;) format(&amp;apos;svg&amp;apos;);
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: &amp;apos;Gotham Light&amp;apos;;
+	src: url(&amp;apos;[path to fonts]/gotham/light/gotham-light-webfont.eot&amp;apos;);
+	src: url(&amp;apos;[path to fonts]/gotham/light/gotham-light-webfont.eot?#iefix&amp;apos;) format(&amp;apos;embedded-opentype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/light/gotham-light-webfont.woff2&amp;apos;) format(&amp;apos;woff2&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/light/gotham-light-webfont.woff&amp;apos;) format(&amp;apos;woff&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/light/gotham-light-webfont.ttf&amp;apos;)  format(&amp;apos;truetype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/light/gotham-light-webfont.svg#gothamlight&amp;apos;) format(&amp;apos;svg&amp;apos;);
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: &amp;apos;Gotham Light Italic&amp;apos;;
+	src: url(&amp;apos;[path to fonts]/gotham/light/gotham-lightitalic-webfont.eot&amp;apos;);
+	src: url(&amp;apos;[path to fonts]/gotham/light/gotham-lightitalic-webfont.eot?#iefix&amp;apos;) format(&amp;apos;embedded-opentype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/light/gotham-lightitalic-webfont.woff2&amp;apos;) format(&amp;apos;woff2&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/light/gotham-lightitalic-webfont.woff&amp;apos;) format(&amp;apos;woff&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/light/gotham-lightitalic-webfont.ttf&amp;apos;)  format(&amp;apos;truetype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/light/gotham-lightitalic-webfont.svg#gothamlight_italic&amp;apos;) format(&amp;apos;svg&amp;apos;);
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: &amp;apos;Gotham Book&amp;apos;;
+	src: url(&amp;apos;[path to fonts]/gotham/book/gotham-book-webfont.eot&amp;apos;);
+	src: url(&amp;apos;[path to fonts]/gotham/book/gotham-book-webfont.eot?#iefix&amp;apos;) format(&amp;apos;embedded-opentype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/book/gotham-book-webfont.woff2&amp;apos;) format(&amp;apos;woff2&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/book/gotham-book-webfont.woff&amp;apos;) format(&amp;apos;woff&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/book/gotham-book-webfont.ttf&amp;apos;)  format(&amp;apos;truetype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/book/gotham-book-webfont.svg#gothambook&amp;apos;) format(&amp;apos;svg&amp;apos;);
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: &amp;apos;Gotham Book Italic&amp;apos;;
+	src: url(&amp;apos;[path to fonts]/gotham/book/gotham-bookitalic-webfont.eot&amp;apos;);
+	src: url(&amp;apos;[path to fonts]/gotham/book/gotham-bookitalic-webfont.eot?#iefix&amp;apos;) format(&amp;apos;embedded-opentype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/book/gotham-bookitalic-webfont.woff2&amp;apos;) format(&amp;apos;woff2&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/book/gotham-bookitalic-webfont.woff&amp;apos;) format(&amp;apos;woff&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/book/gotham-bookitalic-webfont.ttf&amp;apos;)  format(&amp;apos;truetype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/book/gotham-bookitalic-webfont.svg#gothambook_italic&amp;apos;) format(&amp;apos;svg&amp;apos;);
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: &amp;apos;Gotham Medium&amp;apos;;
+	src: url(&amp;apos;[path to fonts]/gotham/medium/gotham-medium-webfont.eot&amp;apos;);
+	src: url(&amp;apos;[path to fonts]/gotham/medium/gotham-medium-webfont.eot?#iefix&amp;apos;) format(&amp;apos;embedded-opentype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/medium/gotham-medium-webfont.woff2&amp;apos;) format(&amp;apos;woff2&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/medium/gotham-medium-webfont.woff&amp;apos;) format(&amp;apos;woff&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/medium/gotham-medium-webfont.ttf&amp;apos;)  format(&amp;apos;truetype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/medium/gotham-medium-webfont.svg#gothammedium&amp;apos;) format(&amp;apos;svg&amp;apos;);
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: &amp;apos;Gotham Medium Italic&amp;apos;;
+	src: url(&amp;apos;[path to fonts]/gotham/medium/gotham-mediumitalic-webfont.eot&amp;apos;);
+	src: url(&amp;apos;[path to fonts]/gotham/medium/gotham-mediumitalic-webfont.eot?#iefix&amp;apos;) format(&amp;apos;embedded-opentype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/medium/gotham-mediumitalic-webfont.woff2&amp;apos;) format(&amp;apos;woff2&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/medium/gotham-mediumitalic-webfont.woff&amp;apos;) format(&amp;apos;woff&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/medium/gotham-mediumitalic-webfont.ttf&amp;apos;)  format(&amp;apos;truetype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/medium/gotham-mediumitalic-webfont.svg#gothammedium_italic&amp;apos;) format(&amp;apos;svg&amp;apos;);
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: &amp;apos;Gotham Bold&amp;apos;;
+	src: url(&amp;apos;[path to fonts]/gotham/bold/gotham-bold-webfont.eot&amp;apos;);
+	src: url(&amp;apos;[path to fonts]/gotham/bold/gotham-bold-webfont.eot?#iefix&amp;apos;) format(&amp;apos;embedded-opentype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/bold/gotham-bold-webfont.woff2&amp;apos;) format(&amp;apos;woff2&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/bold/gotham-bold-webfont.woff&amp;apos;) format(&amp;apos;woff&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/bold/gotham-bold-webfont.ttf&amp;apos;)  format(&amp;apos;truetype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/bold/gotham-bold-webfont.svg#gothambold&amp;apos;) format(&amp;apos;svg&amp;apos;);
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: &amp;apos;Gotham Bold Italic&amp;apos;;
+	src: url(&amp;apos;[path to fonts]/gotham/bold/gotham-bolditalic-webfont.eot&amp;apos;);
+	src: url(&amp;apos;[path to fonts]/gotham/bold/gotham-bolditalic-webfont.eot?#iefix&amp;apos;) format(&amp;apos;embedded-opentype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/bold/gotham-bolditalic-webfont.woff2&amp;apos;) format(&amp;apos;woff2&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/bold/gotham-bolditalic-webfont.woff&amp;apos;) format(&amp;apos;woff&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/bold/gotham-bolditalic-webfont.ttf&amp;apos;)  format(&amp;apos;truetype&amp;apos;),
+		url(&amp;apos;[path to fonts]/gotham/bold/gotham-bolditalic-webfont.svg#gothambold_italic&amp;apos;) format(&amp;apos;svg&amp;apos;);
+	font-weight: 700;
+	font-style: italic;
+}&lt;/code&gt;&lt;/pre&gt;
+
+	&lt;h3&gt;Button and Link Colors&lt;/h3&gt;
+
+	&lt;p&gt;By default, button are set to &lt;code class=&quot;language-markup&quot;&gt;$jdrf-green&lt;/code&gt;. However if your site aligns with a specific JDRF program color &amp;mdash; (for example the JDRF One Walk&amp;reg; brand aligns with &lt;code class=&quot;language-markup&quot;&gt;$jdrf-orange&lt;/code&gt;)
+		&amp;mdash; you must override the default color. Learn more about color options on the &lt;a href=&quot;./content.html#colors&quot;&gt;Colors Page.&lt;/a&gt;&lt;/p&gt;
+
+	&lt;p&gt;Since the Design System is meant to be used as a compiled file, these colors can be overwritten on a per project basis with inline style in the HEAD html tag. We recommend that these colors are overwritten immediately after including the Design System
+		in your project. See below for an example written in css.&lt;/p&gt;
 
 
-		&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;/* Change button colors to $jdrf-blue */
+	&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;/* Change button colors to $jdrf-blue */
 
 .ds-btn-primary,
 .ds-btn-flat {
@@ -308,11 +526,11 @@
 	color: #0073cf;
 }&lt;/code&gt;&lt;/pre&gt;
 
-		&lt;h3&gt;Icons&lt;/h3&gt; If icons are a requirement, Design System already includes all necessary styles, but requires the font file from Google&#x27;s CDN. Include this in the &#x60;HEAD&#x60; html tag right before the Design System css file.
+	&lt;h3&gt;Icons&lt;/h3&gt; If icons are a requirement, Design System already includes all necessary styles, but requires the font file from Google&#x27;s CDN. Include this in the &#x60;HEAD&#x60; html tag right before the Design System css file.
 
-		&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://fonts.googleapis.com/icon?family=Material+Icons&amp;quot;&gt;
+	&lt;pre class=&quot;language-markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://fonts.googleapis.com/icon?family=Material+Icons&amp;quot;&gt;
 &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;/&amp;lt;PATH TO CSS&gt;/design-system.css&amp;quot;&gt;&lt;/code&gt;&lt;/pre&gt;
-	&lt;/p&gt;</code></pre>
+&lt;/p&gt;</code></pre>
 </div>
 
 
@@ -324,7 +542,7 @@
 	<div class="f-item-heading-group" data-f-toggle="labels">
 		<h2 class="f-item-heading">Javascript</h2>
 	</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>Using Javascript</p>
+	<p>Notes on Javascript use coming soon...</p>
 
 </div>
 <div class="f-item-preview">
