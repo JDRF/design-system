@@ -2526,8 +2526,6 @@
 
 /* 40px */
 
-/* 24px */
-
 /* 28px */
 
 /* == Buttons ======== */
@@ -3384,19 +3382,17 @@ h2,
 
 h3,
 .ds-h3 {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.875rem;
   font-family: "Gotham Book", sans-serif;
   font-size: 1.25rem;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width: 360px) {
   h3,
   .ds-h3 {
-    margin-bottom: 1rem;
     font-family: "Gotham Medium", sans-serif;
     font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
 
@@ -8211,12 +8207,12 @@ h2 .ds-label,
 .ds-btn-primary .ds-label-default,
 .ds-btn-flat .ds-label-default {
   background-color: #ffffff;
-  color: #00a862;
+  color: #0073cf;
 }
 
 .ds-btn-link .ds-label-default,
 .ds-btn-primary-outline .ds-label-default {
-  background-color: #00a862;
+  background-color: #0073cf;
   color: #ffffff;
 }
 
