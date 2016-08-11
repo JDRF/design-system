@@ -106,10 +106,8 @@ h3,
 	line-height: $h3-lineheight;
 
 	@include media-breakpoint-up(sm) {
-		margin-bottom: $h3-lineheight-sm / 2;
 		font-family: $font-medium;
 		font-size: $font-size-h3-sm;
-		line-height: $h3-lineheight-sm;
 	}
 }
 
