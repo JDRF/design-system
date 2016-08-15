@@ -5320,17 +5320,46 @@ label.ds-disabled {
 }
 
 .ds-radio-inline + .ds-radio-inline {
-  margin-left: 1.5rem;
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .ds-radio-inline + .ds-radio-inline {
+    margin-left: 1.5rem;
+  }
 }
 
 .ds-checkbox-inline + .ds-checkbox-inline {
-  margin-left: 1.688rem;
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .ds-checkbox-inline + .ds-checkbox-inline {
+    margin-left: 1.688rem;
+  }
+}
+
+.ds-radio-inline {
+  margin-bottom: .5rem;
+}
+
+.ds-checkbox-inline {
+  margin-bottom: .75rem;
 }
 
 .ds-radio-inline,
 .ds-checkbox-inline {
+  display: block;
+  margin-left: 0;
   padding-left: 0;
-  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .ds-radio-inline,
+  .ds-checkbox-inline {
+    padding-left: 0;
+    display: inline-block;
+  }
 }
 
 .ds-radio-custom,
