@@ -26,11 +26,11 @@
 			<li class="ds-nav-item">
 				<a href="./layout.html" class="f-menu__heading ds-nav-link">{{materials.layout.name}}</a>
 				<ul class="ds-nav">
-					{{#each materials.layout.items}}
+					{{#withSort materials.layout.items}}
 						<li>
 							<a href="./layout.html#{{@key}}" class="ds-nav-link">{{name}}</a>
 						</li>
-					{{/each}}
+					{{/withSort}}
 				</ul>
 			</li>
 
@@ -38,11 +38,11 @@
 			<li class="ds-nav-item">
 				<a href="./content.html" class="f-menu__heading ds-nav-link">{{materials.content.name}}</a>
 				<ul class="ds-nav">
-					{{#each materials.content.items}}
+					{{#withSort materials.content.items}}
 						<li>
 							<a href="./content.html#{{@key}}" class="ds-nav-link">{{name}}</a>
 						</li>
-					{{/each}}
+					{{/withSort}}
 				</ul>
 			</li>
 
@@ -50,11 +50,11 @@
 			<li class="ds-nav-item">
 				<a href="./components.html" class="f-menu__heading ds-nav-link">{{materials.components.name}}</a>
 				<ul class="ds-nav">
-					{{#each materials.components.items}}
+					{{#withSort materials.components.items}}
 						<li>
 							<a href="./components.html#{{@key}}" class="ds-nav-link">{{name}}</a>
 						</li>
-					{{/each}}
+					{{/withSort}}
 				</ul>
 			</li>
 
