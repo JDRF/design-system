@@ -15,6 +15,7 @@ module.exports = function (gulp, plugins, config) {
 						return array[a].data.sorte > array[b].data.sorte;
 					});
 					new_array.map( function(item) {
+						array[item]['key'] = item;
 						result += options.fn(array[item]);
 					});
 					return result;
