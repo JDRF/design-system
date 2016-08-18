@@ -5426,12 +5426,21 @@ label.ds-disabled {
   content: "\e837";
 }
 
+.ds-radio-custom input[type="radio"]:focus ~ span:before {
+  box-shadow: 0 0 6px 0 rgba(0, 115, 207, 0.75), inset 0 0 3px 0 rgba(0, 115, 207, 0.25);
+  border-radius: 50%;
+}
+
 .ds-checkbox-custom input[type="checkbox"] ~ span:before {
   content: "\e835";
 }
 
 .ds-checkbox-custom input[type="checkbox"]:checked ~ span:before {
   content: "\e834";
+}
+
+.ds-checkbox-custom input[type="checkbox"]:focus ~ span:before {
+  box-shadow: 0 0 6px 0 rgba(0, 115, 207, 0.75), inset 0 0 3px 0 rgba(0, 115, 207, 0.25);
 }
 
 /*
