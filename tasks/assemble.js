@@ -9,7 +9,18 @@ module.exports = function (gulp, plugins, config) {
 			dest: 'dist',
 			logErrors: config.dev,
 			helpers: {
-				example: function(args, type) {
+				withSort: function(array, options) {
+					var new_array, result = '';
+					new_array = Object.keys(array).sort(function(a, b) {
+						return array[a].data.sorte > array[b].data.sorte;
+					});
+					new_array.map( function(item) {
+						array[item]['key'] = item;
+						result += options.fn(array[item]);
+					});
+					return result;
+				  },
+				  example: function(args, type) {
 					var string, esacped_string, template_string, template,
 						start, end, lng_type = 'markup';
 
