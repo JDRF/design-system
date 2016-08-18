@@ -243,6 +243,11 @@ label {
 	input[type="radio"]:checked ~ span:before  {
 		content: "\e837";
 	}
+
+	input[type="radio"]:focus ~ span:before {
+		box-shadow: 0 0 6px 0 rgba(0,115,207,.75),inset 0 0 3px 0 rgba(0,115,207,.25);
+		border-radius: 50%;
+	}
 }
 
 .checkbox-custom {
@@ -252,6 +257,10 @@ label {
 
 	input[type="checkbox"]:checked ~ span:before  {
 		content: "\e834";
+	}
+
+	input[type="checkbox"]:focus ~ span:before {
+		box-shadow: 0 0 6px 0 rgba(0,115,207,.75),inset 0 0 3px 0 rgba(0,115,207,.25);
 	}
 }
 
