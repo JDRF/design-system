@@ -135,6 +135,10 @@ label {
 	font-size: 0.875rem;
 }
 
+p.text-label {
+	margin-bottom: 1rem;
+}
+
 .text-label {
 	.has-danger & {
 		color: $brand-danger;
