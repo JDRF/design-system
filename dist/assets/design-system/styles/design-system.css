@@ -5196,6 +5196,7 @@ input[type="checkbox"].ds-disabled {
 
 .ds-form-group {
   position: relative;
+  margin-bottom: 0.75rem;
 }
 
 textarea.ds-form-control-label {
@@ -5254,6 +5255,7 @@ fieldset:disabled .ds-form-control-label {
 
 fieldset .ds-form-control {
   margin-top: 28px;
+  margin-bottom: 4px;
 }
 
 fieldset:disabled .ds-form-control {
