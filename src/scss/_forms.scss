@@ -150,19 +150,12 @@ label {
 	}
 }
 
-.radio-inline + .radio-inline {
-	margin-left: 0;
-
-	@include media-breakpoint-up(md) {
-		margin-left: 1.5rem;
-	}
-}
-
+.radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
 	margin-left: 0;
 
 	@include media-breakpoint-up(md) {
-		margin-left: 1.688rem;
+		margin-left: 1.5rem;
 	}
 }
 
