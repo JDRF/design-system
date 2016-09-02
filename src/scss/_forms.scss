@@ -29,6 +29,13 @@
 	position: relative;
 }
 
+textarea {
+	&.form-control-label {
+		min-height: 144px;
+		resize: vertical;
+	}
+}
+
 .form-control-label {
 	font-family: $font-medium;
 	font-size: $input-label-font-size;
