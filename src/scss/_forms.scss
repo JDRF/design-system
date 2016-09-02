@@ -27,6 +27,7 @@
 
 .form-group {
 	position: relative;
+	margin-bottom: 0.75rem;
 }
 
 .form-control-label {
@@ -75,6 +76,7 @@
 
 	fieldset & {
 		margin-top: 28px;
+		margin-bottom: 4px;
 	}
 
 	fieldset:disabled & {
