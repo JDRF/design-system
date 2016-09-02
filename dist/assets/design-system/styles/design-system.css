@@ -5198,9 +5198,14 @@ input[type="checkbox"].ds-disabled {
   position: relative;
 }
 
+textarea.ds-form-control-label {
+  min-height: 144px;
+  resize: vertical;
+}
+
 .ds-form-control-label {
   font-family: "Gotham Medium", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #212121;
   padding: 0.25rem 0;
@@ -5303,7 +5308,7 @@ label.ds-disabled {
 .ds-text-help,
 .ds-text-label {
   font-family: "Gotham Medium", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
 }
 
 .ds-has-danger .ds-text-label {
@@ -5319,23 +5324,15 @@ label.ds-disabled {
   color: #757575;
 }
 
-.ds-radio-inline + .ds-radio-inline {
-  margin-left: 0;
-}
-
-@media (min-width: 768px) {
-  .ds-radio-inline + .ds-radio-inline {
-    margin-left: 1.5rem;
-  }
-}
-
+.ds-radio-inline + .ds-radio-inline,
 .ds-checkbox-inline + .ds-checkbox-inline {
   margin-left: 0;
 }
 
 @media (min-width: 768px) {
+  .ds-radio-inline + .ds-radio-inline,
   .ds-checkbox-inline + .ds-checkbox-inline {
-    margin-left: 1.688rem;
+    margin-left: 1.5rem;
   }
 }
 
