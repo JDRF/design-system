@@ -132,7 +132,7 @@ label {
 .text-help,
 .text-label {
 	font-family: $font-medium;
-	font-size: 0.875rem;
+	font-size: $input-label-font-size;
 }
 
 .text-label {
