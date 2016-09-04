@@ -27,6 +27,14 @@
 
 .form-group {
 	position: relative;
+	margin-bottom: 0.75rem;
+}
+
+textarea {
+	&.form-control-label {
+		min-height: 144px;
+		resize: vertical;
+	}
 }
 
 .form-control-label {
@@ -75,6 +83,7 @@
 
 	fieldset & {
 		margin-top: 28px;
+		margin-bottom: 4px;
 	}
 
 	fieldset:disabled & {
@@ -132,7 +141,7 @@ label {
 .text-help,
 .text-label {
 	font-family: $font-medium;
-	font-size: 0.875rem;
+	font-size: $input-label-font-size;
 }
 
 .text-label {
@@ -150,19 +159,12 @@ label {
 	}
 }
 
-.radio-inline + .radio-inline {
-	margin-left: 0;
-
-	@include media-breakpoint-up(md) {
-		margin-left: 1.5rem;
-	}
-}
-
+.radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
 	margin-left: 0;
 
 	@include media-breakpoint-up(md) {
-		margin-left: 1.688rem;
+		margin-left: 1.5rem;
 	}
 }
 
