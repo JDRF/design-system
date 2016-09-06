@@ -31,7 +31,7 @@
 }
 
 textarea {
-	&.form-control-label {
+	&.form-control {
 		min-height: 144px;
 		resize: vertical;
 	}
@@ -142,6 +142,10 @@ label {
 .text-label {
 	font-family: $font-medium;
 	font-size: $input-label-font-size;
+}
+
+p.text-label {
+	margin-bottom: 1rem;
 }
 
 .text-label {
