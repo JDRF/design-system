@@ -275,6 +275,9 @@ p.text-label {
 * Checkbox groups
 */
 .checkbox-group {
+	.text-help {
+		margin-bottom: 1rem;
+	}
 
 	&.has-danger,
 	&.has-success {
