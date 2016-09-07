@@ -5451,6 +5451,10 @@ p.ds-text-label {
 * Checkbox groups
 */
 
+.ds-checkbox-group .ds-text-help {
+  margin-bottom: 1rem;
+}
+
 .ds-checkbox-group.ds-has-danger .ds-text-help,
 .ds-checkbox-group.ds-has-success .ds-text-help {
   position: relative;
