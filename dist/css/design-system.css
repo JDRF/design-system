@@ -4812,7 +4812,7 @@ mark,
 .ds-form-control {
   display: block;
   width: 100%;
-  padding: 16px 12px;
+  padding: 13px 12px;
   font-size: 1rem;
   line-height: 1.5;
   color: #212121;
@@ -4868,7 +4868,7 @@ mark,
 }
 
 .ds-form-control-label {
-  padding: 16px 12px;
+  padding: 13px 12px;
   margin-bottom: 0;
 }
 
@@ -4911,8 +4911,8 @@ mark,
 
 .ds-form-control-static {
   min-height: 2.25rem;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   margin-bottom: 0;
 }
 
@@ -5250,7 +5250,7 @@ fieldset:disabled .ds-form-control-label {
 }
 
 .ds-form-control:not(textarea) {
-  height: 54px;
+  height: 48px;
 }
 
 fieldset .ds-form-control {
@@ -5665,7 +5665,7 @@ p.ds-text-label {
 }
 
 .ds-c-select {
-  padding: 16px 12px;
+  padding: 13px 12px;
   background: #fff url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBpZD0iaWNfYXJyb3dfZHJvcF9kb3duXzI0cHgiPjxwYXRoIGQ9Ik03IDEwbDUgNSA1LTV6IiBmaWxsPSIjNzU3NTc1Ii8+PC9zdmc+) no-repeat right 0.75rem center;
   color: transparent;
   text-shadow: 0 0 0 #000;
