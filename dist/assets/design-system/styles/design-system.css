@@ -4812,7 +4812,7 @@ mark,
 .ds-form-control {
   display: block;
   width: 100%;
-  padding: 1rem 0.75rem;
+  padding: 13px 12px;
   font-size: 1rem;
   line-height: 1.5;
   color: #212121;
@@ -4868,7 +4868,7 @@ mark,
 }
 
 .ds-form-control-label {
-  padding: 1rem 0.75rem;
+  padding: 13px 12px;
   margin-bottom: 0;
 }
 
@@ -4911,8 +4911,8 @@ mark,
 
 .ds-form-control-static {
   min-height: 2.25rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 13px;
+  padding-bottom: 13px;
   margin-bottom: 0;
 }
 
@@ -5011,7 +5011,7 @@ input[type="checkbox"].ds-disabled {
 .ds-form-control-success,
 .ds-form-control-warning,
 .ds-form-control-danger {
-  padding-right: 2.25rem;
+  padding-right: 36px;
   background-repeat: no-repeat;
   background-position: center right 0.5625rem;
   background-size: 1.4625rem 1.4625rem;
@@ -5196,11 +5196,17 @@ input[type="checkbox"].ds-disabled {
 
 .ds-form-group {
   position: relative;
+  margin-bottom: 0.75rem;
+}
+
+textarea.ds-form-control {
+  min-height: 144px;
+  resize: vertical;
 }
 
 .ds-form-control-label {
   font-family: "Gotham Medium", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #212121;
   padding: 0.25rem 0;
@@ -5244,11 +5250,12 @@ fieldset:disabled .ds-form-control-label {
 }
 
 .ds-form-control:not(textarea) {
-  height: 54px;
+  height: 48px;
 }
 
 fieldset .ds-form-control {
   margin-top: 28px;
+  margin-bottom: 4px;
 }
 
 fieldset:disabled .ds-form-control {
@@ -5303,7 +5310,11 @@ label.ds-disabled {
 .ds-text-help,
 .ds-text-label {
   font-family: "Gotham Medium", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
+}
+
+p.ds-text-label {
+  margin-bottom: 1rem;
 }
 
 .ds-has-danger .ds-text-label {
@@ -5319,23 +5330,15 @@ label.ds-disabled {
   color: #757575;
 }
 
-.ds-radio-inline + .ds-radio-inline {
-  margin-left: 0;
-}
-
-@media (min-width: 768px) {
-  .ds-radio-inline + .ds-radio-inline {
-    margin-left: 1.5rem;
-  }
-}
-
+.ds-radio-inline + .ds-radio-inline,
 .ds-checkbox-inline + .ds-checkbox-inline {
   margin-left: 0;
 }
 
 @media (min-width: 768px) {
+  .ds-radio-inline + .ds-radio-inline,
   .ds-checkbox-inline + .ds-checkbox-inline {
-    margin-left: 1.688rem;
+    margin-left: 1.5rem;
   }
 }
 
@@ -5447,6 +5450,10 @@ label.ds-disabled {
 * Place icons before "fake" labels in validation
 * Checkbox groups
 */
+
+.ds-checkbox-group .ds-text-help {
+  margin-bottom: 1rem;
+}
 
 .ds-checkbox-group.ds-has-danger .ds-text-help,
 .ds-checkbox-group.ds-has-success .ds-text-help {
@@ -5658,7 +5665,7 @@ label.ds-disabled {
 }
 
 .ds-c-select {
-  padding: 1rem 0.75rem;
+  padding: 13px 12px;
   background: #fff url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBpZD0iaWNfYXJyb3dfZHJvcF9kb3duXzI0cHgiPjxwYXRoIGQ9Ik03IDEwbDUgNSA1LTV6IiBmaWxsPSIjNzU3NTc1Ii8+PC9zdmc+) no-repeat right 0.75rem center;
   color: transparent;
   text-shadow: 0 0 0 #000;
