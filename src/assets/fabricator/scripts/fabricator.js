@@ -56,6 +56,7 @@ module.exports = {
 				} );
 			}
 
+			//back to top and scroll checking
 			window.addEventListener( 'scroll', function() {
 				self.checkScrollPosition( toTopBtn );
 			} );
