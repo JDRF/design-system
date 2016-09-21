@@ -10,8 +10,19 @@
 	text-transform: uppercase;
 	text-align: center;
 	color: #fff;
-	background-color: color(primary-light);
+	background-color: color(primary-dark);
 	border-radius: 50%;
 	border: none;
 	box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+	transform: translate(0, 0);
+	@include transition;
+
+	@include desktop {
+		display: none;
+	}
+
+	&.hide {
+		transform: translate(0, 100px);
+		@include transition;
+	}
 }

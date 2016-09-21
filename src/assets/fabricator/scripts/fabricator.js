@@ -18,7 +18,8 @@ module.exports = {
 		this.dom = {
 			root: document.querySelector( 'html' ),
 			primaryMenu: document.querySelector( '.f-menu' ),
-			menuToggle: document.querySelector( '.f-menu-toggle' )
+			menuToggle: document.querySelector( '.f-menu-toggle' ),
+			topBtn: document.querySelector( '.f-back-to-top' )
 		};
 
 		/**
@@ -27,7 +28,8 @@ module.exports = {
 		var self = this,
 			menuIcon = this.dom.menuToggle,
 			htmlEl = this.dom.root,
-			menuItems = this.dom.primaryMenu.getElementsByTagName( 'a' );
+			menuItems = this.dom.primaryMenu.getElementsByTagName( 'a' ),
+			toTopBtn = this.dom.topBtn;
 
 		/**
 		 * Default options
@@ -53,6 +55,14 @@ module.exports = {
 					self.toggleClasses( htmlEl, menuIcon );
 				} );
 			}
+
+			window.addEventListener( 'scroll', function() {
+				self.checkScrollPosition( toTopBtn );
+			} );
+
+			toTopBtn.addEventListener( 'click', function() {
+				self.scrollToTop();
+			} );
 		}
 
 		// pass dom selectors to functions
@@ -183,5 +193,25 @@ module.exports = {
 
 		return this;
 
+	},
+
+	/**
+	 * Check position while scrolling
+	 */
+	checkScrollPosition: function( toTopBtn ) {
+		var topDistance = window.pageYOffset;
+
+		if ( topDistance > 600 ) {
+			$( toTopBtn ).removeClass( 'hide' );
+		} else {
+			$( toTopBtn ).addClass( 'hide' );
+		}
+	},
+
+	/**
+	 * Scroll to top on mobile
+	 */
+	scrollToTop: function() {
+		$( 'html, body' ).animate( {scrollTop: 0}, 'slow' );
 	}
 };
