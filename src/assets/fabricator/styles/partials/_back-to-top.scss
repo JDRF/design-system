@@ -1,0 +1,17 @@
+.f-back-to-top {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	width: 50px;
+	height: 50px;
+	font-family: "Gotham Bold", sans-serif;
+	font-size: 0.75rem;
+	line-height: 0.75rem;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	background-color: color(primary-light);
+	border-radius: 50%;
+	border: none;
+	box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
