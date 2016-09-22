@@ -1,7 +1,6 @@
 .f-header-top {
 	width: 100%;
 	max-width: $max-width;
-	margin: auto;
 	padding: 1rem;
 	font-size: 0.875rem;
 
@@ -76,14 +75,5 @@
 				font-size: 3rem;
 			}
 		}
-	}
-}
-
-.f-header-top,
-.f-header {
-	@include transition;
-
-	.f-menu-active & {
-		transform: translate($menu-width-mobile, 0);
 	}
 }

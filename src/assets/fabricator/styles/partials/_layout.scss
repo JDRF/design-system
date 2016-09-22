@@ -40,10 +40,14 @@ body {
 	flex-wrap: nowrap;
 }
 
-.f-content {
+.f-main {
 	@include transition;
 
 	.f-menu-active & {
-		transform: translate($menu-width-mobile, 0);
+		margin-left: $menu-width-mobile;
 	}
+}
+
+.f-content {
+	padding: 1rem;
 }
