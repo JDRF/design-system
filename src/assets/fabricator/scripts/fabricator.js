@@ -43,7 +43,7 @@ module.exports = {
 		// open menu by default if large screen
 		this.options.menu = window.innerWidth >= this.options.mq;
 
-		if ( window.innerWidth < this.options.mq ) {
+		if ( false === this.options.menu ) {
 			$( this.dom.root ).removeClass( 'f-menu-active' );
 		}
 
