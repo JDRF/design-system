@@ -7,7 +7,7 @@ html {
 		}
 
 		@include desktop {
-			overflow: auto;
+			overflow-x: hidden;
 		}
 	}
 }
@@ -23,11 +23,6 @@ body {
 		@include mobile {
 			overflow: hidden;
 		}
-
-		@include desktop {
-			overflow: auto;
-			height: auto;
-		}
 	}
 }
 
@@ -39,25 +34,16 @@ body {
 	max-width: $max-width;
 	@include clearfix;
 	@include border-box;
+}
 
-	@include desktop {
-		position: relative;
-	}
+.f-row.ds-row {
+	flex-wrap: nowrap;
 }
 
 .f-content {
-	@include mobile {
-		@include transition;
-	}
-
-	@include desktop {
-		margin-top: 4.063rem;
-		min-height: 1000px;
-	}
+	@include transition;
 
 	.f-menu-active & {
-		@include mobile {
-			transform: translate($menu-width-mobile, 0);
-		}
+		transform: translate($menu-width-mobile, 0);
 	}
 }

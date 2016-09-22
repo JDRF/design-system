@@ -37,34 +37,36 @@ module.exports = {
 		 */
 		this.options = {
 			menu: false,
-			mq: 768
+			mq: 992
 		};
 
 		// open menu by default if large screen
 		this.options.menu = window.innerWidth >= this.options.mq;
 
+		if ( window.innerWidth >= this.options.mq ) {
+			$( this.dom.root ).addClass( 'f-menu-active' );
+		}
+
 		//only fire event listeners on mobile
-		if ( false === this.options.menu ) {
-			// toggle classes on click
-			menuIcon.addEventListener( 'click', function() {
+		// toggle classes on click
+		menuIcon.addEventListener( 'click', function() {
+			self.toggleClasses( htmlEl, menuIcon );
+		} );
+
+		for ( var i = 0; i < menuItems.length; i++ ) {
+			menuItems[i].addEventListener( 'click', function() {
 				self.toggleClasses( htmlEl, menuIcon );
 			} );
-
-			for ( var i = 0; i < menuItems.length; i++ ) {
-				menuItems[i].addEventListener( 'click', function() {
-					self.toggleClasses( htmlEl, menuIcon );
-				} );
-			}
-
-			//back to top and scroll checking
-			window.addEventListener( 'scroll', function() {
-				self.checkScrollPosition( toTopBtn );
-			} );
-
-			toTopBtn.addEventListener( 'click', function() {
-				self.scrollToTop();
-			} );
 		}
+
+		//back to top and scroll checking
+		window.addEventListener( 'scroll', function() {
+			self.checkScrollPosition( toTopBtn );
+		} );
+
+		toTopBtn.addEventListener( 'click', function() {
+			self.scrollToTop();
+		} );
 
 		// pass dom selectors to functions
 		this.setActiveItem( menuItems );

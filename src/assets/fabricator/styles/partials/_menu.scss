@@ -1,30 +1,32 @@
 // menu
 
 .f-menu-canvas {
-	@include mobile {
-		top: 0;
-		left: 0;
-		transform: translate(-$menu-width-mobile - 30, 0);
-		width: $menu-width-mobile;
-		height: 100%;
-		overflow-x: hidden;
-		overflow-y: auto;
-		-webkit-overflow-scrolling: touch;
-		padding: 1rem;
-		@include transition;
-	}
+	top: 0;
+	left: 0;
+	transform: translate(-$menu-width-mobile - 30, 0);
+	width: $menu-width-mobile;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	padding: 1rem;
+	@include transition;
+
 
 	&.ds-sidebar {
+		width: $menu-width-mobile;
+
 		@include mobile {
 			position: absolute;
-			width: $menu-width-mobile;
+		}
+
+		@include desktop {
+			position: fixed;
 		}
 	}
 
 	.f-menu-active & {
-		@include mobile {
-			transform: translate(0, 0);
-		}
+		transform: translate(0, 0);
 	}
 
 	.f-nav,
@@ -37,32 +39,10 @@
 
 	.f-nav {
 		margin-bottom: 1rem;
-
-		@include desktop {
-			display: none;
-		}
 	}
 }
 
 .f-menu {
-
-	@include desktop {
-		display: block;
-		margin-top: 4.063rem;
-		width: $menu-width-desktop;
-		max-width: 220px;
-	}
-
-	&.ds-fixed {
-		@include desktop {
-			position: fixed;
-			top: 0;
-			overflow-y: auto;
-			height: 90%;
-			padding-bottom: 4.063rem;
-		}
-	}
-
 	.f-search {
 		width: 85%;
 	}
