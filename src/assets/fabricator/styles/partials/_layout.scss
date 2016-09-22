@@ -41,10 +41,17 @@ body {
 }
 
 .f-main {
+	overflow: hidden;
 	@include transition;
 
 	.f-menu-active & {
-		margin-left: $menu-width-mobile;
+		@include mobile {
+			transform: translate( $menu-width-mobile, 0 );
+		}
+
+		@include desktop {
+			margin-left: $menu-width-mobile;
+		}
 	}
 }
 

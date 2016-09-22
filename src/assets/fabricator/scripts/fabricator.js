@@ -37,14 +37,14 @@ module.exports = {
 		 */
 		this.options = {
 			menu: false,
-			mq: 992
+			mq: 768
 		};
 
 		// open menu by default if large screen
 		this.options.menu = window.innerWidth >= this.options.mq;
 
-		if ( window.innerWidth >= this.options.mq ) {
-			$( this.dom.root ).addClass( 'f-menu-active' );
+		if ( window.innerWidth < this.options.mq ) {
+			$( this.dom.root ).removeClass( 'f-menu-active' );
 		}
 
 		//only fire event listeners on mobile
