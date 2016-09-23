@@ -47,7 +47,7 @@
 	</div>
 
 		<div class="f-container ds-container">
-			<div class="ds-row">
+			<div class="f-row ds-row">
 					<!-- fabricator icons -->
 					<svg style="display: none;">
 						<symbol id="f-icon-menu" viewBox="0 0 512 512">
@@ -180,7 +180,7 @@
 	<p>JDRF websites are primarily flat.  Components that require special attention, such as cards and buttons, have subtle elevations to increase contrast with their surroundings and invite interaction.</p>
 <p>Elevations are applied using the <code>ds-elevation-</code> class and are numbered 1 to 5. <code>.ds-elevation-1</code> is the lowest and <code>.ds-elevation-5</code> is the highest.</p>
 <p>Buttons in most cases start with <code>.ds-elevation-1</code> and raise to <code>.ds-elevation-3</code> on <code>:hover</code>, <code>:focus</code> and <code>:active</code> states. The <code>.ds-btn-flat</code> style of buttons start with no elevation and raise to <code>.ds-elevation-two</code> on <code>:hover</code>, <code>:focus</code> and <code>:active</code> states.</p>
-<p>To remove elevations on a component that isn't flat by default, you can use the <code>@include no-elevation;</code> Sass mixin.</p>
+<p>To remove elevations on a component that isn't flat by default, you can apply the <code>.ds-no-elevation</code> class or override in your project's stylesheet.</p>
 <p>Modals, dialogs and menus (coming soon to the Design System) are the rare objects that require higher elevations.</p>
 
 </div>
