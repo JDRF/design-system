@@ -45,7 +45,16 @@ body {
 	}
 }
 
+.f-row.ds-row {
+	flex-wrap: nowrap;
+	/* clearing fix */
+	overflow: hidden;
+}
+
 .f-content {
+	/* clearing fix */
+	overflow: hidden;
+
 	@include mobile {
 		@include transition;
 	}
