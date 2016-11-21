@@ -13,7 +13,7 @@ module.exports = function (gulp, plugins, comments) {
 			.pipe(plugins.sass({
 				includePaths: [
 					'./node_modules/bootstrap/'
-					],
+				],
 			}))
 			.on('error', plugins.notify.onError(function (error) {
 				return 'Error: ' + error.message;
@@ -33,12 +33,31 @@ module.exports = function (gulp, plugins, comments) {
 			 */
 			.pipe(plugins.rename('sass-files.css'));
 
-		//grab the material icons stylesheet and rename to css-files.css
-		var cssStream = gulp.src('./node_modules/material-icons/css/material-icons.css')
+		// Grab vendor stylesheets and rename to css-files.css
+		var cssStream = gulp.src([
+				'./node_modules/material-icons/css/material-icons.css',
+				'./node_modules/pikaday/css/pikaday.css'
+			])
 			.pipe(plugins.rename('css-files.css'));
 
-		//merge sass-files.css and css-files.css into design-system.css in the dist dir
-		var stream = plugins.merge(sassStream, cssStream)
+		// Vendor overrides
+		var vendorStream = gulp.src([
+			__dirname + '/../src/scss/vendor.scss'
+			])
+			.on('error', plugins.notify.onError(function (error) {
+				return 'Error: ' + error.message;
+			})) 
+			.pipe(plugins.prefix({
+				browsers: ['last 2 versions', 'ie 9']
+			}))
+			/*
+			 * After scss lint and including bootstrap path,
+			 * rename to plain css in a file called sass-files.css
+			 */
+			.pipe(plugins.rename('vendor-files.css'));
+
+		// Merge sass-files.css and css-files.css into design-system.css in the dist dir
+		var stream = plugins.merge(sassStream, cssStream, vendorStream)
 			.pipe(plugins.concat('design-system.css'))
 			.pipe(plugins.header(comments, {pkg : plugins.pkg}))
 			.pipe(gulp.dest(__dirname + '/../dist/css'))

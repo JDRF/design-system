@@ -20,6 +20,10 @@
 	} else {
 
 		jQuery( document ).ready( function() {
+
+			/**
+			 * Ripple
+			 */
 			var ripple = window.ripple( '.ds-btn', {
 				debug: false, // Turn Ripple.js logging on/off
 				on: 'mousedown', // The event to trigger a ripple effect
@@ -41,6 +45,28 @@
 
 			ripple.init();
 
+			/**
+			 * Date Format / Picker
+			 */
+			var inputDate = jQuery( 'input[type="date"]' );
+
+			var inputDateInit = function() {
+
+				// Change type to 'text'
+				var newInput = inputDate.attr( 'type', 'text' );
+
+				// Call date picker library
+				/*eslint-disable*/
+				var picker = new Pikaday( {
+					field: newInput[0],
+					format: 'MM/DD/YYYY'
+				} );
+				/*eslint-enable*/
+			};
+
+			if ( inputDate ) {
+				inputDateInit();
+			}
 		} );
 	}
 

@@ -4,6 +4,8 @@
 			// Don't include bootstrap yet. Proof of future Concept
 			'./node_modules/jquery/dist/jquery.min.js',
 			'./node_modules/bootstrap/dist/js/umd/button.js',
+			'./node_modules/moment/moment.js',
+			'./node_modules/pikaday/pikaday.js',
 			__dirname + '/../src/js/**/*.js',
 		])
 		// JSCS

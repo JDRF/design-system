@@ -7,6 +7,10 @@
     {
       "name": "Nick Smith",
       "email": "fuhton@gmail.com"
+    },
+    {
+      "name": "Brian Saycocie",
+      "email": "bsaycocie@gmail.com"
     }
   ],
   "scripts": {
@@ -50,6 +54,8 @@
     "jquery": "^2.2.4",
     "material-icons": "^0.1.0",
     "merge-stream": "^1.0.0",
+    "moment": "^2.16.0",
+    "pikaday": "^1.5.1",
     "run-sequence": "^1.2.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.1"
