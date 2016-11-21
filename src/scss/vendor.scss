@@ -1,0 +1,31 @@
+/**
+ * Date library overrides
+ */
+
+.is-today .pika-button {
+	color: #0073cf !important;
+}
+
+.is-selected .pika-button {
+	background-color: #0073cf !important;
+}
+
+.is-inrange .pika-button {
+	background-color: #f5f5f5 !important;
+}
+
+.is-startrange .pika-button {
+	background-color: #eeeeee !important;
+}
+
+.is-endrange .pika-button {
+	background-color: #e0e0e0 !important;
+}
+
+.pika-button:hover {
+	background-color: #bdbdbd !important;
+}
+
+.pika-table thead tr {
+	background-color: #ffffff;
+}
