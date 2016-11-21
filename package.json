@@ -66,6 +66,8 @@
     "jquery": "^2.2.4",
     "material-icons": "^0.1.0",
     "merge-stream": "^1.0.0",
+    "moment": "^2.16.0",
+    "pikaday": "^1.5.1",
     "prismjs": "^1.5.0",
     "run-sequence": "^1.1.5",
     "vinyl-source-stream": "^1.1.0"
