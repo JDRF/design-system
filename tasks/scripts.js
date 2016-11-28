@@ -25,6 +25,7 @@
 		.pipe(plugins.replace('ds-active||', 'active||'))
 
 		.pipe(plugins.concat('design-system.js'))
+		.pipe(plugins.iife())
 		.pipe(plugins.header(comments, {pkg : plugins.pkg}))
 		.pipe(gulp.dest(__dirname + '/../dist/js'));
 		return stream;

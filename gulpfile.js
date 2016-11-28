@@ -18,6 +18,7 @@ var gulp       = require('gulp'),
 plugins.merge = require('merge-stream');
 plugins.runSequence = require('run-sequence');
 plugins.pkg = require('./package.json');
+plugins.iife = require('gulp-iife');
 
 function getTask(task) {
 	return require('./tasks/' + task)(gulp, plugins, comments);
