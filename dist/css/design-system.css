@@ -5667,6 +5667,9 @@ p.ds-text-label {
 .ds-c-select {
   padding: 13px 12px;
   background: #fff url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBpZD0iaWNfYXJyb3dfZHJvcF9kb3duXzI0cHgiPjxwYXRoIGQ9Ik03IDEwbDUgNSA1LTV6IiBmaWxsPSIjNzU3NTc1Ii8+PC9zdmc+) no-repeat right 0.75rem center;
+}
+
+.ds-c-select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
