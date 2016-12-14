@@ -65,12 +65,47 @@ textarea {
 		color: $grey-6;
 	}
 
+	&.label-required {
+		> span {
+			color: $brand-danger;
+			float: none;
+			font-family: $font-regular;
+			font-size: 20px;
+			font-weight: bold;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1;
+			text-align: left;
+		}
+	}
+
+	&.label-optional {
+		> span {
+			float: none;
+			font-family: $font-regular;
+			font-size: 15px;
+			font-weight: normal;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.33;
+			text-align: left;
+		}
+	}
+
 	> span {
 		font-family: $font-italic;
 		font-style: italic;
 		color: $grey-7;
 		float: right;
 	}
+}
+
+.form-control.form-relative {
+	margin-top: 0;
+}
+
+.form-control-label.form-label-relative {
+	position: relative;
 }
 
 .form-control {
@@ -310,6 +345,12 @@ p.text-label {
 			padding-left: 0.9375rem;
 			padding-right: 0.9375rem;
 		}
+
+		.form-label-relative {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
 	}
 
 	div[class*="ds-col-"] {

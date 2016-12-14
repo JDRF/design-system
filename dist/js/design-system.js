@@ -241,6 +241,31 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 			ripple.init();
 
 		} );
+
+		jQuery( document ).ready( function() {
+			var labels = jQuery( '.ds-form-label-relative' );
+
+			labels.each( function() {
+				var fontFamily = $( this ).css( 'font-family' );
+				var color = $( this ).css( 'color' );
+				var sibling = $( this ).next();
+
+				sibling.on( 'focus', function() {
+					$( this ).css( {
+						'color': '#0073cf',
+						'font-family': '"Gotham Medium", sans-serif'
+					} );
+				}.bind( this ) );
+
+				sibling.on( 'focusout', function() {
+					$( this ).css( {
+						'color': color,
+						'font-family': fontFamily
+					} );
+				}.bind( this ) );
+
+			} );
+		} );
 	}
 
 } )();

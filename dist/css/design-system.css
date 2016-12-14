@@ -4818,7 +4818,7 @@ mark,
   color: #212121;
   background-color: #fff;
   background-image: none;
-  border: 1px solid #757575;
+  border: 1px solid #9e9e9e;
   border-radius: 2px;
 }
 
@@ -5238,11 +5238,42 @@ fieldset:disabled .ds-form-control-label {
   color: #9e9e9e;
 }
 
+.ds-form-control-label.ds-label-required > span {
+  color: #d7006d;
+  float: none;
+  font-family: "Gotham Book", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  text-align: left;
+}
+
+.ds-form-control-label.ds-label-optional > span {
+  float: none;
+  font-family: "Gotham Book", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  text-align: left;
+}
+
 .ds-form-control-label > span {
   font-family: "Gotham Book Italic", sans-serif;
   font-style: italic;
   color: #757575;
   float: right;
+}
+
+.ds-form-control.ds-form-relative {
+  margin-top: 0;
+}
+
+.ds-form-control-label.ds-form-label-relative {
+  position: relative;
 }
 
 .ds-form-control {
@@ -5477,6 +5508,11 @@ p.ds-text-label {
   padding-right: 0.9375rem;
 }
 
+.ds-form-address [class*="ds-col-"] .ds-form-label-relative {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .ds-form-address div[class*="ds-col-"] {
   position: static;
 }
@@ -5585,7 +5621,7 @@ p.ds-text-label {
   background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC) no-repeat right 0.75rem center;
   background-image: none \9;
   background-size: 8px 10px;
-  border: 1px solid #757575;
+  border: 1px solid #9e9e9e;
   -moz-appearance: none;
   -webkit-appearance: none;
 }
@@ -7275,12 +7311,10 @@ input[type="button"].ds-btn-block {
 
 @media (min-width: 360px) {
   .ds-card-columns {
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
-    -webkit-column-gap: 1.25rem;
-       -moz-column-gap: 1.25rem;
-            column-gap: 1.25rem;
+    -moz-column-count: 3;
+         column-count: 3;
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
   }
 
   .ds-card-columns .ds-card {

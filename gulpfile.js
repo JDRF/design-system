@@ -7,6 +7,14 @@ var gulp       = require('gulp'),
 			'gulp-autoprefixer' : 'prefix',
 		}
 	}),
+	paths      = {
+		bootstrap: {
+			scripts: './node_modules/bootstrap/dist/js/bootstrap.js',
+			styles: './node_modules/bootstrap/'
+		},
+		scripts: './src/js/**/*.js',
+		styles: './src/scss/style.scss'
+	},
 	comments = ['/**',
 		' * <%= pkg.name %> - <%= pkg.description %>',
 		' * @version v<%= pkg.version %>',
