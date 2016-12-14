@@ -1,25 +1,25 @@
 <form>
 	<fieldset class="ds-form-group">
-			<input type="text" class="ds-form-control" id="inputtext1" placeholder="First name">
-			<label for="inputtext1" class="ds-form-control-label">Default <span>Required</span></label>
+			<label for="inputtext1" class="ds-form-control-label ds-form-label-relative ds-label-required">Default <span>*</span></label>
+			<input type="text" class="ds-form-control ds-form-relative" id="inputtext1" placeholder="First name">
 	</fieldset>
 	<fieldset class="ds-form-group ds-has-filled">
-			<input type="text" class="ds-form-control" id="inputtext2" placeholder="First name" value="Frederick">
-			<label for="inputtext2" class="ds-form-control-label">Filled <span>Required</span></label>
+			<label for="inputtext2" class="ds-form-control-label ds-form-label-relative ds-label-required">Filled <span>*</span></label>
+			<input type="text" class="ds-form-control ds-form-relative ds-label-required" id="inputtext2" placeholder="First name" value="Frederick">
 	</fieldset>
 	<fieldset class="ds-form-group ds-has-success">
-			<input type="text" class="ds-form-control ds-form-control-success" id="inputtext3" placeholder="First name" value="Frederick">
-			<label for="inputtext3" class="ds-form-control-label">Valid <span>Required</span></label>
+			<label for="inputtext3" class="ds-form-control-label ds-form-label-relative ds-label-required">Valid <span>*</span></label>
+			<input type="text" class="ds-form-control ds-form-relative ds-form-control-success ds-label-required" id="inputtext3" placeholder="First name" value="Frederick">
 	</fieldset>
 	<fieldset class="ds-form-group ds-has-danger">
-			<input type="text" class="ds-form-control ds-form-control-danger" id="inputtext4" placeholder="First name">
-			<label for="inputtext4" class="ds-form-control-label">Error <span>Required</span></label>
+			<label for="inputtext4" class="ds-form-control-label ds-form-label-relative ds-label-required">Error <span>*</span></label>
+			<input type="text" class="ds-form-control ds-form-relative ds-form-control-danger ds-label-required" id="inputtext4" placeholder="First name">
 			<small class="ds-text-help">
 			  Helpful error message.
 			</small>
 	</fieldset>
 	<fieldset class="ds-form-group" disabled>
-			<input type="text" class="ds-form-control" id="inputtext5" placeholder="First name">
-			<label for="inputtext5" class="ds-form-control-label">Disabled</label>
+			<label for="inputtext5" class="ds-form-control-label ds-form-label-relative">Disabled</label>
+			<input type="text" class="ds-form-control ds-form-relative" id="inputtext5" placeholder="First name">
 	</fieldset>
 </form>
