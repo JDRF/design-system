@@ -14,27 +14,27 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group">
-					<input type="text" class="ds-form-control" id="phantom-inputtext1" placeholder="First name">
-					<label for="phantom-inputtext1" class="ds-form-control-label">Default <span>Required</span></label>
+        <label for="phantom-inputtext1" class="ds-form-control-label ds-form-label-relative ds-label-required">Default <span>*</span></label>
+				<input type="text" class="ds-form-control ds-form-relative" id="phantom-inputtext1" placeholder="First name">
 			</fieldset>
 			<fieldset class="ds-form-group ds-has-filled">
-					<input type="text" class="ds-form-control" id="phantom-inputtext2" placeholder="First name" value="Frederick">
-					<label for="phantom-inputtext2" class="ds-form-control-label">Filled <span>Required</span></label>
+        <label for="phantom-inputtext2" class="ds-form-control-label ds-form-label-relative ds-label-required">Filled <span>*</span></label>
+				<input type="text" class="ds-form-control ds-form-relative" id="phantom-inputtext2" placeholder="First name" value="Frederick">
 			</fieldset>
 			<fieldset class="ds-form-group ds-has-success">
-					<input type="text" class="ds-form-control ds-form-control-success" id="phantom-inputtext3" placeholder="First name" value="Frederick">
-					<label for="phantom-inputtext3" class="ds-form-control-label">Valid <span>Required</span></label>
+        <label for="phantom-inputtext3" class="ds-form-control-label ds-form-label-relative ds-label-required">Valid <span>*</span></label>
+				<input type="text" class="ds-form-control ds-form-relative ds-form-control-success" id="phantom-inputtext3" placeholder="First name" value="Frederick">
 			</fieldset>
 			<fieldset class="ds-form-group ds-has-danger">
-					<input type="text" class="ds-form-control ds-form-control-danger" id="phantom-inputtext4" placeholder="First name">
-					<label for="phantom-inputtext4" class="ds-form-control-label">Error <span>Required</span></label>
-					<small class="ds-text-help">
-					  Helpful error message.
-					</small>
+        <label for="phantom-inputtext4" class="ds-form-control-label ds-form-label-relative ds-label-required">Error <span>*</span></label>
+				<input type="text" class="ds-form-control ds-form-relative ds-form-control-danger" id="phantom-inputtext4" placeholder="First name">
+				<small class="ds-text-help">
+				  Helpful error message.
+				</small>
 			</fieldset>
 			<fieldset class="ds-form-group" disabled>
-					<input type="text" class="ds-form-control" id="phantom-inputtext5" placeholder="First name">
-					<label for="phantom-inputtext5" class="ds-form-control-label">Disabled</label>
+        <label for="phantom-inputtext5" class="ds-form-control-label ds-form-label-relative">Disabled</label>
+				<input type="text" class="ds-form-control ds-form-relative" id="phantom-inputtext5" placeholder="First name">
 			</fieldset>
 		</form>
 	</div>
@@ -46,8 +46,10 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group">
-				<textarea class="ds-form-control" id="phantom-exampleTextarea" rows="7" placeholder="Placeholder"></textarea>
-				<label for="phantom-exampleTextarea" class="ds-form-control-label">Your Message <span>Optional</span></label>
+        <label for="phantom-exampleTextarea" class="ds-form-control-label ds-form-label-relative ds-label-optional">
+          Your Message <span>(Optional)</span>
+        </label>
+				<textarea class="ds-form-control ds-form-relative" id="phantom-exampleTextarea" rows="7" placeholder="Placeholder"></textarea>
 			</fieldset>
 		</form>
 	</div>
@@ -60,16 +62,16 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group ds-hidden-labels">
+        <label for="phantom-inputtext1" class="ds-form-control-label ds-sr-only">Default</label>
 				<input type="text" class="ds-form-control" id="phantom-inputtext1" placeholder="Default">
-				<label for="phantom-inputtext1" class="ds-form-control-label ds-sr-only">Default</label>
 			</fieldset>
 			<fieldset class="ds-form-group ds-hidden-labels ds-has-filled">
+        <label for="phantom-inputtext2" class="ds-form-control-label ds-sr-only">Filled</label>
 				<input type="text" class="ds-form-control" id="phantom-inputtext2" placeholder="Filled" value="Filled">
-				<label for="phantom-inputtext2" class="ds-form-control-label ds-sr-only">Filled</label>
 			</fieldset>
 			<fieldset class="ds-form-group ds-hidden-labels" disabled>
+        <label for="phantom-inputtext3" class="ds-form-control-label ds-sr-only">Disabled</label>
 				<input type="text" class="ds-form-control" id="phantom-inputtext3" placeholder="Disabled">
-				<label for="phantom-inputtext3" class="ds-form-control-label ds-sr-only">Disabled</label>
 			</fieldset>
 		</form>
 	</div>
@@ -81,12 +83,12 @@ notes: |
 	<div class="f-example">
 		<form class="ds-form-inline">
 			<fieldset class="ds-form-group">
-				<input type="text" class="ds-form-control" id="exampleInputName2" placeholder="Jane Doe">
-				<label for="exampleInputName2" class="ds-form-control-label">Name</label>
+        <label for="exampleInputName2" class="ds-form-control-label ds-form-label-relative">Name</label>
+				<input type="text" class="ds-form-control ds-form-relative" id="exampleInputName2" placeholder="Jane Doe">
 			</fieldset>
 			<fieldset class="ds-form-group">
-				<input type="email" class="ds-form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-				<label for="exampleInputEmail2" class="ds-form-control-label">Email</label>
+        <label for="exampleInputEmail2" class="ds-form-control-label ds-form-label-relative">Email</label>
+				<input type="email" class="ds-form-control ds-form-relative" id="exampleInputEmail2" placeholder="jane.doe@example.com">
 			</fieldset>
 			<button type="submit" class="ds-btn ds-btn-primary f-inline-form-btn">Send invitation</button>
 		</form>
@@ -99,12 +101,12 @@ notes: |
 	<div class="f-example">
 		<form class="ds-form-inline">
 			<fieldset class="ds-form-group ds-hidden-labels">
+        <label class="ds-sr-only" for="exampleInputEmail3">Email address</label>
 				<input type="email" class="ds-form-control" id="exampleInputEmail3" placeholder="Enter email">
-				<label class="ds-sr-only" for="exampleInputEmail3">Email address</label>
 			</fieldset>
 			<fieldset class="ds-form-group ds-hidden-labels">
+        <label class="ds-sr-only" for="exampleInputPassword3">Password</label>
 				<input type="password" class="ds-form-control" id="exampleInputPassword3" placeholder="Password">
-				<label class="ds-sr-only" for="exampleInputPassword3">Password</label>
 			</fieldset>
 			<button type="submit" class="ds-btn ds-btn-primary f-inline-form-btn">Sign in</button>
 		</form>
@@ -117,8 +119,8 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group">
-				<input type="email" class="ds-form-control" id="phantom-exampleInputEmail1" placeholder="Enter email">
-				<label for="phantom-exampleInputEmail1" class="ds-form-control-label">Email Address</label>
+        <label for="phantom-exampleInputEmail1" class="ds-form-control-label ds-form-label-relative">Email Address</label>
+				<input type="email" class="ds-form-control ds-form-relative" id="phantom-exampleInputEmail1" placeholder="Enter email">
 				<small class="ds-text-muted">We'll never share your email with anyone else.</small>
 			</fieldset>
 		</form>
@@ -131,8 +133,8 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group">
-				<input type="password" class="ds-form-control" id="phantom-exampleInputPassword" placeholder="Enter Password">
-				<label for="phantom-exampleInputPassword" class="ds-form-control-label">Password</label>
+        <label for="phantom-exampleInputPassword" class="ds-form-control-label ds-form-label-relative">Password</label>
+				<input type="password" class="ds-form-control ds-form-relative" id="phantom-exampleInputPassword" placeholder="Enter Password">
 			</fieldset>
 		</form>
 	</div>
@@ -144,8 +146,8 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group">
-				<input type="tel" class="ds-form-control" id="phantom-exampleInputTel" placeholder="Enter phone number">
-				<label for="phantom-exampleInputTel" class="ds-form-control-label">Telephone</label>
+        <label for="phantom-exampleInputTel" class="ds-form-control-label ds-form-label-relative">Telephone</label>
+				<input type="tel" class="ds-form-control ds-form-relative" id="phantom-exampleInputTel" placeholder="Enter phone number">
 			</fieldset>
 		</form>
 	</div>
@@ -157,8 +159,8 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group">
-				<input type="date" class="ds-form-control" id="phantom-exampleInputDate" placeholder="mm/dd/yyyy">
-				<label for="phantom-exampleInputDate" class="ds-form-control-label">Date</label>
+        <label for="phantom-exampleInputDate" class="ds-form-control-label ds-form-label-relative">Date</label>
+				<input type="date" class="ds-form-control ds-form-relative" id="phantom-exampleInputDate" placeholder="mm/dd/yyyy">
 			</fieldset>
 		</form>
 	</div>
@@ -172,40 +174,40 @@ notes: |
 		<form class="ds-form-address ds-container">
 			<fieldset class="ds-form-group ds-row">
 				<div class="ds-col-md-8">
-					<input type="text" class="ds-form-control" id="exampleInputAddress1" placeholder="Enter Street Address">
-					<label for="exampleInputAddress1" class="ds-form-control-label">Street Address</label>
+          <label for="exampleInputAddress1" class="ds-form-control-label ds-form-label-relative">Street Address</label>
+					<input type="text" class="ds-form-control ds-form-relative" id="exampleInputAddress1" placeholder="Enter Street Address">
 				</div>
 			</fieldset>
 			<fieldset class="ds-form-group ds-row">
 				<div class="ds-col-md-8">
-					<input type="text" class="ds-form-control" id="exampleInputAddress2" placeholder="Enter Address Line 2">
-					<label for="exampleInputAddress2" class="ds-form-control-label">Address Line 2</label>
+          <label for="exampleInputAddress2" class="ds-form-control-label ds-form-label-relative">Address Line 2</label>
+					<input type="text" class="ds-form-control ds-form-relative" id="exampleInputAddress2" placeholder="Enter Address Line 2">
 				</div>
 			</fieldset>
 			<div class="ds-form-inline ds-row">
 				<fieldset class="ds-form-group ds-col-md-4">
-					<input type="text" class="ds-form-control" id="exampleCity" placeholder="Enter City">
-					<label for="exampleCity" class="ds-form-control-label">City</label>
+          <label for="exampleCity" class="ds-form-control-label ds-form-label-relative">City</label>
+					<input type="text" class="ds-form-control ds-form-relative" id="exampleCity" placeholder="Enter City">
 				</fieldset>
 				<fieldset class="ds-form-group ds-col-md-4">
-					<input type="email" class="ds-form-control" id="exampleState" placeholder="Enter State/Province/Region">
-					<label for="exampleState" class="ds-form-control-label">State/Province/Region</label>
+          <label for="exampleState" class="ds-form-control-label ds-form-label-relative">State/Province/Region</label>
+					<input type="email" class="ds-form-control ds-form-relative" id="exampleState" placeholder="Enter State/Province/Region">
 				</fieldset>
 			</div>
 			<div class="ds-form-inline ds-row">
 				<fieldset class="ds-form-group ds-col-md-4">
-					<input type="text" class="ds-form-control" id="exampleZip" placeholder="Enter Zip/Postal Code">
-					<label for="exampleZip" class="ds-form-control-label">Zip/Postal Code</label>
+          <label for="exampleZip" class="ds-form-control-label ds-form-label-relative">Zip/Postal Code</label>
+					<input type="text" class="ds-form-control ds-form-relative" id="exampleZip" placeholder="Enter Zip/Postal Code">
 				</fieldset>
 				<fieldset class="ds-form-group ds-col-md-4">
-					<select class="ds-form-control ds-c-select" id="exampleCountry">
+          <label for="exampleCountry" class="ds-form-control-label ds-form-label-relative">Country</label>
+					<select class="ds-form-control ds-form-relative ds-c-select" id="exampleCountry">
 						<option>Country 1</option>
 						<option>Country 2</option>
 						<option>Country 3</option>
 						<option>Country 4</option>
 						<option>Country 5</option>
 					</select>
-					<label for="exampleCountry" class="ds-form-control-label">Country</label>
 				</fieldset>
 			</div>
 		</form>
@@ -219,30 +221,30 @@ notes: |
 		<form class="ds-form-address ds-container">
 			<fieldset class="ds-form-group ds-row">
 				<div class="ds-col-md-8">
-					<input type="text" class="ds-form-control" id="exampleInputAddress3" placeholder="Enter Street Address">
-					<label for="exampleInputAddress3" class="ds-form-control-label">Street Address</label>
+          <label for="exampleInputAddress3" class="ds-form-control-label ds-form-label-relative">Street Address</label>
+					<input type="text" class="ds-form-control ds-form-relative" id="exampleInputAddress3" placeholder="Enter Street Address">
 				</div>
 			</fieldset>
 			<fieldset class="ds-form-group ds-row">
 				<div class="ds-col-md-8">
-					<input type="text" class="ds-form-control" id="exampleInputAddress4" placeholder="Enter Address Line 2">
-					<label for="exampleInputAddress4" class="ds-form-control-label">Address Line 2</label>
+          <label for="exampleInputAddress4" class="ds-form-control-label ds-form-label-relative">Address Line 2</label>
+					<input type="text" class="ds-form-control ds-form-relative" id="exampleInputAddress4" placeholder="Enter Address Line 2">
 				</div>
 			</fieldset>
 			<div class="ds-form-inline ds-row">
 				<fieldset class="ds-form-group ds-col-md-4">
-					<input type="text" class="ds-form-control" id="exampleCity1" placeholder="Enter City">
-					<label for="exampleCity1" class="ds-form-control-label">City</label>
+          <label for="exampleCity1" class="ds-form-control-label ds-form-label-relative">City</label>
+					<input type="text" class="ds-form-control ds-form-relative" id="exampleCity1" placeholder="Enter City">
 				</fieldset>
 				<fieldset class="ds-form-group ds-col-md-4" class="ds-form-control-label">
-					<input type="email" class="ds-form-control" id="exampleState1" placeholder="Enter State">
-					<label for="exampleState1" class="ds-form-control-label">State</label>
+          <label for="exampleState1" class="ds-form-control-label ds-form-label-relative">State</label>
+					<input type="email" class="ds-form-control ds-form-relative" id="exampleState1" placeholder="Enter State">
 				</fieldset>
 			</div>
 			<fieldset class="ds-form-group ds-row">
 				<div class="ds-col-md-4">
-					<input type="text" class="ds-form-control" id="exampleZip1" placeholder="Enter Zip Code">
-					<label for="exampleZip1" class="ds-form-control-label">Zip Code</label>
+          <label for="exampleZip1" class="ds-form-control-label ds-form-label-relative">Zip Code</label>
+					<input type="text" class="ds-form-control ds-form-relative" id="exampleZip1" placeholder="Enter Zip Code">
 				</div>
 			</fieldset>
 		</form>
@@ -256,7 +258,8 @@ notes: |
 	<div class="f-example">
 		<form>
 			<fieldset class="ds-form-group">
-				<select class="ds-form-control ds-c-select" id="exampleSelect1">
+        <label for="exampleSelect1" class="ds-form-control-label ds-form-label-relative ds-label-required">Default <span>*</span></label>
+				<select class="ds-form-control ds-form-relative ds-c-select" id="exampleSelect1">
 					<option disabled selected value=""></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -264,10 +267,10 @@ notes: |
 					<option value="4">4</option>
 					<option value="5">5</option>
 				</select>
-				<label for="exampleSelect1" class="ds-form-control-label">Default <span>Required</span></label>
 			</fieldset>
 			<fieldset class="ds-form-group ds-has-filled">
-				<select class="ds-form-control ds-c-select" id="exampleSelect2">
+        <label for="exampleSelect2" class="ds-form-control-label ds-form-label-relative ds-label-required">Filled/Valid <span>*</span></label>
+				<select class="ds-form-control ds-form-relative ds-c-select" id="exampleSelect2">
 					<option disabled value=""></option>
 					<option value="1">1</option>
 					<option value="2" selected>2</option>
@@ -275,10 +278,10 @@ notes: |
 					<option value="4">4</option>
 					<option value="5">5</option>
 				</select>
-				<label for="exampleSelect2" class="ds-form-control-label">Filled/Valid <span>Required</span></label>
 			</fieldset>
 			<fieldset class="ds-form-group ds-has-danger">
-				<select class="ds-form-control ds-c-select" id="exampleSelect3">
+        <label for="exampleSelect3" class="ds-form-control-label ds-form-label-relative ds-label-required">Error <span>*</span></label>
+				<select class="ds-form-control ds-form-relative ds-c-select" id="exampleSelect3">
 					<option disabled selected value=""></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -286,11 +289,11 @@ notes: |
 					<option value="4">4</option>
 					<option value="5">5</option>
 				</select>
-				<label for="exampleSelect3" class="ds-form-control-label">Error <span>Required</span></label>
 				<small class="ds-text-help">This field is required</small>
 			</fieldset>
 			<fieldset class="ds-form-group" disabled>
-				<select class="ds-form-control ds-c-select" id="exampleSelect4">
+        <label for="exampleSelect4" class="ds-form-control-label ds-form-label-relative">Disabled</label>
+				<select class="ds-form-control ds-form-relative ds-c-select" id="exampleSelect4">
 					<option disabled selected value=""></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -298,7 +301,6 @@ notes: |
 					<option value="4">4</option>
 					<option value="5">5</option>
 				</select>
-				<label for="exampleSelect4" class="ds-form-control-label">Disabled</label>
 			</fieldset>
 		</form>
 	</div>
