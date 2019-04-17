@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html lang="" class="f-menu-active">
 <head>
 
 	<meta charset="utf-8">
@@ -15,32 +15,33 @@
 
 </head>
 <body>
-	{{> f-header}}
 
-		<div class="f-container ds-container">
-			<div class="f-row ds-row">
-				{{#if fabricator}}
-					{{> f-icons}}
-					{{#if deeplink}}
-						{{> f-menu-deeplink}}
-					{{else}}
-						{{> f-menu}}
-					{{/if}}
-				{{/if}}
-				<main class="f-content ds-col-md-8 ds-col-lg-9" role="main">
-					{% body %}
-					<button type="button" class="f-back-to-top ds-hidden-md-up hide">
-						Top
-					</button>
-				</main>
-			</div>
+	{{#if fabricator}}
+		{{> f-icons}}
+
+		{{#if deeplink}}
+			{{> f-menu-deeplink}}
+		{{else}}
+			{{> f-menu}}
+		{{/if}}
+	{{/if}}
+
+	<main class="f-main" role="main">
+		{{> f-header}}
+
+		<div class="f-content">
+			{% body %}
+			<button type="button" class="f-back-to-top ds-hidden-md-up hide">
+				Top
+			</button>
 		</div>
-		<!-- Design System scripts: requires jQuery -->
-		<script src="./{{baseurl}}assets/design-system/scripts/design-system.js"></script>
-		<!-- /Design System scripts: requires jQuery -->
+	</main>
 
-		{{#if fabricator}}<script src="./{{baseurl}}assets/fabricator/scripts/f.js"></script>{{/if}}
-		{{#if fabricator}}<script src="./{{baseurl}}assets/fabricator/scripts/search.js"></script>{{/if}}
+	<!-- Design System scripts: requires jQuery -->
+	<script src="./{{baseurl}}assets/design-system/scripts/design-system.js"></script>
+	<!-- /Design System scripts: requires jQuery -->
 
+	{{#if fabricator}}<script src="./{{baseurl}}assets/fabricator/scripts/f.js"></script>{{/if}}
+	{{#if fabricator}}<script src="./{{baseurl}}assets/fabricator/scripts/search.js"></script>{{/if}}
 </body>
 </html>

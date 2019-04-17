@@ -1,7 +1,6 @@
 .f-header-top {
 	width: 100%;
 	max-width: $max-width;
-	margin: auto;
 	padding: 1rem;
 	font-size: 0.875rem;
 
@@ -37,22 +36,11 @@
 	.f-nav {
 		display: none;
 
-		@include desktop {
-			display: inline-block;
-			vertical-align: middle;
-		}
-
 		.ds-nav {
 			.ds-nav-item {
 				padding-top: 0.45rem;
 				margin-left: 0;
 				width: 100%;
-
-				@include desktop {
-					display: inline-block;
-					margin-left: 1rem;
-					width: auto;
-				}
 			}
 		}
 	}
@@ -64,10 +52,6 @@
 	width: 100%;
 	background-color: color(primary-light);
 	color: #ffffff;
-
-	@include desktop {
-		padding: 4.813rem 0;
-	}
 
 	.f-header-center {
 		padding: 0 1rem;
@@ -90,19 +74,6 @@
 			h1 {
 				font-size: 3rem;
 			}
-		}
-	}
-}
-
-.f-header-top,
-.f-header {
-	@include mobile {
-		@include transition;
-	}
-
-	.f-menu-active & {
-		@include mobile {
-			transform: translate($menu-width-mobile, 0);
 		}
 	}
 }
